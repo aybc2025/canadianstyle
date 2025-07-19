@@ -1,252 +1,403 @@
-// Progress tracking module using localStorage
-// Fixed version - eliminates null values and Hebrew comments
+/**
+ * Progress Tracking System for The Canadian Style Learning Platform
+ * Manages user progress using localStorage with fallback handling
+ */
 
+// Storage key for progress data
 const STORAGE_KEY = 'csProgress';
+const STORAGE_VERSION = '1.0';
 
-// Chapter sections mapping - prevents null values from missing data
+// Chapter sections mapping
 const CHAPTER_SECTIONS = {
-    ch01: 8,  // Capitalization
-    ch02: 9,  // Compounds 
-    ch03: 9,  // Hyphens
-    ch04: 10, // Abbreviations
-    ch05: 9,  // Numbers
-    ch06: 8,  // Italics
-    ch07: 10, // Punctuation
-    ch08: 7,  // Quotations
-    ch09: 6,  // Reference Matter
-    ch10: 8,  // Letters
-    ch11: 7,  // Reports
-    ch12: 3,  // Usage
-    ch13: 7,  // Plain Language
-    ch14: 4,  // Bias-Free Writing
-    ch15: 5,  // Geographical Names
-    ch16: 7   // Revision
+    ch01: ['introduction', 'sentence-capitals', 'proper-nouns', 'government-bodies', 'titles-positions', 'geographic-names', 'brand-names', 'academic-degrees'],
+    ch02: ['introduction', 'compound-words', 'prefixes', 'word-division', 'special-cases', 'technical-terms'],
+    ch03: ['introduction', 'canadian-spelling', 'variants', 'word-endings', 'troublesome-words'],
+    ch04: ['introduction', 'periods', 'titles', 'organizations', 'scientific', 'postal', 'latin'],
+    ch05: ['introduction', 'round-numbers', 'consistency', 'initial', 'quantities', 'money', 'percentages', 'time', 'dates'],
+    ch06: ['introduction', 'emphasis', 'titles', 'foreign-words'],
+    ch07: ['introduction', 'comma', 'semicolon', 'colon', 'dashes', 'parentheses', 'apostrophe', 'periods'],
+    ch08: ['introduction', 'quotation-marks', 'dialogue', 'citations', 'block-quotes', 'punctuation'],
+    ch09: ['introduction', 'footnotes', 'bibliography', 'citations', 'indexes'],
+    ch10: ['introduction', 'business-letters', 'memos', 'formatting', 'addresses', 'signatures'],
+    ch11: ['introduction', 'structure', 'headings', 'front-matter', 'appendices', 'minutes', 'formatting'],
+    ch12: ['introduction', 'common-errors', 'word-choice'],
+    ch13: ['introduction', 'principles', 'word-choice', 'sentence-structure', 'organization', 'testing', 'examples'],
+    ch14: ['introduction', 'gender', 'race-ethnicity', 'disability'],
+    ch15: ['introduction', 'canadian', 'foreign', 'adjectives', 'provinces'],
+    ch16: ['introduction', 'process', 'techniques', 'proofreading', 'symbols', 'technology', 'final-check']
 };
 
-// Get all progress data
-window.getProgress = function() {
+/**
+ * Initialize progress tracking system
+ */
+function initializeProgress() {
+    // Ensure storage exists with proper structure
+    const progress = getProgressData();
+    if (!progress.version || progress.version !== STORAGE_VERSION) {
+        console.log('Initializing progress storage...');
+        saveProgressData({
+            version: STORAGE_VERSION,
+            chapters: {},
+            lastVisit: null,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        });
+    }
+    
+    console.log('Progress system initialized');
+}
+
+/**
+ * Get raw progress data from localStorage
+ */
+function getProgressData() {
     try {
         const data = localStorage.getItem(STORAGE_KEY);
-        return data ? JSON.parse(data) : {};
+        return data ? JSON.parse(data) : { chapters: {}, version: STORAGE_VERSION };
     } catch (error) {
-        console.error('Error reading progress:', error);
-        return {};
+        console.warn('Error reading progress data:', error);
+        return { chapters: {}, version: STORAGE_VERSION };
     }
-};
+}
 
-// Set progress for a specific chapter and section
-window.setProgress = function(chapterId, sectionId, completed = true) {
+/**
+ * Save progress data to localStorage
+ */
+function saveProgressData(data) {
     try {
-        const progress = window.getProgress();
+        data.updatedAt = new Date().toISOString();
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
         
-        if (!progress[chapterId]) {
-            progress[chapterId] = {};
-        }
-        
-        progress[chapterId][sectionId] = completed;
-        progress.lastVisit = `${chapterId}#${sectionId}`;
-        progress.lastUpdated = new Date().toISOString();
-        
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
-        
-        // Emit custom event for real-time updates
+        // Emit progress changed event
         window.dispatchEvent(new CustomEvent('progress-changed', {
-            detail: { chapterId, sectionId, completed }
+            detail: { data }
         }));
         
         return true;
     } catch (error) {
-        console.error('Error saving progress:', error);
+        console.error('Error saving progress data:', error);
         return false;
     }
-};
+}
 
-// Get progress for a specific chapter
-window.getChapterProgress = function(chapterId) {
-    const progress = window.getProgress();
-    return progress[chapterId] || {};
-};
+/**
+ * Get progress for a specific chapter and section
+ * @param {string} chapterId - Chapter identifier (e.g., 'ch07')
+ * @param {string} sectionId - Section identifier (e.g., 'comma')
+ * @returns {boolean} - Whether the section is completed
+ */
+export function getProgress(chapterId, sectionId) {
+    const data = getProgressData();
+    return data.chapters[chapterId]?.[sectionId] || false;
+}
 
-// Calculate completion percentage for a chapter (FIXED - no more null values)
-window.calculateChapterProgress = function(chapterId) {
-    const chapterProgress = window.getChapterProgress(chapterId);
-    const completedSections = Object.values(chapterProgress).filter(Boolean).length;
-    const totalSections = CHAPTER_SECTIONS[chapterId] || 0;
+/**
+ * Set progress for a specific chapter and section
+ * @param {string} chapterId - Chapter identifier
+ * @param {string} sectionId - Section identifier
+ * @param {boolean} completed - Whether the section is completed
+ */
+export function setProgress(chapterId, sectionId, completed = true) {
+    const data = getProgressData();
     
-    return totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
-};
+    // Initialize chapter if it doesn't exist
+    if (!data.chapters[chapterId]) {
+        data.chapters[chapterId] = {};
+    }
+    
+    // Set section progress
+    data.chapters[chapterId][sectionId] = completed;
+    
+    // Update last visit
+    data.lastVisit = `${chapterId}#${sectionId}`;
+    
+    // Save data
+    const saved = saveProgressData(data);
+    
+    if (saved) {
+        console.log(`Progress updated: ${chapterId}/${sectionId} = ${completed}`);
+    }
+    
+    return saved;
+}
 
-// Get the last visited location
-window.getLastVisit = function() {
-    const progress = window.getProgress();
-    return progress.lastVisit || null;
-};
+/**
+ * Get all progress for a specific chapter
+ * @param {string} chapterId - Chapter identifier
+ * @returns {Object} - Object with section completion status
+ */
+export function getChapterProgress(chapterId) {
+    const data = getProgressData();
+    return data.chapters[chapterId] || {};
+}
 
-// Clear all progress (with confirmation)
-window.clearProgress = function() {
-    if (confirm('Are you sure you want to clear all progress? This cannot be undone.')) {
-        localStorage.removeItem(STORAGE_KEY);
-        window.dispatchEvent(new CustomEvent('progress-cleared'));
+/**
+ * Calculate completion percentage for a chapter
+ * @param {string} chapterId - Chapter identifier
+ * @returns {number} - Completion percentage (0-100)
+ */
+export function calculateChapterProgress(chapterId) {
+    const chapterData = getChapterProgress(chapterId);
+    const sections = CHAPTER_SECTIONS[chapterId] || [];
+    
+    if (sections.length === 0) {
+        return 0;
+    }
+    
+    const completedSections = sections.filter(sectionId => chapterData[sectionId]).length;
+    return Math.round((completedSections / sections.length) * 100);
+}
+
+/**
+ * Get overall progress across all chapters
+ * @returns {Object} - Overall progress statistics
+ */
+export function getOverallProgress() {
+    const data = getProgressData();
+    const stats = {
+        totalChapters: Object.keys(CHAPTER_SECTIONS).length,
+        completedChapters: 0,
+        totalSections: 0,
+        completedSections: 0,
+        overallPercentage: 0
+    };
+    
+    Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
+        const sections = CHAPTER_SECTIONS[chapterId];
+        const chapterData = data.chapters[chapterId] || {};
+        
+        stats.totalSections += sections.length;
+        
+        const completedInChapter = sections.filter(sectionId => chapterData[sectionId]).length;
+        stats.completedSections += completedInChapter;
+        
+        // Count chapter as completed if all sections are done
+        if (completedInChapter === sections.length) {
+            stats.completedChapters++;
+        }
+    });
+    
+    stats.overallPercentage = stats.totalSections > 0 ? 
+        Math.round((stats.completedSections / stats.totalSections) * 100) : 0;
+    
+    return stats;
+}
+
+/**
+ * Reset progress for a specific chapter
+ * @param {string} chapterId - Chapter identifier
+ */
+export function resetChapterProgress(chapterId) {
+    const data = getProgressData();
+    
+    if (data.chapters[chapterId]) {
+        data.chapters[chapterId] = {};
+        saveProgressData(data);
+        console.log(`Progress reset for chapter: ${chapterId}`);
+    }
+}
+
+/**
+ * Reset all progress (use with caution)
+ */
+export function resetAllProgress() {
+    const confirmed = confirm('Are you sure you want to reset all progress? This cannot be undone.');
+    
+    if (confirmed) {
+        const data = {
+            version: STORAGE_VERSION,
+            chapters: {},
+            lastVisit: null,
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        };
+        
+        saveProgressData(data);
+        console.log('All progress has been reset');
         return true;
     }
+    
     return false;
-};
+}
 
-// Check if a specific section is completed
-window.isSectionCompleted = function(chapterId, sectionId) {
-    const chapterProgress = window.getChapterProgress(chapterId);
-    return chapterProgress[sectionId] === true;
-};
+/**
+ * Export progress data for backup
+ * @returns {string} - JSON string of progress data
+ */
+export function exportProgress() {
+    const data = getProgressData();
+    return JSON.stringify(data, null, 2);
+}
 
-// Mark entire chapter as complete
-window.completeChapter = function(chapterId, sections) {
+/**
+ * Import progress data from backup
+ * @param {string} jsonData - JSON string of progress data
+ * @returns {boolean} - Whether import was successful
+ */
+export function importProgress(jsonData) {
     try {
-        const progress = window.getProgress();
+        const data = JSON.parse(jsonData);
         
-        if (!progress[chapterId]) {
-            progress[chapterId] = {};
+        // Validate data structure
+        if (!data.chapters || typeof data.chapters !== 'object') {
+            throw new Error('Invalid progress data format');
         }
         
-        sections.forEach(sectionId => {
-            progress[chapterId][sectionId] = true;
-        });
+        // Ensure version info
+        data.version = STORAGE_VERSION;
+        data.updatedAt = new Date().toISOString();
         
-        progress.lastUpdated = new Date().toISOString();
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        const saved = saveProgressData(data);
         
-        window.dispatchEvent(new CustomEvent('chapter-completed', {
-            detail: { chapterId }
-        }));
+        if (saved) {
+            console.log('Progress data imported successfully');
+        }
         
-        return true;
+        return saved;
     } catch (error) {
-        console.error('Error completing chapter:', error);
+        console.error('Error importing progress data:', error);
         return false;
     }
-};
+}
 
-// Get overall course completion
-window.getOverallCompletion = function() {
-    const progress = window.getProgress();
-    let totalSections = 0;
-    let completedSections = 0;
+/**
+ * Get next recommended section based on progress
+ * @returns {Object|null} - Next section info or null if all completed
+ */
+export function getNextRecommendedSection() {
+    const data = getProgressData();
     
-    Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
-        const chapterSections = CHAPTER_SECTIONS[chapterId];
-        totalSections += chapterSections;
-        
-        if (progress[chapterId]) {
-            completedSections += Object.values(progress[chapterId]).filter(Boolean).length;
-        }
-    });
-    
-    return totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
-};
-
-// Export progress data (for backup/sharing)
-window.exportProgress = function() {
-    const progress = window.getProgress();
-    const dataStr = JSON.stringify(progress, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(dataBlob);
-    link.download = `canadian-style-progress-${new Date().toISOString().split('T')[0]}.json`;
-    link.click();
-};
-
-// Import progress data
-window.importProgress = function(file) {
-    return new Promise((resolve, reject) => {
-        const reader = new FileReader();
-        
-        reader.onload = (e) => {
-            try {
-                const importedProgress = JSON.parse(e.target.result);
-                localStorage.setItem(STORAGE_KEY, JSON.stringify(importedProgress));
-                window.dispatchEvent(new CustomEvent('progress-imported'));
-                resolve(true);
-            } catch (error) {
-                console.error('Error parsing imported progress:', error);
-                reject(new Error('Invalid progress file. Please ensure it is a valid JSON.'));
-            }
-        };
-        
-        reader.onerror = () => {
-            reject(new Error('Failed to read file.'));
-        };
-        
-        reader.readAsText(file);
-    });
-};
-
-// Get stats for dashboard
-window.getProgressStats = function() {
-    const progress = window.getProgress();
-    let completedChapters = 0;
-    let totalSections = 0;
-    let completedSections = 0;
-    
-    Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
-        const chapterSections = CHAPTER_SECTIONS[chapterId];
-        totalSections += chapterSections;
-        
-        if (progress[chapterId]) {
-            const completed = Object.values(progress[chapterId]).filter(Boolean).length;
-            completedSections += completed;
+    // Check last visit first
+    if (data.lastVisit) {
+        const [chapterId, sectionId] = data.lastVisit.split('#');
+        if (chapterId && sectionId) {
+            const sections = CHAPTER_SECTIONS[chapterId] || [];
+            const currentIndex = sections.indexOf(sectionId);
             
-            if (completed === chapterSections) {
-                completedChapters++;
+            if (currentIndex < sections.length - 1) {
+                return {
+                    chapterId,
+                    sectionId: sections[currentIndex + 1],
+                    reason: 'continue-chapter'
+                };
             }
         }
-    });
+    }
+    
+    // Find first incomplete section
+    for (const chapterId of Object.keys(CHAPTER_SECTIONS)) {
+        const sections = CHAPTER_SECTIONS[chapterId];
+        const chapterData = data.chapters[chapterId] || {};
+        
+        for (const sectionId of sections) {
+            if (!chapterData[sectionId]) {
+                return {
+                    chapterId,
+                    sectionId,
+                    reason: 'first-incomplete'
+                };
+            }
+        }
+    }
+    
+    return null; // All completed
+}
+
+/**
+ * Get progress summary for debugging
+ * @returns {Object} - Detailed progress information
+ */
+export function getProgressSummary() {
+    const data = getProgressData();
+    const overall = getOverallProgress();
+    const next = getNextRecommendedSection();
     
     return {
-        totalChapters: Object.keys(CHAPTER_SECTIONS).length,
-        completedChapters,
-        totalSections,
-        completedSections,
-        overallPercentage: totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0
+        storage: {
+            version: data.version,
+            createdAt: data.createdAt,
+            updatedAt: data.updatedAt,
+            lastVisit: data.lastVisit
+        },
+        overall,
+        next,
+        chapters: Object.keys(CHAPTER_SECTIONS).map(chapterId => ({
+            id: chapterId,
+            progress: calculateChapterProgress(chapterId),
+            sections: getChapterProgress(chapterId)
+        }))
     };
-};
+}
 
-// Initialize progress system
-window.initProgress = function() {
-    // Ensure localStorage is available
-    if (!window.localStorage) {
-        console.warn('localStorage is not available. Progress will not be saved.');
-        return false;
+/**
+ * Update progress ring visual elements
+ * @param {string} elementId - ID of progress ring element
+ * @param {number} percentage - Progress percentage (0-100)
+ */
+export function updateProgressRing(elementId, percentage) {
+    const element = document.getElementById(elementId);
+    if (!element) return;
+    
+    const circle = element.querySelector('circle[stroke="#d71920"]');
+    const text = element.querySelector('text');
+    
+    if (circle) {
+        const circumference = 2 * Math.PI * 25; // radius = 25
+        const offset = circumference - (percentage / 100) * circumference;
+        circle.style.strokeDasharray = `${circumference}`;
+        circle.style.strokeDashoffset = `${offset}`;
     }
     
-    // Check if progress exists, if not create empty structure
-    const progress = window.getProgress();
-    if (Object.keys(progress).length === 0) {
-        const initialProgress = {
-            created: new Date().toISOString(),
-            version: '1.0'
-        };
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(initialProgress));
+    if (text) {
+        text.textContent = `${percentage}%`;
     }
-    
-    return true;
-};
+}
 
-// Validate chapter and section IDs to prevent null values
-window.validateChapterSection = function(chapterId, sectionId) {
-    if (!chapterId || !CHAPTER_SECTIONS[chapterId]) {
-        console.error('Invalid chapter ID:', chapterId);
-        return false;
-    }
+/**
+ * Setup progress event listeners
+ */
+function setupProgressListeners() {
+    // Listen for quiz completions
+    window.addEventListener('quiz-completed', (event) => {
+        const { chapterId, sectionId, percentage } = event.detail;
+        
+        // Mark section as complete if quiz score is good enough
+        if (percentage >= 80) {
+            setProgress(chapterId, sectionId, true);
+        }
+    });
     
-    if (!sectionId) {
-        console.error('Invalid section ID:', sectionId);
-        return false;
-    }
+    // Listen for section completions
+    window.addEventListener('section-completed', (event) => {
+        const { chapterId, sectionId } = event.detail;
+        setProgress(chapterId, sectionId, true);
+    });
     
-    return true;
-};
+    console.log('Progress event listeners initialized');
+}
 
-// Auto-initialize when script loads
-window.initProgress();
+// Initialize progress system when module loads
+initializeProgress();
+setupProgressListeners();
 
-console.log('Progress system initialized successfully');
+// Make key functions available globally for compatibility
+window.getProgress = getProgress;
+window.setProgress = setProgress;
+window.getChapterProgress = getChapterProgress;
+window.calculateChapterProgress = calculateChapterProgress;
+window.getOverallProgress = getOverallProgress;
+
+console.log('Progress tracking system loaded successfully');
+
+// Development helper functions (only in development)
+if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
+    window.progressDebug = {
+        summary: getProgressSummary,
+        reset: resetAllProgress,
+        export: exportProgress,
+        import: importProgress,
+        sections: CHAPTER_SECTIONS
+    };
+    
+    console.log('Progress debug functions available at window.progressDebug');
+}

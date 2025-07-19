@@ -1,5 +1,7 @@
-// Quiz Engine for The Canadian Style Learning Platform
-// Fixed version - prevents null values and improves error handling
+/**
+ * Enhanced Quiz Engine for The Canadian Style Learning Platform
+ * Supports multiple question types with comprehensive feedback
+ */
 
 export class QuizEngine {
     constructor(quizData, chapterId, sectionId) {
@@ -9,32 +11,44 @@ export class QuizEngine {
         this.currentQuestionIndex = 0;
         this.answers = [];
         this.score = 0;
-        this.startTime = Date.now();
         this.isComplete = false;
+        this.startTime = Date.now();
         this.container = null;
+        this.timeLimit = null;
+        this.timer = null;
+        
+        console.log('QuizEngine initialized:', { chapterId, sectionId, questionCount: this.quizData.questions?.length || 0 });
     }
 
-    // Create and return the quiz container element
     render() {
-        if (!this.quizData.questions || this.quizData.questions.length === 0) {
-            return this.renderEmptyQuiz();
-        }
-
+        // Create container element
         this.container = document.createElement('div');
         this.container.className = 'quiz-engine-container';
-        this.renderCurrentQuestion();
-        return this.container;
-    }
+        this.container.setAttribute('data-chapter', this.chapterId);
+        this.container.setAttribute('data-section', this.sectionId);
+        
+        // Check if we have questions
+        if (!this.quizData.questions || this.quizData.questions.length === 0) {
+            this.container.innerHTML = `
+                <div class="quiz-placeholder">
+                    <div class="quiz-icon">📝</div>
+                    <h3>Quiz Coming Soon</h3>
+                    <p>Interactive questions for this section are being prepared.</p>
+                    <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').style.display='none'">
+                        Continue Learning
+                    </button>
+                </div>
+            `;
+            return this.container;
+        }
 
-    renderEmptyQuiz() {
-        const emptyContainer = document.createElement('div');
-        emptyContainer.className = 'quiz-empty';
-        emptyContainer.innerHTML = `
-            <div class="empty-quiz-message">
-                <p>📝 Quiz questions will be available soon for this section.</p>
-            </div>
-        `;
-        return emptyContainer;
+        // Render the current question
+        this.renderCurrentQuestion();
+        
+        // Store reference for easy access
+        this.container.quizEngine = this;
+        
+        return this.container;
     }
 
     renderCurrentQuestion() {
@@ -44,37 +58,33 @@ export class QuizEngine {
         }
 
         const question = this.quizData.questions[this.currentQuestionIndex];
-        const questionNumber = this.currentQuestionIndex + 1;
         const totalQuestions = this.quizData.questions.length;
+        const progressPercentage = ((this.currentQuestionIndex + 1) / totalQuestions) * 100;
 
         this.container.innerHTML = `
             <div class="quiz-panel">
                 <div class="quiz-header">
-                    <h3 class="quiz-title">${this.quizData.title || 'Section Quiz'}</h3>
                     <div class="quiz-meta">
-                        <span class="question-counter">
-                            Question ${questionNumber} of ${totalQuestions}
-                        </span>
-                        <div class="quiz-progress">
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: ${(questionNumber / totalQuestions) * 100}%"></div>
-                            </div>
+                        <h3 class="quiz-title">${this.quizData.title || 'Quiz'}</h3>
+                        <span class="quiz-progress-text">Question ${this.currentQuestionIndex + 1} of ${totalQuestions}</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progressPercentage}%"></div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="quiz-body">
+                <div class="question-content">
                     <div class="question-stem">
-                        ${question.stem || question.question || 'Question text not available'}
+                        <p>${question.stem || question.question}</p>
+                        ${question.ref ? `<small class="question-ref">Reference: ${question.ref}</small>` : ''}
                     </div>
-                    
-                    <div class="question-content">
-                        ${this.renderQuestion(question)}
-                    </div>
+                    ${this.renderQuestion(question)}
                 </div>
                 
                 <div class="quiz-footer">
-                    <button class="btn btn-secondary quiz-prev-btn" 
+                    <button class="btn btn-outline quiz-prev-btn" 
                             ${this.currentQuestionIndex === 0 ? 'disabled' : ''}
                             onclick="this.closest('.quiz-engine-container').quizEngine.previousQuestion()">
                         ← Previous
@@ -97,8 +107,8 @@ export class QuizEngine {
             </div>
         `;
 
-        // Store reference to this quiz engine on the container
-        this.container.quizEngine = this;
+        // Handle special question types
+        this.setupQuestionInteractions(question);
     }
 
     renderQuestion(question) {
@@ -115,7 +125,12 @@ export class QuizEngine {
                 return this.renderTrueFalse(question);
             case 'drag-drop':
                 return this.renderDragDrop(question);
+            case 'error-spot':
+                return this.renderErrorSpot(question);
+            case 'quickfire':
+                return this.renderQuickfire(question);
             default:
+                console.warn('Unknown question type:', type);
                 return this.renderMultipleChoice(question);
         }
     }
@@ -144,8 +159,8 @@ export class QuizEngine {
         }
 
         return `
+            <div class="instruction">Select all correct answers:</div>
             <div class="options-list" data-question-type="multi-select">
-                <p class="instruction">Select all that apply:</p>
                 ${question.options.map((option, index) => `
                     <label class="option-label" data-option-index="${index}">
                         <input type="checkbox" name="quiz-answer-${this.currentQuestionIndex}" 
@@ -160,12 +175,10 @@ export class QuizEngine {
     renderFillBlank(question) {
         return `
             <div class="fill-blank-container" data-question-type="fill-blank">
-                <div class="fill-blank-question">
-                    ${question.text || question.stem || 'Complete the sentence:'}
-                </div>
+                <p class="fill-blank-question">${question.text || question.stem}</p>
                 <input type="text" class="fill-blank-input" 
-                       placeholder="Enter your answer here..." 
-                       data-correct-answer="${question.answer || ''}">
+                       placeholder="Enter your answer..." 
+                       autocomplete="off">
             </div>
         `;
     }
@@ -173,12 +186,12 @@ export class QuizEngine {
     renderTrueFalse(question) {
         return `
             <div class="options-list" data-question-type="true-false">
-                <label class="option-label" data-option-index="0">
+                <label class="option-label" data-option-index="true">
                     <input type="radio" name="quiz-answer-${this.currentQuestionIndex}" 
                            value="true" class="option-input">
                     <span class="option-text">True</span>
                 </label>
-                <label class="option-label" data-option-index="1">
+                <label class="option-label" data-option-index="false">
                     <input type="radio" name="quiz-answer-${this.currentQuestionIndex}" 
                            value="false" class="option-input">
                     <span class="option-text">False</span>
@@ -188,14 +201,14 @@ export class QuizEngine {
     }
 
     renderDragDrop(question) {
-        const items = question.items || [];
+        const items = question.items || question.options || [];
         return `
             <div class="drag-drop-container" data-question-type="drag-drop">
                 <p class="instruction">Drag items to arrange them in the correct order:</p>
-                <div class="drag-items">
+                <div class="drag-items" id="drag-container-${this.currentQuestionIndex}">
                     ${items.map((item, index) => `
-                        <div class="drag-item" draggable="true" data-item-id="${index}">
-                            ${item}
+                        <div class="drag-item" draggable="true" data-item-id="${index}" data-original-index="${index}">
+                            ${item.label || item}
                         </div>
                     `).join('')}
                 </div>
@@ -203,8 +216,224 @@ export class QuizEngine {
         `;
     }
 
+    renderErrorSpot(question) {
+        const words = question.text.split(' ');
+        return `
+            <div class="error-spot-container" data-question-type="error-spot">
+                <p class="instruction">Click on the word that contains an error:</p>
+                <div class="error-text">
+                    ${words.map((word, index) => `
+                        <span class="clickable-word" data-word-index="${index}" onclick="this.classList.toggle('selected')">
+                            ${word}
+                        </span>
+                    `).join(' ')}
+                </div>
+            </div>
+        `;
+    }
+
+    renderQuickfire(question) {
+        const cards = question.cards || [];
+        const timeLimit = question.timeLimit || 30;
+        
+        return `
+            <div class="quickfire-container" data-question-type="quickfire">
+                <div class="quickfire-header">
+                    <div class="quickfire-timer">
+                        <span class="timer-label">Time remaining:</span>
+                        <span class="timer-display" id="timer-${this.currentQuestionIndex}">${timeLimit}s</span>
+                    </div>
+                    <div class="quickfire-score">
+                        <span class="score-label">Score:</span>
+                        <span class="score-display" id="score-${this.currentQuestionIndex}">0/${cards.length}</span>
+                    </div>
+                </div>
+                <div class="flashcard" id="flashcard-${this.currentQuestionIndex}" data-card-index="0">
+                    <div class="card-front" onclick="this.closest('.flashcard').classList.add('flipped')">
+                        ${cards[0]?.front || 'No cards available'}
+                    </div>
+                    <div class="card-back">
+                        <div class="card-answer">${cards[0]?.back || ''}</div>
+                        <div class="card-actions">
+                            <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').quizEngine.quickfireNext(false)">
+                                ❌ Incorrect
+                            </button>
+                            <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.quickfireNext(true)">
+                                ✅ Correct
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    setupQuestionInteractions(question) {
+        if (question.type === 'drag-drop') {
+            this.setupDragAndDrop();
+        } else if (question.type === 'quickfire') {
+            this.setupQuickfire(question);
+        }
+        
+        // Add click handlers for options
+        this.container.querySelectorAll('.option-label').forEach(label => {
+            label.addEventListener('click', () => {
+                // Handle single vs multiple selection
+                const questionType = label.closest('[data-question-type]')?.dataset.questionType;
+                if (questionType === 'mcq' || questionType === 'true-false') {
+                    // Single selection - remove other selections
+                    label.closest('.options-list').querySelectorAll('.option-label').forEach(l => {
+                        l.classList.remove('selected');
+                    });
+                }
+                label.classList.toggle('selected');
+            });
+        });
+    }
+
+    setupDragAndDrop() {
+        const dragContainer = this.container.querySelector('.drag-items');
+        if (!dragContainer) return;
+
+        let draggedElement = null;
+
+        dragContainer.addEventListener('dragstart', (e) => {
+            if (e.target.classList.contains('drag-item')) {
+                draggedElement = e.target;
+                e.target.classList.add('dragging');
+            }
+        });
+
+        dragContainer.addEventListener('dragend', (e) => {
+            if (e.target.classList.contains('drag-item')) {
+                e.target.classList.remove('dragging');
+                draggedElement = null;
+            }
+        });
+
+        dragContainer.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            const afterElement = this.getDragAfterElement(dragContainer, e.clientY);
+            if (draggedElement) {
+                if (afterElement == null) {
+                    dragContainer.appendChild(draggedElement);
+                } else {
+                    dragContainer.insertBefore(draggedElement, afterElement);
+                }
+            }
+        });
+    }
+
+    getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.drag-item:not(.dragging)')];
+        
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+
+    setupQuickfire(question) {
+        const timeLimit = question.timeLimit || 30;
+        const cards = question.cards || [];
+        let currentCardIndex = 0;
+        let timeRemaining = timeLimit;
+        let score = 0;
+
+        this.quickfireData = {
+            cards,
+            currentCardIndex: 0,
+            score: 0,
+            totalTime: timeLimit
+        };
+
+        // Start timer
+        this.timer = setInterval(() => {
+            timeRemaining--;
+            const timerDisplay = this.container.querySelector(`#timer-${this.currentQuestionIndex}`);
+            if (timerDisplay) {
+                timerDisplay.textContent = `${timeRemaining}s`;
+            }
+            
+            if (timeRemaining <= 0) {
+                clearInterval(this.timer);
+                this.quickfireTimeUp();
+            }
+        }, 1000);
+    }
+
+    quickfireNext(isCorrect) {
+        if (!this.quickfireData) return;
+
+        if (isCorrect) {
+            this.quickfireData.score++;
+        }
+
+        this.quickfireData.currentCardIndex++;
+        
+        // Update score display
+        const scoreDisplay = this.container.querySelector(`#score-${this.currentQuestionIndex}`);
+        if (scoreDisplay) {
+            scoreDisplay.textContent = `${this.quickfireData.score}/${this.quickfireData.cards.length}`;
+        }
+
+        // Check if finished
+        if (this.quickfireData.currentCardIndex >= this.quickfireData.cards.length) {
+            clearInterval(this.timer);
+            this.quickfireComplete();
+            return;
+        }
+
+        // Show next card
+        const flashcard = this.container.querySelector(`#flashcard-${this.currentQuestionIndex}`);
+        const nextCard = this.quickfireData.cards[this.quickfireData.currentCardIndex];
+        
+        if (flashcard && nextCard) {
+            flashcard.classList.remove('flipped');
+            flashcard.querySelector('.card-front').textContent = nextCard.front;
+            flashcard.querySelector('.card-answer').textContent = nextCard.back;
+        }
+    }
+
+    quickfireTimeUp() {
+        this.quickfireComplete();
+    }
+
+    quickfireComplete() {
+        const percentage = Math.round((this.quickfireData.score / this.quickfireData.cards.length) * 100);
+        this.score = percentage >= 70 ? 1 : 0; // Pass if 70% or better
+        this.answers[this.currentQuestionIndex] = {
+            userAnswer: `${this.quickfireData.score}/${this.quickfireData.cards.length}`,
+            isCorrect: this.score === 1,
+            question: 'Quickfire Round'
+        };
+        
+        this.showFeedback({
+            rationale: `You got ${this.quickfireData.score} out of ${this.quickfireData.cards.length} correct (${percentage}%).`
+        }, null, this.score === 1);
+        
+        // Show next button
+        const checkBtn = this.container.querySelector('.quiz-check-btn');
+        const nextBtn = this.container.querySelector('.quiz-next-btn');
+        
+        if (checkBtn) checkBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'inline-block';
+    }
+
     checkAnswer() {
         const question = this.quizData.questions[this.currentQuestionIndex];
+        
+        // Skip if quickfire (handled separately)
+        if (question.type === 'quickfire') {
+            return;
+        }
+        
         const userAnswer = this.getUserAnswer();
         const isCorrect = this.validateAnswer(question, userAnswer);
         
@@ -251,7 +480,11 @@ export class QuizEngine {
                 
             case 'drag-drop':
                 const dragItems = questionContainer.querySelectorAll('.drag-item');
-                return Array.from(dragItems).map(item => item.dataset.itemId);
+                return Array.from(dragItems).map(item => item.dataset.originalIndex);
+                
+            case 'error-spot':
+                const selectedWord = questionContainer.querySelector('.clickable-word.selected');
+                return selectedWord ? selectedWord.dataset.wordIndex : null;
                 
             default:
                 return null;
@@ -263,8 +496,8 @@ export class QuizEngine {
         
         switch (type) {
             case 'mcq':
-                const correctIndex = question.options.findIndex(opt => opt.correct === true);
-                return parseInt(userAnswer) === correctIndex;
+                const correctOption = question.options.findIndex(opt => opt.correct);
+                return userAnswer === correctOption.toString();
                 
             case 'multi-select':
                 const correctIndices = question.options
@@ -272,20 +505,25 @@ export class QuizEngine {
                     .filter(index => index !== null);
                 return Array.isArray(userAnswer) && 
                        userAnswer.length === correctIndices.length &&
-                       userAnswer.every(ans => correctIndices.includes(ans));
+                       userAnswer.every(answer => correctIndices.includes(answer));
+                       
+            case 'true-false':
+                return userAnswer === question.correct.toString();
                 
             case 'fill-blank':
-                const correctAnswer = question.answer || '';
-                return userAnswer.toLowerCase() === correctAnswer.toLowerCase();
-                
-            case 'true-false':
-                return userAnswer === question.answer?.toString();
+                const correctAnswers = Array.isArray(question.correct) ? question.correct : [question.correct];
+                return correctAnswers.some(correct => 
+                    userAnswer.toLowerCase() === correct.toLowerCase()
+                );
                 
             case 'drag-drop':
-                const correctOrder = question.correctOrder || [];
+                const correctOrder = question.correctOrder || question.options.map((_, i) => i.toString());
                 return Array.isArray(userAnswer) && 
                        userAnswer.length === correctOrder.length &&
-                       userAnswer.every((item, index) => item === correctOrder[index]);
+                       userAnswer.every((answer, index) => answer === correctOrder[index]);
+                       
+            case 'error-spot':
+                return userAnswer === question.errorIndex.toString();
                 
             default:
                 return false;
@@ -321,14 +559,19 @@ export class QuizEngine {
         `;
         
         feedbackEl.style.display = 'block';
+        
+        // Scroll feedback into view
+        setTimeout(() => {
+            feedbackEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
     }
 
     disableInputs() {
-        const inputs = this.container.querySelectorAll('input, button');
+        const inputs = this.container.querySelectorAll('input, .clickable-word, .drag-item');
         inputs.forEach(input => {
-            if (!input.classList.contains('quiz-next-btn') && !input.classList.contains('quiz-prev-btn')) {
-                input.disabled = true;
-            }
+            input.disabled = true;
+            input.style.pointerEvents = 'none';
+            input.style.opacity = '0.7';
         });
     }
 
@@ -380,116 +623,131 @@ export class QuizEngine {
             <div class="quiz-results">
                 <div class="results-header">
                     <div class="results-icon ${passed ? 'passed' : 'failed'}">
-                        ${passed ? '🎉' : '📚'}
+                        ${passed ? '🎉' : '📝'}
                     </div>
-                    <h3>Quiz Complete!</h3>
+                    <h3>${passed ? 'Congratulations!' : 'Good Effort!'}</h3>
+                    <p class="results-message ${passed ? 'passed' : 'failed'}">
+                        ${passed ? 
+                            'You have successfully completed this quiz!' : 
+                            'Review the material and try again to improve your score.'
+                        }
+                    </p>
                 </div>
                 
                 <div class="results-stats">
                     <div class="stat">
-                        <div class="stat-value">${this.score}/${this.quizData.questions.length}</div>
-                        <div class="stat-label">Correct Answers</div>
+                        <span class="stat-value">${this.score}</span>
+                        <span class="stat-label">Correct Answers</span>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">${percentage}%</div>
-                        <div class="stat-label">Score</div>
+                        <span class="stat-value">${percentage}%</span>
+                        <span class="stat-label">Score</span>
                     </div>
                     <div class="stat">
-                        <div class="stat-value">${timeSpent}s</div>
-                        <div class="stat-label">Time Spent</div>
+                        <span class="stat-value">${timeSpent}s</span>
+                        <span class="stat-label">Time Taken</span>
                     </div>
-                </div>
-                
-                <div class="results-message ${passed ? 'passed' : 'failed'}">
-                    ${passed 
-                        ? '✅ Great job! You passed this quiz and the section is now marked as complete.' 
-                        : '📖 You need 80% or higher to pass. Review the material and try again.'}
+                    <div class="stat">
+                        <span class="stat-value">${this.quizData.questions.length}</span>
+                        <span class="stat-label">Total Questions</span>
+                    </div>
                 </div>
                 
                 <div class="results-actions">
-                    ${!passed ? `
-                        <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.retryQuiz()">
-                            Try Again
-                        </button>
-                    ` : ''}
-                    <button class="btn btn-secondary" onclick="this.closest('.quiz-engine-container').quizEngine.reviewAnswers()">
+                    <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').quizEngine.reviewAnswers()">
                         Review Answers
                     </button>
+                    ${!passed ? `
+                        <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.retakeQuiz()">
+                            Retake Quiz
+                        </button>
+                    ` : `
+                        <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').style.display='none'">
+                            Continue Learning
+                        </button>
+                    `}
                 </div>
             </div>
         `;
-    }
-
-    retryQuiz() {
-        this.currentQuestionIndex = 0;
-        this.answers = [];
-        this.score = 0;
-        this.startTime = Date.now();
-        this.isComplete = false;
-        this.renderCurrentQuestion();
     }
 
     reviewAnswers() {
-        // Show detailed review of all answers
-        const reviewHtml = this.quizData.questions.map((question, index) => {
-            const answer = this.answers[index];
-            if (!answer) return '';
-            
-            return `
-                <div class="answer-review ${answer.isCorrect ? 'correct' : 'incorrect'}">
-                    <div class="review-header">
-                        <span class="review-number">Question ${index + 1}</span>
-                        <span class="review-status">${answer.isCorrect ? '✅ Correct' : '❌ Incorrect'}</span>
-                    </div>
-                    <div class="review-question">${question.stem || question.question}</div>
-                    <div class="review-answer">Your answer: ${answer.userAnswer}</div>
-                    ${question.rationale ? `<div class="review-explanation">${question.rationale}</div>` : ''}
-                </div>
-            `;
-        }).join('');
-
         this.container.innerHTML = `
-            <div class="quiz-review">
+            <div class="answer-review">
                 <div class="review-header">
                     <h3>Answer Review</h3>
-                    <button class="btn btn-secondary" onclick="this.closest('.quiz-engine-container').quizEngine.renderResults()">
+                    <span class="review-score">${this.score}/${this.quizData.questions.length} Correct</span>
+                </div>
+                
+                <div class="review-content">
+                    ${this.answers.map((answer, index) => {
+                        const question = this.quizData.questions[index];
+                        return `
+                            <div class="review-item ${answer.isCorrect ? 'correct' : 'incorrect'}">
+                                <div class="review-question">
+                                    <span class="question-number">Q${index + 1}</span>
+                                    <span class="question-text">${question.stem || question.question}</span>
+                                    <span class="result-icon">${answer.isCorrect ? '✅' : '❌'}</span>
+                                </div>
+                                ${question.rationale ? `
+                                    <div class="review-explanation">
+                                        <strong>Explanation:</strong> ${question.rationale}
+                                    </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="review-actions">
+                    <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').quizEngine.renderResults()">
                         Back to Results
                     </button>
-                </div>
-                <div class="review-content">
-                    ${reviewHtml}
+                    <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.retakeQuiz()">
+                        Retake Quiz
+                    </button>
                 </div>
             </div>
         `;
     }
-}
 
-// Utility function to load quiz data from JSON files
-export async function loadQuizData(chapterId) {
-    try {
-        const response = await fetch(`../data/quizzes/${chapterId}-quiz.json`);
-        if (!response.ok) {
-            console.warn(`Quiz data not found for ${chapterId}`);
+    retakeQuiz() {
+        // Reset quiz state
+        this.currentQuestionIndex = 0;
+        this.answers = [];
+        this.score = 0;
+        this.isComplete = false;
+        this.startTime = Date.now();
+        
+        // Clear any timers
+        if (this.timer) {
+            clearInterval(this.timer);
+            this.timer = null;
+        }
+        
+        // Re-render first question
+        this.renderCurrentQuestion();
+    }
+
+    // Static method to load quiz data from JSON files
+    static async loadQuizData(chapterId) {
+        try {
+            const response = await fetch(`../data/quizzes/${chapterId}-quiz.json`);
+            if (!response.ok) {
+                throw new Error(`Quiz data not found for ${chapterId}`);
+            }
+            return await response.json();
+        } catch (error) {
+            console.warn('Could not load quiz data:', error);
             return null;
         }
-        return await response.json();
-    } catch (error) {
-        console.error(`Error loading quiz data for ${chapterId}:`, error);
-        return null;
     }
 }
 
-// Create default quiz data structure to prevent null errors
-export function createDefaultQuizData(sectionId, title) {
-    return {
-        id: `${sectionId}-quiz`,
-        title: title || 'Section Quiz',
-        questions: [],
-        meta: {
-            created: new Date().toISOString(),
-            version: '1.0'
-        }
-    };
-}
+// Export for use in other modules
+export const loadQuizData = QuizEngine.loadQuizData;
 
-console.log('Quiz Engine loaded successfully');
+// Make available globally for onclick handlers
+window.QuizEngine = QuizEngine;
+
+console.log('Enhanced QuizEngine loaded successfully');

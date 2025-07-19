@@ -59,32 +59,33 @@
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 Government of Canada. Based on "The Canadian Style" (1997 revised edition).</p>
-            <div class="footer-actions">
-                <button class="btn btn-secondary" onclick="exportProgress()">Export Progress</button>
-                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importProgress(this)">
-                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">Import Progress</button>
-                <button class="btn btn-outline" onclick="resetProgress()">Reset Progress</button>
-            </div>
         </div>
     </footer>
 
-    <!-- Loading Scripts -->
+    <!-- Include JavaScript modules -->
     <script type="module" src="shared/js/progress.js"></script>
     <script type="module" src="shared/js/components.js"></script>
-    
     <script type="module">
-        // Chapter data with complete information
+        import { getProgress, setProgress, getChapterProgress, calculateChapterProgress } from './shared/js/progress.js';
+        
+        // Make progress functions globally available
+        window.getProgress = getProgress;
+        window.setProgress = setProgress;
+        window.getChapterProgress = getChapterProgress;
+        window.calculateChapterProgress = calculateChapterProgress;
+        
+        // Chapter data
         const chaptersData = [
             { id: 'ch01', number: '01', title: 'Capitalization', description: 'Rules for using capital letters correctly.', sections: 8, category: 'typography' },
-            { id: 'ch02', number: '02', title: 'Compounds', description: 'Forming compound words correctly.', sections: 9, category: 'typography' },
-            { id: 'ch03', number: '03', title: 'Hyphens', description: 'Using hyphens in compound words and phrases.', sections: 9, category: 'typography' },
-            { id: 'ch04', number: '04', title: 'Abbreviations', description: 'Standard abbreviations and acronyms.', sections: 10, category: 'typography' },
-            { id: 'ch05', number: '05', title: 'Numbers', description: 'Numerical expressions in government writing.', sections: 9, category: 'typography' },
-            { id: 'ch06', number: '06', title: 'Italics', description: 'When and how to use italic formatting.', sections: 8, category: 'typography' },
-            { id: 'ch07', number: '07', title: 'Punctuation', description: 'Complete guide to punctuation marks.', sections: 10, category: 'typography' },
-            { id: 'ch08', number: '08', title: 'Quotations', description: 'Quotations and quotation marks.', sections: 7, category: 'typography' },
-            { id: 'ch09', number: '09', title: 'Reference Matter', description: 'Bibliographies, footnotes, and citations.', sections: 6, category: 'typography' },
-            { id: 'ch10', number: '10', title: 'Letters', description: 'Letters and memorandums format.', sections: 8, category: 'typography' },
+            { id: 'ch02', number: '02', title: 'Hyphenation', description: 'Compounding and word division rules.', sections: 6, category: 'typography' },
+            { id: 'ch03', number: '03', title: 'Spelling', description: 'Canadian spelling conventions and preferences.', sections: 5, category: 'typography' },
+            { id: 'ch04', number: '04', title: 'Abbreviations', description: 'When and how to use abbreviations properly.', sections: 7, category: 'typography' },
+            { id: 'ch05', number: '05', title: 'Numbers', description: 'Rules for writing numerical expressions.', sections: 9, category: 'typography' },
+            { id: 'ch06', number: '06', title: 'Italics', description: 'When to use italic type for emphasis.', sections: 4, category: 'typography' },
+            { id: 'ch07', number: '07', title: 'Punctuation', description: 'Complete guide to punctuation marks.', sections: 8, category: 'typography' },
+            { id: 'ch08', number: '08', title: 'Quotations', description: 'Quotation marks and citing sources.', sections: 6, category: 'typography' },
+            { id: 'ch09', number: '09', title: 'Reference Matter', description: 'Bibliographies, footnotes, and citations.', sections: 5, category: 'typography' },
+            { id: 'ch10', number: '10', title: 'Letters', description: 'Business correspondence formatting.', sections: 6, category: 'typography' },
             { id: 'ch11', number: '11', title: 'Reports', description: 'Reports and minutes structure.', sections: 7, category: 'typography' },
             { id: 'ch12', number: '12', title: 'Usage', description: 'Common usage issues and solutions.', sections: 3, category: 'style' },
             { id: 'ch13', number: '13', title: 'Plain Language', description: 'Writing clearly and simply.', sections: 7, category: 'style' },
@@ -95,6 +96,7 @@
 
         // Initialize dashboard
         function initializeDashboard() {
+            console.log('Initializing dashboard...');
             renderChapterCards();
             updateOverallProgress();
             setupFilterButtons();
@@ -103,27 +105,51 @@
         // Render chapter cards
         function renderChapterCards() {
             const grid = document.getElementById('chaptersGrid');
+            if (!grid) {
+                console.error('Chapters grid not found');
+                return;
+            }
+            
             grid.innerHTML = '';
 
             chaptersData.forEach(chapter => {
-                const completion = window.calculateChapterProgress ? window.calculateChapterProgress(chapter.id) : 0;
+                const completion = calculateChapterProgress ? calculateChapterProgress(chapter.id) : 0;
                 const ctaText = completion > 0 ? 'Continue' : 'Start';
                 
-                const card = document.createElement('cs-card');
-                card.setAttribute('chapter-id', chapter.id);
-                card.setAttribute('chapter-number', chapter.number);
-                card.setAttribute('title', chapter.title);
-                card.setAttribute('percentage', completion);
-                card.setAttribute('sections-count', chapter.sections);
-                card.setAttribute('href', `chapters/${chapter.id}.html`);
-                card.setAttribute('cta-text', ctaText);
-                card.setAttribute('category', chapter.category);
-                
-                // Add description
-                card.innerHTML = `<p class="card-description">${chapter.description}</p>`;
+                // Create card element
+                const card = document.createElement('div');
+                card.className = 'chapter-card';
+                card.setAttribute('data-category', chapter.category);
+                card.innerHTML = `
+                    <div class="card-header">
+                        <span class="chapter-number">${chapter.number}</span>
+                        <div class="progress-container">
+                            <div class="progress-ring" data-percentage="${completion}">
+                                <svg width="60" height="60" viewBox="0 0 60 60">
+                                    <circle cx="30" cy="30" r="25" stroke="#e5e5e5" stroke-width="6" fill="none"/>
+                                    <circle cx="30" cy="30" r="25" stroke="#d71920" stroke-width="6" fill="none"
+                                            stroke-dasharray="${157 * (completion / 100)} 157"
+                                            stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                                    <text x="30" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#d71920">
+                                        ${completion}%
+                                    </text>
+                                </svg>
+                            </div>
+                            <div class="completion-badge ${completion === 100 ? 'completed' : ''}" ${completion === 100 ? 'style="display: block;"' : ''}>✓</div>
+                        </div>
+                    </div>
+                    <h3 class="card-title">${chapter.title}</h3>
+                    <p class="card-description">${chapter.description}</p>
+                    <div class="card-footer">
+                        <span class="section-count">${chapter.sections} sections</span>
+                        <a href="chapters/${chapter.id}.html" class="btn btn-primary">${ctaText}</a>
+                    </div>
+                `;
                 
                 grid.appendChild(card);
             });
+            
+            console.log(`Rendered ${chaptersData.length} chapter cards`);
         }
 
         // Update overall progress
@@ -134,38 +160,41 @@
 
             chaptersData.forEach(chapter => {
                 totalSections += chapter.sections;
-                const progress = window.getChapterProgress ? window.getChapterProgress(chapter.id) : {};
-                const completed = Object.values(progress).filter(Boolean).length;
-                completedSections += completed;
+                const progress = calculateChapterProgress ? calculateChapterProgress(chapter.id) : 0;
+                completedSections += Math.round((progress / 100) * chapter.sections);
                 
-                if (completed === chapter.sections) {
+                if (progress === 100) {
                     completedChapters++;
                 }
             });
 
-            const overallCompletion = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
+            const overallPercentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
             
-            document.getElementById('overallCompletion').textContent = `${overallCompletion}%`;
-            document.getElementById('completedChapters').textContent = `${completedChapters}/16`;
+            // Update display
+            const overallElement = document.getElementById('overallCompletion');
+            const chaptersElement = document.getElementById('completedChapters');
+            
+            if (overallElement) overallElement.textContent = `${overallPercentage}%`;
+            if (chaptersElement) chaptersElement.textContent = completedChapters;
+            
+            console.log(`Overall progress: ${overallPercentage}%, Chapters completed: ${completedChapters}`);
         }
 
         // Setup filter buttons
         function setupFilterButtons() {
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const cards = document.querySelectorAll('cs-card');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.chapter-card');
 
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update active state
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
 
-                    const filter = btn.dataset.filter;
-                    
                     // Filter cards
+                    const filter = button.dataset.filter;
                     cards.forEach(card => {
-                        const category = card.getAttribute('category');
-                        if (filter === 'all' || category === filter) {
+                        if (filter === 'all' || card.dataset.category === filter) {
                             card.style.display = 'block';
                         } else {
                             card.style.display = 'none';
@@ -175,55 +204,363 @@
             });
         }
 
-        // Export progress
-        window.exportProgress = function() {
-            if (window.exportProgress) {
-                window.exportProgress();
-            } else {
-                alert('Export feature not available. Please ensure progress.js is loaded correctly.');
-            }
-        };
-
-        // Import progress
-        window.importProgress = async function(input) {
-            if (input.files && input.files[0]) {
-                try {
-                    if (window.importProgress) {
-                        await window.importProgress(input.files[0]);
-                        renderChapterCards();
-                        updateOverallProgress();
-                        alert('Progress imported successfully!');
-                    }
-                } catch (error) {
-                    alert('Error importing progress: ' + error.message);
-                }
-            }
-        };
-
-        // Reset progress
-        window.resetProgress = function() {
-            if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
-                if (window.clearProgress) {
-                    window.clearProgress();
-                    renderChapterCards();
-                    updateOverallProgress();
-                }
-            }
-        };
-
-        // Listen for progress changes
+        // Listen for progress updates
         window.addEventListener('progress-changed', () => {
-            renderChapterCards();
-            updateOverallProgress();
-        });
-
-        window.addEventListener('progress-cleared', () => {
+            console.log('Progress changed, updating dashboard...');
             renderChapterCards();
             updateOverallProgress();
         });
 
         // Initialize when DOM is ready
-        document.addEventListener('DOMContentLoaded', initializeDashboard);
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeDashboard);
+        } else {
+            initializeDashboard();
+        }
+
+        console.log('Dashboard script loaded successfully');
     </script>
+
+    <style>
+        /* Dashboard-specific styles */
+        .site-header {
+            background: linear-gradient(135deg, #d71920 0%, #b91419 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        .logo-area h1 {
+            margin: 0;
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .filter-nav {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .dashboard {
+            padding: 3rem 0;
+            min-height: calc(100vh - 200px);
+        }
+
+        .welcome-banner {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+        }
+
+        .welcome-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #343a40;
+            font-weight: 700;
+        }
+
+        .welcome-banner p {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .overall-progress {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .overall-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d71920;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .chapter-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            border-color: #d71920;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .chapter-number {
+            background: linear-gradient(135deg, #d71920 0%, #b91419 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .progress-container {
+            position: relative;
+        }
+
+        .progress-ring svg {
+            transform: rotate(-90deg);
+        }
+
+        .completion-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .completion-badge.completed {
+            display: flex;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #343a40;
+        }
+
+        .card-description {
+            color: #6c757d;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .section-count {
+            font-size: 0.875rem;
+            color: #6c757d;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            min-height: 44px;
+        }
+
+        .btn-primary {
+            background: #d71920;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #b91419;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(215, 25, 32, 0.3);
+        }
+
+        .site-footer {
+            background: #343a40;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .filter-nav {
+                justify-content: center;
+            }
+
+            .welcome-banner h2 {
+                font-size: 2rem;
+            }
+
+            .welcome-banner p {
+                font-size: 1rem;
+            }
+
+            .overall-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .chapters-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .chapter-card {
+                padding: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dashboard {
+                padding: 2rem 0;
+            }
+
+            .welcome-banner {
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .chapter-card {
+                padding: 1rem;
+            }
+
+            .card-footer {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* Loading states */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid #d71920;
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </body>
 </html>
