@@ -3,329 +3,588 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 1: Abbreviations - The Canadian Style</title>
+    <title>Chapter 1: Capitalization - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <header class="site-header">
+    <!-- Chapter Hero Section -->
+    <header class="chapter-hero">
         <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+            <div class="breadcrumb">
+                <a href="../index.html">← Back to Dashboard</a>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
+            
+            <div class="chapter-meta">
+                <div class="chapter-icon">01</div>
+                <div class="chapter-info">
+                    <h1>Capitalization</h1>
+                    <p>Rules for using capital letters correctly in government writing</p>
+                </div>
+            </div>
+            
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgressFill"></div>
+            </div>
         </div>
     </header>
 
-    <div class="chapter-hero">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 1
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">01</div>
-                <div>
-                    <h1>Abbreviations</h1>
-                    <p>Master the art of abbreviating words and phrases in Canadian English</p>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Section Navigation -->
+        <nav class="section-nav">
+            <a href="#introduction" class="section-tab active">Introduction</a>
+            <a href="#sentence-capitals" class="section-tab">Sentence Capitals</a>
+            <a href="#proper-nouns" class="section-tab">Proper Nouns</a>
+            <a href="#government-bodies" class="section-tab">Government Bodies</a>
+            <a href="#titles-positions" class="section-tab">Titles & Positions</a>
+            <a href="#geographic-names" class="section-tab">Geographic Names</a>
+            <a href="#brand-names" class="section-tab">Brand Names</a>
+            <a href="#academic-degrees" class="section-tab">Academic Degrees</a>
+        </nav>
 
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">1.01 Introduction</a>
-                <a href="#periods" class="tab-link" data-section="periods">1.02 Periods</a>
-                <a href="#plurals" class="tab-link" data-section="plurals">1.03 Plurals</a>
-                <a href="#capital-letters" class="tab-link" data-section="capital-letters">1.04 Capital Letters</a>
-                <a href="#titles" class="tab-link" data-section="titles">1.05 Titles</a>
-                <a href="#numerals" class="tab-link" data-section="numerals">1.06 Numerals</a>
-                <a href="#scientific" class="tab-link" data-section="scientific">1.07 Scientific Terms</a>
-                <a href="#corporate" class="tab-link" data-section="corporate">1.08 Corporate Names</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="chapter-content">
-        <div class="container">
-            <!-- Section 1.01: Introduction -->
-            <section class="content-section" id="introduction">
-                <div class="section-header">
-                    <h2>1.01 Introduction</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>An abbreviation is a shortened form of a word or phrase. There are three main types of abbreviations that you'll encounter in Canadian English writing:</p>
-                    
-                    <ul>
-                        <li><strong>Suspension:</strong> The ending of a word is cut off (e.g., "Mr." for "Mister")</li>
-                        <li><strong>Contraction:</strong> The middle of a word is omitted (e.g., "Dr." for "Doctor")</li>
-                        <li><strong>Acronym/Initialism:</strong> Initial letters of words in a phrase (e.g., "CBC" for "Canadian Broadcasting Corporation")</li>
-                    </ul>
-                    
-                    <p>This chapter will guide you through the correct usage of abbreviations in formal Canadian writing, including when to use periods, how to form plurals, and special cases for scientific and corporate contexts.</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Key Principle</div>
-                        <p>Abbreviations should enhance clarity and readability. When in doubt, spell out the full term on first use, followed by the abbreviation in parentheses.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-introduction"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 1.02: Periods -->
-            <section class="content-section" id="periods">
-                <div class="section-header">
-                    <h2>1.02 Periods in Abbreviations</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>The use of periods in abbreviations follows specific patterns in Canadian style:</p>
-                    
-                    <h3>When to Use Periods</h3>
-                    <ul>
-                        <li>Traditional abbreviations: <strong>Mr.</strong>, <strong>Mrs.</strong>, <strong>Dr.</strong>, <strong>Ltd.</strong></li>
-                        <li>Latin abbreviations: <strong>e.g.</strong>, <strong>i.e.</strong>, <strong>etc.</strong>, <strong>vs.</strong></li>
-                        <li>Geographic abbreviations in formal text: <strong>U.S.A.</strong>, <strong>U.K.</strong></li>
-                    </ul>
-                    
-                    <h3>When NOT to Use Periods</h3>
-                    <ul>
-                        <li>Metric symbols: <strong>km</strong>, <strong>kg</strong>, <strong>ml</strong> (never add periods)</li>
-                        <li>Scientific units: <strong>MHz</strong>, <strong>kW</strong>, <strong>cm</strong></li>
-                        <li>Most organizational acronyms: <strong>CBC</strong>, <strong>NATO</strong>, <strong>RCMP</strong></li>
-                        <li>Postal codes and abbreviations: <strong>ON</strong>, <strong>BC</strong>, <strong>QC</strong></li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 1.02a</div>
-                        <p><strong>Correct:</strong> Dr. Smith travelled 50 km to the CBC office in Toronto, ON.</p>
-                        <p><strong>Incorrect:</strong> Dr Smith travelled 50 km. to the C.B.C. office in Toronto, Ont.</p>
-                    </div>
-                    
-                    <h3>Special Cases</h3>
-                    <p>Some abbreviations can be written with or without periods, depending on context and formality:</p>
-                    <ul>
-                        <li><strong>PhD</strong> or <strong>Ph.D.</strong> (both acceptable)</li>
-                        <li><strong>USA</strong> or <strong>U.S.A.</strong> (use consistently within a document)</li>
-                        <li><strong>am/pm</strong> or <strong>a.m./p.m.</strong> (choose one style)</li>
-                    </ul>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-periods"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('periods')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 1.03: Plurals -->
-            <section class="content-section" id="plurals">
-                <div class="section-header">
-                    <h2>1.03 Plurals of Abbreviations</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Forming plurals of abbreviations requires careful attention to maintain clarity:</p>
-                    
-                    <h3>General Rules</h3>
-                    <ul>
-                        <li>Add lowercase <strong>s</strong> without an apostrophe: <strong>MPs</strong>, <strong>CDs</strong>, <strong>URLs</strong></li>
-                        <li>For abbreviations with periods, add <strong>'s</strong>: <strong>M.A.'s</strong>, <strong>Ph.D.'s</strong></li>
-                        <li>For lowercase abbreviations, use apostrophe to avoid confusion: <strong>p.'s and q.'s</strong></li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 1.03a</div>
-                        <p>The three MPs attended the meeting.</p>
-                        <p>She earned two M.A.'s before her Ph.D.</p>
-                        <p>Mind your p.'s and q.'s in formal writing.</p>
-                    </div>
-                    
-                    <h3>Special Plural Forms</h3>
-                    <p>Some abbreviations have irregular plural forms:</p>
-                    <ul>
-                        <li><strong>pp.</strong> (pages) from <strong>p.</strong> (page)</li>
-                        <li><strong>MSS</strong> (manuscripts) from <strong>MS</strong> (manuscript)</li>
-                        <li><strong>Messrs.</strong> (plural of Mr.)</li>
-                        <li><strong>Mmes.</strong> (plural of Mrs. or Mme.)</li>
-                    </ul>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-plurals"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('plurals')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Additional sections would continue here... -->
+        <!-- Introduction Section -->
+        <section id="introduction" class="content-section">
+            <h2>1.01 Introduction</h2>
+            <p>Capital letters serve important functions in Canadian government writing. They signal the beginning of sentences, distinguish proper nouns from common nouns, and help readers navigate documents more effectively.</p>
             
-        </div>
+            <div class="key-principles">
+                <h3>Key Principles</h3>
+                <ul>
+                    <li><strong>Consistency:</strong> Apply capitalization rules uniformly throughout your document</li>
+                    <li><strong>Clarity:</strong> Use capitals to help readers distinguish between general and specific references</li>
+                    <li><strong>Authority:</strong> Follow established conventions for government documents</li>
+                </ul>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-primary btn-next-section">Start Learning →</button>
+            </div>
+        </section>
+
+        <!-- Sentence Capitals Section -->
+        <section id="sentence-capitals" class="content-section" style="display: none;">
+            <h2>1.02 Sentence Capitals</h2>
+            <p>Every sentence begins with a capital letter. This basic rule applies to all types of sentences: statements, questions, commands, and exclamations.</p>
+            
+            <div class="examples-box">
+                <h3>Examples</h3>
+                <div class="example-list">
+                    <div class="example correct">
+                        <span class="label">✓ Correct:</span>
+                        <span class="text">The minister announced the new policy today.</span>
+                    </div>
+                    <div class="example incorrect">
+                        <span class="label">✗ Incorrect:</span>
+                        <span class="text">the minister announced the new policy today.</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="special-cases">
+                <h3>Special Cases</h3>
+                <ul>
+                    <li><strong>After colons:</strong> Capitalize the first word after a colon if it begins a complete sentence</li>
+                    <li><strong>In lists:</strong> Capitalize the first word of each item in a formal list</li>
+                    <li><strong>In quotations:</strong> Capitalize the first word of a direct quotation that forms a complete sentence</li>
+                </ul>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-sentence-capitals">
+                <h3>Practice: Sentence Capitals</h3>
+                <p>Test your understanding of sentence capitalization rules.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Proper Nouns Section -->
+        <section id="proper-nouns" class="content-section" style="display: none;">
+            <h2>1.03 Proper Nouns</h2>
+            <p>Proper nouns are specific names of people, places, organizations, and things. They are always capitalized to distinguish them from common nouns.</p>
+            
+            <div class="comparison-table">
+                <h3>Common vs. Proper Nouns</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Common Noun</th>
+                            <th>Proper Noun</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>city</td>
+                            <td>Toronto</td>
+                        </tr>
+                        <tr>
+                            <td>university</td>
+                            <td>University of Toronto</td>
+                        </tr>
+                        <tr>
+                            <td>building</td>
+                            <td>Parliament Hill</td>
+                        </tr>
+                        <tr>
+                            <td>river</td>
+                            <td>St. Lawrence River</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-proper-nouns">
+                <h3>Practice: Proper Nouns</h3>
+                <p>Identify correct capitalization of proper nouns.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Government Bodies Section -->
+        <section id="government-bodies" class="content-section" style="display: none;">
+            <h2>1.04 Government Bodies</h2>
+            <p>Government departments, agencies, and official bodies have specific capitalization rules that reflect their official status and authority.</p>
+            
+            <div class="guidelines">
+                <h3>Capitalization Guidelines</h3>
+                <ul>
+                    <li><strong>Official names:</strong> Capitalize the full official name of government bodies</li>
+                    <li><strong>Shortened forms:</strong> Use lowercase for generic references</li>
+                    <li><strong>Prepositions:</strong> Generally lowercase unless part of the official title</li>
+                </ul>
+            </div>
+            
+            <div class="examples-box">
+                <h3>Examples</h3>
+                <div class="example-grid">
+                    <div class="example correct">
+                        <span class="label">✓ Official:</span>
+                        <span class="text">Department of Finance</span>
+                    </div>
+                    <div class="example correct">
+                        <span class="label">✓ Generic:</span>
+                        <span class="text">the department</span>
+                    </div>
+                    <div class="example correct">
+                        <span class="label">✓ Official:</span>
+                        <span class="text">House of Commons</span>
+                    </div>
+                    <div class="example correct">
+                        <span class="label">✓ Generic:</span>
+                        <span class="text">the lower house</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-government-bodies">
+                <h3>Practice: Government Bodies</h3>
+                <p>Apply capitalization rules to government organizations.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Titles and Positions Section -->
+        <section id="titles-positions" class="content-section" style="display: none;">
+            <h2>1.05 Titles and Positions</h2>
+            <p>Job titles and positions have specific capitalization rules depending on how they're used in a sentence.</p>
+            
+            <div class="rule-boxes">
+                <div class="rule-box">
+                    <h4>Capitalize When:</h4>
+                    <ul>
+                        <li>Used before a person's name</li>
+                        <li>Used as a form of direct address</li>
+                        <li>Referring to a specific, unique position</li>
+                    </ul>
+                </div>
+                <div class="rule-box">
+                    <h4>Use Lowercase When:</h4>
+                    <ul>
+                        <li>Used after a person's name</li>
+                        <li>Used generically</li>
+                        <li>Referring to a category of positions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-titles-positions">
+                <h3>Practice: Titles and Positions</h3>
+                <p>Master the capitalization of job titles and positions.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Geographic Names Section -->
+        <section id="geographic-names" class="content-section" style="display: none;">
+            <h2>1.06 Geographic Names</h2>
+            <p>Geographic features, places, and regions follow specific capitalization conventions in Canadian government writing.</p>
+            
+            <div class="geographic-categories">
+                <div class="category">
+                    <h4>Always Capitalize:</h4>
+                    <ul>
+                        <li>Specific place names (Toronto, Quebec)</li>
+                        <li>Geographic features (Rocky Mountains, Lake Superior)</li>
+                        <li>Regions with proper names (the Prairies, Atlantic Canada)</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h4>Use Lowercase for:</h4>
+                    <ul>
+                        <li>General geographic terms (northern Ontario, southern Alberta)</li>
+                        <li>Compass directions (travel north, east of the city)</li>
+                        <li>Generic geographic features (the river, a mountain)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-geographic-names">
+                <h3>Practice: Geographic Names</h3>
+                <p>Apply capitalization rules to Canadian geographic references.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Brand Names Section -->
+        <section id="brand-names" class="content-section" style="display: none;">
+            <h2>1.07 Brand Names</h2>
+            <p>Brand names and trademarks should be written exactly as registered by the company, respecting their chosen capitalization and styling.</p>
+            
+            <div class="brand-guidelines">
+                <h3>Guidelines for Brand Names</h3>
+                <ul>
+                    <li><strong>Respect registration:</strong> Write brand names as officially registered</li>
+                    <li><strong>Avoid genericizing:</strong> Don't use brand names as common nouns</li>
+                    <li><strong>Check official sources:</strong> Verify spelling and capitalization</li>
+                    <li><strong>Consider alternatives:</strong> Use generic terms when appropriate</li>
+                </ul>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-brand-names">
+                <h3>Practice: Brand Names</h3>
+                <p>Learn proper treatment of brand names and trademarks.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary btn-next-section">Next Section →</button>
+            </div>
+        </section>
+
+        <!-- Academic Degrees Section -->
+        <section id="academic-degrees" class="content-section" style="display: none;">
+            <h2>1.08 Academic Degrees</h2>
+            <p>Academic degrees and professional designations have specific formatting requirements in government documents.</p>
+            
+            <div class="degree-formats">
+                <h3>Abbreviation Formats</h3>
+                <div class="format-grid">
+                    <div class="format-item">
+                        <strong>Bachelor's Degrees:</strong><br>
+                        B.A., B.Sc., B.Ed., B.Comm.
+                    </div>
+                    <div class="format-item">
+                        <strong>Master's Degrees:</strong><br>
+                        M.A., M.Sc., M.Ed., M.B.A.
+                    </div>
+                    <div class="format-item">
+                        <strong>Doctoral Degrees:</strong><br>
+                        Ph.D., Ed.D., D.Phil.
+                    </div>
+                    <div class="format-item">
+                        <strong>Professional Degrees:</strong><br>
+                        M.D., J.D., D.D.S.
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quiz Panel -->
+            <div class="quiz-panel" id="quiz-academic-degrees">
+                <h3>Practice: Academic Degrees</h3>
+                <p>Master the formatting of academic credentials.</p>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-secondary btn-prev-section">← Previous</button>
+                <button class="btn btn-primary completion-btn" onclick="showChapterComplete()">Complete Chapter</button>
+            </div>
+        </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
-        </div>
-    </footer>
+    <!-- Scripts -->
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
-        import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine, loadQuizData } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
+        import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch01';
+        
+        // Chapter sections configuration
         const sections = [
             { id: 'introduction', title: '1.01 Introduction' },
-            { id: 'periods', title: '1.02 Periods' },
-            { id: 'plurals', title: '1.03 Plurals' },
-            { id: 'capital-letters', title: '1.04 Capital Letters' },
-            { id: 'titles', title: '1.05 Titles' },
-            { id: 'numerals', title: '1.06 Numerals' },
-            { id: 'scientific', title: '1.07 Scientific Terms' },
-            { id: 'corporate', title: '1.08 Corporate Names' }
+            { id: 'sentence-capitals', title: '1.02 Sentence Capitals' },
+            { id: 'proper-nouns', title: '1.03 Proper Nouns' },
+            { id: 'government-bodies', title: '1.04 Government Bodies' },
+            { id: 'titles-positions', title: '1.05 Titles and Positions' },
+            { id: 'geographic-names', title: '1.06 Geographic Names' },
+            { id: 'brand-names', title: '1.07 Brand Names' },
+            { id: 'academic-degrees', title: '1.08 Academic Degrees' }
         ];
-        
-        // Initialize progress bar
+
+        // Update progress bar
         function updateProgressBar() {
-            const progress = getProgress();
-            const chapterProgress = progress[CHAPTER_ID] || {};
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
-            
-            document.getElementById('chapterProgress').style.width = percentage + '%';
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
-            } else {
-                // Chapter complete
-                alert('Congratulations! You have completed Chapter 1: Abbreviations');
-                window.location.href = '../index.html';
+            const progressFill = document.getElementById('chapterProgressFill');
+            if (progressFill && window.calculateChapterProgress) {
+                const progress = window.calculateChapterProgress(CHAPTER_ID);
+                progressFill.style.width = `${progress}%`;
             }
+        }
+
+        // Show chapter completion modal
+        window.showChapterComplete = function() {
+            // Mark all sections as complete
+            sections.forEach(section => {
+                if (window.setProgress) {
+                    window.setProgress(CHAPTER_ID, section.id, true);
+                }
+            });
+            
+            // Show completion modal
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-icon">🎉</div>
+                    <h2>Chapter Complete!</h2>
+                    <p>Congratulations! You've mastered capitalization rules.</p>
+                    <div class="modal-stats">
+                        <div class="stat">
+                            <span class="stat-value">8</span>
+                            <span class="stat-label">Sections Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Chapter Progress</span>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+                        <a href="ch02.html" class="btn btn-primary">Next Chapter: Compounds</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
         };
         
-        // Load quizzes for each section
+        // Load quizzes
         async function loadSectionQuizzes() {
-            const quizData = {
-                introduction: {
-                    id: 'intro-quiz',
-                    title: 'Test Your Understanding',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'introduction',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which of the following is NOT a main type of abbreviation?',
-                            options: [
-                                { label: 'Suspension', correct: false },
-                                { label: 'Contraction', correct: false },
-                                { label: 'Concatenation', correct: true },
-                                { label: 'Acronym', correct: false }
-                            ],
-                            rationale: 'The three main types are suspension, contraction, and acronym/initialism.'
-                        }
-                    ]
-                },
-                periods: {
-                    id: 'periods-quiz',
-                    title: 'Periods in Abbreviations',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'periods',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which abbreviation should NOT have periods?',
-                            options: [
-                                { label: 'Dr.', correct: false },
-                                { label: 'km', correct: true },
-                                { label: 'e.g.', correct: false },
-                                { label: 'Ltd.', correct: false }
-                            ],
-                            rationale: 'Metric symbols like km never use periods.'
-                        },
-                        {
-                            type: 'fill-blank',
-                            stem: 'The doctor travelled 25 ___ to reach the hospital.',
-                            answer: 'km',
-                            rationale: 'Metric units are written without periods.'
-                        }
-                    ]
-                },
-                plurals: {
-                    id: 'plurals-quiz',
-                    title: 'Forming Plurals',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'plurals',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the correct plural of MP?',
-                            options: [
-                                { label: "MP's", correct: false },
-                                { label: 'MPs', correct: true },
-                                { label: "MPs'", correct: false },
-                                { label: 'M.P.s', correct: false }
-                            ],
-                            rationale: 'Add lowercase s without apostrophe for abbreviations without periods.'
-                        }
-                    ]
+            try {
+                const response = await fetch('../data/quizzes/ch01-quiz.json');
+                if (!response.ok) {
+                    console.warn('Quiz data not found, using empty quizzes');
+                    return;
                 }
-            };
-            
-            // Initialize quiz for visible sections
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        const engine = new QuizEngine(`quiz-${section.id}`, quiz);
-                        engine.init();
+                
+                const quizData = await response.json();
+                
+                // Initialize quiz panels
+                Object.entries(quizData).forEach(([sectionKey, sectionData]) => {
+                    const quizPanel = document.getElementById(`quiz-${sectionKey}`);
+                    if (quizPanel && sectionData.questions && sectionData.questions.length > 0) {
+                        const quizEngine = new QuizEngine(sectionData, CHAPTER_ID, sectionKey);
+                        const quizElement = quizEngine.render();
+                        quizPanel.appendChild(quizElement);
                     }
-                }
+                });
+            } catch (error) {
+                console.error('Error loading quizzes:', error);
+                // Continue without quizzes - no null errors
             }
         }
         
-        // Initialize on load
-        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize page
+        function initializePage() {
             updateProgressBar();
             loadSectionQuizzes();
             
-            // Handle initial navigation
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+            // Setup navigation if router is available
+            if (window.router) {
+                window.router.currentChapter = CHAPTER_ID;
+                window.router.setupSectionLinks();
+                
+                // Handle initial navigation
+                if (!window.location.hash) {
+                    window.router.navigateTo(CHAPTER_ID, 'introduction');
+                }
             }
+        }
+        
+        // Event listeners
+        window.addEventListener('progress-changed', updateProgressBar);
+        window.addEventListener('quiz-completed', (event) => {
+            console.log('Quiz completed:', event.detail);
+            updateProgressBar();
         });
         
-        // Update on progress changes
-        window.addEventListener('progress-changed', updateProgressBar);
+        // Initialize when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializePage);
+        } else {
+            initializePage();
+        }
     </script>
+
+    <style>
+        /* Chapter-specific styles */
+        .examples-box {
+            background: var(--cs-grey-50);
+            border-left: 4px solid var(--cs-red);
+            padding: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+            border-radius: var(--cs-border-radius);
+        }
+        
+        .example {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--cs-space-s);
+            padding: var(--cs-space-s);
+            border-radius: 4px;
+        }
+        
+        .example.correct {
+            background: rgba(40, 167, 69, 0.1);
+        }
+        
+        .example.incorrect {
+            background: rgba(220, 53, 69, 0.1);
+        }
+        
+        .example .label {
+            font-weight: var(--cs-font-semibold);
+            margin-right: var(--cs-space-s);
+            min-width: 80px;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            padding: var(--cs-space-m);
+            text-align: left;
+            border-bottom: 1px solid var(--cs-grey-300);
+        }
+        
+        .comparison-table th {
+            background: var(--cs-grey-100);
+            font-weight: var(--cs-font-semibold);
+        }
+        
+        .rule-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .rule-box {
+            background: var(--cs-white);
+            border: 2px solid var(--cs-grey-200);
+            border-radius: var(--cs-border-radius);
+            padding: var(--cs-space-l);
+        }
+        
+        .rule-box h4 {
+            color: var(--cs-red);
+            margin-bottom: var(--cs-space-m);
+        }
+        
+        .geographic-categories {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .category {
+            background: var(--cs-grey-50);
+            padding: var(--cs-space-l);
+            border-radius: var(--cs-border-radius);
+        }
+        
+        .category h4 {
+            color: var(--cs-red);
+            margin-bottom: var(--cs-space-m);
+        }
+        
+        .format-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .format-item {
+            background: var(--cs-white);
+            border: 1px solid var(--cs-grey-300);
+            padding: var(--cs-space-l);
+            border-radius: var(--cs-border-radius);
+            text-align: center;
+        }
+        
+        .section-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: var(--cs-space-xl);
+            padding-top: var(--cs-space-l);
+            border-top: 1px solid var(--cs-grey-200);
+        }
+        
+        @media (max-width: 768px) {
+            .rule-boxes,
+            .geographic-categories,
+            .format-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-footer {
+                flex-direction: column;
+                gap: var(--cs-space-m);
+            }
+        }
+    </style>
 </body>
 </html>
