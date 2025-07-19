@@ -1,4 +1,5 @@
 // Web Components for The Canadian Style Learning Platform
+// Fixed version - eliminates null values and improves error handling
 
 // Chapter Card Component
 class CSCard extends HTMLElement {
@@ -8,14 +9,21 @@ class CSCard extends HTMLElement {
     }
     
     connectedCallback() {
-        // שימו לב: הפונקציות getChapterProgress ו-calculateChapterProgress יגיעו מ-window
-        const chapterId = this.getAttribute('chapter-id');
-        const chapterNumber = this.getAttribute('chapter-number');
-        const title = this.getAttribute('title');
-        // נתוני השלמה בתוך ה-HTML נבנים כבר עם progress מדויק
-        const completion = parseInt(this.getAttribute('percentage') || '0'); 
-        const href = this.getAttribute('href');
+        this.render();
+    }
+    
+    render() {
+        const chapterId = this.getAttribute('chapter-id') || '';
+        const chapterNumber = this.getAttribute('chapter-number') || '00';
+        const title = this.getAttribute('title') || 'Unknown Chapter';
+        const completion = parseInt(this.getAttribute('percentage') || '0');
+        const sectionsCount = this.getAttribute('sections-count') || '0';
+        const href = this.getAttribute('href') || '#';
         const ctaText = this.getAttribute('cta-text') || 'Start';
+        
+        // Get description from inner content
+        const descriptionElement = this.querySelector('.card-description');
+        const description = descriptionElement ? descriptionElement.innerHTML : 'Learn essential writing skills.';
         
         this.shadowRoot.innerHTML = `
             <style>
@@ -25,19 +33,20 @@ class CSCard extends HTMLElement {
                 
                 .card {
                     background: #ffffff;
-                    border: 1px solid #d4d4d4;
-                    border-radius: 8px;
+                    border: 2px solid #e5e5e5;
+                    border-radius: 12px;
                     padding: 1.5rem;
                     transition: all 0.3s ease;
                     display: flex;
                     flex-direction: column;
                     height: 100%;
+                    min-height: 280px;
                 }
                 
                 .card:hover {
-                    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-                    transform: translateY(-2px);
-                    border-color: #d71920; /* Canadian Red */
+                    box-shadow: 0 8px 24px rgba(215, 25, 32, 0.15);
+                    transform: translateY(-4px);
+                    border-color: #d71920;
                 }
                 
                 .card-header {
@@ -48,99 +57,123 @@ class CSCard extends HTMLElement {
                 }
                 
                 .chapter-number {
-                    font-size: 2rem;
-                    font-weight: bold;
-                    color: #d71920; /* Canadian Red */
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    color: #d71920;
+                    line-height: 1;
+                }
+                
+                .progress-container {
+                    position: relative;
                 }
                 
                 .card-title {
                     font-size: 1.25rem;
-                    margin-bottom: 0.5rem;
-                    color: #333333;
+                    font-weight: 600;
+                    color: #1a1a1a;
+                    margin: 0 0 0.5rem 0;
+                    line-height: 1.3;
                 }
                 
                 .card-description {
-                    font-size: 0.875rem;
-                    color: #666666;
-                    margin-bottom: 1rem;
-                    flex-grow: 1; /* Pushes footer to bottom */
+                    color: #666;
+                    font-size: 0.9rem;
+                    line-height: 1.5;
+                    margin-bottom: 1.5rem;
+                    flex-grow: 1;
                 }
                 
                 .card-footer {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    margin-top: auto;
                     padding-top: 1rem;
-                    border-top: 1px solid #eeeeee;
-                    margin-top: 1rem; /* Adjust if needed */
+                    border-top: 1px solid #f0f0f0;
                 }
                 
                 .section-count {
-                    font-size: 0.8rem;
-                    color: #999999;
+                    font-size: 0.85rem;
+                    color: #888;
+                    font-weight: 500;
                 }
                 
                 .btn {
                     display: inline-block;
                     padding: 0.6rem 1.2rem;
-                    border-radius: 5px;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
                     text-decoration: none;
-                    font-weight: bold;
-                    transition: background-color 0.3s ease;
                     text-align: center;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
                 }
                 
                 .btn-primary {
-                    background-color: #d71920; /* Canadian Red */
-                    color: #ffffff;
-                    border: 1px solid #d71920;
+                    background: #d71920;
+                    color: white;
                 }
                 
                 .btn-primary:hover {
-                    background-color: #a31318;
-                    border-color: #a31318;
+                    background: #b41419;
+                    transform: translateY(-1px);
+                }
+                
+                .completion-badge {
+                    position: absolute;
+                    top: -8px;
+                    right: -8px;
+                    background: #28a745;
+                    color: white;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 12px;
+                    font-weight: bold;
+                    opacity: ${completion === 100 ? '1' : '0'};
                 }
             </style>
-            <div class="card" onclick="window.location.href='${href}'">
+            
+            <div class="card">
                 <div class="card-header">
                     <span class="chapter-number">${chapterNumber}</span>
-                    <cs-progress-ring percentage="${completion}" size="60"></cs-progress-ring>
+                    <div class="progress-container">
+                        <cs-progress-ring percentage="${completion}" size="60"></cs-progress-ring>
+                        <div class="completion-badge">✓</div>
+                    </div>
                 </div>
                 <h3 class="card-title">${title}</h3>
-                <p class="card-description">${this.innerHTML}</p> <div class="card-footer">
-                    <span class="section-count">${this.getAttribute('sections-count')} sections</span>
+                <div class="card-description">${description}</div>
+                <div class="card-footer">
+                    <span class="section-count">${sectionsCount} sections</span>
                     <a href="${href}" class="btn btn-primary">${ctaText}</a>
                 </div>
             </div>
         `;
-        // ה-innerHTML ב-index.html מכיל כבר את התיאור
-        this.shadowRoot.querySelector('.card-description').innerHTML = this.querySelector('p.card-description').innerHTML;
-
     }
 
     // Observe changes to attributes to update the card if needed
     static get observedAttributes() {
-        return ['percentage', 'chapter-id'];
+        return ['percentage', 'chapter-id', 'title', 'sections-count'];
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
-        if (name === 'percentage' && this.shadowRoot.querySelector('cs-progress-ring')) {
-            this.shadowRoot.querySelector('cs-progress-ring').setAttribute('percentage', newValue);
+        if (oldValue !== newValue) {
+            this.render();
         }
-        // אם chapter-id משתנה, נצטרך לרענן הכל, אבל זה לא שימוש נפוץ לשינוי chapter-id
     }
 }
-
 
 // Progress Ring Component
 class CSProgressRing extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        this.circleBackground = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        this.circleProgress = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-        this.text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     }
 
     static get observedAttributes() {
@@ -156,293 +189,339 @@ class CSProgressRing extends HTMLElement {
     }
 
     render() {
-        const percentage = parseFloat(this.getAttribute('percentage') || '0');
-        const size = parseFloat(this.getAttribute('size') || '100');
-        const strokeWidth = parseFloat(this.getAttribute('stroke-width') || '10');
-        const color = this.getAttribute('color') || '#d71920'; // Canadian Red
+        const percentage = Math.max(0, Math.min(100, parseInt(this.getAttribute('percentage') || '0')));
+        const size = parseInt(this.getAttribute('size') || '80');
+        const strokeWidth = parseInt(this.getAttribute('stroke-width') || '6');
+        const color = this.getAttribute('color') || '#d71920';
 
         const radius = (size - strokeWidth) / 2;
-        const circumference = 2 * Math.PI * radius;
+        const circumference = radius * 2 * Math.PI;
         const offset = circumference - (percentage / 100) * circumference;
 
         this.shadowRoot.innerHTML = `
             <style>
                 :host {
                     display: inline-block;
-                    vertical-align: middle;
                 }
-                svg {
-                    transform: rotate(-90deg); /* Start at the top */
-                    overflow: visible; /* Ensure text is visible if it goes slightly outside */
+                
+                .progress-ring {
+                    transform: rotate(-90deg);
                 }
-                circle {
-                    transition: stroke-dashoffset 0.35s;
+                
+                .progress-ring-circle {
+                    transition: stroke-dashoffset 0.5s ease;
                 }
-                text {
-                    font-family: sans-serif;
-                    font-weight: bold;
+                
+                .progress-text {
+                    font-size: ${size * 0.18}px;
+                    font-weight: 600;
                     text-anchor: middle;
-                    dominant-baseline: central;
-                    fill: ${color};
-                    font-size: ${size * 0.25}px; /* Dynamic font size */
-                    transform: rotate(90deg); /* Counter-rotate text */
-                    transform-origin: center;
+                    dominant-baseline: middle;
+                    fill: #333;
+                }
+                
+                .progress-container {
+                    position: relative;
+                    display: inline-block;
                 }
             </style>
+            
+            <div class="progress-container">
+                <svg class="progress-ring" width="${size}" height="${size}">
+                    <!-- Background circle -->
+                    <circle
+                        cx="${size / 2}"
+                        cy="${size / 2}"
+                        r="${radius}"
+                        fill="transparent"
+                        stroke="#e6e6e6"
+                        stroke-width="${strokeWidth}"
+                    />
+                    <!-- Progress circle -->
+                    <circle
+                        class="progress-ring-circle"
+                        cx="${size / 2}"
+                        cy="${size / 2}"
+                        r="${radius}"
+                        fill="transparent"
+                        stroke="${color}"
+                        stroke-width="${strokeWidth}"
+                        stroke-dasharray="${circumference}"
+                        stroke-dashoffset="${offset}"
+                        stroke-linecap="round"
+                    />
+                    <!-- Percentage text -->
+                    <text
+                        class="progress-text"
+                        x="${size / 2}"
+                        y="${size / 2}"
+                        transform="rotate(90 ${size / 2} ${size / 2})"
+                    >${percentage}%</text>
+                </svg>
+            </div>
         `;
-
-        this.svg.setAttribute('width', size);
-        this.svg.setAttribute('height', size);
-        this.svg.setAttribute('viewBox', `0 0 ${size} ${size}`);
-
-        // Background circle
-        this.circleBackground.setAttribute('cx', size / 2);
-        this.circleBackground.setAttribute('cy', size / 2);
-        this.circleBackground.setAttribute('r', radius);
-        this.circleBackground.setAttribute('fill', 'transparent');
-        this.circleBackground.setAttribute('stroke', '#e6e6e6');
-        this.circleBackground.setAttribute('stroke-width', strokeWidth);
-
-        // Progress circle
-        this.circleProgress.setAttribute('cx', size / 2);
-        this.circleProgress.setAttribute('cy', size / 2);
-        this.circleProgress.setAttribute('r', radius);
-        this.circleProgress.setAttribute('fill', 'transparent');
-        this.circleProgress.setAttribute('stroke', color);
-        this.circleProgress.setAttribute('stroke-width', strokeWidth);
-        this.circleProgress.setAttribute('stroke-dasharray', circumference);
-        this.circleProgress.setAttribute('stroke-dashoffset', offset);
-        this.circleProgress.setAttribute('stroke-linecap', 'round');
-
-        // Percentage text
-        this.text.setAttribute('x', size / 2);
-        this.text.setAttribute('y', size / 2);
-        this.text.textContent = `${percentage}%`;
-
-        this.svg.appendChild(this.circleBackground);
-        this.svg.appendChild(this.circleProgress);
-        this.svg.appendChild(this.text);
-
-        this.shadowRoot.appendChild(this.svg);
     }
 }
 
-
-// Quiz Component
+// Quiz Component (Enhanced)
 class CSQuiz extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
-        this.quizData = {};
+        this.currentQuestion = 0;
+        this.answers = [];
+        this.score = 0;
     }
 
     static get observedAttributes() {
-        return ['quiz-id', 'question', 'answer', 'type', 'choices', 'timer'];
+        return ['quiz-data', 'chapter-id', 'section-id'];
     }
 
     connectedCallback() {
-        this.quizData = {
-            id: this.getAttribute('quiz-id'),
-            question: this.getAttribute('question'),
-            answer: this.getAttribute('answer'),
-            type: this.getAttribute('type') || 'text', // 'text', 'mc' (multiple choice)
-            choices: this.getAttribute('choices') ? JSON.parse(this.getAttribute('choices')) : [],
-            timer: parseInt(this.getAttribute('timer') || '0')
-        };
         this.render();
     }
 
-    attributeChangedCallback() {
-        // Re-render if attributes change
-        this.connectedCallback();
+    setQuizData(data) {
+        this.quizData = data || { questions: [], title: 'Quiz' };
+        this.render();
     }
 
     render() {
-        const { question, type, choices, timer } = this.quizData;
-
-        let inputHtml = '';
-        if (type === 'text') {
-            inputHtml = `<div id="answerInput" class="answer-input" contenteditable="true" placeholder="Type your answer..."></div>`;
-        } else if (type === 'mc') {
-            inputHtml = `<div class="choices-container">
-                ${choices.map((choice, index) => `
-                    <button class="choice-btn" data-choice="${choice.toLowerCase()}">${choice}</button>
-                `).join('')}
-            </div>`;
+        if (!this.quizData || !this.quizData.questions || this.quizData.questions.length === 0) {
+            this.shadowRoot.innerHTML = `
+                <style>
+                    .no-quiz {
+                        padding: 2rem;
+                        text-align: center;
+                        background: #f8f9fa;
+                        border-radius: 8px;
+                        color: #666;
+                    }
+                </style>
+                <div class="no-quiz">
+                    <p>No quiz questions available for this section.</p>
+                </div>
+            `;
+            return;
         }
 
+        const question = this.quizData.questions[this.currentQuestion];
+        
         this.shadowRoot.innerHTML = `
             <style>
-                :host {
-                    display: block;
-                    background: #f9f9f9;
-                    border: 1px solid #e0e0e0;
-                    border-radius: 8px;
+                .quiz-container {
+                    background: white;
+                    border: 2px solid #e5e5e5;
+                    border-radius: 12px;
                     padding: 1.5rem;
+                    margin: 1rem 0;
+                }
+                
+                .quiz-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+                    padding-bottom: 1rem;
+                    border-bottom: 1px solid #eee;
+                }
+                
+                .quiz-title {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    color: #d71920;
+                    margin: 0;
+                }
+                
+                .question-counter {
+                    font-size: 0.9rem;
+                    color: #666;
+                    font-weight: 500;
+                }
+                
+                .question-stem {
+                    font-size: 1.1rem;
+                    margin-bottom: 1.5rem;
+                    line-height: 1.6;
+                    color: #333;
+                }
+                
+                .options-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
                     margin-bottom: 1.5rem;
                 }
-                .quiz-question {
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                    margin-bottom: 1rem;
-                    color: #333333;
-                }
-                .answer-input {
-                    border: 1px solid #cccccc;
-                    border-radius: 5px;
-                    padding: 0.8rem;
-                    min-height: 40px;
-                    margin-bottom: 1rem;
-                    background: #ffffff;
-                    color: #333333;
-                }
-                .answer-input:focus {
-                    outline: none;
-                    border-color: #d71920;
-                    box-shadow: 0 0 0 2px rgba(215, 25, 32, 0.2);
-                }
-                .choices-container {
+                
+                .option-label {
                     display: flex;
-                    flex-wrap: wrap;
-                    gap: 10px;
-                    margin-bottom: 1rem;
-                }
-                .choice-btn {
-                    background-color: #e0e0e0;
-                    border: 1px solid #cccccc;
-                    border-radius: 5px;
-                    padding: 0.8rem 1.2rem;
+                    align-items: center;
+                    background: #f8f9fa;
+                    border: 2px solid #e9ecef;
+                    border-radius: 8px;
+                    padding: 1rem;
                     cursor: pointer;
-                    font-size: 0.9rem;
-                    transition: background-color 0.2s ease, border-color 0.2s ease;
+                    transition: all 0.2s ease;
                 }
-                .choice-btn:hover {
-                    background-color: #d4d4d4;
-                }
-                .choice-btn.selected {
-                    background-color: #d71920;
-                    color: #ffffff;
+                
+                .option-label:hover {
                     border-color: #d71920;
+                    background: #fff5f5;
                 }
-                .submit-btn {
-                    background-color: #d71920;
-                    color: #ffffff;
+                
+                .option-label.selected {
+                    border-color: #d71920;
+                    background: #fff5f5;
+                }
+                
+                .option-input {
+                    margin-right: 0.75rem;
+                    accent-color: #d71920;
+                }
+                
+                .quiz-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                .btn {
+                    padding: 0.6rem 1.2rem;
                     border: none;
-                    border-radius: 5px;
-                    padding: 0.8rem 1.5rem;
+                    border-radius: 6px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
                     cursor: pointer;
-                    font-weight: bold;
-                    transition: background-color 0.2s ease;
+                    transition: all 0.2s ease;
                 }
-                .submit-btn:hover:not(:disabled) {
-                    background-color: #a31318;
+                
+                .btn-primary {
+                    background: #d71920;
+                    color: white;
                 }
-                .submit-btn:disabled {
-                    background-color: #cccccc;
+                
+                .btn-primary:hover:not(:disabled) {
+                    background: #b41419;
+                }
+                
+                .btn-secondary {
+                    background: #6c757d;
+                    color: white;
+                }
+                
+                .btn-secondary:hover:not(:disabled) {
+                    background: #545b62;
+                }
+                
+                .btn:disabled {
+                    opacity: 0.5;
                     cursor: not-allowed;
                 }
+                
                 .feedback {
                     margin-top: 1rem;
-                    padding: 0.8rem;
-                    border-radius: 5px;
-                    font-weight: bold;
+                    padding: 1rem;
+                    border-radius: 6px;
+                    font-weight: 500;
                 }
+                
                 .feedback.correct {
-                    background-color: #d4edda;
-                    color: #28a745;
+                    background: #d4edda;
+                    color: #155724;
+                    border: 1px solid #c3e6cb;
                 }
+                
                 .feedback.incorrect {
-                    background-color: #f8d7da;
-                    color: #dc3545;
-                }
-                .timer {
-                    font-size: 0.9rem;
-                    color: #999999;
-                    margin-bottom: 1rem;
-                    text-align: right;
+                    background: #f8d7da;
+                    color: #721c24;
+                    border: 1px solid #f5c6cb;
                 }
             </style>
+            
             <div class="quiz-container">
-                <div class="quiz-question">${question}</div>
-                ${timer > 0 ? `<div id="timer" class="timer">${timer}s</div>` : ''}
-                ${inputHtml}
-                <button class="submit-btn">Submit Answer</button>
-                <div id="feedback" class="feedback"></div>
+                <div class="quiz-header">
+                    <h3 class="quiz-title">${this.quizData.title}</h3>
+                    <span class="question-counter">
+                        Question ${this.currentQuestion + 1} of ${this.quizData.questions.length}
+                    </span>
+                </div>
+                
+                <div class="quiz-body">
+                    <div class="question-stem">${question.stem || question.question}</div>
+                    
+                    ${this.renderQuestion(question)}
+                </div>
+                
+                <div class="quiz-footer">
+                    <button class="btn btn-secondary" 
+                            ${this.currentQuestion === 0 ? 'disabled' : ''} 
+                            onclick="this.getRootNode().host.previousQuestion()">
+                        Previous
+                    </button>
+                    <button class="btn btn-primary" onclick="this.getRootNode().host.nextQuestion()">
+                        ${this.currentQuestion === this.quizData.questions.length - 1 ? 'Finish' : 'Next'}
+                    </button>
+                </div>
+                
+                <div id="feedback" class="feedback" style="display: none;"></div>
             </div>
         `;
-
-        const submitBtn = this.shadowRoot.querySelector('.submit-btn');
-        submitBtn.addEventListener('click', () => this.submitAnswer());
-
-        if (type === 'mc') {
-            this.shadowRoot.querySelectorAll('.choice-btn').forEach(button => {
-                button.addEventListener('click', (e) => {
-                    this.shadowRoot.querySelectorAll('.choice-btn').forEach(btn => btn.classList.remove('selected'));
-                    e.target.classList.add('selected');
-                });
-            });
-        }
-
-        if (timer > 0) {
-            this.startTimer(timer);
-        }
-    }
-
-    submitAnswer() {
-        const type = this.quizData.type;
-        let userAnswer = '';
-
-        if (type === 'text') {
-            const input = this.shadowRoot.getElementById('answerInput');
-            userAnswer = input.textContent.trim().toLowerCase();
-            input.contentEditable = false;
-        } else if (type === 'mc') {
-            const selectedButton = this.shadowRoot.querySelector('.choice-btn.selected');
-            if (!selectedButton) {
-                alert('Please select an answer.');
-                return;
-            }
-            userAnswer = selectedButton.dataset.choice.toLowerCase();
-            this.shadowRoot.querySelectorAll('.choice-btn').forEach(btn => btn.disabled = true);
-        }
-
-        const correctAnswer = this.quizData.answer.toLowerCase();
-        const isCorrect = userAnswer === correctAnswer;
-        
-        const feedbackEl = this.shadowRoot.getElementById('feedback');
-        const submitBtn = this.shadowRoot.querySelector('.submit-btn');
-        
-        if (type === 'text') {
-            const input = this.shadowRoot.getElementById('answerInput');
-            input.style.borderColor = isCorrect ? '#28a745' : '#dc3545';
-        }
-        
-        feedbackEl.className = `feedback ${isCorrect ? 'correct' : 'incorrect'}`;
-        feedbackEl.textContent = isCorrect 
-            ? '✓ Correct!'
-            : `✗ Incorrect. The correct answer is "${this.quizData.answer}"`;
-        
-        submitBtn.disabled = true;
-        
-        // Dispatch custom event
-        this.dispatchEvent(new CustomEvent('quiz-completed', {
-            detail: { correct: isCorrect, quizId: this.quizData.id }
-        }));
     }
     
-    startTimer(seconds) {
-        let timeLeft = seconds;
-        const timerEl = this.shadowRoot.getElementById('timer');
+    renderQuestion(question) {
+        const type = question.type || 'mcq';
         
-        const interval = setInterval(() => {
-            timeLeft--;
-            timerEl.textContent = `${timeLeft}s`;
+        switch (type) {
+            case 'mcq':
+                return `
+                    <div class="options-list">
+                        ${question.options.map((option, index) => `
+                            <label class="option-label" onclick="this.classList.toggle('selected')">
+                                <input type="radio" name="answer" value="${index}" class="option-input">
+                                <span>${option.label || option}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                `;
             
-            if (timeLeft <= 0) {
-                clearInterval(interval);
-                this.submitAnswer();
+            case 'fill-blank':
+                return `
+                    <div class="fill-blank-container">
+                        <input type="text" class="fill-blank-input" placeholder="Enter your answer...">
+                    </div>
+                `;
+                
+            default:
+                return '<p>Question type not supported</p>';
+        }
+    }
+    
+    nextQuestion() {
+        if (this.currentQuestion < this.quizData.questions.length - 1) {
+            this.currentQuestion++;
+            this.render();
+        } else {
+            this.finishQuiz();
+        }
+    }
+    
+    previousQuestion() {
+        if (this.currentQuestion > 0) {
+            this.currentQuestion--;
+            this.render();
+        }
+    }
+    
+    finishQuiz() {
+        // Emit quiz completion event
+        this.dispatchEvent(new CustomEvent('quiz-completed', {
+            detail: {
+                score: this.score,
+                answers: this.answers,
+                chapterId: this.getAttribute('chapter-id'),
+                sectionId: this.getAttribute('section-id')
             }
-        }, 1000);
+        }));
     }
 }
 
@@ -450,3 +529,5 @@ class CSQuiz extends HTMLElement {
 customElements.define('cs-card', CSCard);
 customElements.define('cs-progress-ring', CSProgressRing);
 customElements.define('cs-quiz', CSQuiz);
+
+console.log('Custom components registered successfully');
