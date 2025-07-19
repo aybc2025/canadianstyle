@@ -1,0 +1,222 @@
+{
+  "introduction": {
+    "id": "ch07-intro",
+    "title": "Understanding Punctuation",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "What is the primary purpose of punctuation?",
+        "options": [
+          { "label": "To make writing look professional", "correct": false },
+          { "label": "To help readers understand structural relationships", "correct": true },
+          { "label": "To follow grammatical rules", "correct": false },
+          { "label": "To separate words and sentences", "correct": false }
+        ],
+        "rationale": "Punctuation helps readers understand the structural relationship within and between sentences.",
+        "ref": "§7.01"
+      },
+      {
+        "id": "q2",
+        "type": "mcq",
+        "stem": "Canadian style generally favours which approach to punctuation?",
+        "options": [
+          { "label": "Heavy punctuation like British style", "correct": false },
+          { "label": "No punctuation at all", "correct": false },
+          { "label": "Lighter punctuation than British style", "correct": true },
+          { "label": "The same as American style", "correct": false }
+        ],
+        "rationale": "Canadian style generally favours lighter punctuation than British style."
+      }
+    ]
+  },
+  "comma": {
+    "id": "ch07-comma",
+    "title": "Mastering the Comma",
+    "questions": [
+      {
+        "id": "q3",
+        "type": "mcq",
+        "stem": "In Canadian Style, when should you use the Oxford comma (serial comma)?",
+        "options": [
+          { "label": "Always use it", "correct": false },
+          { "label": "Never use it", "correct": false },
+          { "label": "Only when needed for clarity", "correct": true },
+          { "label": "Only in academic writing", "correct": false }
+        ],
+        "rationale": "Canadian Style recommends omitting the Oxford comma unless needed for clarity.",
+        "ref": "§7.05"
+      },
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "Which sentence correctly punctuates a restrictive clause?",
+        "options": [
+          { "label": "The students, who studied hard, passed the exam.", "correct": false },
+          { "label": "The students who studied hard passed the exam.", "correct": true },
+          { "label": "The students, who studied hard passed the exam.", "correct": false },
+          { "label": "The students who studied hard, passed the exam.", "correct": false }
+        ],
+        "rationale": "Restrictive clauses (essential information) do not use commas.",
+        "ref": "§7.14"
+      },
+      {
+        "id": "q5",
+        "type": "error-spot",
+        "stem": "Click on the comma error:",
+        "text": "However the meeting was postponed due to bad weather",
+        "errorIndex": 1,
+        "rationale": "A comma is needed after the introductory word 'However'.",
+        "ref": "§7.16"
+      },
+      {
+        "id": "q6",
+        "type": "fill-blank",
+        "stem": "After reviewing the documents___ she made her decision.",
+        "answer": ",",
+        "rationale": "Use a comma after introductory phrases.",
+        "ref": "§7.16"
+      },
+      {
+        "id": "q7",
+        "type": "multi-select",
+        "stem": "Which sentences need commas? (Select all that apply)",
+        "options": [
+          { "label": "Yes we can attend the meeting.", "correct": true },
+          { "label": "The manager who works late stayed behind.", "correct": false },
+          { "label": "My sister a doctor lives in Toronto.", "correct": true },
+          { "label": "Students must submit their work on time.", "correct": false }
+        ],
+        "rationale": "Introductory words and non-restrictive appositives need commas."
+      }
+    ]
+  },
+  "dashes": {
+    "id": "ch07-dashes",
+    "title": "Using Dashes Effectively",
+    "questions": [
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "According to Canadian Style, how should em dashes be formatted?",
+        "options": [
+          { "label": "With spaces on both sides ( — )", "correct": false },
+          { "label": "Without spaces on either side (—)", "correct": true },
+          { "label": "With a space before only ( —)", "correct": false },
+          { "label": "With a space after only (— )", "correct": false }
+        ],
+        "rationale": "Canadian Style uses em dashes without spaces on either side.",
+        "ref": "§7.19"
+      },
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "What is an en dash primarily used for?",
+        "options": [
+          { "label": "Parenthetical statements", "correct": false },
+          { "label": "Ranges and connections", "correct": true },
+          { "label": "Emphasis at the end of sentences", "correct": false },
+          { "label": "Replacing commas", "correct": false }
+        ],
+        "rationale": "En dashes are used for ranges (25–30) and connections (Toronto–Montreal).",
+        "ref": "§7.20"
+      },
+      {
+        "id": "q10",
+        "type": "drag-drop",
+        "stem": "Order these punctuation marks from most to least formal for parenthetical information:",
+        "options": [
+          { "label": "Parentheses ( )", "order": 1 },
+          { "label": "Commas", "order": 2 },
+          { "label": "Em dashes", "order": 3 }
+        ],
+        "rationale": "Parentheses are most formal, commas are neutral, and em dashes are most emphatic but least formal."
+      }
+    ]
+  },
+  "apostrophe": {
+    "id": "ch07-apostrophe",
+    "title": "The Apostrophe",
+    "questions": [
+      {
+        "id": "q11",
+        "type": "mcq",
+        "stem": "What is the correct possessive form of 'James'?",
+        "options": [
+          { "label": "James' only", "correct": false },
+          { "label": "James's only", "correct": false },
+          { "label": "Both James' and James's are acceptable", "correct": true },
+          { "label": "Jame's", "correct": false }
+        ],
+        "rationale": "Both James' and James's are acceptable in Canadian Style.",
+        "ref": "§7.28"
+      },
+      {
+        "id": "q12",
+        "type": "fill-blank",
+        "stem": "The cat lost ___ collar.",
+        "answer": "its",
+        "rationale": "'Its' is possessive; 'it's' means 'it is'.",
+        "ref": "§7.28"
+      },
+      {
+        "id": "q13",
+        "type": "error-spot",
+        "stem": "Click on the apostrophe error:",
+        "text": "The Smith's house is on Elm Street near the children's park",
+        "errorIndex": 1,
+        "rationale": "For plural possession, it should be 'Smiths'' not 'Smith's'."
+      },
+      {
+        "id": "q14",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "it is", "back": "it's" },
+          { "front": "belonging to it", "back": "its" },
+          { "front": "cannot", "back": "can't" },
+          { "front": "1990s (decade)", "back": "1990s (no apostrophe)" },
+          { "front": "multiple MPs", "back": "MPs (no apostrophe)" }
+        ]
+      }
+    ]
+  },
+  "semicolon": {
+    "id": "ch07-semicolon",
+    "title": "The Semicolon",
+    "questions": [
+      {
+        "id": "q15",
+        "type": "mcq",
+        "stem": "When is a semicolon most appropriately used?",
+        "options": [
+          { "label": "To introduce a list", "correct": false },
+          { "label": "To join closely related independent clauses", "correct": true },
+          { "label": "Before a quotation", "correct": false },
+          { "label": "After an introductory phrase", "correct": false }
+        ],
+        "rationale": "Semicolons primarily join closely related independent clauses.",
+        "ref": "§7.17"
+      }
+    ]
+  },
+  "colon": {
+    "id": "ch07-colon",
+    "title": "The Colon",
+    "questions": [
+      {
+        "id": "q16",
+        "type": "mcq",
+        "stem": "What should follow a colon introducing a list?",
+        "options": [
+          { "label": "Always capitalize the first word", "correct": false },
+          { "label": "Never capitalize the first word", "correct": false },
+          { "label": "Lowercase unless it's a complete sentence", "correct": true },
+          { "label": "Always use a dash instead", "correct": false }
+        ],
+        "rationale": "After a colon, use lowercase unless what follows is a complete sentence.",
+        "ref": "§7.18"
+      }
+    ]
+  }
+}

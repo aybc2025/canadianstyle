@@ -1,0 +1,221 @@
+{
+  "introduction": {
+    "id": "ch13-intro",
+    "title": "Understanding Plain Language",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "What is plain language?",
+        "options": [
+          { "label": "Writing at a grade 3 level", "correct": false },
+          { "label": "Writing that readers can understand and use the first time", "correct": true },
+          { "label": "Avoiding all technical terms", "correct": false },
+          { "label": "Using only short words", "correct": false }
+        ],
+        "rationale": "Plain language is writing that your intended readers can understand and use the first time they read it.",
+        "ref": "§13.01"
+      },
+      {
+        "id": "q2",
+        "type": "multi-select",
+        "stem": "Which are benefits of plain language? (Select all that apply)",
+        "options": [
+          { "label": "Saves readers' time", "correct": true },
+          { "label": "Reduces errors", "correct": true },
+          { "label": "Makes writing look less professional", "correct": false },
+          { "label": "Builds trust with readers", "correct": true },
+          { "label": "Saves money by reducing inquiries", "correct": true }
+        ],
+        "rationale": "Plain language saves time, reduces errors, builds trust, and saves money. It does not make writing less professional."
+      }
+    ]
+  },
+  "reader-focus": {
+    "id": "ch13-reader",
+    "title": "Writing for Your Reader",
+    "questions": [
+      {
+        "id": "q3",
+        "type": "mcq",
+        "stem": "Which sentence better focuses on the reader?",
+        "options": [
+          { "label": "The department has revised its policies.", "correct": false },
+          { "label": "Your benefits will increase by 15%.", "correct": true },
+          { "label": "A new system has been implemented.", "correct": false },
+          { "label": "Changes have been made to the program.", "correct": false }
+        ],
+        "rationale": "Lead with what matters most to your reader—in this case, the benefit increase.",
+        "ref": "§13.02"
+      },
+      {
+        "id": "q4",
+        "type": "fill-blank",
+        "stem": "___ must submit your application by March 31.",
+        "answer": "You",
+        "rationale": "Using 'you' makes writing more direct and personal.",
+        "ref": "§13.02"
+      }
+    ]
+  },
+  "vocabulary": {
+    "id": "ch13-vocab",
+    "title": "Choosing Clear Words",
+    "questions": [
+      {
+        "id": "q5",
+        "type": "drag-drop",
+        "stem": "Match complex words with their plain alternatives:",
+        "options": [
+          { "label": "commence → start", "order": 1 },
+          { "label": "utilize → use", "order": 2 },
+          { "label": "prior to → before", "order": 3 },
+          { "label": "in the event that → if", "order": 4 },
+          { "label": "notwithstanding → despite", "order": 5 }
+        ],
+        "rationale": "Simple, familiar words communicate more effectively than complex alternatives."
+      },
+      {
+        "id": "q6",
+        "type": "error-spot",
+        "stem": "Click on the redundant phrase:",
+        "text": "Please submit your future plans for the upcoming year",
+        "errorIndex": 4,
+        "rationale": "'Future plans' is redundant—all plans are for the future. Just use 'plans'.",
+        "ref": "§13.04"
+      },
+      {
+        "id": "q7",
+        "type": "mcq",
+        "stem": "Which is more specific and clear?",
+        "options": [
+          { "label": "Submit your application in a timely manner", "correct": false },
+          { "label": "Submit your application soon", "correct": false },
+          { "label": "Submit your application by March 31", "correct": true },
+          { "label": "Submit your application when convenient", "correct": false }
+        ],
+        "rationale": "Specific dates are clearer than vague time references."
+      }
+    ]
+  },
+  "sentences": {
+    "id": "ch13-sentences",
+    "title": "Writing Clear Sentences",
+    "questions": [
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "Which sentence uses active voice?",
+        "options": [
+          { "label": "The report was written by the consultant.", "correct": false },
+          { "label": "The consultant wrote the report.", "correct": true },
+          { "label": "Writing of the report was done by the consultant.", "correct": false },
+          { "label": "The report has been completed.", "correct": false }
+        ],
+        "rationale": "Active voice puts the doer (consultant) before the action (wrote).",
+        "ref": "§13.05"
+      },
+      {
+        "id": "q9",
+        "type": "multi-select",
+        "stem": "Which techniques help write clearer sentences? (Select all)",
+        "options": [
+          { "label": "Keep sentences under 20 words on average", "correct": true },
+          { "label": "Use passive voice exclusively", "correct": false },
+          { "label": "Put the main idea first", "correct": true },
+          { "label": "Use positive language", "correct": true },
+          { "label": "Create long noun strings", "correct": false }
+        ],
+        "rationale": "Short sentences, main idea first, and positive language all improve clarity."
+      },
+      {
+        "id": "q10",
+        "type": "fill-blank",
+        "stem": "The average sentence length for plain language should be ___-20 words.",
+        "answer": "15",
+        "alternatives": ["fifteen"],
+        "rationale": "Aim for an average of 15-20 words per sentence for optimal readability.",
+        "ref": "§13.05"
+      }
+    ]
+  },
+  "layout": {
+    "id": "ch13-layout",
+    "title": "Designing for Clarity",
+    "questions": [
+      {
+        "id": "q11",
+        "type": "mcq",
+        "stem": "Which heading is more descriptive and helpful?",
+        "options": [
+          { "label": "Section 3: Procedures", "correct": false },
+          { "label": "How to Apply for Benefits", "correct": true },
+          { "label": "Important Information", "correct": false },
+          { "label": "Part III", "correct": false }
+        ],
+        "rationale": "Descriptive headings help readers find information quickly.",
+        "ref": "§13.06"
+      },
+      {
+        "id": "q12",
+        "type": "multi-select",
+        "stem": "Which design elements help readers scan documents? (Select all)",
+        "options": [
+          { "label": "Short paragraphs (3-4 sentences)", "correct": true },
+          { "label": "Long blocks of unbroken text", "correct": false },
+          { "label": "Descriptive subheadings", "correct": true },
+          { "label": "Bulleted lists", "correct": true },
+          { "label": "ALL CAPS for emphasis", "correct": false }
+        ],
+        "rationale": "Short paragraphs, subheadings, and lists help readers scan effectively."
+      }
+    ]
+  },
+  "testing": {
+    "id": "ch13-testing",
+    "title": "Testing Your Documents",
+    "questions": [
+      {
+        "id": "q13",
+        "type": "mcq",
+        "stem": "What's the best way to test if your document works?",
+        "options": [
+          { "label": "Ask your colleagues to review it", "correct": false },
+          { "label": "Test with people who represent your actual audience", "correct": true },
+          { "label": "Run it through grammar-checking software", "correct": false },
+          { "label": "Read it aloud to yourself", "correct": false }
+        ],
+        "rationale": "Testing with real representatives of your audience provides the most valuable feedback.",
+        "ref": "§13.07"
+      },
+      {
+        "id": "q14",
+        "type": "mcq",
+        "stem": "What Flesch Reading Ease score should you aim for in plain English?",
+        "options": [
+          { "label": "30-40", "correct": false },
+          { "label": "40-50", "correct": false },
+          { "label": "60+", "correct": true },
+          { "label": "90+", "correct": false }
+        ],
+        "rationale": "Aim for a Flesch Reading Ease score of 60 or higher for plain English.",
+        "ref": "§13.07"
+      },
+      {
+        "id": "q15",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "Utilize", "back": "Use" },
+          { "front": "Prior to", "back": "Before" },
+          { "front": "Commence", "back": "Start/Begin" },
+          { "front": "Subsequent to", "back": "After" },
+          { "front": "In the event that", "back": "If" },
+          { "front": "Notwithstanding", "back": "Despite" },
+          { "front": "Ameliorate", "back": "Improve" },
+          { "front": "Expeditious", "back": "Quick/Fast" }
+        ]
+      }
+    ]
+  }
+}

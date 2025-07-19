@@ -1,0 +1,146 @@
+{
+  "emphasis": {
+    "id": "ch06-emphasis",
+    "title": "Italics for Emphasis",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "When should italics be used for emphasis?",
+        "options": [
+          { "label": "Frequently throughout the document", "correct": false },
+          { "label": "Sparingly, for genuine emphasis", "correct": true },
+          { "label": "Never in formal documents", "correct": false },
+          { "label": "Only in footnotes", "correct": false }
+        ],
+        "rationale": "Use italics sparingly for emphasis to maintain their effectiveness.",
+        "ref": "§6.02"
+      },
+      {
+        "id": "q2",
+        "type": "mcq",
+        "stem": "Which sentence uses italics appropriately?",
+        "options": [
+          { "label": "The report was very important.", "correct": false },
+          { "label": "The report was *very* important.", "correct": false },
+          { "label": "What exactly did she mean by that?", "correct": true },
+          { "label": "WHAT exactly did she mean by that?", "correct": false }
+        ],
+        "rationale": "Italicize key words for emphasis, not common intensifiers.",
+        "ref": "§6.02"
+      }
+    ]
+  },
+  "titles": {
+    "id": "ch06-titles",
+    "title": "Titles of Works",
+    "questions": [
+      {
+        "id": "q3",
+        "type": "multi-select",
+        "stem": "Which titles should be italicized? (Select all)",
+        "options": [
+          { "label": "Books", "correct": true },
+          { "label": "Magazine articles", "correct": false },
+          { "label": "Newspapers", "correct": true },
+          { "label": "Chapter titles", "correct": false },
+          { "label": "Films", "correct": true }
+        ],
+        "rationale": "Italicize complete works; use quotation marks for parts of works.",
+        "ref": "§6.03"
+      },
+      {
+        "id": "q4",
+        "type": "error-spot",
+        "stem": "Click on the formatting error:",
+        "text": "She read 'The Globe and Mail' every morning",
+        "errorIndex": 2,
+        "rationale": "Newspaper titles should be italicized, not in quotation marks."
+      },
+      {
+        "id": "q5",
+        "type": "fill-blank",
+        "stem": "Margaret Atwood's novel ___ won many awards.",
+        "answer": "The Handmaid's Tale",
+        "rationale": "Book titles are italicized.",
+        "ref": "§6.03"
+      }
+    ]
+  },
+  "foreign-words": {
+    "id": "ch06-foreign",
+    "title": "Foreign Words and Phrases",
+    "questions": [
+      {
+        "id": "q6",
+        "type": "mcq",
+        "stem": "Which foreign term should be italicized?",
+        "options": [
+          { "label": "café", "correct": false },
+          { "label": "per se", "correct": false },
+          { "label": "raison d'être", "correct": true },
+          { "label": "curriculum vitae", "correct": false }
+        ],
+        "rationale": "Italicize foreign phrases not yet absorbed into English.",
+        "ref": "§6.04"
+      },
+      {
+        "id": "q7",
+        "type": "multi-select",
+        "stem": "Which Latin abbreviations are italicized? (Select all)",
+        "options": [
+          { "label": "e.g.", "correct": false },
+          { "label": "ibid.", "correct": true },
+          { "label": "etc.", "correct": false },
+          { "label": "sic", "correct": true }
+        ],
+        "rationale": "Some Latin abbreviations like ibid. and sic are italicized; common ones like e.g. are not.",
+        "ref": "§6.05"
+      }
+    ]
+  },
+  "special-uses": {
+    "id": "ch06-special",
+    "title": "Special Uses of Italics",
+    "questions": [
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "How should you refer to a word as a word?",
+        "options": [
+          { "label": "The word 'happy' has five letters.", "correct": false },
+          { "label": "The word happy has five letters.", "correct": true },
+          { "label": "The word HAPPY has five letters.", "correct": false },
+          { "label": "The word \"happy\" has five letters.", "correct": false }
+        ],
+        "rationale": "Words referred to as words are italicized.",
+        "ref": "§6.07"
+      },
+      {
+        "id": "q9",
+        "type": "drag-drop",
+        "stem": "Match the item with its formatting:",
+        "options": [
+          { "label": "HMCS Vancouver → italics", "order": 1 },
+          { "label": "Boeing 747 → no italics", "order": 2 },
+          { "label": "Titanic (ship) → italics", "order": 3 },
+          { "label": "Discovery (space shuttle) → italics", "order": 4 }
+        ],
+        "rationale": "Ship names are italicized; aircraft types are not.",
+        "ref": "§6.11"
+      },
+      {
+        "id": "q10",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "The Globe and Mail", "back": "Italicize (newspaper)" },
+          { "front": "Chapter 5", "back": "No italics (chapter reference)" },
+          { "front": "ad hoc", "back": "No italics (common Latin)" },
+          { "front": "HMS Queen Elizabeth", "back": "Italicize (ship name)" },
+          { "front": "The letter a", "back": "Italicize 'a' (letter as letter)" }
+        ]
+      }
+    ]
+  }
+}

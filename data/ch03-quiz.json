@@ -1,0 +1,140 @@
+{
+  "canadian-spelling": {
+    "id": "ch03-canadian",
+    "title": "Canadian Spelling Conventions",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Which is the correct Canadian spelling?",
+        "options": [
+          { "label": "color", "correct": false },
+          { "label": "colour", "correct": true },
+          { "label": "colur", "correct": false },
+          { "label": "coulor", "correct": false }
+        ],
+        "rationale": "Canadian spelling typically uses British '-our' endings.",
+        "ref": "§3.01"
+      },
+      {
+        "id": "q2",
+        "type": "multi-select",
+        "stem": "Select all correct Canadian spellings:",
+        "options": [
+          { "label": "centre", "correct": true },
+          { "label": "theater", "correct": false },
+          { "label": "honour", "correct": true },
+          { "label": "realize", "correct": true }
+        ],
+        "rationale": "Canadian spelling uses 'centre' and 'honour' but accepts both -ize and -ise endings."
+      },
+      {
+        "id": "q3",
+        "type": "fill-blank",
+        "stem": "The ___ reviewed the financial statements.",
+        "answer": "councillor",
+        "alternatives": ["councilor"],
+        "rationale": "Canadian spelling prefers double 'l' in councillor.",
+        "ref": "§3.03"
+      }
+    ]
+  },
+  "homonyms": {
+    "id": "ch03-homonyms",
+    "title": "Homonyms and Similar Words",
+    "questions": [
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "Choose the correct word: The ___ of the building is impressive.",
+        "options": [
+          { "label": "cite", "correct": false },
+          { "label": "site", "correct": true },
+          { "label": "sight", "correct": false }
+        ],
+        "rationale": "'Site' refers to location; 'cite' means to quote; 'sight' relates to vision.",
+        "ref": "§3.05"
+      },
+      {
+        "id": "q5",
+        "type": "error-spot",
+        "stem": "Click on the spelling error:",
+        "text": "The committee will loose its mandate next year",
+        "errorIndex": 3,
+        "rationale": "Should be 'lose' (to be deprived of); 'loose' means not tight."
+      },
+      {
+        "id": "q6",
+        "type": "drag-drop",
+        "stem": "Match the word to its meaning:",
+        "options": [
+          { "label": "principal = main or chief", "order": 1 },
+          { "label": "principle = fundamental rule", "order": 2 },
+          { "label": "stationary = not moving", "order": 3 },
+          { "label": "stationery = writing materials", "order": 4 }
+        ]
+      }
+    ]
+  },
+  "ei-ie": {
+    "id": "ch03-ei-ie",
+    "title": "Words with ei and ie",
+    "questions": [
+      {
+        "id": "q7",
+        "type": "mcq",
+        "stem": "Which word follows the 'i before e except after c' rule?",
+        "options": [
+          { "label": "weird", "correct": false },
+          { "label": "receive", "correct": true },
+          { "label": "science", "correct": false },
+          { "label": "foreign", "correct": false }
+        ],
+        "rationale": "'Receive' follows the rule; the others are exceptions.",
+        "ref": "§3.06"
+      },
+      {
+        "id": "q8",
+        "type": "fill-blank",
+        "stem": "I ___ your offer yesterday.",
+        "answer": "received",
+        "rationale": "After 'c', use 'ei' in receive.",
+        "ref": "§3.06"
+      }
+    ]
+  },
+  "plurals": {
+    "id": "ch03-plurals",
+    "title": "Plural Forms",
+    "questions": [
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "What is the correct plural of 'attorney general'?",
+        "options": [
+          { "label": "attorney generals", "correct": false },
+          { "label": "attorneys general", "correct": true },
+          { "label": "attorneys generals", "correct": false },
+          { "label": "attorney-generals", "correct": false }
+        ],
+        "rationale": "In compound titles, pluralize the main noun.",
+        "ref": "§3.17"
+      },
+      {
+        "id": "q10",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "analysis", "back": "analyses" },
+          { "front": "criterion", "back": "criteria" },
+          { "front": "phenomenon", "back": "phenomena" },
+          { "front": "datum", "back": "data" },
+          { "front": "medium", "back": "media" },
+          { "front": "appendix", "back": "appendices" },
+          { "front": "basis", "back": "bases" },
+          { "front": "curriculum", "back": "curricula" }
+        ]
+      }
+    ]
+  }
+}

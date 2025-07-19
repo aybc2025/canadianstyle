@@ -1,0 +1,139 @@
+{
+  "general-rules": {
+    "id": "ch05-general",
+    "title": "General Number Rules",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Which follows the general rule for numbers in text?",
+        "options": [
+          { "label": "We need 5 volunteers.", "correct": false },
+          { "label": "We need five volunteers.", "correct": true },
+          { "label": "We need 15 volunteers.", "correct": true },
+          { "label": "We need fifteen volunteers.", "correct": false }
+        ],
+        "rationale": "Spell out numbers below 10; use numerals for 10 and above.",
+        "ref": "§5.01"
+      },
+      {
+        "id": "q2",
+        "type": "multi-select",
+        "stem": "Which numbers should be written as numerals? (Select all)",
+        "options": [
+          { "label": "Numbers with decimals (3.5)", "correct": true },
+          { "label": "Numbers with units (5 km)", "correct": true },
+          { "label": "Numbers starting sentences", "correct": false },
+          { "label": "Ages under 10", "correct": false }
+        ],
+        "rationale": "Use numerals for decimals and measurements; spell out numbers starting sentences."
+      },
+      {
+        "id": "q3",
+        "type": "error-spot",
+        "stem": "Click on the number usage error:",
+        "text": "12 employees attended the three hour meeting",
+        "errorIndex": 0,
+        "rationale": "Never start a sentence with numerals; write 'Twelve employees'."
+      }
+    ]
+  },
+  "money": {
+    "id": "ch05-money",
+    "title": "Money and Currency",
+    "questions": [
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "Which correctly expresses the amount?",
+        "options": [
+          { "label": "$0.65", "correct": true },
+          { "label": "$.65", "correct": false },
+          { "label": ".65¢", "correct": false },
+          { "label": "65¢", "correct": true }
+        ],
+        "rationale": "Use $0.65 or 65¢, never $.65 or .65¢",
+        "ref": "§5.11"
+      },
+      {
+        "id": "q5",
+        "type": "fill-blank",
+        "stem": "The project cost ___ million.",
+        "answer": "$2.5",
+        "alternatives": ["$2.5 million", "2.5 million dollars"],
+        "rationale": "Use $ symbol with numerals in formal writing.",
+        "ref": "§5.11"
+      }
+    ]
+  },
+  "dates-time": {
+    "id": "ch05-dates",
+    "title": "Dates and Time",
+    "questions": [
+      {
+        "id": "q6",
+        "type": "mcq",
+        "stem": "Which date format is correct for formal documents?",
+        "options": [
+          { "label": "March 15th, 2023", "correct": false },
+          { "label": "March 15, 2023", "correct": true },
+          { "label": "15 March 2023", "correct": true },
+          { "label": "03/15/2023", "correct": false }
+        ],
+        "rationale": "Use cardinal numbers without 'th' in dates; avoid all-numeric format in text.",
+        "ref": "§5.14"
+      },
+      {
+        "id": "q7",
+        "type": "multi-select",
+        "stem": "Which time expressions are correct? (Select all)",
+        "options": [
+          { "label": "3:00 p.m.", "correct": true },
+          { "label": "3 p.m.", "correct": true },
+          { "label": "15:00", "correct": true },
+          { "label": "3:00PM", "correct": false }
+        ],
+        "rationale": "Use periods in p.m./a.m. or 24-hour format."
+      }
+    ]
+  },
+  "measurements": {
+    "id": "ch05-measurements",
+    "title": "Quantities and Measures",
+    "questions": [
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "Which measurement format is correct?",
+        "options": [
+          { "label": "5 km.", "correct": false },
+          { "label": "5 km", "correct": true },
+          { "label": "five km", "correct": false },
+          { "label": "5 kilometres", "correct": false }
+        ],
+        "rationale": "SI symbols never take periods; use numerals with symbols.",
+        "ref": "§5.10"
+      },
+      {
+        "id": "q9",
+        "type": "fill-blank",
+        "stem": "The temperature reached ___°C yesterday.",
+        "answer": "30",
+        "rationale": "Use numerals with degree symbols.",
+        "ref": "§5.10"
+      },
+      {
+        "id": "q10",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "percent or %", "back": "Use % with numerals (50%), 'percent' with spelled numbers" },
+          { "front": "2nd or second", "back": "second (spell out ordinals in text)" },
+          { "front": "$100.00 or $100", "back": "$100 (omit .00 in whole dollars)" },
+          { "front": "1990's or 1990s", "back": "1990s (no apostrophe for decades)" },
+          { "front": "3x or three times", "back": "three times (spell out in formal text)" }
+        ]
+      }
+    ]
+  }
+}

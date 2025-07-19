@@ -1,0 +1,287 @@
+{
+  "chapters": [
+    {
+      "id": "ch01",
+      "number": "01",
+      "title": "Abbreviations",
+      "category": "typography",
+      "file": "ch01-abbreviations.html",
+      "description": "Master the art of abbreviating words and phrases in Canadian English",
+      "sections": [
+        { "id": "introduction", "title": "1.01 Introduction", "subsections": [] },
+        { "id": "periods", "title": "1.02 Periods", "subsections": [] },
+        { "id": "plurals", "title": "1.03 Plurals", "subsections": [] },
+        { "id": "capital-letters", "title": "1.04 Capital Letters and Spacing", "subsections": [] },
+        { "id": "titles", "title": "1.05 Titles Used Before and After Personal Names", "subsections": [] },
+        { "id": "numerals", "title": "1.06 Military Abbreviations", "subsections": [] },
+        { "id": "scientific", "title": "1.07 Scientific and Technical Terms", "subsections": [] },
+        { "id": "corporate", "title": "1.08 Corporate Names", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch02",
+      "number": "02",
+      "title": "Hyphenation: Compounding and Word Division",
+      "category": "typography",
+      "file": "ch02-hyphenation.html",
+      "description": "Learn when and how to use hyphens in compound words and word division",
+      "sections": [
+        { "id": "introduction", "title": "2.01 Introduction", "subsections": [] },
+        { "id": "compound-nouns", "title": "2.02 Compound Nouns", "subsections": [] },
+        { "id": "noun-adjective", "title": "2.03 Nouns with Adjectives and Participles", "subsections": [] },
+        { "id": "compound-adjectives", "title": "2.04 Compound Adjectives", "subsections": [] },
+        { "id": "verbs", "title": "2.05 Verbs", "subsections": [] },
+        { "id": "adverbs", "title": "2.06 Adverbs in Compounds", "subsections": [] },
+        { "id": "prefixes", "title": "2.07 Prefixes", "subsections": [] },
+        { "id": "word-division", "title": "2.17 Word Division", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch03",
+      "number": "03",
+      "title": "Spelling",
+      "category": "typography",
+      "file": "ch03-spelling.html",
+      "description": "Master Canadian spelling conventions and avoid common errors",
+      "sections": [
+        { "id": "introduction", "title": "3.01 Introduction", "subsections": [] },
+        { "id": "spell-checking", "title": "3.02 Spell-checking", "subsections": [] },
+        { "id": "frequent-errors", "title": "3.03 Frequently Misspelled Words", "subsections": [] },
+        { "id": "metric", "title": "3.04 SI/Metric Units", "subsections": [] },
+        { "id": "homonyms", "title": "3.05 Homonyms and Similar-sounding Words", "subsections": [] },
+        { "id": "ei-ie", "title": "3.06 Words with ei and ie", "subsections": [] },
+        { "id": "endings", "title": "3.08-3.16 Word Endings", "subsections": [] },
+        { "id": "plurals", "title": "3.17 Plural Forms", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch04",
+      "number": "04",
+      "title": "Capitalization",
+      "category": "typography",
+      "file": "ch04-capitalization.html",
+      "description": "Learn when to capitalize words in formal Canadian writing",
+      "sections": [
+        { "id": "introduction", "title": "4.01 Introduction", "subsections": [] },
+        { "id": "initial-words", "title": "4.02 Initial Words", "subsections": [] },
+        { "id": "personal-names", "title": "4.03 Personal Names", "subsections": [] },
+        { "id": "proper-nouns", "title": "4.04 Words Derived from Proper Nouns", "subsections": [] },
+        { "id": "government", "title": "4.05 Governments and Government Bodies", "subsections": [] },
+        { "id": "titles", "title": "4.08 Titles of Office or Rank", "subsections": [] },
+        { "id": "geography", "title": "4.21 Geographical Terms", "subsections": [] },
+        { "id": "publications", "title": "4.29 Publications and Works of Art", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch05",
+      "number": "05",
+      "title": "Numerical Expressions",
+      "category": "typography",
+      "file": "ch05-numbers.html",
+      "description": "Master the presentation of numbers, dates, and measurements",
+      "sections": [
+        { "id": "introduction", "title": "5.01 Introduction", "subsections": [] },
+        { "id": "round-numbers", "title": "5.02 Round Numbers", "subsections": [] },
+        { "id": "consistency", "title": "5.03 Consistency", "subsections": [] },
+        { "id": "initial", "title": "5.04 Initial Numbers", "subsections": [] },
+        { "id": "fractions", "title": "5.08-5.09 Fractions", "subsections": [] },
+        { "id": "quantities", "title": "5.10 Quantities and Measures", "subsections": [] },
+        { "id": "money", "title": "5.11 Money", "subsections": [] },
+        { "id": "time", "title": "5.12-5.13 Time", "subsections": [] },
+        { "id": "dates", "title": "5.14 Dates", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch06",
+      "number": "06",
+      "title": "Italics",
+      "category": "typography",
+      "file": "ch06-italics.html",
+      "description": "Learn when to use italics for emphasis, titles, and foreign words",
+      "sections": [
+        { "id": "introduction", "title": "6.01 Introduction", "subsections": [] },
+        { "id": "emphasis", "title": "6.02 Emphasis", "subsections": [] },
+        { "id": "titles", "title": "6.03 Titles of Publications and Works of Art", "subsections": [] },
+        { "id": "french", "title": "6.04 French and Foreign Words and Phrases", "subsections": [] },
+        { "id": "latin", "title": "6.05 Latin Terms and Abbreviations", "subsections": [] },
+        { "id": "letters", "title": "6.07 Letters and Words Referred to as Such", "subsections": [] },
+        { "id": "names", "title": "6.11 Names of Ships, Aircraft, etc.", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch07",
+      "number": "07",
+      "title": "Punctuation",
+      "category": "typography",
+      "file": "ch07-punctuation.html",
+      "description": "Master commas, semicolons, dashes, and all punctuation marks",
+      "sections": [
+        { "id": "introduction", "title": "7.01 Introduction", "subsections": [] },
+        { "id": "period", "title": "7.02 The Period", "subsections": [] },
+        { "id": "question-mark", "title": "7.03 The Question Mark", "subsections": [] },
+        { "id": "exclamation", "title": "7.04 The Exclamation Mark", "subsections": [] },
+        { "id": "comma", "title": "7.05-7.16 The Comma", "subsections": [
+            "7.05 Series",
+            "7.14 Restrictive/Non-restrictive",
+            "7.16 Introductory Elements"
+          ]
+        },
+        { "id": "semicolon", "title": "7.17 The Semicolon", "subsections": [] },
+        { "id": "colon", "title": "7.18 The Colon", "subsections": [] },
+        { "id": "dashes", "title": "7.19-7.20 The Dash", "subsections": [] },
+        { "id": "parentheses", "title": "7.21 Parentheses", "subsections": [] },
+        { "id": "apostrophe", "title": "7.28 The Apostrophe", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch08",
+      "number": "08",
+      "title": "Quotations and Quotation Marks",
+      "category": "typography",
+      "file": "ch08-quotations.html",
+      "description": "Learn how to properly quote sources and use quotation marks",
+      "sections": [
+        { "id": "introduction", "title": "8.01 Introduction", "subsections": [] },
+        { "id": "run-in", "title": "8.02 Run-in Format", "subsections": [] },
+        { "id": "block", "title": "8.03 Block Format", "subsections": [] },
+        { "id": "punctuation", "title": "8.04-8.11 Punctuation with Quotations", "subsections": [] },
+        { "id": "other-uses", "title": "8.12-8.13 Other Uses of Quotation Marks", "subsections": [] },
+        { "id": "french", "title": "8.14 French Quotations", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch09",
+      "number": "09",
+      "title": "Reference Matter",
+      "category": "typography",
+      "file": "ch09-reference.html",
+      "description": "Master footnotes, endnotes, and bibliographic references",
+      "sections": [
+        { "id": "introduction", "title": "9.01 Introduction", "subsections": [] },
+        { "id": "reference-notes", "title": "9.02-9.22 Reference Notes", "subsections": [] },
+        { "id": "footnotes", "title": "9.23 Footnotes", "subsections": [] },
+        { "id": "endnotes", "title": "9.24 Endnotes", "subsections": [] },
+        { "id": "in-text", "title": "9.25 In-text Notes", "subsections": [] },
+        { "id": "bibliography", "title": "9.27-9.62 Bibliographies", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch10",
+      "number": "10",
+      "title": "Letters and Memorandums",
+      "category": "typography",
+      "file": "ch10-correspondence.html",
+      "description": "Learn proper formats for business correspondence",
+      "sections": [
+        { "id": "introduction", "title": "10.01 Introduction", "subsections": [] },
+        { "id": "block-style", "title": "10.02 Block Style", "subsections": [] },
+        { "id": "letterhead", "title": "10.04 Letterhead", "subsections": [] },
+        { "id": "date", "title": "10.05 Date", "subsections": [] },
+        { "id": "inside-address", "title": "10.06 Inside Address", "subsections": [] },
+        { "id": "salutation", "title": "10.12 Salutation", "subsections": [] },
+        { "id": "complimentary-close", "title": "10.17 Complimentary Close", "subsections": [] },
+        { "id": "memorandums", "title": "10.23 Memorandums", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch11",
+      "number": "11",
+      "title": "Reports and Minutes",
+      "category": "typography",
+      "file": "ch11-reports.html",
+      "description": "Learn to write clear, professional reports and meeting minutes",
+      "sections": [
+        { "id": "introduction", "title": "11.01 General", "subsections": [] },
+        { "id": "preparation", "title": "11.02 Preparation", "subsections": [] },
+        { "id": "format", "title": "11.03 Format", "subsections": [] },
+        { "id": "front-matter", "title": "11.04-11.07 Front Matter", "subsections": [] },
+        { "id": "body", "title": "11.08-11.10 Report Body", "subsections": [] },
+        { "id": "visuals", "title": "11.14-11.15 Tables and Illustrations", "subsections": [] },
+        { "id": "minutes", "title": "11.22-11.27 Minutes", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch12",
+      "number": "12",
+      "title": "Usage",
+      "category": "style",
+      "file": "ch12-usage.html",
+      "description": "Master commonly confused words and prepositional usage",
+      "sections": [
+        { "id": "introduction", "title": "12.01 Introduction", "subsections": [] },
+        { "id": "prepositions", "title": "12.02 Prepositional Usage", "subsections": [] },
+        { "id": "confused-words", "title": "12.03 Words Commonly Misused or Confused", "subsections": [
+            "affect/effect",
+            "compose/comprise",
+            "its/it's",
+            "less/fewer",
+            "that/which"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ch13",
+      "number": "13",
+      "title": "Plain Language",
+      "category": "style",
+      "file": "ch13-plain-language.html",
+      "description": "Write clearly and concisely for your readers",
+      "sections": [
+        { "id": "introduction", "title": "13.01 Introduction", "subsections": [] },
+        { "id": "reader-focus", "title": "13.02 Focusing on the Reader", "subsections": [] },
+        { "id": "organization", "title": "13.03 Text Organization", "subsections": [] },
+        { "id": "vocabulary", "title": "13.04 Vocabulary", "subsections": [] },
+        { "id": "sentences", "title": "13.05 Sentences", "subsections": [] },
+        { "id": "layout", "title": "13.06 Layout and Design", "subsections": [] },
+        { "id": "testing", "title": "13.07 Testing", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch14",
+      "number": "14",
+      "title": "Elimination of Stereotyping",
+      "category": "style",
+      "file": "ch14-stereotyping.html",
+      "description": "Write inclusively and avoid bias in your communications",
+      "sections": [
+        { "id": "introduction", "title": "14.01 Introduction", "subsections": [] },
+        { "id": "sexual", "title": "14.02-14.08 Elimination of Sexual Stereotyping", "subsections": [] },
+        { "id": "racial", "title": "14.09-14.12 Elimination of Racial and Ethnic Stereotyping", "subsections": [] },
+        { "id": "disabilities", "title": "14.13-14.14 Fair Depiction of People with Disabilities", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch15",
+      "number": "15",
+      "title": "Geographical Names",
+      "category": "style",
+      "file": "ch15-geographical.html",
+      "description": "Use correct spellings and forms for Canadian place names",
+      "sections": [
+        { "id": "introduction", "title": "15.01 Introduction", "subsections": [] },
+        { "id": "canadian", "title": "15.02 Canadian Names", "subsections": [] },
+        { "id": "foreign", "title": "15.03 Foreign Names", "subsections": [] },
+        { "id": "adjectives", "title": "15.04 Adjectives and Nouns of Nationality", "subsections": [] },
+        { "id": "provinces", "title": "15.05 Provinces and Territories", "subsections": [] }
+      ]
+    },
+    {
+      "id": "ch16",
+      "number": "16",
+      "title": "Revision and Proofreading",
+      "category": "style",
+      "file": "ch16-revision.html",
+      "description": "Polish your writing through systematic revision and proofreading",
+      "sections": [
+        { "id": "introduction", "title": "16.01 Introduction", "subsections": [] },
+        { "id": "structural", "title": "16.02 Structural Editing", "subsections": [] },
+        { "id": "stylistic", "title": "16.03 Stylistic Editing", "subsections": [] },
+        { "id": "copy-editing", "title": "16.04 Copy Editing", "subsections": [] },
+        { "id": "proofreading", "title": "16.05 Proofreading", "subsections": [] },
+        { "id": "marks", "title": "16.06 Proofreader's Marks", "subsections": [] },
+        { "id": "checklist", "title": "16.08 Revision Checklist", "subsections": [] }
+      ]
+    }
+  ]
+}

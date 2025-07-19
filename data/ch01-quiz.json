@@ -1,0 +1,158 @@
+{
+  "introduction": {
+    "id": "ch01-intro",
+    "title": "Understanding Abbreviations",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Which of the following is an example of a suspension abbreviation?",
+        "options": [
+          { "label": "Mr. (Mister)", "correct": true },
+          { "label": "Dr. (Doctor)", "correct": false },
+          { "label": "CBC (Canadian Broadcasting Corporation)", "correct": false },
+          { "label": "km (kilometre)", "correct": false }
+        ],
+        "rationale": "A suspension cuts off the end of a word. 'Mr.' removes 'ister' from 'Mister'.",
+        "ref": "§1.01"
+      },
+      {
+        "id": "q2",
+        "type": "multi-select",
+        "stem": "Select all the correct statements about abbreviations:",
+        "options": [
+          { "label": "They should enhance clarity", "correct": true },
+          { "label": "Always use them to save space", "correct": false },
+          { "label": "Spell out on first use when unclear", "correct": true },
+          { "label": "Never use in formal documents", "correct": false }
+        ],
+        "rationale": "Abbreviations should enhance clarity and be spelled out on first use if potentially unclear."
+      }
+    ]
+  },
+  "periods": {
+    "id": "ch01-periods",
+    "title": "Using Periods Correctly",
+    "questions": [
+      {
+        "id": "q3",
+        "type": "error-spot",
+        "stem": "Click on the incorrectly abbreviated word:",
+        "text": "Dr. Smith drove 50 km. to reach the C.B.C. studios",
+        "errorIndex": 3,
+        "rationale": "Metric symbols like 'km' never take periods. It should be '50 km' not '50 km.'"
+      },
+      {
+        "id": "q4",
+        "type": "fill-blank",
+        "stem": "The meeting is at 3:00 ___ in the boardroom.",
+        "answer": "p.m.",
+        "alternatives": ["pm"],
+        "rationale": "Both 'p.m.' and 'pm' are acceptable, but be consistent within a document."
+      },
+      {
+        "id": "q5",
+        "type": "drag-drop",
+        "stem": "Arrange these abbreviations from most formal to least formal:",
+        "options": [
+          { "label": "United States of America", "order": 1 },
+          { "label": "U.S.A.", "order": 2 },
+          { "label": "USA", "order": 3 },
+          { "label": "US", "order": 4 }
+        ]
+      }
+    ]
+  },
+  "plurals": {
+    "id": "ch01-plurals",
+    "title": "Forming Plural Abbreviations",
+    "questions": [
+      {
+        "id": "q6",
+        "type": "mcq",
+        "stem": "What is the correct plural form of 'CD'?",
+        "options": [
+          { "label": "CD's", "correct": false },
+          { "label": "CDs", "correct": true },
+          { "label": "CDS", "correct": false },
+          { "label": "C.D.s", "correct": false }
+        ],
+        "rationale": "Add lowercase 's' without apostrophe for abbreviations without periods.",
+        "ref": "§1.03"
+      },
+      {
+        "id": "q7",
+        "type": "fill-blank",
+        "stem": "She has earned two ___ from different universities.",
+        "answer": "M.A.'s",
+        "rationale": "Abbreviations with periods form plurals with apostrophe + s."
+      },
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "What is the plural abbreviation for 'manuscript'?",
+        "options": [
+          { "label": "MSs", "correct": false },
+          { "label": "MS's", "correct": false },
+          { "label": "MSS", "correct": true },
+          { "label": "M.S.S.", "correct": false }
+        ],
+        "rationale": "Some abbreviations have irregular plural forms. MS becomes MSS."
+      }
+    ]
+  },
+  "capital-letters": {
+    "id": "ch01-capitals",
+    "title": "Capitalization in Abbreviations",
+    "questions": [
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "Which abbreviation is correctly capitalized?",
+        "options": [
+          { "label": "nato", "correct": false },
+          { "label": "NATO", "correct": true },
+          { "label": "Nato", "correct": false },
+          { "label": "N.a.t.o.", "correct": false }
+        ],
+        "rationale": "Organizational acronyms are typically written in all capitals without periods."
+      }
+    ]
+  },
+  "titles": {
+    "id": "ch01-titles",
+    "title": "Abbreviating Titles",
+    "questions": [
+      {
+        "id": "q10",
+        "type": "multi-select",
+        "stem": "Which titles are correctly abbreviated?",
+        "options": [
+          { "label": "Prof. Johnson", "correct": true },
+          { "label": "Senator Smith", "correct": true },
+          { "label": "Doc. Brown", "correct": false },
+          { "label": "Rev. Williams", "correct": true }
+        ],
+        "rationale": "'Doctor' is abbreviated as 'Dr.' not 'Doc.' in formal writing."
+      }
+    ]
+  },
+  "scientific": {
+    "id": "ch01-scientific",
+    "title": "Scientific Abbreviations",
+    "questions": [
+      {
+        "id": "q11",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "Kilogram", "back": "kg" },
+          { "front": "Megahertz", "back": "MHz" },
+          { "front": "Millilitre", "back": "ml" },
+          { "front": "Degrees Celsius", "back": "°C" },
+          { "front": "Square metre", "back": "m²" }
+        ]
+      }
+    ]
+  }
+}
