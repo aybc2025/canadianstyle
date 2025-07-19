@@ -3,62 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Canadian Style - Learning Platform</title>
+    <title>The Canadian Style - Interactive Learning Platform</title>
+    <meta name="description" content="Master Canadian writing conventions with interactive lessons based on The Canadian Style guide.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="shared/img/maple-logo.svg">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="shared/css/main.css">
-    <link rel="stylesheet" href="shared/css/quiz-styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="modulepreload" href="shared/js/progress.js">
+    <link rel="modulepreload" href="shared/js/components.js">
 </head>
-<body>
-    <!-- Site Header -->
-    <header class="site-header">
+<body class="dashboard-page">
+    <!-- Header -->
+    <header class="main-header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-area">
-                    <img src="shared/img/maple-logo.svg" alt="Maple Leaf" class="logo">
-                    <h1>The Canadian Style</h1>
+                <div class="logo-section">
+                    <img src="shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo" width="32" height="32">
+                    <div class="logo-text">
+                        <h1>The Canadian Style</h1>
+                        <p>Interactive Learning Platform</p>
+                    </div>
                 </div>
                 
-                <!-- Filter Navigation -->
-                <nav class="filter-nav">
-                    <button class="filter-btn active" data-filter="all">All Subjects</button>
-                    <button class="filter-btn" data-filter="typography">Typography & Format</button>
-                    <button class="filter-btn" data-filter="style">Style & Usage</button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#" class="nav-link active">Dashboard</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#help" class="nav-link">Help</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Main Dashboard -->
-    <main class="dashboard">
+    <!-- Main Content -->
+    <main class="main-content">
         <div class="container">
-            <!-- Welcome Banner -->
-            <section class="welcome-banner">
-                <h2>Master Canadian Government Writing Style</h2>
-                <p>Interactive lessons based on "The Canadian Style" (1997 revised edition)</p>
-                <div class="overall-progress">
-                    <div class="overall-stats">
-                        <div class="stat">
-                            <span class="stat-value" id="overallCompletion">0%</span>
-                            <span class="stat-label">Overall Progress</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value" id="completedChapters">0</span>
-                            <span class="stat-label">Chapters Completed</span>
-                        </div>
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h2>Master Canadian Writing Conventions</h2>
+                <p>Learn the essential rules and guidelines from <em>The Canadian Style</em> (1997 revised edition) through interactive lessons, quizzes, and practical exercises.</p>
+                
+                <!-- Overall Progress -->
+                <div class="progress-overview">
+                    <div class="progress-stat">
+                        <span class="stat-number" id="overallCompletion">0%</span>
+                        <span class="stat-label">Overall Progress</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="completedChapters">0</span>
+                        <span class="stat-label">Chapters Completed</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number">16</span>
+                        <span class="stat-label">Total Chapters</span>
                     </div>
                 </div>
             </section>
 
+            <!-- Filter Section -->
+            <section class="filter-section">
+                <h3>Browse by Category</h3>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        All Subjects
+                        <span class="filter-count">16 chapters</span>
+                    </button>
+                    <button class="filter-btn" data-filter="typography">
+                        Typography & Format
+                        <span class="filter-count">11 chapters</span>
+                    </button>
+                    <button class="filter-btn" data-filter="style">
+                        Style & Usage
+                        <span class="filter-count">5 chapters</span>
+                    </button>
+                </div>
+            </section>
+
             <!-- Chapters Grid -->
-            <section class="chapters-grid" id="chaptersGrid">
-                <!-- Chapter cards will be generated here -->
+            <section class="chapters-section">
+                <div class="chapters-grid" id="chaptersGrid">
+                    <!-- Chapter cards will be rendered here by JavaScript -->
+                    <div class="loading-message">
+                        <p>Loading chapters...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Start Section -->
+            <section class="quick-start-section">
+                <h3>Quick Start Guide</h3>
+                <div class="guide-cards">
+                    <div class="guide-card">
+                        <div class="guide-icon">📚</div>
+                        <h4>Start Learning</h4>
+                        <p>Choose any chapter that interests you. Each chapter is self-contained with clear explanations and examples.</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-icon">✓</div>
+                        <h4>Track Progress</h4>
+                        <p>Complete sections and quizzes to track your progress. Your achievements are automatically saved.</p>
+                    </div>
+                    <div class="guide-card">
+                        <div class="guide-icon">🎯</div>
+                        <h4>Test Knowledge</h4>
+                        <p>Interactive quizzes and exercises help reinforce what you've learned in each section.</p>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer">
+    <footer class="main-footer">
         <div class="container">
-            <p>&copy; 2024 Government of Canada. Based on "The Canadian Style" (1997 revised edition).</p>
+            <p>&copy; 2024 The Canadian Style Interactive Learning Platform. 
+            Based on "The Canadian Style" (1997 revised edition).</p>
         </div>
     </footer>
 
@@ -68,13 +132,51 @@
     <script type="module">
         import { getProgress, setProgress, getChapterProgress, calculateChapterProgress } from './shared/js/progress.js';
         
-        // Make progress functions globally available
-        window.getProgress = getProgress;
-        window.setProgress = setProgress;
-        window.getChapterProgress = getChapterProgress;
-        window.calculateChapterProgress = calculateChapterProgress;
+        // Wait for all modules to load completely
+        function waitForModules() {
+            return new Promise((resolve) => {
+                const maxAttempts = 100; // 1 second timeout
+                let attempts = 0;
+                
+                const checkInterval = setInterval(() => {
+                    attempts++;
+                    
+                    // Check if all required functions are available
+                    if (window.calculateChapterProgress && 
+                        window.getChapterProgress && 
+                        window.progressModuleLoaded &&
+                        typeof calculateChapterProgress === 'function') {
+                        
+                        clearInterval(checkInterval);
+                        console.log('All modules loaded successfully');
+                        resolve();
+                        return;
+                    }
+                    
+                    // Timeout after max attempts
+                    if (attempts >= maxAttempts) {
+                        clearInterval(checkInterval);
+                        console.warn('Module loading timeout - continuing with fallbacks');
+                        resolve();
+                    }
+                }, 10);
+            });
+        }
         
-        // Chapter data
+        // Make progress functions globally available with error handling
+        function setupGlobalFunctions() {
+            try {
+                window.getProgress = getProgress;
+                window.setProgress = setProgress;
+                window.getChapterProgress = getChapterProgress;
+                window.calculateChapterProgress = calculateChapterProgress;
+                console.log('Global progress functions set up successfully');
+            } catch (error) {
+                console.error('Error setting up global functions:', error);
+            }
+        }
+        
+        // Chapter data - matches the structure in project files
         const chaptersData = [
             { id: 'ch01', number: '01', title: 'Capitalization', description: 'Rules for using capital letters correctly.', sections: 8, category: 'typography' },
             { id: 'ch02', number: '02', title: 'Hyphenation', description: 'Compounding and word division rules.', sections: 6, category: 'typography' },
@@ -94,121 +196,280 @@
             { id: 'ch16', number: '16', title: 'Revision', description: 'Revision and proofreading techniques.', sections: 7, category: 'style' }
         ];
 
-        // Initialize dashboard
-        function initializeDashboard() {
-            console.log('Initializing dashboard...');
-            renderChapterCards();
-            updateOverallProgress();
-            setupFilterButtons();
-        }
-
-        // Render chapter cards
-        function renderChapterCards() {
-            const grid = document.getElementById('chaptersGrid');
-            if (!grid) {
-                console.error('Chapters grid not found');
-                return;
+        // Initialize dashboard with proper error handling
+        async function initializeDashboard() {
+            try {
+                console.log('Initializing dashboard...');
+                
+                // Wait for all modules to load
+                await waitForModules();
+                
+                // Set up global functions
+                setupGlobalFunctions();
+                
+                // Now safely render the components
+                renderChapterCards();
+                updateOverallProgress();
+                setupFilterButtons();
+                
+                console.log('Dashboard initialized successfully');
+            } catch (error) {
+                console.error('Error initializing dashboard:', error);
+                
+                // Show error message to user
+                showErrorMessage('Unable to load dashboard completely. Some features may not work properly.');
+                
+                // Try to render with fallbacks
+                renderChapterCardsWithFallback();
             }
-            
-            grid.innerHTML = '';
-
-            chaptersData.forEach(chapter => {
-                const completion = calculateChapterProgress ? calculateChapterProgress(chapter.id) : 0;
-                const ctaText = completion > 0 ? 'Continue' : 'Start';
-                
-                // Create card element
-                const card = document.createElement('div');
-                card.className = 'chapter-card';
-                card.setAttribute('data-category', chapter.category);
-                card.innerHTML = `
-                    <div class="card-header">
-                        <span class="chapter-number">${chapter.number}</span>
-                        <div class="progress-container">
-                            <div class="progress-ring" data-percentage="${completion}">
-                                <svg width="60" height="60" viewBox="0 0 60 60">
-                                    <circle cx="30" cy="30" r="25" stroke="#e5e5e5" stroke-width="6" fill="none"/>
-                                    <circle cx="30" cy="30" r="25" stroke="#d71920" stroke-width="6" fill="none"
-                                            stroke-dasharray="${157 * (completion / 100)} 157"
-                                            stroke-linecap="round" transform="rotate(-90 30 30)"/>
-                                    <text x="30" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#d71920">
-                                        ${completion}%
-                                    </text>
-                                </svg>
-                            </div>
-                            <div class="completion-badge ${completion === 100 ? 'completed' : ''}" ${completion === 100 ? 'style="display: block;"' : ''}>✓</div>
-                        </div>
-                    </div>
-                    <h3 class="card-title">${chapter.title}</h3>
-                    <p class="card-description">${chapter.description}</p>
-                    <div class="card-footer">
-                        <span class="section-count">${chapter.sections} sections</span>
-                        <a href="chapters/${chapter.id}.html" class="btn btn-primary">${ctaText}</a>
-                    </div>
-                `;
-                
-                grid.appendChild(card);
-            });
-            
-            console.log(`Rendered ${chaptersData.length} chapter cards`);
         }
 
-        // Update overall progress
-        function updateOverallProgress() {
-            let totalSections = 0;
-            let completedSections = 0;
-            let completedChapters = 0;
-
-            chaptersData.forEach(chapter => {
-                totalSections += chapter.sections;
-                const progress = calculateChapterProgress ? calculateChapterProgress(chapter.id) : 0;
-                completedSections += Math.round((progress / 100) * chapter.sections);
-                
-                if (progress === 100) {
-                    completedChapters++;
+        // Render chapter cards with full error handling
+        function renderChapterCards() {
+            try {
+                const grid = document.getElementById('chaptersGrid');
+                if (!grid) {
+                    console.error('Chapters grid not found');
+                    return;
                 }
-            });
+                
+                grid.innerHTML = '';
 
-            const overallPercentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
-            
-            // Update display
-            const overallElement = document.getElementById('overallCompletion');
-            const chaptersElement = document.getElementById('completedChapters');
-            
-            if (overallElement) overallElement.textContent = `${overallPercentage}%`;
-            if (chaptersElement) chaptersElement.textContent = completedChapters;
-            
-            console.log(`Overall progress: ${overallPercentage}%, Chapters completed: ${completedChapters}`);
+                chaptersData.forEach(chapter => {
+                    try {
+                        // Safe calculation of completion with multiple fallbacks
+                        let completion = 0;
+                        
+                        if (typeof window.calculateChapterProgress === 'function') {
+                            completion = window.calculateChapterProgress(chapter.id) || 0;
+                        } else if (typeof calculateChapterProgress === 'function') {
+                            completion = calculateChapterProgress(chapter.id) || 0;
+                        }
+                        
+                        // Ensure completion is a valid number
+                        completion = Math.max(0, Math.min(100, Number(completion) || 0));
+                        
+                        const ctaText = completion > 0 ? 'Continue' : 'Start';
+                        
+                        // Create card element
+                        const card = document.createElement('div');
+                        card.className = 'chapter-card';
+                        card.setAttribute('data-category', chapter.category);
+                        card.innerHTML = `
+                            <div class="card-header">
+                                <span class="chapter-number">${chapter.number}</span>
+                                <div class="progress-container">
+                                    <div class="progress-ring" data-percentage="${completion}">
+                                        <svg width="60" height="60" viewBox="0 0 60 60">
+                                            <circle cx="30" cy="30" r="25" stroke="#e5e5e5" stroke-width="6" fill="none"/>
+                                            <circle cx="30" cy="30" r="25" stroke="#d71920" stroke-width="6" fill="none"
+                                                    stroke-dasharray="${157 * (completion / 100)} 157"
+                                                    stroke-linecap="round" transform="rotate(-90 30 30)"/>
+                                            <text x="30" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#d71920">
+                                                ${completion}%
+                                            </text>
+                                        </svg>
+                                    </div>
+                                    <div class="completion-badge ${completion === 100 ? 'completed' : ''}" ${completion === 100 ? 'style="display: block;"' : ''}>✓</div>
+                                </div>
+                            </div>
+                            <h3 class="card-title">${chapter.title}</h3>
+                            <p class="card-description">${chapter.description}</p>
+                            <div class="card-footer">
+                                <span class="section-count">${chapter.sections} sections</span>
+                                <a href="chapters/${chapter.id}.html" class="btn btn-primary">${ctaText}</a>
+                            </div>
+                        `;
+                        
+                        grid.appendChild(card);
+                    } catch (cardError) {
+                        console.error('Error rendering chapter card:', chapter.id, cardError);
+                        
+                        // Create fallback card
+                        const fallbackCard = document.createElement('div');
+                        fallbackCard.className = 'chapter-card error-card';
+                        fallbackCard.innerHTML = `
+                            <h3>${chapter.title}</h3>
+                            <p>Unable to load progress data</p>
+                            <a href="chapters/${chapter.id}.html" class="btn btn-primary">Start</a>
+                        `;
+                        grid.appendChild(fallbackCard);
+                    }
+                });
+                
+                console.log(`Rendered ${chaptersData.length} chapter cards successfully`);
+            } catch (error) {
+                console.error('Critical error in renderChapterCards:', error);
+                renderChapterCardsWithFallback();
+            }
         }
 
-        // Setup filter buttons
+        // Fallback rendering without progress calculation
+        function renderChapterCardsWithFallback() {
+            try {
+                const grid = document.getElementById('chaptersGrid');
+                if (!grid) return;
+                
+                grid.innerHTML = '';
+                
+                chaptersData.forEach(chapter => {
+                    const card = document.createElement('div');
+                    card.className = 'chapter-card';
+                    card.setAttribute('data-category', chapter.category);
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <span class="chapter-number">${chapter.number}</span>
+                        </div>
+                        <h3 class="card-title">${chapter.title}</h3>
+                        <p class="card-description">${chapter.description}</p>
+                        <div class="card-footer">
+                            <span class="section-count">${chapter.sections} sections</span>
+                            <a href="chapters/${chapter.id}.html" class="btn btn-primary">Start</a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+                
+                console.log('Rendered chapter cards with fallback method');
+            } catch (error) {
+                console.error('Error in fallback rendering:', error);
+            }
+        }
+
+        // Update overall progress with error handling
+        function updateOverallProgress() {
+            try {
+                let totalSections = 0;
+                let completedSections = 0;
+                let completedChapters = 0;
+
+                chaptersData.forEach(chapter => {
+                    totalSections += chapter.sections;
+                    
+                    try {
+                        let progress = 0;
+                        
+                        if (typeof window.calculateChapterProgress === 'function') {
+                            progress = window.calculateChapterProgress(chapter.id) || 0;
+                        } else if (typeof calculateChapterProgress === 'function') {
+                            progress = calculateChapterProgress(chapter.id) || 0;
+                        }
+                        
+                        progress = Math.max(0, Math.min(100, Number(progress) || 0));
+                        completedSections += Math.round((progress / 100) * chapter.sections);
+                        
+                        if (progress === 100) {
+                            completedChapters++;
+                        }
+                    } catch (chapterError) {
+                        console.warn('Error calculating progress for chapter:', chapter.id, chapterError);
+                    }
+                });
+
+                const overallPercentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
+                
+                // Update display elements safely
+                const overallElement = document.getElementById('overallCompletion');
+                const chaptersElement = document.getElementById('completedChapters');
+                
+                if (overallElement) {
+                    overallElement.textContent = `${overallPercentage}%`;
+                }
+                if (chaptersElement) {
+                    chaptersElement.textContent = completedChapters.toString();
+                }
+                
+                console.log(`Overall progress: ${overallPercentage}%, Chapters completed: ${completedChapters}`);
+            } catch (error) {
+                console.error('Error updating overall progress:', error);
+                
+                // Set safe defaults
+                const overallElement = document.getElementById('overallCompletion');
+                const chaptersElement = document.getElementById('completedChapters');
+                
+                if (overallElement) overallElement.textContent = '0%';
+                if (chaptersElement) chaptersElement.textContent = '0';
+            }
+        }
+
+        // Setup filter buttons with error handling
         function setupFilterButtons() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const cards = document.querySelectorAll('.chapter-card');
+            try {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const cards = document.querySelectorAll('.chapter-card');
 
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', (event) => {
+                        try {
+                            // Update active button
+                            filterButtons.forEach(btn => btn.classList.remove('active'));
+                            button.classList.add('active');
 
-                    // Filter cards
-                    const filter = button.dataset.filter;
-                    cards.forEach(card => {
-                        if (filter === 'all' || card.dataset.category === filter) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
+                            // Filter cards
+                            const filter = button.dataset.filter;
+                            cards.forEach(card => {
+                                if (filter === 'all' || card.dataset.category === filter) {
+                                    card.style.display = 'block';
+                                } else {
+                                    card.style.display = 'none';
+                                }
+                            });
+                        } catch (filterError) {
+                            console.error('Error in filter button handler:', filterError);
                         }
                     });
                 });
-            });
+                
+                console.log('Filter buttons set up successfully');
+            } catch (error) {
+                console.error('Error setting up filter buttons:', error);
+            }
+        }
+
+        // Show error message to user
+        function showErrorMessage(message) {
+            try {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'error-message';
+                errorDiv.innerHTML = `
+                    <div style="background: #ffebee; border: 1px solid #f44336; padding: 12px; border-radius: 4px; margin: 16px 0; color: #c62828;">
+                        <strong>Notice:</strong> ${message}
+                    </div>
+                `;
+                
+                const container = document.querySelector('.container');
+                if (container && container.firstChild) {
+                    container.insertBefore(errorDiv, container.firstChild);
+                }
+            } catch (error) {
+                console.error('Error showing error message:', error);
+            }
         }
 
         // Listen for progress updates
         window.addEventListener('progress-changed', () => {
-            console.log('Progress changed, updating dashboard...');
-            renderChapterCards();
-            updateOverallProgress();
+            try {
+                console.log('Progress changed, updating dashboard...');
+                renderChapterCards();
+                updateOverallProgress();
+            } catch (error) {
+                console.error('Error handling progress change:', error);
+            }
+        });
+
+        // Handle page visibility changes
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                // Page became visible, refresh progress
+                setTimeout(() => {
+                    try {
+                        updateOverallProgress();
+                        renderChapterCards();
+                    } catch (error) {
+                        console.error('Error refreshing on visibility change:', error);
+                    }
+                }, 100);
+            }
         });
 
         // Initialize when DOM is ready
@@ -220,347 +481,5 @@
 
         console.log('Dashboard script loaded successfully');
     </script>
-
-    <style>
-        /* Dashboard-specific styles */
-        .site-header {
-            background: linear-gradient(135deg, #d71920 0%, #b91419 100%);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .logo {
-            width: 40px;
-            height: 40px;
-        }
-
-        .logo-area h1 {
-            margin: 0;
-            font-size: 1.75rem;
-            font-weight: 600;
-        }
-
-        .filter-nav {
-            display: flex;
-            gap: 0.5rem;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            background: transparent;
-            color: rgba(255, 255, 255, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            border-color: rgba(255, 255, 255, 0.6);
-        }
-
-        .dashboard {
-            padding: 3rem 0;
-            min-height: calc(100vh - 200px);
-        }
-
-        .welcome-banner {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 12px;
-        }
-
-        .welcome-banner h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #343a40;
-            font-weight: 700;
-        }
-
-        .welcome-banner p {
-            font-size: 1.25rem;
-            color: #6c757d;
-            margin-bottom: 2rem;
-        }
-
-        .overall-progress {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .overall-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-value {
-            display: block;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #d71920;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.875rem;
-            color: #6c757d;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .chapter-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .chapter-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-            border-color: #d71920;
-        }
-
-        .card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .chapter-number {
-            background: linear-gradient(135deg, #d71920 0%, #b91419 100%);
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            font-weight: bold;
-        }
-
-        .progress-container {
-            position: relative;
-        }
-
-        .progress-ring svg {
-            transform: rotate(-90deg);
-        }
-
-        .completion-badge {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 30px;
-            height: 30px;
-            background: #28a745;
-            color: white;
-            border-radius: 50%;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-
-        .completion-badge.completed {
-            display: flex;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            color: #343a40;
-        }
-
-        .card-description {
-            color: #6c757d;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-
-        .section-count {
-            font-size: 0.875rem;
-            color: #6c757d;
-            font-weight: 500;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            min-height: 44px;
-        }
-
-        .btn-primary {
-            background: #d71920;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #b91419;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(215, 25, 32, 0.3);
-        }
-
-        .site-footer {
-            background: #343a40;
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-            margin-top: 3rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .filter-nav {
-                justify-content: center;
-            }
-
-            .welcome-banner h2 {
-                font-size: 2rem;
-            }
-
-            .welcome-banner p {
-                font-size: 1rem;
-            }
-
-            .overall-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 1.5rem;
-            }
-
-            .chapters-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .chapter-card {
-                padding: 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .dashboard {
-                padding: 2rem 0;
-            }
-
-            .welcome-banner {
-                padding: 1.5rem;
-                margin-bottom: 2rem;
-            }
-
-            .chapter-card {
-                padding: 1rem;
-            }
-
-            .card-footer {
-                flex-direction: column;
-                gap: 1rem;
-                align-items: stretch;
-            }
-
-            .btn {
-                width: 100%;
-            }
-        }
-
-        /* Loading states */
-        .loading {
-            opacity: 0.6;
-            pointer-events: none;
-        }
-
-        .loading::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            margin: -10px 0 0 -10px;
-            border: 2px solid #d71920;
-            border-radius: 50%;
-            border-top-color: transparent;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
 </body>
 </html>
