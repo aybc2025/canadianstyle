@@ -407,7 +407,7 @@
         // Load quizzes
         async function loadSectionQuizzes() {
             try {
-                const response = await fetch('../data/quizzes/ch01-quiz.json');
+                const response = await fetch('../data/ch01-quiz.json');
                 if (!response.ok) {
                     console.warn('Quiz data not found, using empty quizzes');
                     return;
