@@ -1,157 +1,257 @@
 {
-  "introduction": {
-    "id": "ch01-intro",
-    "title": "Understanding Abbreviations",
+  "sentence-capitals": {
+    "id": "sentence-capitals-quiz",
+    "title": "Sentence Capitals Quiz",
+    "chapterId": "ch01",
+    "sectionId": "sentence-capitals",
     "questions": [
       {
-        "id": "q1",
+        "id": "sc-001",
         "type": "mcq",
-        "stem": "Which of the following is an example of a suspension abbreviation?",
+        "stem": "Which sentence correctly uses capital letters?",
         "options": [
-          { "label": "Mr. (Mister)", "correct": true },
-          { "label": "Dr. (Doctor)", "correct": false },
-          { "label": "CBC (Canadian Broadcasting Corporation)", "correct": false },
-          { "label": "km (kilometre)", "correct": false }
+          {
+            "label": "the Government of canada announced new policies.",
+            "correct": false
+          },
+          {
+            "label": "The government of Canada announced new policies.",
+            "correct": true
+          },
+          {
+            "label": "The Government Of Canada Announced New Policies.",
+            "correct": false
+          },
+          {
+            "label": "the government of canada announced new policies.",
+            "correct": false
+          }
         ],
-        "rationale": "A suspension cuts off the end of a word. 'Mr.' removes 'ister' from 'Mister'.",
-        "ref": "§1.01"
+        "rationale": "Capitalize the first word of a sentence and proper nouns like 'Canada', but not common nouns like 'government' unless they're part of an official title.",
+        "ref": "§1.02"
       },
       {
-        "id": "q2",
-        "type": "multi-select",
-        "stem": "Select all the correct statements about abbreviations:",
+        "id": "sc-002",
+        "type": "mcq",
+        "stem": "Choose the correctly capitalized sentence:",
         "options": [
-          { "label": "They should enhance clarity", "correct": true },
-          { "label": "Always use them to save space", "correct": false },
-          { "label": "Spell out on first use when unclear", "correct": true },
-          { "label": "Never use in formal documents", "correct": false }
+          {
+            "label": "we met the Minister yesterday.",
+            "correct": false
+          },
+          {
+            "label": "We met the minister yesterday.",
+            "correct": true
+          },
+          {
+            "label": "We Met The Minister Yesterday.",
+            "correct": false
+          },
+          {
+            "label": "we met the minister yesterday.",
+            "correct": false
+          }
         ],
-        "rationale": "Abbreviations should enhance clarity and be spelled out on first use if potentially unclear."
+        "rationale": "Start sentences with a capital letter. Use lowercase for generic titles unless referring to a specific person by their official title.",
+        "ref": "§1.02"
       }
     ]
   },
-  "periods": {
-    "id": "ch01-periods",
-    "title": "Using Periods Correctly",
+  "proper-nouns": {
+    "id": "proper-nouns-quiz",
+    "title": "Proper Nouns Quiz",
+    "chapterId": "ch01",
+    "sectionId": "proper-nouns",
     "questions": [
       {
-        "id": "q3",
-        "type": "error-spot",
-        "stem": "Click on the incorrectly abbreviated word:",
-        "text": "Dr. Smith drove 50 km. to reach the C.B.C. studios",
-        "errorIndex": 3,
-        "rationale": "Metric symbols like 'km' never take periods. It should be '50 km' not '50 km.'"
-      },
-      {
-        "id": "q4",
-        "type": "fill-blank",
-        "stem": "The meeting is at 3:00 ___ in the boardroom.",
-        "answer": "p.m.",
-        "alternatives": ["pm"],
-        "rationale": "Both 'p.m.' and 'pm' are acceptable, but be consistent within a document."
-      },
-      {
-        "id": "q5",
-        "type": "drag-drop",
-        "stem": "Arrange these abbreviations from most formal to least formal:",
-        "options": [
-          { "label": "United States of America", "order": 1 },
-          { "label": "U.S.A.", "order": 2 },
-          { "label": "USA", "order": 3 },
-          { "label": "US", "order": 4 }
-        ]
-      }
-    ]
-  },
-  "plurals": {
-    "id": "ch01-plurals",
-    "title": "Forming Plural Abbreviations",
-    "questions": [
-      {
-        "id": "q6",
+        "id": "pn-001",
         "type": "mcq",
-        "stem": "What is the correct plural form of 'CD'?",
+        "stem": "Which option correctly capitalizes proper nouns?",
         "options": [
-          { "label": "CD's", "correct": false },
-          { "label": "CDs", "correct": true },
-          { "label": "CDS", "correct": false },
-          { "label": "C.D.s", "correct": false }
+          {
+            "label": "Parliament hill is in ottawa, ontario.",
+            "correct": false
+          },
+          {
+            "label": "Parliament Hill is in Ottawa, Ontario.",
+            "correct": true
+          },
+          {
+            "label": "parliament hill is in ottawa, ontario.",
+            "correct": false
+          },
+          {
+            "label": "Parliament Hill Is In Ottawa, Ontario.",
+            "correct": false
+          }
         ],
-        "rationale": "Add lowercase 's' without apostrophe for abbreviations without periods.",
+        "rationale": "Proper nouns (specific names of places, buildings, etc.) should be capitalized. Parliament Hill, Ottawa, and Ontario are all proper nouns.",
         "ref": "§1.03"
-      },
+      }
+    ]
+  },
+  "government-bodies": {
+    "id": "government-bodies-quiz", 
+    "title": "Government Bodies Quiz",
+    "chapterId": "ch01",
+    "sectionId": "government-bodies",
+    "questions": [
       {
-        "id": "q7",
-        "type": "fill-blank",
-        "stem": "She has earned two ___ from different universities.",
-        "answer": "M.A.'s",
-        "rationale": "Abbreviations with periods form plurals with apostrophe + s."
-      },
-      {
-        "id": "q8",
+        "id": "gb-001",
         "type": "mcq",
-        "stem": "What is the plural abbreviation for 'manuscript'?",
+        "stem": "How should government departments be capitalized?",
         "options": [
-          { "label": "MSs", "correct": false },
-          { "label": "MS's", "correct": false },
-          { "label": "MSS", "correct": true },
-          { "label": "M.S.S.", "correct": false }
+          {
+            "label": "department of finance",
+            "correct": false
+          },
+          {
+            "label": "Department Of Finance",
+            "correct": false
+          },
+          {
+            "label": "Department of Finance",
+            "correct": true
+          },
+          {
+            "label": "DEPARTMENT OF FINANCE",
+            "correct": false
+          }
         ],
-        "rationale": "Some abbreviations have irregular plural forms. MS becomes MSS."
+        "rationale": "Capitalize the first word and significant words in official government department names, but not prepositions like 'of'.",
+        "ref": "§1.04"
       }
     ]
   },
-  "capital-letters": {
-    "id": "ch01-capitals",
-    "title": "Capitalization in Abbreviations",
+  "titles-positions": {
+    "id": "titles-positions-quiz",
+    "title": "Titles and Positions Quiz", 
+    "chapterId": "ch01",
+    "sectionId": "titles-positions",
     "questions": [
       {
-        "id": "q9",
+        "id": "tp-001",
         "type": "mcq",
-        "stem": "Which abbreviation is correctly capitalized?",
+        "stem": "When should job titles be capitalized?",
         "options": [
-          { "label": "nato", "correct": false },
-          { "label": "NATO", "correct": true },
-          { "label": "Nato", "correct": false },
-          { "label": "N.a.t.o.", "correct": false }
+          {
+            "label": "Always capitalize job titles",
+            "correct": false
+          },
+          {
+            "label": "Never capitalize job titles",
+            "correct": false
+          },
+          {
+            "label": "Capitalize when used as part of someone's name or before their name",
+            "correct": true
+          },
+          {
+            "label": "Only capitalize if the person is important",
+            "correct": false
+          }
         ],
-        "rationale": "Organizational acronyms are typically written in all capitals without periods."
+        "rationale": "Capitalize titles when they precede a name or are used as part of a formal address, but use lowercase when they follow a name or are used generically.",
+        "ref": "§1.05"
       }
     ]
   },
-  "titles": {
-    "id": "ch01-titles",
-    "title": "Abbreviating Titles",
+  "geographic-names": {
+    "id": "geographic-names-quiz",
+    "title": "Geographic Names Quiz",
+    "chapterId": "ch01", 
+    "sectionId": "geographic-names",
     "questions": [
       {
-        "id": "q10",
-        "type": "multi-select",
-        "stem": "Which titles are correctly abbreviated?",
+        "id": "gn-001",
+        "type": "mcq",
+        "stem": "Which geographic reference is correctly capitalized?",
         "options": [
-          { "label": "Prof. Johnson", "correct": true },
-          { "label": "Senator Smith", "correct": true },
-          { "label": "Doc. Brown", "correct": false },
-          { "label": "Rev. Williams", "correct": true }
+          {
+            "label": "the rocky mountains",
+            "correct": false
+          },
+          {
+            "label": "The Rocky Mountains",
+            "correct": true
+          },
+          {
+            "label": "the Rocky Mountains",
+            "correct": true
+          },
+          {
+            "label": "The rocky mountains",
+            "correct": false
+          }
         ],
-        "rationale": "'Doctor' is abbreviated as 'Dr.' not 'Doc.' in formal writing."
+        "rationale": "Geographic features that are proper nouns should be capitalized. 'Rocky Mountains' is a specific mountain range name.",
+        "ref": "§1.06"
       }
     ]
   },
-  "scientific": {
-    "id": "ch01-scientific",
-    "title": "Scientific Abbreviations",
+  "brand-names": {
+    "id": "brand-names-quiz",
+    "title": "Brand Names Quiz",
+    "chapterId": "ch01",
+    "sectionId": "brand-names", 
     "questions": [
       {
-        "id": "q11",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Kilogram", "back": "kg" },
-          { "front": "Megahertz", "back": "MHz" },
-          { "front": "Millilitre", "back": "ml" },
-          { "front": "Degrees Celsius", "back": "°C" },
-          { "front": "Square metre", "back": "m²" }
-        ]
+        "id": "bn-001",
+        "type": "mcq",
+        "stem": "How should brand names and trademarks be written?",
+        "options": [
+          {
+            "label": "Always in all capitals",
+            "correct": false
+          },
+          {
+            "label": "As registered by the company",
+            "correct": true
+          },
+          {
+            "label": "Always in lowercase",
+            "correct": false
+          },
+          {
+            "label": "Only the first letter capitalized",
+            "correct": false
+          }
+        ],
+        "rationale": "Brand names and trademarks should be written as they are officially registered by the company, respecting their chosen capitalization.",
+        "ref": "§1.07"
+      }
+    ]
+  },
+  "academic-degrees": {
+    "id": "academic-degrees-quiz",
+    "title": "Academic Degrees Quiz",
+    "chapterId": "ch01",
+    "sectionId": "academic-degrees",
+    "questions": [
+      {
+        "id": "ad-001",
+        "type": "mcq",
+        "stem": "How should academic degrees be capitalized when abbreviated?",
+        "options": [
+          {
+            "label": "b.a., m.a., ph.d.",
+            "correct": false
+          },
+          {
+            "label": "B.A., M.A., Ph.D.",
+            "correct": true
+          },
+          {
+            "label": "BA, MA, PHD",
+            "correct": false
+          },
+          {
+            "label": "Ba, Ma, Phd",
+            "correct": false
+          }
+        ],
+        "rationale": "Academic degree abbreviations should be capitalized with periods between the letters.",
+        "ref": "§1.08"
       }
     ]
   }
