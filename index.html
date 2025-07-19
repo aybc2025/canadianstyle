@@ -3,354 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Canadian Style - Interactive Learning Hub</title>
+    <title>The Canadian Style - Learning Platform</title>
     <link rel="stylesheet" href="shared/css/main.css">
-    <script src="shared/js/components.js"></script>
-    <script src="shared/js/progress.js"></script>
+    <link rel="stylesheet" href="shared/css/quiz-styles.css">
 </head>
 <body>
-    <header class="main-header">
+    <!-- Site Header -->
+    <header class="site-header">
         <div class="container">
             <div class="header-content">
-                <div class="logo-section">
-                    <img src="shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                    <h1>The Canadian Style Trainer</h1>
+                <div class="logo-area">
+                    <img src="shared/img/maple-logo.svg" alt="Maple Leaf" class="logo">
+                    <h1>The Canadian Style</h1>
                 </div>
-                <div class="header-stats">
-                    <div class="overall-progress">
-                        <span class="progress-label">Overall Progress</span>
-                        <cs-progress-ring percentage="0" size="50"></cs-progress-ring>
-                    </div>
-                </div>
+                
+                <!-- Filter Navigation -->
+                <nav class="filter-nav">
+                    <button class="filter-btn active" data-filter="all">All Subjects</button>
+                    <button class="filter-btn" data-filter="typography">Typography & Format</button>
+                    <button class="filter-btn" data-filter="style">Style & Usage</button>
+                </nav>
             </div>
         </div>
     </header>
 
+    <!-- Main Dashboard -->
     <main class="dashboard">
         <div class="container">
-            <section class="hero-banner">
-                <h2>Master Canadian English Writing Standards</h2>
-                <p>Interactive lessons based on the official Government of Canada style guide</p>
-            </section>
-
-            <section class="filters">
-                <div class="filter-group">
-                    <button class="filter-btn active" data-filter="all">All Chapters</button>
-                    <button class="filter-btn" data-filter="typography">Typography</button>
-                    <button class="filter-btn" data-filter="grammar">Grammar</button>
-                    <button class="filter-btn" data-filter="punctuation">Punctuation</button>
-                    <button class="filter-btn" data-filter="style">Style</button>
-                </div>
-                <div class="filter-actions">
-                    <button id="importProgressBtn" class="btn btn-secondary">Import Progress</button>
-                    <input type="file" id="importProgressInput" style="display: none;" accept=".json">
-                    <button id="exportProgressBtn" class="btn btn-secondary">Export Progress</button>
-                    <button id="clearProgressBtn" class="btn btn-danger">Clear All Progress</button>
+            <!-- Welcome Banner -->
+            <section class="welcome-banner">
+                <h2>Master Canadian Government Writing Style</h2>
+                <p>Interactive lessons based on "The Canadian Style" (1997 revised edition)</p>
+                <div class="overall-progress">
+                    <div class="overall-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="overallCompletion">0%</span>
+                            <span class="stat-label">Overall Progress</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="completedChapters">0</span>
+                            <span class="stat-label">Chapters Completed</span>
+                        </div>
+                    </div>
                 </div>
             </section>
 
+            <!-- Chapters Grid -->
             <section class="chapters-grid" id="chaptersGrid">
-                </section>
+                <!-- Chapter cards will be generated here -->
+            </section>
         </div>
     </main>
 
-    <footer class="main-footer">
+    <!-- Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2023 The Canadian Style Trainer. All rights reserved.</p>
+            <p>&copy; 2024 Government of Canada. Based on "The Canadian Style" (1997 revised edition).</p>
+            <div class="footer-actions">
+                <button class="btn btn-secondary" onclick="exportProgress()">Export Progress</button>
+                <input type="file" id="importFile" accept=".json" style="display: none;" onchange="importProgress(this)">
+                <button class="btn btn-secondary" onclick="document.getElementById('importFile').click()">Import Progress</button>
+                <button class="btn btn-outline" onclick="resetProgress()">Reset Progress</button>
+            </div>
         </div>
     </footer>
 
-    <script>
-        // נתוני הפרקים שהוטמעו ישירות לתוך ה-HTML (במקום לטעון מ-chapters.json)
-        const chaptersData = {
-            "chapters": [
-                {
-                    "id": "ch01",
-                    "number": "01",
-                    "title": "Capitalization",
-                    "description": "Rules for using capital letters correctly.",
-                    "category": "typography",
-                    "file": "chapters/ch01.html",
-                    "sections": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8"]
-                },
-                {
-                    "id": "ch02",
-                    "number": "02",
-                    "title": "Compounds",
-                    "description": "Forming compound words correctly.",
-                    "category": "grammar",
-                    "file": "chapters/ch02.html",
-                    "sections": ["2.1", "2.2", "2.3", "2.4", "2.5", "2.6", "2.7", "2.8", "2.9"]
-                },
-                {
-                    "id": "ch03",
-                    "number": "03",
-                    "title": "Hyphens",
-                    "description": "Using hyphens in compound words and phrases.",
-                    "category": "punctuation",
-                    "file": "chapters/ch03.html",
-                    "sections": ["3.1", "3.2", "3.3", "3.4", "3.5", "3.6", "3.7", "3.8", "3.9"]
-                },
-                {
-                    "id": "ch04",
-                    "number": "04",
-                    "title": "Italics",
-                    "description": "Rules for using italics in various contexts.",
-                    "category": "typography",
-                    "file": "chapters/ch04.html",
-                    "sections": ["4.1", "4.2", "4.3", "4.4", "4.5", "4.6", "4.7", "4.8", "4.9", "4.10"]
-                },
-                {
-                    "id": "ch05",
-                    "number": "05",
-                    "title": "Numbers",
-                    "description": "Writing numbers and numerical expressions.",
-                    "category": "grammar",
-                    "file": "chapters/ch05.html",
-                    "sections": ["5.1", "5.2", "5.3", "5.4", "5.5", "5.6", "5.7", "5.8", "5.9"]
-                },
-                {
-                    "id": "ch06",
-                    "number": "06",
-                    "title": "Punctuation: The Apostrophe",
-                    "description": "Correct use of apostrophes for possession and contractions.",
-                    "category": "punctuation",
-                    "file": "chapters/ch06.html",
-                    "sections": ["6.1", "6.2", "6.3", "6.4", "6.5", "6.6", "6.7", "6.8"]
-                },
-                {
-                    "id": "ch07",
-                    "number": "07",
-                    "title": "Punctuation: The Comma",
-                    "description": "Comprehensive rules for comma usage.",
-                    "category": "punctuation",
-                    "file": "chapters/ch07.html",
-                    "sections": ["7.1", "7.2", "7.3", "7.4", "7.5", "7.6", "7.7", "7.8", "7.9", "7.10"]
-                },
-                {
-                    "id": "ch08",
-                    "number": "08",
-                    "title": "Punctuation: The Period and Other End Punctuation",
-                    "description": "Using periods, question marks, and exclamation marks.",
-                    "category": "punctuation",
-                    "file": "chapters/ch08.html",
-                    "sections": ["8.1", "8.2", "8.3", "8.4", "8.5", "8.6", "8.7"]
-                },
-                {
-                    "id": "ch09",
-                    "number": "09",
-                    "title": "Punctuation: The Semicolon and the Colon",
-                    "description": "Rules for semicolons and colons.",
-                    "category": "punctuation",
-                    "file": "chapters/ch09.html",
-                    "sections": ["9.1", "9.2", "9.3", "9.4", "9.5", "9.6"]
-                },
-                {
-                    "id": "ch10",
-                    "number": "10",
-                    "title": "Quotation Marks",
-                    "description": "Using quotation marks for direct speech and titles.",
-                    "category": "punctuation",
-                    "file": "chapters/ch10.html",
-                    "sections": ["10.1", "10.2", "10.3", "10.4", "10.5", "10.6", "10.7", "10.8"]
-                },
-                {
-                    "id": "ch11",
-                    "number": "11",
-                    "title": "Abbreviations",
-                    "description": "Guidelines for using abbreviations.",
-                    "category": "style",
-                    "file": "chapters/ch11.html",
-                    "sections": ["11.1", "11.2", "11.3", "11.4", "11.5", "11.6", "11.7"]
-                },
-                {
-                    "id": "ch12",
-                    "number": "12",
-                    "title": "Addresses",
-                    "description": "Formatting addresses correctly.",
-                    "category": "style",
-                    "file": "chapters/ch12.html",
-                    "sections": ["12.1", "12.2", "12.3"]
-                },
-                {
-                    "id": "ch13",
-                    "number": "13",
-                    "title": "Borders, Maps, and Provinces",
-                    "description": "Geographical terms and their correct usage.",
-                    "category": "style",
-                    "file": "chapters/ch13.html",
-                    "sections": ["13.1", "13.2", "13.3", "13.4", "13.5", "13.6", "13.7"]
-                },
-                {
-                    "id": "ch14",
-                    "number": "14",
-                    "title": "Dates",
-                    "description": "Formatting dates and times.",
-                    "category": "style",
-                    "file": "chapters/ch14.html",
-                    "sections": ["14.1", "14.2", "14.3", "14.4"]
-                },
-                {
-                    "id": "ch15",
-                    "number": "15",
-                    "title": "Measures, Weights, and Currencies",
-                    "description": "Writing measurements, weights, and currency amounts.",
-                    "category": "style",
-                    "file": "chapters/ch15.html",
-                    "sections": ["15.1", "15.2", "15.3", "15.4", "15.5"]
-                },
-                {
-                    "id": "ch16",
-                    "number": "16",
-                    "title": "Pronouns",
-                    "description": "Correct use of pronouns in various contexts.",
-                    "category": "grammar",
-                    "file": "chapters/ch16.html",
-                    "sections": ["16.1", "16.2", "16.3", "16.4", "16.5", "16.6", "16.7"]
-                }
-            ]
-        };
+    <!-- Loading Scripts -->
+    <script type="module" src="shared/js/progress.js"></script>
+    <script type="module" src="shared/js/components.js"></script>
+    
+    <script type="module">
+        // Chapter data with complete information
+        const chaptersData = [
+            { id: 'ch01', number: '01', title: 'Capitalization', description: 'Rules for using capital letters correctly.', sections: 8, category: 'typography' },
+            { id: 'ch02', number: '02', title: 'Compounds', description: 'Forming compound words correctly.', sections: 9, category: 'typography' },
+            { id: 'ch03', number: '03', title: 'Hyphens', description: 'Using hyphens in compound words and phrases.', sections: 9, category: 'typography' },
+            { id: 'ch04', number: '04', title: 'Abbreviations', description: 'Standard abbreviations and acronyms.', sections: 10, category: 'typography' },
+            { id: 'ch05', number: '05', title: 'Numbers', description: 'Numerical expressions in government writing.', sections: 9, category: 'typography' },
+            { id: 'ch06', number: '06', title: 'Italics', description: 'When and how to use italic formatting.', sections: 8, category: 'typography' },
+            { id: 'ch07', number: '07', title: 'Punctuation', description: 'Complete guide to punctuation marks.', sections: 10, category: 'typography' },
+            { id: 'ch08', number: '08', title: 'Quotations', description: 'Quotations and quotation marks.', sections: 7, category: 'typography' },
+            { id: 'ch09', number: '09', title: 'Reference Matter', description: 'Bibliographies, footnotes, and citations.', sections: 6, category: 'typography' },
+            { id: 'ch10', number: '10', title: 'Letters', description: 'Letters and memorandums format.', sections: 8, category: 'typography' },
+            { id: 'ch11', number: '11', title: 'Reports', description: 'Reports and minutes structure.', sections: 7, category: 'typography' },
+            { id: 'ch12', number: '12', title: 'Usage', description: 'Common usage issues and solutions.', sections: 3, category: 'style' },
+            { id: 'ch13', number: '13', title: 'Plain Language', description: 'Writing clearly and simply.', sections: 7, category: 'style' },
+            { id: 'ch14', number: '14', title: 'Bias-Free Writing', description: 'Elimination of stereotyping in writing.', sections: 4, category: 'style' },
+            { id: 'ch15', number: '15', title: 'Geographical Names', description: 'Canadian geographical naming conventions.', sections: 5, category: 'style' },
+            { id: 'ch16', number: '16', title: 'Revision', description: 'Revision and proofreading techniques.', sections: 7, category: 'style' }
+        ];
 
-        // Load chapter data (כעת מתוך משתנה גלובלי)
-        async function loadChapters() {
-            return chaptersData.chapters;
+        // Initialize dashboard
+        function initializeDashboard() {
+            renderChapterCards();
+            updateOverallProgress();
+            setupFilterButtons();
         }
-        
-        // Create chapter card
-        function createChapterCard(chapter) {
-            // קריאה לפונקציה גלובלית מ-progress.js
-            const progress = window.calculateChapterProgress(chapter.id); 
-            const card = document.createElement('cs-card');
-            
-            card.innerHTML = `
-                <div class="card-header">
-                    <span class="chapter-number">${chapter.number}</span>
-                    <cs-progress-ring percentage="${progress}" size="60"></cs-progress-ring>
-                </div>
-                <h3 class="card-title">${chapter.title}</h3>
-                <p class="card-description">${chapter.description}</p>
-                <div class="card-footer">
-                    <span class="section-count">${chapter.sections.length} sections</span>
-                    <a href="${chapter.file}" class="btn btn-primary">
-                        ${progress > 0 ? 'Continue' : 'Start'}
-                    </a>
-                </div>
-            `;
-            
-            card.setAttribute('data-category', chapter.category);
-            return card;
-        }
-        
-        // Filter chapters
-        function filterChapters(category) {
-            const cards = document.querySelectorAll('cs-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-        
-        // Update overall progress
-        function updateOverallProgress() {
-            // סך הסקשנים (שינוי כדי להתאים לנתוני ה-chaptersData החדשים)
-            const totalSectionsMap = {};
-            chaptersData.chapters.forEach(chapter => {
-                totalSectionsMap[chapter.id] = chapter.sections.length;
-            });
 
-            // קריאה לפונקציה גלובלית מ-progress.js
-            const progress = window.getProgress(); 
-            let totalCompleted = 0;
-            let totalPossible = 0;
-            
-            Object.entries(totalSectionsMap).forEach(([chapterId, sectionCount]) => {
-                totalPossible += sectionCount;
-                if (progress[chapterId]) {
-                    totalCompleted += Object.values(progress[chapterId]).filter(Boolean).length;
-                }
-            });
-            
-            const percentage = totalPossible > 0 ? Math.round((totalCompleted / totalPossible) * 100) : 0;
-            const progressRing = document.querySelector('.overall-progress cs-progress-ring');
-            if (progressRing) {
-                progressRing.setAttribute('percentage', percentage);
-            }
-        }
-        
-        // Initialize
-        async function init() {
-            const chapters = await loadChapters();
+        // Render chapter cards
+        function renderChapterCards() {
             const grid = document.getElementById('chaptersGrid');
-            
-            chapters.forEach(chapter => {
-                const card = createChapterCard(chapter);
+            grid.innerHTML = '';
+
+            chaptersData.forEach(chapter => {
+                const completion = window.calculateChapterProgress ? window.calculateChapterProgress(chapter.id) : 0;
+                const ctaText = completion > 0 ? 'Continue' : 'Start';
+                
+                const card = document.createElement('cs-card');
+                card.setAttribute('chapter-id', chapter.id);
+                card.setAttribute('chapter-number', chapter.number);
+                card.setAttribute('title', chapter.title);
+                card.setAttribute('percentage', completion);
+                card.setAttribute('sections-count', chapter.sections);
+                card.setAttribute('href', `chapters/${chapter.id}.html`);
+                card.setAttribute('cta-text', ctaText);
+                card.setAttribute('category', chapter.category);
+                
+                // Add description
+                card.innerHTML = `<p class="card-description">${chapter.description}</p>`;
+                
                 grid.appendChild(card);
             });
+        }
+
+        // Update overall progress
+        function updateOverallProgress() {
+            let totalSections = 0;
+            let completedSections = 0;
+            let completedChapters = 0;
+
+            chaptersData.forEach(chapter => {
+                totalSections += chapter.sections;
+                const progress = window.getChapterProgress ? window.getChapterProgress(chapter.id) : {};
+                const completed = Object.values(progress).filter(Boolean).length;
+                completedSections += completed;
+                
+                if (completed === chapter.sections) {
+                    completedChapters++;
+                }
+            });
+
+            const overallCompletion = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
             
-            // Setup filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    e.target.classList.add('active');
-                    filterChapters(e.target.dataset.filter);
+            document.getElementById('overallCompletion').textContent = `${overallCompletion}%`;
+            document.getElementById('completedChapters').textContent = `${completedChapters}/16`;
+        }
+
+        // Setup filter buttons
+        function setupFilterButtons() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('cs-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+                    
+                    // Filter cards
+                    cards.forEach(card => {
+                        const category = card.getAttribute('category');
+                        if (filter === 'all' || category === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
                 });
             });
-
-            // Setup import/export/clear buttons
-            const importProgressBtn = document.getElementById('importProgressBtn');
-            const importProgressInput = document.getElementById('importProgressInput');
-            const exportProgressBtn = document.getElementById('exportProgressBtn');
-            const clearProgressBtn = document.getElementById('clearProgressBtn');
-
-            importProgressBtn.addEventListener('click', () => {
-                importProgressInput.click();
-            });
-
-            importProgressInput.addEventListener('change', async (event) => {
-                const file = event.target.files[0];
-                if (file) {
-                    try {
-                        await window.importProgress(file); // קריאה לפונקציה גלובלית
-                        alert('Progress imported successfully!');
-                        updateOverallProgress();
-                        // רענון כרטיסיות הפרקים אם צריך
-                        document.querySelectorAll('cs-card').forEach(card => card.remove()); // נקה
-                        init(); // טען מחדש
-                    } catch (error) {
-                        alert('Error importing progress: ' + error.message);
-                    }
-                }
-            });
-
-            exportProgressBtn.addEventListener('click', () => {
-                window.exportProgress(); // קריאה לפונקציה גלובלית
-            });
-
-            clearProgressBtn.addEventListener('click', () => {
-                if (window.clearProgress()) { // קריאה לפונקציה גלובלית
-                    alert('All progress cleared!');
-                    updateOverallProgress();
-                    // רענון כרטיסיות הפרקים
-                    document.querySelectorAll('cs-card').forEach(card => card.remove()); // נקה
-                    init(); // טען מחדש
-                }
-            });
-            
-            // Update overall progress on load
-            updateOverallProgress();
-            
-            // Listen for progress updates
-            window.addEventListener('progress-changed', updateOverallProgress);
-            window.addEventListener('progress-imported', updateOverallProgress);
-            window.addEventListener('progress-cleared', updateOverallProgress);
-            window.addEventListener('chapter-completed', updateOverallProgress);
         }
-        
-        // Start the app when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', init);
+
+        // Export progress
+        window.exportProgress = function() {
+            if (window.exportProgress) {
+                window.exportProgress();
+            } else {
+                alert('Export feature not available. Please ensure progress.js is loaded correctly.');
+            }
+        };
+
+        // Import progress
+        window.importProgress = async function(input) {
+            if (input.files && input.files[0]) {
+                try {
+                    if (window.importProgress) {
+                        await window.importProgress(input.files[0]);
+                        renderChapterCards();
+                        updateOverallProgress();
+                        alert('Progress imported successfully!');
+                    }
+                } catch (error) {
+                    alert('Error importing progress: ' + error.message);
+                }
+            }
+        };
+
+        // Reset progress
+        window.resetProgress = function() {
+            if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+                if (window.clearProgress) {
+                    window.clearProgress();
+                    renderChapterCards();
+                    updateOverallProgress();
+                }
+            }
+        };
+
+        // Listen for progress changes
+        window.addEventListener('progress-changed', () => {
+            renderChapterCards();
+            updateOverallProgress();
+        });
+
+        window.addEventListener('progress-cleared', () => {
+            renderChapterCards();
+            updateOverallProgress();
+        });
+
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', initializeDashboard);
     </script>
 </body>
 </html>
