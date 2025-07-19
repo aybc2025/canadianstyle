@@ -1,235 +1,392 @@
-// Hash-based router for in-page navigation
+// Router module for The Canadian Style Learning Platform
+// Fixed version - prevents null values and improves navigation
 
-class Router {
-    constructor() {
-        this.routes = new Map();
-        this.currentRoute = null;
-        this.init();
-    }
+export const router = {
+    currentChapter: null,
+    currentSection: null,
     
+    // Initialize router
     init() {
-        // Listen for hash changes
-        window.addEventListener('hashchange', () => this.handleRoute());
-        window.addEventListener('load', () => this.handleRoute());
-        
-        // Handle back button warning for unsaved quiz progress
-        window.addEventListener('beforeunload', (e) => {
-            const activeQuiz = document.querySelector('cs-quiz:not([completed])');
-            if (activeQuiz) {
-                e.preventDefault();
-                e.returnValue = 'You have an unfinished quiz. Are you sure you want to leave?';
-            }
-        });
-    }
+        this.handleHashChange();
+        window.addEventListener('hashchange', () => this.handleHashChange());
+        window.addEventListener('popstate', () => this.handleHashChange());
+    },
     
-    // Parse hash into chapter and section
-    parseHash() {
+    // Handle hash changes in URL
+    handleHashChange() {
         const hash = window.location.hash.slice(1); // Remove #
-        if (!hash) return { chapter: null, section: null };
-        
-        const parts = hash.split('/');
-        return {
-            chapter: parts[0] || null,
-            section: parts[1] || null
-        };
-    }
+        if (hash) {
+            this.parseAndNavigate(hash);
+        }
+    },
     
-    // Navigate to a specific section
-    navigateTo(chapter, section) {
-        window.location.hash = section ? `${chapter}/${section}` : chapter;
-    }
-    
-    // Handle route changes
-    handleRoute() {
-        const { chapter, section } = this.parseHash();
+    // Parse hash and navigate to section
+    parseAndNavigate(hash) {
+        // Expected format: ch01#section-id or just ch01
+        const [chapterPart, sectionPart] = hash.split('#');
         
-        if (!chapter) {
-            this.showDefaultSection();
-            return;
+        if (this.isValidChapter(chapterPart)) {
+            this.currentChapter = chapterPart;
+            this.currentSection = sectionPart || 'introduction';
+            this.navigateToSection(this.currentSection);
+        }
+    },
+    
+    // Navigate to a specific chapter and section
+    navigateTo(chapterId, sectionId = 'introduction') {
+        if (!this.isValidChapter(chapterId)) {
+            console.error('Invalid chapter ID:', chapterId);
+            return false;
         }
         
-        // Update active states
-        this.updateActiveStates(chapter, section);
+        this.currentChapter = chapterId;
+        this.currentSection = sectionId;
         
-        // Scroll to section if specified
-        if (section) {
-            this.scrollToSection(section);
+        // Update URL without triggering hashchange
+        const newHash = sectionId ? `${chapterId}#${sectionId}` : chapterId;
+        if (window.location.hash.slice(1) !== newHash) {
+            window.history.pushState(null, null, `#${newHash}`);
         }
         
-        // Update browser title
-        this.updateTitle(chapter, section);
-        
-        // Emit navigation event
-        window.dispatchEvent(new CustomEvent('navigation', {
-            detail: { chapter, section }
-        }));
-    }
+        this.navigateToSection(sectionId);
+        return true;
+    },
     
-    // Update active tab states
-    updateActiveStates(chapter, section) {
-        // Update section tabs
-        document.querySelectorAll('.tab-link').forEach(tab => {
-            const tabSection = tab.getAttribute('data-section');
-            if (tabSection === section) {
-                tab.classList.add('active');
-            } else {
-                tab.classList.remove('active');
-            }
+    // Navigate to a specific section within current chapter
+    navigateToSection(sectionId) {
+        if (!sectionId || sectionId === 'null' || sectionId === 'undefined') {
+            sectionId = 'introduction';
+        }
+        
+        this.currentSection = sectionId;
+        this.updateActiveSection(sectionId);
+        this.scrollToSection(sectionId);
+        this.updateProgressBar();
+    },
+    
+    // Update active section in navigation
+    updateActiveSection(sectionId) {
+        // Remove active class from all section tabs
+        document.querySelectorAll('.section-tab').forEach(tab => {
+            tab.classList.remove('active');
         });
         
-        // Update any other navigation elements
-        document.querySelectorAll('[data-route]').forEach(el => {
-            const route = el.getAttribute('data-route');
-            if (route === `${chapter}/${section}` || route === chapter) {
-                el.classList.add('active');
+        // Add active class to current section tab
+        const activeTab = document.querySelector(`.section-tab[href="#${sectionId}"]`);
+        if (activeTab) {
+            activeTab.classList.add('active');
+        }
+        
+        // Show/hide content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            if (section.id === sectionId) {
+                section.style.display = 'block';
+                section.setAttribute('aria-hidden', 'false');
             } else {
-                el.classList.remove('active');
+                section.style.display = 'none';
+                section.setAttribute('aria-hidden', 'true');
             }
         });
-    }
+    },
     
-    // Scroll to a specific section
+    // Scroll to section smoothly
     scrollToSection(sectionId) {
-        // Small delay to ensure DOM is ready
-        setTimeout(() => {
-            const element = document.getElementById(sectionId);
-            if (element) {
-                const offset = 100; // Account for sticky header
-                const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+            // Small delay to ensure content is visible
+            setTimeout(() => {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
                 });
-            }
-        }, 100);
-    }
-    
-    // Show default section (first one)
-    showDefaultSection() {
-        const firstSection = document.querySelector('.content-section');
-        if (firstSection) {
-            const sectionId = firstSection.id;
-            const chapter = window.location.pathname.split('/').pop().replace('.html', '');
-            this.navigateTo(chapter, sectionId);
-        }
-    }
-    
-    // Update browser title
-    updateTitle(chapter, section) {
-        const chapterTitle = document.querySelector('h1')?.textContent || 'Chapter';
-        const sectionTitle = section ? document.getElementById(section)?.querySelector('h2')?.textContent : '';
-        
-        document.title = sectionTitle 
-            ? `${sectionTitle} - ${chapterTitle} - The Canadian Style`
-            : `${chapterTitle} - The Canadian Style`;
-    }
-    
-    // Get current route
-    getCurrentRoute() {
-        return this.parseHash();
-    }
-    
-    // Check if quiz is in progress
-    hasActiveQuiz() {
-        return document.querySelector('cs-quiz:not([completed])') !== null;
-    }
-}
-
-// Export singleton instance
-export const router = new Router();
-
-// Helper function to generate section navigation
-export function generateSectionNav(sections) {
-    return `
-        <nav class="section-tabs">
-            <div class="tabs-list">
-                ${sections.map(section => `
-                    <a href="#${section.id}" 
-                       class="tab-link" 
-                       data-section="${section.id}">
-                        ${section.title}
-                    </a>
-                `).join('')}
-            </div>
-        </nav>
-    `;
-}
-
-// Helper to mark section as complete and navigate to next
-export function completeAndNext(currentChapter, currentSection, sections) {
-    // Import progress functions
-    import('./progress.js').then(({ setProgress }) => {
-        // Mark current section as complete
-        setProgress(currentChapter, currentSection);
-        
-        // Find next section
-        const currentIndex = sections.findIndex(s => s.id === currentSection);
-        if (currentIndex < sections.length - 1) {
-            const nextSection = sections[currentIndex + 1];
-            router.navigateTo(currentChapter, nextSection.id);
+            }, 100);
         } else {
-            // Chapter complete - show completion message
-            showChapterComplete();
+            // Scroll to top if section not found
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-    });
+    },
+    
+    // Update progress bar based on current position
+    updateProgressBar() {
+        const progressBar = document.querySelector('.progress-fill');
+        if (!progressBar || !this.currentChapter) return;
+        
+        try {
+            const chapterProgress = window.calculateChapterProgress ? 
+                window.calculateChapterProgress(this.currentChapter) : 0;
+            progressBar.style.width = `${chapterProgress}%`;
+        } catch (error) {
+            console.error('Error updating progress bar:', error);
+            progressBar.style.width = '0%';
+        }
+    },
+    
+    // Validate chapter ID
+    isValidChapter(chapterId) {
+        if (!chapterId || typeof chapterId !== 'string') {
+            return false;
+        }
+        
+        // Check if it matches expected pattern (ch01, ch02, etc.)
+        const chapterPattern = /^ch(0[1-9]|1[0-6])$/;
+        return chapterPattern.test(chapterId);
+    },
+    
+    // Get next section
+    getNextSection() {
+        if (!this.currentChapter || !this.currentSection) return null;
+        
+        const sections = this.getChapterSections(this.currentChapter);
+        const currentIndex = sections.findIndex(s => s.id === this.currentSection);
+        
+        if (currentIndex >= 0 && currentIndex < sections.length - 1) {
+            return sections[currentIndex + 1];
+        }
+        
+        return null;
+    },
+    
+    // Get previous section
+    getPreviousSection() {
+        if (!this.currentChapter || !this.currentSection) return null;
+        
+        const sections = this.getChapterSections(this.currentChapter);
+        const currentIndex = sections.findIndex(s => s.id === this.currentSection);
+        
+        if (currentIndex > 0) {
+            return sections[currentIndex - 1];
+        }
+        
+        return null;
+    },
+    
+    // Navigate to next section
+    goToNextSection() {
+        const nextSection = this.getNextSection();
+        if (nextSection) {
+            this.navigateTo(this.currentChapter, nextSection.id);
+            return true;
+        }
+        
+        // Try to go to next chapter
+        const nextChapter = this.getNextChapter();
+        if (nextChapter) {
+            window.location.href = `${nextChapter.id}.html`;
+            return true;
+        }
+        
+        return false;
+    },
+    
+    // Navigate to previous section
+    goToPreviousSection() {
+        const prevSection = this.getPreviousSection();
+        if (prevSection) {
+            this.navigateTo(this.currentChapter, prevSection.id);
+            return true;
+        }
+        
+        // Try to go to previous chapter
+        const prevChapter = this.getPreviousChapter();
+        if (prevChapter) {
+            window.location.href = `${prevChapter.id}.html`;
+            return true;
+        }
+        
+        return false;
+    },
+    
+    // Get chapter sections (fallback data to prevent null errors)
+    getChapterSections(chapterId) {
+        // Default sections structure to prevent null errors
+        const defaultSections = [
+            { id: 'introduction', title: 'Introduction' }
+        ];
+        
+        // Chapter-specific sections (simplified mapping)
+        const chapterSections = {
+            ch01: [
+                { id: 'introduction', title: '1.01 Introduction' },
+                { id: 'sentence-capitals', title: '1.02 Sentence Capitals' },
+                { id: 'proper-nouns', title: '1.03 Proper Nouns' },
+                { id: 'government-bodies', title: '1.04 Government Bodies' },
+                { id: 'titles-positions', title: '1.05 Titles and Positions' },
+                { id: 'geographic-names', title: '1.06 Geographic Names' },
+                { id: 'brand-names', title: '1.07 Brand Names' },
+                { id: 'academic-degrees', title: '1.08 Academic Degrees' }
+            ],
+            ch02: [
+                { id: 'introduction', title: '2.01 Introduction' },
+                { id: 'closed-compounds', title: '2.02 Closed Compounds' },
+                { id: 'open-compounds', title: '2.03 Open Compounds' },
+                { id: 'hyphenated-compounds', title: '2.04 Hyphenated Compounds' },
+                { id: 'compound-adjectives', title: '2.05 Compound Adjectives' },
+                { id: 'temporary-compounds', title: '2.06 Temporary Compounds' },
+                { id: 'prefixes-suffixes', title: '2.07 Prefixes and Suffixes' },
+                { id: 'numbers-compounds', title: '2.08 Numbers in Compounds' },
+                { id: 'troublesome-compounds', title: '2.09 Troublesome Compounds' }
+            ],
+            ch03: [
+                { id: 'introduction', title: '3.01 Introduction' },
+                { id: 'word-division', title: '3.02 Word Division' },
+                { id: 'compound-modifiers', title: '3.03 Compound Modifiers' },
+                { id: 'prefixes', title: '3.04 Prefixes' },
+                { id: 'numbers', title: '3.05 Numbers' },
+                { id: 'suspended-hyphens', title: '3.06 Suspended Hyphens' },
+                { id: 'en-em-dashes', title: '3.07 En Dashes and Em Dashes' },
+                { id: 'special-cases', title: '3.08 Special Cases' },
+                { id: 'hyphen-guidelines', title: '3.09 General Guidelines' }
+            ]
+            // Add more chapters as needed
+        };
+        
+        return chapterSections[chapterId] || defaultSections;
+    },
+    
+    // Get next chapter
+    getNextChapter() {
+        if (!this.currentChapter) return null;
+        
+        const chapterNum = parseInt(this.currentChapter.slice(2));
+        const nextNum = chapterNum + 1;
+        
+        if (nextNum <= 16) {
+            const nextId = `ch${nextNum.toString().padStart(2, '0')}`;
+            return { id: nextId, number: nextNum };
+        }
+        
+        return null;
+    },
+    
+    // Get previous chapter
+    getPreviousChapter() {
+        if (!this.currentChapter) return null;
+        
+        const chapterNum = parseInt(this.currentChapter.slice(2));
+        const prevNum = chapterNum - 1;
+        
+        if (prevNum >= 1) {
+            const prevId = `ch${prevNum.toString().padStart(2, '0')}`;
+            return { id: prevId, number: prevNum };
+        }
+        
+        return null;
+    },
+    
+    // Mark section as complete and navigate to next
+    completeSection(sectionId) {
+        if (!this.currentChapter || !sectionId) return false;
+        
+        // Mark as complete in progress system
+        if (window.setProgress) {
+            window.setProgress(this.currentChapter, sectionId, true);
+        }
+        
+        // Auto-navigate to next section after a short delay
+        setTimeout(() => {
+            if (!this.goToNextSection()) {
+                // If no next section, show completion message
+                this.showSectionComplete();
+            }
+        }, 1000);
+        
+        return true;
+    },
+    
+    // Show section completion message
+    showSectionComplete() {
+        const message = document.createElement('div');
+        message.className = 'section-complete-message';
+        message.innerHTML = `
+            <div class="message-content">
+                <span class="message-icon">✅</span>
+                <span class="message-text">Section completed!</span>
+            </div>
+        `;
+        
+        document.body.appendChild(message);
+        
+        // Remove message after 3 seconds
+        setTimeout(() => {
+            if (message.parentNode) {
+                message.parentNode.removeChild(message);
+            }
+        }, 3000);
+    },
+    
+    // Setup section navigation links
+    setupSectionLinks() {
+        document.querySelectorAll('.section-tab').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href').slice(1); // Remove #
+                this.navigateTo(this.currentChapter, sectionId);
+            });
+        });
+        
+        // Setup next/previous buttons
+        document.querySelectorAll('.btn-next-section').forEach(btn => {
+            btn.addEventListener('click', () => this.goToNextSection());
+        });
+        
+        document.querySelectorAll('.btn-prev-section').forEach(btn => {
+            btn.addEventListener('click', () => this.goToPreviousSection());
+        });
+    },
+    
+    // Get current location info
+    getCurrentLocation() {
+        return {
+            chapter: this.currentChapter,
+            section: this.currentSection,
+            chapterTitle: this.getChapterTitle(this.currentChapter),
+            sectionTitle: this.getSectionTitle(this.currentChapter, this.currentSection)
+        };
+    },
+    
+    // Get chapter title (fallback to prevent null)
+    getChapterTitle(chapterId) {
+        const titles = {
+            ch01: 'Capitalization',
+            ch02: 'Compounds',
+            ch03: 'Hyphens',
+            ch04: 'Abbreviations',
+            ch05: 'Numbers',
+            ch06: 'Italics',
+            ch07: 'Punctuation',
+            ch08: 'Quotations',
+            ch09: 'Reference Matter',
+            ch10: 'Letters',
+            ch11: 'Reports',
+            ch12: 'Usage',
+            ch13: 'Plain Language',
+            ch14: 'Bias-Free Writing',
+            ch15: 'Geographical Names',
+            ch16: 'Revision'
+        };
+        
+        return titles[chapterId] || 'Unknown Chapter';
+    },
+    
+    // Get section title (fallback to prevent null)
+    getSectionTitle(chapterId, sectionId) {
+        const sections = this.getChapterSections(chapterId);
+        const section = sections.find(s => s.id === sectionId);
+        return section ? section.title : 'Unknown Section';
+    }
+};
+
+// Initialize router when module loads
+if (typeof window !== 'undefined') {
+    // Auto-initialize on DOM load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => router.init());
+    } else {
+        router.init();
+    }
 }
 
-// Show chapter completion message
-function showChapterComplete() {
-    const modal = document.createElement('div');
-    modal.className = 'completion-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <h2>🎉 Chapter Complete!</h2>
-            <p>Congratulations on completing this chapter!</p>
-            <div class="modal-actions">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-                <button class="btn btn-primary" onclick="this.closest('.completion-modal').remove()">
-                    Review Chapter
-                </button>
-            </div>
-        </div>
-    `;
-    
-    // Add styles
-    const style = document.createElement('style');
-    style.textContent = `
-        .completion-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-        }
-        
-        .modal-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            max-width: 400px;
-        }
-        
-        .modal-content h2 {
-            color: #d71920;
-            margin-bottom: 1rem;
-        }
-        
-        .modal-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-    `;
-    
-    document.head.appendChild(style);
-    document.body.appendChild(modal);
-}
+// Export for use in chapter pages
+window.router = router;
+
+console.log('Router system initialized');
