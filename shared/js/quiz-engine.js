@@ -732,7 +732,7 @@ export class QuizEngine {
     // Static method to load quiz data from JSON files
     static async loadQuizData(chapterId) {
         try {
-            const response = await fetch(`../data/quizzes/${chapterId}-quiz.json`);
+            const response = await fetch(`../data/${chapterId}-quiz.json`);
             if (!response.ok) {
                 throw new Error(`Quiz data not found for ${chapterId}`);
             }
