@@ -8,93 +8,76 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+    <div class="chapter-container">
+        <header class="chapter-header">
+            <div class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Chapter 9: Reference Matter</span>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="chapter-hero">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 9
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">09</div>
-                <div>
-                    <h1>Reference Matter</h1>
-                    <p>Master footnotes, endnotes, and bibliographic references</p>
+            <div class="chapter-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="chapterProgress"></div>
                 </div>
+                <span class="progress-text">Progress</span>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
+        </header>
 
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">9.01 Introduction</a>
+        <nav class="chapter-nav">
+            <div class="nav-links">
+                <a href="#introduction" class="tab-link active" data-section="introduction">9.01 Introduction</a>
                 <a href="#footnotes" class="tab-link" data-section="footnotes">9.23 Footnotes</a>
-                <a href="#endnotes" class="tab-link" data-section="endnotes">9.24 Endnotes</a>
-                <a href="#in-text" class="tab-link" data-section="in-text">9.25 In-text Notes</a>
-                <a href="#bibliography" class="tab-link" data-section="bibliography">9.27-9.62 Bibliographies</a>
-                <a href="#electronic" class="tab-link" data-section="electronic">9.63 Electronic Sources</a>
+                <a href="#bibliography" class="tab-link" data-section="bibliography">9.35 Bibliography</a>
+                <a href="#citations" class="tab-link" data-section="citations">9.50 Citations</a>
+                <a href="#indexes" class="tab-link" data-section="indexes">9.60 Indexes</a>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="chapter-content">
-        <div class="container">
-            <!-- Section 9.01: Introduction -->
+        <main class="chapter-content">
+            <!-- Introduction Section -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>9.01 Introduction</h2>
+                    <h2>9.01 Introduction to Reference Matter</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Proper documentation of sources is essential for academic integrity and credibility. This chapter covers the main systems for citing sources in Canadian government and academic writing.</p>
+                <div class="content-block">
+                    <p>Reference matter helps readers locate sources, verify information, and explore topics further. This chapter covers Canadian government standards for footnotes, bibliographies, citations, and indexes.</p>
                     
-                    <h3>Why Document Sources?</h3>
-                    <ul>
-                        <li><strong>Credit:</strong> Acknowledge others' work</li>
-                        <li><strong>Verification:</strong> Allow readers to check sources</li>
-                        <li><strong>Further reading:</strong> Help readers find more information</li>
-                        <li><strong>Legal protection:</strong> Avoid plagiarism</li>
-                    </ul>
-                    
-                    <h3>Main Documentation Systems</h3>
-                    <div class="documentation-systems">
-                        <div class="system-card">
-                            <h4>Footnotes/Endnotes</h4>
-                            <p>Traditional academic style</p>
-                            <p>Numbers in text link to notes</p>
-                        </div>
-                        <div class="system-card">
-                            <h4>Author-Date (In-text)</h4>
-                            <p>Common in sciences and social sciences</p>
-                            <p>(Smith 2024) in text</p>
-                        </div>
-                        <div class="system-card">
-                            <h4>Author-Number</h4>
-                            <p>Used in some scientific fields</p>
-                            <p>Numbers refer to bibliography</p>
-                        </div>
+                    <div class="key-principles">
+                        <h3>Purpose of Reference Matter</h3>
+                        <ul>
+                            <li>Provide source verification for readers</li>
+                            <li>Support credibility and transparency</li>
+                            <li>Enable further research and fact-checking</li>
+                            <li>Meet academic and professional standards</li>
+                        </ul>
                     </div>
                     
-                    <div class="example-box">
-                        <div class="example-label">Key Principle</div>
-                        <p>Choose one documentation system and use it consistently throughout your document. Follow your organization's or publisher's preferred style.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Types of Reference Matter</h4>
+                            <ul>
+                                <li><strong>Footnotes:</strong> Additional information at page bottom</li>
+                                <li><strong>Endnotes:</strong> Notes collected at document end</li>
+                                <li><strong>Bibliography:</strong> List of sources consulted</li>
+                                <li><strong>Citations:</strong> In-text source references</li>
+                                <li><strong>Indexes:</strong> Alphabetical topic finder</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Canadian Government Context</h4>
+                            <ul>
+                                <li>Transparency and accountability requirements</li>
+                                <li>Public accessibility of information</li>
+                                <li>Consistency across departments</li>
+                                <li>Professional presentation standards</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Introduction -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
@@ -104,68 +87,76 @@
                 </div>
             </section>
 
-            <!-- Section 9.23: Footnotes -->
-            <section class="content-section" id="footnotes">
+            <!-- Footnotes Section -->
+            <section class="content-section" id="footnotes" style="display: none;">
                 <div class="section-header">
                     <h2>9.23 Footnotes</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Footnotes appear at the bottom of the page where the reference occurs:</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Footnote Numbers</h4>
+                        <p>Place footnote numbers after punctuation marks, using superscript numerals that run consecutively through the document.</p>
+                    </div>
                     
-                    <h3>Footnote Format</h3>
-                    <ul>
-                        <li>Superscript number in text¹</li>
-                        <li>Corresponding note at page bottom</li>
-                        <li>Separated from text by short line</li>
-                        <li>Single-spaced, smaller font</li>
-                        <li>First line indented</li>
-                    </ul>
-                    
-                    <div class="footnote-example">
-                        <p>The policy has been widely criticized¹ for its environmental impact.</p>
-                        <hr class="footnote-separator">
-                        <div class="footnote">
-                            <p><sup>1</sup> Jane Smith, <em>Environmental Policy in Canada</em> (Toronto: University Press, 2023), 45.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Placement of Numbers</h4>
+                            <ul>
+                                <li>After periods: The report was comprehensive.<sup>1</sup></li>
+                                <li>After commas: According to Smith,<sup>2</sup> the data shows...</li>
+                                <li>After quotation marks: She called it "essential".<sup>3</sup></li>
+                                <li>After question marks: Who made that decision?<sup>4</sup></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Multiple References</h4>
+                            <ul>
+                                <li>Sequential: The studies<sup>1,2,3</sup> all agree</li>
+                                <li>Range: Several reports<sup>4-7</sup> confirm this</li>
+                                <li>Separate: The data<sup>8</sup> and analysis<sup>9</sup> support...</li>
+                                <li>Same source: As noted earlier<sup>2</sup> (see note 2)</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <h3>First Reference (Full Citation)</h3>
-                    <div class="citation-format">
-                        <h4>Book</h4>
-                        <p>¹ Margaret Atwood, <em>The Handmaid's Tale</em> (Toronto: McClelland & Stewart, 1985), 23.</p>
-                        
-                        <h4>Journal Article</h4>
-                        <p>² David Suzuki, "Climate Change and Canadian Policy," <em>Canadian Environmental Review</em> 45, no. 3 (2023): 12-28.</p>
-                        
-                        <h4>Government Document</h4>
-                        <p>³ Statistics Canada, <em>Census Profile, 2021 Census</em> (Ottawa: Statistics Canada, 2022), Table 1.2.</p>
+                    <div class="rule-box">
+                        <h4>Footnote Content</h4>
+                        <p>Footnotes can contain:</p>
+                        <ul>
+                            <li><strong>Source citations:</strong> Author, title, publication details</li>
+                            <li><strong>Additional information:</strong> Explanatory comments</li>
+                            <li><strong>Cross-references:</strong> "See also section 3.2"</li>
+                            <li><strong>Translations:</strong> Original language versions</li>
+                        </ul>
                     </div>
                     
-                    <h3>Subsequent References</h3>
-                    <ul>
-                        <li><strong>Ibid.:</strong> Same source, immediately following</li>
-                        <li><strong>Short form:</strong> Author's last name and page</li>
-                        <li><strong>Op. cit.:</strong> Same work cited earlier (avoid)</li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example Sequence</div>
-                        <p>¹ Atwood, <em>Handmaid's Tale</em>, 23.</p>
-                        <p>² Ibid., 45.</p>
-                        <p>³ Suzuki, "Climate Change," 15.</p>
-                        <p>⁴ Atwood, <em>Handmaid's Tale</em>, 67.</p>
+                    <div class="footnote-examples">
+                        <h4>Sample Footnotes:</h4>
+                        <div class="footnote-text">
+                            <p class="main-text">The new policy framework<sup>1</sup> addresses three key areas: economic development, environmental protection,<sup>2</sup> and social equity.</p>
+                            
+                            <div class="footnotes-section">
+                                <hr>
+                                <p class="footnote"><sup>1</sup> Department of Finance, <em>Policy Framework for Sustainable Development</em> (Ottawa: Government of Canada, 2024), 15-18.</p>
+                                <p class="footnote"><sup>2</sup> For detailed environmental guidelines, see Environment and Climate Change Canada, <em>Environmental Assessment Guidelines</em>, available at canada.ca/environment.</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <h3>Footnote Numbering</h3>
-                    <ul>
-                        <li>Number consecutively through chapter</li>
-                        <li>Or restart each page (less common)</li>
-                        <li>Place after punctuation</li>
-                        <li>Use Arabic numerals (1, 2, 3)</li>
-                    </ul>
+                    <div class="rule-box">
+                        <h4>Formatting Guidelines</h4>
+                        <ul>
+                            <li>Use smaller font size than main text</li>
+                            <li>Separate from main text with a line</li>
+                            <li>Single-space within footnotes, double-space between</li>
+                            <li>Start each footnote with superscript number</li>
+                        </ul>
+                    </div>
                 </div>
                 
+                <!-- Quiz Panel for Footnotes -->
                 <div class="quiz-panel" id="quiz-footnotes"></div>
                 
                 <div class="section-footer">
@@ -175,184 +166,78 @@
                 </div>
             </section>
 
-            <!-- Section 9.24: Endnotes -->
-            <section class="content-section" id="endnotes">
+            <!-- Bibliography Section -->
+            <section class="content-section" id="bibliography" style="display: none;">
                 <div class="section-header">
-                    <h2>9.24 Endnotes</h2>
+                    <h2>9.35 Bibliography</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Endnotes collect all references at the end of a chapter or document:</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Purpose of Bibliography</h4>
+                        <p>A bibliography lists all sources consulted during research, even if not directly cited in the text.</p>
+                    </div>
                     
-                    <h3>Advantages of Endnotes</h3>
-                    <ul>
-                        <li>Cleaner page layout</li>
-                        <li>Easier to format</li>
-                        <li>Better for lengthy notes</li>
-                        <li>Simpler for digital documents</li>
-                    </ul>
-                    
-                    <h3>Endnote Format</h3>
-                    <div class="endnote-example">
-                        <h4>Notes to Chapter 2</h4>
-                        <div class="endnote-list">
-                            <p>1. M. Fleming and W. H. Levie, eds., <em>Instructional Message Design: Principles From the Behavioral and Cognitive Sciences</em>, 2nd ed. (Englewood Cliffs, N.J.: Educational Technology Publications, 1993), 34-57.</p>
-                            <p>2. Fleming and Levie, 66.</p>
-                            <p>3. B. Joyce, B. Showers, and C. Rolheiser-Bennett, "Staff Development and Student Learning: A Synthesis of Research on Models of Teaching," <em>Educational Leadership</em> 45, no. 2 (1987): 11-23.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Types of Bibliographies</h4>
+                            <ul>
+                                <li><strong>Works Cited:</strong> Only sources directly referenced</li>
+                                <li><strong>Works Consulted:</strong> All sources examined</li>
+                                <li><strong>Selected Bibliography:</strong> Key sources only</li>
+                                <li><strong>Annotated Bibliography:</strong> With brief descriptions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Organization Methods</h4>
+                            <ul>
+                                <li><strong>Alphabetical:</strong> By author's last name</li>
+                                <li><strong>Chronological:</strong> By publication date</li>
+                                <li><strong>Subject areas:</strong> Grouped by topic</li>
+                                <li><strong>Source type:</strong> Books, articles, websites</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <h3>Endnote Placement</h3>
-                    <ul>
-                        <li><strong>Chapter end:</strong> Before bibliography</li>
-                        <li><strong>Book end:</strong> After all chapters</li>
-                        <li><strong>Article end:</strong> Before references</li>
-                    </ul>
-                    
-                    <h3>Converting Between Systems</h3>
-                    <p>Modern word processors can easily convert between footnotes and endnotes. Choose based on:</p>
-                    <ul>
-                        <li>Publisher requirements</li>
-                        <li>Document length</li>
-                        <li>Reader preferences</li>
-                        <li>Number of notes</li>
-                    </ul>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-endnotes"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('endnotes')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.25: In-text Notes -->
-            <section class="content-section" id="in-text">
-                <div class="section-header">
-                    <h2>9.25 In-text Notes (Author-Date System)</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>The author-date system places brief citations directly in the text:</p>
-                    
-                    <h3>Basic Format</h3>
-                    <div class="example-box">
-                        <div class="example-label">In-text Citations</div>
-                        <p>Climate change poses significant risks (Suzuki 2023).</p>
-                        <p>According to Suzuki (2023), climate change poses significant risks.</p>
-                        <p>Suzuki (2023) argues that climate change poses significant risks.</p>
-                    </div>
-                    
-                    <h3>Multiple Authors</h3>
-                    <ul>
-                        <li><strong>Two authors:</strong> (Smith and Jones 2023)</li>
-                        <li><strong>Three or more:</strong> (Smith et al. 2023)</li>
-                        <li><strong>Organizations:</strong> (Statistics Canada 2023)</li>
-                    </ul>
-                    
-                    <h3>Page Numbers</h3>
-                    <div class="example-box">
-                        <div class="example-label">With Page References</div>
-                        <p>Direct quote: (Atwood 1985, 23)</p>
-                        <p>Specific reference: (Suzuki 2023, 45-47)</p>
-                        <p>Multiple pages: (Smith 2023, 12, 34, 56)</p>
-                    </div>
-                    
-                    <h3>Multiple Citations</h3>
-                    <p>Separate multiple sources with semicolons:</p>
-                    <div class="example-box">
-                        <div class="example-label">Example</div>
-                        <p>Several studies confirm this finding (Brown 2022; Green 2023; White 2023).</p>
-                    </div>
-                    
-                    <h3>Reference List Format</h3>
-                    <div class="reference-example">
-                        <h4>References</h4>
-                        <p>Atwood, Margaret. 1985. <em>The Handmaid's Tale</em>. Toronto: McClelland & Stewart.</p>
-                        <p>Suzuki, David. 2023. "Climate Change and Canadian Policy." <em>Canadian Environmental Review</em> 45 (3): 12-28.</p>
-                        <p>Statistics Canada. 2023. <em>Labour Force Survey, September 2023</em>. Ottawa: Statistics Canada.</p>
-                    </div>
-                    
-                    <h3>Advantages</h3>
-                    <ul>
-                        <li>Less disruptive to reading</li>
-                        <li>Easy to add/remove sources</li>
-                        <li>Clear author attribution</li>
-                        <li>Standard in many fields</li>
-                    </ul>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-in-text"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('in-text')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.27-9.62: Bibliography -->
-            <section class="content-section" id="bibliography">
-                <div class="section-header">
-                    <h2>9.27–9.62 Bibliographies</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>A bibliography lists all sources consulted, whether cited or not. A reference list includes only cited sources.</p>
-                    
-                    <h3>Bibliography Format</h3>
-                    <ul>
-                        <li>Alphabetical by author's last name</li>
-                        <li>Hanging indent (first line flush left)</li>
-                        <li>Single-spaced entries</li>
-                        <li>Double-space between entries</li>
-                    </ul>
-                    
-                    <h3>Book Entries</h3>
                     <div class="bibliography-examples">
-                        <h4>Single Author</h4>
-                        <p class="bib-entry">Atwood, Margaret. <em>The Handmaid's Tale</em>. Toronto: McClelland & Stewart, 1985.</p>
+                        <h4>Sample Bibliography Entry Formats:</h4>
                         
-                        <h4>Multiple Authors</h4>
-                        <p class="bib-entry">Smith, John, and Jane Doe. <em>Canadian Politics Today</em>. 3rd ed. Vancouver: UBC Press, 2023.</p>
+                        <h5>Books:</h5>
+                        <div class="bibliography-entry">
+                            <p>Smith, John A. <em>Canadian Public Policy: A Comprehensive Guide</em>. 3rd ed. Toronto: University of Toronto Press, 2024.</p>
+                            <p>Wilson, Sarah, and Michael Brown. <em>Government Communications in the Digital Age</em>. Vancouver: Douglas & McIntyre, 2023.</p>
+                        </div>
                         
-                        <h4>Edited Book</h4>
-                        <p class="bib-entry">Brown, Sarah, ed. <em>Essays on Canadian Literature</em>. Montreal: McGill-Queen's University Press, 2022.</p>
+                        <h5>Journal Articles:</h5>
+                        <div class="bibliography-entry">
+                            <p>Jones, Mary. "Policy Implementation in Federal Agencies." <em>Canadian Public Administration</em> 67, no. 2 (2024): 145-162.</p>
+                        </div>
                         
-                        <h4>Chapter in Edited Book</h4>
-                        <p class="bib-entry">Green, Michael. "Urban Planning in Toronto." In <em>Canadian Cities</em>, edited by Lisa White, 45-67. Ottawa: Carleton University Press, 2023.</p>
+                        <h5>Government Documents:</h5>
+                        <div class="bibliography-entry">
+                            <p>Canada. Department of Finance. <em>Budget 2024: Fairness for Every Generation</em>. Ottawa: Government of Canada, 2024.</p>
+                            <p>Statistics Canada. "Labour Force Survey, March 2024." Ottawa: Statistics Canada, 2024. Accessed April 15, 2024. https://statcan.gc.ca.</p>
+                        </div>
+                        
+                        <h5>Online Sources:</h5>
+                        <div class="bibliography-entry">
+                            <p>Environment and Climate Change Canada. "Climate Action Plan." Government of Canada. Last modified March 10, 2024. https://canada.ca/climate-action.</p>
+                        </div>
                     </div>
                     
-                    <h3>Periodical Entries</h3>
-                    <div class="bibliography-examples">
-                        <h4>Journal Article</h4>
-                        <p class="bib-entry">Suzuki, David. "Climate Change and Canadian Policy." <em>Canadian Environmental Review</em> 45, no. 3 (2023): 12-28.</p>
-                        
-                        <h4>Magazine Article</h4>
-                        <p class="bib-entry">Johnson, Kate. "The Future of Healthcare." <em>Maclean's</em>, March 15, 2023, 22-25.</p>
-                        
-                        <h4>Newspaper Article</h4>
-                        <p class="bib-entry">Wilson, Robert. "Budget Highlights Infrastructure Spending." <em>The Globe and Mail</em>, April 1, 2023, A1.</p>
+                    <div class="rule-box">
+                        <h4>Formatting Guidelines</h4>
+                        <ul>
+                            <li>Use hanging indent for each entry</li>
+                            <li>List entries alphabetically by author's last name</li>
+                            <li>Use consistent citation style throughout</li>
+                            <li>Include all necessary publication details</li>
+                        </ul>
                     </div>
-                    
-                    <h3>Government Documents</h3>
-                    <div class="bibliography-examples">
-                        <p class="bib-entry">Canada. Parliament. House of Commons. <em>Debates</em>, 44th Parliament, 1st Session, vol. 151, no. 156, February 15, 2023.</p>
-                        
-                        <p class="bib-entry">Statistics Canada. <em>Census Profile, 2021 Census</em>. Statistics Canada Catalogue no. 98-316-X2021001. Ottawa: Statistics Canada, 2022.</p>
-                    </div>
-                    
-                    <h3>Special Considerations</h3>
-                    <ul>
-                        <li><strong>No author:</strong> Begin with title</li>
-                        <li><strong>Same author:</strong> Use 3-em dash (———)</li>
-                        <li><strong>Multiple works same year:</strong> Add a, b, c (2023a, 2023b)</li>
-                        <li><strong>Forthcoming:</strong> Use "Forthcoming" instead of date</li>
-                    </ul>
                 </div>
                 
+                <!-- Quiz Panel for Bibliography -->
                 <div class="quiz-panel" id="quiz-bibliography"></div>
                 
                 <div class="section-footer">
@@ -362,195 +247,249 @@
                 </div>
             </section>
 
-            <!-- Section 9.63: Electronic Sources -->
-            <section class="content-section" id="electronic">
+            <!-- Citations Section -->
+            <section class="content-section" id="citations" style="display: none;">
                 <div class="section-header">
-                    <h2>9.63 Electronic Sources</h2>
+                    <h2>9.50 In-Text Citations</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Electronic sources require special attention to ensure readers can locate them:</p>
-                    
-                    <h3>Key Elements for Online Sources</h3>
-                    <ul>
-                        <li>Author (if available)</li>
-                        <li>Title of page or article</li>
-                        <li>Title of website</li>
-                        <li>Publication/update date</li>
-                        <li>URL or DOI</li>
-                        <li>Access date (if no publication date)</li>
-                    </ul>
-                    
-                    <h3>Website Citations</h3>
-                    <div class="bibliography-examples">
-                        <h4>General Website</h4>
-                        <p class="bib-entry">Government of Canada. "Climate Action Plan." Last modified January 15, 2023. https://www.canada.ca/climate-action.</p>
-                        
-                        <h4>News Website</h4>
-                        <p class="bib-entry">CBC News. "Federal Budget 2023: Key Highlights." CBC, March 28, 2023. https://www.cbc.ca/news/politics/federal-budget-2023.</p>
-                        
-                        <h4>Blog Post</h4>
-                        <p class="bib-entry">Smith, Jane. "Writing Better Reports." <em>Government Communications Blog</em>, February 20, 2023. https://blog.gc.ca/writing-reports.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Citation Systems</h4>
+                        <p>Canadian government documents typically use author-date or numbered citation systems, depending on the context and audience.</p>
                     </div>
                     
-                    <h3>Digital Documents</h3>
-                    <div class="bibliography-examples">
-                        <h4>PDF Report</h4>
-                        <p class="bib-entry">Environment Canada. <em>State of Canada's Environment 2023</em>. PDF. Ottawa: Environment Canada, 2023. https://publications.gc.ca/environment-2023.pdf.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Author-Date System</h4>
+                            <ul>
+                                <li>Single author: (Smith, 2024)</li>
+                                <li>Multiple authors: (Smith & Jones, 2024)</li>
+                                <li>No author: (Department of Finance, 2024)</li>
+                                <li>Page numbers: (Smith, 2024, p. 45)</li>
+                                <li>Multiple works: (Smith, 2024; Jones, 2023)</li>
+                            </ul>
+                        </div>
                         
-                        <h4>E-book</h4>
-                        <p class="bib-entry">Brown, Michael. <em>Digital Government</em>. Toronto: Tech Press, 2023. Kindle edition.</p>
+                        <div class="example-item">
+                            <h4>Numbered System</h4>
+                            <ul>
+                                <li>First reference: (1)</li>
+                                <li>Subsequent references: (1)</li>
+                                <li>Multiple sources: (1-3)</li>
+                                <li>Page specific: (1, p. 45)</li>
+                                <li>Updated reference: (1, updated 2024)</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <h3>Social Media</h3>
-                    <div class="bibliography-examples">
-                        <h4>Twitter/X</h4>
-                        <p class="bib-entry">@JustinTrudeau. "Proud to announce our new climate initiative..." Twitter, March 15, 2023, 2:30 p.m. https://twitter.com/JustinTrudeau/status/123456789.</p>
+                    <div class="citation-examples">
+                        <h4>Integration Examples:</h4>
+                        
+                        <h5>Author as Part of Sentence:</h5>
+                        <p>According to Smith (2024), the new regulations will improve efficiency by 25%.</p>
+                        <p>The Department of Finance (2024) reported a budget surplus for the first time in five years.</p>
+                        
+                        <h5>Author in Parentheses:</h5>
+                        <p>The new regulations will improve efficiency by 25% (Smith, 2024).</p>
+                        <p>Budget projections show a surplus for the first time in five years (Department of Finance, 2024).</p>
+                        
+                        <h5>Direct Quotations:</h5>
+                        <p>The minister stated that "immediate action is required" (Press Release, 2024, p. 2).</p>
+                        <p>As noted in the report, "policy coordination remains a challenge" (Interdepartmental Committee, 2024, para. 15).</p>
                     </div>
                     
-                    <h3>DOI vs URL</h3>
-                    <ul>
-                        <li><strong>Prefer DOI:</strong> More stable than URLs</li>
-                        <li><strong>Format:</strong> https://doi.org/10.1234/5678</li>
-                        <li><strong>No period:</strong> After URLs/DOIs</li>
-                    </ul>
+                    <div class="rule-box">
+                        <h4>Government Document Citations</h4>
+                        <ul>
+                            <li><strong>Department as author:</strong> (Health Canada, 2024)</li>
+                            <li><strong>No specific author:</strong> (Government of Canada, 2024)</li>
+                            <li><strong>Multiple departments:</strong> (Health Canada & Public Safety Canada, 2024)</li>
+                            <li><strong>Updated documents:</strong> (Treasury Board, 2024, updated March 15)</li>
+                        </ul>
+                    </div>
                     
-                    <div class="warning-box">
-                        <h4>⚠️ Important</h4>
-                        <p>Always test URLs before submitting. Include access dates for sources that may change or disappear.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Online Sources</h4>
+                            <ul>
+                                <li>With date: (Statistics Canada, 2024)</li>
+                                <li>No date: (Environment Canada, n.d.)</li>
+                                <li>Webpage: (Canada.ca, 2024)</li>
+                                <li>Database: (CANSIM, Table 14-10-0287, 2024)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Legal Documents</h4>
+                            <ul>
+                                <li>Acts: (Official Languages Act, 1985)</li>
+                                <li>Regulations: (Privacy Regulations, SOR/2000-13)</li>
+                                <li>Cases: (R. v. Smith, 2024 SCC 15)</li>
+                                <li>Orders: (Order in Council P.C. 2024-123)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="quiz-panel" id="quiz-electronic"></div>
+                <!-- Quiz Panel for Citations -->
+                <div class="quiz-panel" id="quiz-citations"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('electronic')">
-                        Complete Chapter
+                    <button class="btn btn-primary" onclick="completeSection('citations')">
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
-        </div>
-    </main>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
-        </div>
-    </footer>
+            <!-- Indexes Section -->
+            <section class="content-section" id="indexes" style="display: none;">
+                <div class="section-header">
+                    <h2>9.60 Indexes</h2>
+                </div>
+                
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Purpose of Indexes</h4>
+                        <p>Indexes help readers quickly locate specific topics, names, and concepts within documents. They are essential for longer government publications.</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Types of Indexes</h4>
+                            <ul>
+                                <li><strong>Subject index:</strong> Topics and concepts</li>
+                                <li><strong>Name index:</strong> People and organizations</li>
+                                <li><strong>Geographic index:</strong> Places and regions</li>
+                                <li><strong>Combined index:</strong> All types together</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Index Features</h4>
+                            <ul>
+                                <li><strong>Main entries:</strong> Primary topics</li>
+                                <li><strong>Subentries:</strong> Related subtopics</li>
+                                <li><strong>Cross-references:</strong> "See" and "See also"</li>
+                                <li><strong>Page ranges:</strong> 15-18, 45-52</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="index-examples">
+                        <h4>Sample Index Entries:</h4>
+                        
+                        <div class="index-sample">
+                            <p><strong>A</strong></p>
+                            <div class="index-entry">
+                                <p>Accessibility, 45-48, 67</p>
+                                <p class="subentry">accommodation requirements, 47</p>
+                                <p class="subentry">web standards, 48, 102</p>
+                                <p>Accountability, 12-15, 89-92</p>
+                                <p class="subentry">financial, 89-90</p>
+                                <p class="subentry">performance measurement, 91-92</p>
+                                <p class="subentry"><em>See also</em> Transparency</p>
+                            </div>
+                            
+                            <p><strong>B</strong></p>
+                            <div class="index-entry">
+                                <p>Budget process, 156-175</p>
+                                <p class="subentry">appropriations, 160-165</p>
+                                <p class="subentry">estimates, 156-159</p>
+                                <p class="subentry">supplementary estimates, 170-175</p>
+                            </div>
+                            
+                            <p><strong>P</strong></p>
+                            <div class="index-entry">
+                                <p>Policy development, 23-45</p>
+                                <p class="subentry">consultation process, 35-40</p>
+                                <p class="subentry">implementation, 41-45</p>
+                                <p class="subentry">research phase, 23-30</p>
+                                <p>Prime Minister's Office, 78, 134, 201</p>
+                                <p>Privacy protection, <em>see</em> Information security</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Indexing Guidelines</h4>
+                        <ul>
+                            <li><strong>Alphabetical order:</strong> Letter-by-letter or word-by-word</li>
+                            <li><strong>Consistent formatting:</strong> Indentation, fonts, punctuation</li>
+                            <li><strong>Specific entries:</strong> Useful, not overly general</li>
+                            <li><strong>Cross-references:</strong> Help readers find related information</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Cross-Reference Types</h4>
+                            <ul>
+                                <li><strong>"See":</strong> Directs to preferred term</li>
+                                <li><strong>"See also":</strong> Points to related entries</li>
+                                <li><strong>"See under":</strong> Points to subentry</li>
+                                <li><strong>"Compare":</strong> Highlights differences</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Page Number Conventions</h4>
+                            <ul>
+                                <li><strong>Single pages:</strong> 45, 67, 89</li>
+                                <li><strong>Ranges:</strong> 15-18 (continuous coverage)</li>
+                                <li><strong>Multiple mentions:</strong> 23, 35, 67-70</li>
+                                <li><strong>Bold:</strong> 45 (main discussion)</li>
+                                <li><strong>Italics:</strong> <em>67</em> (illustrations)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel for Indexes -->
+                <div class="quiz-panel" id="quiz-indexes"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('indexes')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
 
-    <style>
-        /* Additional styles for Reference Matter chapter */
-        .documentation-systems {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-xl) 0;
-        }
-        
-        .system-card {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .system-card h4 {
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .footnote-example {
-            margin: var(--cs-space-xl) 0;
-            padding: var(--cs-space-l);
-            background: var(--cs-grey-100);
-            border-radius: 8px;
-        }
-        
-        .footnote-separator {
-            width: 30%;
-            margin: var(--cs-space-m) 0;
-            border: none;
-            border-top: 1px solid var(--cs-grey-700);
-        }
-        
-        .footnote {
-            font-size: 0.875rem;
-            line-height: 1.5;
-        }
-        
-        .citation-format h4 {
-            color: var(--cs-red);
-            margin-top: var(--cs-space-l);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .endnote-example {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .endnote-list p {
-            margin-bottom: var(--cs-space-m);
-            text-indent: -1.5rem;
-            padding-left: 1.5rem;
-        }
-        
-        .reference-example {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .reference-example h4 {
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-m);
-        }
-        
-        .bibliography-examples {
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .bibliography-examples h4 {
-            color: var(--cs-red);
-            margin-top: var(--cs-space-l);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .bib-entry {
-            padding-left: 2rem;
-            text-indent: -2rem;
-            margin-bottom: var(--cs-space-s);
-            line-height: 1.6;
-        }
-    </style>
+    <!-- Include JavaScript modules -->
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine, loadQuizData } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch09';
         const sections = [
             { id: 'introduction', title: '9.01 Introduction' },
             { id: 'footnotes', title: '9.23 Footnotes' },
-            { id: 'endnotes', title: '9.24 Endnotes' },
-            { id: 'in-text', title: '9.25 In-text Notes' },
-            { id: 'bibliography', title: '9.27-9.62 Bibliographies' },
-            { id: 'electronic', title: '9.63 Electronic Sources' }
+            { id: 'bibliography', title: '9.35 Bibliography' },
+            { id: 'citations', title: '9.50 Citations' },
+            { id: 'indexes', title: '9.60 Indexes' }
         ];
         
-        // Initialize progress bar
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
+        
+        // Update progress bar using correct API
         function updateProgressBar() {
-            const progress = getProgress();
-            const chapterProgress = progress[CHAPTER_ID] || {};
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            document.getElementById('chapterProgress').style.width = percentage + '%';
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
         }
         
         // Mark section as complete
@@ -574,38 +513,44 @@
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <div class="modal-icon">📚</div>
-                    <h2>Reference Master!</h2>
-                    <p>You can now properly cite any source in your writing.</p>
-                    <div class="modal-stats">
-                        <div class="stat">
-                            <span class="stat-value">6</span>
-                            <span class="stat-label">Sections Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Citation Expert</span>
-                        </div>
-                    </div>
+                    <h3>🎉 Chapter 9 Complete!</h3>
+                    <p>You've mastered reference matter and citations. Ready for the next chapter?</p>
                     <div class="modal-actions">
-                        <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-                        <button class="btn btn-primary" onclick="window.location.href='ch10-correspondence.html'">
-                            Next Chapter
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
                         </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
                     </div>
                 </div>
             `;
             document.body.appendChild(modal);
         }
         
-        // Load quizzes
+        // Load section quizzes - FIXED VERSION
         async function loadSectionQuizzes() {
+            // Sample quiz data - in real implementation, this would come from JSON files
             const quizData = {
+                introduction: {
+                    title: 'Introduction to Reference Matter',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'What is the primary purpose of reference matter?',
+                            options: [
+                                { label: 'To make documents look professional', correct: false },
+                                { label: 'To provide source verification for readers', correct: true },
+                                { label: 'To increase document length', correct: false },
+                                { label: 'To show the author\'s research', correct: false }
+                            ],
+                            rationale: 'Reference matter primarily provides source verification and enables readers to check facts.',
+                            ref: '§9.01'
+                        }
+                    ]
+                },
                 footnotes: {
-                    id: 'footnote-quiz',
-                    title: 'Using Footnotes',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'footnotes',
+                    title: 'Footnotes',
                     questions: [
                         {
                             type: 'mcq',
@@ -620,26 +565,112 @@
                             ref: '§9.23'
                         }
                     ]
+                },
+                bibliography: {
+                    title: 'Bibliography',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'What is the difference between "Works Cited" and "Works Consulted"?',
+                            options: [
+                                { label: 'No difference', correct: false },
+                                { label: 'Works Cited includes only referenced sources', correct: true },
+                                { label: 'Works Consulted is alphabetical', correct: false },
+                                { label: 'Works Cited is shorter', correct: false }
+                            ],
+                            rationale: 'Works Cited includes only directly referenced sources; Works Consulted includes all sources examined.',
+                            ref: '§9.35'
+                        }
+                    ]
+                },
+                citations: {
+                    title: 'Citations',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'In author-date system, how should a government department be cited?',
+                            options: [
+                                { label: '(Canada, 2024)', correct: false },
+                                { label: '(Government, 2024)', correct: false },
+                                { label: '(Department of Finance, 2024)', correct: true },
+                                { label: '(Finance, 2024)', correct: false }
+                            ],
+                            rationale: 'Use the full department name as the author in citations.',
+                            ref: '§9.50'
+                        }
+                    ]
+                },
+                indexes: {
+                    title: 'Indexes',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'What does "See also" indicate in an index?',
+                            options: [
+                                { label: 'The preferred term', correct: false },
+                                { label: 'Related entries', correct: true },
+                                { label: 'Page numbers', correct: false },
+                                { label: 'Subentries', correct: false }
+                            ],
+                            rationale: '"See also" points readers to related entries for additional information.',
+                            ref: '§9.60'
+                        }
+                    ]
                 }
             };
             
-            // Initialize quizzes
+            // Initialize quizzes using FIXED API
             for (const section of sections) {
                 const quiz = quizData[section.id];
                 if (quiz) {
                     const container = document.getElementById(`quiz-${section.id}`);
                     if (container) {
-                        const engine = new QuizEngine(`quiz-${section.id}`, quiz);
-                        engine.init();
+                        // FIXED: Use correct constructor parameters
+                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
+                        const quizElement = engine.render();
+                        container.appendChild(quizElement);
                     }
                 }
             }
         }
         
-        // Initialize
+        // Initialize navigation
+        function initializeNavigation() {
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.dataset.section;
+                    showSection(sectionId);
+                    updateActiveTab(link);
+                });
+            });
+        }
+        
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+        
+        function updateActiveTab(activeLink) {
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            activeLink.classList.add('active');
+        }
+        
+        // Initialize everything
         document.addEventListener('DOMContentLoaded', () => {
             updateProgressBar();
             loadSectionQuizzes();
+            initializeNavigation();
             
             if (!window.location.hash) {
                 router.navigateTo(CHAPTER_ID, 'introduction');
