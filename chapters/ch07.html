@@ -8,393 +8,648 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <!-- Chapter Hero Section -->
-    <header class="chapter-hero">
-        <div class="container">
+    <div class="chapter-container">
+        <header class="chapter-header">
             <div class="breadcrumb">
-                <a href="../index.html">← Back to Dashboard</a>
+                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Chapter 7: Punctuation</span>
             </div>
-            
-            <div class="chapter-meta">
-                <div class="chapter-icon">07</div>
-                <div class="chapter-info">
-                    <h1>Punctuation</h1>
-                    <p>Master punctuation rules for clear, effective writing</p>
+            <div class="chapter-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="chapterProgress"></div>
                 </div>
+                <span class="progress-text">Progress</span>
             </div>
-            
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgressFill"></div>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Content -->
-    <main class="container">
-        <!-- Section Navigation -->
-        <nav class="section-nav">
-            <a href="#introduction" class="section-tab active">Introduction</a>
-            <a href="#comma" class="section-tab">Comma</a>
-            <a href="#semicolon" class="section-tab">Semicolon</a>
-            <a href="#colon" class="section-tab">Colon</a>
-            <a href="#dashes" class="section-tab">Dashes</a>
-            <a href="#parentheses" class="section-tab">Parentheses</a>
-            <a href="#apostrophe" class="section-tab">Apostrophe</a>
-            <a href="#periods" class="section-tab">Periods</a>
+        <nav class="chapter-nav">
+            <div class="nav-links">
+                <a href="#introduction" class="tab-link active" data-section="introduction">7.01 Introduction</a>
+                <a href="#comma" class="tab-link" data-section="comma">7.05 Comma</a>
+                <a href="#semicolon" class="tab-link" data-section="semicolon">7.35 Semicolon</a>
+                <a href="#colon" class="tab-link" data-section="colon">7.42 Colon</a>
+                <a href="#dashes" class="tab-link" data-section="dashes">7.51 Dashes</a>
+                <a href="#parentheses" class="tab-link" data-section="parentheses">7.56 Parentheses</a>
+                <a href="#apostrophe" class="tab-link" data-section="apostrophe">7.15 Apostrophe</a>
+                <a href="#periods" class="tab-link" data-section="periods">7.16 Periods</a>
+            </div>
         </nav>
 
-        <!-- Introduction Section -->
-        <section id="introduction" class="content-section active">
-            <div class="section-header">
-                <h2>7.01 Introduction</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>Punctuation helps readers understand the structural relationship within and between sentences. Canadian style generally favours lighter punctuation than British style.</p>
-                
-                <div class="key-principle">
-                    <h3>Golden Rule</h3>
-                    <p><strong>Use only the punctuation necessary for clarity.</strong> Avoid over-punctuating, but don't sacrifice readability.</p>
+        <main class="chapter-content">
+            <!-- Introduction Section -->
+            <section class="content-section" id="introduction">
+                <div class="section-header">
+                    <h2>7.01 Introduction to Punctuation</h2>
                 </div>
                 
-                <h3>Functions of Punctuation</h3>
-                <ul>
-                    <li><strong>Terminating:</strong> period, question mark, exclamation mark</li>
-                    <li><strong>Separating:</strong> comma, semicolon, colon</li>
-                    <li><strong>Enclosing:</strong> quotation marks, parentheses, brackets, dashes</li>
-                    <li><strong>Indicating omission:</strong> apostrophe, ellipsis</li>
-                </ul>
-            </div>
-            
-            <!-- Quiz Panel for Introduction -->
-            <div class="quiz-panel" id="quiz-introduction"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('introduction')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
-
-        <!-- Comma Section -->
-        <section id="comma" class="content-section">
-            <div class="section-header">
-                <h2>7.05 The Comma</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>The comma is the most frequently used punctuation mark. It indicates the shortest pause in reading.</p>
-                
-                <h3>7.14 Restrictive and Non-restrictive Elements</h3>
-                <div class="rule-box">
-                    <h4>Key Rule</h4>
-                    <p><strong>Restrictive</strong> (essential) elements: no commas<br>
-                    <strong>Non-restrictive</strong> (additional) elements: use commas</p>
-                </div>
-                
-                <div class="examples-box">
-                    <h4>Examples</h4>
-                    <div class="example-pair">
-                        <div class="example">
-                            <strong>Restrictive:</strong> The students who studied hard passed the exam.
-                            <small>(Specifies which students)</small>
+                <div class="content-block">
+                    <p>Punctuation marks are essential tools for clear communication. They show readers the structural relationships within and between sentences, making your writing easier to understand and more professional.</p>
+                    
+                    <div class="key-principles">
+                        <h3>Canadian Punctuation Style</h3>
+                        <ul>
+                            <li>Generally lighter than British punctuation</li>
+                            <li>Focus on clarity over tradition</li>
+                            <li>Consistent application within documents</li>
+                            <li>Reader-focused approach</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Functions of Punctuation</h4>
+                            <ul>
+                                <li><strong>Separate:</strong> ideas, clauses, items</li>
+                                <li><strong>Connect:</strong> related thoughts</li>
+                                <li><strong>Indicate:</strong> pauses, emphasis</li>
+                                <li><strong>Clarify:</strong> meaning and structure</li>
+                            </ul>
                         </div>
-                        <div class="example">
-                            <strong>Non-restrictive:</strong> The students, who had studied hard, passed the exam.
-                            <small>(Additional information about all students)</small>
+                        
+                        <div class="example-item">
+                            <h4>Hierarchy of Separation</h4>
+                            <ul>
+                                <li><strong>Strongest:</strong> Period, question mark, exclamation</li>
+                                <li><strong>Medium:</strong> Semicolon, colon</li>
+                                <li><strong>Light:</strong> Comma</li>
+                                <li><strong>Grouping:</strong> Parentheses, dashes</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 
-                <h3>7.05 Oxford Comma (Serial Comma)</h3>
-                <div class="rule-box">
-                    <h4>Canadian Style Preference</h4>
-                    <p>Omit the final comma in a series <strong>unless needed for clarity</strong>.</p>
+                <!-- Quiz Panel for Introduction -->
+                <div class="quiz-panel" id="quiz-introduction"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('introduction')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Comma Section -->
+            <section class="content-section" id="comma" style="display: none;">
+                <div class="section-header">
+                    <h2>7.05 Comma</h2>
                 </div>
                 
-                <div class="examples-box">
-                    <h4>Examples</h4>
-                    <div class="example">
-                        <strong>Standard:</strong> We ordered pizza, salad and drinks.
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Essential Comma Rules</h4>
+                        <p>Commas separate elements within sentences to prevent confusion and enhance readability.</p>
                     </div>
-                    <div class="example">
-                        <strong>For clarity:</strong> I'd like to thank my parents, Ayn Rand, and God.
-                        <small>(Without the comma: "my parents Ayn Rand and God" suggests Ayn Rand and God are the parents)</small>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Quiz Panel for Comma -->
-            <div class="quiz-panel" id="quiz-comma"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('comma')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
-
-        <!-- Semicolon Section -->
-        <section id="semicolon" class="content-section">
-            <div class="section-header">
-                <h2>7.35 The Semicolon</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>The semicolon indicates a pause longer than a comma but shorter than a period.</p>
-                
-                <h3>Primary Uses</h3>
-                <ol>
-                    <li><strong>Between independent clauses:</strong> The meeting ended late; everyone was exhausted.</li>
-                    <li><strong>In complex lists:</strong> Attendees came from Vancouver, BC; Toronto, ON; and Halifax, NS.</li>
-                    <li><strong>Before conjunctive adverbs:</strong> The proposal was well-received; however, funding remains uncertain.</li>
-                </ol>
-                
-                <div class="rule-box">
-                    <h4>Quick Test</h4>
-                    <p>If you can replace the semicolon with a period and have two complete sentences, you're using it correctly.</p>
-                </div>
-            </div>
-            
-            <!-- Quiz Panel for Semicolon -->
-            <div class="quiz-panel" id="quiz-semicolon"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('semicolon')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
-
-        <!-- Colon Section -->
-        <section id="colon" class="content-section">
-            <div class="section-header">
-                <h2>7.42 The Colon</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>The colon introduces and directs attention to what follows.</p>
-                
-                <h3>Main Uses</h3>
-                <ul>
-                    <li><strong>Lists:</strong> Three items are required: pen, paper, and calculator.</li>
-                    <li><strong>Explanations:</strong> Here's the problem: insufficient funding.</li>
-                    <li><strong>Quotations:</strong> The minister stated: "No new taxes this year."</li>
-                    <li><strong>Time:</strong> 2:30 p.m.</li>
-                    <li><strong>Ratios:</strong> 3:1 majority</li>
-                </ul>
-                
-                <div class="rule-box">
-                    <h4>Capitalization After Colons</h4>
-                    <p>Capitalize the first word after a colon if it begins a complete sentence or formal statement.</p>
-                </div>
-            </div>
-            
-            <!-- Quiz Panel for Colon -->
-            <div class="quiz-panel" id="quiz-colon"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('colon')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
-
-        <!-- Dashes Section -->
-        <section id="dashes" class="content-section">
-            <div class="section-header">
-                <h2>7.51 Dashes</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>Use em dashes (—) for parenthetical elements and interruptions in dialogue. Dashes are less formal than parentheses but more emphatic than commas.</p>
-                
-                <div class="dash-comparison">
-                    <h3>Formality Scale</h3>
-                    <div class="formality-scale">
-                        <div class="scale-item formal">
-                            <strong>Most Formal:</strong> Parentheses ( )
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Series (Oxford Comma)</h4>
+                            <ul>
+                                <li>Red, white, and blue</li>
+                                <li>Departments, agencies, and Crown corporations</li>
+                                <li>Planning, implementing, and evaluating</li>
+                                <li>Monday, Tuesday, and Wednesday</li>
+                            </ul>
                         </div>
-                        <div class="scale-item">
-                            <strong>Neutral:</strong> Commas ,
-                        </div>
-                        <div class="scale-item informal">
-                            <strong>Least Formal:</strong> Em dashes —
+                        
+                        <div class="example-item">
+                            <h4>Before Coordinating Conjunctions</h4>
+                            <ul>
+                                <li>The report is complete, but it needs review</li>
+                                <li>We can proceed now, or we can wait</li>
+                                <li>The plan is solid, and the team agrees</li>
+                                <li>She will attend, yet she has concerns</li>
+                            </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h4>Introductory Elements</h4>
+                        <p>Use commas after introductory words, phrases, and clauses:</p>
+                        <ul>
+                            <li><strong>Words:</strong> However, the plan succeeded</li>
+                            <li><strong>Phrases:</strong> In the meantime, we will wait</li>
+                            <li><strong>Clauses:</strong> When the meeting ends, we'll decide</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Non-restrictive Clauses</h4>
+                            <ul>
+                                <li>The minister, <em>who arrived late</em>, spoke first</li>
+                                <li>Ottawa, <em>which is the capital</em>, hosted the summit</li>
+                                <li>The report, <em>published last month</em>, caused debate</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Restrictive Clauses (No Commas)</h4>
+                            <ul>
+                                <li>The minister <em>who arrived late</em> spoke first</li>
+                                <li>The city <em>that hosted the summit</em> was Ottawa</li>
+                                <li>Reports <em>published recently</em> are more reliable</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Other Comma Uses</h4>
+                        <ul>
+                            <li><strong>Appositives:</strong> John Smith, the director, will attend</li>
+                            <li><strong>Direct address:</strong> Thank you, Minister, for coming</li>
+                            <li><strong>Dates:</strong> January 15, 2025, was the deadline</li>
+                            <li><strong>Addresses:</strong> Ottawa, Ontario, is the capital</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <h3>Usage Examples</h3>
-                <div class="examples-box">
-                    <div class="example">
-                        <strong>Parenthetical:</strong> The report—which took months to prepare—was well received.
-                    </div>
-                    <div class="example">
-                        <strong>Emphasis:</strong> Only one person can solve this problem—you.
-                    </div>
-                    <div class="example">
-                        <strong>Interrupted dialogue:</strong> "I think we should—" "No, absolutely not."
-                    </div>
-                </div>
+                <!-- Quiz Panel for Comma -->
+                <div class="quiz-panel" id="quiz-comma"></div>
                 
-                <div class="rule-box">
-                    <h4>Typing Dashes</h4>
-                    <p><strong>Em dash (—):</strong> Two hyphens (--) or Alt+0151<br>
-                    <strong>En dash (–):</strong> For ranges: pages 15–30, 1995–2000</p>
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('comma')">
+                        Mark Complete & Continue
+                    </button>
                 </div>
-            </div>
-            
-            <!-- Quiz Panel for Dashes -->
-            <div class="quiz-panel" id="quiz-dashes"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('dashes')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
+            </section>
 
-        <!-- Parentheses Section -->
-        <section id="parentheses" class="content-section">
-            <div class="section-header">
-                <h2>7.56 Parentheses</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>Parentheses enclose supplementary information that could be omitted without changing the sentence's meaning.</p>
-                
-                <h3>Common Uses</h3>
-                <ul>
-                    <li><strong>Additional information:</strong> The conference (held in Vancouver) was successful.</li>
-                    <li><strong>Acronym definitions:</strong> The Canada Revenue Agency (CRA) announced new rules.</li>
-                    <li><strong>References:</strong> See Chapter 5 (pages 45–67) for details.</li>
-                    <li><strong>Optional elements:</strong> Bring your laptop(s) to the meeting.</li>
-                </ul>
-                
-                <div class="rule-box">
-                    <h4>Punctuation with Parentheses</h4>
-                    <p>Place punctuation outside parentheses unless the entire sentence is in parentheses.</p>
+            <!-- Semicolon Section -->
+            <section class="content-section" id="semicolon" style="display: none;">
+                <div class="section-header">
+                    <h2>7.35 Semicolon</h2>
                 </div>
                 
-                <div class="examples-box">
-                    <h4>Examples</h4>
-                    <div class="example">
-                        <strong>Correct:</strong> The meeting ended early (3:00 p.m.).
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Semicolon Uses</h4>
+                        <p>Semicolons join closely related independent clauses and separate complex items in lists.</p>
                     </div>
-                    <div class="example">
-                        <strong>Correct:</strong> (The meeting had been scheduled for 4:00 p.m.)
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Between Independent Clauses</h4>
+                            <ul>
+                                <li>The meeting ended; the decisions were final</li>
+                                <li>Revenue increased this quarter; expenses remained stable</li>
+                                <li>The policy is complex; however, it's necessary</li>
+                                <li>We need more data; therefore, we'll postpone the decision</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Complex Series</h4>
+                            <ul>
+                                <li>Attendees included John Smith, Director; Mary Jones, Manager; and Bob Wilson, Analyst</li>
+                                <li>The cities are Toronto, Ontario; Vancouver, British Columbia; and Montreal, Quebec</li>
+                                <li>Meetings are scheduled for Monday, March 1; Wednesday, March 3; and Friday, March 5</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>With Transitional Expressions</h4>
+                        <p>Use semicolons before transitional expressions connecting independent clauses:</p>
+                        <ul>
+                            <li><strong>however, therefore, consequently, nevertheless, furthermore, moreover</strong></li>
+                            <li><strong>in addition, for example, in fact, on the other hand</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Correct Examples</h4>
+                            <ul>
+                                <li>The budget is tight; however, we can manage</li>
+                                <li>Sales increased; therefore, bonuses will be paid</li>
+                                <li>The plan is ambitious; nevertheless, it's achievable</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Avoid These</h4>
+                            <ul>
+                                <li>❌ The budget is tight, however, we can manage</li>
+                                <li>❌ Sales increased, therefore bonuses will be paid</li>
+                                <li>❌ The plan is ambitious; But it's achievable</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Quiz Panel for Parentheses -->
-            <div class="quiz-panel" id="quiz-parentheses"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('parentheses')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
+                
+                <!-- Quiz Panel for Semicolon -->
+                <div class="quiz-panel" id="quiz-semicolon"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('semicolon')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-        <!-- Apostrophe Section -->
-        <section id="apostrophe" class="content-section">
-            <div class="section-header">
-                <h2>7.15 The Apostrophe</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>The apostrophe indicates possession and contractions.</p>
+            <!-- Colon Section -->
+            <section class="content-section" id="colon" style="display: none;">
+                <div class="section-header">
+                    <h2>7.42 Colon</h2>
+                </div>
                 
-                <h3>Possession Rules</h3>
-                <div class="rules-grid">
-                    <div class="rule-item">
-                        <h4>Singular nouns</h4>
-                        <p>Add 's: <em>cat's toy, James's book</em></p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Colon Functions</h4>
+                        <p>Colons introduce lists, explanations, quotations, and examples. They signal "what follows."</p>
                     </div>
-                    <div class="rule-item">
-                        <h4>Plural ending in s</h4>
-                        <p>Add ' only: <em>cats' toys, students' books</em></p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Introducing Lists</h4>
+                            <ul>
+                                <li>Three departments attended: Justice, Finance, and Health</li>
+                                <li>The agenda includes: budget review, staff updates, and planning</li>
+                                <li>Requirements are as follows: application form, two references, and transcript</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Explanations and Examples</h4>
+                            <ul>
+                                <li>The result was predictable: costs increased</li>
+                                <li>One thing is certain: we need more time</li>
+                                <li>Here's the problem: insufficient funding</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="rule-item">
-                        <h4>Plural not ending in s</h4>
-                        <p>Add 's: <em>children's toys, women's rights</em></p>
+                    
+                    <div class="rule-box">
+                        <h4>Before Quotations</h4>
+                        <p>Use colons to introduce formal quotations, especially long ones:</p>
+                        <ul>
+                            <li>The minister stated: "This policy will benefit all Canadians."</li>
+                            <li>The report concluded: "Immediate action is required."</li>
+                        </ul>
                     </div>
-                    <div class="rule-item">
-                        <h4>Names ending in s</h4>
-                        <p>Add 's: <em>Jones's house</em> (Canadian preference)</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Time and Ratios</h4>
+                            <ul>
+                                <li><strong>Time:</strong> 9:30 a.m., 14:00</li>
+                                <li><strong>Ratios:</strong> 3:1, 10:1</li>
+                                <li><strong>Biblical references:</strong> John 3:16</li>
+                                <li><strong>Volume/issue:</strong> Vol. 15:2</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Capitalization After Colons</h4>
+                            <ul>
+                                <li><strong>Complete sentence:</strong> Remember this: Time is valuable</li>
+                                <li><strong>Fragment:</strong> Remember this: the deadline</li>
+                                <li><strong>List items:</strong> usually lowercase</li>
+                                <li><strong>Quotations:</strong> capitalize first word</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>When NOT to Use Colons</h4>
+                        <ul>
+                            <li>❌ The departments are: Justice, Finance, and Health</li>
+                            <li>✅ The departments are Justice, Finance, and Health</li>
+                            <li>❌ This includes: planning and implementation</li>
+                            <li>✅ This includes planning and implementation</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <h3>Common Errors to Avoid</h3>
-                <div class="error-examples">
-                    <div class="error-item">
-                        <span class="wrong">❌ Its' time to go</span>
-                        <span class="right">✅ It's time to go (contraction)</span>
-                    </div>
-                    <div class="error-item">
-                        <span class="wrong">❌ The dog wagged it's tail</span>
-                        <span class="right">✅ The dog wagged its tail (possessive)</span>
-                    </div>
-                    <div class="error-item">
-                        <span class="wrong">❌ Apple's for sale</span>
-                        <span class="right">✅ Apples for sale (simple plural)</span>
-                    </div>
+                <!-- Quiz Panel for Colon -->
+                <div class="quiz-panel" id="quiz-colon"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('colon')">
+                        Mark Complete & Continue
+                    </button>
                 </div>
-            </div>
-            
-            <!-- Quiz Panel for Apostrophe -->
-            <div class="quiz-panel" id="quiz-apostrophe"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('apostrophe')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
+            </section>
 
-        <!-- Periods Section -->
-        <section id="periods" class="content-section">
-            <div class="section-header">
-                <h2>7.16 Periods</h2>
-            </div>
-            
-            <div class="lesson-content">
-                <p>Periods end complete sentences and are used in many abbreviations.</p>
-                
-                <h3>Basic Uses</h3>
-                <ul>
-                    <li><strong>End statements:</strong> The meeting will begin at 2 p.m.</li>
-                    <li><strong>Indirect questions:</strong> She asked when the meeting would begin.</li>
-                    <li><strong>Abbreviations:</strong> Dr., Mr., Inc., etc.</li>
-                </ul>
-                
-                <h3>Canadian Preferences</h3>
-                <div class="preference-box">
-                    <h4>Abbreviations</h4>
-                    <ul>
-                        <li><strong>With periods:</strong> Dr. Smith, Mr. Jones, Ph.D.</li>
-                        <li><strong>Without periods:</strong> UN, NATO, CEO, DVD</li>
-                        <li><strong>Metric units:</strong> km, kg, cm (no periods)</li>
-                    </ul>
+            <!-- Dashes Section -->
+            <section class="content-section" id="dashes" style="display: none;">
+                <div class="section-header">
+                    <h2>7.51 Dashes</h2>
                 </div>
                 
-                <div class="rule-box">
-                    <h4>Spacing After Periods</h4>
-                    <p>Use <strong>one space</strong> after periods in running text (not two).</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Types of Dashes</h4>
+                        <p>Use em dashes (—) for breaks in thought and en dashes (–) for ranges and connections.</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Em Dashes (—)</h4>
+                            <ul>
+                                <li><strong>Sudden break:</strong> The meeting was—surprisingly—productive</li>
+                                <li><strong>Emphasis:</strong> We have one goal—success</li>
+                                <li><strong>Interruption:</strong> "I think we should—" "No, wait!"</li>
+                                <li><strong>Summary:</strong> Planning, implementing, evaluating—these are our priorities</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>En Dashes (–)</h4>
+                            <ul>
+                                <li><strong>Ranges:</strong> pages 15–20, 2020–2025</li>
+                                <li><strong>Connections:</strong> Ottawa–Toronto flight</li>
+                                <li><strong>Scores:</strong> 3–1 victory</li>
+                                <li><strong>Compound adjectives:</strong> post–World War II era</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Em Dash vs. Other Punctuation</h4>
+                        <ul>
+                            <li><strong>Instead of commas:</strong> for stronger emphasis</li>
+                            <li><strong>Instead of parentheses:</strong> for more prominence</li>
+                            <li><strong>Instead of colons:</strong> for less formality</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Spacing</h4>
+                            <ul>
+                                <li><strong>Em dash:</strong> no spaces—like this</li>
+                                <li><strong>En dash:</strong> no spaces for ranges 9–5</li>
+                                <li><strong>En dash:</strong> spaces for compound terms post – World War II</li>
+                                <li><strong>Hyphen:</strong> no spaces in compound words</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Common Uses</h4>
+                            <ul>
+                                <li>The solution is simple—work together</li>
+                                <li>Three qualities matter—skill, effort, teamwork</li>
+                                <li>The period 2020–2025 was challenging</li>
+                                <li>A Toronto–Montreal comparison</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Quiz Panel for Periods -->
-            <div class="quiz-panel" id="quiz-periods"></div>
-            
-            <div class="section-footer">
-                <button class="btn btn-primary" onclick="completeSection('periods')">
-                    Mark Complete & Continue
-                </button>
-            </div>
-        </section>
-    </main>
+                
+                <!-- Quiz Panel for Dashes -->
+                <div class="quiz-panel" id="quiz-dashes"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('dashes')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Parentheses Section -->
+            <section class="content-section" id="parentheses" style="display: none;">
+                <div class="section-header">
+                    <h2>7.56 Parentheses</h2>
+                </div>
+                
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Parentheses Uses</h4>
+                        <p>Parentheses enclose supplementary information that could be omitted without affecting the main message.</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Explanatory Information</h4>
+                            <ul>
+                                <li>The CEO (chief executive officer) attended</li>
+                                <li>Revenue increased by $2 million (15%)</li>
+                                <li>The conference (held annually since 1995) was successful</li>
+                                <li>Ottawa (population 1 million) is the capital</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>References and Citations</h4>
+                            <ul>
+                                <li>Smith argues this point (see page 45)</li>
+                                <li>The data supports this conclusion (Table 3)</li>
+                                <li>Statistics Canada reports (2024) show growth</li>
+                                <li>Legal precedent exists (R. v. Jones, 2020)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Punctuation with Parentheses</h4>
+                        <ul>
+                            <li><strong>Period inside:</strong> when sentence is entirely parenthetical</li>
+                            <li><strong>Period outside:</strong> when parentheses are within a sentence</li>
+                            <li><strong>Other marks:</strong> generally outside parentheses</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Punctuation Examples</h4>
+                            <ul>
+                                <li>Revenue increased (by 15%).</li>
+                                <li>Revenue increased by 15%. (This was expected.)</li>
+                                <li>Did revenue increase (by how much)?</li>
+                                <li>Revenue increased by 15%! (Amazing results!)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Numbered Lists</h4>
+                            <ul>
+                                <li>Steps include (1) planning, (2) implementing, and (3) evaluating</li>
+                                <li>Requirements are (a) application, (b) references, and (c) transcript</li>
+                                <li>Options include (i) postpone, (ii) modify, or (iii) cancel</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel for Parentheses -->
+                <div class="quiz-panel" id="quiz-parentheses"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('parentheses')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Apostrophe Section -->
+            <section class="content-section" id="apostrophe" style="display: none;">
+                <div class="section-header">
+                    <h2>7.15 Apostrophe</h2>
+                </div>
+                
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Apostrophe Functions</h4>
+                        <p>Apostrophes show possession and mark contractions. They do NOT make words plural.</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Possession</h4>
+                            <ul>
+                                <li><strong>Singular:</strong> the minister's office</li>
+                                <li><strong>Plural ending in s:</strong> the ministers' meeting</li>
+                                <li><strong>Plural not ending in s:</strong> the children's program</li>
+                                <li><strong>Compound:</strong> my sister-in-law's car</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Special Cases</h4>
+                            <ul>
+                                <li><strong>Names ending in s:</strong> James's book or James' book</li>
+                                <li><strong>Organizations:</strong> McDonald's, Tim Hortons</li>
+                                <li><strong>Time expressions:</strong> a day's work, two weeks' vacation</li>
+                                <li><strong>Joint possession:</strong> Smith and Jones's report</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Contractions</h4>
+                        <p>Apostrophes mark omitted letters in contractions:</p>
+                        <ul>
+                            <li><strong>can't</strong> (cannot), <strong>won't</strong> (will not)</li>
+                            <li><strong>it's</strong> (it is), <strong>they're</strong> (they are)</li>
+                            <li><strong>'90s</strong> (1990s), <strong>o'clock</strong> (of the clock)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Common Errors to Avoid</h4>
+                            <ul>
+                                <li>❌ <strong>it's</strong> vs. <strong>its</strong> confusion</li>
+                                <li>❌ <strong>your</strong> vs. <strong>you're</strong> confusion</li>
+                                <li>❌ Plural apostrophes: menu's, photo's</li>
+                                <li>❌ Possessive pronouns: her's, our's</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Correct Forms</h4>
+                            <ul>
+                                <li>✅ <strong>its</strong> (possessive), <strong>it's</strong> (it is)</li>
+                                <li>✅ <strong>your</strong> (possessive), <strong>you're</strong> (you are)</li>
+                                <li>✅ <strong>menus, photos</strong> (plurals)</li>
+                                <li>✅ <strong>hers, ours, theirs</strong> (possessive pronouns)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Special Uses</h4>
+                        <ul>
+                            <li><strong>Letters/numbers:</strong> Mind your p's and q's, the 1990's</li>
+                            <li><strong>Abbreviations:</strong> CD's (when plural unclear)</li>
+                            <li><strong>Words as words:</strong> too many and's in the sentence</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel for Apostrophe -->
+                <div class="quiz-panel" id="quiz-apostrophe"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('apostrophe')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Periods Section -->
+            <section class="content-section" id="periods" style="display: none;">
+                <div class="section-header">
+                    <h2>7.16 Periods</h2>
+                </div>
+                
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Period Uses</h4>
+                        <p>Periods end sentences and mark most abbreviations. Use them consistently and appropriately.</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>End of Sentences</h4>
+                            <ul>
+                                <li>The meeting ends at 3 p.m.</li>
+                                <li>Please submit your report by Friday.</li>
+                                <li>Revenue increased by 15 per cent.</li>
+                                <li>The minister will make an announcement.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Abbreviations</h4>
+                            <ul>
+                                <li><strong>With periods:</strong> Mr., Dr., etc., i.e.</li>
+                                <li><strong>Without periods:</strong> UN, NATO, CEO, DVD</li>
+                                <li><strong>Metric units:</strong> km, kg, cm (no periods)</li>
+                                <li><strong>Academic degrees:</strong> B.A., Ph.D., M.A.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Spacing After Periods</h4>
+                        <p>Use <strong>one space</strong> after periods in running text (not two).</p>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Decimal Points</h4>
+                            <ul>
+                                <li>$15.99, 3.5 per cent</li>
+                                <li>98.6°F, 2.54 cm</li>
+                                <li>Version 2.1, Chapter 3.5</li>
+                                <li>GPS coordinates: 45.4215°N</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Lists and Outlines</h4>
+                            <ul>
+                                <li>1. First item</li>
+                                <li>2. Second item</li>
+                                <li>a. Sub-item</li>
+                                <li>b. Another sub-item</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Ellipsis (Three Periods)</h4>
+                        <ul>
+                            <li><strong>Omitted text:</strong> "The minister said... we will proceed"</li>
+                            <li><strong>Trailing off:</strong> "I think we should..."</li>
+                            <li><strong>Spacing:</strong> space before and after (...)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel for Periods -->
+                <div class="quiz-panel" id="quiz-periods"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('periods')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <!-- Include JavaScript modules -->
     <script type="module" src="../shared/js/router.js"></script>
@@ -404,7 +659,7 @@
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch07';
@@ -422,109 +677,60 @@
         // Initialize router
         router.init(CHAPTER_ID, sections);
         
-        // Update progress bar
+        // Update progress bar using correct API
         function updateProgressBar() {
-            const progress = window.getChapterProgress ? window.getChapterProgress(CHAPTER_ID) : 0;
-            const progressFill = document.getElementById('chapterProgressFill');
-            if (progressFill) {
-                progressFill.style.width = `${progress}%`;
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
+            
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
             }
         }
         
         // Mark section as complete
         window.completeSection = function(sectionId) {
-            if (window.setProgress) {
-                window.setProgress(CHAPTER_ID, sectionId, true);
-                updateProgressBar();
-                
-                // Find next section
-                const currentIndex = sections.findIndex(s => s.id === sectionId);
-                if (currentIndex < sections.length - 1) {
-                    const nextSection = sections[currentIndex + 1];
-                    router.navigateTo(CHAPTER_ID, nextSection.id);
-                } else {
-                    showChapterCompletion();
-                }
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                router.navigateTo(CHAPTER_ID, nextSection.id);
+            } else {
+                // Chapter complete
+                showCompletionModal();
             }
         };
         
-        // Show chapter completion modal
-        function showChapterCompletion() {
+        function showCompletionModal() {
             const modal = document.createElement('div');
-            modal.className = 'modal-overlay';
+            modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h2>🎉 Chapter Complete!</h2>
-                    <p>You've mastered punctuation in Canadian English.</p>
-                    <div class="modal-stats">
-                        <div class="stat">
-                            <span class="stat-value">8</span>
-                            <span class="stat-label">Sections Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Accuracy</span>
-                        </div>
-                    </div>
+                    <h3>🎉 Chapter 7 Complete!</h3>
+                    <p>You've mastered punctuation rules. Ready for the next chapter?</p>
                     <div class="modal-actions">
-                        <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-                        <button class="btn btn-primary" onclick="nextChapter()">
-                            Next Chapter
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
                         </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
                     </div>
                 </div>
             `;
             document.body.appendChild(modal);
         }
         
-        window.nextChapter = function() {
-            window.location.href = 'ch08-quotations.html';
-        };
-        
-        // Load and initialize quizzes
+        // Load section quizzes - FIXED VERSION
         async function loadSectionQuizzes() {
-            console.log('Loading quizzes for chapter:', CHAPTER_ID);
-            
-            try {
-                // Try to fetch quiz data from JSON file
-                const response = await fetch(`../data/quizzes/${CHAPTER_ID}-quiz.json`);
-                
-                if (!response.ok) {
-                    console.warn('Quiz data file not found, using fallback quizzes');
-                    initializeFallbackQuizzes();
-                    return;
-                }
-                
-                const quizData = await response.json();
-                console.log('Quiz data loaded:', quizData);
-                
-                // Initialize quiz panels for each section
-                Object.entries(quizData).forEach(([sectionKey, sectionData]) => {
-                    const quizPanel = document.getElementById(`quiz-${sectionKey}`);
-                    if (quizPanel && sectionData.questions && sectionData.questions.length > 0) {
-                        const quizEngine = new QuizEngine(sectionData, CHAPTER_ID, sectionKey);
-                        const quizElement = quizEngine.render();
-                        quizPanel.appendChild(quizElement);
-                        console.log(`Quiz initialized for section: ${sectionKey}`);
-                    } else if (quizPanel) {
-                        console.warn(`No quiz questions found for section: ${sectionKey}`);
-                    }
-                });
-                
-            } catch (error) {
-                console.error('Error loading quizzes:', error);
-                initializeFallbackQuizzes();
-            }
-        }
-        
-        // Fallback quizzes if JSON file is not available
-        function initializeFallbackQuizzes() {
-            console.log('Initializing fallback quizzes');
-            
-            const fallbackQuizData = {
+            // Sample quiz data - in real implementation, this would come from JSON files
+            const quizData = {
                 introduction: {
-                    id: 'intro-quiz',
-                    title: 'Test Your Understanding',
+                    title: 'Introduction to Punctuation',
                     questions: [
                         {
                             type: 'mcq',
@@ -535,354 +741,191 @@
                                 { label: 'To follow grammar rules', correct: false },
                                 { label: 'To separate words', correct: false }
                             ],
-                            rationale: 'Punctuation primarily helps readers understand the structural relationship within and between sentences.'
-                        },
-                        {
-                            type: 'mcq',
-                            stem: 'Canadian style generally favours:',
-                            options: [
-                                { label: 'Heavy punctuation like British style', correct: false },
-                                { label: 'Lighter punctuation than British style', correct: true },
-                                { label: 'No punctuation at all', correct: false },
-                                { label: 'American punctuation rules', correct: false }
-                            ],
-                            rationale: 'Canadian style generally favours lighter punctuation than British style.'
+                            rationale: 'Punctuation primarily helps readers understand the structural relationship within and between sentences.',
+                            ref: '§7.01'
                         }
                     ]
                 },
                 comma: {
-                    id: 'comma-quiz',
-                    title: 'Comma Usage',
+                    title: 'Comma Rules',
                     questions: [
                         {
                             type: 'mcq',
-                            stem: 'Which sentence correctly uses commas with a restrictive clause?',
+                            stem: 'Which sentence correctly uses the Oxford comma?',
                             options: [
-                                { label: 'The students, who studied hard, passed the exam.', correct: false },
-                                { label: 'The students who studied hard passed the exam.', correct: true },
-                                { label: 'The students who studied hard, passed the exam.', correct: false },
-                                { label: 'The students, who studied hard passed the exam.', correct: false }
+                                { label: 'Red, white and blue', correct: false },
+                                { label: 'Red, white, and blue', correct: true },
+                                { label: 'Red white and blue', correct: false },
+                                { label: 'Red; white; and blue', correct: false }
                             ],
-                            rationale: 'Restrictive clauses (essential information) do not use commas.',
-                            ref: '§7.14'
-                        },
+                            rationale: 'Canadian style uses the Oxford comma: Red, white, and blue.',
+                            ref: '§7.05'
+                        }
+                    ]
+                },
+                semicolon: {
+                    title: 'Semicolon Usage',
+                    questions: [
                         {
                             type: 'mcq',
-                            stem: 'When should you use the Oxford comma in Canadian style?',
+                            stem: 'Which sentence correctly uses a semicolon?',
                             options: [
-                                { label: 'Always', correct: false },
-                                { label: 'Never', correct: false },
-                                { label: 'Only when needed for clarity', correct: true },
-                                { label: 'Only in formal documents', correct: false }
+                                { label: 'The meeting ended, the decisions were final', correct: false },
+                                { label: 'The meeting ended; the decisions were final', correct: true },
+                                { label: 'The meeting ended: the decisions were final', correct: false },
+                                { label: 'The meeting ended—the decisions were final', correct: false }
                             ],
-                            rationale: 'Canadian Style recommends omitting the Oxford comma unless needed for clarity.'
+                            rationale: 'Semicolons join closely related independent clauses.',
+                            ref: '§7.35'
+                        }
+                    ]
+                },
+                colon: {
+                    title: 'Colon Rules',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'When should you NOT use a colon?',
+                            options: [
+                                { label: 'Before a list after "including"', correct: true },
+                                { label: 'To introduce a quotation', correct: false },
+                                { label: 'Before an explanation', correct: false },
+                                { label: 'In time expressions', correct: false }
+                            ],
+                            rationale: 'Don\'t use colons after prepositions like "including" or verbs like "are".',
+                            ref: '§7.42'
                         }
                     ]
                 },
                 dashes: {
-                    id: 'dashes-quiz',
-                    title: 'Using Dashes',
+                    title: 'Dashes',
                     questions: [
                         {
                             type: 'mcq',
-                            stem: 'Which punctuation mark is MOST formal for parenthetical information?',
+                            stem: 'Which dash is used for date ranges?',
                             options: [
-                                { label: 'Em dashes —', correct: false },
-                                { label: 'Commas ,', correct: false },
-                                { label: 'Parentheses ( )', correct: true },
-                                { label: 'Brackets [ ]', correct: false }
+                                { label: 'Hyphen (-)', correct: false },
+                                { label: 'En dash (–)', correct: true },
+                                { label: 'Em dash (—)', correct: false },
+                                { label: 'Any dash works', correct: false }
                             ],
-                            rationale: 'Parentheses are the most formal way to enclose parenthetical information.'
+                            rationale: 'En dashes are used for ranges like 2020–2025.',
+                            ref: '§7.51'
+                        }
+                    ]
+                },
+                parentheses: {
+                    title: 'Parentheses',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'Where does the period go in: "Revenue increased (by 15%)"?',
+                            options: [
+                                { label: 'Inside: (by 15%.)', correct: false },
+                                { label: 'Outside: (by 15%).', correct: true },
+                                { label: 'Both places', correct: false },
+                                { label: 'No period needed', correct: false }
+                            ],
+                            rationale: 'When parentheses are within a sentence, the period goes outside.',
+                            ref: '§7.56'
                         }
                     ]
                 },
                 apostrophe: {
-                    id: 'apostrophe-quiz',
-                    title: 'Apostrophe Rules',
+                    title: 'Apostrophes',
                     questions: [
                         {
                             type: 'mcq',
                             stem: 'Which is correct?',
                             options: [
-                                { label: "The dog wagged it's tail", correct: false },
-                                { label: "The dog wagged its tail", correct: true },
-                                { label: "The dog wagged its' tail", correct: false },
-                                { label: "The dog wagged it tail", correct: false }
+                                { label: 'The dog wagged it\'s tail', correct: false },
+                                { label: 'The dog wagged its tail', correct: true },
+                                { label: 'The dog wagged its\' tail', correct: false },
+                                { label: 'The dog wagged its tail\'', correct: false }
                             ],
-                            rationale: '"Its" is the possessive form (like his/hers). "It\'s" is a contraction for "it is".'
+                            rationale: '"Its" is possessive; "it\'s" means "it is".',
+                            ref: '§7.15'
+                        }
+                    ]
+                },
+                periods: {
+                    title: 'Periods',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'How many spaces follow a period in running text?',
+                            options: [
+                                { label: 'No spaces', correct: false },
+                                { label: 'One space', correct: true },
+                                { label: 'Two spaces', correct: false },
+                                { label: 'Depends on the context', correct: false }
+                            ],
+                            rationale: 'Modern style uses one space after periods in running text.',
+                            ref: '§7.16'
                         }
                     ]
                 }
             };
             
-            // Initialize fallback quizzes
-            Object.entries(fallbackQuizData).forEach(([sectionKey, sectionData]) => {
-                const quizPanel = document.getElementById(`quiz-${sectionKey}`);
-                if (quizPanel) {
-                    const quizEngine = new QuizEngine(sectionData, CHAPTER_ID, sectionKey);
-                    const quizElement = quizEngine.render();
-                    quizPanel.appendChild(quizElement);
-                    console.log(`Fallback quiz initialized for section: ${sectionKey}`);
+            // Initialize quizzes using FIXED API
+            for (const section of sections) {
+                const quiz = quizData[section.id];
+                if (quiz) {
+                    const container = document.getElementById(`quiz-${section.id}`);
+                    if (container) {
+                        // FIXED: Use correct constructor parameters
+                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
+                        const quizElement = engine.render();
+                        container.appendChild(quizElement);
+                    }
                 }
+            }
+        }
+        
+        // Initialize navigation
+        function initializeNavigation() {
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const sectionId = link.dataset.section;
+                    showSection(sectionId);
+                    updateActiveTab(link);
+                });
             });
         }
         
-        // Initialize page
-        function initializePage() {
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show target section
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.style.display = 'block';
+            }
+        }
+        
+        function updateActiveTab(activeLink) {
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            activeLink.classList.add('active');
+        }
+        
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
             updateProgressBar();
             loadSectionQuizzes();
+            initializeNavigation();
             
-            // Setup navigation if router is available
-            if (window.router) {
-                window.router.currentChapter = CHAPTER_ID;
-                window.router.setupSectionLinks();
-                
-                // Handle initial navigation
-                if (!window.location.hash) {
-                    window.router.navigateTo(CHAPTER_ID, 'introduction');
-                }
+            if (!window.location.hash) {
+                router.navigateTo(CHAPTER_ID, 'introduction');
             }
-        }
-        
-        // Event listeners
-        window.addEventListener('progress-changed', updateProgressBar);
-        window.addEventListener('quiz-completed', (event) => {
-            console.log('Quiz completed:', event.detail);
-            updateProgressBar();
-            
-            // Auto-advance to next section after quiz completion
-            const { sectionId } = event.detail;
-            setTimeout(() => {
-                completeSection(sectionId);
-            }, 2000);
         });
         
-        // Initialize when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializePage);
-        } else {
-            initializePage();
-        }
+        window.addEventListener('progress-changed', updateProgressBar);
     </script>
-
-    <style>
-        /* Chapter-specific styles */
-        .examples-box {
-            background: var(--cs-grey-50);
-            border-left: 4px solid var(--cs-red);
-            padding: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .example-pair {
-            display: grid;
-            gap: var(--cs-space-m);
-        }
-        
-        .example {
-            background: var(--cs-white);
-            padding: var(--cs-space-m);
-            border-radius: 6px;
-            border: 1px solid var(--cs-grey-200);
-        }
-        
-        .example small {
-            display: block;
-            color: var(--cs-grey-600);
-            font-style: italic;
-            margin-top: var(--cs-space-xs);
-        }
-        
-        .rule-box {
-            background: rgba(215, 25, 32, 0.05);
-            border: 2px solid rgba(215, 25, 32, 0.2);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .rule-box h4 {
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .key-principle {
-            background: linear-gradient(135deg, #d71920 0%, #b91419 100%);
-            color: white;
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-xl) 0;
-        }
-        
-        .key-principle h3 {
-            color: white;
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .formality-scale {
-            display: grid;
-            gap: var(--cs-space-s);
-            margin: var(--cs-space-m) 0;
-        }
-        
-        .scale-item {
-            padding: var(--cs-space-m);
-            border-radius: 6px;
-            border-left: 4px solid var(--cs-grey-400);
-        }
-        
-        .scale-item.formal {
-            border-left-color: #28a745;
-            background: rgba(40, 167, 69, 0.1);
-        }
-        
-        .scale-item.informal {
-            border-left-color: #ffc107;
-            background: rgba(255, 193, 7, 0.1);
-        }
-        
-        .rules-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--cs-space-m);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .rule-item {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .rule-item h4 {
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .error-examples {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .error-item {
-            display: grid;
-            gap: var(--cs-space-s);
-            padding: var(--cs-space-m) 0;
-            border-bottom: 1px solid var(--cs-grey-200);
-        }
-        
-        .error-item:last-child {
-            border-bottom: none;
-        }
-        
-        .wrong {
-            color: #dc3545;
-            font-weight: var(--cs-font-medium);
-        }
-        
-        .right {
-            color: #28a745;
-            font-weight: var(--cs-font-medium);
-        }
-        
-        .preference-box {
-            background: rgba(40, 167, 69, 0.05);
-            border: 2px solid rgba(40, 167, 69, 0.2);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .preference-box h4 {
-            color: #28a745;
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        /* Quiz Panel Styling */
-        .quiz-panel {
-            margin: var(--cs-space-xl) 0;
-            padding: var(--cs-space-l);
-            background: var(--cs-white);
-            border: 2px solid var(--cs-grey-200);
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .quiz-panel:empty {
-            display: none;
-        }
-        
-        /* Modal styles */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        
-        .modal-content {
-            background: white;
-            padding: var(--cs-space-xl);
-            border-radius: 12px;
-            max-width: 500px;
-            width: 90%;
-            text-align: center;
-        }
-        
-        .modal-stats {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: 2rem;
-            font-weight: var(--cs-font-bold);
-            color: var(--cs-red);
-        }
-        
-        .stat-label {
-            font-size: 0.875rem;
-            color: var(--cs-grey-600);
-        }
-        
-        .modal-actions {
-            display: flex;
-            gap: var(--cs-space-m);
-            justify-content: center;
-            margin-top: var(--cs-space-xl);
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .rules-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .example-pair {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-stats {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-actions {
-                flex-direction: column;
-            }
-        }
-    </style>
 </body>
 </html>
