@@ -1,0 +1,266 @@
+{
+  "business-letters": {
+    "id": "ch10-business-letters",
+    "title": "Business Letters",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "What is the correct order for business letter elements?",
+        "options": [
+          { "label": "Date, recipient address, salutation, body, closing", "correct": true },
+          { "label": "Salutation, date, recipient address, body, closing", "correct": false },
+          { "label": "Date, salutation, recipient address, body, closing", "correct": false },
+          { "label": "Recipient address, date, salutation, body, closing", "correct": false }
+        ],
+        "rationale": "Standard business letter format: date, inside address, salutation, body, complimentary close.",
+        "ref": "§10.02"
+      },
+      {
+        "id": "q2",
+        "type": "mcq",
+        "stem": "How should the salutation be formatted in a business letter?",
+        "options": [
+          { "label": "Dear Sir or Madam,", "correct": false },
+          { "label": "Dear Mr. Smith:", "correct": true },
+          { "label": "Dear Mr. Smith;", "correct": false },
+          { "label": "Dear Mr. Smith-", "correct": false }
+        ],
+        "rationale": "Use a colon after the salutation in business letters (comma in personal letters).",
+        "ref": "§10.02"
+      },
+      {
+        "id": "q3",
+        "type": "fill-blank",
+        "stem": "The complimentary close should be followed by a _____ and positioned _____ on the page.",
+        "answer": "comma, right",
+        "rationale": "Complimentary close takes a comma and aligns with the date on the right.",
+        "ref": "§10.02"
+      }
+    ]
+  },
+  "memorandums": {
+    "id": "ch10-memorandums",
+    "title": "Memorandums",
+    "questions": [
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "What are the standard headings for a memorandum?",
+        "options": [
+          { "label": "To, From, Date, Re:", "correct": false },
+          { "label": "To:, From:, Date:, Subject:", "correct": true },
+          { "label": "Recipient, Sender, Date, Topic", "correct": false },
+          { "label": "For, By, When, About", "correct": false }
+        ],
+        "rationale": "Standard memo format uses To:, From:, Date:, and Subject: headings.",
+        "ref": "§10.03"
+      },
+      {
+        "id": "q5",
+        "type": "mcq",
+        "stem": "How does memo format differ from letter format?",
+        "options": [
+          { "label": "Memos use salutations and closings", "correct": false },
+          { "label": "Memos omit salutations and complimentary closes", "correct": true },
+          { "label": "Memos are always longer", "correct": false },
+          { "label": "Memos require signatures", "correct": false }
+        ],
+        "rationale": "Memos go directly to the message after the heading block—no salutation or closing.",
+        "ref": "§10.03"
+      },
+      {
+        "id": "q6",
+        "type": "error-spot",
+        "stem": "Click on the error in this memo heading:",
+        "text": "To: All Staff From: Manager Date: March 15 Subject Budget Review",
+        "errorIndex": 8,
+        "rationale": "Missing colon after 'Subject' - should be 'Subject:'"
+      }
+    ]
+  },
+  "electronic-mail": {
+    "id": "ch10-email",
+    "title": "Electronic Mail",
+    "questions": [
+      {
+        "id": "q7",
+        "type": "multi-select",
+        "stem": "What are advantages of electronic mail? (Select all that apply)",
+        "options": [
+          { "label": "Speed of delivery", "correct": true },
+          { "label": "Can send to multiple recipients", "correct": true },
+          { "label": "Can include attachments", "correct": true },
+          { "label": "Always completely secure", "correct": false },
+          { "label": "Automatic legal validation", "correct": false }
+        ],
+        "rationale": "Email offers speed, versatility, and attachment capability, but security isn't guaranteed.",
+        "ref": "§10.04"
+      },
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "What is a key disadvantage of email communication?",
+        "options": [
+          { "label": "Takes too long to send", "correct": false },
+          { "label": "Can be intercepted or forged", "correct": true },
+          { "label": "Cannot include attachments", "correct": false },
+          { "label": "Only works within organizations", "correct": false }
+        ],
+        "rationale": "Email can be intercepted and forged, especially across different networks.",
+        "ref": "§10.04"
+      },
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "How should email subject lines be written?",
+        "options": [
+          { "label": "Always in all caps", "correct": false },
+          { "label": "As clear, specific descriptions", "correct": true },
+          { "label": "With minimal information", "correct": false },
+          { "label": "Using abbreviations only", "correct": false }
+        ],
+        "rationale": "Subject lines should clearly and specifically describe the email content.",
+        "ref": "§10.04"
+      }
+    ]
+  },
+  "forms-address": {
+    "id": "ch10-forms-address",
+    "title": "Forms of Address",
+    "questions": [
+      {
+        "id": "q10",
+        "type": "mcq",
+        "stem": "How should you address the Prime Minister in a formal letter?",
+        "options": [
+          { "label": "Dear Prime Minister", "correct": false },
+          { "label": "Dear Mr./Ms. [Surname]", "correct": false },
+          { "label": "Right Honourable Prime Minister", "correct": true },
+          { "label": "Your Excellency", "correct": false }
+        ],
+        "rationale": "The Prime Minister is addressed as 'Right Honourable Prime Minister' in formal correspondence.",
+        "ref": "§10.05"
+      },
+      {
+        "id": "q11",
+        "type": "mcq",
+        "stem": "How should you address a federal cabinet minister?",
+        "options": [
+          { "label": "Dear Minister", "correct": false },
+          { "label": "Honourable [Name]", "correct": true },
+          { "label": "Your Honour", "correct": false },
+          { "label": "Dear Sir/Madam", "correct": false }
+        ],
+        "rationale": "Federal cabinet ministers are addressed as 'Honourable [Full Name]'.",
+        "ref": "§10.05"
+      },
+      {
+        "id": "q12",
+        "type": "drag-drop",
+        "stem": "Match the title with the correct form of address:",
+        "options": [
+          { "label": "Prime Minister = Right Honourable", "order": 1 },
+          { "label": "Cabinet Minister = Honourable", "order": 2 },
+          { "label": "Judge = Your Honour", "order": 3 },
+          { "label": "Doctor = Dr.", "order": 4 }
+        ],
+        "rationale": "Different titles require specific forms of formal address."
+      }
+    ]
+  },
+  "signatures": {
+    "id": "ch10-signatures",
+    "title": "Signatures",
+    "questions": [
+      {
+        "id": "q13",
+        "type": "mcq",
+        "stem": "Where should the signature block be positioned?",
+        "options": [
+          { "label": "Aligned with the left margin", "correct": false },
+          { "label": "Centered on the page", "correct": false },
+          { "label": "Aligned with the date and complimentary close", "correct": true },
+          { "label": "Wherever convenient", "correct": false }
+        ],
+        "rationale": "Signature block aligns with the date and complimentary close, typically on the right.",
+        "ref": "§10.06"
+      },
+      {
+        "id": "q14",
+        "type": "mcq",
+        "stem": "What should appear below the handwritten signature?",
+        "options": [
+          { "label": "Nothing else needed", "correct": false },
+          { "label": "Typed name and title", "correct": true },
+          { "label": "Date only", "correct": false },
+          { "label": "Organization name only", "correct": false }
+        ],
+        "rationale": "Include typed name and title below the handwritten signature for clarity.",
+        "ref": "§10.06"
+      }
+    ]
+  },
+  "envelopes": {
+    "id": "ch10-envelopes",
+    "title": "Envelopes",
+    "questions": [
+      {
+        "id": "q15",
+        "type": "mcq",
+        "stem": "Where should the return address be placed?",
+        "options": [
+          { "label": "Upper right corner", "correct": false },
+          { "label": "Upper left corner", "correct": true },
+          { "label": "Lower left corner", "correct": false },
+          { "label": "Back of envelope", "correct": false }
+        ],
+        "rationale": "Return address goes in the upper left corner of the envelope.",
+        "ref": "§10.07"
+      },
+      {
+        "id": "q16",
+        "type": "fill-blank",
+        "stem": "The recipient's address should be positioned in the _____ of the envelope.",
+        "answer": "centre",
+        "rationale": "Recipient's address is centered on the envelope face.",
+        "ref": "§10.07"
+      }
+    ]
+  },
+  "international-mail": {
+    "id": "ch10-international",
+    "title": "International Mail",
+    "questions": [
+      {
+        "id": "q17",
+        "type": "mcq",
+        "stem": "How should country names appear in international addresses?",
+        "options": [
+          { "label": "In the local language only", "correct": false },
+          { "label": "In English and the local language", "correct": false },
+          { "label": "In English, in capital letters", "correct": true },
+          { "label": "Using country codes only", "correct": false }
+        ],
+        "rationale": "Country names should be written in English and in capital letters for international mail.",
+        "ref": "§10.08"
+      },
+      {
+        "id": "q18",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "Business letter salutation", "back": "Use colon (Dear Mr. Smith:)" },
+          { "front": "Memo format", "back": "To:, From:, Date:, Subject:" },
+          { "front": "Email advantage", "back": "Speed and versatility" },
+          { "front": "Email disadvantage", "back": "Security concerns" },
+          { "front": "Prime Minister address", "back": "Right Honourable" },
+          { "front": "Cabinet Minister address", "back": "Honourable" },
+          { "front": "Signature position", "back": "Aligns with date and close" },
+          { "front": "Return address position", "back": "Upper left corner" },
+          { "front": "International country names", "back": "English, capital letters" }
+        ]
+      }
+    ]
+  }
+}

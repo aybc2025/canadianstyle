@@ -1,0 +1,212 @@
+{
+  "gender": {
+    "id": "ch14-gender",
+    "title": "Gender-Neutral Language",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Which is the best gender-neutral alternative to 'chairman'?",
+        "options": [
+          { "label": "chairwoman", "correct": false },
+          { "label": "chairperson", "correct": true },
+          { "label": "chair", "correct": true },
+          { "label": "chairman/chairwoman", "correct": false }
+        ],
+        "rationale": "Use 'chairperson' or simply 'chair' as gender-neutral alternatives.",
+        "ref": "§14.02"
+      },
+      {
+        "id": "q2",
+        "type": "drag-drop",
+        "stem": "Match the gendered terms with their neutral alternatives:",
+        "options": [
+          { "label": "businessman → businessperson", "order": 1 },
+          { "label": "mailman → mail carrier", "order": 2 },
+          { "label": "stewardess → flight attendant", "order": 3 },
+          { "label": "fireman → firefighter", "order": 4 },
+          { "label": "policeman → police officer", "order": 5 }
+        ],
+        "rationale": "Replace gendered job titles with neutral terms that describe the function."
+      },
+      {
+        "id": "q3",
+        "type": "mcq",
+        "stem": "How should you handle pronouns when gender is unknown?",
+        "options": [
+          { "label": "Always use 'he'", "correct": false },
+          { "label": "Use 'he or she' every time", "correct": false },
+          { "label": "Rewrite to avoid pronouns or use plural forms", "correct": true },
+          { "label": "Use 'it'", "correct": false }
+        ],
+        "rationale": "Best practice is to rewrite sentences to avoid pronouns or use plural forms.",
+        "ref": "§14.02"
+      },
+      {
+        "id": "q4",
+        "type": "error-spot",
+        "stem": "Click on the gender-biased term:",
+        "text": "The average businessman faces many challenges in today's economy",
+        "errorIndex": 2,
+        "rationale": "'Businessman' excludes women; use 'businessperson' or 'business professional'."
+      },
+      {
+        "id": "q5",
+        "type": "mcq",
+        "stem": "Which sentence avoids gender bias?",
+        "options": [
+          { "label": "Each manager should review his performance goals.", "correct": false },
+          { "label": "Each manager should review his or her performance goals.", "correct": false },
+          { "label": "Managers should review their performance goals.", "correct": true },
+          { "label": "Each manager should review their performance goals.", "correct": false }
+        ],
+        "rationale": "Using plural forms ('managers...their') avoids gender bias naturally.",
+        "ref": "§14.02"
+      },
+      {
+        "id": "q6",
+        "type": "fill-blank",
+        "stem": "Replace 'manpower' with _____.",
+        "answer": "workforce",
+        "alternatives": ["personnel", "staff", "human resources"],
+        "rationale": "'Workforce', 'personnel', or 'staff' are gender-neutral alternatives to 'manpower'.",
+        "ref": "§14.02"
+      }
+    ]
+  },
+  "race-ethnicity": {
+    "id": "ch14-race-ethnicity",
+    "title": "Race and Ethnicity",
+    "questions": [
+      {
+        "id": "q7",
+        "type": "mcq",
+        "stem": "When should you mention someone's race or ethnicity?",
+        "options": [
+          { "label": "Always, for completeness", "correct": false },
+          { "label": "Never, it's not relevant", "correct": false },
+          { "label": "Only when directly relevant to the context", "correct": true },
+          { "label": "Only in government documents", "correct": false }
+        ],
+        "rationale": "Mention race or ethnicity only when it's directly relevant to the topic being discussed.",
+        "ref": "§14.03"
+      },
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "Which is the preferred approach for identifying ethnic groups?",
+        "options": [
+          { "label": "Use terms from 50 years ago", "correct": false },
+          { "label": "Use the terms the groups prefer for themselves", "correct": true },
+          { "label": "Use the shortest terms available", "correct": false },
+          { "label": "Avoid any specific terms", "correct": false }
+        ],
+        "rationale": "Use the terms that ethnic and racial groups prefer for themselves, which may evolve over time.",
+        "ref": "§14.03"
+      },
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "How should you refer to Indigenous peoples in Canada?",
+        "options": [
+          { "label": "Use specific nation names when known", "correct": true },
+          { "label": "Always use 'Native'", "correct": false },
+          { "label": "Always use 'Indian'", "correct": false },
+          { "label": "Use any traditional term", "correct": false }
+        ],
+        "rationale": "Use specific nation names (Mi'kmaq, Cree, etc.) when known, or 'Indigenous peoples' as a general term.",
+        "ref": "§14.03"
+      },
+      {
+        "id": "q10",
+        "type": "error-spot",
+        "stem": "Click on the problematic phrasing:",
+        "text": "The articulate Black lawyer presented her case well",
+        "errorIndex": 1,
+        "rationale": "'Articulate' before a racial identifier can imply that being articulate is unexpected for that group."
+      }
+    ]
+  },
+  "disability": {
+    "id": "ch14-disability",
+    "title": "Disability Language",
+    "questions": [
+      {
+        "id": "q11",
+        "type": "mcq",
+        "stem": "Which approach is preferred for writing about disabilities?",
+        "options": [
+          { "label": "Disability-first language (disabled person)", "correct": false },
+          { "label": "Person-first language (person with a disability)", "correct": true },
+          { "label": "Medical terminology only", "correct": false },
+          { "label": "Avoid mentioning disabilities", "correct": false }
+        ],
+        "rationale": "Person-first language emphasizes the person before the disability.",
+        "ref": "§14.04"
+      },
+      {
+        "id": "q12",
+        "type": "mcq",
+        "stem": "Which term should you avoid?",
+        "options": [
+          { "label": "Person with a visual impairment", "correct": false },
+          { "label": "Person who uses a wheelchair", "correct": false },
+          { "label": "Suffers from cerebral palsy", "correct": true },
+          { "label": "Person with autism", "correct": false }
+        ],
+        "rationale": "Avoid terms like 'suffers from' or 'victim of' which imply helplessness.",
+        "ref": "§14.04"
+      },
+      {
+        "id": "q13",
+        "type": "multi-select",
+        "stem": "Which phrases should be avoided? (Select all that apply)",
+        "options": [
+          { "label": "wheelchair-bound", "correct": true },
+          { "label": "person who uses a wheelchair", "correct": false },
+          { "label": "suffers from", "correct": true },
+          { "label": "person with a disability", "correct": false },
+          { "label": "victim of", "correct": true }
+        ],
+        "rationale": "Avoid language that implies being trapped, suffering, or victimized."
+      },
+      {
+        "id": "q14",
+        "type": "fill-blank",
+        "stem": "Instead of 'handicapped parking,' use _____ parking.",
+        "answer": "accessible",
+        "alternatives": ["disability"],
+        "rationale": "'Accessible parking' or 'disability parking' are preferred over 'handicapped'.",
+        "ref": "§14.04"
+      },
+      {
+        "id": "q15",
+        "type": "mcq",
+        "stem": "When writing about mental health, which is most appropriate?",
+        "options": [
+          { "label": "He's a schizophrenic", "correct": false },
+          { "label": "He has schizophrenia", "correct": true },
+          { "label": "He suffers from schizophrenia", "correct": false },
+          { "label": "He's mentally ill", "correct": false }
+        ],
+        "rationale": "Use person-first language and avoid defining people by their condition.",
+        "ref": "§14.04"
+      },
+      {
+        "id": "q16",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "chairman", "back": "chairperson or chair" },
+          { "front": "businessman", "back": "businessperson" },
+          { "front": "manpower", "back": "workforce or personnel" },
+          { "front": "he (unknown gender)", "back": "rewrite with plural or avoid pronouns" },
+          { "front": "handicapped", "back": "person with a disability" },
+          { "front": "suffers from", "back": "has or person with" },
+          { "front": "wheelchair-bound", "back": "uses a wheelchair" },
+          { "front": "victim of disability", "back": "person with a disability" }
+        ]
+      }
+    ]
+  }
+}

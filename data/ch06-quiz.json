@@ -1,32 +1,40 @@
 {
   "emphasis": {
     "id": "ch06-emphasis",
-    "title": "Italics for Emphasis",
+    "title": "Emphasis and Stress",
     "questions": [
       {
         "id": "q1",
         "type": "mcq",
         "stem": "When should italics be used for emphasis?",
         "options": [
-          { "label": "Frequently throughout the document", "correct": false },
-          { "label": "Sparingly, for genuine emphasis", "correct": true },
-          { "label": "Never in formal documents", "correct": false },
-          { "label": "Only in footnotes", "correct": false }
+          { "label": "Frequently, to make text more interesting", "correct": false },
+          { "label": "Sparingly, when other methods won't work", "correct": true },
+          { "label": "Never, bold is always better", "correct": false },
+          { "label": "Only in academic writing", "correct": false }
         ],
-        "rationale": "Use italics sparingly for emphasis to maintain their effectiveness.",
+        "rationale": "Italics for emphasis should be used sparingly and only when other methods of emphasis won't achieve the desired effect.",
         "ref": "§6.02"
       },
       {
         "id": "q2",
+        "type": "error-spot",
+        "stem": "Click on the inappropriate use of italics:",
+        "text": "The *very important* meeting will discuss *budget*, *staff*, and *policies*",
+        "errorIndex": 3,
+        "rationale": "Overusing italics for emphasis weakens their effect. Use italics sparingly."
+      },
+      {
+        "id": "q3",
         "type": "mcq",
-        "stem": "Which sentence uses italics appropriately?",
+        "stem": "Which is the best way to emphasize a key point?",
         "options": [
-          { "label": "The report was very important.", "correct": false },
-          { "label": "The report was *very* important.", "correct": false },
-          { "label": "What exactly did she mean by that?", "correct": true },
-          { "label": "WHAT exactly did she mean by that?", "correct": false }
+          { "label": "Use italics throughout the paragraph", "correct": false },
+          { "label": "Structure your writing to give natural emphasis", "correct": true },
+          { "label": "Use bold and italics together", "correct": false },
+          { "label": "Use all capitals", "correct": false }
         ],
-        "rationale": "Italicize key words for emphasis, not common intensifiers.",
+        "rationale": "Good writing structure provides natural emphasis better than typographic devices.",
         "ref": "§6.02"
       }
     ]
@@ -36,33 +44,37 @@
     "title": "Titles of Works",
     "questions": [
       {
-        "id": "q3",
-        "type": "multi-select",
-        "stem": "Which titles should be italicized? (Select all)",
+        "id": "q4",
+        "type": "mcq",
+        "stem": "Which titles should be italicized?",
         "options": [
-          { "label": "Books", "correct": true },
-          { "label": "Magazine articles", "correct": false },
-          { "label": "Newspapers", "correct": true },
+          { "label": "Books, newspapers, magazines", "correct": true },
+          { "label": "Articles, short stories, poems", "correct": false },
           { "label": "Chapter titles", "correct": false },
-          { "label": "Films", "correct": true }
+          { "label": "All of the above", "correct": false }
         ],
-        "rationale": "Italicize complete works; use quotation marks for parts of works.",
+        "rationale": "Italicize titles of books, newspapers, magazines, movies, plays, and other major works.",
         "ref": "§6.03"
       },
       {
-        "id": "q4",
-        "type": "error-spot",
-        "stem": "Click on the formatting error:",
-        "text": "She read 'The Globe and Mail' every morning",
-        "errorIndex": 2,
-        "rationale": "Newspaper titles should be italicized, not in quotation marks."
+        "id": "q5",
+        "type": "multi-select",
+        "stem": "Which titles should be in quotation marks, not italics? (Select all)",
+        "options": [
+          { "label": "Newspaper articles", "correct": true },
+          { "label": "Magazine articles", "correct": true },
+          { "label": "Book chapters", "correct": true },
+          { "label": "Novels", "correct": false },
+          { "label": "Short stories", "correct": true }
+        ],
+        "rationale": "Use quotation marks for parts of larger works: articles, chapters, short stories."
       },
       {
-        "id": "q5",
+        "id": "q6",
         "type": "fill-blank",
-        "stem": "Margaret Atwood's novel ___ won many awards.",
-        "answer": "The Handmaid's Tale",
-        "rationale": "Book titles are italicized.",
+        "stem": "I read an article called _____ in the _Toronto Star_.",
+        "answer": "\"City Budget Approved\"",
+        "rationale": "Article titles go in quotation marks; newspaper names are italicized.",
         "ref": "§6.03"
       }
     ]
@@ -72,73 +84,56 @@
     "title": "Foreign Words and Phrases",
     "questions": [
       {
-        "id": "q6",
+        "id": "q7",
         "type": "mcq",
-        "stem": "Which foreign term should be italicized?",
+        "stem": "When should foreign words be italicized?",
         "options": [
-          { "label": "café", "correct": false },
-          { "label": "per se", "correct": false },
-          { "label": "raison d'être", "correct": true },
-          { "label": "curriculum vitae", "correct": false }
+          { "label": "Always", "correct": false },
+          { "label": "When they haven't been anglicized", "correct": true },
+          { "label": "Never", "correct": false },
+          { "label": "Only in academic writing", "correct": false }
         ],
-        "rationale": "Italicize foreign phrases not yet absorbed into English.",
+        "rationale": "Italicize foreign words that haven't been fully adopted into English.",
         "ref": "§6.04"
       },
       {
-        "id": "q7",
-        "type": "multi-select",
-        "stem": "Which Latin abbreviations are italicized? (Select all)",
-        "options": [
-          { "label": "e.g.", "correct": false },
-          { "label": "ibid.", "correct": true },
-          { "label": "etc.", "correct": false },
-          { "label": "sic", "correct": true }
-        ],
-        "rationale": "Some Latin abbreviations like ibid. and sic are italicized; common ones like e.g. are not.",
-        "ref": "§6.05"
-      }
-    ]
-  },
-  "special-uses": {
-    "id": "ch06-special",
-    "title": "Special Uses of Italics",
-    "questions": [
-      {
         "id": "q8",
-        "type": "mcq",
-        "stem": "How should you refer to a word as a word?",
+        "type": "drag-drop",
+        "stem": "Sort these words by whether they need italics:",
         "options": [
-          { "label": "The word 'happy' has five letters.", "correct": false },
-          { "label": "The word happy has five letters.", "correct": true },
-          { "label": "The word HAPPY has five letters.", "correct": false },
-          { "label": "The word \"happy\" has five letters.", "correct": false }
+          { "label": "café (no italics - anglicized)", "order": 1 },
+          { "label": "déjà vu (no italics - common)", "order": 2 },
+          { "label": "Weltanschauung (italics - not anglicized)", "order": 3 },
+          { "label": "schadenfreude (italics - foreign)", "order": 4 }
         ],
-        "rationale": "Words referred to as words are italicized.",
-        "ref": "§6.07"
+        "rationale": "Common foreign terms don't need italics; uncommon ones do."
       },
       {
         "id": "q9",
-        "type": "drag-drop",
-        "stem": "Match the item with its formatting:",
+        "type": "mcq",
+        "stem": "Which Latin phrase doesn't need italics?",
         "options": [
-          { "label": "HMCS Vancouver → italics", "order": 1 },
-          { "label": "Boeing 747 → no italics", "order": 2 },
-          { "label": "Titanic (ship) → italics", "order": 3 },
-          { "label": "Discovery (space shuttle) → italics", "order": 4 }
+          { "label": "sine qua non", "correct": false },
+          { "label": "etc.", "correct": true },
+          { "label": "sui generis", "correct": false },
+          { "label": "inter alia", "correct": false }
         ],
-        "rationale": "Ship names are italicized; aircraft types are not.",
-        "ref": "§6.11"
+        "rationale": "Common abbreviations like 'etc.' are so familiar they don't need italics.",
+        "ref": "§6.04"
       },
       {
         "id": "q10",
         "type": "quickfire",
         "timeLimit": 30,
         "cards": [
-          { "front": "The Globe and Mail", "back": "Italicize (newspaper)" },
-          { "front": "Chapter 5", "back": "No italics (chapter reference)" },
-          { "front": "ad hoc", "back": "No italics (common Latin)" },
-          { "front": "HMS Queen Elizabeth", "back": "Italicize (ship name)" },
-          { "front": "The letter a", "back": "Italicize 'a' (letter as letter)" }
+          { "front": "Book title", "back": "Italics" },
+          { "front": "Magazine article", "back": "Quotation marks" },
+          { "front": "Foreign phrase (unfamiliar)", "back": "Italics" },
+          { "front": "Movie title", "back": "Italics" },
+          { "front": "Song title", "back": "Quotation marks" },
+          { "front": "TV show", "back": "Italics" },
+          { "front": "Episode title", "back": "Quotation marks" },
+          { "front": "Painting title", "back": "Italics" }
         ]
       }
     ]

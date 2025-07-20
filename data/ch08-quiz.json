@@ -1,0 +1,252 @@
+{
+  "quotation-marks": {
+    "id": "ch08-quotation-marks",
+    "title": "Quotation Marks",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Which is correct for a direct quotation?",
+        "options": [
+          { "label": "She said, \"I'll be there at noon.\"", "correct": true },
+          { "label": "She said, 'I'll be there at noon.'", "correct": false },
+          { "label": "She said, \"I'll be there at noon.'", "correct": false },
+          { "label": "She said: \"I'll be there at noon.\"", "correct": false }
+        ],
+        "rationale": "Use double quotation marks for direct quotes, with comma before opening quote.",
+        "ref": "§8.02"
+      },
+      {
+        "id": "q2",
+        "type": "mcq",
+        "stem": "Where does the period go with quotation marks?",
+        "options": [
+          { "label": "Always outside the quotation marks", "correct": false },
+          { "label": "Always inside the quotation marks", "correct": true },
+          { "label": "Depends on the sentence structure", "correct": false },
+          { "label": "Either inside or outside is acceptable", "correct": false }
+        ],
+        "rationale": "In Canadian style, periods and commas always go inside quotation marks.",
+        "ref": "§8.06"
+      },
+      {
+        "id": "q3",
+        "type": "error-spot",
+        "stem": "Click on the punctuation error:",
+        "text": "He asked, \"When will you arrive\"?",
+        "errorIndex": 6,
+        "rationale": "Question mark should go inside the quotation marks when the quote itself is a question."
+      }
+    ]
+  },
+  "nested-quotations": {
+    "id": "ch08-nested",
+    "title": "Nested Quotations",
+    "questions": [
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "How do you punctuate a quote within a quote?",
+        "options": [
+          { "label": "Use double quotes for both", "correct": false },
+          { "label": "Use single quotes for the inner quote", "correct": true },
+          { "label": "Use italics for the inner quote", "correct": false },
+          { "label": "Use parentheses for the inner quote", "correct": false }
+        ],
+        "rationale": "Use single quotation marks for quotes within quotes.",
+        "ref": "§8.03"
+      },
+      {
+        "id": "q5",
+        "type": "fill-blank",
+        "stem": "She said, \"John told me, ___I'll be late___ yesterday.\"",
+        "answer": "'",
+        "rationale": "Single quotes are used for the inner quotation.",
+        "ref": "§8.03"
+      },
+      {
+        "id": "q6",
+        "type": "mcq",
+        "stem": "In a three-level quotation, what marks are used for the innermost quote?",
+        "options": [
+          { "label": "Double quotes", "correct": true },
+          { "label": "Single quotes", "correct": false },
+          { "label": "Italics", "correct": false },
+          { "label": "No marks needed", "correct": false }
+        ],
+        "rationale": "Pattern is: \"outer 'middle \"inner\" middle' outer\"",
+        "ref": "§8.03"
+      }
+    ]
+  },
+  "block-quotations": {
+    "id": "ch08-block",
+    "title": "Block Quotations",
+    "questions": [
+      {
+        "id": "q7",
+        "type": "mcq",
+        "stem": "When should you use a block quotation format?",
+        "options": [
+          { "label": "For quotes longer than 3 lines", "correct": false },
+          { "label": "For quotes longer than 4 lines or 40 words", "correct": true },
+          { "label": "For all quotes from published sources", "correct": false },
+          { "label": "Only for poetry", "correct": false }
+        ],
+        "rationale": "Block format is used for quotations longer than 4 lines or about 40 words.",
+        "ref": "§8.04"
+      },
+      {
+        "id": "q8",
+        "type": "multi-select",
+        "stem": "Block quotations should: (Select all that apply)",
+        "options": [
+          { "label": "Be indented from both margins", "correct": true },
+          { "label": "Use quotation marks", "correct": false },
+          { "label": "Be single-spaced", "correct": true },
+          { "label": "Have the citation after the final punctuation", "correct": true }
+        ],
+        "rationale": "Block quotes are indented, single-spaced, without quotation marks, with citation after."
+      },
+      {
+        "id": "q9",
+        "type": "mcq",
+        "stem": "How do you introduce a block quotation?",
+        "options": [
+          { "label": "Always with a comma", "correct": false },
+          { "label": "Usually with a colon", "correct": true },
+          { "label": "Never with punctuation", "correct": false },
+          { "label": "With quotation marks", "correct": false }
+        ],
+        "rationale": "Block quotations are typically introduced with a colon.",
+        "ref": "§8.04"
+      }
+    ]
+  },
+  "omissions-insertions": {
+    "id": "ch08-omissions",
+    "title": "Omissions and Insertions",
+    "questions": [
+      {
+        "id": "q10",
+        "type": "mcq",
+        "stem": "How do you show that words have been omitted from a quotation?",
+        "options": [
+          { "label": "Use three dots (...)", "correct": false },
+          { "label": "Use ellipsis points with spaces ( . . . )", "correct": true },
+          { "label": "Use dashes", "correct": false },
+          { "label": "Use parentheses", "correct": false }
+        ],
+        "rationale": "Use spaced ellipsis points to show omissions in quotations.",
+        "ref": "§8.05"
+      },
+      {
+        "id": "q11",
+        "type": "mcq",
+        "stem": "How do you add explanatory words to a quotation?",
+        "options": [
+          { "label": "Use parentheses (like this)", "correct": false },
+          { "label": "Use square brackets [like this]", "correct": true },
+          { "label": "Use italics", "correct": false },
+          { "label": "Use footnotes", "correct": false }
+        ],
+        "rationale": "Square brackets indicate editorial insertions in quotations.",
+        "ref": "§8.05"
+      },
+      {
+        "id": "q12",
+        "type": "fill-blank",
+        "stem": "\"The policy ___will be reviewed___ next year.\" (showing omission)",
+        "answer": ". . .",
+        "rationale": "Spaced ellipsis points indicate omitted words.",
+        "ref": "§8.05"
+      }
+    ]
+  },
+  "punctuation-quotations": {
+    "id": "ch08-punctuation",
+    "title": "Punctuation with Quotations",
+    "questions": [
+      {
+        "id": "q13",
+        "type": "mcq",
+        "stem": "Where do colons and semicolons go with quotation marks?",
+        "options": [
+          { "label": "Always inside", "correct": false },
+          { "label": "Always outside", "correct": true },
+          { "label": "Depends on meaning", "correct": false },
+          { "label": "Either is acceptable", "correct": false }
+        ],
+        "rationale": "Colons and semicolons always go outside quotation marks.",
+        "ref": "§8.06"
+      },
+      {
+        "id": "q14",
+        "type": "drag-drop",
+        "stem": "Order these by where punctuation goes (inside to outside):",
+        "options": [
+          { "label": "Periods and commas (always inside)", "order": 1 },
+          { "label": "Question marks (inside if part of quote)", "order": 2 },
+          { "label": "Exclamation marks (inside if part of quote)", "order": 3 },
+          { "label": "Colons and semicolons (always outside)", "order": 4 }
+        ],
+        "rationale": "Different punctuation marks follow different rules with quotation marks."
+      },
+      {
+        "id": "q15",
+        "type": "error-spot",
+        "stem": "Click on the punctuation error:",
+        "text": "Did she say \"I'll be late\"?",
+        "errorIndex": 4,
+        "rationale": "This is correct - question mark outside because the whole sentence is a question, not the quote."
+      }
+    ]
+  },
+  "indirect-quotations": {
+    "id": "ch08-indirect",
+    "title": "Indirect Quotations",
+    "questions": [
+      {
+        "id": "q16",
+        "type": "mcq",
+        "stem": "Which is an indirect quotation?",
+        "options": [
+          { "label": "She said, \"I am tired.\"", "correct": false },
+          { "label": "She said that she was tired.", "correct": true },
+          { "label": "\"I am tired,\" she said.", "correct": false },
+          { "label": "She exclaimed, \"I'm so tired!\"", "correct": false }
+        ],
+        "rationale": "Indirect quotations report what someone said without using their exact words.",
+        "ref": "§8.07"
+      },
+      {
+        "id": "q17",
+        "type": "mcq",
+        "stem": "Do indirect quotations use quotation marks?",
+        "options": [
+          { "label": "Yes, always", "correct": false },
+          { "label": "No, never", "correct": true },
+          { "label": "Only for important statements", "correct": false },
+          { "label": "Only in formal writing", "correct": false }
+        ],
+        "rationale": "Indirect quotations never use quotation marks because they're not exact words.",
+        "ref": "§8.07"
+      },
+      {
+        "id": "q18",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "Direct quote", "back": "Uses exact words, needs quotation marks" },
+          { "front": "Indirect quote", "back": "Reports meaning, no quotation marks" },
+          { "front": "Block quote", "back": "Long quote, indented, no quotation marks" },
+          { "front": "Quote within quote", "back": "Use single quotes inside double quotes" },
+          { "front": "Ellipsis", "back": "Shows omitted words ( . . . )" },
+          { "front": "Square brackets", "back": "Shows added explanatory words [like this]" },
+          { "front": "Period placement", "back": "Always inside quotation marks" },
+          { "front": "Colon placement", "back": "Always outside quotation marks" }
+        ]
+      }
+    ]
+  }
+}

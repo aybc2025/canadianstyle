@@ -1,0 +1,240 @@
+{
+  "footnotes": {
+    "id": "ch09-footnotes",
+    "title": "Footnotes",
+    "questions": [
+      {
+        "id": "q1",
+        "type": "mcq",
+        "stem": "Where should footnote numbers be placed in text?",
+        "options": [
+          { "label": "Before punctuation marks", "correct": false },
+          { "label": "After punctuation marks", "correct": true },
+          { "label": "On a separate line", "correct": false },
+          { "label": "In parentheses", "correct": false }
+        ],
+        "rationale": "Footnote numbers come after punctuation marks, typically at the end of sentences.",
+        "ref": "§9.02"
+      },
+      {
+        "id": "q2",
+        "type": "mcq",
+        "stem": "How should footnote numbers appear in text?",
+        "options": [
+          { "label": "In parentheses: (1)", "correct": false },
+          { "label": "In square brackets: [1]", "correct": false },
+          { "label": "As superscript: ¹", "correct": true },
+          { "label": "As regular numbers: 1", "correct": false }
+        ],
+        "rationale": "Footnote numbers should be superscript in the text.",
+        "ref": "§9.02"
+      },
+      {
+        "id": "q3",
+        "type": "mcq",
+        "stem": "Where do footnotes appear on the page?",
+        "options": [
+          { "label": "At the top of the page", "correct": false },
+          { "label": "At the bottom of the page", "correct": true },
+          { "label": "At the end of the document", "correct": false },
+          { "label": "In the margins", "correct": false }
+        ],
+        "rationale": "Footnotes appear at the bottom (foot) of the same page as the reference.",
+        "ref": "§9.02"
+      }
+    ]
+  },
+  "endnotes": {
+    "id": "ch09-endnotes",
+    "title": "Endnotes",
+    "questions": [
+      {
+        "id": "q4",
+        "type": "mcq",
+        "stem": "How do endnotes differ from footnotes?",
+        "options": [
+          { "label": "Endnotes use different numbering", "correct": false },
+          { "label": "Endnotes appear at the end of chapters or documents", "correct": true },
+          { "label": "Endnotes use different formatting", "correct": false },
+          { "label": "Endnotes are only for citations", "correct": false }
+        ],
+        "rationale": "Endnotes are gathered at the end of chapters or documents, not at page bottoms.",
+        "ref": "§9.03"
+      },
+      {
+        "id": "q5",
+        "type": "mcq",
+        "stem": "When might you choose endnotes over footnotes?",
+        "options": [
+          { "label": "When you have many long notes", "correct": true },
+          { "label": "For shorter documents only", "correct": false },
+          { "label": "Only for academic writing", "correct": false },
+          { "label": "When footnotes aren't allowed", "correct": false }
+        ],
+        "rationale": "Endnotes prevent page bottoms from being overwhelmed by long or numerous notes.",
+        "ref": "§9.03"
+      },
+      {
+        "id": "q6",
+        "type": "fill-blank",
+        "stem": "Endnotes typically appear under the heading _____ at chapter or document end.",
+        "answer": "Notes",
+        "rationale": "Endnotes are usually gathered under a 'Notes' heading.",
+        "ref": "§9.03"
+      }
+    ]
+  },
+  "bibliographies": {
+    "id": "ch09-bibliographies",
+    "title": "Bibliographies",
+    "questions": [
+      {
+        "id": "q7",
+        "type": "mcq",
+        "stem": "What is the standard order for bibliography entries?",
+        "options": [
+          { "label": "By order of appearance in text", "correct": false },
+          { "label": "By date of publication", "correct": false },
+          { "label": "Alphabetical by author's surname", "correct": true },
+          { "label": "By importance of source", "correct": false }
+        ],
+        "rationale": "Bibliography entries are typically arranged alphabetically by author's surname.",
+        "ref": "§9.04"
+      },
+      {
+        "id": "q8",
+        "type": "mcq",
+        "stem": "How should book titles appear in bibliographies?",
+        "options": [
+          { "label": "In quotation marks", "correct": false },
+          { "label": "In italics", "correct": true },
+          { "label": "In bold", "correct": false },
+          { "label": "In regular text", "correct": false }
+        ],
+        "rationale": "Book titles are italicized in bibliographic entries.",
+        "ref": "§9.04"
+      },
+      {
+        "id": "q9",
+        "type": "drag-drop",
+        "stem": "Order the parts of a book bibliography entry:",
+        "options": [
+          { "label": "Author surname, given name", "order": 1 },
+          { "label": "Book title (italicized)", "order": 2 },
+          { "label": "Place of publication", "order": 3 },
+          { "label": "Publisher", "order": 4 },
+          { "label": "Publication date", "order": 5 }
+        ],
+        "rationale": "Standard bibliography format for books follows this order."
+      }
+    ]
+  },
+  "citations": {
+    "id": "ch09-citations",
+    "title": "Citations",
+    "questions": [
+      {
+        "id": "q10",
+        "type": "mcq",
+        "stem": "What is the purpose of citations?",
+        "options": [
+          { "label": "To make documents look academic", "correct": false },
+          { "label": "To give credit and allow verification", "correct": true },
+          { "label": "To increase page count", "correct": false },
+          { "label": "To show off research", "correct": false }
+        ],
+        "rationale": "Citations give credit to sources and allow readers to verify information.",
+        "ref": "§9.05"
+      },
+      {
+        "id": "q11",
+        "type": "multi-select",
+        "stem": "What should be cited? (Select all that apply)",
+        "options": [
+          { "label": "Direct quotations", "correct": true },
+          { "label": "Paraphrased ideas", "correct": true },
+          { "label": "Common knowledge", "correct": false },
+          { "label": "Statistics and data", "correct": true },
+          { "label": "Your own original ideas", "correct": false }
+        ],
+        "rationale": "Cite any information taken from other sources, whether quoted or paraphrased."
+      },
+      {
+        "id": "q12",
+        "type": "mcq",
+        "stem": "Which citation style is commonly used in Canadian government documents?",
+        "options": [
+          { "label": "APA only", "correct": false },
+          { "label": "MLA only", "correct": false },
+          { "label": "Depends on department guidelines", "correct": true },
+          { "label": "Chicago only", "correct": false }
+        ],
+        "rationale": "Citation style varies by department and document type; follow organizational guidelines.",
+        "ref": "§9.05"
+      }
+    ]
+  },
+  "electronic-sources": {
+    "id": "ch09-electronic",
+    "title": "Electronic Sources",
+    "questions": [
+      {
+        "id": "q13",
+        "type": "mcq",
+        "stem": "What additional information is needed for electronic source citations?",
+        "options": [
+          { "label": "The computer used", "correct": false },
+          { "label": "The access date", "correct": true },
+          { "label": "The browser type", "correct": false },
+          { "label": "The download time", "correct": false }
+        ],
+        "rationale": "Electronic sources need access dates because online content can change.",
+        "ref": "§9.06"
+      },
+      {
+        "id": "q14",
+        "type": "mcq",
+        "stem": "How should URLs be formatted in citations?",
+        "options": [
+          { "label": "In italics", "correct": false },
+          { "label": "In quotation marks", "correct": false },
+          { "label": "As plain text", "correct": true },
+          { "label": "In bold", "correct": false }
+        ],
+        "rationale": "URLs are typically formatted as plain text in citations.",
+        "ref": "§9.06"
+      },
+      {
+        "id": "q15",
+        "type": "fill-blank",
+        "stem": "Electronic sources should include: Author, Title, URL, and _____.",
+        "answer": "access date",
+        "rationale": "Access date is crucial for electronic sources because content can change.",
+        "ref": "§9.06"
+      },
+      {
+        "id": "q16",
+        "type": "error-spot",
+        "stem": "Click on the missing element in this citation:",
+        "text": "Smith, John. \"Digital Trends.\" www.example.com",
+        "errorIndex": 5,
+        "rationale": "Missing access date, which is required for electronic sources."
+      },
+      {
+        "id": "q17",
+        "type": "quickfire",
+        "timeLimit": 30,
+        "cards": [
+          { "front": "Footnote placement", "back": "Bottom of same page" },
+          { "front": "Endnote placement", "back": "End of chapter/document" },
+          { "front": "Bibliography order", "back": "Alphabetical by author surname" },
+          { "front": "Book titles", "back": "Italicized" },
+          { "front": "Article titles", "back": "In quotation marks" },
+          { "front": "Electronic sources need", "back": "Access date" },
+          { "front": "Citation purpose", "back": "Credit sources, allow verification" },
+          { "front": "Footnote numbers", "back": "Superscript after punctuation" }
+        ]
+      }
+    ]
+  }
+}
