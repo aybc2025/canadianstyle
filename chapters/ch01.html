@@ -8,75 +8,78 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+    <div class="chapter-container">
+        <header class="chapter-header">
+            <div class="breadcrumb">
+                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
+                <span class="breadcrumb-separator">/</span>
+                <span class="breadcrumb-current">Chapter 1: Abbreviations</span>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="chapter-hero">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 1
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">01</div>
-                <div>
-                    <h1>Abbreviations</h1>
-                    <p>Rules for using abbreviations correctly in government writing</p>
+            <div class="chapter-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="chapterProgress"></div>
                 </div>
+                <span class="progress-text">Progress</span>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
+        </header>
 
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">1.01 Introduction</a>
-                <a href="#sentence-capitals" class="tab-link" data-section="sentence-capitals">1.02 General Guidelines</a>
-                <a href="#proper-nouns" class="tab-link" data-section="proper-nouns">1.03 Periods</a>
-                <a href="#government-bodies" class="tab-link" data-section="government-bodies">1.04 Plurals</a>
-                <a href="#titles-positions" class="tab-link" data-section="titles-positions">1.05 Capital Letters</a>
-                <a href="#geographic-names" class="tab-link" data-section="geographic-names">1.06 Titles with Names</a>
-                <a href="#brand-names" class="tab-link" data-section="brand-names">1.07 Military Terms</a>
+        <nav class="chapter-nav">
+            <div class="nav-links">
+                <a href="#introduction" class="tab-link active" data-section="introduction">1.01 Introduction</a>
+                <a href="#sentence-capitals" class="tab-link" data-section="sentence-capitals">1.02 Sentence Capitals</a>
+                <a href="#proper-nouns" class="tab-link" data-section="proper-nouns">1.03 Proper Nouns</a>
+                <a href="#government-bodies" class="tab-link" data-section="government-bodies">1.04 Government Bodies</a>
+                <a href="#titles-positions" class="tab-link" data-section="titles-positions">1.05 Titles & Positions</a>
+                <a href="#geographic-names" class="tab-link" data-section="geographic-names">1.06 Geographic Names</a>
+                <a href="#brand-names" class="tab-link" data-section="brand-names">1.07 Brand Names</a>
                 <a href="#academic-degrees" class="tab-link" data-section="academic-degrees">1.08 Academic Degrees</a>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="chapter-content">
-        <div class="container">
-            <!-- Section 1.01: Introduction -->
+        <main class="chapter-content">
+            <!-- Introduction Section -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>1.01 Introduction</h2>
+                    <h2>1.01 Introduction to Abbreviations</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>The use of abbreviations has gained greater acceptance as an increasing number of new products and organizations are identified by shorter and more easily recognizable word forms.</p>
+                <div class="content-block">
+                    <p>Abbreviations save space and time in writing, but they must be used carefully to maintain clarity. This chapter covers Canadian government standards for creating and using abbreviations effectively.</p>
                     
-                    <p>In addition to abbreviations in the strict sense (including the short forms of common nouns, Latin expressions and titles), this chapter contains information and recommendations regarding acronyms, initialisms, and symbols such as those for metric units, which are uniform in many languages.</p>
-                    
-                    <div class="key-concept">
-                        <h3>Key Principles</h3>
+                    <div class="key-principles">
+                        <h3>General Principles</h3>
                         <ul>
-                            <li>Use abbreviations only when they improve readability</li>
-                            <li>Ensure consistency throughout your document</li>
-                            <li>Consider your audience's familiarity with the abbreviation</li>
-                            <li>Follow established conventions for your field</li>
+                            <li>Use abbreviations sparingly in formal writing</li>
+                            <li>Define abbreviations on first use</li>
+                            <li>Avoid abbreviations that might confuse readers</li>
+                            <li>Follow established conventions consistently</li>
                         </ul>
+                    </div>
+                    
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Common Patterns</h4>
+                            <ul>
+                                <li><strong>Periods:</strong> Mr., Dr., etc.</li>
+                                <li><strong>No periods:</strong> UN, NATO, CEO</li>
+                                <li><strong>Mixed:</strong> Ph.D., LL.B.</li>
+                                <li><strong>Metric:</strong> km, kg, cm (no periods)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>First Use Rule</h4>
+                            <ul>
+                                <li>First: "Department of Justice (DOJ)"</li>
+                                <li>Later: "DOJ announced..."</li>
+                                <li>First: "gross domestic product (GDP)"</li>
+                                <li>Later: "GDP increased by 2%"</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Introduction -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
@@ -86,29 +89,42 @@
                 </div>
             </section>
 
-            <!-- Section 1.02: General Guidelines -->
-            <section class="content-section" id="sentence-capitals">
+            <!-- Sentence Capitals Section -->
+            <section class="content-section" id="sentence-capitals" style="display: none;">
                 <div class="section-header">
-                    <h2>1.02 General Guidelines and Observations</h2>
+                    <h2>1.02 Sentence Capitals</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Many abbreviations will not be understood unless the term is written in full at first mention, with the abbreviation given in parentheses. Follow these general rules:</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Basic Rule</h4>
+                        <p>Abbreviations at the beginning of sentences follow normal capitalization rules, regardless of how they appear mid-sentence.</p>
+                    </div>
                     
-                    <h3>Basic Rules</h3>
-                    <ul>
-                        <li>In general, abbreviate words only when the short form will be immediately recognized by the reader, and ensure that the same abbreviation is used elsewhere in your text to represent the word or words involved.</li>
-                        <li>Some standard abbreviations such as <em>i.e.</em>, AD, IQ, ESR, CBC and MP do not have to be spelled out because they are well known and in many cases occur as dictionary entries.</li>
-                        <li>Many commonly used words that are actually abbreviations are now rarely regarded as such, including <em>ad</em>, <em>fridge</em>, <em>phone</em>, <em>exam</em>, <em>memo</em>, <em>photo</em> and <em>math</em>. Most such words should be avoided in formal writing, although <em>cello</em> and <em>bus</em> are exceptions to this rule.</li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">First Mention Rule</div>
-                        <p><strong>Correct:</strong> The Canadian Broadcasting Corporation (CBC) announced new programming.</p>
-                        <p><strong>Later references:</strong> The CBC will continue this policy.</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Correct Examples</h4>
+                            <ul>
+                                <li><strong>Mid-sentence:</strong> The e.g. used was appropriate</li>
+                                <li><strong>Sentence start:</strong> E.g., this example works well</li>
+                                <li><strong>Mid-sentence:</strong> The etc. at the end</li>
+                                <li><strong>Sentence start:</strong> Etc. should be avoided here</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Special Cases</h4>
+                            <ul>
+                                <li><strong>Avoid:</strong> Starting sentences with etc.</li>
+                                <li><strong>Prefer:</strong> Spell out at sentence start when unclear</li>
+                                <li><strong>Exception:</strong> Well-known abbreviations (FBI, UN)</li>
+                                <li><strong>Always OK:</strong> Proper names (Mr. Smith)</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Sentence Capitals -->
                 <div class="quiz-panel" id="quiz-sentence-capitals"></div>
                 
                 <div class="section-footer">
@@ -118,39 +134,49 @@
                 </div>
             </section>
 
-            <!-- Section 1.03: Periods -->
-            <section class="content-section" id="proper-nouns">
+            <!-- Proper Nouns Section -->
+            <section class="content-section" id="proper-nouns" style="display: none;">
                 <div class="section-header">
-                    <h2>1.03 Periods</h2>
+                    <h2>1.03 Proper Nouns</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>The use of periods in abbreviations follows specific patterns and conventions.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Abbreviating Proper Nouns</h4>
+                        <p>Proper nouns can be abbreviated using initial letters, but follow established conventions for well-known organizations.</p>
+                    </div>
                     
-                    <h3>When to Use Periods</h3>
-                    <div class="rule-grid">
-                        <div class="rule-card">
-                            <h4>Use Periods With:</h4>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Organizations</h4>
                             <ul>
-                                <li>Most lower-case abbreviations: <em>etc.</em>, <em>e.g.</em>, <em>i.e.</em></li>
-                                <li>Abbreviated titles: <em>Dr.</em>, <em>Mr.</em>, <em>Ms.</em></li>
-                                <li>Traditional Latin abbreviations: <em>a.m.</em>, <em>p.m.</em></li>
-                                <li>Units of measurement in text: <em>ft.</em>, <em>in.</em></li>
+                                <li><strong>UN</strong> (United Nations)</li>
+                                <li><strong>NATO</strong> (North Atlantic Treaty Organization)</li>
+                                <li><strong>WHO</strong> (World Health Organization)</li>
+                                <li><strong>RCMP</strong> (Royal Canadian Mounted Police)</li>
+                                <li><strong>CBC</strong> (Canadian Broadcasting Corporation)</li>
                             </ul>
                         </div>
                         
-                        <div class="rule-card">
-                            <h4>Omit Periods With:</h4>
+                        <div class="example-item">
+                            <h4>Geographic Names</h4>
                             <ul>
-                                <li>Metric symbols: kg, cm, km</li>
-                                <li>Most acronyms: CBC, RCMP, NATO</li>
-                                <li>Scientific symbols: H₂O, CO₂</li>
-                                <li>Postal codes: ON, BC, QC</li>
+                                <li><strong>USA</strong> or <strong>U.S.</strong> (United States)</li>
+                                <li><strong>UK</strong> or <strong>U.K.</strong> (United Kingdom)</li>
+                                <li><strong>EU</strong> (European Union)</li>
+                                <li><strong>N.B.</strong> (New Brunswick)</li>
+                                <li><strong>P.E.I.</strong> (Prince Edward Island)</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h4>Style Choices</h4>
+                        <p>Canadian style generally omits periods in abbreviations of organization names, but includes them for geographic abbreviations and traditional forms.</p>
+                    </div>
                 </div>
                 
+                <!-- Quiz Panel for Proper Nouns -->
                 <div class="quiz-panel" id="quiz-proper-nouns"></div>
                 
                 <div class="section-footer">
@@ -160,57 +186,54 @@
                 </div>
             </section>
 
-            <!-- Section 1.04: Plurals -->
-            <section class="content-section" id="government-bodies">
+            <!-- Government Bodies Section -->
+            <section class="content-section" id="government-bodies" style="display: none;">
                 <div class="section-header">
-                    <h2>1.04 Plurals</h2>
+                    <h2>1.04 Government Bodies</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Forming plurals of abbreviations requires careful attention to established conventions.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Government Abbreviations</h4>
+                        <p>Government departments and agencies often have standard abbreviations that should be used consistently.</p>
+                    </div>
                     
-                    <h3>General Rules for Plurals</h3>
-                    <ul>
-                        <li>Add <strong>s</strong> (no apostrophe) to most abbreviations: MPs, URLs, DVDs</li>
-                        <li>Add <strong>'s</strong> only when confusion might result: A's and B's (grades)</li>
-                        <li>Some abbreviations remain unchanged in plural: <em>pp.</em> (pages)</li>
-                    </ul>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Federal Departments</h4>
+                            <ul>
+                                <li><strong>DOJ</strong> (Department of Justice)</li>
+                                <li><strong>DND</strong> (Department of National Defence)</li>
+                                <li><strong>DFAIT</strong> (Foreign Affairs & International Trade)</li>
+                                <li><strong>HC</strong> (Health Canada)</li>
+                                <li><strong>CRA</strong> (Canada Revenue Agency)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Agencies & Crown Corporations</h4>
+                            <ul>
+                                <li><strong>CSIS</strong> (Canadian Security Intelligence Service)</li>
+                                <li><strong>CRTC</strong> (Canadian Radio-television Telecommunications Commission)</li>
+                                <li><strong>NFB</strong> (National Film Board)</li>
+                                <li><strong>CBC/SRC</strong> (Canadian Broadcasting Corporation)</li>
+                                <li><strong>VIA</strong> (VIA Rail Canada)</li>
+                            </ul>
+                        </div>
+                    </div>
                     
-                    <div class="comparison-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Singular</th>
-                                    <th>Plural</th>
-                                    <th>Note</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>MP</td>
-                                    <td>MPs</td>
-                                    <td>Standard plural</td>
-                                </tr>
-                                <tr>
-                                    <td>p.</td>
-                                    <td>pp.</td>
-                                    <td>Traditional form</td>
-                                </tr>
-                                <tr>
-                                    <td>A (grade)</td>
-                                    <td>A's</td>
-                                    <td>Prevents confusion</td>
-                                </tr>
-                                <tr>
-                                    <td>CEO</td>
-                                    <td>CEOs</td>
-                                    <td>No apostrophe needed</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="rule-box">
+                        <h4>Usage Guidelines</h4>
+                        <ul>
+                            <li>Always define on first use in documents</li>
+                            <li>Use the organization's preferred abbreviation</li>
+                            <li>Be consistent throughout the document</li>
+                            <li>Avoid creating new abbreviations for one-time use</li>
+                        </ul>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Government Bodies -->
                 <div class="quiz-panel" id="quiz-government-bodies"></div>
                 
                 <div class="section-footer">
@@ -220,37 +243,68 @@
                 </div>
             </section>
 
-            <!-- Section 1.05: Capital Letters and Hyphens -->
-            <section class="content-section" id="titles-positions">
+            <!-- Titles & Positions Section -->
+            <section class="content-section" id="titles-positions" style="display: none;">
                 <div class="section-header">
-                    <h2>1.05 Capital Letters and Hyphens</h2>
+                    <h2>1.05 Titles & Positions</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Capitalization and hyphenation in abbreviations follow specific patterns.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Personal Titles</h4>
+                        <p>Personal titles are abbreviated when they appear before names, but spelled out when used alone.</p>
+                    </div>
                     
-                    <h3>Capitalization Rules</h3>
-                    <ul>
-                        <li>Use initial capitals for proper nouns and official titles: UN, NATO, Dr.</li>
-                        <li>Use lower case for common abbreviations: etc., i.e., vs.</li>
-                        <li>Follow the style of the full form when in doubt</li>
-                    </ul>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Standard Titles</h4>
+                            <ul>
+                                <li><strong>Mr.</strong> (Mister)</li>
+                                <li><strong>Mrs.</strong> (Missus)</li>
+                                <li><strong>Ms.</strong> (Miss/Mrs.)</li>
+                                <li><strong>Dr.</strong> (Doctor)</li>
+                                <li><strong>Prof.</strong> (Professor)</li>
+                                <li><strong>Rev.</strong> (Reverend)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Government Positions</h4>
+                            <ul>
+                                <li><strong>Hon.</strong> (Honourable)</li>
+                                <li><strong>Sen.</strong> (Senator)</li>
+                                <li><strong>MP</strong> (Member of Parliament)</li>
+                                <li><strong>MLA</strong> (Member of Legislative Assembly)</li>
+                                <li><strong>MPP</strong> (Member of Provincial Parliament)</li>
+                                <li><strong>MNA</strong> (Member of National Assembly)</li>
+                            </ul>
+                        </div>
+                    </div>
                     
-                    <h3>Hyphenation Guidelines</h3>
-                    <ul>
-                        <li>Retain hyphens from the full form: vice-president → VP or V-P</li>
-                        <li>Use hyphens to avoid confusion: T-shirt, X-ray</li>
-                        <li>Compound abbreviations may use hyphens: CD-ROM</li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Capitalization Examples</div>
-                        <p><strong>Proper nouns:</strong> UNESCO, UNICEF, NATO</p>
-                        <p><strong>Common terms:</strong> etc., e.g., cf.</p>
-                        <p><strong>Mixed:</strong> PhD, MSc, BSc</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Before Names</h4>
+                            <ul>
+                                <li>Dr. Smith will attend</li>
+                                <li>Hon. Jane Doe spoke</li>
+                                <li>Mr. and Mrs. Brown</li>
+                                <li>Sen. Wilson announced</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Used Alone</h4>
+                            <ul>
+                                <li>The doctor will attend</li>
+                                <li>The minister spoke</li>
+                                <li>Mister and missus</li>
+                                <li>The senator announced</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Titles & Positions -->
                 <div class="quiz-panel" id="quiz-titles-positions"></div>
                 
                 <div class="section-footer">
@@ -260,55 +314,62 @@
                 </div>
             </section>
 
-            <!-- Section 1.06: Titles Used with Personal Names -->
-            <section class="content-section" id="geographic-names">
+            <!-- Geographic Names Section -->
+            <section class="content-section" id="geographic-names" style="display: none;">
                 <div class="section-header">
-                    <h2>1.06 Titles Used with Personal Names</h2>
+                    <h2>1.06 Geographic Names</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Titles and forms of address have specific abbreviation conventions in formal writing.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Geographic Abbreviations</h4>
+                        <p>Geographic names have established abbreviations, particularly for addresses and formal references.</p>
+                    </div>
                     
-                    <h3>Academic and Professional Titles</h3>
-                    <div class="title-grid">
-                        <div class="title-category">
-                            <h4>Academic Titles</h4>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Canadian Provinces</h4>
                             <ul>
-                                <li>Dr. (Doctor)</li>
-                                <li>Prof. (Professor)</li>
-                                <li>Rev. (Reverend)</li>
+                                <li><strong>Alta.</strong> (Alberta)</li>
+                                <li><strong>B.C.</strong> (British Columbia)</li>
+                                <li><strong>Man.</strong> (Manitoba)</li>
+                                <li><strong>N.B.</strong> (New Brunswick)</li>
+                                <li><strong>Nfld.</strong> (Newfoundland and Labrador)</li>
+                                <li><strong>N.W.T.</strong> (Northwest Territories)</li>
+                                <li><strong>N.S.</strong> (Nova Scotia)</li>
+                                <li><strong>Ont.</strong> (Ontario)</li>
+                                <li><strong>P.E.I.</strong> (Prince Edward Island)</li>
+                                <li><strong>Que.</strong> (Quebec)</li>
+                                <li><strong>Sask.</strong> (Saskatchewan)</li>
+                                <li><strong>Y.T.</strong> (Yukon Territory)</li>
                             </ul>
                         </div>
                         
-                        <div class="title-category">
-                            <h4>Courtesy Titles</h4>
+                        <div class="example-item">
+                            <h4>Countries</h4>
                             <ul>
-                                <li>Mr. (Mister)</li>
-                                <li>Mrs. (Missus)</li>
-                                <li>Ms. (Miss/Mrs.)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="title-category">
-                            <h4>Military Titles</h4>
-                            <ul>
-                                <li>Gen. (General)</li>
-                                <li>Col. (Colonel)</li>
-                                <li>Maj. (Major)</li>
+                                <li><strong>Can.</strong> (Canada)</li>
+                                <li><strong>U.S.</strong> or <strong>USA</strong> (United States)</li>
+                                <li><strong>U.K.</strong> (United Kingdom)</li>
+                                <li><strong>Fr.</strong> (France)</li>
+                                <li><strong>Ger.</strong> (Germany)</li>
+                                <li><strong>Jpn.</strong> (Japan)</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="usage-note">
+                    <div class="rule-box">
                         <h4>Usage Guidelines</h4>
                         <ul>
-                            <li>Use periods with abbreviated titles before names</li>
-                            <li>Spell out titles when they appear alone</li>
-                            <li>Be consistent throughout your document</li>
+                            <li>Use in addresses and tabular material</li>
+                            <li>Spell out in running text unless space is limited</li>
+                            <li>Be consistent within documents</li>
+                            <li>Use postal abbreviations for mailing addresses</li>
                         </ul>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Geographic Names -->
                 <div class="quiz-panel" id="quiz-geographic-names"></div>
                 
                 <div class="section-footer">
@@ -318,54 +379,56 @@
                 </div>
             </section>
 
-            <!-- Section 1.07: Military Abbreviations -->
-            <section class="content-section" id="brand-names">
+            <!-- Brand Names Section -->
+            <section class="content-section" id="brand-names" style="display: none;">
                 <div class="section-header">
-                    <h2>1.07 Military Abbreviations</h2>
+                    <h2>1.07 Brand Names</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Military terms and ranks have established abbreviation forms used in government writing.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Commercial Abbreviations</h4>
+                        <p>Brand names and commercial terms may be abbreviated, but use caution to maintain clarity and avoid trademark issues.</p>
+                    </div>
                     
-                    <h3>Military Ranks</h3>
-                    <div class="military-ranks">
-                        <div class="rank-category">
-                            <h4>Army Ranks</h4>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Business Terms</h4>
                             <ul>
-                                <li>Gen. (General)</li>
-                                <li>Col. (Colonel)</li>
-                                <li>Maj. (Major)</li>
-                                <li>Capt. (Captain)</li>
-                                <li>Lt. (Lieutenant)</li>
-                                <li>Sgt. (Sergeant)</li>
-                                <li>Cpl. (Corporal)</li>
+                                <li><strong>Inc.</strong> (Incorporated)</li>
+                                <li><strong>Ltd.</strong> (Limited)</li>
+                                <li><strong>Corp.</strong> (Corporation)</li>
+                                <li><strong>Co.</strong> (Company)</li>
+                                <li><strong>Bros.</strong> (Brothers)</li>
+                                <li><strong>Mfg.</strong> (Manufacturing)</li>
                             </ul>
                         </div>
                         
-                        <div class="rank-category">
-                            <h4>Naval Ranks</h4>
+                        <div class="example-item">
+                            <h4>Technical Terms</h4>
                             <ul>
-                                <li>Adm. (Admiral)</li>
-                                <li>Capt. (Captain)</li>
-                                <li>Cdr. (Commander)</li>
-                                <li>Lt.-Cdr. (Lieutenant-Commander)</li>
-                                <li>Lt. (Lieutenant)</li>
-                                <li>PO (Petty Officer)</li>
+                                <li><strong>GPS</strong> (Global Positioning System)</li>
+                                <li><strong>DVD</strong> (Digital Versatile Disc)</li>
+                                <li><strong>CD-ROM</strong> (Compact Disc Read-Only Memory)</li>
+                                <li><strong>FAQ</strong> (Frequently Asked Questions)</li>
+                                <li><strong>URL</strong> (Uniform Resource Locator)</li>
+                                <li><strong>CEO</strong> (Chief Executive Officer)</li>
                             </ul>
                         </div>
                     </div>
                     
-                    <div class="military-guidelines">
-                        <h4>Usage Guidelines</h4>
+                    <div class="rule-box">
+                        <h4>Cautions</h4>
                         <ul>
-                            <li>Always use periods with military rank abbreviations</li>
-                            <li>Capitalize all military abbreviations</li>
-                            <li>Use the full rank when first mentioned in formal documents</li>
-                            <li>Be consistent with abbreviation style throughout</li>
+                            <li>Respect company's preferred styling</li>
+                            <li>Avoid creating abbreviations for brand names</li>
+                            <li>Be consistent with established forms</li>
+                            <li>Consider your audience's familiarity</li>
                         </ul>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Brand Names -->
                 <div class="quiz-panel" id="quiz-brand-names"></div>
                 
                 <div class="section-footer">
@@ -375,332 +438,325 @@
                 </div>
             </section>
 
-            <!-- Section 1.08: Academic Degrees and Professional Designations -->
-            <section class="content-section" id="academic-degrees">
+            <!-- Academic Degrees Section -->
+            <section class="content-section" id="academic-degrees" style="display: none;">
                 <div class="section-header">
-                    <h2>1.08 University Degrees, Professional Designations, Military Decorations, Honours, Awards and Memberships</h2>
+                    <h2>1.08 Academic Degrees</h2>
                 </div>
                 
-                <div class="lesson-content">
-                    <p>Academic degrees and professional designations have specific formatting requirements in government documents.</p>
+                <div class="content-block">
+                    <div class="rule-box">
+                        <h4>Degree Abbreviations</h4>
+                        <p>Academic degrees follow specific conventions for abbreviation and punctuation.</p>
+                    </div>
                     
-                    <h3>Academic Degrees</h3>
-                    <div class="degree-formats">
-                        <div class="format-grid">
-                            <div class="format-item">
-                                <h4>Bachelor's Degrees</h4>
-                                <ul>
-                                    <li>B.A. (Bachelor of Arts)</li>
-                                    <li>B.Sc. (Bachelor of Science)</li>
-                                    <li>B.Ed. (Bachelor of Education)</li>
-                                    <li>B.Comm. (Bachelor of Commerce)</li>
-                                    <li>LL.B. (Bachelor of Laws)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="format-item">
-                                <h4>Master's Degrees</h4>
-                                <ul>
-                                    <li>M.A. (Master of Arts)</li>
-                                    <li>M.Sc. (Master of Science)</li>
-                                    <li>M.Ed. (Master of Education)</li>
-                                    <li>M.B.A. (Master of Business Administration)</li>
-                                    <li>LL.M. (Master of Laws)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="format-item">
-                                <h4>Doctoral Degrees</h4>
-                                <ul>
-                                    <li>Ph.D. (Doctor of Philosophy)</li>
-                                    <li>Ed.D. (Doctor of Education)</li>
-                                    <li>D.Phil. (Doctor of Philosophy - Oxford style)</li>
-                                    <li>LL.D. (Doctor of Laws)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="format-item">
-                                <h4>Professional Degrees</h4>
-                                <ul>
-                                    <li>M.D. (Doctor of Medicine)</li>
-                                    <li>J.D. (Juris Doctor)</li>
-                                    <li>D.D.S. (Doctor of Dental Surgery)</li>
-                                    <li>D.V.M. (Doctor of Veterinary Medicine)</li>
-                                </ul>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Undergraduate Degrees</h4>
+                            <ul>
+                                <li><strong>B.A.</strong> (Bachelor of Arts)</li>
+                                <li><strong>B.Sc.</strong> (Bachelor of Science)</li>
+                                <li><strong>B.Ed.</strong> (Bachelor of Education)</li>
+                                <li><strong>B.Eng.</strong> (Bachelor of Engineering)</li>
+                                <li><strong>B.Comm.</strong> (Bachelor of Commerce)</li>
+                                <li><strong>LL.B.</strong> (Bachelor of Laws)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Graduate Degrees</h4>
+                            <ul>
+                                <li><strong>M.A.</strong> (Master of Arts)</li>
+                                <li><strong>M.Sc.</strong> (Master of Science)</li>
+                                <li><strong>M.Ed.</strong> (Master of Education)</li>
+                                <li><strong>M.B.A.</strong> (Master of Business Administration)</li>
+                                <li><strong>Ph.D.</strong> (Doctor of Philosophy)</li>
+                                <li><strong>M.D.</strong> (Doctor of Medicine)</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <h3>Professional Designations</h3>
-                    <div class="professional-designations">
+                    <div class="rule-box">
+                        <h4>Usage Rules</h4>
                         <ul>
-                            <li>C.A. (Chartered Accountant)</li>
-                            <li>P.Eng. (Professional Engineer)</li>
-                            <li>C.P.A. (Certified Public Accountant)</li>
-                            <li>R.N. (Registered Nurse)</li>
-                            <li>Q.C. (Queen's Counsel)</li>
+                            <li>Use periods in degree abbreviations</li>
+                            <li>Place after the person's name</li>
+                            <li>Use title (Dr.) OR degree, not both</li>
+                            <li>List highest degree only, unless relevant</li>
                         </ul>
                     </div>
                     
-                    <h3>Military Decorations and Honours</h3>
-                    <div class="military-honours">
-                        <ul>
-                            <li>V.C. (Victoria Cross)</li>
-                            <li>C.M. (Member of the Order of Canada)</li>
-                            <li>O.C. (Officer of the Order of Canada)</li>
-                            <li>C.C. (Companion of the Order of Canada)</li>
-                            <li>M.M. (Military Medal)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="formatting-rules">
-                        <h4>Formatting Rules</h4>
-                        <ul>
-                            <li>Use periods between letters: Ph.D., not PhD</li>
-                            <li>List degrees in order of importance, highest first</li>
-                            <li>Separate multiple degrees with commas</li>
-                            <li>Place after the person's name: John Smith, M.A., Ph.D.</li>
-                        </ul>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <h4>Correct Usage</h4>
+                            <ul>
+                                <li>John Smith, Ph.D.</li>
+                                <li>Dr. John Smith</li>
+                                <li>Mary Jones, M.A., Ph.D.</li>
+                                <li>Prof. David Brown</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="example-item">
+                            <h4>Avoid</h4>
+                            <ul>
+                                <li>❌ Dr. John Smith, Ph.D.</li>
+                                <li>❌ PhD (without periods)</li>
+                                <li>❌ John Smith, B.A., M.A., Ph.D.</li>
+                                <li>❌ Multiple lower degrees</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel for Academic Degrees -->
                 <div class="quiz-panel" id="quiz-academic-degrees"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('academic-degrees')">
-                        Chapter Complete!
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
-        </div>
-    </main>
+        </main>
+    </div>
 
-    <style>
-        .key-concept {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .key-concept h3 {
-            color: var(--cs-red);
-            margin-top: 0;
-        }
-        
-        .example-box {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .example-label {
-            font-weight: var(--cs-font-semibold);
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .rule-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .rule-card {
-            background: var(--cs-white);
-            border: 2px solid var(--cs-grey-200);
-            border-radius: 8px;
-            padding: var(--cs-space-l);
-        }
-        
-        .rule-card h4 {
-            color: var(--cs-red);
-            margin-top: 0;
-        }
-        
-        .comparison-table {
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: var(--cs-space-m);
-            text-align: left;
-            border-bottom: 1px solid var(--cs-grey-300);
-        }
-        
-        .comparison-table th {
-            background: var(--cs-grey-100);
-            font-weight: var(--cs-font-semibold);
-        }
-        
-        .title-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .title-category {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-        }
-        
-        .title-category h4 {
-            color: var(--cs-red);
-            margin-top: 0;
-        }
-        
-        .usage-note {
-            background: var(--cs-info-bg);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .usage-note h4 {
-            color: var(--cs-info);
-            margin-top: 0;
-        }
-        
-        .military-ranks {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .rank-category {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-        }
-        
-        .rank-category h4 {
-            color: var(--cs-red);
-            margin-top: 0;
-        }
-        
-        .military-guidelines {
-            background: var(--cs-warning-bg);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .military-guidelines h4 {
-            color: var(--cs-warning);
-            margin-top: 0;
-        }
-        
-        .degree-formats {
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .format-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .format-item {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-        }
-        
-        .format-item h4 {
-            color: var(--cs-red);
-            margin-top: 0;
-            margin-bottom: var(--cs-space-m);
-        }
-        
-        .professional-designations,
-        .military-honours {
-            background: var(--cs-grey-100);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .formatting-rules {
-            background: var(--cs-success-bg);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .formatting-rules h4 {
-            color: var(--cs-success);
-            margin-top: 0;
-        }
-    </style>
+    <!-- Include JavaScript modules -->
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine, loadQuizData } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch01';
         const sections = [
             { id: 'introduction', title: '1.01 Introduction' },
-            { id: 'sentence-capitals', title: '1.02 General Guidelines' },
-            { id: 'proper-nouns', title: '1.03 Periods' },
-            { id: 'government-bodies', title: '1.04 Plurals' },
-            { id: 'titles-positions', title: '1.05 Capital Letters' },
-            { id: 'geographic-names', title: '1.06 Titles with Names' },
-            { id: 'brand-names', title: '1.07 Military Terms' },
+            { id: 'sentence-capitals', title: '1.02 Sentence Capitals' },
+            { id: 'proper-nouns', title: '1.03 Proper Nouns' },
+            { id: 'government-bodies', title: '1.04 Government Bodies' },
+            { id: 'titles-positions', title: '1.05 Titles & Positions' },
+            { id: 'geographic-names', title: '1.06 Geographic Names' },
+            { id: 'brand-names', title: '1.07 Brand Names' },
             { id: 'academic-degrees', title: '1.08 Academic Degrees' }
         ];
         
-        // Initialize chapter
-        document.addEventListener('DOMContentLoaded', () => {
-            router.init();
-            initializeChapter();
-            loadQuizzes();
-        });
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
         
-        function initializeChapter() {
-            updateProgress();
-            setupNavigation();
-        }
-        
-        function updateProgress() {
-            const progress = getProgress(CHAPTER_ID);
-            const completedSections = Object.values(progress.sections || {}).filter(Boolean).length;
-            const totalSections = sections.length;
-            const percentage = (completedSections / totalSections) * 100;
+        // Update progress bar using correct API
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressFill = document.getElementById('chapterProgress');
-            if (progressFill) {
-                progressFill.style.width = `${percentage}%`;
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
             }
         }
         
-        function setupNavigation() {
-            // Section navigation
-            const sectionLinks = document.querySelectorAll('.tab-link');
-            sectionLinks.forEach(link => {
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                router.navigateTo(CHAPTER_ID, nextSection.id);
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 1 Complete!</h3>
+                    <p>You've mastered abbreviation rules. Ready for the next chapter?</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
+                        </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        // Load section quizzes - FIXED VERSION
+        async function loadSectionQuizzes() {
+            // Sample quiz data - in real implementation, this would come from JSON files
+            const quizData = {
+                introduction: {
+                    title: 'Introduction to Abbreviations',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'What is the most important rule for using abbreviations?',
+                            options: [
+                                { label: 'Use as many as possible to save space', correct: false },
+                                { label: 'Define them on first use', correct: true },
+                                { label: 'Never use periods', correct: false },
+                                { label: 'Only use standard ones', correct: false }
+                            ],
+                            rationale: 'Always define abbreviations on first use to ensure clarity for readers.',
+                            ref: '§1.01'
+                        }
+                    ]
+                },
+                'sentence-capitals': {
+                    title: 'Sentence Capitals',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'How should "e.g." be written at the start of a sentence?',
+                            options: [
+                                { label: 'e.g.', correct: false },
+                                { label: 'E.g.', correct: true },
+                                { label: 'E.G.', correct: false },
+                                { label: 'eg.', correct: false }
+                            ],
+                            rationale: 'Abbreviations at sentence beginnings follow normal capitalization rules.',
+                            ref: '§1.02'
+                        }
+                    ]
+                },
+                'proper-nouns': {
+                    title: 'Proper Nouns',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'Which abbreviation style does Canadian government prefer?',
+                            options: [
+                                { label: 'U.N.A.T.O. (with periods)', correct: false },
+                                { label: 'UN NATO (no periods)', correct: true },
+                                { label: 'un nato (lowercase)', correct: false },
+                                { label: 'Un Nato (mixed case)', correct: false }
+                            ],
+                            rationale: 'Canadian style generally omits periods in organization name abbreviations.',
+                            ref: '§1.03'
+                        }
+                    ]
+                },
+                'government-bodies': {
+                    title: 'Government Bodies',
+                    questions: [
+                        {
+                            type: 'fill-blank',
+                            stem: 'What does DOJ stand for?',
+                            answer: 'Department of Justice',
+                            rationale: 'DOJ is the standard abbreviation for Department of Justice.',
+                            ref: '§1.04'
+                        }
+                    ]
+                },
+                'titles-positions': {
+                    title: 'Titles & Positions',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'Which is correct when the title is used alone?',
+                            options: [
+                                { label: 'The Dr. will see you', correct: false },
+                                { label: 'The doctor will see you', correct: true },
+                                { label: 'The Dr will see you', correct: false },
+                                { label: 'The Doctor will see you', correct: false }
+                            ],
+                            rationale: 'Titles are spelled out when used alone, abbreviated only before names.',
+                            ref: '§1.05'
+                        }
+                    ]
+                },
+                'geographic-names': {
+                    title: 'Geographic Names',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'What is the correct abbreviation for British Columbia?',
+                            options: [
+                                { label: 'BC', correct: false },
+                                { label: 'B.C.', correct: true },
+                                { label: 'Bc', correct: false },
+                                { label: 'B-C', correct: false }
+                            ],
+                            rationale: 'Canadian provincial abbreviations use periods: B.C., N.B., P.E.I.',
+                            ref: '§1.06'
+                        }
+                    ]
+                },
+                'brand-names': {
+                    title: 'Brand Names',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'Which business abbreviation uses periods?',
+                            options: [
+                                { label: 'CEO', correct: false },
+                                { label: 'Inc.', correct: true },
+                                { label: 'FAQ', correct: false },
+                                { label: 'GPS', correct: false }
+                            ],
+                            rationale: 'Business designations like Inc., Ltd., Corp. retain periods.',
+                            ref: '§1.07'
+                        }
+                    ]
+                },
+                'academic-degrees': {
+                    title: 'Academic Degrees',
+                    questions: [
+                        {
+                            type: 'mcq',
+                            stem: 'Which is the correct way to show someone with a Ph.D.?',
+                            options: [
+                                { label: 'Dr. John Smith, Ph.D.', correct: false },
+                                { label: 'Dr. John Smith', correct: true },
+                                { label: 'John Smith, PhD', correct: false },
+                                { label: 'Dr John Smith Ph.D.', correct: false }
+                            ],
+                            rationale: 'Use either the title (Dr.) or degree (Ph.D.), not both.',
+                            ref: '§1.08'
+                        }
+                    ]
+                }
+            };
+            
+            // Initialize quizzes using FIXED API
+            for (const section of sections) {
+                const quiz = quizData[section.id];
+                if (quiz) {
+                    const container = document.getElementById(`quiz-${section.id}`);
+                    if (container) {
+                        // FIXED: Use correct constructor parameters
+                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
+                        const quizElement = engine.render();
+                        container.appendChild(quizElement);
+                    }
+                }
+            }
+        }
+        
+        // Initialize navigation
+        function initializeNavigation() {
+            document.querySelectorAll('.tab-link').forEach(link => {
                 link.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const sectionId = link.getAttribute('data-section');
+                    const sectionId = link.dataset.section;
                     showSection(sectionId);
                     updateActiveTab(link);
                 });
             });
-            
-            // Show first section by default
-            showSection('introduction');
         }
         
         function showSection(sectionId) {
@@ -723,38 +779,18 @@
             activeLink.classList.add('active');
         }
         
-        async function loadQuizzes() {
-            try {
-                const quizData = await loadQuizData(CHAPTER_ID);
-                
-                sections.forEach(section => {
-                    const quizPanel = document.getElementById(`quiz-${section.id}`);
-                    if (quizPanel && quizData[section.id]) {
-                        const quizEngine = new QuizEngine(quizPanel, quizData[section.id], CHAPTER_ID, section.id);
-                        quizEngine.render();
-                    }
-                });
-            } catch (error) {
-                console.error('Error loading quizzes:', error);
-            }
-        }
-        
-        // Global function for completing sections
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgress();
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgressBar();
+            loadSectionQuizzes();
+            initializeNavigation();
             
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                showSection(nextSection.id);
-                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
-            } else {
-                // Chapter completed
-                alert('Chapter 1 completed! Well done!');
+            if (!window.location.hash) {
+                router.navigateTo(CHAPTER_ID, 'introduction');
             }
-        };
+        });
+        
+        window.addEventListener('progress-changed', updateProgressBar);
     </script>
 </body>
 </html>
