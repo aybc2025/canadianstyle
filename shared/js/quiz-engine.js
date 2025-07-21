@@ -327,13 +327,26 @@ if (nextBtn) {
         const errorTargets = this.container.querySelectorAll('.error-spot-target');
         const feedbackDiv = this.container.querySelector('.error-spot-feedback');
         
+        // Validate that we have the required data
+        if (!question.errorPosition) {
+            console.warn('Error spotting question missing errorPosition:', question);
+            return;
+        }
+        
         // Make all words clickable for error spotting
         const textContainer = this.container.querySelector('.error-spot-text');
+        if (!textContainer) {
+            console.warn('Error spotting container not found');
+            return;
+        }
+        
         const words = textContainer.textContent.split(/(\s+)/);
         
         textContainer.innerHTML = words.map(word => {
             if (word.trim()) {
-                const isError = word.trim() === question.errorPosition.trim();
+                // Safe comparison with proper null checking
+                const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
+                const isError = word.trim() === errorPosition;
                 return `<span class="clickable-word ${isError ? 'error-word' : ''}" data-word="${word.trim()}">${word}</span>`;
             }
             return word;
@@ -342,8 +355,9 @@ if (nextBtn) {
         // Add click listeners
         textContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('clickable-word')) {
-                const clickedWord = e.target.dataset.word ? e.target.dataset.word.trim() : '';
-                const isCorrect = clickedWord === question.errorPosition.trim();
+                const clickedWord = e.target.dataset.word;
+                const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
+                const isCorrect = clickedWord === errorPosition;
                 
                 // Remove previous selections
                 textContainer.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
@@ -353,16 +367,13 @@ if (nextBtn) {
                 e.target.classList.add(isCorrect ? 'selected' : 'incorrect-selection');
                 
                 // Show feedback
-                feedbackDiv.style.display = 'block';
-                feedbackDiv.innerHTML = isCorrect ? 
-                    `<div class="feedback correct">✅ Correct! "${clickedWord}" should be "${question.correction}"</div>` :
-                    `<div class="feedback incorrect">❌ Incorrect. Try again.</div>`;
-                
-                // Store answer
-                this.storeAnswer(question.id, {
-                    selected: clickedWord,
-                    isCorrect: isCorrect
-                });
+                if (feedbackDiv) {
+                    feedbackDiv.style.display = 'block';
+                    const correction = question.correction || 'the correct form';
+                    feedbackDiv.innerHTML = isCorrect ? 
+                        `<div class="feedback correct">✅ Correct! "${clickedWord}" should be "${correction}"</div>` :
+                        `<div class="feedback incorrect">❌ Incorrect. Try again!</div>`;
+                }
             }
         });
     }
