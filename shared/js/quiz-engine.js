@@ -76,10 +76,7 @@ export class QuizEngine {
         const question = this.questions[this.currentQuestionIndex];
         const quizContent = this.container.querySelector('.quiz-content');
         const quizActions = this.container.querySelector('.quiz-actions');
-        
-        // Update progress
-        this.updateProgress();
-        
+
         // Render question based on type
         let questionHTML = '';
         switch (question.type) {
@@ -99,47 +96,41 @@ export class QuizEngine {
                 questionHTML = this.renderErrorSpot(question);
                 break;
             default:
-                questionHTML = `<p class="error">Unknown question type: ${question.type}</p>`;
+                questionHTML = `<p>Unsupported question type: ${question.type}</p>`;
         }
-        
+
         quizContent.innerHTML = `
-            <div class="question-container" data-question-id="${question.id}">
-                <div class="question-stem">
+            <div class="question-container">
+                <div class="question-header">
                     <span class="question-number">Question ${this.currentQuestionIndex + 1}</span>
-                    <p>${question.stem}</p>
+                    ${question.ref ? `<span class="question-ref">${question.ref}</span>` : ''}
                 </div>
+                <div class="question-stem">${question.stem}</div>
                 <div class="question-content">
                     ${questionHTML}
                 </div>
-                ${question.ref ? `<div class="question-reference">Reference: ${question.ref}</div>` : ''}
             </div>
         `;
-        
-        // Render actions
+
+        // Render action buttons
         quizActions.innerHTML = `
-    <button class="btn btn-outline quiz-btn-prev" 
-            ${this.currentQuestionIndex === 0 ? 'disabled' : ''}>
-        Previous
-    </button>
-    <button class="btn btn-primary quiz-btn-next">
-        ${this.currentQuestionIndex === this.questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
-    </button>
-`;
+            <div class="quiz-navigation">
+                ${this.currentQuestionIndex > 0 ? 
+                    '<button class="btn btn-outline quiz-prev">Previous</button>' : 
+                    '<div></div>'
+                }
+                <button class="btn btn-primary quiz-next">
+                    ${this.currentQuestionIndex === this.questions.length - 1 ? 'Finish Quiz' : 'Next'}
+                </button>
+            </div>
+        `;
 
-// הוסף event listeners אחרי יצירת הכפתורים:
-const prevBtn = quizActions.querySelector('.quiz-btn-prev');
-const nextBtn = quizActions.querySelector('.quiz-btn-next');
+        // Update progress indicator
+        this.updateProgress();
 
-if (prevBtn && !prevBtn.disabled) {
-    prevBtn.addEventListener('click', () => this.previousQuestion());
-}
-
-if (nextBtn) {
-    nextBtn.addEventListener('click', () => this.nextQuestion());
-}
-        
-        // Add event listeners for interactive elements
+        // Attach event listeners
         this.attachEventListeners(question);
+        this.attachNavigationListeners();
     }
 
     /**
@@ -148,17 +139,21 @@ if (nextBtn) {
     renderMCQ(question) {
         const isMultiSelect = question.options.filter(opt => opt.correct).length > 1;
         const inputType = isMultiSelect ? 'checkbox' : 'radio';
-        const inputName = `question-${question.id}`;
         
         return `
-            <div class="mcq-options">
-                ${isMultiSelect ? '<p class="multi-select-note">Select all that apply:</p>' : ''}
-                ${question.options.map((option, index) => `
-                    <label class="option-label">
-                        <input type="${inputType}" name="${inputName}" value="${index}" class="option-input">
-                        <span class="option-text">${option.label}</span>
-                    </label>
-                `).join('')}
+            <div class="mcq-container">
+                ${isMultiSelect ? '<p class="instruction">Select all correct answers:</p>' : ''}
+                <div class="options-list">
+                    ${question.options.map((option, index) => `
+                        <label class="option-label">
+                            <input type="${inputType}" 
+                                   name="question-${question.id}" 
+                                   value="${index}"
+                                   class="option-input">
+                            <span class="option-text">${option.label}</span>
+                        </label>
+                    `).join('')}
+                </div>
             </div>
         `;
     }
@@ -169,11 +164,9 @@ if (nextBtn) {
     renderFillBlank(question) {
         return `
             <div class="fill-blank-container">
-                <div class="fill-blank-input">
-                    <input type="text" class="blank-input" placeholder="Type your answer here..." autocomplete="off">
+                <div class="blank-sentence">
+                    ${question.stem.replace('___', '<input type="text" class="blank-input" placeholder="Enter your answer">')}
                 </div>
-                ${question.acceptableAnswers ? 
-                    '<p class="hint">💡 Multiple acceptable answers possible</p>' : ''}
             </div>
         `;
     }
@@ -182,28 +175,28 @@ if (nextBtn) {
      * Render Matching Question
      */
     renderMatching(question) {
-        const leftItems = question.pairs.map(pair => pair.left);
-        const rightItems = this.shuffleArray(question.pairs.map(pair => pair.right));
+        const rightItems = this.shuffleArray([...question.pairs.map(pair => pair.right)]);
         
         return `
             <div class="matching-container">
                 <div class="matching-instructions">
-                    <p>Match the items from the left column with the correct items on the right:</p>
+                    <p>Match each item on the left with the correct item on the right:</p>
                 </div>
-                <div class="matching-grid">
-                    <div class="left-column">
-                        ${leftItems.map((item, index) => `
-                            <div class="matching-item left-item" data-left-index="${index}">
-                                <span>${item}</span>
-                                <select class="matching-select" data-left-item="${item}">
-                                    <option value="">Choose match...</option>
-                                    ${rightItems.map((rightItem, rightIndex) => `
-                                        <option value="${rightItem}">${rightItem}</option>
+                <div class="matching-pairs">
+                    ${question.pairs.map((pair, index) => `
+                        <div class="matching-row">
+                            <div class="matching-left">${pair.left}</div>
+                            <div class="matching-arrow">→</div>
+                            <div class="matching-right">
+                                <select class="matching-select" data-left-item="${pair.left}">
+                                    <option value="">Choose...</option>
+                                    ${rightItems.map((item, itemIndex) => `
+                                        <option value="${item}">${item}</option>
                                     `).join('')}
                                 </select>
                             </div>
-                        `).join('')}
-                    </div>
+                        </div>
+                    `).join('')}
                 </div>
             </div>
         `;
@@ -321,10 +314,9 @@ if (nextBtn) {
     }
 
     /**
-     * Setup error spotting functionality
+     * Setup error spotting functionality - FIXED VERSION
      */
     setupErrorSpotting(question) {
-        const errorTargets = this.container.querySelectorAll('.error-spot-target');
         const feedbackDiv = this.container.querySelector('.error-spot-feedback');
         
         // Validate that we have the required data
@@ -379,24 +371,46 @@ if (nextBtn) {
     }
 
     /**
+     * Attach navigation event listeners
+     */
+    attachNavigationListeners() {
+        const nextBtn = this.container.querySelector('.quiz-next');
+        const prevBtn = this.container.querySelector('.quiz-prev');
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                this.nextQuestion();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                this.previousQuestion();
+            });
+        }
+    }
+
+    /**
      * Move to next question
      */
     nextQuestion() {
-        // Collect answer from current question
         const question = this.questions[this.currentQuestionIndex];
         const answer = this.collectAnswer(question);
         
-        if (answer !== null) {
-            this.answers[this.currentQuestionIndex] = answer;
-            this.currentQuestionIndex++;
-            
-            if (this.currentQuestionIndex >= this.questions.length) {
-                this.completeQuiz();
-            } else {
-                this.renderCurrentQuestion();
-            }
-        } else {
+        if (!answer) {
             this.showError('Please answer the question before continuing.');
+            return;
+        }
+
+        // Store the answer
+        this.answers[this.currentQuestionIndex] = answer;
+
+        // Move to next question or complete quiz
+        if (this.currentQuestionIndex < this.questions.length - 1) {
+            this.currentQuestionIndex++;
+            this.renderCurrentQuestion();
+        } else {
+            this.completeQuiz();
         }
     }
 
@@ -467,28 +481,22 @@ if (nextBtn) {
      * Collect fill-in-the-blank answer
      */
     collectFillBlankAnswer(question) {
-    const input = this.container.querySelector('.blank-input');
-    if (!input || !input.value.trim()) return null;
-    
-    const userAnswer = input.value.trim();
-    const correctAnswers = question.acceptableAnswers || [question.answer];
-    
-    // סינון ערכים ריקים/undefined וביטוח שהם strings
-    const validAnswers = correctAnswers.filter(answer => 
-        answer && typeof answer === 'string'
-    );
-    
-    const isCorrect = validAnswers.some(answer => 
-        answer.toLowerCase() === userAnswer.toLowerCase()
-    );
-    
-    return {
-        questionId: question.id,
-        answer: userAnswer,
-        isCorrect: isCorrect,
-        type: 'fill-blank'
-    };
-}
+        const input = this.container.querySelector('.blank-input');
+        if (!input || !input.value.trim()) return null;
+        
+        const userAnswer = input.value.trim();
+        const correctAnswers = question.acceptableAnswers || [question.answer];
+        const isCorrect = correctAnswers.some(answer => 
+            answer.toLowerCase() === userAnswer.toLowerCase()
+        );
+        
+        return {
+            questionId: question.id,
+            answer: userAnswer,
+            isCorrect: isCorrect,
+            type: 'fill-blank'
+        };
+    }
 
     /**
      * Collect matching answer
@@ -501,45 +509,39 @@ if (nextBtn) {
         selects.forEach(select => {
             const leftItem = select.dataset.leftItem;
             const selectedRight = select.value;
+            
             if (!selectedRight) {
                 allAnswered = false;
                 return;
             }
+            
             answers[leftItem] = selectedRight;
         });
         
         if (!allAnswered) return null;
         
         // Check correctness
-        let correctCount = 0;
-        question.pairs.forEach(pair => {
-            if (answers[pair.left] === pair.right) {
-                correctCount++;
-            }
-        });
-        
-        const isCorrect = correctCount === question.pairs.length;
+        const isCorrect = question.pairs.every(pair => 
+            answers[pair.left] === pair.right
+        );
         
         return {
             questionId: question.id,
-            matches: answers,
+            answers: answers,
             isCorrect: isCorrect,
             type: 'matching'
         };
     }
 
     /**
-     * Collect drag-and-drop answer
+     * Collect drag-drop answer
      */
     collectDragDropAnswer(question) {
         const sortableItems = this.container.querySelectorAll('.sortable-item');
-        const userOrder = Array.from(sortableItems).map((item, index) => ({
-            text: item.dataset.text,
-            userPosition: index + 1,
-            correctPosition: parseInt(item.dataset.order)
-        }));
+        const userOrder = Array.from(sortableItems).map(item => parseInt(item.dataset.order));
+        const correctOrder = question.items.map(item => item.order).sort((a, b) => a - b);
         
-        const isCorrect = userOrder.every(item => item.userPosition === item.correctPosition);
+        const isCorrect = userOrder.every((order, index) => order === correctOrder[index]);
         
         return {
             questionId: question.id,
@@ -550,14 +552,15 @@ if (nextBtn) {
     }
 
     /**
-     * Collect error-spotting answer
+     * Collect error-spot answer
      */
     collectErrorSpotAnswer(question) {
-        const selected = this.container.querySelector('.selected');
+        const selected = this.container.querySelector('.clickable-word.selected');
         if (!selected) return null;
         
-        const selectedWord = selected.dataset.word ? selected.dataset.word.trim() : '';
-        const isCorrect = selectedWord === question.errorPosition.trim();
+        const selectedWord = selected.dataset.word;
+        const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
+        const isCorrect = selectedWord === errorPosition;
         
         return {
             questionId: question.id,
@@ -628,7 +631,7 @@ if (nextBtn) {
                             <div class="result-item ${answer && answer.isCorrect ? 'correct' : 'incorrect'}">
                                 <span class="question-num">Q${index + 1}</span>
                                 <span class="result-icon">${answer && answer.isCorrect ? '✅' : '❌'}</span>
-                                <span class="question-text">${question.stem.substring(0, 50)}...</span>
+                                <span class="result-text">${question.stem.substring(0, 50)}...</span>
                             </div>
                         `;
                     }).join('')}
@@ -637,108 +640,74 @@ if (nextBtn) {
         `;
         
         quizActions.innerHTML = `
-            <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').quizEngine.reviewAnswers()">
-                Review Answers
-            </button>
-            <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.retakeQuiz()">
-                Retake Quiz
-            </button>
-            ${isPassing ? `
-                <button class="btn btn-success" onclick="this.closest('.quiz-engine-container').quizEngine.proceedToNext()">
-                    Continue Learning
-                </button>
-            ` : ''}
-        `;
-        
-        // Emit completion event
-        this.emitCompletionEvent();
-    }
-
-    /**
-     * Review answers with explanations
-     */
-    reviewAnswers() {
-        const quizContent = this.container.querySelector('.quiz-content');
-        
-        quizContent.innerHTML = `
-            <div class="quiz-review">
-                <div class="review-header">
-                    <h3>📋 Answer Review</h3>
-                    <p>Review your answers with explanations:</p>
-                </div>
-                
-                <div class="review-questions">
-                    ${this.answers.map((answer, index) => {
-                        const question = this.questions[index];
-                        return `
-                            <div class="review-item ${answer && answer.isCorrect ? 'correct' : 'incorrect'}">
-                                <div class="review-question">
-                                    <span class="question-number">Q${index + 1}</span>
-                                    <span class="question-text">${question.stem}</span>
-                                    <span class="result-icon">${answer && answer.isCorrect ? '✅' : '❌'}</span>
-                                </div>
-                                ${question.rationale ? `
-                                    <div class="review-explanation">
-                                        <strong>Explanation:</strong> ${question.rationale}
-                                    </div>
-                                ` : ''}
-                                ${question.ref ? `
-                                    <div class="review-reference">
-                                        <strong>Reference:</strong> ${question.ref}
-                                    </div>
-                                ` : ''}
-                            </div>
-                        `;
-                    }).join('')}
-                </div>
+            <div class="quiz-final-actions">
+                <button class="btn btn-outline quiz-restart">Try Again</button>
+                ${isPassing ? '<button class="btn btn-primary quiz-continue">Continue</button>' : ''}
             </div>
         `;
         
-        const quizActions = this.container.querySelector('.quiz-actions');
-        quizActions.innerHTML = `
-            <button class="btn btn-outline" onclick="this.closest('.quiz-engine-container').quizEngine.renderResults()">
-                Back to Results
-            </button>
-            <button class="btn btn-primary" onclick="this.closest('.quiz-engine-container').quizEngine.retakeQuiz()">
-                Retake Quiz
-            </button>
-        `;
+        // Attach final action listeners
+        const restartBtn = this.container.querySelector('.quiz-restart');
+        const continueBtn = this.container.querySelector('.quiz-continue');
+        
+        if (restartBtn) {
+            restartBtn.addEventListener('click', () => {
+                this.restart();
+            });
+        }
+        
+        if (continueBtn) {
+            continueBtn.addEventListener('click', () => {
+                this.emitCompletionEvent();
+            });
+        }
     }
 
     /**
-     * Retake the quiz
+     * Restart the quiz
      */
-    retakeQuiz() {
-        // Reset quiz state
+    restart() {
         this.currentQuestionIndex = 0;
         this.answers = [];
         this.score = 0;
         this.isComplete = false;
         this.startTime = Date.now();
-        
-        // Clear any timers
-        if (this.timer) {
-            clearInterval(this.timer);
-            this.timer = null;
-        }
-        
-        // Reshuffle questions
         this.questions = this.shuffleArray([...this.quizData.questions]);
-        
-        // Re-render first question
         this.renderCurrentQuestion();
     }
 
     /**
-     * Proceed to next section (if quiz passed)
+     * Save progress to localStorage
      */
-    proceedToNext() {
-        // This will be handled by the chapter's JavaScript
-        const event = new CustomEvent('quiz-passed', {
+    saveProgress() {
+        try {
+            const progressKey = `quiz-progress-${this.chapterId}-${this.sectionId}`;
+            const progressData = {
+                score: this.score,
+                passed: this.score >= 80,
+                completedAt: new Date().toISOString(),
+                attempts: (JSON.parse(localStorage.getItem(progressKey))?.attempts || 0) + 1
+            };
+            
+            localStorage.setItem(progressKey, JSON.stringify(progressData));
+        } catch (error) {
+            console.warn('Could not save quiz progress:', error);
+        }
+    }
+
+    /**
+     * Emit completion event for progress tracking
+     */
+    emitCompletionEvent() {
+        const event = new CustomEvent('quiz-completed', {
             detail: {
                 chapterId: this.chapterId,
                 sectionId: this.sectionId,
-                score: this.score
+                score: this.score,
+                percentage: this.score,
+                passed: this.score >= 80,
+                answers: this.answers,
+                timeSpent: Date.now() - this.startTime
             }
         });
         window.dispatchEvent(event);
@@ -783,43 +752,6 @@ if (nextBtn) {
                 errorDiv.remove();
             }
         }, 3000);
-    }
-
-    /**
-     * Emit completion event for progress tracking
-     */
-    emitCompletionEvent() {
-        const event = new CustomEvent('quiz-completed', {
-            detail: {
-                chapterId: this.chapterId,
-                sectionId: this.sectionId,
-                score: this.score,
-                percentage: this.score,
-                passed: this.score >= 80,
-                answers: this.answers,
-                timeSpent: Date.now() - this.startTime
-            }
-        });
-        window.dispatchEvent(event);
-    }
-
-    /**
-     * Save progress to localStorage
-     */
-    saveProgress() {
-        try {
-            const progressKey = `quiz-progress-${this.chapterId}-${this.sectionId}`;
-            const progressData = {
-                score: this.score,
-                passed: this.score >= 80,
-                completedAt: new Date().toISOString(),
-                attempts: (JSON.parse(localStorage.getItem(progressKey))?.attempts || 0) + 1
-            };
-            
-            localStorage.setItem(progressKey, JSON.stringify(progressData));
-        } catch (error) {
-            console.warn('Could not save quiz progress:', error);
-        }
     }
 
     /**
