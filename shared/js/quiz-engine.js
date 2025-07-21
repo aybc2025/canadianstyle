@@ -456,22 +456,28 @@ if (nextBtn) {
      * Collect fill-in-the-blank answer
      */
     collectFillBlankAnswer(question) {
-        const input = this.container.querySelector('.blank-input');
-        if (!input || !input.value.trim()) return null;
-        
-        const userAnswer = input.value.trim();
-        const correctAnswers = question.acceptableAnswers || [question.answer];
-        const isCorrect = correctAnswers.some(answer => 
-            answer.toLowerCase() === userAnswer.toLowerCase()
-        );
-        
-        return {
-            questionId: question.id,
-            answer: userAnswer,
-            isCorrect: isCorrect,
-            type: 'fill-blank'
-        };
-    }
+    const input = this.container.querySelector('.blank-input');
+    if (!input || !input.value.trim()) return null;
+    
+    const userAnswer = input.value.trim();
+    const correctAnswers = question.acceptableAnswers || [question.answer];
+    
+    // סינון ערכים ריקים/undefined וביטוח שהם strings
+    const validAnswers = correctAnswers.filter(answer => 
+        answer && typeof answer === 'string'
+    );
+    
+    const isCorrect = validAnswers.some(answer => 
+        answer.toLowerCase() === userAnswer.toLowerCase()
+    );
+    
+    return {
+        questionId: question.id,
+        answer: userAnswer,
+        isCorrect: isCorrect,
+        type: 'fill-blank'
+    };
+}
 
     /**
      * Collect matching answer
