@@ -1,221 +1,410 @@
 {
-  "introduction": {
-    "id": "ch13-intro",
-    "title": "Understanding Plain Language",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "What is plain language?",
-        "options": [
-          { "label": "Writing at a grade 3 level", "correct": false },
-          { "label": "Writing that readers can understand and use the first time", "correct": true },
-          { "label": "Avoiding all technical terms", "correct": false },
-          { "label": "Using only short words", "correct": false }
-        ],
-        "rationale": "Plain language is writing that your intended readers can understand and use the first time they read it.",
-        "ref": "§13.01"
-      },
-      {
-        "id": "q2",
-        "type": "multi-select",
-        "stem": "Which are benefits of plain language? (Select all that apply)",
-        "options": [
-          { "label": "Saves readers' time", "correct": true },
-          { "label": "Reduces errors", "correct": true },
-          { "label": "Makes writing look less professional", "correct": false },
-          { "label": "Builds trust with readers", "correct": true },
-          { "label": "Saves money by reducing inquiries", "correct": true }
-        ],
-        "rationale": "Plain language saves time, reduces errors, builds trust, and saves money. It does not make writing less professional."
-      }
-    ]
+  "chapterId": "ch13",
+  "chapterTitle": "Plain Language",
+  "sections": {
+    "reader-focus": {
+      "title": "Reader Focus",
+      "questions": [
+        {
+          "id": "rf-001",
+          "type": "mcq",
+          "stem": "What is the most important factor when deciding how to write a document?",
+          "options": [
+            {"label": "The writer's expertise and knowledge", "correct": false},
+            {"label": "The readers' needs, knowledge level, and goals", "correct": true},
+            {"label": "The organization's preferred style", "correct": false},
+            {"label": "The length requirements of the document", "correct": false}
+          ],
+          "rationale": "Everything you write should be designed around your readers' needs, knowledge level, and goals. Know your audience first.",
+          "ref": "§13.02"
+        },
+        {
+          "id": "rf-002",
+          "type": "mcq",
+          "stem": "Which sentence is better written for a general audience?",
+          "options": [
+            {"label": "Implement multi-factor authentication protocols to enhance security posture", "correct": false},
+            {"label": "Use two-step login to keep your account safe", "correct": true},
+            {"label": "Deploy MFA solutions to mitigate unauthorized access vectors", "correct": false},
+            {"label": "Activate enhanced authentication mechanisms", "correct": false}
+          ],
+          "rationale": "The second option uses plain language that general readers can understand: 'two-step login' instead of technical jargon.",
+          "ref": "§13.02"
+        },
+        {
+          "id": "rf-003",
+          "type": "matching",
+          "stem": "Match each audience type with the appropriate writing approach:",
+          "pairs": [
+            {"left": "Technical experts", "right": "Use precise technical terms they'll understand"},
+            {"left": "General public", "right": "Define technical terms or use simpler alternatives"},
+            {"left": "New employees", "right": "Provide context and background information"},
+            {"left": "Busy executives", "right": "Lead with key points and conclusions"}
+          ],
+          "rationale": "Different audiences need different approaches. Always match your writing style to your readers' knowledge and needs.",
+          "ref": "§13.02"
+        },
+        {
+          "id": "rf-004",
+          "type": "fill-blank",
+          "stem": "Complete this reader-focused question: 'Will my readers _______ this term?'",
+          "answer": "understand",
+          "rationale": "A key reader-focused question is whether your readers will understand the terms you're using.",
+          "ref": "§13.02"
+        },
+        {
+          "id": "rf-005",
+          "type": "mcq",
+          "stem": "When writing for readers under time pressure, you should:",
+          "options": [
+            {"label": "Include all possible details so they have complete information", "correct": false},
+            {"label": "Use technical language to be more precise", "correct": false},
+            {"label": "Put the most important information first and make it easy to scan", "correct": true},
+            {"label": "Write longer sentences to provide more context", "correct": false}
+          ],
+          "rationale": "Readers under pressure need key information quickly and clearly. Put important information first and make it scannable.",
+          "ref": "§13.02"
+        }
+      ]
+    },
+    "organization": {
+      "title": "Organization",
+      "questions": [
+        {
+          "id": "org-001",
+          "type": "mcq",
+          "stem": "What should appear first in a well-organized document?",
+          "options": [
+            {"label": "Background information and context", "correct": false},
+            {"label": "A purpose statement telling readers what to expect", "correct": true},
+            {"label": "Detailed procedures and instructions", "correct": false},
+            {"label": "Supporting evidence and research", "correct": false}
+          ],
+          "rationale": "Start with a purpose statement that tells readers immediately why the document exists and what they'll learn.",
+          "ref": "§13.03"
+        },
+        {
+          "id": "org-002",
+          "type": "drag-drop",
+          "stem": "Arrange these organizational strategies from most to least appropriate for writing step-by-step instructions:",
+          "items": [
+            {"text": "Chronological order", "order": 1},
+            {"text": "Order of importance", "order": 2},
+            {"text": "General to specific", "order": 3},
+            {"text": "Alphabetical order", "order": 4}
+          ],
+          "rationale": "For step-by-step instructions, chronological order is most logical, followed by order of importance for key steps.",
+          "ref": "§13.03"
+        },
+        {
+          "id": "org-003",
+          "type": "mcq",
+          "stem": "Which organizational pattern works best for addressing common concerns?",
+          "options": [
+            {"label": "Chronological", "correct": false},
+            {"label": "General to specific", "correct": false},
+            {"label": "Question and answer", "correct": true},
+            {"label": "Problem to solution", "correct": false}
+          ],
+          "rationale": "Question and answer format directly addresses readers' concerns and is easy to scan for specific information.",
+          "ref": "§13.03"
+        },
+        {
+          "id": "org-004",
+          "type": "fill-blank",
+          "stem": "Put the most _______ information where readers will see it first.",
+          "answer": "important",
+          "rationale": "The most important information should be positioned where readers will see it first - at the beginning.",
+          "ref": "§13.03"
+        },
+        {
+          "id": "org-005",
+          "type": "mcq",
+          "stem": "What should headings do in a well-organized document?",
+          "options": [
+            {"label": "Show off the writer's creativity", "correct": false},
+            {"label": "Clearly indicate what content follows", "correct": true},
+            {"label": "Use complex vocabulary to seem professional", "correct": false},
+            {"label": "Be as short as possible regardless of clarity", "correct": false}
+          ],
+          "rationale": "Headings should clearly indicate content so readers can find what they need quickly and understand the document's structure.",
+          "ref": "§13.03"
+        }
+      ]
+    },
+    "vocabulary": {
+      "title": "Vocabulary",
+      "questions": [
+        {
+          "id": "voc-001",
+          "type": "mcq",
+          "stem": "Which word choice follows plain language principles?",
+          "options": [
+            {"label": "Facilitate → Help", "correct": true},
+            {"label": "Help → Facilitate", "correct": false},
+            {"label": "Simple → Uncomplicated", "correct": false},
+            {"label": "Use → Utilize", "correct": false}
+          ],
+          "rationale": "'Help' is more familiar and concrete than 'facilitate.' Choose words that readers know and use.",
+          "ref": "§13.04"
+        },
+        {
+          "id": "voc-002",
+          "type": "matching",
+          "stem": "Match the complex word with its plain language alternative:",
+          "pairs": [
+            {"left": "Subsequently", "right": "Later"},
+            {"left": "Endeavour", "right": "Try"},
+            {"left": "Commence", "right": "Start"},
+            {"left": "Approximately", "right": "About"}
+          ],
+          "rationale": "These plain language alternatives are shorter, more familiar, and more natural-sounding.",
+          "ref": "§13.04"
+        },
+        {
+          "id": "voc-003",
+          "type": "mcq",
+          "stem": "When should you use technical jargon in government writing?",
+          "options": [
+            {"label": "Always, to sound professional", "correct": false},
+            {"label": "Never, it's always inappropriate", "correct": false},
+            {"label": "Only when you're sure readers understand it", "correct": true},
+            {"label": "Only in very long documents", "correct": false}
+          ],
+          "rationale": "Use technical jargon only when you're certain your readers understand it. When in doubt, use plain language or define terms.",
+          "ref": "§13.04"
+        },
+        {
+          "id": "voc-004",
+          "type": "error-spot",
+          "stem": "Click on the word that should be simplified in this sentence:",
+          "text": "We will endeavour to facilitate your request in an expeditious manner.",
+          "errorPosition": "endeavour",
+          "correction": "try",
+          "rationale": "'Endeavour' should be 'try' - it's simpler and more direct. The whole sentence could be: 'We will try to help you quickly.'",
+          "ref": "§13.04"
+        },
+        {
+          "id": "voc-005",
+          "type": "mcq",
+          "stem": "Why should you use consistent terminology throughout a document?",
+          "options": [
+            {"label": "To show your vocabulary range", "correct": false},
+            {"label": "To avoid boring readers with repetition", "correct": false},
+            {"label": "To prevent reader confusion and maintain clarity", "correct": true},
+            {"label": "To meet word count requirements", "correct": false}
+          ],
+          "rationale": "Consistent terminology prevents confusion. Don't vary words for the same concept - it makes readers wonder if you mean something different.",
+          "ref": "§13.04"
+        }
+      ]
+    },
+    "sentences": {
+      "title": "Sentences",
+      "questions": [
+        {
+          "id": "sent-001",
+          "type": "mcq",
+          "stem": "What is the recommended average sentence length for plain language?",
+          "options": [
+            {"label": "10-12 words", "correct": false},
+            {"label": "15-20 words", "correct": true},
+            {"label": "25-30 words", "correct": false},
+            {"label": "35+ words", "correct": false}
+          ],
+          "rationale": "Average 15-20 words per sentence. This length is easier to follow while still allowing for complete thoughts.",
+          "ref": "§13.05"
+        },
+        {
+          "id": "sent-002",
+          "type": "mcq",
+          "stem": "Which sentence uses active voice correctly?",
+          "options": [
+            {"label": "Mistakes were made in processing applications", "correct": false},
+            {"label": "Applications were processed incorrectly", "correct": false},
+            {"label": "We made mistakes when processing applications", "correct": true},
+            {"label": "Errors were found in the application process", "correct": false}
+          ],
+          "rationale": "Active voice is more direct: 'We made mistakes' clearly identifies who did what, unlike passive voice constructions.",
+          "ref": "§13.05"
+        },
+        {
+          "id": "sent-003",
+          "type": "fill-blank",
+          "stem": "Break up long sentences to express _____ main idea per sentence.",
+          "answer": "one",
+          "rationale": "Each sentence should express one main idea. This makes writing clearer and easier to follow.",
+          "ref": "§13.05"
+        },
+        {
+          "id": "sent-004",
+          "type": "mcq",
+          "stem": "Which revision eliminates unnecessary words?",
+          "options": [
+            {"label": "Past experience → Previous experience", "correct": false},
+            {"label": "End result → Final result", "correct": false},
+            {"label": "Free gift → Gift", "correct": true},
+            {"label": "Future plans → Upcoming plans", "correct": false}
+          ],
+          "rationale": "'Free gift' is redundant because gifts are by definition free. 'Gift' alone is sufficient.",
+          "ref": "§13.05"
+        },
+        {
+          "id": "sent-005",
+          "type": "mcq",
+          "stem": "How should you handle complex policy information in plain language?",
+          "options": [
+            {"label": "Keep all information in one comprehensive sentence", "correct": false},
+            {"label": "Break it into shorter sentences with one idea each", "correct": true},
+            {"label": "Use more technical terms to be precise", "correct": false},
+            {"label": "Write longer paragraphs to provide context", "correct": false}
+          ],
+          "rationale": "Break complex information into shorter sentences with one idea each. This makes difficult content more accessible.",
+          "ref": "§13.05"
+        }
+      ]
+    },
+    "layout": {
+      "title": "Layout & Design",
+      "questions": [
+        {
+          "id": "lay-001",
+          "type": "mcq",
+          "stem": "What is the main purpose of white space in document design?",
+          "options": [
+            {"label": "To make documents look more professional", "correct": false},
+            {"label": "To give readers' eyes a rest and improve readability", "correct": true},
+            {"label": "To fill up empty space on the page", "correct": false},
+            {"label": "To meet minimum page requirements", "correct": false}
+          ],
+          "rationale": "White space gives readers' eyes a rest and makes text more readable by creating visual breaks between sections.",
+          "ref": "§13.06"
+        },
+        {
+          "id": "lay-002",
+          "type": "mcq",
+          "stem": "When should you use lists in plain language documents?",
+          "options": [
+            {"label": "Only for numbered procedures", "correct": false},
+            {"label": "To break up dense paragraphs and present series of items", "correct": true},
+            {"label": "Only when you have more than 10 items", "correct": false},
+            {"label": "Never, they make documents look unprofessional", "correct": false}
+          ],
+          "rationale": "Use lists to break up dense paragraphs and present series of items clearly. They make information easier to scan and understand.",
+          "ref": "§13.06"
+        },
+        {
+          "id": "lay-003",
+          "type": "mcq",
+          "stem": "How long should paragraphs be in plain language writing?",
+          "options": [
+            {"label": "1-2 sentences maximum", "correct": false},
+            {"label": "3-5 sentences", "correct": true},
+            {"label": "6-8 sentences", "correct": false},
+            {"label": "Length doesn't matter as long as content is complete", "correct": false}
+          ],
+          "rationale": "Keep paragraphs to 3-5 sentences. Longer paragraphs can overwhelm readers and make text harder to scan.",
+          "ref": "§13.06"
+        },
+        {
+          "id": "lay-004",
+          "type": "matching",
+          "stem": "Match the design element with its plain language purpose:",
+          "pairs": [
+            {"left": "Headings", "right": "Tell readers what to expect in each section"},
+            {"left": "Lists", "right": "Break up dense text and highlight key points"},
+            {"left": "White space", "right": "Give readers visual breaks and improve readability"},
+            {"left": "Bold text", "right": "Highlight key information (but don't overuse)"}
+          ],
+          "rationale": "Each design element serves a specific purpose in making information more accessible to readers.",
+          "ref": "§13.06"
+        },
+        {
+          "id": "lay-005",
+          "type": "mcq",
+          "stem": "What makes a document layout truly effective?",
+          "options": [
+            {"label": "Using many different fonts and colors", "correct": false},
+            {"label": "Making it look organized and helping readers find information", "correct": true},
+            {"label": "Filling every available space with text", "correct": false},
+            {"label": "Using complex formatting to impress readers", "correct": false}
+          ],
+          "rationale": "Effective layout looks organized and helps readers find the information they need quickly and easily.",
+          "ref": "§13.06"
+        }
+      ]
+    },
+    "testing": {
+      "title": "Testing",
+      "questions": [
+        {
+          "id": "test-001",
+          "type": "mcq",
+          "stem": "What is the best measure of whether your writing uses plain language effectively?",
+          "options": [
+            {"label": "It passes all readability tests", "correct": false},
+            {"label": "Readers can understand and use it successfully", "correct": true},
+            {"label": "It uses short words and sentences", "correct": false},
+            {"label": "It follows all the style guidelines", "correct": false}
+          ],
+          "rationale": "The best measure is whether readers can actually understand and use your writing successfully - not just whether it follows rules.",
+          "ref": "§13.07"
+        },
+        {
+          "id": "test-002",
+          "type": "matching",
+          "stem": "Match the testing method with what it reveals:",
+          "pairs": [
+            {"left": "User testing", "right": "Whether people can actually complete tasks"},
+            {"left": "Readability tests", "right": "Grade level and sentence complexity"},
+            {"left": "Expert review", "right": "Professional assessment of plain language principles"},
+            {"left": "Field testing", "right": "How the document works in real situations"}
+          ],
+          "rationale": "Different testing methods reveal different aspects of how well your document works for readers.",
+          "ref": "§13.07"
+        },
+        {
+          "id": "test-003",
+          "type": "mcq",
+          "stem": "What should you observe during user testing?",
+          "options": [
+            {"label": "Only whether users complete tasks correctly", "correct": false},
+            {"label": "Where users get stuck and how long tasks take", "correct": true},
+            {"label": "Whether users like the document design", "correct": false},
+            {"label": "How fast users can read the document", "correct": false}
+          ],
+          "rationale": "Watch where users get stuck, how long tasks take, and what causes confusion - this shows you what needs improvement.",
+          "ref": "§13.07"
+        },
+        {
+          "id": "test-004",
+          "type": "fill-blank",
+          "stem": "A simple way to test your writing is to read it _____ _____.",
+          "answer": "out loud",
+          "rationale": "Reading your writing out loud helps you catch awkward phrasing, long sentences, and unclear passages.",
+          "ref": "§13.07"
+        },
+        {
+          "id": "test-005",
+          "type": "mcq",
+          "stem": "Why is testing important for plain language writing?",
+          "options": [
+            {"label": "It's required by government regulations", "correct": false},
+            {"label": "It ensures your writing actually works for real readers", "correct": true},
+            {"label": "It helps you meet word count requirements", "correct": false},
+            {"label": "It makes your writing more professional", "correct": false}
+          ],
+          "rationale": "Testing ensures your writing actually works for real readers in real situations - the ultimate goal of plain language.",
+          "ref": "§13.07"
+        }
+      ]
+    }
   },
-  "reader-focus": {
-    "id": "ch13-reader",
-    "title": "Writing for Your Reader",
-    "questions": [
-      {
-        "id": "q3",
-        "type": "mcq",
-        "stem": "Which sentence better focuses on the reader?",
-        "options": [
-          { "label": "The department has revised its policies.", "correct": false },
-          { "label": "Your benefits will increase by 15%.", "correct": true },
-          { "label": "A new system has been implemented.", "correct": false },
-          { "label": "Changes have been made to the program.", "correct": false }
-        ],
-        "rationale": "Lead with what matters most to your reader—in this case, the benefit increase.",
-        "ref": "§13.02"
-      },
-      {
-        "id": "q4",
-        "type": "fill-blank",
-        "stem": "___ must submit your application by March 31.",
-        "answer": "You",
-        "rationale": "Using 'you' makes writing more direct and personal.",
-        "ref": "§13.02"
-      }
-    ]
-  },
-  "vocabulary": {
-    "id": "ch13-vocab",
-    "title": "Choosing Clear Words",
-    "questions": [
-      {
-        "id": "q5",
-        "type": "drag-drop",
-        "stem": "Match complex words with their plain alternatives:",
-        "options": [
-          { "label": "commence → start", "order": 1 },
-          { "label": "utilize → use", "order": 2 },
-          { "label": "prior to → before", "order": 3 },
-          { "label": "in the event that → if", "order": 4 },
-          { "label": "notwithstanding → despite", "order": 5 }
-        ],
-        "rationale": "Simple, familiar words communicate more effectively than complex alternatives."
-      },
-      {
-        "id": "q6",
-        "type": "error-spot",
-        "stem": "Click on the redundant phrase:",
-        "text": "Please submit your future plans for the upcoming year",
-        "errorIndex": 4,
-        "rationale": "'Future plans' is redundant—all plans are for the future. Just use 'plans'.",
-        "ref": "§13.04"
-      },
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "Which is more specific and clear?",
-        "options": [
-          { "label": "Submit your application in a timely manner", "correct": false },
-          { "label": "Submit your application soon", "correct": false },
-          { "label": "Submit your application by March 31", "correct": true },
-          { "label": "Submit your application when convenient", "correct": false }
-        ],
-        "rationale": "Specific dates are clearer than vague time references."
-      }
-    ]
-  },
-  "sentences": {
-    "id": "ch13-sentences",
-    "title": "Writing Clear Sentences",
-    "questions": [
-      {
-        "id": "q8",
-        "type": "mcq",
-        "stem": "Which sentence uses active voice?",
-        "options": [
-          { "label": "The report was written by the consultant.", "correct": false },
-          { "label": "The consultant wrote the report.", "correct": true },
-          { "label": "Writing of the report was done by the consultant.", "correct": false },
-          { "label": "The report has been completed.", "correct": false }
-        ],
-        "rationale": "Active voice puts the doer (consultant) before the action (wrote).",
-        "ref": "§13.05"
-      },
-      {
-        "id": "q9",
-        "type": "multi-select",
-        "stem": "Which techniques help write clearer sentences? (Select all)",
-        "options": [
-          { "label": "Keep sentences under 20 words on average", "correct": true },
-          { "label": "Use passive voice exclusively", "correct": false },
-          { "label": "Put the main idea first", "correct": true },
-          { "label": "Use positive language", "correct": true },
-          { "label": "Create long noun strings", "correct": false }
-        ],
-        "rationale": "Short sentences, main idea first, and positive language all improve clarity."
-      },
-      {
-        "id": "q10",
-        "type": "fill-blank",
-        "stem": "The average sentence length for plain language should be ___-20 words.",
-        "answer": "15",
-        "alternatives": ["fifteen"],
-        "rationale": "Aim for an average of 15-20 words per sentence for optimal readability.",
-        "ref": "§13.05"
-      }
-    ]
-  },
-  "layout": {
-    "id": "ch13-layout",
-    "title": "Designing for Clarity",
-    "questions": [
-      {
-        "id": "q11",
-        "type": "mcq",
-        "stem": "Which heading is more descriptive and helpful?",
-        "options": [
-          { "label": "Section 3: Procedures", "correct": false },
-          { "label": "How to Apply for Benefits", "correct": true },
-          { "label": "Important Information", "correct": false },
-          { "label": "Part III", "correct": false }
-        ],
-        "rationale": "Descriptive headings help readers find information quickly.",
-        "ref": "§13.06"
-      },
-      {
-        "id": "q12",
-        "type": "multi-select",
-        "stem": "Which design elements help readers scan documents? (Select all)",
-        "options": [
-          { "label": "Short paragraphs (3-4 sentences)", "correct": true },
-          { "label": "Long blocks of unbroken text", "correct": false },
-          { "label": "Descriptive subheadings", "correct": true },
-          { "label": "Bulleted lists", "correct": true },
-          { "label": "ALL CAPS for emphasis", "correct": false }
-        ],
-        "rationale": "Short paragraphs, subheadings, and lists help readers scan effectively."
-      }
-    ]
-  },
-  "testing": {
-    "id": "ch13-testing",
-    "title": "Testing Your Documents",
-    "questions": [
-      {
-        "id": "q13",
-        "type": "mcq",
-        "stem": "What's the best way to test if your document works?",
-        "options": [
-          { "label": "Ask your colleagues to review it", "correct": false },
-          { "label": "Test with people who represent your actual audience", "correct": true },
-          { "label": "Run it through grammar-checking software", "correct": false },
-          { "label": "Read it aloud to yourself", "correct": false }
-        ],
-        "rationale": "Testing with real representatives of your audience provides the most valuable feedback.",
-        "ref": "§13.07"
-      },
-      {
-        "id": "q14",
-        "type": "mcq",
-        "stem": "What Flesch Reading Ease score should you aim for in plain English?",
-        "options": [
-          { "label": "30-40", "correct": false },
-          { "label": "40-50", "correct": false },
-          { "label": "60+", "correct": true },
-          { "label": "90+", "correct": false }
-        ],
-        "rationale": "Aim for a Flesch Reading Ease score of 60 or higher for plain English.",
-        "ref": "§13.07"
-      },
-      {
-        "id": "q15",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Utilize", "back": "Use" },
-          { "front": "Prior to", "back": "Before" },
-          { "front": "Commence", "back": "Start/Begin" },
-          { "front": "Subsequent to", "back": "After" },
-          { "front": "In the event that", "back": "If" },
-          { "front": "Notwithstanding", "back": "Despite" },
-          { "front": "Ameliorate", "back": "Improve" },
-          { "front": "Expeditious", "back": "Quick/Fast" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 30,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "40-50 minutes",
+    "passingScore": 80
   }
 }

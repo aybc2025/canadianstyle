@@ -1,258 +1,560 @@
 {
-  "sentence-capitals": {
-    "id": "sentence-capitals-quiz",
-    "title": "Sentence Capitals Quiz",
-    "chapterId": "ch01",
-    "sectionId": "sentence-capitals",
-    "questions": [
-      {
-        "id": "sc-001",
-        "type": "mcq",
-        "stem": "Which sentence correctly uses capital letters?",
-        "options": [
-          {
-            "label": "the Government of canada announced new policies.",
-            "correct": false
-          },
-          {
-            "label": "The government of Canada announced new policies.",
-            "correct": true
-          },
-          {
-            "label": "The Government Of Canada Announced New Policies.",
-            "correct": false
-          },
-          {
-            "label": "the government of canada announced new policies.",
-            "correct": false
-          }
-        ],
-        "rationale": "Capitalize the first word of a sentence and proper nouns like 'Canada', but not common nouns like 'government' unless they're part of an official title.",
-        "ref": "§1.02"
-      },
-      {
-        "id": "sc-002",
-        "type": "mcq",
-        "stem": "Choose the correctly capitalized sentence:",
-        "options": [
-          {
-            "label": "we met the Minister yesterday.",
-            "correct": false
-          },
-          {
-            "label": "We met the minister yesterday.",
-            "correct": true
-          },
-          {
-            "label": "We Met The Minister Yesterday.",
-            "correct": false
-          },
-          {
-            "label": "we met the minister yesterday.",
-            "correct": false
-          }
-        ],
-        "rationale": "Start sentences with a capital letter. Use lowercase for generic titles unless referring to a specific person by their official title.",
-        "ref": "§1.02"
-      }
-    ]
+  "chapterId": "ch01",
+  "chapterTitle": "Abbreviations",
+  "sections": {
+    "general-principles": {
+      "id": "general-principles-quiz",
+      "title": "General Principles of Abbreviations",
+      "questions": [
+        {
+          "id": "gp-01",
+          "type": "mcq",
+          "stem": "What is the most important principle when using abbreviations in formal government writing?",
+          "options": [
+            {"label": "Use as many abbreviations as possible to save space", "correct": false},
+            {"label": "Use abbreviations sparingly and define them on first use", "correct": true},
+            {"label": "Never use abbreviations in government documents", "correct": false},
+            {"label": "Only use abbreviations that are in the dictionary", "correct": false}
+          ],
+          "rationale": "The key principle is to use abbreviations sparingly and always define them on first use to maintain clarity and accessibility for all readers.",
+          "ref": "§1.02"
+        },
+        {
+          "id": "gp-02",
+          "type": "fill-blank",
+          "stem": "Complete this example of proper abbreviation usage: The Department of National Defence (__________) announced new policies. Later, __________ officials confirmed the changes.",
+          "blanks": [
+            {"id": "blank1", "answer": ["DND", "(DND)"], "position": 1},
+            {"id": "blank2", "answer": ["DND"], "position": 2}
+          ],
+          "rationale": "First use should include the full name followed by the abbreviation in parentheses, then subsequent uses can use just the abbreviation.",
+          "ref": "§1.02"
+        },
+        {
+          "id": "gp-03",
+          "type": "mcq",
+          "stem": "When should you avoid using an abbreviation in a document?",
+          "options": [
+            {"label": "When it appears more than five times", "correct": false},
+            {"label": "When it appears only once or twice", "correct": true},
+            {"label": "When it's a government department", "correct": false},
+            {"label": "When writing to internal staff", "correct": false}
+          ],
+          "rationale": "If an abbreviation appears only once or twice, it's usually better to spell out the full term each time for clarity.",
+          "ref": "§1.02"
+        },
+        {
+          "id": "gp-04",
+          "type": "matching",
+          "stem": "Match the abbreviation style with the correct usage:",
+          "pairs": [
+            {"left": "Dr., Mr., Mrs.", "right": "Use periods"},
+            {"left": "NATO, UNESCO, CBC", "right": "No periods"},
+            {"left": "vs., etc., i.e.", "right": "Use periods"},
+            {"left": "HTML, PDF, USB", "right": "No periods"}
+          ],
+          "rationale": "Traditional abbreviations and Latin terms typically use periods, while acronyms and technical terms often don't.",
+          "ref": "§1.02"
+        },
+        {
+          "id": "gp-05",
+          "type": "error-spot",
+          "stem": "Click on the error in this sentence:",
+          "text": "The CBC announced that UNESCO will partner with NATO officials.",
+          "errors": [
+            {"text": "CBC", "position": 4, "correction": "Canadian Broadcasting Corporation (CBC)", "reason": "Abbreviation not defined on first use"}
+          ],
+          "rationale": "Even well-known abbreviations should be defined on first use in formal documents.",
+          "ref": "§1.02"
+        }
+      ]
+    },
+    "sentence-capitals": {
+      "id": "sentence-capitals-quiz", 
+      "title": "Sentence Capitals and Abbreviations",
+      "questions": [
+        {
+          "id": "sc-01",
+          "type": "mcq",
+          "stem": "Which is the correct way to start a sentence with an abbreviation?",
+          "options": [
+            {"label": "e.g., the following examples show...", "correct": false},
+            {"label": "E.g., the following examples show...", "correct": true},
+            {"label": "EG, the following examples show...", "correct": false},
+            {"label": "For example, the following examples show...", "correct": true}
+          ],
+          "rationale": "Either capitalize the first letter (E.g.) or better yet, restructure to avoid abbreviations at sentence beginnings (For example).",
+          "ref": "§1.03"
+        },
+        {
+          "id": "sc-02",
+          "type": "drag-drop",
+          "stem": "Arrange these sentence beginnings from best to worst practice:",
+          "items": [
+            {"id": "item1", "text": "For example, the policy covers...", "order": 1},
+            {"id": "item2", "text": "E.g., the policy covers...", "order": 2},
+            {"id": "item3", "text": "e.g., the policy covers...", "order": 3}
+          ],
+          "rationale": "Best practice is to spell out the phrase, acceptable is to capitalize the abbreviation, worst is lowercase abbreviation at sentence start.",
+          "ref": "§1.03"
+        },
+        {
+          "id": "sc-03",
+          "type": "fill-blank",
+          "stem": "Rewrite this sentence to avoid starting with an abbreviation: 'Etc. appears frequently in casual writing.' → '__________ appears frequently in casual writing.'",
+          "blanks": [
+            {"id": "blank1", "answer": ["And so on", "And so forth", "Such terms", "These abbreviations"], "position": 1}
+          ],
+          "rationale": "Replace 'Etc.' with a spelled-out equivalent like 'And so on' or restructure the sentence entirely.",
+          "ref": "§1.03"
+        },
+        {
+          "id": "sc-04",
+          "type": "mcq",
+          "stem": "Which abbreviations are better avoided at the beginning of sentences?",
+          "options": [
+            {"label": "Dr., Prof., Mr.", "correct": false},
+            {"label": "e.g., i.e., etc.", "correct": true},
+            {"label": "NATO, UNESCO, CBC", "correct": false},
+            {"label": "B.C., N.S., P.E.I.", "correct": false}
+          ],
+          "rationale": "Latin abbreviations like e.g., i.e., and etc. are better spelled out or the sentence restructured when they would appear at the beginning.",
+          "ref": "§1.03"
+        },
+        {
+          "id": "sc-05",
+          "type": "error-spot",
+          "stem": "Click on the problematic word in this sentence:",
+          "text": "Dr. Smith will attend the meeting with etc. on the agenda.",
+          "errors": [
+            {"text": "etc.", "position": 9, "correction": "other items", "reason": "Avoid 'etc.' in formal writing; be specific or use 'and other items'"}
+          ],
+          "rationale": "'Etc.' should be avoided in formal writing. Instead, list all items or use phrases like 'and other items'.",
+          "ref": "§1.03"
+        }
+      ]
+    },
+    "proper-nouns": {
+      "id": "proper-nouns-quiz",
+      "title": "Proper Noun Abbreviations",
+      "questions": [
+        {
+          "id": "pn-01",
+          "type": "mcq",
+          "stem": "How should international organization abbreviations be written?",
+          "options": [
+            {"label": "With periods: U.N., N.A.T.O.", "correct": false},
+            {"label": "Without periods: UN, NATO", "correct": true},
+            {"label": "Mixed: U.N, NATO", "correct": false},
+            {"label": "Always spelled out", "correct": false}
+          ],
+          "rationale": "International organization abbreviations are typically written without periods: UN, NATO, UNESCO, WHO.",
+          "ref": "§1.04"
+        },
+        {
+          "id": "pn-02",
+          "type": "fill-blank",
+          "stem": "Complete the proper first reference: The __________ (__________) announced new peacekeeping initiatives. Later, __________ officials confirmed the deployment.",
+          "blanks": [
+            {"id": "blank1", "answer": ["United Nations"], "position": 1},
+            {"id": "blank2", "answer": ["UN"], "position": 2},
+            {"id": "blank3", "answer": ["UN"], "position": 3}
+          ],
+          "rationale": "Spell out the full name first, provide abbreviation in parentheses, then use abbreviation in subsequent references.",
+          "ref": "§1.04"
+        },
+        {
+          "id": "pn-03",
+          "type": "matching",
+          "stem": "Match the organization with its correct abbreviation:",
+          "pairs": [
+            {"left": "World Health Organization", "right": "WHO"},
+            {"left": "North Atlantic Treaty Organization", "right": "NATO"},
+            {"left": "United Nations Educational, Scientific and Cultural Organization", "right": "UNESCO"},
+            {"left": "Royal Canadian Mounted Police", "right": "RCMP"}
+          ],
+          "rationale": "These are standard abbreviations for major international and Canadian organizations.",
+          "ref": "§1.04"
+        },
+        {
+          "id": "pn-04",
+          "type": "mcq",
+          "stem": "Which is the correct way to abbreviate Canadian provinces in formal writing?",
+          "options": [
+            {"label": "BC, ON, QC (postal codes)", "correct": false},
+            {"label": "B.C., Ont., Que. (with periods)", "correct": true},
+            {"label": "bc, on, qc (lowercase)", "correct": false},
+            {"label": "Never abbreviate provinces", "correct": false}
+          ],
+          "rationale": "Canadian provinces use periods in their abbreviations: B.C., Ont., Que., N.S., etc.",
+          "ref": "§1.04"
+        },
+        {
+          "id": "pn-05",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly formatted abbreviation:",
+          "text": "The conference included representatives from the U.S., U.K., and E.U. discussing trade.",
+          "errors": [
+            {"text": "E.U.", "position": 12, "correction": "EU", "reason": "European Union is abbreviated as EU without periods"}
+          ],
+          "rationale": "While U.S. and U.K. use periods, EU (European Union) is written without periods.",
+          "ref": "§1.04"
+        }
+      ]
+    },
+    "government-bodies": {
+      "id": "government-bodies-quiz",
+      "title": "Government Bodies and Departments",
+      "questions": [
+        {
+          "id": "gb-01",
+          "type": "mcq",
+          "stem": "What is the best practice for abbreviating federal department names?",
+          "options": [
+            {"label": "Always use the department's acronym", "correct": false},
+            {"label": "Spell out on first use, then use official short form", "correct": true},
+            {"label": "Never abbreviate department names", "correct": false},
+            {"label": "Use only the minister's name", "correct": false}
+          ],
+          "rationale": "Best practice is to spell out the full department name on first use, then use the established short form (not necessarily an acronym).",
+          "ref": "§1.05"
+        },
+        {
+          "id": "gb-02",
+          "type": "fill-blank",
+          "stem": "Complete this proper reference: The __________ (__________) released new guidelines. __________ officials will implement the changes next month.",
+          "blanks": [
+            {"id": "blank1", "answer": ["Department of Justice Canada"], "position": 1},
+            {"id": "blank2", "answer": ["Justice Canada"], "position": 2},
+            {"id": "blank3", "answer": ["Justice Canada", "Department"], "position": 3}
+          ],
+          "rationale": "Use the full name first, then the established short form 'Justice Canada' rather than an acronym like 'DOJ'.",
+          "ref": "§1.05"
+        },
+        {
+          "id": "gb-03",
+          "type": "matching",
+          "stem": "Match the department with its preferred short form:",
+          "pairs": [
+            {"left": "Department of National Defence", "right": "National Defence"},
+            {"left": "Public Safety Canada", "right": "Public Safety"},
+            {"left": "Employment and Social Development Canada", "right": "ESDC"},
+            {"left": "Statistics Canada", "right": "StatCan"}
+          ],
+          "rationale": "Some departments use descriptive short forms while others use established acronyms like ESDC and StatCan.",
+          "ref": "§1.05"
+        },
+        {
+          "id": "gb-04",
+          "type": "mcq",
+          "stem": "How should parliamentary bodies be referenced after first use?",
+          "options": [
+            {"label": "HOC, SOC, POC", "correct": false},
+            {"label": "the House, the Senate, Parliament", "correct": true},
+            {"label": "H.O.C., S.O.C., P.O.C.", "correct": false},
+            {"label": "Always use full names", "correct": false}
+          ],
+          "rationale": "After first use, parliamentary bodies can be referred to as 'the House', 'the Senate', and 'Parliament'.",
+          "ref": "§1.05"
+        },
+        {
+          "id": "gb-05",
+          "type": "drag-drop",
+          "stem": "Arrange these references in order of preference for government writing:",
+          "items": [
+            {"id": "item1", "text": "Employment and Social Development Canada (first use)", "order": 1},
+            {"id": "item2", "text": "ESDC (subsequent uses)", "order": 2},
+            {"id": "item3", "text": "The Department (if clear from context)", "order": 3},
+            {"id": "item4", "text": "HRSDC (outdated name)", "order": 4}
+          ],
+          "rationale": "Use full name first, then established abbreviation, then generic reference if clear, never outdated abbreviations.",
+          "ref": "§1.05"
+        }
+      ]
+    },
+    "titles-positions": {
+      "id": "titles-positions-quiz",
+      "title": "Titles and Positions",
+      "questions": [
+        {
+          "id": "tp-01",
+          "type": "mcq",
+          "stem": "Which titles should always include periods?",
+          "options": [
+            {"label": "Dr, Mr, Mrs", "correct": false},
+            {"label": "Dr., Mr., Mrs.", "correct": true},
+            {"label": "DR, MR, MRS", "correct": false},
+            {"label": "Doctor, Mister, Missus", "correct": false}
+          ],
+          "rationale": "Personal titles like Dr., Mr., Mrs., and Ms. always include periods in Canadian usage.",
+          "ref": "§1.06"
+        },
+        {
+          "id": "tp-02",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly formatted title:",
+          "text": "Dr Sarah Johnson and Prof. Michael Brown attended the meeting with Hon Jane Smith.",
+          "errors": [
+            {"text": "Dr", "position": 1, "correction": "Dr.", "reason": "Doctor title needs a period"},
+            {"text": "Hon", "position": 14, "correction": "Hon.", "reason": "Honourable title needs a period"}
+          ],
+          "rationale": "All abbreviated titles require periods: Dr., Prof., Hon.",
+          "ref": "§1.06"
+        },
+        {
+          "id": "tp-03",
+          "type": "fill-blank",
+          "stem": "Complete the military rank abbreviations: __________ Lisa White (General), __________ John Davis (Colonel), __________ Mary Wilson (Sergeant)",
+          "blanks": [
+            {"id": "blank1", "answer": ["Gen."], "position": 1},
+            {"id": "blank2", "answer": ["Col."], "position": 2},
+            {"id": "blank3", "answer": ["Sgt."], "position": 3}
+          ],
+          "rationale": "Military ranks are abbreviated with periods: Gen., Col., Sgt., Cst.",
+          "ref": "§1.06"
+        },
+        {
+          "id": "tp-04",
+          "type": "mcq",
+          "stem": "When is it appropriate to use 'PM' for Prime Minister?",
+          "options": [
+            {"label": "Always in government documents", "correct": false},
+            {"label": "Never in any documents", "correct": false},
+            {"label": "Only in informal contexts", "correct": true},
+            {"label": "Only in international communications", "correct": false}
+          ],
+          "rationale": "'PM' is acceptable only in informal contexts. In formal writing, use 'Prime Minister' or 'the Prime Minister'.",
+          "ref": "§1.06"
+        },
+        {
+          "id": "tp-05",
+          "type": "matching",
+          "stem": "Match the position with appropriate usage:",
+          "pairs": [
+            {"left": "Minister of Health", "right": "Spell out (formal documents)"},
+            {"left": "Deputy Minister", "right": "DM (internal use only)"},
+            {"left": "Assistant Deputy Minister", "right": "ADM (internal use only)"},
+            {"left": "Director General", "right": "DG (internal use only)"}
+          ],
+          "rationale": "Government position abbreviations are typically for internal use only; spell out in public documents.",
+          "ref": "§1.06"
+        }
+      ]
+    },
+    "geographic-names": {
+      "id": "geographic-names-quiz",
+      "title": "Geographic Names and Locations",
+      "questions": [
+        {
+          "id": "gn-01",
+          "type": "mcq",
+          "stem": "How should Canadian provinces be abbreviated in addresses?",
+          "options": [
+            {"label": "BC, ON, QC (no periods)", "correct": false},
+            {"label": "B.C., Ont., Que. (with periods)", "correct": true},
+            {"label": "bc, on, qc (lowercase)", "correct": false},
+            {"label": "British Columbia, Ontario, Quebec (full names)", "correct": false}
+          ],
+          "rationale": "Canadian provinces use periods in their traditional abbreviations: B.C., Ont., Que., N.S., etc.",
+          "ref": "§1.07"
+        },
+        {
+          "id": "gn-02",
+          "type": "fill-blank",
+          "stem": "Complete the province abbreviations: British Columbia = __________, Nova Scotia = __________, Prince Edward Island = __________",
+          "blanks": [
+            {"id": "blank1", "answer": ["B.C."], "position": 1},
+            {"id": "blank2", "answer": ["N.S."], "position": 2},
+            {"id": "blank3", "answer": ["P.E.I."], "position": 3}
+          ],
+          "rationale": "These are the standard abbreviations with periods for Canadian provinces.",
+          "ref": "§1.07"
+        },
+        {
+          "id": "gn-03",
+          "type": "matching",
+          "stem": "Match the location with its correct abbreviation:",
+          "pairs": [
+            {"left": "United States", "right": "U.S."},
+            {"left": "United Kingdom", "right": "U.K."},
+            {"left": "European Union", "right": "EU"},
+            {"left": "Northwest Territories", "right": "N.W.T."}
+          ],
+          "rationale": "Note that EU doesn't use periods, while country names and Canadian territories do.",
+          "ref": "§1.07"
+        },
+        {
+          "id": "gn-04",
+          "type": "mcq",
+          "stem": "In what context should you spell out province names rather than abbreviate?",
+          "options": [
+            {"label": "In tables and charts", "correct": false},
+            {"label": "In formal narrative text", "correct": true},
+            {"label": "In addresses", "correct": false},
+            {"label": "In technical documents", "correct": false}
+          ],
+          "rationale": "In formal narrative text, it's better to spell out province names: 'The government of British Columbia announced...'",
+          "ref": "§1.07"
+        },
+        {
+          "id": "gn-05",
+          "type": "drag-drop",
+          "stem": "Arrange these Canadian locations from east to west:",
+          "items": [
+            {"id": "item1", "text": "N.L. (Newfoundland and Labrador)", "order": 1},
+            {"id": "item2", "text": "N.S. (Nova Scotia)", "order": 2},
+            {"id": "item3", "text": "Ont. (Ontario)", "order": 3},
+            {"id": "item4", "text": "B.C. (British Columbia)", "order": 4}
+          ],
+          "rationale": "This tests knowledge of both abbreviations and Canadian geography from east to west.",
+          "ref": "§1.07"
+        }
+      ]
+    },
+    "brand-names": {
+      "id": "brand-names-quiz",
+      "title": "Brand Names and Corporate Identity",
+      "questions": [
+        {
+          "id": "bn-01",
+          "type": "mcq",
+          "stem": "Why should government documents avoid specific brand names when possible?",
+          "options": [
+            {"label": "They are too expensive to mention", "correct": false},
+            {"label": "To maintain government neutrality", "correct": true},
+            {"label": "They change too frequently", "correct": false},
+            {"label": "They are copyrighted", "correct": false}
+          ],
+          "rationale": "Government documents should maintain neutrality and avoid appearing to endorse specific products or services.",
+          "ref": "§1.08"
+        },
+        {
+          "id": "bn-02",
+          "type": "fill-blank",
+          "stem": "Replace these brand names with generic terms: Instead of 'iPhone' use '__________', instead of 'PowerPoint' use '__________', instead of 'Xerox' use '__________'.",
+          "blanks": [
+            {"id": "blank1", "answer": ["smartphone", "mobile device", "mobile phone"], "position": 1},
+            {"id": "blank2", "answer": ["presentation software", "slide presentation"], "position": 2},
+            {"id": "blank3", "answer": ["photocopy", "copy"], "position": 3}
+          ],
+          "rationale": "Generic terms maintain neutrality and are more inclusive of different products that serve the same function.",
+          "ref": "§1.08"
+        },
+        {
+          "id": "bn-03",
+          "type": "mcq",
+          "stem": "Which of these is an acceptable brand reference in government documents?",
+          "options": [
+            {"label": "Use MS Word for all documents", "correct": false},
+            {"label": "VIA Rail Canada (Crown corporation)", "correct": true},
+            {"label": "Buy Apple computers only", "correct": false},
+            {"label": "Google the information", "correct": false}
+          ],
+          "rationale": "Crown corporations like VIA Rail Canada, CBC, and Canada Post can be referenced by name as they are government entities.",
+          "ref": "§1.08"
+        },
+        {
+          "id": "bn-04",
+          "type": "matching",
+          "stem": "Match the brand reference with appropriate government usage:",
+          "pairs": [
+            {"left": "Microsoft Word", "right": "word processing software"},
+            {"left": "CBC", "right": "Canadian Broadcasting Corporation (acceptable)"},
+            {"left": "iPhone", "right": "smartphone"},
+            {"left": "Air Canada", "right": "Air Canada (use full name)"}
+          ],
+          "rationale": "Crown corporations are acceptable, private companies should use generic terms when possible, and full names when specific reference is needed.",
+          "ref": "§1.08"
+        },
+        {
+          "id": "bn-05",
+          "type": "error-spot",
+          "stem": "Click on the inappropriate brand usage for government writing:",
+          "text": "Staff should Google the information and create a PowerPoint presentation using their iPhones.",
+          "errors": [
+            {"text": "Google", "position": 3, "correction": "search for", "reason": "Use generic term 'search for' instead of brand name"},
+            {"text": "PowerPoint", "position": 8, "correction": "presentation software", "reason": "Use generic term for software"},
+            {"text": "iPhones", "position": 12, "correction": "mobile devices", "reason": "Use generic term for devices"}
+          ],
+          "rationale": "Government writing should avoid brand names when generic alternatives are available.",
+          "ref": "§1.08"
+        }
+      ]
+    },
+    "academic-degrees": {
+      "id": "academic-degrees-quiz",
+      "title": "Academic Degrees and Professional Designations",
+      "questions": [
+        {
+          "id": "ad-01",
+          "type": "mcq",
+          "stem": "Where should academic degree abbreviations be placed?",
+          "options": [
+            {"label": "Before the person's name", "correct": false},
+            {"label": "After the person's name", "correct": true},
+            {"label": "In a separate sentence", "correct": false},
+            {"label": "In parentheses before the name", "correct": false}
+          ],
+          "rationale": "Academic degrees are placed after the person's name: 'Sarah Johnson, Ph.D.'",
+          "ref": "§1.09"
+        },
+        {
+          "id": "ad-02",
+          "type": "fill-blank",
+          "stem": "Complete the degree abbreviations: Bachelor of Arts = __________, Master of Science = __________, Doctor of Philosophy = __________",
+          "blanks": [
+            {"id": "blank1", "answer": ["B.A."], "position": 1},
+            {"id": "blank2", "answer": ["M.Sc.", "M.S."], "position": 2},
+            {"id": "blank3", "answer": ["Ph.D."], "position": 3}
+          ],
+          "rationale": "Canadian usage typically includes periods in degree abbreviations.",
+          "ref": "§1.09"
+        },
+        {
+          "id": "ad-03",
+          "type": "error-spot",
+          "stem": "Click on the error in this sentence:",
+          "text": "Dr. Sarah Johnson, Ph.D. presented her research on environmental science.",
+          "errors": [
+            {"text": "Dr. Sarah Johnson, Ph.D.", "position": 1, "correction": "Dr. Sarah Johnson or Sarah Johnson, Ph.D.", "reason": "Don't use both Dr. and Ph.D. - choose one"}
+          ],
+          "rationale": "Avoid redundancy - use either the title 'Dr.' or the degree 'Ph.D.', not both.",
+          "ref": "§1.09"
+        },
+        {
+          "id": "ad-04",
+          "type": "matching",
+          "stem": "Match the degree with its correct abbreviation:",
+          "pairs": [
+            {"left": "Master of Business Administration", "right": "M.B.A."},
+            {"left": "Juris Doctor", "right": "J.D."},
+            {"left": "Doctor of Medicine", "right": "M.D."},
+            {"left": "Bachelor of Science", "right": "B.Sc."}
+          ],
+          "rationale": "These are standard Canadian abbreviations for common degrees.",
+          "ref": "§1.09"
+        },
+        {
+          "id": "ad-05",
+          "type": "mcq",
+          "stem": "When should academic credentials be included in government documents?",
+          "options": [
+            {"label": "Always, to show respect", "correct": false},
+            {"label": "When relevant to the person's role or expertise", "correct": true},
+            {"label": "Never, to maintain equality", "correct": false},
+            {"label": "Only for Ph.D. holders", "correct": false}
+          ],
+          "rationale": "Include academic credentials only when they're relevant to the person's role, expertise, or the context of the document.",
+          "ref": "§1.09"
+        }
+      ]
+    }
   },
-  "proper-nouns": {
-    "id": "proper-nouns-quiz",
-    "title": "Proper Nouns Quiz",
-    "chapterId": "ch01",
-    "sectionId": "proper-nouns",
-    "questions": [
-      {
-        "id": "pn-001",
-        "type": "mcq",
-        "stem": "Which option correctly capitalizes proper nouns?",
-        "options": [
-          {
-            "label": "Parliament hill is in ottawa, ontario.",
-            "correct": false
-          },
-          {
-            "label": "Parliament Hill is in Ottawa, Ontario.",
-            "correct": true
-          },
-          {
-            "label": "parliament hill is in ottawa, ontario.",
-            "correct": false
-          },
-          {
-            "label": "Parliament Hill Is In Ottawa, Ontario.",
-            "correct": false
-          }
-        ],
-        "rationale": "Proper nouns (specific names of places, buildings, etc.) should be capitalized. Parliament Hill, Ottawa, and Ontario are all proper nouns.",
-        "ref": "§1.03"
-      }
-    ]
-  },
-  "government-bodies": {
-    "id": "government-bodies-quiz", 
-    "title": "Government Bodies Quiz",
-    "chapterId": "ch01",
-    "sectionId": "government-bodies",
-    "questions": [
-      {
-        "id": "gb-001",
-        "type": "mcq",
-        "stem": "How should government departments be capitalized?",
-        "options": [
-          {
-            "label": "department of finance",
-            "correct": false
-          },
-          {
-            "label": "Department Of Finance",
-            "correct": false
-          },
-          {
-            "label": "Department of Finance",
-            "correct": true
-          },
-          {
-            "label": "DEPARTMENT OF FINANCE",
-            "correct": false
-          }
-        ],
-        "rationale": "Capitalize the first word and significant words in official government department names, but not prepositions like 'of'.",
-        "ref": "§1.04"
-      }
-    ]
-  },
-  "titles-positions": {
-    "id": "titles-positions-quiz",
-    "title": "Titles and Positions Quiz", 
-    "chapterId": "ch01",
-    "sectionId": "titles-positions",
-    "questions": [
-      {
-        "id": "tp-001",
-        "type": "mcq",
-        "stem": "When should job titles be capitalized?",
-        "options": [
-          {
-            "label": "Always capitalize job titles",
-            "correct": false
-          },
-          {
-            "label": "Never capitalize job titles",
-            "correct": false
-          },
-          {
-            "label": "Capitalize when used as part of someone's name or before their name",
-            "correct": true
-          },
-          {
-            "label": "Only capitalize if the person is important",
-            "correct": false
-          }
-        ],
-        "rationale": "Capitalize titles when they precede a name or are used as part of a formal address, but use lowercase when they follow a name or are used generically.",
-        "ref": "§1.05"
-      }
-    ]
-  },
-  "geographic-names": {
-    "id": "geographic-names-quiz",
-    "title": "Geographic Names Quiz",
-    "chapterId": "ch01", 
-    "sectionId": "geographic-names",
-    "questions": [
-      {
-        "id": "gn-001",
-        "type": "mcq",
-        "stem": "Which geographic reference is correctly capitalized?",
-        "options": [
-          {
-            "label": "the rocky mountains",
-            "correct": false
-          },
-          {
-            "label": "The Rocky Mountains",
-            "correct": true
-          },
-          {
-            "label": "the Rocky Mountains",
-            "correct": true
-          },
-          {
-            "label": "The rocky mountains",
-            "correct": false
-          }
-        ],
-        "rationale": "Geographic features that are proper nouns should be capitalized. 'Rocky Mountains' is a specific mountain range name.",
-        "ref": "§1.06"
-      }
-    ]
-  },
-  "brand-names": {
-    "id": "brand-names-quiz",
-    "title": "Brand Names Quiz",
-    "chapterId": "ch01",
-    "sectionId": "brand-names", 
-    "questions": [
-      {
-        "id": "bn-001",
-        "type": "mcq",
-        "stem": "How should brand names and trademarks be written?",
-        "options": [
-          {
-            "label": "Always in all capitals",
-            "correct": false
-          },
-          {
-            "label": "As registered by the company",
-            "correct": true
-          },
-          {
-            "label": "Always in lowercase",
-            "correct": false
-          },
-          {
-            "label": "Only the first letter capitalized",
-            "correct": false
-          }
-        ],
-        "rationale": "Brand names and trademarks should be written as they are officially registered by the company, respecting their chosen capitalization.",
-        "ref": "§1.07"
-      }
-    ]
-  },
-  "academic-degrees": {
-    "id": "academic-degrees-quiz",
-    "title": "Academic Degrees Quiz",
-    "chapterId": "ch01",
-    "sectionId": "academic-degrees",
-    "questions": [
-      {
-        "id": "ad-001",
-        "type": "mcq",
-        "stem": "How should academic degrees be capitalized when abbreviated?",
-        "options": [
-          {
-            "label": "b.a., m.a., ph.d.",
-            "correct": false
-          },
-          {
-            "label": "B.A., M.A., Ph.D.",
-            "correct": true
-          },
-          {
-            "label": "BA, MA, PHD",
-            "correct": false
-          },
-          {
-            "label": "Ba, Ma, Phd",
-            "correct": false
-          }
-        ],
-        "rationale": "Academic degree abbreviations should be capitalized with periods between the letters.",
-        "ref": "§1.08"
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 40,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate", 
+    "timeEstimate": "50-60 minutes",
+    "passingScore": 80
   }
 }

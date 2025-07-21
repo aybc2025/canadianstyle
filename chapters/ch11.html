@@ -8,81 +8,109 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 11: Reports & Minutes</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 11
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">11</div>
+                <div>
+                    <h1>Reports & Minutes</h1>
+                    <p>Structure effective reports and document meetings professionally</p>
                 </div>
-                <span class="progress-text">Progress</span>
             </div>
-        </header>
-
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">11.01 General</a>
-                <a href="#preparation" class="tab-link" data-section="preparation">11.02 Preparation</a>
-                <a href="#format" class="tab-link" data-section="format">11.03 Format</a>
-                <a href="#front-matter" class="tab-link" data-section="front-matter">11.04-11.07 Front Matter</a>
-                <a href="#body" class="tab-link" data-section="body">11.08-11.10 Report Body</a>
-                <a href="#visuals" class="tab-link" data-section="visuals">11.14-11.15 Tables & Visuals</a>
-                <a href="#headings" class="tab-link" data-section="headings">11.16 Headings</a>
-                <a href="#minutes" class="tab-link" data-section="minutes">11.22-11.27 Minutes</a>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
             </div>
-        </nav>
+        </div>
+    </div>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">11.01 Introduction</a>
+                <a href="#report-structure" class="tab-link" data-section="report-structure">11.02 Report Structure</a>
+                <a href="#headings" class="tab-link" data-section="headings">11.03 Headings</a>
+                <a href="#front-matter" class="tab-link" data-section="front-matter">11.04 Front Matter</a>
+                <a href="#appendices" class="tab-link" data-section="appendices">11.05 Appendices</a>
+                <a href="#tables-charts" class="tab-link" data-section="tables-charts">11.06 Tables & Charts</a>
+                <a href="#minutes" class="tab-link" data-section="minutes">11.07 Meeting Minutes</a>
+                <a href="#formatting" class="tab-link" data-section="formatting">11.08 Formatting</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 11.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>11.01 General Principles</h2>
+                    <h2>11.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Reports and minutes are essential tools for government accountability and information sharing. This chapter covers Canadian government standards for preparing, formatting, and presenting formal reports and meeting documentation.</p>
+                <div class="lesson-content">
+                    <p>Reports and minutes are essential documents in government communication. They convey information, document decisions, and provide accountability. Effective reports are well-structured, clearly written, and professionally formatted.</p>
                     
-                    <div class="key-principles">
-                        <h3>Report Writing Principles</h3>
+                    <div class="key-principle">
+                        <h3>Key Principle</h3>
+                        <p>Every report should have a clear purpose, logical structure, and appropriate level of detail for its intended audience. The format should support, not hinder, communication.</p>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Types of Government Reports</h4>
                         <ul>
-                            <li>Clear purpose and scope definition</li>
-                            <li>Logical organization and structure</li>
-                            <li>Evidence-based conclusions and recommendations</li>
-                            <li>Professional presentation and accessibility</li>
+                            <li><strong>Policy reports:</strong> Analysis and recommendations for decision-makers</li>
+                            <li><strong>Progress reports:</strong> Status updates on projects and programs</li>
+                            <li><strong>Research reports:</strong> Findings from studies and investigations</li>
+                            <li><strong>Annual reports:</strong> Comprehensive yearly overviews</li>
+                            <li><strong>Technical reports:</strong> Specialized information for experts</li>
+                            <li><strong>Committee reports:</strong> Findings and recommendations from committees</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Types of Government Reports</h4>
+                    <div class="examples-box">
+                        <h4>Report Planning Considerations</h4>
+                        <div class="example-item good">
+                            <p><strong>Before writing, consider:</strong></p>
                             <ul>
-                                <li><strong>Annual reports:</strong> Departmental performance</li>
-                                <li><strong>Policy studies:</strong> Research and analysis</li>
-                                <li><strong>Evaluation reports:</strong> Program assessment</li>
-                                <li><strong>Investigation reports:</strong> Findings and recommendations</li>
-                                <li><strong>Status reports:</strong> Project updates</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Audience Considerations</h4>
-                            <ul>
-                                <li><strong>Parliament:</strong> Formal, comprehensive</li>
-                                <li><strong>Public:</strong> Accessible, clear language</li>
-                                <li><strong>Officials:</strong> Technical detail appropriate</li>
-                                <li><strong>Media:</strong> Key findings highlighted</li>
-                                <li><strong>Stakeholders:</strong> Relevant, actionable</li>
+                                <li><strong>Purpose:</strong> What decision or action should result?</li>
+                                <li><strong>Audience:</strong> Who will read and use this report?</li>
+                                <li><strong>Scope:</strong> What topics will be covered?</li>
+                                <li><strong>Timeline:</strong> When is the report needed?</li>
+                                <li><strong>Distribution:</strong> Who should receive copies?</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h4>Quality Standards</h4>
+                        <ul>
+                            <li><strong>Accuracy:</strong> All information must be correct and current</li>
+                            <li><strong>Clarity:</strong> Writing should be clear and accessible</li>
+                            <li><strong>Completeness:</strong> Include all necessary information</li>
+                            <li><strong>Objectivity:</strong> Present balanced, unbiased analysis</li>
+                            <li><strong>Relevance:</strong> Focus on information that supports the purpose</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Common Report Problems</h4>
+                        <p>Avoid these frequent issues: unclear purpose, poor organization, excessive length, inadequate supporting evidence, and inconsistent formatting.</p>
+                    </div>
                 </div>
-                
-                <!-- Quiz Panel for Introduction -->
-                <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
@@ -91,511 +119,222 @@
                 </div>
             </section>
 
-            <!-- Preparation Section -->
-            <section class="content-section" id="preparation" style="display: none;">
+            <!-- Section 11.02: Report Structure -->
+            <section class="content-section" id="report-structure">
                 <div class="section-header">
-                    <h2>11.02 Report Preparation</h2>
+                    <h2>11.02 Report Structure</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>A logical structure helps readers navigate your report and find the information they need. Government reports typically follow established conventions that readers expect.</p>
+                    
                     <div class="rule-box">
-                        <h4>Planning Phase</h4>
-                        <p>Effective reports begin with thorough planning that clarifies purpose, audience, scope, and timeline.</p>
+                        <h3>Standard Report Structure</h3>
+                        <ol>
+                            <li><strong>Title Page</strong></li>
+                            <li><strong>Executive Summary</strong></li>
+                            <li><strong>Table of Contents</strong></li>
+                            <li><strong>Introduction</strong></li>
+                            <li><strong>Body (Main Sections)</strong></li>
+                            <li><strong>Conclusions and Recommendations</strong></li>
+                            <li><strong>References</strong></li>
+                            <li><strong>Appendices</strong></li>
+                        </ol>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Define the Purpose</h4>
+                    <div class="examples-box">
+                        <h4>Executive Summary Guidelines</h4>
+                        <div class="example-item good">
+                            <p><strong>Include in executive summary:</strong></p>
                             <ul>
-                                <li><strong>Inform:</strong> Present facts and data</li>
-                                <li><strong>Analyze:</strong> Examine issues and trends</li>
-                                <li><strong>Evaluate:</strong> Assess performance or options</li>
-                                <li><strong>Recommend:</strong> Propose actions or decisions</li>
-                                <li><strong>Persuade:</strong> Advocate for specific positions</li>
+                                <li>Purpose and scope of the report</li>
+                                <li>Key findings and conclusions</li>
+                                <li>Main recommendations</li>
+                                <li>Implementation considerations</li>
                             </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Research and Data Collection</h4>
-                            <ul>
-                                <li><strong>Primary sources:</strong> Interviews, surveys, observations</li>
-                                <li><strong>Secondary sources:</strong> Literature, reports, databases</li>
-                                <li><strong>Government data:</strong> Statistics Canada, departmental records</li>
-                                <li><strong>Stakeholder input:</strong> Consultations, submissions</li>
-                                <li><strong>Expert opinions:</strong> Academic, professional insights</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="preparation-checklist">
-                        <h4>Preparation Checklist:</h4>
-                        <div class="checklist-items">
-                            <div class="checklist-column">
-                                <h5>Planning</h5>
-                                <ul>
-                                    <li>□ Define report purpose and objectives</li>
-                                    <li>□ Identify target audience and their needs</li>
-                                    <li>□ Determine scope and limitations</li>
-                                    <li>□ Establish timeline and milestones</li>
-                                    <li>□ Assign roles and responsibilities</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="checklist-column">
-                                <h5>Research</h5>
-                                <ul>
-                                    <li>□ Gather relevant data and evidence</li>
-                                    <li>□ Conduct interviews and consultations</li>
-                                    <li>□ Review existing reports and literature</li>
-                                    <li>□ Verify accuracy of information</li>
-                                    <li>□ Document sources and citations</li>
-                                </ul>
-                            </div>
+                            <p><strong>Length:</strong> 1-2 pages for most reports, 10% of total length maximum</p>
                         </div>
                     </div>
                     
                     <div class="rule-box">
-                        <h4>Quality Assurance</h4>
+                        <h3>Introduction Components</h3>
                         <ul>
-                            <li><strong>Fact-checking:</strong> Verify all data and claims</li>
-                            <li><strong>Peer review:</strong> Expert validation of findings</li>
-                            <li><strong>Legal review:</strong> Compliance and liability check</li>
-                            <li><strong>Plain language:</strong> Accessibility assessment</li>
+                            <li><strong>Background:</strong> Context and history</li>
+                            <li><strong>Purpose:</strong> Why the report was written</li>
+                            <li><strong>Scope:</strong> What is and isn't covered</li>
+                            <li><strong>Methodology:</strong> How information was gathered</li>
+                            <li><strong>Limitations:</strong> Constraints and assumptions</li>
                         </ul>
                     </div>
+                    
+                    <div class="examples-box">
+                        <h4>Body Section Organization</h4>
+                        <div class="example-item good">
+                            <p><strong>Common organizational patterns:</strong></p>
+                            <ul>
+                                <li><strong>Chronological:</strong> Events in time order</li>
+                                <li><strong>Topical:</strong> Different aspects of the subject</li>
+                                <li><strong>Problem-solution:</strong> Issues and proposed fixes</li>
+                                <li><strong>Comparative:</strong> Analysis of alternatives</li>
+                                <li><strong>Priority-based:</strong> Most to least important</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Conclusions and Recommendations</h3>
+                        <ul>
+                            <li><strong>Conclusions:</strong> What the evidence shows</li>
+                            <li><strong>Recommendations:</strong> What actions to take</li>
+                            <li><strong>Implementation:</strong> How to proceed</li>
+                            <li><strong>Next steps:</strong> Follow-up actions required</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Recommendation Format</h4>
+                        <div class="example-item good">
+                            <p><strong>Effective recommendations are:</strong></p>
+                            <ul>
+                                <li><strong>Specific:</strong> Clear about what should be done</li>
+                                <li><strong>Actionable:</strong> Feasible to implement</li>
+                                <li><strong>Prioritized:</strong> Indicate importance or sequence</li>
+                                <li><strong>Justified:</strong> Supported by evidence in the report</li>
+                            </ul>
+                            
+                            <p><strong>Example format:</strong></p>
+                            <p><strong>Recommendation 1:</strong> That the Department implement a new training program for staff by March 2025, as outlined in Section 4.2, to address the skills gap identified in this analysis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Reader-Friendly Reports</h4>
+                        <p>Use headings, bullet points, and white space to make your report easy to scan. Busy executives often read only the executive summary and recommendations.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Preparation -->
-                <div class="quiz-panel" id="quiz-preparation"></div>
+                <div class="quiz-panel" id="quiz-report-structure"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('preparation')">
+                    <button class="btn btn-primary" onclick="completeSection('report-structure')">
                         Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <!-- Format Section -->
-            <section class="content-section" id="format" style="display: none;">
+            <!-- Section 11.03: Headings -->
+            <section class="content-section" id="headings">
                 <div class="section-header">
-                    <h2>11.03 Report Format</h2>
+                    <h2>11.03 Headings</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Standard Report Structure</h4>
-                        <p>Government reports follow a consistent structure that facilitates reader navigation and comprehension.</p>
-                    </div>
-                    
-                    <div class="report-structure">
-                        <h4>Complete Report Structure:</h4>
-                        <div class="structure-outline">
-                            <div class="structure-section">
-                                <h5>Front Matter</h5>
-                                <ul>
-                                    <li>Title page</li>
-                                    <li>Executive summary</li>
-                                    <li>Table of contents</li>
-                                    <li>List of figures/tables</li>
-                                    <li>Acknowledgments</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="structure-section">
-                                <h5>Report Body</h5>
-                                <ul>
-                                    <li>Introduction</li>
-                                    <li>Background/Context</li>
-                                    <li>Methodology</li>
-                                    <li>Findings</li>
-                                    <li>Analysis</li>
-                                    <li>Conclusions</li>
-                                    <li>Recommendations</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="structure-section">
-                                <h5>Back Matter</h5>
-                                <ul>
-                                    <li>References/Bibliography</li>
-                                    <li>Appendices</li>
-                                    <li>Glossary</li>
-                                    <li>Index (if applicable)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="lesson-content">
+                    <p>Headings organize information and help readers navigate documents. A consistent heading system shows the logical structure of your report and makes it easier to find specific information.</p>
                     
                     <div class="rule-box">
-                        <h4>Format Specifications</h4>
+                        <h3>Heading Hierarchy</h3>
                         <ul>
-                            <li><strong>Page size:</strong> 8.5 × 11 inches (letter size)</li>
-                            <li><strong>Margins:</strong> 1 inch (2.5 cm) all sides</li>
-                            <li><strong>Font:</strong> Times New Roman 12pt or Arial 11pt</li>
-                            <li><strong>Line spacing:</strong> 1.5 or double-spaced</li>
-                            <li><strong>Page numbers:</strong> Bottom center or top right</li>
+                            <li><strong>Level 1:</strong> Major sections (Introduction, Findings, Recommendations)</li>
+                            <li><strong>Level 2:</strong> Main subsections within major sections</li>
+                            <li><strong>Level 3:</strong> Specific topics within subsections</li>
+                            <li><strong>Level 4:</strong> Detailed subtopics (use sparingly)</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Short Report Format</h4>
+                    <div class="examples-box">
+                        <h4>Heading Format Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Numbered System:</strong></p>
                             <ul>
-                                <li>Cover memo or letter</li>
-                                <li>Executive summary</li>
-                                <li>Main findings</li>
-                                <li>Recommendations</li>
-                                <li>Supporting data (appendix)</li>
+                                <li>1. Introduction</li>
+                                <li>2. Current Situation</li>
+                                <li>&nbsp;&nbsp;2.1 Background</li>
+                                <li>&nbsp;&nbsp;2.2 Key Issues</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;2.2.1 Budget Constraints</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;2.2.2 Staffing Challenges</li>
+                                <li>3. Recommendations</li>
                             </ul>
                         </div>
                         
                         <div class="example-item">
-                            <h4>Technical Report Format</h4>
+                            <p><strong>Typography-Based System:</strong></p>
                             <ul>
-                                <li>Detailed methodology</li>
-                                <li>Comprehensive data analysis</li>
-                                <li>Multiple appendices</li>
-                                <li>Extensive references</li>
-                                <li>Peer review documentation</li>
+                                <li><strong>LEVEL 1: ALL CAPS, BOLD</strong></li>
+                                <li><strong>Level 2: Bold, Title Case</strong></li>
+                                <li><em>Level 3: Italic, Title Case</em></li>
+                                <li>Level 4: Regular text, title case</li>
                             </ul>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Quiz Panel for Format -->
-                <div class="quiz-panel" id="quiz-format"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('format')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Front Matter Section -->
-            <section class="content-section" id="front-matter" style="display: none;">
-                <div class="section-header">
-                    <h2>11.04-11.07 Front Matter</h2>
-                </div>
-                
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Title Page Elements</h4>
-                        <p>The title page provides essential identification and publication information.</p>
-                    </div>
-                    
-                    <div class="title-page-example">
-                        <h4>Sample Title Page:</h4>
-                        <div class="title-page">
-                            <div class="title-section">
-                                <h3>Annual Report on the Administration of the Privacy Act</h3>
-                                <h4>2024</h4>
-                            </div>
-                            
-                            <div class="author-section">
-                                <p>Prepared by:<br>
-                                Office of the Privacy Commissioner of Canada</p>
-                            </div>
-                            
-                            <div class="publication-info">
-                                <p>Ottawa, Ontario<br>
-                                March 2025</p>
-                                
-                                <p>© Her Majesty the Queen in Right of Canada, 2025<br>
-                                Cat. No. IP51-1/2024E-PDF<br>
-                                ISBN 978-0-660-12345-6</p>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div class="rule-box">
-                        <h4>Executive Summary</h4>
-                        <p>The executive summary provides a concise overview for busy decision-makers:</p>
+                        <h3>Heading Writing Guidelines</h3>
                         <ul>
-                            <li><strong>Length:</strong> 1-2 pages maximum</li>
-                            <li><strong>Content:</strong> Key findings, conclusions, recommendations</li>
-                            <li><strong>Audience:</strong> Senior officials, media, public</li>
-                            <li><strong>Style:</strong> Stand-alone document</li>
+                            <li><strong>Descriptive:</strong> Clearly indicate section content</li>
+                            <li><strong>Parallel:</strong> Use consistent grammatical structure</li>
+                            <li><strong>Concise:</strong> Keep to one line when possible</li>
+                            <li><strong>Informative:</strong> Help readers decide what to read</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Table of Contents Format</h4>
+                    <div class="examples-box">
+                        <h4>Good vs. Poor Headings</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Good headings (parallel, specific):</strong></p>
                             <ul>
-                                <li><strong>Hierarchical numbering:</strong> 1.0, 1.1, 1.1.1</li>
-                                <li><strong>Consistent indentation:</strong> Show section levels</li>
-                                <li><strong>Page numbers:</strong> Right-aligned with dots</li>
-                                <li><strong>Separate lists:</strong> Figures, tables, appendices</li>
+                                <li>3.1 Analyzing Current Budget</li>
+                                <li>3.2 Identifying Cost Savings</li>
+                                <li>3.3 Recommending Budget Changes</li>
                             </ul>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Acknowledgments</h4>
+                        <div class="example-item bad">
+                            <p><strong>✗ Poor headings (not parallel, vague):</strong></p>
                             <ul>
-                                <li>Contributing departments and agencies</li>
-                                <li>External consultants and experts</li>
-                                <li>Stakeholders who provided input</li>
-                                <li>Research and administrative support</li>
+                                <li>3.1 Budget Analysis</li>
+                                <li>3.2 How to Save Money</li>
+                                <li>3.3 What We Think Should Happen</li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Quiz Panel for Front Matter -->
-                <div class="quiz-panel" id="quiz-front-matter"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('front-matter')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Report Body Section -->
-            <section class="content-section" id="body" style="display: none;">
-                <div class="section-header">
-                    <h2>11.08-11.10 Report Body</h2>
-                </div>
-                
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Introduction Section</h4>
-                        <p>The introduction orients readers and establishes the report's framework.</p>
-                    </div>
-                    
-                    <div class="section-content">
-                        <h4>Introduction Components:</h4>
-                        <div class="introduction-elements">
-                            <div class="element-box">
-                                <h5>Purpose Statement</h5>
-                                <p>Clear explanation of why the report was written and what it aims to accomplish.</p>
-                                <p><em>Example:</em> "This report evaluates the effectiveness of the new digital service delivery model implemented across three pilot departments."</p>
-                            </div>
-                            
-                            <div class="element-box">
-                                <h5>Scope and Limitations</h5>
-                                <p>Define what is and isn't covered in the report.</p>
-                                <p><em>Example:</em> "The evaluation covers the period from April 2024 to March 2025 and focuses on user satisfaction and operational efficiency."</p>
-                            </div>
-                            
-                            <div class="element-box">
-                                <h5>Methodology Overview</h5>
-                                <p>Brief description of how information was gathered and analyzed.</p>
-                                <p><em>Example:</em> "Data was collected through user surveys, staff interviews, and analysis of service delivery metrics."</p>
-                            </div>
                         </div>
                     </div>
                     
                     <div class="rule-box">
-                        <h4>Findings and Analysis</h4>
+                        <h3>Numbering Systems</h3>
                         <ul>
-                            <li><strong>Objective presentation:</strong> Facts before interpretation</li>
-                            <li><strong>Logical organization:</strong> Group related findings</li>
-                            <li><strong>Evidence support:</strong> Data, quotes, examples</li>
-                            <li><strong>Visual aids:</strong> Charts, graphs, tables</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Conclusions</h4>
-                            <ul>
-                                <li>Based on findings and analysis</li>
-                                <li>Address the original purpose</li>
-                                <li>Highlight key insights</li>
-                                <li>Note significant patterns or trends</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Recommendations</h4>
-                            <ul>
-                                <li>Specific and actionable</li>
-                                <li>Prioritized by importance</li>
-                                <li>Feasible and realistic</li>
-                                <li>Clearly assigned responsibility</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Quiz Panel for Body -->
-                <div class="quiz-panel" id="quiz-body"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('body')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Visuals Section -->
-            <section class="content-section" id="visuals" style="display: none;">
-                <div class="section-header">
-                    <h2>11.14-11.15 Tables and Visual Elements</h2>
-                </div>
-                
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Purpose of Visual Elements</h4>
-                        <p>Tables, charts, and graphs enhance understanding and make complex data accessible to readers.</p>
-                    </div>
-                    
-                    <div class="visual-guidelines">
-                        <h4>Table Formatting:</h4>
-                        <div class="table-example">
-                            <table class="sample-table">
-                                <caption>Table 1: Processing Times by Region (2024)</caption>
-                                <thead>
-                                    <tr>
-                                        <th>Region</th>
-                                        <th>Q1 2024</th>
-                                        <th>Q2 2024</th>
-                                        <th>Q3 2024</th>
-                                        <th>Q4 2024</th>
-                                        <th>Average</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Atlantic</td>
-                                        <td>18 days</td>
-                                        <td>22 days</td>
-                                        <td>19 days</td>
-                                        <td>21 days</td>
-                                        <td>20 days</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Central</td>
-                                        <td>15 days</td>
-                                        <td>16 days</td>
-                                        <td>14 days</td>
-                                        <td>17 days</td>
-                                        <td>15.5 days</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Western</td>
-                                        <td>12 days</td>
-                                        <td>14 days</td>
-                                        <td>13 days</td>
-                                        <td>15 days</td>
-                                        <td>13.5 days</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="table-note"><em>Note:</em> Processing times measured from application receipt to decision notification.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Visual Element Guidelines</h4>
-                        <ul>
-                            <li><strong>Numbering:</strong> Sequential throughout document</li>
-                            <li><strong>Captions:</strong> Descriptive titles above tables, below figures</li>
-                            <li><strong>Sources:</strong> Credit data sources</li>
-                            <li><strong>Accessibility:</strong> Alt text for screen readers</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Chart Types</h4>
-                            <ul>
-                                <li><strong>Bar charts:</strong> Comparing categories</li>
-                                <li><strong>Line graphs:</strong> Trends over time</li>
-                                <li><strong>Pie charts:</strong> Parts of a whole</li>
-                                <li><strong>Scatter plots:</strong> Relationships between variables</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Design Principles</h4>
-                            <ul>
-                                <li><strong>Clarity:</strong> Easy to read and understand</li>
-                                <li><strong>Consistency:</strong> Similar formatting throughout</li>
-                                <li><strong>Accuracy:</strong> Correct representation of data</li>
-                                <li><strong>Simplicity:</strong> Avoid unnecessary complexity</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Quiz Panel for Visuals -->
-                <div class="quiz-panel" id="quiz-visuals"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('visuals')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Headings Section -->
-            <section class="content-section" id="headings" style="display: none;">
-                <div class="section-header">
-                    <h2>11.16 Headings and Numbering</h2>
-                </div>
-                
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Heading Hierarchy</h4>
-                        <p>Consistent heading levels help readers navigate complex reports and understand information structure.</p>
-                    </div>
-                    
-                    <div class="heading-examples">
-                        <h4>Government Report Heading System:</h4>
-                        <div class="heading-hierarchy">
-                            <div class="heading-level">
-                                <h3>1.0 LEVEL 1 HEADING (ALL CAPS, BOLD)</h3>
-                                <p>Major sections of the report</p>
-                                
-                                <h4>1.1 Level 2 Heading (Title Case, Bold)</h4>
-                                <p>Main subsections</p>
-                                
-                                <h5>1.1.1 Level 3 heading (Sentence case, bold)</h5>
-                                <p>Sub-subsections</p>
-                                
-                                <h6>1.1.1.1 Level 4 heading (sentence case, bold)</h6>
-                                <p>Further subdivisions (use sparingly)</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Numbering Systems</h4>
-                        <ul>
-                            <li><strong>Decimal system:</strong> 1.0, 1.1, 1.1.1, 1.1.1.1</li>
-                            <li><strong>Mixed system:</strong> 1, 1.1, 1.1.1, (a), (i)</li>
+                            <li><strong>Decimal system:</strong> 1.1, 1.2, 1.2.1, 1.2.2</li>
+                            <li><strong>Traditional outline:</strong> I, A, 1, a</li>
                             <li><strong>Simple numbering:</strong> 1, 2, 3 (for short reports)</li>
-                            <li><strong>No numbering:</strong> Descriptive headings only</li>
+                            <li><strong>No numbers:</strong> Typography alone (for informal reports)</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Best Practices</h4>
+                    <div class="examples-box">
+                        <h4>Government Report Headings</h4>
+                        <div class="example-item good">
+                            <p><strong>Standard government sections:</strong></p>
                             <ul>
-                                <li>Use parallel structure in heading text</li>
-                                <li>Keep headings concise but descriptive</li>
-                                <li>Avoid orphaned headings at page bottom</li>
-                                <li>Maintain consistent formatting</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Accessibility</h4>
-                            <ul>
-                                <li>Use proper heading tags in digital documents</li>
-                                <li>Ensure sufficient contrast</li>
-                                <li>Provide logical reading order</li>
-                                <li>Include navigation aids for long documents</li>
+                                <li>Executive Summary</li>
+                                <li>Background and Context</li>
+                                <li>Current Situation Analysis</li>
+                                <li>Options and Alternatives</li>
+                                <li>Risk Assessment</li>
+                                <li>Financial Implications</li>
+                                <li>Implementation Plan</li>
+                                <li>Conclusions and Recommendations</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Heading Pitfalls</h4>
+                        <p>Avoid: Too many heading levels (more than 4), inconsistent formatting, vague headings like "Discussion" or "Other Issues," and headings with no content following them.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Table of Contents</h4>
+                        <p>Your heading structure becomes your table of contents. Well-written headings make it easy to generate an accurate and useful table of contents automatically.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Headings -->
                 <div class="quiz-panel" id="quiz-headings"></div>
                 
                 <div class="section-footer">
@@ -605,114 +344,495 @@
                 </div>
             </section>
 
-            <!-- Minutes Section -->
-            <section class="content-section" id="minutes" style="display: none;">
+            <!-- Section 11.04: Front Matter -->
+            <section class="content-section" id="front-matter">
                 <div class="section-header">
-                    <h2>11.22-11.27 Meeting Minutes</h2>
+                    <h2>11.04 Front Matter</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Front matter provides essential information about the report before the main content begins. It helps readers understand the document's purpose, structure, and key findings quickly.</p>
+                    
                     <div class="rule-box">
-                        <h4>Purpose of Minutes</h4>
-                        <p>Minutes provide an official record of meeting proceedings, decisions, and action items for accountability and follow-up.</p>
+                        <h3>Front Matter Components (in order)</h3>
+                        <ol>
+                            <li><strong>Title Page</strong></li>
+                            <li><strong>Letter of Transmittal (if required)</strong></li>
+                            <li><strong>Executive Summary</strong></li>
+                            <li><strong>Table of Contents</strong></li>
+                            <li><strong>List of Tables and Figures</strong></li>
+                            <li><strong>Acknowledgements (if appropriate)</strong></li>
+                        </ol>
                     </div>
                     
-                    <div class="minutes-template">
-                        <h4>Standard Minutes Format:</h4>
-                        <div class="minutes-example">
-                            <div class="minutes-header">
-                                <h5>MINUTES</h5>
-                                <p><strong>Meeting:</strong> Policy Coordination Committee<br>
-                                <strong>Date:</strong> March 15, 2025<br>
-                                <strong>Time:</strong> 2:00 p.m. – 4:00 p.m.<br>
-                                <strong>Location:</strong> Conference Room A, 90 Elgin Street<br>
-                                <strong>Chair:</strong> Sarah Wilson, Assistant Deputy Minister</p>
-                            </div>
+                    <div class="examples-box">
+                        <h4>Title Page Elements</h4>
+                        <div class="example-item good">
+                            <p><strong>Required information:</strong></p>
+                            <ul>
+                                <li>Report title (descriptive and specific)</li>
+                                <li>Subtitle (if needed for clarity)</li>
+                                <li>Author(s) or organization</li>
+                                <li>Date of publication</li>
+                                <li>Department or agency name</li>
+                                <li>Report number or file reference</li>
+                            </ul>
                             
-                            <div class="minutes-body">
-                                <h6>Attendees:</h6>
-                                <ul>
-                                    <li>Sarah Wilson, Assistant Deputy Minister (Chair)</li>
-                                    <li>Michael Chen, Director, Policy Development</li>
-                                    <li>Janet Smith, Senior Policy Analyst</li>
-                                    <li>David Brown, Communications Director</li>
-                                </ul>
-                                
-                                <h6>Regrets:</h6>
-                                <ul>
-                                    <li>Robert Johnson, Legal Counsel</li>
-                                </ul>
-                                
-                                <h6>1. Call to Order</h6>
-                                <p>The meeting was called to order at 2:05 p.m.</p>
-                                
-                                <h6>2. Approval of Agenda</h6>
-                                <p><strong>Motion:</strong> To approve the agenda as circulated.<br>
-                                <strong>Moved by:</strong> M. Chen<br>
-                                <strong>Seconded by:</strong> J. Smith<br>
-                                <strong>Result:</strong> Carried</p>
-                                
-                                <h6>3. Review of Previous Minutes</h6>
-                                <p>Minutes from March 1, 2025, were reviewed and approved without amendments.</p>
-                                
-                                <h6>4. Budget Implementation Update</h6>
-                                <p>M. Chen reported that implementation is proceeding on schedule. Key points discussed:</p>
-                                <ul>
-                                    <li>75% of allocated funds have been committed</li>
-                                    <li>Regional offices report good progress</li>
-                                    <li>Some delays in IT system upgrades</li>
-                                </ul>
-                                
-                                <p><strong>Action:</strong> M. Chen to provide detailed IT timeline by March 30.</p>
-                                
-                                <h6>5. Communications Strategy</h6>
-                                <p>D. Brown presented the revised communications plan. Committee discussed timing and messaging approach.</p>
-                                
-                                <p><strong>Decision:</strong> Communications plan approved with minor revisions to timeline.</p>
-                                
-                                <h6>6. Next Meeting</h6>
-                                <p>April 5, 2025, at 2:00 p.m., Conference Room A.</p>
-                                
-                                <h6>7. Adjournment</h6>
-                                <p>The meeting was adjourned at 3:45 p.m.</p>
+                            <div class="title-page-example">
+                                <h4>Implementation of Digital Services Strategy</h4>
+                                <h5>Progress Report for Fiscal Year 2023-24</h5>
+                                <p>Prepared by: Digital Transformation Office<br>
+                                Treasury Board of Canada Secretariat<br>
+                                March 2024<br>
+                                Report No. TBS-2024-015</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="rule-box">
-                        <h4>Types of Minutes</h4>
+                        <h3>Executive Summary Best Practices</h3>
                         <ul>
-                            <li><strong>Verbatim:</strong> Word-for-word record (rare)</li>
-                            <li><strong>Action minutes:</strong> Decisions and action items only</li>
-                            <li><strong>Summary minutes:</strong> Key discussion points and decisions</li>
-                            <li><strong>Formal minutes:</strong> Complete record following parliamentary procedure</li>
+                            <li><strong>Standalone document:</strong> Must make sense without the full report</li>
+                            <li><strong>Key information only:</strong> Purpose, methods, findings, recommendations</li>
+                            <li><strong>Decision-focused:</strong> Emphasize information needed for decisions</li>
+                            <li><strong>Appropriate length:</strong> 1-2 pages for most reports</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Recording Guidelines</h4>
-                            <ul>
-                                <li>Record decisions, not detailed debate</li>
-                                <li>Note action items with responsible persons</li>
-                                <li>Include all formal motions verbatim</li>
-                                <li>Identify speakers by name and title</li>
-                            </ul>
+                    <div class="examples-box">
+                        <h4>Table of Contents Format</h4>
+                        <div class="example-item good">
+                            <p><strong>Standard format:</strong></p>
+                            <div class="toc-example">
+                                <p><strong>Table of Contents</strong></p>
+                                <p>Executive Summary ................................. iii<br>
+                                1. Introduction ........................................ 1<br>
+                                2. Current Situation ................................. 3<br>
+                                &nbsp;&nbsp;2.1 Background ................................. 3<br>
+                                &nbsp;&nbsp;2.2 Key Challenges ............................ 5<br>
+                                3. Analysis and Findings .......................... 8<br>
+                                4. Recommendations ................................ 12<br>
+                                References ............................................. 15<br>
+                                Appendix A: Survey Results ...................... 16</p>
+                            </div>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Distribution and Approval</h4>
-                            <ul>
-                                <li>Circulate draft within 48 hours</li>
-                                <li>Allow 5 business days for comments</li>
-                                <li>Approve at next meeting</li>
-                                <li>File approved minutes securely</li>
-                            </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>List of Tables and Figures</h3>
+                        <ul>
+                            <li><strong>When to include:</strong> Reports with 5 or more tables/figures</li>
+                            <li><strong>Format:</strong> Number, title, and page number</li>
+                            <li><strong>Order:</strong> Separate lists for tables and figures</li>
+                            <li><strong>Numbering:</strong> Consecutive throughout document</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>List Format Example</h4>
+                        <div class="example-item good">
+                            <div class="list-example">
+                                <p><strong>List of Tables</strong></p>
+                                <p>Table 1: Budget Allocations by Department ............ 8<br>
+                                Table 2: Performance Indicators, 2023-24 ............. 11<br>
+                                Table 3: Projected Savings by Initiative ............. 14</p>
+                                
+                                <p><strong>List of Figures</strong></p>
+                                <p>Figure 1: Organizational Structure .................... 4<br>
+                                Figure 2: Implementation Timeline ...................... 9<br>
+                                Figure 3: Cost-Benefit Analysis ....................... 13</p>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Page Numbering</h3>
+                        <ul>
+                            <li><strong>Front matter:</strong> Roman numerals (i, ii, iii)</li>
+                            <li><strong>Main text:</strong> Arabic numerals (1, 2, 3)</li>
+                            <li><strong>Appendices:</strong> Continue Arabic numbering or use letters</li>
+                            <li><strong>Position:</strong> Consistent placement throughout document</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Letter of Transmittal</h4>
+                        <p>A letter of transmittal introduces the report to its recipient. Include it when submitting formal reports to senior officials. Keep it brief and highlight key points.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Minutes -->
+                <div class="quiz-panel" id="quiz-front-matter"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('front-matter')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 11.05: Appendices -->
+            <section class="content-section" id="appendices">
+                <div class="section-header">
+                    <h2>11.05 Appendices</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Appendices contain supporting material that supplements the main report without interrupting its flow. They provide detailed information that some readers need while keeping the main text focused.</p>
+                    
+                    <div class="rule-box">
+                        <h3>What to Include in Appendices</h3>
+                        <ul>
+                            <li><strong>Raw data:</strong> Detailed statistics, survey results</li>
+                            <li><strong>Supporting documents:</strong> Legislation, regulations, policies</li>
+                            <li><strong>Technical details:</strong> Methodology, calculations, specifications</li>
+                            <li><strong>Supplementary information:</strong> Background material, historical data</li>
+                            <li><strong>Correspondence:</strong> Letters, emails, responses to inquiries</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Appendix Organization</h4>
+                        <div class="example-item good">
+                            <p><strong>Labeling system:</strong></p>
+                            <ul>
+                                <li>Appendix A: Survey Questionnaire</li>
+                                <li>Appendix B: Statistical Analysis</li>
+                                <li>Appendix C: Stakeholder Responses</li>
+                                <li>Appendix D: Budget Calculations</li>
+                                <li>Appendix E: Legislative References</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Appendix Guidelines</h3>
+                        <ul>
+                            <li><strong>Reference in text:</strong> Direct readers to relevant appendices</li>
+                            <li><strong>Logical order:</strong> Arrange in order of mention in main text</li>
+                            <li><strong>Clear titles:</strong> Descriptive headings for each appendix</li>
+                            <li><strong>Self-contained:</strong> Each appendix should make sense alone</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Referencing Appendices</h4>
+                        <div class="example-item good">
+                            <p><strong>In main text:</strong></p>
+                            <ul>
+                                <li>"Detailed survey results are provided in Appendix A."</li>
+                                <li>"For complete budget calculations, see Appendix D."</li>
+                                <li>"The full text of the regulation appears in Appendix E."</li>
+                                <li>"As shown in Appendix B, the statistical analysis confirms..."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Formatting Considerations</h3>
+                        <ul>
+                            <li><strong>Page numbering:</strong> Continue main document numbering</li>
+                            <li><strong>Headers:</strong> Include appendix letter and title</li>
+                            <li><strong>Original formatting:</strong> Preserve format of source documents when possible</li>
+                            <li><strong>Consistency:</strong> Match main document style when reformatting</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Common Government Appendices</h4>
+                        <div class="example-item good">
+                            <p><strong>Typical appendices in government reports:</strong></p>
+                            <ul>
+                                <li><strong>Appendix A:</strong> Terms of Reference or Mandate</li>
+                                <li><strong>Appendix B:</strong> Methodology and Data Sources</li>
+                                <li><strong>Appendix C:</strong> Stakeholder Consultation Summary</li>
+                                <li><strong>Appendix D:</strong> Financial Analysis and Projections</li>
+                                <li><strong>Appendix E:</strong> Risk Assessment Matrix</li>
+                                <li><strong>Appendix F:</strong> Implementation Timeline</li>
+                                <li><strong>Appendix G:</strong> Relevant Legislation and Regulations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Appendix Overuse</h4>
+                        <p>Don't use appendices as a dumping ground for everything that didn't fit in the main text. Include only material that truly supports your findings and recommendations.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Digital Considerations</h4>
+                        <p>In digital reports, consider linking to appendices for easy navigation. For very large appendices, consider separate files with clear naming conventions.</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-appendices"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('appendices')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 11.06: Tables & Charts -->
+            <section class="content-section" id="tables-charts">
+                <div class="section-header">
+                    <h2>11.06 Tables & Charts</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Tables and charts present data clearly and support your written analysis. Well-designed visuals can communicate complex information more effectively than text alone.</p>
+                    
+                    <div class="rule-box">
+                        <h3>When to Use Tables vs. Charts</h3>
+                        <ul>
+                            <li><strong>Tables:</strong> Exact values, detailed comparisons, reference data</li>
+                            <li><strong>Charts:</strong> Trends, patterns, relationships, proportions</li>
+                            <li><strong>Both:</strong> Complex data that benefits from multiple presentations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Table Design Principles</h4>
+                        <div class="example-item good">
+                            <p><strong>Table 1: Budget Allocations by Department ($ millions)</strong></p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>2022-23</th>
+                                        <th>2023-24</th>
+                                        <th>Change (%)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Health Canada</td>
+                                        <td>4,235</td>
+                                        <td>4,456</td>
+                                        <td>+5.2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Transport Canada</td>
+                                        <td>1,890</td>
+                                        <td>2,104</td>
+                                        <td>+11.3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Environment Canada</td>
+                                        <td>985</td>
+                                        <td>1,142</td>
+                                        <td>+15.9</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><em>Source: Public Accounts of Canada, 2024</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Table Formatting Standards</h3>
+                        <ul>
+                            <li><strong>Numbering:</strong> Sequential throughout document (Table 1, Table 2)</li>
+                            <li><strong>Titles:</strong> Descriptive and placed above the table</li>
+                            <li><strong>Column headers:</strong> Clear, concise labels</li>
+                            <li><strong>Alignment:</strong> Text left-aligned, numbers right-aligned</li>
+                            <li><strong>Units:</strong> Clearly indicated in headers or title</li>
+                            <li><strong>Sources:</strong> Always cite data sources</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Chart Types and Uses</h4>
+                        <div class="example-item good">
+                            <p><strong>Common chart types for government reports:</strong></p>
+                            <ul>
+                                <li><strong>Line charts:</strong> Trends over time (budget changes, performance indicators)</li>
+                                <li><strong>Bar charts:</strong> Comparisons between categories (departmental spending)</li>
+                                <li><strong>Pie charts:</strong> Parts of a whole (budget breakdown by sector)</li>
+                                <li><strong>Column charts:</strong> Comparisons across time periods</li>
+                                <li><strong>Scatter plots:</strong> Relationships between variables</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Chart Design Guidelines</h3>
+                        <ul>
+                            <li><strong>Clear titles:</strong> Explain what the chart shows</li>
+                            <li><strong>Labeled axes:</strong> Include units and scale information</li>
+                            <li><strong>Legends:</strong> Explain symbols, colors, and patterns</li>
+                            <li><strong>Data labels:</strong> Include when precision is important</li>
+                            <li><strong>Sources:</strong> Always cite where data came from</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Integration with Text</h4>
+                        <div class="example-item good">
+                            <p><strong>Effective integration:</strong></p>
+                            <ul>
+                                <li>"As shown in Table 1, budget allocations increased across all departments."</li>
+                                <li>"Figure 2 illustrates the steady growth in program participation since 2020."</li>
+                                <li>"The data in Appendix B, summarized in Chart 3, reveals..."</li>
+                                <li>"Table 4 provides detailed breakdown of the costs outlined above."</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Accessibility Considerations</h3>
+                        <ul>
+                            <li><strong>Color blindness:</strong> Don't rely solely on color to convey information</li>
+                            <li><strong>Alternative text:</strong> Provide descriptions for charts</li>
+                            <li><strong>Data tables:</strong> Include underlying data for screen readers</li>
+                            <li><strong>High contrast:</strong> Ensure text and background contrast is sufficient</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Common Visualization Errors</h4>
+                        <p>Avoid: Misleading scales, unnecessary 3D effects, too many data series in one chart, poor color choices, and charts that don't add value to the text.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Data Integrity</h4>
+                        <p>Always verify your data before creating visuals. Double-check calculations, ensure data sources are current, and review charts for accuracy before publication.</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-tables-charts"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('tables-charts')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 11.07: Meeting Minutes -->
+            <section class="content-section" id="minutes">
+                <div class="section-header">
+                    <h2>11.07 Meeting Minutes</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Meeting minutes provide an official record of discussions, decisions, and action items. They serve as both historical documentation and a tool for accountability and follow-up.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Types of Minutes</h3>
+                        <ul>
+                            <li><strong>Verbatim minutes:</strong> Word-for-word record (rare, usually for legal proceedings)</li>
+                            <li><strong>Action minutes:</strong> Decisions and action items only</li>
+                            <li><strong>Summary minutes:</strong> Key points of discussion and outcomes</li>
+                            <li><strong>Formal minutes:</strong> Detailed record following parliamentary procedure</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Standard Minutes Format</h4>
+                        <div class="example-item good">
+                            <div class="minutes-example">
+                                <h4>Minutes of Digital Transformation Committee</h4>
+                                <p><strong>Date:</strong> March 15, 2024<br>
+                                <strong>Time:</strong> 2:00 PM - 4:00 PM<br>
+                                <strong>Location:</strong> Room 340-S, Centre Block<br>
+                                <strong>Chair:</strong> Sarah Johnson, Assistant Deputy Minister</p>
+                                
+                                <p><strong>Present:</strong><br>
+                                Sarah Johnson (Chair), ADM Digital Policy<br>
+                                Michael Brown, Director, IT Services<br>
+                                Lisa Wong, Senior Analyst, Treasury Board<br>
+                                Robert Lee, Communications Director</p>
+                                
+                                <p><strong>Regrets:</strong><br>
+                                Jennifer Smith, Director, Data Management</p>
+                                
+                                <p><strong>1. Call to Order</strong><br>
+                                The meeting was called to order at 2:05 PM.</p>
+                                
+                                <p><strong>2. Approval of Agenda</strong><br>
+                                The agenda was approved as presented.<br>
+                                <em>Moved by M. Brown, seconded by L. Wong. Carried.</em></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Essential Elements</h3>
+                        <ul>
+                            <li><strong>Meeting details:</strong> Date, time, location, chair</li>
+                            <li><strong>Attendance:</strong> Present members and regrets</li>
+                            <li><strong>Agenda approval:</strong> Acceptance or modifications</li>
+                            <li><strong>Previous minutes:</strong> Approval and any corrections</li>
+                            <li><strong>Discussion items:</strong> Key points and decisions</li>
+                            <li><strong>Action items:</strong> Tasks, responsibility, deadlines</li>
+                            <li><strong>Next meeting:</strong> Date and location if determined</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Recording Decisions and Actions</h4>
+                        <div class="example-item good">
+                            <p><strong>Decision format:</strong></p>
+                            <p><strong>3.2 Budget Approval</strong><br>
+                            After discussion of the proposed budget for the digital transformation initiative, the committee agreed to approve the allocation of $2.5 million for Phase 1 implementation.<br>
+                            <em>Decision: Approved budget of $2.5M for Phase 1.<br>
+                            Action: M. Brown to prepare detailed budget breakdown by March 30, 2024.</em></p>
+                            
+                            <p><strong>Action item format:</strong></p>
+                            <p><strong>Action Items:</strong><br>
+                            • L. Wong to draft privacy assessment report (Due: April 15, 2024)<br>
+                            • R. Lee to develop communication strategy (Due: April 1, 2024)<br>
+                            • Chair to schedule meeting with Deputy Minister (Due: March 25, 2024)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Writing Style for Minutes</h3>
+                        <ul>
+                            <li><strong>Third person:</strong> "The committee decided" not "We decided"</li>
+                            <li><strong>Past tense:</strong> Record what happened</li>
+                            <li><strong>Objective tone:</strong> Factual, not interpretive</li>
+                            <li><strong>Concise language:</strong> Capture essence, not every word</li>
+                            <li><strong>Formal structure:</strong> Consistent formatting throughout</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Motion Recording</h4>
+                        <div class="example-item good">
+                            <p><strong>Standard motion format:</strong></p>
+                            <p>M. Brown moved that the committee recommend approval of the Digital Services Strategy implementation plan as presented, with amendments to the timeline as discussed.<br>
+                            Seconded by L. Wong.<br>
+                            <strong>Carried.</strong></p>
+                            
+                            <p><strong>Vote recording (when required):</strong></p>
+                            <p>Motion carried: 4 in favour, 1 opposed, 0 abstentions.<br>
+                            Opposed: R. Lee</p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Distribution and Approval</h3>
+                        <ul>
+                            <li><strong>Draft circulation:</strong> Send to attendees within 48 hours</li>
+                            <li><strong>Review period:</strong> Allow time for corrections</li>
+                            <li><strong>Final approval:</strong> At next meeting or by circulation</li>
+                            <li><strong>Official filing:</strong> Maintain permanent record</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Taking Effective Minutes</h4>
+                        <p>Focus on decisions and action items rather than detailed discussion. Use a template for consistency and bring extra copies of the agenda to track progress through items.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Confidentiality and Access</h4>
+                        <p>Be aware of privacy and confidentiality requirements. Some minutes may be subject to Access to Information requests, while others may contain cabinet confidence.</p>
+                    </div>
+                </div>
+                
                 <div class="quiz-panel" id="quiz-minutes"></div>
                 
                 <div class="section-footer">
@@ -721,8 +841,144 @@
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+
+            <!-- Section 11.08: Formatting -->
+            <section class="content-section" id="formatting">
+                <div class="section-header">
+                    <h2>11.08 Formatting</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Consistent formatting enhances readability and gives your reports a professional appearance. Good formatting supports your content and helps readers navigate the document effectively.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Standard Format Elements</h3>
+                        <ul>
+                            <li><strong>Fonts:</strong> Professional typefaces (Times New Roman, Arial, Calibri)</li>
+                            <li><strong>Font sizes:</strong> 12pt for body text, 14pt+ for headings</li>
+                            <li><strong>Line spacing:</strong> 1.5 or double spacing for drafts, single for final</li>
+                            <li><strong>Margins:</strong> 1 inch (2.5 cm) on all sides minimum</li>
+                            <li><strong>Alignment:</strong> Left-aligned for most text, justified for formal reports</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Page Layout Guidelines</h4>
+                        <div class="example-item good">
+                            <p><strong>Header information:</strong></p>
+                            <ul>
+                                <li>Document title or abbreviated title</li>
+                                <li>Page number</li>
+                                <li>Date (for drafts)</li>
+                                <li>Security classification (if applicable)</li>
+                            </ul>
+                            
+                            <p><strong>Footer information:</strong></p>
+                            <ul>
+                                <li>Department or organization name</li>
+                                <li>Contact information</li>
+                                <li>Document version or file name</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Heading Styles</h3>
+                        <ul>
+                            <li><strong>Consistency:</strong> Same style for same level throughout</li>
+                            <li><strong>Hierarchy:</strong> Clear visual distinction between levels</li>
+                            <li><strong>Spacing:</strong> More space before headings than after</li>
+                            <li><strong>Font treatment:</strong> Bold, size changes, or capitalization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government Document Standards</h4>
+                        <div class="example-item good">
+                            <p><strong>Canada Wordbook standards:</strong></p>
+                            <ul>
+                                <li><strong>Paper size:</strong> 8.5" × 11" (letter size)</li>
+                                <li><strong>Binding margin:</strong> Extra space on left side</li>
+                                <li><strong>Page numbers:</strong> Bottom center or top right</li>
+                                <li><strong>Official languages:</strong> Bilingual requirements as applicable</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Lists and Bullets</h3>
+                        <ul>
+                            <li><strong>Bullet points:</strong> Simple bullets (•) for unordered lists</li>
+                            <li><strong>Numbered lists:</strong> Sequential items or procedures</li>
+                            <li><strong>Indentation:</strong> Consistent spacing for sub-items</li>
+                            <li><strong>Parallel structure:</strong> Consistent grammar in list items</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>White Space and Readability</h4>
+                        <div class="example-item good">
+                            <p><strong>Effective use of white space:</strong></p>
+                            <ul>
+                                <li>Space between sections for visual separation</li>
+                                <li>Adequate margins for notes and binding</li>
+                                <li>Paragraph breaks for new ideas</li>
+                                <li>Indentation to show document structure</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Graphics and Images</h3>
+                        <ul>
+                            <li><strong>Resolution:</strong> High quality for printed documents</li>
+                            <li><strong>Placement:</strong> Near relevant text</li>
+                            <li><strong>Captions:</strong> Descriptive labels for all visuals</li>
+                            <li><strong>Sizing:</strong> Appropriate scale for readability</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Digital Document Considerations</h4>
+                        <div class="example-item good">
+                            <p><strong>For online distribution:</strong></p>
+                            <ul>
+                                <li><strong>PDF format:</strong> Preserves formatting across platforms</li>
+                                <li><strong>Bookmarks:</strong> Enable navigation in long documents</li>
+                                <li><strong>Hyperlinks:</strong> Link to appendices and external sources</li>
+                                <li><strong>Accessibility:</strong> Alt text for images, proper heading tags</li>
+                                <li><strong>File size:</strong> Optimize for email and web distribution</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Formatting Pitfalls</h4>
+                        <p>Avoid: Overuse of bold and italics, too many font styles, excessive capitalization, poor line spacing, and inconsistent formatting between sections.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Templates and Styles</h4>
+                        <p>Create or use existing templates for consistency across reports. Set up paragraph styles in your word processor to ensure uniform formatting throughout your document.</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-formatting"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('formatting')">
+                        Complete Chapter 11!
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <!-- Include JavaScript modules -->
     <script type="module" src="../shared/js/router.js"></script>
@@ -731,240 +987,36 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
-        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch11';
         const sections = [
-            { id: 'introduction', title: '11.01 General' },
-            { id: 'preparation', title: '11.02 Preparation' },
-            { id: 'format', title: '11.03 Format' },
-            { id: 'front-matter', title: '11.04-11.07 Front Matter' },
-            { id: 'body', title: '11.08-11.10 Report Body' },
-            { id: 'visuals', title: '11.14-11.15 Tables & Visuals' },
-            { id: 'headings', title: '11.16 Headings' },
-            { id: 'minutes', title: '11.22-11.27 Minutes' }
+            { id: 'introduction', title: '11.01 Introduction' },
+            { id: 'report-structure', title: '11.02 Report Structure' },
+            { id: 'headings', title: '11.03 Headings' },
+            { id: 'front-matter', title: '11.04 Front Matter' },
+            { id: 'appendices', title: '11.05 Appendices' },
+            { id: 'tables-charts', title: '11.06 Tables & Charts' },
+            { id: 'minutes', title: '11.07 Meeting Minutes' },
+            { id: 'formatting', title: '11.08 Formatting' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
-        function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 11 Complete!</h3>
-                    <p>You've mastered reports and minutes. Ready for the next chapter?</p>
-                    <div class="modal-actions">
-                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
-                            Stay Here
-                        </button>
-                        <a href="../index.html" class="btn btn-primary">
-                            Back to Dashboard
-                        </a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'General Report Principles',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the most important principle for government report writing?',
-                            options: [
-                                { label: 'Using complex language to show expertise', correct: false },
-                                { label: 'Evidence-based conclusions and recommendations', correct: true },
-                                { label: 'Including as much data as possible', correct: false },
-                                { label: 'Following a strict template format', correct: false }
-                            ],
-                            rationale: 'Government reports must be evidence-based to support accountability and decision-making.',
-                            ref: '§11.01'
-                        }
-                    ]
-                },
-                preparation: {
-                    title: 'Report Preparation',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What should be the first step in report preparation?',
-                            options: [
-                                { label: 'Gather all available data', correct: false },
-                                { label: 'Define the purpose and objectives', correct: true },
-                                { label: 'Create an outline', correct: false },
-                                { label: 'Identify stakeholders', correct: false }
-                            ],
-                            rationale: 'Defining clear purpose and objectives guides all subsequent planning and research activities.',
-                            ref: '§11.02'
-                        }
-                    ]
-                },
-                format: {
-                    title: 'Report Format',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the standard margin size for government reports?',
-                            options: [
-                                { label: '0.5 inch (1.3 cm)', correct: false },
-                                { label: '1 inch (2.5 cm)', correct: true },
-                                { label: '1.5 inches (3.8 cm)', correct: false },
-                                { label: '2 inches (5 cm)', correct: false }
-                            ],
-                            rationale: 'Standard government reports use 1 inch (2.5 cm) margins on all sides.',
-                            ref: '§11.03'
-                        }
-                    ]
-                },
-                'front-matter': {
-                    title: 'Front Matter',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the recommended length for an executive summary?',
-                            options: [
-                                { label: '1 page maximum', correct: false },
-                                { label: '1-2 pages maximum', correct: true },
-                                { label: '3-5 pages', correct: false },
-                                { label: 'No specific limit', correct: false }
-                            ],
-                            rationale: 'Executive summaries should be 1-2 pages maximum to remain accessible to busy decision-makers.',
-                            ref: '§11.04-11.07'
-                        }
-                    ]
-                },
-                body: {
-                    title: 'Report Body',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'In what order should report content typically be presented?',
-                            options: [
-                                { label: 'Recommendations, findings, analysis', correct: false },
-                                { label: 'Findings, analysis, conclusions, recommendations', correct: true },
-                                { label: 'Analysis, findings, recommendations', correct: false },
-                                { label: 'Conclusions, findings, recommendations', correct: false }
-                            ],
-                            rationale: 'Logical flow presents findings first, then analysis, conclusions, and recommendations.',
-                            ref: '§11.08-11.10'
-                        }
-                    ]
-                },
-                visuals: {
-                    title: 'Tables and Visuals',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Where should table captions be placed?',
-                            options: [
-                                { label: 'Below the table', correct: false },
-                                { label: 'Above the table', correct: true },
-                                { label: 'Either above or below', correct: false },
-                                { label: 'In the margin', correct: false }
-                            ],
-                            rationale: 'Table captions are placed above tables, while figure captions go below figures.',
-                            ref: '§11.14-11.15'
-                        }
-                    ]
-                },
-                headings: {
-                    title: 'Headings',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should Level 1 headings be formatted in government reports?',
-                            options: [
-                                { label: 'Title Case, Bold', correct: false },
-                                { label: 'ALL CAPS, BOLD', correct: true },
-                                { label: 'Sentence case, bold', correct: false },
-                                { label: 'ALL CAPS, underlined', correct: false }
-                            ],
-                            rationale: 'Level 1 headings use ALL CAPS and BOLD formatting in government reports.',
-                            ref: '§11.16'
-                        }
-                    ]
-                },
-                minutes: {
-                    title: 'Meeting Minutes',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How soon should draft minutes be circulated after a meeting?',
-                            options: [
-                                { label: 'Within 24 hours', correct: false },
-                                { label: 'Within 48 hours', correct: true },
-                                { label: 'Within one week', correct: false },
-                                { label: 'Before the next meeting', correct: false }
-                            ],
-                            rationale: 'Draft minutes should be circulated within 48 hours for timely review and accuracy.',
-                            ref: '§11.22-11.27'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = this.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(this);
                 });
             });
+            
+            // Show first section by default
+            showSection('introduction');
         }
         
         function showSection(sectionId) {
@@ -987,18 +1039,95 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+        
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 11 Complete!</h3>
+                    <p>Outstanding work! You've mastered report writing and meeting documentation. Your reports will be well-structured and professional.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
+                        </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/quizzes/ch11-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 11');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
-        
-        window.addEventListener('progress-changed', updateProgressBar);
     </script>
 </body>
 </html>

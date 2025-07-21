@@ -27,7 +27,7 @@
             </nav>
             <div class="chapter-meta">
                 <div class="chapter-icon">13</div>
-                <div>
+                <div class="chapter-info">
                     <h1>Plain Language</h1>
                     <p>Write clearly and concisely for your readers</p>
                 </div>
@@ -41,7 +41,7 @@
     <nav class="section-tabs" id="sectionNav">
         <div class="container">
             <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">13.01 Introduction</a>
+                <a href="#introduction" class="tab-link active" data-section="introduction">13.01 Introduction</a>
                 <a href="#reader-focus" class="tab-link" data-section="reader-focus">13.02 Reader Focus</a>
                 <a href="#organization" class="tab-link" data-section="organization">13.03 Organization</a>
                 <a href="#vocabulary" class="tab-link" data-section="vocabulary">13.04 Vocabulary</a>
@@ -55,42 +55,62 @@
     <main class="chapter-content">
         <div class="container">
             <!-- Section 13.01: Introduction -->
-            <section class="content-section" id="introduction">
+            <section class="content-section active" id="introduction">
                 <div class="section-header">
                     <h2>13.01 Introduction</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Plain language is writing that your intended readers can understand and use the first time they read it. It's not about "dumbing down" your content—it's about clear communication that respects your reader's time and needs.</p>
+                    <p>Plain language is writing that your intended readers can understand and use the first time they read it. It's not about "dumbing down"—it's about clear communication that works.</p>
                     
-                    <h3>Benefits of Plain Language</h3>
-                    <ul>
-                        <li><strong>Saves time:</strong> Readers understand your message quickly</li>
-                        <li><strong>Reduces errors:</strong> Clear instructions prevent mistakes</li>
-                        <li><strong>Improves accessibility:</strong> More people can understand your content</li>
-                        <li><strong>Builds trust:</strong> Transparency shows respect for readers</li>
-                        <li><strong>Saves money:</strong> Fewer inquiries and clarifications needed</li>
-                    </ul>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Before and After</div>
-                        <p><strong>Complex:</strong> "Prior to the commencement of the project implementation phase, it is imperative that all stakeholders convene for the purpose of establishing parameters."</p>
-                        <p><strong>Plain:</strong> "Before starting the project, all stakeholders must meet to set guidelines."</p>
+                    <div class="key-principle">
+                        <h3>Key Principle</h3>
+                        <p>Write for your readers, not for yourself. Every word, sentence, and paragraph should serve your reader's needs.</p>
                     </div>
                     
-                    <h3>Plain Language Principles</h3>
-                    <ol>
-                        <li>Know your audience</li>
-                        <li>Organize for your reader</li>
-                        <li>Use familiar words</li>
-                        <li>Write short, clear sentences</li>
-                        <li>Use active voice</li>
-                        <li>Design for easy reading</li>
-                        <li>Test your document</li>
-                    </ol>
+                    <div class="rule-box">
+                        <h4>Benefits of Plain Language</h4>
+                        <ul>
+                            <li><strong>Saves time</strong> - for both readers and writers</li>
+                            <li><strong>Reduces errors</strong> - clear instructions prevent mistakes</li>
+                            <li><strong>Improves compliance</strong> - people follow what they understand</li>
+                            <li><strong>Builds trust</strong> - transparency through clarity</li>
+                            <li><strong>Reduces costs</strong> - fewer questions and clarifications needed</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Plain Language vs. Complex Language</h4>
+                        <div class="comparison-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Complex</th>
+                                        <th>Plain Language</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>"Due to the fact that..."</td>
+                                        <td>"Because..."</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"In order to..."</td>
+                                        <td>"To..."</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"At this point in time"</td>
+                                        <td>"Now"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>"Utilize"</td>
+                                        <td>"Use"</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
@@ -102,56 +122,117 @@
             <!-- Section 13.02: Reader Focus -->
             <section class="content-section" id="reader-focus">
                 <div class="section-header">
-                    <h2>13.02 Focusing on the Reader</h2>
+                    <h2>13.02 Reader Focus</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Successful plain language writing starts with understanding your audience. Before you write, ask yourself:</p>
+                    <p>Everything you write should be designed around your readers' needs, knowledge level, and goals.</p>
                     
-                    <h3>Key Questions About Your Readers</h3>
-                    <ul>
-                        <li><strong>Who are they?</strong> Age, education, cultural background</li>
-                        <li><strong>What do they know?</strong> Their familiarity with your topic</li>
-                        <li><strong>What do they need?</strong> Information, instructions, or decisions</li>
-                        <li><strong>How will they use it?</strong> Reference, action, or understanding</li>
-                        <li><strong>What concerns them?</strong> Time, cost, complexity, or risk</li>
-                    </ul>
-                    
-                    <h3>Use "You" and Other Pronouns</h3>
-                    <p>Personal pronouns make your writing more direct and engaging:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.02a</div>
-                        <p><strong>Impersonal:</strong> "Applicants must submit their forms by the deadline."</p>
-                        <p><strong>Personal:</strong> "You must submit your form by the deadline."</p>
-                        <br>
-                        <p><strong>Impersonal:</strong> "The department will process applications within 30 days."</p>
-                        <p><strong>Personal:</strong> "We will process your application within 30 days."</p>
+                    <div class="rule-box">
+                        <h3>Know Your Readers</h3>
+                        <ul>
+                            <li><strong>Who are they?</strong> - Job roles, education, experience level</li>
+                            <li><strong>What do they know?</strong> - Technical knowledge, context, background</li>
+                            <li><strong>What do they need?</strong> - Information, action steps, decisions</li>
+                            <li><strong>How will they use it?</strong> - Reference, step-by-step, overview</li>
+                            <li><strong>When will they read it?</strong> - Under pressure, at leisure, repeatedly</li>
+                        </ul>
                     </div>
                     
-                    <h3>Address Reader Concerns First</h3>
-                    <p>Lead with what matters most to your reader:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.02b</div>
-                        <p><strong>Writer-focused:</strong> "The department has revised its policies following extensive consultation..."</p>
-                        <p><strong>Reader-focused:</strong> "Your benefits will increase by 15% starting January 1..."</p>
+                    <div class="examples-box">
+                        <h4>Writing for Different Audiences</h4>
+                        <div class="audience-examples">
+                            <div class="audience-item">
+                                <h5>For Experts</h5>
+                                <p>"Implement multi-factor authentication protocols to enhance security posture."</p>
+                            </div>
+                            <div class="audience-item">
+                                <h5>For General Users</h5>
+                                <p>"Use two-step login to keep your account safe. This means entering both your password and a code from your phone."</p>
+                            </div>
+                        </div>
                     </div>
                     
-                    <h3>Answer the "So What?" Question</h3>
-                    <p>Always explain why information matters to the reader:</p>
-                    <ul>
-                        <li>How does this affect them?</li>
-                        <li>What should they do?</li>
-                        <li>When do they need to act?</li>
-                        <li>What happens if they don't?</li>
-                    </ul>
+                    <div class="tip-box">
+                        <h4>💡 Reader-Focused Questions</h4>
+                        <ul>
+                            <li>Will my readers understand this term?</li>
+                            <li>Have I given them enough context?</li>
+                            <li>Is this the level of detail they need?</li>
+                            <li>Can they act on this information?</li>
+                        </ul>
+                    </div>
                 </div>
                 
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-reader-focus"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('reader-focus')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 13.03: Organization -->
+            <section class="content-section" id="organization">
+                <div class="section-header">
+                    <h2>13.03 Organization</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Organize information in a logical order that matches how your readers think and work.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Organizational Strategies</h3>
+                        <ul>
+                            <li><strong>Chronological</strong> - Step-by-step processes, procedures</li>
+                            <li><strong>Order of Importance</strong> - Most critical information first</li>
+                            <li><strong>General to Specific</strong> - Big picture, then details</li>
+                            <li><strong>Problem to Solution</strong> - What's wrong, how to fix it</li>
+                            <li><strong>Question and Answer</strong> - Address readers' concerns directly</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Document Structure</h4>
+                        <div class="structure-example">
+                            <div class="structure-item">
+                                <h5>1. Purpose Statement</h5>
+                                <p>Tell readers immediately why this document exists and what they'll learn.</p>
+                            </div>
+                            <div class="structure-item">
+                                <h5>2. Key Information</h5>
+                                <p>Put the most important information where readers will see it first.</p>
+                            </div>
+                            <div class="structure-item">
+                                <h5>3. Supporting Details</h5>
+                                <p>Provide background, explanations, and additional information.</p>
+                            </div>
+                            <div class="structure-item">
+                                <h5>4. Next Steps</h5>
+                                <p>Tell readers what to do with this information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checklist-box">
+                        <h4>Organization Checklist</h4>
+                        <ul>
+                            <li>Does the opening tell readers what to expect?</li>
+                            <li>Is the most important information easy to find?</li>
+                            <li>Do headings clearly indicate content?</li>
+                            <li>Does the order make sense to readers?</li>
+                            <li>Are related ideas grouped together?</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-organization"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('organization')">
                         Mark Complete & Continue
                     </button>
                 </div>
@@ -164,99 +245,71 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Choose words your readers know and use. Simple, familiar words communicate more effectively than complex alternatives.</p>
+                    <p>Choose words that your readers know and use. Prefer common, concrete words over complex or abstract ones.</p>
                     
-                    <h3>Use Everyday Words</h3>
-                    <p>Replace formal or technical terms with plain alternatives:</p>
+                    <div class="rule-box">
+                        <h3>Word Choice Guidelines</h3>
+                        <ul>
+                            <li><strong>Use familiar words</strong> - Choose words readers know</li>
+                            <li><strong>Be concrete</strong> - Specific words are clearer than vague ones</li>
+                            <li><strong>Avoid jargon</strong> - Unless you're sure readers understand it</li>
+                            <li><strong>Define technical terms</strong> - When you must use them</li>
+                            <li><strong>Use consistent terminology</strong> - Don't vary words for the same concept</li>
+                        </ul>
+                    </div>
                     
                     <div class="vocabulary-table">
+                        <h4>Plain Language Word Choices</h4>
                         <table>
                             <thead>
                                 <tr>
                                     <th>Instead of...</th>
                                     <th>Use...</th>
+                                    <th>Why Better</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>commence</td>
-                                    <td>start, begin</td>
+                                    <td>Facilitate</td>
+                                    <td>Help, make easier</td>
+                                    <td>More common, concrete</td>
                                 </tr>
                                 <tr>
-                                    <td>utilize</td>
-                                    <td>use</td>
+                                    <td>Endeavour</td>
+                                    <td>Try</td>
+                                    <td>Shorter, simpler</td>
                                 </tr>
                                 <tr>
-                                    <td>prior to</td>
-                                    <td>before</td>
+                                    <td>Subsequently</td>
+                                    <td>Later, then</td>
+                                    <td>More familiar</td>
                                 </tr>
                                 <tr>
-                                    <td>subsequent to</td>
-                                    <td>after</td>
+                                    <td>Methodology</td>
+                                    <td>Method, way</td>
+                                    <td>Less pretentious</td>
                                 </tr>
                                 <tr>
-                                    <td>in the event that</td>
-                                    <td>if</td>
+                                    <td>Approximately</td>
+                                    <td>About</td>
+                                    <td>Shorter</td>
                                 </tr>
                                 <tr>
-                                    <td>notwithstanding</td>
-                                    <td>despite, even though</td>
-                                </tr>
-                                <tr>
-                                    <td>ameliorate</td>
-                                    <td>improve</td>
-                                </tr>
-                                <tr>
-                                    <td>expeditious</td>
-                                    <td>quick, fast</td>
+                                    <td>Commence</td>
+                                    <td>Start, begin</td>
+                                    <td>More natural</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     
-                    <h3>Avoid Jargon and Acronyms</h3>
-                    <p>Technical terms and acronyms can exclude readers:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.04a</div>
-                        <p><strong>Jargon:</strong> "The SMEs will conduct a gap analysis of the KPIs."</p>
-                        <p><strong>Plain:</strong> "Subject matter experts will analyze which performance measures we're missing."</p>
-                    </div>
-                    
-                    <p>If you must use technical terms:</p>
-                    <ul>
-                        <li>Define them on first use</li>
-                        <li>Include a glossary for multiple terms</li>
-                        <li>Use them consistently</li>
-                    </ul>
-                    
-                    <h3>Eliminate Redundancies</h3>
-                    <p>Remove unnecessary words that don't add meaning:</p>
-                    
-                    <div class="redundancy-list">
-                        <ul>
-                            <li>~~advance planning~~ → planning</li>
-                            <li>~~completely eliminate~~ → eliminate</li>
-                            <li>~~future plans~~ → plans</li>
-                            <li>~~past history~~ → history</li>
-                            <li>~~true facts~~ → facts</li>
-                            <li>~~end result~~ → result</li>
-                        </ul>
-                    </div>
-                    
-                    <h3>Be Concrete and Specific</h3>
-                    <p>Vague language confuses readers. Be precise:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.04b</div>
-                        <p><strong>Vague:</strong> "Submit your application in a timely manner."</p>
-                        <p><strong>Specific:</strong> "Submit your application by March 31."</p>
-                        <br>
-                        <p><strong>Vague:</strong> "A majority of respondents agreed."</p>
-                        <p><strong>Specific:</strong> "73% of respondents agreed."</p>
+                    <div class="warning-box">
+                        <h4>⚠️ Avoid Unnecessary Complexity</h4>
+                        <p>Government writing often includes unnecessary formal language. Remember: clarity serves citizens better than complexity.</p>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-vocabulary"></div>
                 
                 <div class="section-footer">
@@ -273,60 +326,50 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Clear sentences are the building blocks of plain language. Keep them short, simple, and direct.</p>
+                    <p>Write clear, direct sentences that express one main idea. Vary sentence length for rhythm, but keep most sentences under 20 words.</p>
                     
-                    <h3>Keep Sentences Short</h3>
-                    <p>Aim for an average of 15-20 words per sentence:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.05a</div>
-                        <p><strong>Long (42 words):</strong> "The committee, after extensive deliberation and consultation with various stakeholders including community members, business owners, and municipal officials, has determined that the proposed development, subject to certain conditions being met, should proceed as planned."</p>
-                        <br>
-                        <p><strong>Short and clear:</strong> "The committee consulted stakeholders and decided to approve the development. The approval includes specific conditions."</p>
+                    <div class="rule-box">
+                        <h3>Sentence Guidelines</h3>
+                        <ul>
+                            <li><strong>Average 15-20 words</strong> - Easier to follow</li>
+                            <li><strong>Use active voice</strong> - More direct and engaging</li>
+                            <li><strong>Put the action in verbs</strong> - Not in nouns</li>
+                            <li><strong>Use positive statements</strong> - Instead of negative ones when possible</li>
+                            <li><strong>Break up long sentences</strong> - One idea per sentence</li>
+                        </ul>
                     </div>
                     
-                    <h3>Use Active Voice</h3>
-                    <p>Active voice makes your writing more direct and easier to understand:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Active vs. Passive</div>
-                        <p><strong>Passive:</strong> "The report was written by the consultant."</p>
-                        <p><strong>Active:</strong> "The consultant wrote the report."</p>
-                        <br>
-                        <p><strong>Passive:</strong> "Your application will be reviewed by our staff."</p>
-                        <p><strong>Active:</strong> "Our staff will review your application."</p>
+                    <div class="examples-box">
+                        <h4>Sentence Improvements</h4>
+                        
+                        <div class="example-item bad">
+                            <p><strong>Complex:</strong> "The implementation of the new policy requires the completion of training by all employees prior to the commencement of the new fiscal year."</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Plain:</strong> "All employees must complete training before the new fiscal year starts."</p>
+                        </div>
+                        
+                        <div class="example-item bad">
+                            <p><strong>Passive:</strong> "Mistakes were made in the processing of applications."</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Active:</strong> "We made mistakes when processing applications."</p>
+                        </div>
                     </div>
                     
-                    <h3>Put the Main Idea First</h3>
-                    <p>Don't bury important information in the middle of sentences:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.05b</div>
-                        <p><strong>Buried:</strong> "Although there are several options available, and while cost is certainly a factor, the safety considerations, which have been thoroughly evaluated, indicate that Option B is recommended."</p>
-                        <br>
-                        <p><strong>Clear:</strong> "We recommend Option B for safety reasons. While other options exist and cost is important, safety is our priority."</p>
-                    </div>
-                    
-                    <h3>Use Positive Language</h3>
-                    <p>Tell readers what to do, not what to avoid:</p>
-                    
-                    <ul>
-                        <li><strong>Negative:</strong> "Do not submit incomplete forms."<br>
-                            <strong>Positive:</strong> "Submit complete forms."</li>
-                        <li><strong>Negative:</strong> "You cannot park here except on weekends."<br>
-                            <strong>Positive:</strong> "You can park here on weekends only."</li>
-                    </ul>
-                    
-                    <h3>Avoid Noun Strings</h3>
-                    <p>Break up chains of nouns that modify each other:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Example 13.05c</div>
-                        <p><strong>Noun string:</strong> "employee workplace safety training program evaluation"</p>
-                        <p><strong>Clear:</strong> "evaluation of the safety training program for employees"</p>
+                    <div class="redundancy-list">
+                        <h4>Eliminate Redundancy</h4>
+                        <ul>
+                            <li>"Free gift" → "Gift"</li>
+                            <li>"End result" → "Result"</li>
+                            <li>"Past experience" → "Experience"</li>
+                            <li>"Future plans" → "Plans"</li>
+                            <li>"Advance planning" → "Planning"</li>
+                        </ul>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-sentences"></div>
                 
                 <div class="section-footer">
@@ -336,71 +379,68 @@
                 </div>
             </section>
 
-            <!-- Section 13.06: Layout and Design -->
+            <!-- Section 13.06: Layout & Design -->
             <section class="content-section" id="layout">
                 <div class="section-header">
-                    <h2>13.06 Layout and Design</h2>
+                    <h2>13.06 Layout & Design</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Good design makes your content easier to read and understand. Use visual elements to guide readers through your document.</p>
+                    <p>Good design makes information accessible. Use visual elements to guide readers and highlight important information.</p>
                     
-                    <h3>Use Descriptive Headings</h3>
-                    <p>Headings help readers find information quickly:</p>
-                    
-                    <div class="example-box">
-                        <div class="example-label">Effective Headings</div>
-                        <p><strong>Vague:</strong> "Section 3: Procedures"</p>
-                        <p><strong>Descriptive:</strong> "How to Apply for Benefits"</p>
-                        <br>
-                        <p><strong>Vague:</strong> "Important Information"</p>
-                        <p><strong>Descriptive:</strong> "Deadlines You Must Meet"</p>
-                    </div>
-                    
-                    <h3>Create Visual Hierarchy</h3>
-                    <ul>
-                        <li>Use consistent heading levels</li>
-                        <li>Make headings stand out with size and weight</li>
-                        <li>Leave white space around important elements</li>
-                        <li>Use bullet points for lists</li>
-                        <li>Highlight key information with boxes or sidebars</li>
-                    </ul>
-                    
-                    <h3>Use Lists Effectively</h3>
-                    <p>Lists make information easier to scan and remember:</p>
-                    
-                    <div class="tech-tip">
-                        <h4>When to Use Lists</h4>
+                    <div class="rule-box">
+                        <h3>Design Principles</h3>
                         <ul>
-                            <li><strong>Numbered lists:</strong> For sequential steps or ranked items</li>
-                            <li><strong>Bullet lists:</strong> For items of equal importance</li>
-                            <li><strong>Keep parallel structure:</strong> Start each item the same way</li>
+                            <li><strong>Use white space</strong> - Give readers' eyes a rest</li>
+                            <li><strong>Write helpful headings</strong> - Tell readers what's coming</li>
+                            <li><strong>Use lists</strong> - Break up dense paragraphs</li>
+                            <li><strong>Highlight key information</strong> - But don't overdo it</li>
+                            <li><strong>Choose readable fonts</strong> - Simple, clean typefaces</li>
                         </ul>
                     </div>
-                    
-                    <h3>Design for Scanning</h3>
-                    <p>Most readers scan before reading in detail. Help them by:</p>
                     
                     <div class="design-checklist">
-                        <h4>✓ Design Checklist</h4>
+                        <h4>Visual Design Checklist</h4>
                         <ul>
-                            <li>Using short paragraphs (3-4 sentences max)</li>
-                            <li>Adding subheadings every 2-3 paragraphs</li>
-                            <li>Bolding key terms (sparingly)</li>
-                            <li>Using tables for complex comparisons</li>
-                            <li>Adding visuals to clarify concepts</li>
+                            <li><strong>Headings:</strong> Do they tell readers what to expect?</li>
+                            <li><strong>Lists:</strong> Are they used for series and steps?</li>
+                            <li><strong>Paragraphs:</strong> Are they short (3-5 sentences)?</li>
+                            <li><strong>Font size:</strong> Is it large enough to read easily?</li>
+                            <li><strong>Contrast:</strong> Can readers with vision problems read it?</li>
+                            <li><strong>Layout:</strong> Does it look organized and professional?</li>
                         </ul>
                     </div>
                     
-                    <h3>Choose Readable Fonts</h3>
-                    <ul>
-                        <li>Use 12-point font minimum for body text</li>
-                        <li>Choose sans-serif fonts for online reading</li>
-                        <li>Maintain high contrast (black on white)</li>
-                        <li>Avoid ALL CAPS except for short headings</li>
-                    </ul>
+                    <div class="examples-box">
+                        <h4>Before and After: Layout</h4>
+                        <div class="layout-comparison">
+                            <div class="layout-before">
+                                <h5>Before: Wall of Text</h5>
+                                <p class="dense-text">To apply for benefits you must complete form ABC-123 and submit it with supporting documents including proof of income tax returns for the previous year medical records if applicable and two pieces of identification to the office located at 123 Main Street during business hours Monday through Friday 9 AM to 4 PM or you can mail it to PO Box 456.</p>
+                            </div>
+                            <div class="layout-after">
+                                <h5>After: Organized Information</h5>
+                                <p><strong>To apply for benefits:</strong></p>
+                                <ol>
+                                    <li>Complete form ABC-123</li>
+                                    <li>Gather supporting documents:
+                                        <ul>
+                                            <li>Proof of income</li>
+                                            <li>Previous year's tax returns</li>
+                                            <li>Medical records (if applicable)</li>
+                                            <li>Two pieces of identification</li>
+                                        </ul>
+                                    </li>
+                                    <li>Submit in person or by mail</li>
+                                </ol>
+                                <p><strong>Office hours:</strong> Monday-Friday, 9 AM-4 PM</p>
+                                <p><strong>Address:</strong> 123 Main Street or PO Box 456</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-layout"></div>
                 
                 <div class="section-footer">
@@ -417,72 +457,59 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Testing ensures your document works for your readers. Never assume—always verify that your message is clear.</p>
+                    <p>Test your writing with real users to ensure it actually works. The best measure of plain language is whether readers can use it successfully.</p>
                     
-                    <h3>Test with Real Readers</h3>
-                    <p>The best test is with people who represent your audience:</p>
-                    
-                    <ol>
-                        <li><strong>Find test readers:</strong> 3-5 people similar to your audience</li>
-                        <li><strong>Ask them to use the document:</strong> Don't explain—let them figure it out</li>
-                        <li><strong>Observe and ask questions:</strong>
-                            <ul>
-                                <li>What's confusing?</li>
-                                <li>What's missing?</li>
-                                <li>Can they complete the task?</li>
-                                <li>Would they recommend changes?</li>
-                            </ul>
-                        </li>
-                        <li><strong>Revise based on feedback:</strong> Fix problem areas</li>
-                    </ol>
-                    
-                    <h3>Readability Formulas</h3>
-                    <p>While not perfect, readability scores provide quick feedback:</p>
-                    
-                    <div class="tech-tip">
-                        <h4>Common Readability Tests</h4>
+                    <div class="rule-box">
+                        <h3>Testing Methods</h3>
                         <ul>
-                            <li><strong>Flesch Reading Ease:</strong> Aim for 60+ (plain English)</li>
-                            <li><strong>Flesch-Kincaid Grade Level:</strong> Aim for grades 6-8</li>
-                            <li><strong>Gunning Fog Index:</strong> Aim for 12 or lower</li>
-                        </ul>
-                        <p class="example-note">Most word processors include readability statistics in their spelling/grammar tools.</p>
-                    </div>
-                    
-                    <h3>Plain Language Checklist</h3>
-                    <p>Review your document against these criteria:</p>
-                    
-                    <div class="checklist-box">
-                        <h4>✓ Final Review Checklist</h4>
-                        <ul>
-                            <li>□ Purpose is clear from the beginning</li>
-                            <li>□ Most important information comes first</li>
-                            <li>□ Headings are descriptive and helpful</li>
-                            <li>□ Sentences average 15-20 words</li>
-                            <li>□ Active voice dominates</li>
-                            <li>□ Jargon is eliminated or explained</li>
-                            <li>□ Instructions are numbered steps</li>
-                            <li>□ Design supports easy scanning</li>
-                            <li>□ Next steps are clear</li>
-                            <li>□ Contact information is provided</li>
+                            <li><strong>User testing</strong> - Watch people use your document</li>
+                            <li><strong>Readability tests</strong> - Check grade level and complexity</li>
+                            <li><strong>Expert review</strong> - Have plain language experts review it</li>
+                            <li><strong>Field testing</strong> - Try it in real situations</li>
+                            <li><strong>Feedback collection</strong> - Ask users what works and what doesn't</li>
                         </ul>
                     </div>
                     
-                    <h3>Continuous Improvement</h3>
-                    <p>Plain language is an ongoing process:</p>
-                    <ul>
-                        <li>Track reader questions and complaints</li>
-                        <li>Update documents based on feedback</li>
-                        <li>Share successful examples</li>
-                        <li>Train staff in plain language principles</li>
-                    </ul>
+                    <div class="examples-box">
+                        <h4>Testing Questions</h4>
+                        <div class="testing-questions">
+                            <div class="question-category">
+                                <h5>Understanding</h5>
+                                <ul>
+                                    <li>Can readers find the information they need?</li>
+                                    <li>Do they understand what you're asking them to do?</li>
+                                    <li>Are there terms that confuse them?</li>
+                                </ul>
+                            </div>
+                            <div class="question-category">
+                                <h5>Usability</h5>
+                                <ul>
+                                    <li>Can they complete the task successfully?</li>
+                                    <li>How long does it take them?</li>
+                                    <li>Where do they get stuck?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     
-                    <div class="example-box">
-                        <div class="example-label">Remember</div>
-                        <p>Plain language saves time, prevents errors, and shows respect for your readers. It's not about dumbing down—it's about clear communication that works.</p>
+                    <div class="tip-box">
+                        <h4>💡 Simple Testing Tips</h4>
+                        <ul>
+                            <li>Read your writing out loud</li>
+                            <li>Ask a colleague to review it</li>
+                            <li>Use readability tools</li>
+                            <li>Time how long it takes to complete tasks</li>
+                            <li>Track where people ask for help</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="key-principle">
+                        <h3>Remember</h3>
+                        <p>Plain language isn't about dumbing down—it's about opening up. When you write clearly, you show respect for your readers' time and intelligence.</p>
                     </div>
                 </div>
                 
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-testing"></div>
                 
                 <div class="section-footer">
@@ -500,65 +527,16 @@
         </div>
     </footer>
 
-    <style>
-        /* Additional styles for Plain Language chapter */
-        .vocabulary-table table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .vocabulary-table th,
-        .vocabulary-table td {
-            padding: var(--cs-space-s) var(--cs-space-m);
-            border: 1px solid var(--cs-grey-300);
-            text-align: left;
-        }
-        
-        .vocabulary-table th {
-            background: var(--cs-grey-100);
-            font-weight: var(--cs-font-bold);
-        }
-        
-        .vocabulary-table tr:hover {
-            background: var(--cs-grey-100);
-        }
-        
-        .redundancy-list ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .redundancy-list li {
-            padding: var(--cs-space-s) 0;
-            font-size: 1.125rem;
-        }
-        
-        .checklist-box,
-        .design-checklist {
-            background: var(--cs-grey-100);
-            border-radius: 8px;
-            padding: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .checklist-box ul,
-        .design-checklist ul {
-            list-style: none;
-            padding: 0;
-        }
-        
-        .checklist-box li,
-        .design-checklist li {
-            padding: var(--cs-space-s) 0;
-        }
-    </style>
+    <!-- Include JavaScript modules -->
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine, loadQuizData } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch13';
         const sections = [
@@ -571,14 +549,19 @@
             { id: 'testing', title: '13.07 Testing' }
         ];
         
-        // Initialize progress bar
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
+        
+        // Update progress bar
         function updateProgressBar() {
-            const progress = getProgress();
-            const chapterProgress = progress[CHAPTER_ID] || {};
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            document.getElementById('chapterProgress').style.width = percentage + '%';
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
         }
         
         // Mark section as complete
@@ -602,96 +585,279 @@
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <div class="modal-icon">🎯</div>
-                    <h2>Plain Language Mastered!</h2>
-                    <p>You're now equipped to write clearly and effectively for any audience.</p>
-                    <div class="modal-stats">
-                        <div class="stat">
-                            <span class="stat-value">7</span>
-                            <span class="stat-label">Sections Completed</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-value">100%</span>
-                            <span class="stat-label">Clear Communication</span>
-                        </div>
-                    </div>
+                    <h3>🎉 Chapter 13 Complete!</h3>
+                    <p>You've mastered plain language principles! Your writing will be clearer and more effective.</p>
                     <div class="modal-actions">
-                        <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-                        <button class="btn btn-primary" onclick="window.location.href='ch14-stereotyping.html'">
-                            Next Chapter
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
                         </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
                     </div>
                 </div>
             `;
             document.body.appendChild(modal);
         }
         
-        // Load quizzes
+        // Load section quizzes from JSON files
         async function loadSectionQuizzes() {
-            const quizData = {
-                vocabulary: {
-                    id: 'vocab-quiz',
-                    title: 'Simplify Your Vocabulary',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'vocabulary',
-                    questions: [
-                        {
-                            type: 'drag-drop',
-                            stem: 'Match the complex terms with their plain alternatives:',
-                            options: [
-                                { label: 'commence → begin', order: 1 },
-                                { label: 'utilize → use', order: 2 },
-                                { label: 'subsequent to → after', order: 3 },
-                                { label: 'notwithstanding → despite', order: 4 }
-                            ]
-                        }
-                    ]
-                },
-                sentences: {
-                    id: 'sentences-quiz',
-                    title: 'Write Clear Sentences',
-                    chapterId: CHAPTER_ID,
-                    sectionId: 'sentences',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which sentence uses active voice?',
-                            options: [
-                                { label: 'The report was submitted by the team.', correct: false },
-                                { label: 'The team submitted the report.', correct: true },
-                                { label: 'Submission of the report was done by the team.', correct: false },
-                                { label: 'The report submission was completed.', correct: false }
-                            ],
-                            rationale: 'Active voice puts the doer (team) before the action (submitted).'
-                        }
-                    ]
+            try {
+                // Load quiz data from JSON file
+                const response = await fetch(`../data/quizzes/ch13-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 13');
+                    return;
                 }
-            };
-            
-            // Initialize quizzes
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        const engine = new QuizEngine(`quiz-${section.id}`, quiz);
-                        engine.init();
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
                     }
-                }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
             }
         }
         
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+        // Initialize page
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
+                return event.returnValue;
             }
         });
-        
-        window.addEventListener('progress-changed', updateProgressBar);
     </script>
+
+    <style>
+        /* Chapter-specific styles for Plain Language */
+        .comparison-table table,
+        .vocabulary-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .comparison-table th,
+        .comparison-table td,
+        .vocabulary-table th,
+        .vocabulary-table td {
+            padding: var(--cs-space-s) var(--cs-space-m);
+            border: 1px solid var(--cs-grey-300);
+            text-align: left;
+        }
+        
+        .comparison-table th,
+        .vocabulary-table th {
+            background: var(--cs-grey-100);
+            font-weight: var(--cs-font-bold);
+        }
+        
+        .comparison-table tr:hover,
+        .vocabulary-table tr:hover {
+            background: var(--cs-grey-100);
+        }
+        
+        .audience-examples {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .audience-item {
+            background: var(--cs-grey-50);
+            padding: var(--cs-space-m);
+            border-radius: var(--cs-border-radius);
+            border-left: 4px solid var(--cs-red);
+        }
+        
+        .audience-item h5 {
+            margin-top: 0;
+            color: var(--cs-red);
+        }
+        
+        .structure-example {
+            background: var(--cs-grey-50);
+            padding: var(--cs-space-l);
+            border-radius: var(--cs-border-radius);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .structure-item {
+            padding: var(--cs-space-m) 0;
+            border-bottom: 1px solid var(--cs-grey-200);
+        }
+        
+        .structure-item:last-child {
+            border-bottom: none;
+        }
+        
+        .structure-item h5 {
+            color: var(--cs-red);
+            margin-bottom: var(--cs-space-xs);
+        }
+        
+        .checklist-box,
+        .design-checklist {
+            background: var(--cs-grey-100);
+            border-radius: var(--cs-border-radius);
+            padding: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .checklist-box ul,
+        .design-checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist-box li,
+        .design-checklist li {
+            padding: var(--cs-space-s) 0;
+            position: relative;
+            padding-left: var(--cs-space-l);
+        }
+        
+        .checklist-box li:before,
+        .design-checklist li:before {
+            content: "✓";
+            color: var(--cs-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .redundancy-list ul {
+            list-style: none;
+            padding: 0;
+            background: var(--cs-grey-50);
+            border-radius: var(--cs-border-radius);
+            padding: var(--cs-space-l);
+        }
+        
+        .redundancy-list li {
+            padding: var(--cs-space-s) 0;
+            font-size: 1.125rem;
+            border-bottom: 1px solid var(--cs-grey-200);
+        }
+        
+        .redundancy-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .layout-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .layout-before,
+        .layout-after {
+            padding: var(--cs-space-m);
+            border-radius: var(--cs-border-radius);
+        }
+        
+        .layout-before {
+            background: #ffeaa7;
+            border-left: 4px solid #e17055;
+        }
+        
+        .layout-after {
+            background: #d1f2eb;
+            border-left: 4px solid #00b894;
+        }
+        
+        .layout-before h5 {
+            color: #e17055;
+            margin-top: 0;
+        }
+        
+        .layout-after h5 {
+            color: #00b894;
+            margin-top: 0;
+        }
+        
+        .dense-text {
+            line-height: 1.2;
+            margin: 0;
+            text-align: justify;
+        }
+        
+        .layout-after p,
+        .layout-after ol,
+        .layout-after ul {
+            margin-bottom: var(--cs-space-s);
+        }
+        
+        .testing-questions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--cs-space-l);
+            margin: var(--cs-space-l) 0;
+        }
+        
+        .question-category {
+            background: var(--cs-grey-50);
+            padding: var(--cs-space-m);
+            border-radius: var(--cs-border-radius);
+        }
+        
+        .question-category h5 {
+            color: var(--cs-red);
+            margin-top: 0;
+        }
+        
+        .example-item.good {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: var(--cs-space-s);
+            margin: var(--cs-space-s) 0;
+            border-radius: var(--cs-border-radius);
+        }
+        
+        .example-item.bad {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: var(--cs-space-s);
+            margin: var(--cs-space-s) 0;
+            border-radius: var(--cs-border-radius);
+        }
+        
+        @media (max-width: 768px) {
+            .audience-examples,
+            .layout-comparison,
+            .testing-questions {
+                grid-template-columns: 1fr;
+            }
+            
+            .comparison-table table,
+            .vocabulary-table table {
+                font-size: var(--cs-font-size-sm);
+            }
+            
+            .comparison-table th,
+            .comparison-table td,
+            .vocabulary-table th,
+            .vocabulary-table td {
+                padding: var(--cs-space-xs);
+            }
+        }
+    </style>
 </body>
 </html>

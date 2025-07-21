@@ -3,8 +3,8 @@
     {
       "id": "ch01",
       "number": "01",
-      "title": "Capitalization",
-      "description": "Rules for using capital letters correctly.",
+      "title": "Abbreviations",
+      "description": "Learn the proper use of abbreviations in Canadian government writing.",
       "category": "typography",
       "sections": [
         {
@@ -13,48 +13,53 @@
           "hasQuiz": false
         },
         {
+          "id": "general-principles",
+          "title": "1.02 General Principles",
+          "hasQuiz": true
+        },
+        {
           "id": "sentence-capitals",
-          "title": "1.02 Sentence Capitals",
+          "title": "1.03 Sentence Capitals",
           "hasQuiz": true
         },
         {
           "id": "proper-nouns",
-          "title": "1.03 Proper Nouns",
+          "title": "1.04 Proper Nouns",
           "hasQuiz": true
         },
         {
           "id": "government-bodies",
-          "title": "1.04 Government Bodies",
+          "title": "1.05 Government Bodies",
           "hasQuiz": true
         },
         {
           "id": "titles-positions",
-          "title": "1.05 Titles and Positions",
+          "title": "1.06 Titles & Positions",
           "hasQuiz": true
         },
         {
           "id": "geographic-names",
-          "title": "1.06 Geographic Names",
+          "title": "1.07 Geographic Names",
           "hasQuiz": true
         },
         {
           "id": "brand-names",
-          "title": "1.07 Brand Names",
+          "title": "1.08 Brand Names",
           "hasQuiz": true
         },
         {
           "id": "academic-degrees",
-          "title": "1.08 Academic Degrees",
+          "title": "1.09 Academic Degrees",
           "hasQuiz": true
         }
       ],
-      "totalSections": 8
+      "totalSections": 9
     },
     {
       "id": "ch02",
       "number": "02",
-      "title": "Compounds",
-      "description": "Forming compound words correctly.",
+      "title": "Hyphenation",
+      "description": "Master hyphenation, compounding, and word division.",
       "category": "typography",
       "sections": [
         {
@@ -63,53 +68,38 @@
           "hasQuiz": false
         },
         {
-          "id": "closed-compounds",
-          "title": "2.02 Closed Compounds",
-          "hasQuiz": true
-        },
-        {
-          "id": "open-compounds",
-          "title": "2.03 Open Compounds",
-          "hasQuiz": true
-        },
-        {
-          "id": "hyphenated-compounds",
-          "title": "2.04 Hyphenated Compounds",
-          "hasQuiz": true
-        },
-        {
-          "id": "compound-adjectives",
-          "title": "2.05 Compound Adjectives",
-          "hasQuiz": true
-        },
-        {
-          "id": "temporary-compounds",
-          "title": "2.06 Temporary Compounds",
+          "id": "compound-words",
+          "title": "2.02 Compound Words",
           "hasQuiz": true
         },
         {
           "id": "prefixes-suffixes",
-          "title": "2.07 Prefixes and Suffixes",
+          "title": "2.03 Prefixes & Suffixes",
           "hasQuiz": true
         },
         {
-          "id": "numbers-compounds",
-          "title": "2.08 Numbers in Compounds",
+          "id": "word-division",
+          "title": "2.04 Word Division",
           "hasQuiz": true
         },
         {
-          "id": "troublesome-compounds",
-          "title": "2.09 Troublesome Compounds",
+          "id": "special-cases",
+          "title": "2.05 Special Cases",
+          "hasQuiz": true
+        },
+        {
+          "id": "technical-terms",
+          "title": "2.06 Technical Terms",
           "hasQuiz": true
         }
       ],
-      "totalSections": 9
+      "totalSections": 6
     },
     {
       "id": "ch03",
       "number": "03",
-      "title": "Hyphens",
-      "description": "Using hyphens in compound words and phrases.",
+      "title": "Spelling",
+      "description": "Use correct Canadian spelling conventions.",
       "category": "typography",
       "sections": [
         {
@@ -118,53 +108,33 @@
           "hasQuiz": false
         },
         {
-          "id": "word-division",
-          "title": "3.02 Word Division",
+          "id": "canadian-spelling",
+          "title": "3.02 Canadian Spelling",
           "hasQuiz": true
         },
         {
-          "id": "compound-modifiers",
-          "title": "3.03 Compound Modifiers",
+          "id": "variants",
+          "title": "3.03 Spelling Variants",
           "hasQuiz": true
         },
         {
-          "id": "prefixes",
-          "title": "3.04 Prefixes",
+          "id": "word-endings",
+          "title": "3.04 Word Endings",
           "hasQuiz": true
         },
         {
-          "id": "numbers",
-          "title": "3.05 Numbers",
-          "hasQuiz": true
-        },
-        {
-          "id": "suspended-hyphens",
-          "title": "3.06 Suspended Hyphens",
-          "hasQuiz": true
-        },
-        {
-          "id": "en-em-dashes",
-          "title": "3.07 En Dashes and Em Dashes",
-          "hasQuiz": true
-        },
-        {
-          "id": "special-cases",
-          "title": "3.08 Special Cases",
-          "hasQuiz": true
-        },
-        {
-          "id": "hyphen-guidelines",
-          "title": "3.09 General Guidelines",
+          "id": "troublesome-words",
+          "title": "3.05 Troublesome Words",
           "hasQuiz": true
         }
       ],
-      "totalSections": 9
+      "totalSections": 5
     },
     {
       "id": "ch04",
       "number": "04",
-      "title": "Abbreviations",
-      "description": "Standard abbreviations and acronyms.",
+      "title": "Capitalization",
+      "description": "Apply proper capitalization rules.",
       "category": "typography",
       "sections": [
         {
@@ -173,58 +143,48 @@
           "hasQuiz": false
         },
         {
-          "id": "periods",
-          "title": "4.02 Periods in Abbreviations",
+          "id": "initial-words",
+          "title": "4.02 Initial Words",
           "hasQuiz": true
         },
         {
-          "id": "plurals",
-          "title": "4.03 Plurals of Abbreviations",
+          "id": "personal-names",
+          "title": "4.03 Personal Names",
           "hasQuiz": true
         },
         {
-          "id": "acronyms-initialisms",
-          "title": "4.04 Acronyms and Initialisms",
+          "id": "government",
+          "title": "4.04 Government",
           "hasQuiz": true
         },
         {
-          "id": "latin-abbreviations",
-          "title": "4.05 Latin Abbreviations",
+          "id": "titles",
+          "title": "4.05 Titles",
           "hasQuiz": true
         },
         {
-          "id": "titles-names",
-          "title": "4.06 Titles and Names",
+          "id": "geography",
+          "title": "4.06 Geography",
           "hasQuiz": true
         },
         {
-          "id": "geographic-abbreviations",
-          "title": "4.07 Geographic Abbreviations",
+          "id": "publications",
+          "title": "4.07 Publications",
           "hasQuiz": true
         },
         {
-          "id": "time-dates",
-          "title": "4.08 Time and Dates",
-          "hasQuiz": true
-        },
-        {
-          "id": "measurements",
-          "title": "4.09 Measurements",
-          "hasQuiz": true
-        },
-        {
-          "id": "government-abbreviations",
-          "title": "4.10 Government Abbreviations",
+          "id": "headings",
+          "title": "4.08 Headings",
           "hasQuiz": true
         }
       ],
-      "totalSections": 10
+      "totalSections": 8
     },
     {
       "id": "ch05",
       "number": "05",
-      "title": "Numbers",
-      "description": "Numerical expressions in government writing.",
+      "title": "Numerical Expressions",
+      "description": "Format numbers, dates, and quantities correctly.",
       "category": "typography",
       "sections": [
         {
@@ -233,33 +193,33 @@
           "hasQuiz": false
         },
         {
-          "id": "spelled-out-numbers",
-          "title": "5.02 When to Spell Out Numbers",
+          "id": "round-numbers",
+          "title": "5.02 Round Numbers",
           "hasQuiz": true
         },
         {
-          "id": "figures",
-          "title": "5.03 When to Use Figures",
+          "id": "consistency",
+          "title": "5.03 Consistency",
           "hasQuiz": true
         },
         {
-          "id": "ordinal-numbers",
-          "title": "5.04 Ordinal Numbers",
+          "id": "initial",
+          "title": "5.04 Initial Numbers",
           "hasQuiz": true
         },
         {
-          "id": "fractions-decimals",
-          "title": "5.05 Fractions and Decimals",
-          "hasQuiz": true
-        },
-        {
-          "id": "percentages",
-          "title": "5.06 Percentages",
+          "id": "quantities",
+          "title": "5.05 Quantities",
           "hasQuiz": true
         },
         {
           "id": "money",
-          "title": "5.07 Money",
+          "title": "5.06 Money",
+          "hasQuiz": true
+        },
+        {
+          "id": "percentages",
+          "title": "5.07 Percentages",
           "hasQuiz": true
         },
         {
@@ -279,7 +239,7 @@
       "id": "ch06",
       "number": "06",
       "title": "Italics",
-      "description": "When and how to use italic formatting.",
+      "description": "Use italics appropriately for emphasis and titles.",
       "category": "typography",
       "sections": [
         {
@@ -293,8 +253,8 @@
           "hasQuiz": true
         },
         {
-          "id": "titles-works",
-          "title": "6.03 Titles of Works",
+          "id": "titles",
+          "title": "6.03 Titles",
           "hasQuiz": true
         },
         {
@@ -303,33 +263,18 @@
           "hasQuiz": true
         },
         {
-          "id": "latin-terms",
-          "title": "6.05 Latin Terms",
-          "hasQuiz": true
-        },
-        {
-          "id": "scientific-names",
-          "title": "6.06 Scientific Names",
-          "hasQuiz": true
-        },
-        {
           "id": "legal-cases",
-          "title": "6.07 Legal Cases",
-          "hasQuiz": true
-        },
-        {
-          "id": "vehicles-vessels",
-          "title": "6.08 Vehicles and Vessels",
+          "title": "6.05 Legal Cases",
           "hasQuiz": true
         }
       ],
-      "totalSections": 8
+      "totalSections": 5
     },
     {
       "id": "ch07",
       "number": "07",
       "title": "Punctuation",
-      "description": "Complete guide to punctuation marks.",
+      "description": "Master all forms of punctuation.",
       "category": "typography",
       "sections": [
         {
@@ -374,22 +319,32 @@
         },
         {
           "id": "parentheses-brackets",
-          "title": "7.09 Parentheses and Brackets",
+          "title": "7.09 Parentheses & Brackets",
           "hasQuiz": true
         },
         {
           "id": "ellipsis",
           "title": "7.10 Ellipsis",
           "hasQuiz": true
+        },
+        {
+          "id": "quotation-marks",
+          "title": "7.11 Quotation Marks",
+          "hasQuiz": true
+        },
+        {
+          "id": "dashes",
+          "title": "7.12 Dashes",
+          "hasQuiz": true
         }
       ],
-      "totalSections": 10
+      "totalSections": 12
     },
     {
       "id": "ch08",
       "number": "08",
       "title": "Quotations",
-      "description": "Quotations and quotation marks.",
+      "description": "Handle quotations and quotation marks correctly.",
       "category": "typography",
       "sections": [
         {
@@ -414,7 +369,7 @@
         },
         {
           "id": "omissions-insertions",
-          "title": "8.05 Omissions and Insertions",
+          "title": "8.05 Omissions & Insertions",
           "hasQuiz": true
         },
         {
@@ -434,7 +389,7 @@
       "id": "ch09",
       "number": "09",
       "title": "Reference Matter",
-      "description": "Bibliographies, footnotes, and citations.",
+      "description": "Format bibliographies, footnotes, and citations.",
       "category": "typography",
       "sections": [
         {
@@ -448,18 +403,18 @@
           "hasQuiz": true
         },
         {
-          "id": "endnotes",
-          "title": "9.03 Endnotes",
-          "hasQuiz": true
-        },
-        {
-          "id": "bibliographies",
-          "title": "9.04 Bibliographies",
+          "id": "bibliography",
+          "title": "9.03 Bibliography",
           "hasQuiz": true
         },
         {
           "id": "citations",
-          "title": "9.05 Citations",
+          "title": "9.04 Citations",
+          "hasQuiz": true
+        },
+        {
+          "id": "indexes",
+          "title": "9.05 Indexes",
           "hasQuiz": true
         },
         {
@@ -473,8 +428,8 @@
     {
       "id": "ch10",
       "number": "10",
-      "title": "Letters",
-      "description": "Letters and memorandums format.",
+      "title": "Letters & Memorandums",
+      "description": "Write effective business correspondence.",
       "category": "typography",
       "sections": [
         {
@@ -488,18 +443,18 @@
           "hasQuiz": true
         },
         {
-          "id": "memorandums",
+          "id": "memos",
           "title": "10.03 Memorandums",
           "hasQuiz": true
         },
         {
-          "id": "electronic-mail",
-          "title": "10.04 Electronic Mail",
+          "id": "formatting",
+          "title": "10.04 Formatting",
           "hasQuiz": true
         },
         {
-          "id": "forms-address",
-          "title": "10.05 Forms of Address",
+          "id": "addresses",
+          "title": "10.05 Addresses",
           "hasQuiz": true
         },
         {
@@ -508,23 +463,18 @@
           "hasQuiz": true
         },
         {
-          "id": "envelopes",
-          "title": "10.07 Envelopes",
-          "hasQuiz": true
-        },
-        {
-          "id": "international-mail",
-          "title": "10.08 International Mail",
+          "id": "electronic-correspondence",
+          "title": "10.07 Electronic Correspondence",
           "hasQuiz": true
         }
       ],
-      "totalSections": 8
+      "totalSections": 7
     },
     {
       "id": "ch11",
       "number": "11",
-      "title": "Reports",
-      "description": "Reports and minutes structure.",
+      "title": "Reports & Minutes",
+      "description": "Structure and format reports and meeting minutes.",
       "category": "typography",
       "sections": [
         {
@@ -538,38 +488,43 @@
           "hasQuiz": true
         },
         {
-          "id": "executive-summaries",
-          "title": "11.03 Executive Summaries",
-          "hasQuiz": true
-        },
-        {
           "id": "headings",
-          "title": "11.04 Headings",
+          "title": "11.03 Headings",
           "hasQuiz": true
         },
         {
-          "id": "tables-figures",
-          "title": "11.05 Tables and Figures",
-          "hasQuiz": true
-        },
-        {
-          "id": "minutes",
-          "title": "11.06 Minutes",
+          "id": "front-matter",
+          "title": "11.04 Front Matter",
           "hasQuiz": true
         },
         {
           "id": "appendices",
-          "title": "11.07 Appendices",
+          "title": "11.05 Appendices",
+          "hasQuiz": true
+        },
+        {
+          "id": "tables-charts",
+          "title": "11.06 Tables & Charts",
+          "hasQuiz": true
+        },
+        {
+          "id": "minutes",
+          "title": "11.07 Meeting Minutes",
+          "hasQuiz": true
+        },
+        {
+          "id": "formatting",
+          "title": "11.08 Formatting",
           "hasQuiz": true
         }
       ],
-      "totalSections": 7
+      "totalSections": 8
     },
     {
       "id": "ch12",
       "number": "12",
       "title": "Usage",
-      "description": "Common usage issues and solutions.",
+      "description": "Navigate common usage problems and word choices.",
       "category": "style",
       "sections": [
         {
@@ -578,23 +533,48 @@
           "hasQuiz": false
         },
         {
-          "id": "commonly-confused",
-          "title": "12.02 Commonly Confused Words",
+          "id": "prepositions",
+          "title": "12.02 Prepositions",
+          "hasQuiz": true
+        },
+        {
+          "id": "affect-effect",
+          "title": "12.03 Affect vs Effect",
+          "hasQuiz": true
+        },
+        {
+          "id": "compose-comprise",
+          "title": "12.04 Compose vs Comprise",
           "hasQuiz": true
         },
         {
           "id": "less-fewer",
-          "title": "12.03 Less vs. Fewer",
+          "title": "12.05 Less vs Fewer",
+          "hasQuiz": true
+        },
+        {
+          "id": "that-which",
+          "title": "12.06 That vs Which",
+          "hasQuiz": true
+        },
+        {
+          "id": "common-errors",
+          "title": "12.07 Common Errors",
+          "hasQuiz": true
+        },
+        {
+          "id": "idioms",
+          "title": "12.08 Idioms",
           "hasQuiz": true
         }
       ],
-      "totalSections": 3
+      "totalSections": 8
     },
     {
       "id": "ch13",
       "number": "13",
       "title": "Plain Language",
-      "description": "Writing clearly and simply.",
+      "description": "Write clearly and concisely for your readers.",
       "category": "style",
       "sections": [
         {
@@ -603,33 +583,33 @@
           "hasQuiz": false
         },
         {
-          "id": "active-voice",
-          "title": "13.02 Active Voice",
-          "hasQuiz": true
-        },
-        {
-          "id": "conciseness",
-          "title": "13.03 Conciseness",
-          "hasQuiz": true
-        },
-        {
-          "id": "familiar-words",
-          "title": "13.04 Familiar Words",
-          "hasQuiz": true
-        },
-        {
-          "id": "short-sentences",
-          "title": "13.05 Short Sentences",
-          "hasQuiz": true
-        },
-        {
-          "id": "parallel-structure",
-          "title": "13.06 Parallel Structure",
+          "id": "reader-focus",
+          "title": "13.02 Reader Focus",
           "hasQuiz": true
         },
         {
           "id": "organization",
-          "title": "13.07 Organization",
+          "title": "13.03 Organization",
+          "hasQuiz": true
+        },
+        {
+          "id": "vocabulary",
+          "title": "13.04 Vocabulary",
+          "hasQuiz": true
+        },
+        {
+          "id": "sentences",
+          "title": "13.05 Sentences",
+          "hasQuiz": true
+        },
+        {
+          "id": "layout",
+          "title": "13.06 Layout & Design",
+          "hasQuiz": true
+        },
+        {
+          "id": "testing",
+          "title": "13.07 Testing",
           "hasQuiz": true
         }
       ],
@@ -638,8 +618,8 @@
     {
       "id": "ch14",
       "number": "14",
-      "title": "Bias-Free Writing",
-      "description": "Elimination of stereotyping in writing.",
+      "title": "Elimination of Stereotyping",
+      "description": "Use inclusive, bias-free language.",
       "category": "style",
       "sections": [
         {
@@ -653,23 +633,33 @@
           "hasQuiz": true
         },
         {
-          "id": "cultural-sensitivity",
-          "title": "14.03 Cultural Sensitivity",
+          "id": "racial-cultural",
+          "title": "14.03 Racial & Cultural Sensitivity",
           "hasQuiz": true
         },
         {
-          "id": "accessibility",
-          "title": "14.04 Accessibility Language",
+          "id": "disabilities",
+          "title": "14.04 People with Disabilities",
+          "hasQuiz": true
+        },
+        {
+          "id": "age-related",
+          "title": "14.05 Age-Related Language",
+          "hasQuiz": true
+        },
+        {
+          "id": "general-principles",
+          "title": "14.06 General Principles",
           "hasQuiz": true
         }
       ],
-      "totalSections": 4
+      "totalSections": 6
     },
     {
       "id": "ch15",
       "number": "15",
       "title": "Geographical Names",
-      "description": "Canadian geographical naming conventions.",
+      "description": "Use correct spellings and forms for place names.",
       "category": "style",
       "sections": [
         {
@@ -679,32 +669,37 @@
         },
         {
           "id": "canadian-places",
-          "title": "15.02 Canadian Place Names",
+          "title": "15.02 Canadian Places",
           "hasQuiz": true
         },
         {
           "id": "foreign-places",
-          "title": "15.03 Foreign Place Names",
+          "title": "15.03 Foreign Places",
+          "hasQuiz": true
+        },
+        {
+          "id": "adjectives",
+          "title": "15.04 Geographical Adjectives",
+          "hasQuiz": true
+        },
+        {
+          "id": "provinces-territories",
+          "title": "15.05 Provinces & Territories",
           "hasQuiz": true
         },
         {
           "id": "abbreviations",
-          "title": "15.04 Geographical Abbreviations",
-          "hasQuiz": true
-        },
-        {
-          "id": "postal-codes",
-          "title": "15.05 Postal Codes",
+          "title": "15.06 Abbreviations",
           "hasQuiz": true
         }
       ],
-      "totalSections": 5
+      "totalSections": 6
     },
     {
       "id": "ch16",
       "number": "16",
-      "title": "Revision",
-      "description": "Revision and proofreading techniques.",
+      "title": "Revision & Proofreading",
+      "description": "Polish your writing through systematic revision.",
       "category": "style",
       "sections": [
         {
@@ -718,48 +713,63 @@
           "hasQuiz": true
         },
         {
+          "id": "structural-editing",
+          "title": "16.03 Structural Editing",
+          "hasQuiz": true
+        },
+        {
+          "id": "stylistic-editing",
+          "title": "16.04 Stylistic Editing",
+          "hasQuiz": true
+        },
+        {
+          "id": "copy-editing",
+          "title": "16.05 Copy Editing",
+          "hasQuiz": true
+        },
+        {
           "id": "proofreading",
-          "title": "16.03 Proofreading",
+          "title": "16.06 Proofreading",
           "hasQuiz": true
         },
         {
-          "id": "symbols",
-          "title": "16.04 Proofreading Symbols",
+          "id": "marks",
+          "title": "16.07 Proofreader's Marks",
           "hasQuiz": true
         },
         {
-          "id": "checklists",
-          "title": "16.05 Editing Checklists",
-          "hasQuiz": true
-        },
-        {
-          "id": "technology",
-          "title": "16.06 Technology Tools",
-          "hasQuiz": true
-        },
-        {
-          "id": "final-review",
-          "title": "16.07 Final Review",
+          "id": "checklist",
+          "title": "16.08 Revision Checklist",
           "hasQuiz": true
         }
       ],
-      "totalSections": 7
+      "totalSections": 8
     }
   ],
   "metadata": {
-    "version": "1.0",
+    "version": "2.0",
     "created": "2024-01-01",
+    "updated": "2024-07-19",
     "totalChapters": 16,
     "totalSections": 119,
     "categories": {
       "typography": {
         "name": "Typography & Format",
+        "description": "Chapters 1-11: Technical aspects of writing and formatting",
         "chapters": ["ch01", "ch02", "ch03", "ch04", "ch05", "ch06", "ch07", "ch08", "ch09", "ch10", "ch11"]
       },
       "style": {
-        "name": "Style & Usage", 
+        "name": "Style & Usage",
+        "description": "Chapters 12-16: Language usage and writing style",
         "chapters": ["ch12", "ch13", "ch14", "ch15", "ch16"]
       }
+    },
+    "quizConfiguration": {
+      "passingScore": 80,
+      "questionsPerQuiz": 5,
+      "timeLimit": 300,
+      "allowRetakes": true,
+      "showExplanations": true
     }
   }
 }

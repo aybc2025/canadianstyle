@@ -1,672 +1,797 @@
 /**
  * Web Components for The Canadian Style Learning Platform
- * FIXED VERSION - Enhanced error handling and null-safe operations
+ * Reusable UI components for consistent experience across chapters
+ * FIXED VERSION - includes progress rings, cards, and interactive elements
  */
 
-// Chapter Card Component
-class CSCard extends HTMLElement {
+// Progress Ring Component
+class ProgressRing extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-    
+
+    static get observedAttributes() {
+        return ['percentage', 'size', 'stroke-width', 'color'];
+    }
+
     connectedCallback() {
-        try {
-            this.render();
-        } catch (error) {
-            console.error('Error in CSCard connectedCallback:', error);
-            this.renderFallback();
-        }
+        this.render();
     }
-    
-    // Safe attribute getter with fallbacks
-    getAttributeSafe(name, defaultValue = '') {
-        try {
-            return this.getAttribute(name) || defaultValue;
-        } catch (error) {
-            console.warn(`Error getting attribute ${name}:`, error);
-            return defaultValue;
-        }
+
+    attributeChangedCallback() {
+        this.render();
     }
-    
+
+    get percentage() {
+        return parseFloat(this.getAttribute('percentage')) || 0;
+    }
+
+    get size() {
+        return parseFloat(this.getAttribute('size')) || 60;
+    }
+
+    get strokeWidth() {
+        return parseFloat(this.getAttribute('stroke-width')) || 4;
+    }
+
+    get color() {
+        return this.getAttribute('color') || '#d71920';
+    }
+
     render() {
-        try {
-            const chapterId = this.getAttributeSafe('chapter-id', 'ch00');
-            const chapterNumber = this.getAttributeSafe('chapter-number', '00');
-            const title = this.getAttributeSafe('title', 'Unknown Chapter');
-            const completion = Math.max(0, Math.min(100, parseInt(this.getAttributeSafe('percentage', '0')) || 0));
-            const sectionsCount = this.getAttributeSafe('sections-count', '0');
-            const href = this.getAttributeSafe('href', '#');
-            const ctaText = this.getAttributeSafe('cta-text', 'Start');
-            const category = this.getAttributeSafe('category', 'typography');
-            
-            // Get description from inner content safely
-            let description = 'Learn essential writing skills.';
-            try {
-                const descriptionElement = this.querySelector('.card-description');
-                if (descriptionElement && descriptionElement.innerHTML) {
-                    description = descriptionElement.innerHTML;
+        const radius = (this.size - this.strokeWidth) / 2;
+        const circumference = 2 * Math.PI * radius;
+        const strokeDashoffset = circumference - (this.percentage / 100) * circumference;
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: inline-block;
                 }
-            } catch (error) {
-                console.warn('Error getting card description:', error);
-            }
-            
-            // Calculate progress ring values
-            const circumference = 2 * Math.PI * 25; // radius = 25
-            const strokeDasharray = circumference;
-            const strokeDashoffset = circumference - (completion / 100) * circumference;
-            
-            this.shadowRoot.innerHTML = `
-                <style>
-                    :host {
-                        display: block;
-                    }
-                    
-                    .card {
-                        background: #ffffff;
-                        border: 2px solid #e5e5e5;
-                        border-radius: 12px;
-                        padding: 1.5rem;
-                        transition: all 0.3s ease;
-                        display: flex;
-                        flex-direction: column;
-                        height: 100%;
-                        min-height: 280px;
-                        position: relative;
-                        overflow: hidden;
-                    }
-                    
-                    .card:hover {
-                        box-shadow: 0 8px 24px rgba(215, 25, 32, 0.15);
-                        transform: translateY(-4px);
-                        border-color: #d71920;
-                    }
-                    
-                    .card-header {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 1rem;
-                    }
-                    
-                    .chapter-number {
-                        font-size: 2.5rem;
-                        font-weight: 700;
-                        color: #d71920;
-                        line-height: 1;
-                        min-width: 60px;
-                    }
-                    
-                    .progress-container {
-                        position: relative;
-                        width: 60px;
-                        height: 60px;
-                    }
-                    
-                    .progress-ring {
-                        width: 60px;
-                        height: 60px;
-                    }
-                    
-                    .progress-ring svg {
-                        width: 100%;
-                        height: 100%;
-                        transform: rotate(-90deg);
-                    }
-                    
-                    .progress-ring circle {
-                        fill: none;
-                        stroke-width: 6;
-                        stroke-linecap: round;
-                    }
-                    
-                    .progress-ring .background {
-                        stroke: #e5e5e5;
-                    }
-                    
-                    .progress-ring .progress {
-                        stroke: #d71920;
-                        stroke-dasharray: ${strokeDasharray};
-                        stroke-dashoffset: ${strokeDashoffset};
-                        transition: stroke-dashoffset 0.3s ease;
-                    }
-                    
-                    .progress-text {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: 12px;
-                        font-weight: 700;
-                        color: #d71920;
-                        text-anchor: middle;
-                    }
-                    
-                    .completion-badge {
-                        position: absolute;
-                        top: -5px;
-                        right: -5px;
-                        background: #4caf50;
-                        color: white;
-                        border-radius: 50%;
-                        width: 24px;
-                        height: 24px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        font-size: 14px;
-                        font-weight: bold;
-                        opacity: ${completion === 100 ? '1' : '0'};
-                        transition: opacity 0.3s ease;
-                    }
-                    
-                    .card-title {
-                        font-size: 1.25rem;
-                        font-weight: 600;
-                        color: #333;
-                        margin: 0 0 0.75rem 0;
-                        line-height: 1.3;
-                    }
-                    
-                    .card-description {
-                        color: #666;
-                        font-size: 0.9rem;
-                        line-height: 1.5;
-                        margin: 0 0 1.5rem 0;
-                        flex-grow: 1;
-                    }
-                    
-                    .card-footer {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-top: auto;
-                        padding-top: 1rem;
-                        border-top: 1px solid #f0f0f0;
-                    }
-                    
-                    .section-count {
-                        font-size: 0.85rem;
-                        color: #999;
-                        font-weight: 500;
-                    }
-                    
-                    .btn {
-                        display: inline-flex;
-                        align-items: center;
-                        padding: 0.5rem 1rem;
-                        border: none;
-                        border-radius: 6px;
-                        font-size: 0.9rem;
-                        font-weight: 600;
-                        text-decoration: none;
-                        transition: all 0.2s ease;
-                        cursor: pointer;
-                    }
-                    
-                    .btn-primary {
-                        background: #d71920;
-                        color: white;
-                    }
-                    
-                    .btn-primary:hover {
-                        background: #b71c1c;
-                        transform: translateY(-1px);
-                    }
-                    
-                    .category-badge {
-                        position: absolute;
-                        top: 12px;
-                        left: 12px;
-                        background: ${category === 'typography' ? '#e3f2fd' : '#f3e5f5'};
-                        color: ${category === 'typography' ? '#1976d2' : '#7b1fa2'};
-                        padding: 4px 8px;
-                        border-radius: 12px;
-                        font-size: 0.75rem;
-                        font-weight: 500;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
-                    }
-                    
-                    .error-state {
-                        border-color: #f44336;
-                        background: #ffebee;
-                    }
-                    
-                    .error-message {
-                        color: #c62828;
-                        font-size: 0.85rem;
-                        text-align: center;
-                        padding: 1rem;
-                    }
-                </style>
+                .progress-ring {
+                    transform: rotate(-90deg);
+                }
+                .progress-circle {
+                    fill: none;
+                    stroke: #e5e7eb;
+                    stroke-width: ${this.strokeWidth};
+                }
+                .progress-circle.progress {
+                    stroke: ${this.color};
+                    stroke-linecap: round;
+                    stroke-dasharray: ${circumference};
+                    stroke-dashoffset: ${strokeDashoffset};
+                    transition: stroke-dashoffset 0.5s ease-in-out;
+                }
+                .progress-text {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    text-align: center;
+                    font-size: ${this.size * 0.2}px;
+                    font-weight: bold;
+                    color: ${this.color};
+                }
+                .progress-container {
+                    position: relative;
+                    display: inline-block;
+                }
+            </style>
+            <div class="progress-container">
+                <svg class="progress-ring" width="${this.size}" height="${this.size}">
+                    <circle class="progress-circle" 
+                            cx="${this.size / 2}" 
+                            cy="${this.size / 2}" 
+                            r="${radius}">
+                    </circle>
+                    <circle class="progress-circle progress" 
+                            cx="${this.size / 2}" 
+                            cy="${this.size / 2}" 
+                            r="${radius}">
+                    </circle>
+                </svg>
+                <div class="progress-text">${Math.round(this.percentage)}%</div>
+            </div>
+        `;
+    }
+}
+
+// Chapter Card Component
+class ChapterCard extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    static get observedAttributes() {
+        return ['chapter-id', 'title', 'description', 'progress', 'category'];
+    }
+
+    connectedCallback() {
+        this.render();
+        this.setupEventListeners();
+    }
+
+    get chapterId() {
+        return this.getAttribute('chapter-id') || '';
+    }
+
+    get title() {
+        return this.getAttribute('title') || '';
+    }
+
+    get description() {
+        return this.getAttribute('description') || '';
+    }
+
+    get progress() {
+        return parseFloat(this.getAttribute('progress')) || 0;
+    }
+
+    get category() {
+        return this.getAttribute('category') || 'typography';
+    }
+
+    get isCompleted() {
+        return this.progress >= 100;
+    }
+
+    get hasProgress() {
+        return this.progress > 0;
+    }
+
+    render() {
+        const chapterNumber = this.chapterId.replace('ch', '').padStart(2, '0');
+        const categoryLabel = this.category === 'typography' ? 'Typography & Format' : 'Style & Usage';
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: block;
+                }
+                .chapter-card {
+                    background: white;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 12px;
+                    padding: 24px;
+                    transition: all 0.15s ease-in-out;
+                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 320px;
+                    cursor: pointer;
+                }
+                .chapter-card:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                    border-color: #d71920;
+                }
+                .card-header {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    margin-bottom: 16px;
+                }
+                .chapter-number {
+                    width: 60px;
+                    height: 60px;
+                    background: #d71920;
+                    color: white;
+                    border-radius: 8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    flex-shrink: 0;
+                }
+                .card-title {
+                    flex: 1;
+                }
+                .card-title h3 {
+                    margin: 0 0 4px 0;
+                    font-size: 18px;
+                    color: #111827;
+                }
+                .chapter-category {
+                    font-size: 12px;
+                    color: #6b7280;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+                .card-description {
+                    flex: 1;
+                    margin-bottom: 24px;
+                }
+                .card-description p {
+                    color: #4b5563;
+                    font-size: 14px;
+                    line-height: 1.75;
+                    margin: 0;
+                }
+                .card-footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: auto;
+                }
+                .progress-container {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                }
+                .progress-text {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #4b5563;
+                }
+                .card-actions {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+                .btn {
+                    padding: 8px 16px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    text-align: center;
+                    transition: all 0.15s ease-in-out;
+                    border: 2px solid transparent;
+                    min-height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .btn-primary {
+                    background: #d71920;
+                    color: white;
+                    border-color: #d71920;
+                }
+                .btn-primary:hover {
+                    background: #b91c1c;
+                    border-color: #b91c1c;
+                }
+                .btn-outline {
+                    background: white;
+                    color: #d71920;
+                    border-color: #d71920;
+                }
+                .btn-outline:hover {
+                    background: #d71920;
+                    color: white;
+                }
+                .btn-sm {
+                    padding: 4px 12px;
+                    font-size: 12px;
+                    min-height: 28px;
+                }
+                .completion-badge {
+                    color: #10b981;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            </style>
+            <div class="chapter-card">
+                <div class="card-header">
+                    <div class="chapter-number">${chapterNumber}</div>
+                    <div class="card-title">
+                        <h3>${this.title}</h3>
+                        <span class="chapter-category">${categoryLabel}</span>
+                    </div>
+                </div>
                 
-                <div class="card">
-                    <div class="category-badge">${category}</div>
-                    <div class="card-header">
-                        <span class="chapter-number">${chapterNumber}</span>
-                        <div class="progress-container">
-                            <div class="progress-ring">
-                                <svg width="60" height="60" viewBox="0 0 60 60">
-                                    <circle class="background" cx="30" cy="30" r="25"></circle>
-                                    <circle class="progress" cx="30" cy="30" r="25"></circle>
-                                </svg>
-                                <div class="progress-text">${completion}%</div>
-                            </div>
-                            <div class="completion-badge">✓</div>
+                <div class="card-description">
+                    <p>${this.description}</p>
+                </div>
+                
+                <div class="card-footer">
+                    <div class="progress-container">
+                        <cs-progress-ring percentage="${this.progress}" size="60"></cs-progress-ring>
+                        <div class="progress-text">
+                            <div>${Math.round(this.progress)}% Complete</div>
                         </div>
                     </div>
-                    <h3 class="card-title">${title}</h3>
-                    <p class="card-description">${description}</p>
-                    <div class="card-footer">
-                        <span class="section-count">${sectionsCount} sections</span>
-                        <a href="${href}" class="btn btn-primary">${ctaText}</a>
+                    
+                    <div class="card-actions">
+                        ${this.isCompleted 
+                            ? '<span class="completion-badge">✅ Complete</span>'
+                            : this.hasProgress 
+                                ? `<a href="chapters/${this.chapterId}.html" class="btn btn-primary">Continue</a>`
+                                : `<a href="chapters/${this.chapterId}.html" class="btn btn-outline">Start Learning</a>`
+                        }
+                        ${this.isCompleted ? `<a href="chapters/${this.chapterId}.html" class="btn btn-outline btn-sm">Review</a>` : ''}
                     </div>
                 </div>
-            `;
-        } catch (error) {
-            console.error('Error rendering CSCard:', error);
-            this.renderFallback();
-        }
+            </div>
+        `;
     }
-    
-    renderFallback() {
-        try {
-            const title = this.getAttributeSafe('title', 'Chapter');
-            const href = this.getAttributeSafe('href', '#');
-            
-            this.shadowRoot.innerHTML = `
-                <style>
-                    .fallback-card {
-                        background: #ffebee;
-                        border: 2px solid #f44336;
-                        border-radius: 8px;
-                        padding: 1rem;
-                        text-align: center;
-                        min-height: 200px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                    }
-                    
-                    .fallback-title {
-                        color: #c62828;
-                        margin: 0 0 1rem 0;
-                        font-size: 1.1rem;
-                    }
-                    
-                    .fallback-btn {
-                        background: #d71920;
-                        color: white;
-                        padding: 0.5rem 1rem;
-                        text-decoration: none;
-                        border-radius: 4px;
-                        display: inline-block;
-                    }
-                </style>
-                <div class="fallback-card">
-                    <h3 class="fallback-title">${title}</h3>
-                    <p>Unable to load chapter data</p>
-                    <a href="${href}" class="fallback-btn">View Chapter</a>
-                </div>
-            `;
-        } catch (fallbackError) {
-            console.error('Error in fallback rendering:', fallbackError);
-            this.shadowRoot.innerHTML = '<div style="padding: 1rem; border: 1px solid #ccc;">Error loading chapter</div>';
-        }
-    }
-    
-    // Update progress dynamically
-    updateProgress(newPercentage) {
-        try {
-            const percentage = Math.max(0, Math.min(100, Number(newPercentage) || 0));
-            const progressCircle = this.shadowRoot.querySelector('.progress');
-            const progressText = this.shadowRoot.querySelector('.progress-text');
-            const completionBadge = this.shadowRoot.querySelector('.completion-badge');
-            
-            if (progressCircle) {
-                const circumference = 2 * Math.PI * 25;
-                const strokeDashoffset = circumference - (percentage / 100) * circumference;
-                progressCircle.style.strokeDashoffset = strokeDashoffset;
+
+    setupEventListeners() {
+        const card = this.shadowRoot.querySelector('.chapter-card');
+        card.addEventListener('click', (e) => {
+            if (!e.target.closest('a')) {
+                window.location.href = `chapters/${this.chapterId}.html`;
             }
-            
-            if (progressText) {
-                progressText.textContent = `${percentage}%`;
-            }
-            
-            if (completionBadge) {
-                completionBadge.style.opacity = percentage === 100 ? '1' : '0';
-            }
-        } catch (error) {
-            console.error('Error updating progress:', error);
-        }
+        });
     }
 }
 
-// Progress Ring Component
-class CSProgressRing extends HTMLElement {
+// Quiz Question Component
+class QuizQuestion extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-    
+
+    static get observedAttributes() {
+        return ['question-data'];
+    }
+
     connectedCallback() {
+        this.render();
+    }
+
+    get questionData() {
         try {
-            this.render();
-        } catch (error) {
-            console.error('Error in CSProgressRing connectedCallback:', error);
-            this.renderFallback();
+            return JSON.parse(this.getAttribute('question-data'));
+        } catch {
+            return {};
         }
     }
-    
-    getAttributeSafe(name, defaultValue = '') {
-        try {
-            return this.getAttribute(name) || defaultValue;
-        } catch (error) {
-            console.warn(`Error getting attribute ${name}:`, error);
-            return defaultValue;
-        }
-    }
-    
+
     render() {
-        try {
-            const percentage = Math.max(0, Math.min(100, parseInt(this.getAttributeSafe('percentage', '0')) || 0));
-            const size = parseInt(this.getAttributeSafe('size', '60')) || 60;
-            const strokeWidth = parseInt(this.getAttributeSafe('stroke-width', '6')) || 6;
-            const color = this.getAttributeSafe('color', '#d71920');
-            const backgroundColor = this.getAttributeSafe('background-color', '#e5e5e5');
-            
-            const radius = (size - strokeWidth) / 2;
-            const circumference = 2 * Math.PI * radius;
-            const strokeDashoffset = circumference - (percentage / 100) * circumference;
-            
-            this.shadowRoot.innerHTML = `
-                <style>
-                    :host {
-                        display: inline-block;
-                        width: ${size}px;
-                        height: ${size}px;
-                    }
-                    
-                    .progress-ring {
-                        width: 100%;
-                        height: 100%;
-                        position: relative;
-                    }
-                    
-                    .progress-ring svg {
-                        width: 100%;
-                        height: 100%;
-                        transform: rotate(-90deg);
-                    }
-                    
-                    .progress-ring circle {
-                        fill: none;
-                        stroke-linecap: round;
-                    }
-                    
-                    .progress-text {
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        font-size: ${Math.max(10, size * 0.2)}px;
-                        font-weight: 700;
-                        color: ${color};
-                        text-align: center;
-                        line-height: 1;
-                    }
-                </style>
-                
-                <div class="progress-ring">
-                    <svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
-                        <circle 
-                            cx="${size / 2}" 
-                            cy="${size / 2}" 
-                            r="${radius}"
-                            stroke="${backgroundColor}" 
-                            stroke-width="${strokeWidth}">
-                        </circle>
-                        <circle 
-                            cx="${size / 2}" 
-                            cy="${size / 2}" 
-                            r="${radius}"
-                            stroke="${color}" 
-                            stroke-width="${strokeWidth}"
-                            stroke-dasharray="${circumference}"
-                            stroke-dashoffset="${strokeDashoffset}"
-                            style="transition: stroke-dashoffset 0.3s ease;">
-                        </circle>
-                    </svg>
-                    <div class="progress-text">${percentage}%</div>
+        const question = this.questionData;
+        if (!question) return;
+
+        let questionContent = '';
+        
+        switch (question.type) {
+            case 'mcq':
+                questionContent = this.renderMCQ(question);
+                break;
+            case 'fill-blank':
+                questionContent = this.renderFillBlank(question);
+                break;
+            default:
+                questionContent = '<p>Question type not supported</p>';
+        }
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: block;
+                    margin: 16px 0;
+                }
+                .question-container {
+                    background: white;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 8px;
+                    padding: 20px;
+                }
+                .question-stem {
+                    font-weight: 500;
+                    margin-bottom: 16px;
+                    color: #111827;
+                }
+                .question-number {
+                    background: #d71920;
+                    color: white;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-right: 8px;
+                }
+                .mcq-options {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                }
+                .option-label {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 8px;
+                    padding: 8px;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: all 0.15s ease-in-out;
+                }
+                .option-label:hover {
+                    background: #f9fafb;
+                    border-color: #d71920;
+                }
+                .option-input {
+                    margin: 0;
+                    flex-shrink: 0;
+                }
+                .option-text {
+                    flex: 1;
+                }
+                .fill-blank-input {
+                    width: 100%;
+                    padding: 8px 12px;
+                    border: 2px solid #e5e7eb;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    transition: border-color 0.15s ease-in-out;
+                }
+                .fill-blank-input:focus {
+                    outline: none;
+                    border-color: #d71920;
+                }
+            </style>
+            <div class="question-container">
+                <div class="question-stem">
+                    <span class="question-number">Q${question.id}</span>
+                    ${question.stem}
                 </div>
-            `;
-        } catch (error) {
-            console.error('Error rendering CSProgressRing:', error);
-            this.renderFallback();
-        }
+                <div class="question-content">
+                    ${questionContent}
+                </div>
+            </div>
+        `;
     }
-    
-    renderFallback() {
-        try {
-            this.shadowRoot.innerHTML = `
-                <style>
-                    .fallback {
-                        width: 60px;
-                        height: 60px;
-                        border: 2px solid #ccc;
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: #666;
-                        font-size: 12px;
-                    }
-                </style>
-                <div class="fallback">0%</div>
-            `;
-        } catch (fallbackError) {
-            console.error('Error in fallback rendering:', fallbackError);
-        }
+
+    renderMCQ(question) {
+        const isMultiSelect = question.options.filter(opt => opt.correct).length > 1;
+        const inputType = isMultiSelect ? 'checkbox' : 'radio';
+        const inputName = `question-${question.id}`;
+        
+        return `
+            <div class="mcq-options">
+                ${isMultiSelect ? '<p style="font-size: 14px; color: #6b7280; margin: 0 0 8px 0;">Select all that apply:</p>' : ''}
+                ${question.options.map((option, index) => `
+                    <label class="option-label">
+                        <input type="${inputType}" name="${inputName}" value="${index}" class="option-input">
+                        <span class="option-text">${option.label}</span>
+                    </label>
+                `).join('')}
+            </div>
+        `;
     }
-    
-    updateProgress(newPercentage) {
-        try {
-            const percentage = Math.max(0, Math.min(100, Number(newPercentage) || 0));
-            const progressCircle = this.shadowRoot.querySelector('circle:last-child');
-            const progressText = this.shadowRoot.querySelector('.progress-text');
-            
-            if (progressCircle) {
-                const size = parseInt(this.getAttributeSafe('size', '60')) || 60;
-                const strokeWidth = parseInt(this.getAttributeSafe('stroke-width', '6')) || 6;
-                const radius = (size - strokeWidth) / 2;
-                const circumference = 2 * Math.PI * radius;
-                const strokeDashoffset = circumference - (percentage / 100) * circumference;
-                
-                progressCircle.style.strokeDashoffset = strokeDashoffset;
-            }
-            
-            if (progressText) {
-                progressText.textContent = `${percentage}%`;
-            }
-        } catch (error) {
-            console.error('Error updating progress ring:', error);
-        }
+
+    renderFillBlank(question) {
+        return `
+            <div class="fill-blank-container">
+                <input type="text" class="fill-blank-input" placeholder="Type your answer here..." autocomplete="off">
+                ${question.acceptableAnswers ? 
+                    '<p style="font-size: 14px; color: #6b7280; margin: 8px 0 0 0;">💡 Multiple acceptable answers possible</p>' : ''}
+            </div>
+        `;
     }
 }
 
-// Quiz Status Component
-class CSQuizStatus extends HTMLElement {
+// Tooltip Component
+class Tooltip extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
-    
+
+    static get observedAttributes() {
+        return ['text', 'position'];
+    }
+
     connectedCallback() {
-        try {
-            this.render();
-        } catch (error) {
-            console.error('Error in CSQuizStatus connectedCallback:', error);
-            this.renderFallback();
-        }
+        this.render();
+        this.setupEventListeners();
     }
-    
-    getAttributeSafe(name, defaultValue = '') {
-        try {
-            return this.getAttribute(name) || defaultValue;
-        } catch (error) {
-            console.warn(`Error getting attribute ${name}:`, error);
-            return defaultValue;
-        }
+
+    get text() {
+        return this.getAttribute('text') || '';
     }
-    
+
+    get position() {
+        return this.getAttribute('position') || 'top';
+    }
+
     render() {
-        try {
-            const status = this.getAttributeSafe('status', 'not-started'); // not-started, in-progress, completed, failed
-            const score = parseInt(this.getAttributeSafe('score', '0')) || 0;
-            const total = parseInt(this.getAttributeSafe('total', '0')) || 0;
-            const percentage = total > 0 ? Math.round((score / total) * 100) : 0;
-            
-            let statusColor = '#999';
-            let statusText = 'Not Started';
-            let statusIcon = '○';
-            
-            switch (status) {
-                case 'in-progress':
-                    statusColor = '#ff9800';
-                    statusText = 'In Progress';
-                    statusIcon = '◐';
-                    break;
-                case 'completed':
-                    statusColor = '#4caf50';
-                    statusText = 'Completed';
-                    statusIcon = '✓';
-                    break;
-                case 'failed':
-                    statusColor = '#f44336';
-                    statusText = 'Needs Review';
-                    statusIcon = '✗';
-                    break;
-            }
-            
-            this.shadowRoot.innerHTML = `
-                <style>
-                    :host {
-                        display: inline-block;
-                    }
-                    
-                    .quiz-status {
-                        display: flex;
-                        align-items: center;
-                        gap: 0.5rem;
-                        padding: 0.25rem 0.75rem;
-                        border-radius: 16px;
-                        background: ${statusColor}20;
-                        border: 1px solid ${statusColor}40;
-                        font-size: 0.85rem;
-                        font-weight: 500;
-                    }
-                    
-                    .status-icon {
-                        color: ${statusColor};
-                        font-weight: bold;
-                    }
-                    
-                    .status-text {
-                        color: ${statusColor};
-                    }
-                    
-                    .status-score {
-                        color: ${statusColor};
-                        font-weight: 600;
-                        margin-left: 0.25rem;
-                    }
-                </style>
-                
-                <div class="quiz-status">
-                    <span class="status-icon">${statusIcon}</span>
-                    <span class="status-text">${statusText}</span>
-                    ${status === 'completed' || status === 'failed' ? 
-                        `<span class="status-score">${score}/${total} (${percentage}%)</span>` : ''}
-                </div>
-            `;
-        } catch (error) {
-            console.error('Error rendering CSQuizStatus:', error);
-            this.renderFallback();
-        }
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    position: relative;
+                    display: inline-block;
+                }
+                .tooltip {
+                    position: absolute;
+                    background: #111827;
+                    color: white;
+                    padding: 8px 12px;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    white-space: nowrap;
+                    z-index: 1000;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.15s ease-in-out;
+                }
+                .tooltip.show {
+                    opacity: 1;
+                }
+                .tooltip.top {
+                    bottom: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-bottom: 8px;
+                }
+                .tooltip.bottom {
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-top: 8px;
+                }
+                .tooltip.left {
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-right: 8px;
+                }
+                .tooltip.right {
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin-left: 8px;
+                }
+                .tooltip::after {
+                    content: '';
+                    position: absolute;
+                    border: 5px solid transparent;
+                }
+                .tooltip.top::after {
+                    top: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-top-color: #111827;
+                }
+                .tooltip.bottom::after {
+                    bottom: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-bottom-color: #111827;
+                }
+                .tooltip.left::after {
+                    left: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-left-color: #111827;
+                }
+                .tooltip.right::after {
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-right-color: #111827;
+                }
+            </style>
+            <slot></slot>
+            <div class="tooltip ${this.position}">${this.text}</div>
+        `;
     }
-    
-    renderFallback() {
-        try {
-            this.shadowRoot.innerHTML = `
-                <style>
-                    .fallback {
-                        padding: 0.25rem 0.5rem;
-                        background: #f0f0f0;
-                        border-radius: 4px;
-                        font-size: 0.8rem;
-                        color: #666;
-                    }
-                </style>
-                <div class="fallback">Quiz Status</div>
-            `;
-        } catch (fallbackError) {
-            console.error('Error in fallback rendering:', fallbackError);
-        }
+
+    setupEventListeners() {
+        const host = this;
+        const tooltip = this.shadowRoot.querySelector('.tooltip');
+
+        host.addEventListener('mouseenter', () => {
+            tooltip.classList.add('show');
+        });
+
+        host.addEventListener('mouseleave', () => {
+            tooltip.classList.remove('show');
+        });
     }
-    
-    updateStatus(newStatus, score = 0, total = 0) {
-        try {
-            this.setAttribute('status', newStatus);
-            if (score > 0) this.setAttribute('score', score.toString());
-            if (total > 0) this.setAttribute('total', total.toString());
-            this.render();
-        } catch (error) {
-            console.error('Error updating quiz status:', error);
+}
+
+// Loading Spinner Component
+class LoadingSpinner extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    static get observedAttributes() {
+        return ['size', 'color'];
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    get size() {
+        return this.getAttribute('size') || '24';
+    }
+
+    get color() {
+        return this.getAttribute('color') || '#d71920';
+    }
+
+    render() {
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    display: inline-block;
+                }
+                .spinner {
+                    width: ${this.size}px;
+                    height: ${this.size}px;
+                    border: 2px solid #e5e7eb;
+                    border-radius: 50%;
+                    border-top-color: ${this.color};
+                    animation: spin 1s linear infinite;
+                }
+                @keyframes spin {
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+            </style>
+            <div class="spinner"></div>
+        `;
+    }
+}
+
+// Toast Notification Component
+class ToastNotification extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' });
+    }
+
+    static get observedAttributes() {
+        return ['message', 'type', 'duration'];
+    }
+
+    connectedCallback() {
+        this.render();
+        this.show();
+    }
+
+    get message() {
+        return this.getAttribute('message') || '';
+    }
+
+    get type() {
+        return this.getAttribute('type') || 'info';
+    }
+
+    get duration() {
+        return parseInt(this.getAttribute('duration')) || 3000;
+    }
+
+    render() {
+        const icons = {
+            success: '✅',
+            error: '❌',
+            warning: '⚠️',
+            info: 'ℹ️'
+        };
+
+        const colors = {
+            success: '#10b981',
+            error: '#ef4444',
+            warning: '#f59e0b',
+            info: '#3b82f6'
+        };
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                :host {
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    z-index: 1000;
+                }
+                .toast {
+                    background: white;
+                    border: 1px solid #e5e7eb;
+                    border-left: 4px solid ${colors[this.type]};
+                    border-radius: 6px;
+                    padding: 16px;
+                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    min-width: 300px;
+                    transform: translateX(100%);
+                    transition: transform 0.3s ease-in-out;
+                }
+                .toast.show {
+                    transform: translateX(0);
+                }
+                .toast-icon {
+                    font-size: 20px;
+                }
+                .toast-message {
+                    flex: 1;
+                    font-size: 14px;
+                    color: #111827;
+                }
+                .toast-close {
+                    background: none;
+                    border: none;
+                    font-size: 16px;
+                    cursor: pointer;
+                    padding: 0;
+                    color: #6b7280;
+                }
+                .toast-close:hover {
+                    color: #111827;
+                }
+            </style>
+            <div class="toast">
+                <span class="toast-icon">${icons[this.type]}</span>
+                <span class="toast-message">${this.message}</span>
+                <button class="toast-close" onclick="this.closest('cs-toast').remove()">×</button>
+            </div>
+        `;
+    }
+
+    show() {
+        requestAnimationFrame(() => {
+            const toast = this.shadowRoot.querySelector('.toast');
+            toast.classList.add('show');
+        });
+
+        if (this.duration > 0) {
+            setTimeout(() => {
+                this.remove();
+            }, this.duration);
         }
     }
 }
 
-// Register custom elements with error handling
-function registerComponents() {
-    try {
-        // Check if elements are already defined to avoid errors
-        if (!customElements.get('cs-card')) {
-            customElements.define('cs-card', CSCard);
-            console.log('CSCard component registered');
-        }
-        
-        if (!customElements.get('cs-progress-ring')) {
-            customElements.define('cs-progress-ring', CSProgressRing);
-            console.log('CSProgressRing component registered');
-        }
-        
-        if (!customElements.get('cs-quiz-status')) {
-            customElements.define('cs-quiz-status', CSQuizStatus);
-            console.log('CSQuizStatus component registered');
-        }
-        
-        console.log('All components registered successfully');
-    } catch (error) {
-        console.error('Error registering components:', error);
-    }
+// Register all custom elements
+customElements.define('cs-progress-ring', ProgressRing);
+customElements.define('cs-chapter-card', ChapterCard);
+customElements.define('cs-quiz-question', QuizQuestion);
+customElements.define('cs-tooltip', Tooltip);
+customElements.define('cs-loading-spinner', LoadingSpinner);
+customElements.define('cs-toast', ToastNotification);
+
+// Utility functions for creating components programmatically
+export function createProgressRing(percentage, size = 60) {
+    const ring = document.createElement('cs-progress-ring');
+    ring.setAttribute('percentage', percentage);
+    ring.setAttribute('size', size);
+    return ring;
 }
 
-// Initialize components
-if (typeof window !== 'undefined') {
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', registerComponents);
-    } else {
-        registerComponents();
-    }
-    
-    // Make components available globally
-    window.CSCard = CSCard;
-    window.CSProgressRing = CSProgressRing;
-    window.CSQuizStatus = CSQuizStatus;
+export function createChapterCard(chapterId, title, description, progress, category) {
+    const card = document.createElement('cs-chapter-card');
+    card.setAttribute('chapter-id', chapterId);
+    card.setAttribute('title', title);
+    card.setAttribute('description', description);
+    card.setAttribute('progress', progress);
+    card.setAttribute('category', category);
+    return card;
 }
 
-// Export for module usage
-export { CSCard, CSProgressRing, CSQuizStatus };
+export function showToast(message, type = 'info', duration = 3000) {
+    const toast = document.createElement('cs-toast');
+    toast.setAttribute('message', message);
+    toast.setAttribute('type', type);
+    toast.setAttribute('duration', duration);
+    document.body.appendChild(toast);
+    return toast;
+}
 
-console.log('Canadian Style components module loaded successfully');
+export function createLoadingSpinner(size = 24, color = '#d71920') {
+    const spinner = document.createElement('cs-loading-spinner');
+    spinner.setAttribute('size', size);
+    spinner.setAttribute('color', color);
+    return spinner;
+}
+
+// Global utility functions
+window.CS = {
+    showToast,
+    createProgressRing,
+    createChapterCard,
+    createLoadingSpinner
+};
+
+console.log('Canadian Style components loaded successfully');

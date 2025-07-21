@@ -1,142 +1,360 @@
 {
-  "compounds": {
-    "id": "ch02-compounds",
-    "title": "Compound Words",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "Which compound noun is correctly hyphenated?",
-        "options": [
-          { "label": "attorney general", "correct": false },
-          { "label": "attorney-general", "correct": true },
-          { "label": "attorneygeneral", "correct": false },
-          { "label": "attorney—general", "correct": false }
-        ],
-        "rationale": "Compound titles like 'attorney-general' require a hyphen.",
-        "ref": "§2.02"
-      },
-      {
-        "id": "q2",
-        "type": "multi-select",
-        "stem": "Select all correctly written compound nouns:",
-        "options": [
-          { "label": "co-worker", "correct": true },
-          { "label": "database", "correct": true },
-          { "label": "air-conditioning", "correct": false },
-          { "label": "air conditioning", "correct": true }
-        ],
-        "rationale": "Some compounds are written as one word (database), others as two words (air conditioning), and some with hyphens (co-worker)."
-      },
-      {
-        "id": "q3",
-        "type": "fill-blank",
-        "stem": "The ___ effect requires careful study.",
-        "answer": "cause-and-effect",
-        "alternatives": ["cause and effect"],
-        "rationale": "When used as a compound adjective before a noun, use hyphens.",
-        "ref": "§2.04"
-      }
-    ]
+  "chapterId": "ch02",
+  "chapterTitle": "Hyphenation",
+  "sections": {
+    "compound-words": {
+      "id": "compound-words-quiz",
+      "title": "Compound Words and Hyphenation",
+      "questions": [
+        {
+          "id": "cw-01",
+          "type": "mcq",
+          "stem": "When should compound adjectives be hyphenated?",
+          "options": [
+            {"label": "Always, regardless of position", "correct": false},
+            {"label": "When they appear before the noun they modify", "correct": true},
+            {"label": "When they appear after the noun they modify", "correct": false},
+            {"label": "Never, they should always be separate words", "correct": false}
+          ],
+          "rationale": "Compound adjectives are typically hyphenated when they appear before the noun they modify (well-known author) but not when they appear after (the author is well known).",
+          "ref": "§2.02"
+        },
+        {
+          "id": "cw-02",
+          "type": "error-spot",
+          "stem": "Click on the incorrect hyphenation in this sentence:",
+          "text": "The highly-qualified candidate submitted a well written proposal for the state-of-the-art system.",
+          "errors": [
+            {"text": "highly-qualified", "position": 2, "correction": "highly qualified", "reason": "Adverbs ending in -ly are not hyphenated with adjectives"},
+            {"text": "well written", "position": 8, "correction": "well-written", "reason": "Compound adjectives before nouns should be hyphenated"}
+          ],
+          "rationale": "Don't hyphenate adverbs ending in -ly, but do hyphenate compound adjectives before nouns.",
+          "ref": "§2.02"
+        },
+        {
+          "id": "cw-03",
+          "type": "fill-blank",
+          "stem": "Complete the number compounds: __________ delegates attended the __________ meeting to discuss the __________ budget.",
+          "blanks": [
+            {"id": "blank1", "answer": ["twenty-one", "thirty-five", "forty-seven", "fifty-nine"], "position": 1},
+            {"id": "blank2", "answer": ["two-hour", "three-hour", "half-hour"], "position": 2},
+            {"id": "blank3", "answer": ["multi-million", "multi-billion"], "position": 3}
+          ],
+          "rationale": "Numbers twenty-one to ninety-nine are hyphenated, as are time period adjectives and numerical prefixes.",
+          "ref": "§2.02"
+        },
+        {
+          "id": "cw-04",
+          "type": "matching",
+          "stem": "Match the compound type with the correct example:",
+          "pairs": [
+            {"left": "Family relationship", "right": "mother-in-law"},
+            {"left": "Fraction as adjective", "right": "two-thirds majority"},
+            {"left": "Job title", "right": "editor-in-chief"},
+            {"left": "Time expression", "right": "30-minute presentation"}
+          ],
+          "rationale": "Different types of compounds follow specific hyphenation patterns.",
+          "ref": "§2.02"
+        },
+        {
+          "id": "cw-05",
+          "type": "drag-drop",
+          "stem": "Arrange these sentences from correct to incorrect hyphenation:",
+          "items": [
+            {"id": "item1", "text": "The well-known author wrote a comprehensive book.", "order": 1},
+            {"id": "item2", "text": "The author is well known for comprehensive books.", "order": 2},
+            {"id": "item3", "text": "The well known author wrote a comprehensive book.", "order": 3},
+            {"id": "item4", "text": "The author is well-known for comprehensive books.", "order": 4}
+          ],
+          "rationale": "Compound adjectives are hyphenated before nouns but not after them.",
+          "ref": "§2.02"
+        }
+      ]
+    },
+    "prefixes-suffixes": {
+      "id": "prefixes-suffixes-quiz",
+      "title": "Prefixes and Suffixes",
+      "questions": [
+        {
+          "id": "ps-01",
+          "type": "mcq",
+          "stem": "Which prefix always requires a hyphen?",
+          "options": [
+            {"label": "anti-", "correct": false},
+            {"label": "pre-", "correct": false},
+            {"label": "self-", "correct": true},
+            {"label": "co-", "correct": false}
+          ],
+          "rationale": "The prefix 'self-' always requires a hyphen: self-control, self-service, self-evident.",
+          "ref": "§2.03"
+        },
+        {
+          "id": "ps-02",
+          "type": "fill-blank",
+          "stem": "Complete these prefix combinations: __________ (against Canada), __________ (former president), __________ (before MBA), __________ (personal control)",
+          "blanks": [
+            {"id": "blank1", "answer": ["anti-Canadian"], "position": 1},
+            {"id": "blank2", "answer": ["ex-president"], "position": 2},
+            {"id": "blank3", "answer": ["pre-MBA"], "position": 3},
+            {"id": "blank4", "answer": ["self-control"], "position": 4}
+          ],
+          "rationale": "Hyphens are used before proper nouns, with 'ex-' meaning former, before capitals, and always with 'self-'.",
+          "ref": "§2.03"
+        },
+        {
+          "id": "ps-03",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly formatted word:",
+          "text": "The nonprofit organization promoted antiviolent measures through self control and co-operation.",
+          "errors": [
+            {"text": "self control", "position": 8, "correction": "self-control", "reason": "self- prefix always needs hyphen"},
+            {"text": "co-operation", "position": 10, "correction": "cooperation", "reason": "co- prefix usually doesn't need hyphen unless avoiding confusion"}
+          ],
+          "rationale": "Self- always takes a hyphen, while co- usually doesn't need one in modern usage.",
+          "ref": "§2.03"
+        },
+        {
+          "id": "ps-04",
+          "type": "matching",
+          "stem": "Match the prefix rule with the correct example:",
+          "pairs": [
+            {"left": "Before proper noun", "right": "anti-Canadian"},
+            {"left": "To avoid confusion", "right": "re-cover vs recover"},
+            {"left": "With capital letters", "right": "non-EU"},
+            {"left": "Double vowels", "right": "anti-inflammatory"}
+          ],
+          "rationale": "Different situations require hyphenation with prefixes for clarity and readability.",
+          "ref": "§2.03"
+        },
+        {
+          "id": "ps-05",
+          "type": "mcq",
+          "stem": "Which suffix combination requires a hyphen?",
+          "options": [
+            {"label": "president + elect", "correct": true},
+            {"label": "child + hood", "correct": false},
+            {"label": "govern + ment", "correct": false},
+            {"label": "friend + ship", "correct": false}
+          ],
+          "rationale": "The suffix '-elect' requires a hyphen: president-elect, governor-elect.",
+          "ref": "§2.03"
+        }
+      ]
+    },
+    "word-division": {
+      "id": "word-division-quiz",
+      "title": "Word Division",
+      "questions": [
+        {
+          "id": "wd-01",
+          "type": "mcq",
+          "stem": "What is the basic principle for word division?",
+          "options": [
+            {"label": "Divide words anywhere to fit the line", "correct": false},
+            {"label": "Divide between syllables following dictionary breaks", "correct": true},
+            {"label": "Never divide words under any circumstances", "correct": false},
+            {"label": "Only divide compound words", "correct": false}
+          ],
+          "rationale": "Words should be divided between syllables according to dictionary syllable breaks.",
+          "ref": "§2.04"
+        },
+        {
+          "id": "wd-02",
+          "type": "fill-blank",
+          "stem": "Show the correct division of these words: government = __________, management = __________, representative = __________",
+          "blanks": [
+            {"id": "blank1", "answer": ["gov-ern-ment"], "position": 1},
+            {"id": "blank2", "answer": ["man-age-ment"], "position": 2},
+            {"id": "blank3", "answer": ["rep-re-sen-ta-tive"], "position": 3}
+          ],
+          "rationale": "These divisions follow syllable breaks and keep prefixes and suffixes intact when possible.",
+          "ref": "§2.04"
+        },
+        {
+          "id": "wd-03",
+          "type": "error-spot",
+          "stem": "Click on the incorrect word division:",
+          "text": "The ad-ministration will man-age the pro-gram through co-operation.",
+          "errors": [
+            {"text": "ad-ministration", "position": 2, "correction": "ad-min-is-tra-tion", "reason": "Should divide at all proper syllable breaks"},
+            {"text": "pro-gram", "position": 8, "correction": "pro-gram", "reason": "This division is actually acceptable"}
+          ],
+          "rationale": "Word divisions should follow complete syllable patterns, not just convenient breaks.",
+          "ref": "§2.04"
+        },
+        {
+          "id": "wd-04",
+          "type": "matching",
+          "stem": "Match the division rule with the example:",
+          "pairs": [
+            {"left": "Keep prefixes intact", "right": "mis-understand"},
+            {"left": "Keep suffixes intact", "right": "friend-ship"},
+            {"left": "Divide compound words", "right": "mother-in-law"},
+            {"left": "Between double consonants", "right": "com-mit-tee"}
+          ],
+          "rationale": "Different types of word structures have specific division rules.",
+          "ref": "§2.04"
+        },
+        {
+          "id": "wd-05",
+          "type": "mcq",
+          "stem": "Which should never be divided?",
+          "options": [
+            {"label": "Long compound words", "correct": false},
+            {"label": "Abbreviations and acronyms", "correct": true},
+            {"label": "Government department names", "correct": false},
+            {"label": "Technical terms", "correct": false}
+          ],
+          "rationale": "Abbreviations and acronyms should never be divided as they would lose their meaning.",
+          "ref": "§2.04"
+        }
+      ]
+    },
+    "special-cases": {
+      "id": "special-cases-quiz",
+      "title": "Special Hyphenation Cases",
+      "questions": [
+        {
+          "id": "sc-01",
+          "type": "mcq",
+          "stem": "How should ages be written when used as adjectives?",
+          "options": [
+            {"label": "30 year old minister", "correct": false},
+            {"label": "30-year-old minister", "correct": true},
+            {"label": "30-year old minister", "correct": false},
+            {"label": "thirty year old minister", "correct": false}
+          ],
+          "rationale": "Ages used as adjectives should be fully hyphenated: 30-year-old minister.",
+          "ref": "§2.05"
+        },
+        {
+          "id": "sc-02",
+          "type": "fill-blank",
+          "stem": "Complete the time expressions: a __________ meeting (10 minutes), a __________ project (3 years), the __________ term (long duration)",
+          "blanks": [
+            {"id": "blank1", "answer": ["10-minute"], "position": 1},
+            {"id": "blank2", "answer": ["3-year", "three-year"], "position": 2},
+            {"id": "blank3", "answer": ["long-term"], "position": 3}
+          ],
+          "rationale": "Time expressions used as adjectives are hyphenated.",
+          "ref": "§2.05"
+        },
+        {
+          "id": "sc-03",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly formatted term:",
+          "text": "The policy making process involves decision-making by the long term committee.",
+          "errors": [
+            {"text": "policy making", "position": 2, "correction": "policy-making", "reason": "When used as adjective before noun, should be hyphenated"},
+            {"text": "long term", "position": 10, "correction": "long-term", "reason": "When used as adjective, should be hyphenated"}
+          ],
+          "rationale": "These compound adjectives should be hyphenated when modifying nouns.",
+          "ref": "§2.05"
+        },
+        {
+          "id": "sc-04",
+          "type": "matching",
+          "stem": "Match the color term with its correct usage:",
+          "pairs": [
+            {"left": "Two colors", "right": "blue-green water"},
+            {"left": "Color + modifier", "right": "light-blue shirt"},
+            {"left": "Color + noun", "right": "navy-blue suit"},
+            {"left": "Regional term", "right": "French-Canadian culture"}
+          ],
+          "rationale": "Different color and cultural combinations follow specific hyphenation patterns.",
+          "ref": "§2.05"
+        },
+        {
+          "id": "sc-05",
+          "type": "mcq",
+          "stem": "Which technology term follows modern usage?",
+          "options": [
+            {"label": "e-mail", "correct": false},
+            {"label": "email", "correct": true},
+            {"label": "Email", "correct": false},
+            {"label": "E-mail", "correct": false}
+          ],
+          "rationale": "Modern usage has evolved from 'e-mail' to 'email' (closed form).",
+          "ref": "§2.05"
+        }
+      ]
+    },
+    "technical-terms": {
+      "id": "technical-terms-quiz",
+      "title": "Technical Terms and Specialized Hyphenation",
+      "questions": [
+        {
+          "id": "tt-01",
+          "type": "mcq",
+          "stem": "How should scientific measurement compounds be written?",
+          "options": [
+            {"label": "kilowatt hour", "correct": false},
+            {"label": "kilowatt-hour", "correct": true},
+            {"label": "kilowatthour", "correct": false},
+            {"label": "kilo-watt-hour", "correct": false}
+          ],
+          "rationale": "Scientific measurement compounds like kilowatt-hour and person-year are hyphenated.",
+          "ref": "§2.06"
+        },
+        {
+          "id": "tt-02",
+          "type": "fill-blank",
+          "stem": "Complete these technical terms: __________ analysis (cost vs benefit), __________ research (reviewed by peers), __________ monitoring (happening now)",
+          "blanks": [
+            {"id": "blank1", "answer": ["cost-benefit"], "position": 1},
+            {"id": "blank2", "answer": ["peer-reviewed"], "position": 2},
+            {"id": "blank3", "answer": ["real-time"], "position": 3}
+          ],
+          "rationale": "These technical compound adjectives are hyphenated when used before nouns.",
+          "ref": "§2.06"
+        },
+        {
+          "id": "tt-03",
+          "type": "matching",
+          "stem": "Match the technical field with its hyphenation example:",
+          "pairs": [
+            {"left": "IT/Technology", "right": "client-server architecture"},
+            {"left": "Environmental", "right": "greenhouse-gas emissions"},
+            {"left": "Financial", "right": "debt-to-income ratio"},
+            {"left": "Legal", "right": "cease-and-desist order"}
+          ],
+          "rationale": "Different technical fields have established hyphenation conventions.",
+          "ref": "§2.06"
+        },
+        {
+          "id": "tt-04",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly formatted technical term:",
+          "text": "The evidence based policy used real time data for climate change adaptation measures.",
+          "errors": [
+            {"text": "evidence based", "position": 2, "correction": "evidence-based", "reason": "Technical compound adjective should be hyphenated"},
+            {"text": "real time", "position": 6, "correction": "real-time", "reason": "Technical modifier should be hyphenated"},
+            {"text": "climate change", "position": 9, "correction": "climate-change", "reason": "When used as adjective modifier, should be hyphenated"}
+          ],
+          "rationale": "Technical compound adjectives should be hyphenated when modifying nouns.",
+          "ref": "§2.06"
+        },
+        {
+          "id": "tt-05",
+          "type": "drag-drop",
+          "stem": "Arrange these IT terms from correctly to incorrectly hyphenated:",
+          "items": [
+            {"id": "item1", "text": "end-to-end encryption", "order": 1},
+            {"id": "item2", "text": "user-friendly interface", "order": 2},
+            {"id": "item3", "text": "multi user environment", "order": 3},
+            {"id": "item4", "text": "plug and play device", "order": 4}
+          ],
+          "rationale": "Technical compounds should be hyphenated when used as adjectives: multi-user, plug-and-play.",
+          "ref": "§2.06"
+        }
+      ]
+    }
   },
-  "adjectives": {
-    "id": "ch02-adjectives",
-    "title": "Compound Adjectives",
-    "questions": [
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "Which sentence uses compound adjectives correctly?",
-        "options": [
-          { "label": "The well known author spoke.", "correct": false },
-          { "label": "The well-known author spoke.", "correct": true },
-          { "label": "The author is well-known.", "correct": false },
-          { "label": "The author is well known.", "correct": true }
-        ],
-        "rationale": "Hyphenate compound adjectives before a noun, but not after.",
-        "ref": "§2.04"
-      },
-      {
-        "id": "q5",
-        "type": "error-spot",
-        "stem": "Click on the hyphenation error:",
-        "text": "The twenty five year old building needs renovation",
-        "errorIndex": 1,
-        "rationale": "Should be 'twenty-five-year-old' when used as a compound adjective."
-      },
-      {
-        "id": "q6",
-        "type": "drag-drop",
-        "stem": "Order these from most to least hyphens needed:",
-        "options": [
-          { "label": "mother-in-law's house", "order": 1 },
-          { "label": "up-to-date information", "order": 2 },
-          { "label": "highly qualified candidate", "order": 3 }
-        ],
-        "rationale": "Adverbs ending in -ly don't require hyphens in compounds."
-      }
-    ]
-  },
-  "prefixes": {
-    "id": "ch02-prefixes",
-    "title": "Prefixes and Hyphenation",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "Which word with a prefix is correctly written?",
-        "options": [
-          { "label": "co-operate", "correct": false },
-          { "label": "cooperate", "correct": true },
-          { "label": "re-examine", "correct": true },
-          { "label": "reexamine", "correct": false }
-        ],
-        "rationale": "Use a hyphen with prefixes before a word starting with the same vowel.",
-        "ref": "§2.07"
-      },
-      {
-        "id": "q8",
-        "type": "multi-select",
-        "stem": "Which require hyphens after the prefix? (Select all)",
-        "options": [
-          { "label": "ex-president", "correct": true },
-          { "label": "self-evident", "correct": true },
-          { "label": "predetermined", "correct": false },
-          { "label": "non-Canadian", "correct": true }
-        ],
-        "rationale": "Ex-, self-, and prefixes before proper nouns require hyphens."
-      }
-    ]
-  },
-  "division": {
-    "id": "ch02-division",
-    "title": "Word Division",
-    "questions": [
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "Where should 'Canadian' be divided at a line break?",
-        "options": [
-          { "label": "Can-adian", "correct": false },
-          { "label": "Cana-dian", "correct": true },
-          { "label": "Canadi-an", "correct": false },
-          { "label": "Cannot be divided", "correct": false }
-        ],
-        "rationale": "Divide between syllables: Ca-na-di-an.",
-        "ref": "§2.17"
-      },
-      {
-        "id": "q10",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "pre + eminent", "back": "pre-eminent" },
-          { "front": "co + ordinate", "back": "coordinate" },
-          { "front": "re + enter", "back": "re-enter" },
-          { "front": "multi + cultural", "back": "multicultural" },
-          { "front": "anti + inflammatory", "back": "anti-inflammatory" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 25,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "35-45 minutes",
+    "passingScore": 80
   }
 }

@@ -8,55 +8,111 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 2: Hyphenation</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 2
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">2</div>
+                <div>
+                    <h1>Hyphenation</h1>
+                    <p>Master hyphenation, compounding, and word division in Canadian writing</p>
                 </div>
-                <span class="progress-text">Progress</span>
             </div>
-        </header>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">2.01 Introduction</a>
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">2.01 Introduction</a>
                 <a href="#compound-words" class="tab-link" data-section="compound-words">2.02 Compound Words</a>
-                <a href="#prefixes" class="tab-link" data-section="prefixes">2.07 Prefixes</a>
-                <a href="#word-division" class="tab-link" data-section="word-division">2.13 Word Division</a>
-                <a href="#special-cases" class="tab-link" data-section="special-cases">2.15 Special Cases</a>
-                <a href="#technical-terms" class="tab-link" data-section="technical-terms">2.17 Technical Terms</a>
+                <a href="#prefixes-suffixes" class="tab-link" data-section="prefixes-suffixes">2.03 Prefixes & Suffixes</a>
+                <a href="#word-division" class="tab-link" data-section="word-division">2.04 Word Division</a>
+                <a href="#special-cases" class="tab-link" data-section="special-cases">2.05 Special Cases</a>
+                <a href="#technical-terms" class="tab-link" data-section="technical-terms">2.06 Technical Terms</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 2.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>2.01 Introduction to Hyphenation</h2>
+                    <h2>2.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Hyphenation rules help us combine words clearly and divide words properly at line breaks. This chapter covers compound words, prefixes, and word division guidelines following Canadian government standards.</p>
+                <div class="lesson-content">
+                    <p>Hyphenation is one of the most challenging aspects of English writing. The hyphen serves multiple purposes: joining compound words, connecting prefixes and suffixes, and dividing words at line breaks.</p>
                     
-                    <div class="key-principles">
-                        <h3>Key Principles</h3>
+                    <div class="key-principle">
+                        <h3>Key Principle</h3>
+                        <p>Hyphenation practices evolve over time. Words often progress from hyphenated compounds to closed compounds. When in doubt, consult a current Canadian dictionary.</p>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Main Uses of Hyphens</h4>
                         <ul>
-                            <li>Hyphens join words to create new meanings</li>
-                            <li>They prevent misreading and ambiguity</li>
-                            <li>Usage evolves from hyphenated to one word</li>
-                            <li>Consult current dictionaries for guidance</li>
+                            <li><strong>Compound adjectives:</strong> well-known author, state-of-the-art technology</li>
+                            <li><strong>Compound nouns:</strong> co-worker, mother-in-law, twenty-one</li>
+                            <li><strong>Prefixes:</strong> ex-president, self-control, anti-government</li>
+                            <li><strong>Word division:</strong> Breaking words at syllable boundaries</li>
+                            <li><strong>Clarity:</strong> Avoiding ambiguity in meaning</li>
                         </ul>
                     </div>
+                    
+                    <div class="examples-box">
+                        <h4>Evolution of Compound Words</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stage 1: Separate</th>
+                                    <th>Stage 2: Hyphenated</th>
+                                    <th>Stage 3: Closed</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>data base</td>
+                                    <td>data-base</td>
+                                    <td>database</td>
+                                </tr>
+                                <tr>
+                                    <td>web site</td>
+                                    <td>web-site</td>
+                                    <td>website</td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>e-mail</td>
+                                    <td>email</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Consistency is Key</h4>
+                        <p>Whatever hyphenation choices you make, maintain consistency throughout your document. Create a style sheet for recurring terms.</p>
+                    </div>
                 </div>
-                
-                <!-- Quiz Panel for Introduction -->
-                <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
@@ -65,47 +121,100 @@
                 </div>
             </section>
 
-            <!-- Compound Words Section -->
-            <section class="content-section" id="compound-words" style="display: none;">
+            <!-- Section 2.02: Compound Words -->
+            <section class="content-section" id="compound-words">
                 <div class="section-header">
                     <h2>2.02 Compound Words</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Compound words are formed by joining two or more words to create a new meaning. The treatment of compounds depends on their grammatical function and established usage.</p>
+                    
                     <div class="rule-box">
-                        <h4>Basic Rules</h4>
-                        <p>Compound words can be:</p>
+                        <h3>Compound Adjectives</h3>
                         <ul>
-                            <li><strong>Open:</strong> post office, prime minister</li>
-                            <li><strong>Hyphenated:</strong> part-time, twenty-one</li>
-                            <li><strong>Closed:</strong> nationwide, bookkeeper</li>
+                            <li><strong>Before a noun:</strong> Usually hyphenated</li>
+                            <li><strong>After a noun:</strong> Usually not hyphenated</li>
+                            <li><strong>With adverbs ending in -ly:</strong> No hyphen needed</li>
+                            <li><strong>Permanent compounds:</strong> Follow dictionary</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Adjective Compounds</h4>
+                    <div class="examples-box">
+                        <h4>Compound Adjectives</h4>
+                        <div class="example-item good">
+                            <p><strong>Before noun (hyphenated):</strong></p>
                             <ul>
-                                <li>well-known author</li>
-                                <li>high-speed train</li>
-                                <li>part-time worker</li>
-                                <li>up-to-date information</li>
+                                <li>a well-known author</li>
+                                <li>state-of-the-art equipment</li>
+                                <li>user-friendly software</li>
+                                <li>high-speed internet</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>Numbers</h4>
+                            <p><strong>After noun (not hyphenated):</strong></p>
                             <ul>
-                                <li>twenty-one to ninety-nine</li>
-                                <li>one-third, two-thirds</li>
-                                <li>twenty-first century</li>
-                                <li>fifty-fifty chance</li>
+                                <li>The author is well known</li>
+                                <li>The equipment is state of the art</li>
+                                <li>The software is user friendly</li>
+                                <li>The internet is high speed</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>With -ly adverbs (no hyphen):</strong></p>
+                            <ul>
+                                <li>highly qualified candidates</li>
+                                <li>recently published book</li>
+                                <li>carefully planned strategy</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Compound Nouns</h3>
+                        <ul>
+                            <li><strong>Family relationships:</strong> mother-in-law, sister-in-law</li>
+                            <li><strong>Numbers twenty-one to ninety-nine:</strong> All hyphenated</li>
+                            <li><strong>Fractions:</strong> one-third, two-fifths (when used as adjectives)</li>
+                            <li><strong>Job titles:</strong> editor-in-chief, commander-in-chief</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Number Compounds</h4>
+                        <div class="example-item good">
+                            <p><strong>Numbers (hyphenated):</strong></p>
+                            <ul>
+                                <li>twenty-one delegates</li>
+                                <li>thirty-five percent</li>
+                                <li>sixty-seven votes</li>
+                                <li>ninety-nine problems</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Fractions as adjectives:</strong></p>
+                            <ul>
+                                <li>a two-thirds majority</li>
+                                <li>one-half cup</li>
+                                <li>three-quarter time</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Fractions as nouns (not hyphenated):</strong></p>
+                            <ul>
+                                <li>Two thirds of the members voted</li>
+                                <li>One half was sufficient</li>
+                                <li>Three quarters agreed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Memory Aid</h4>
+                        <p>If you can substitute "and" for the hyphen and the meaning stays the same, you probably need the hyphen: "a black-and-white photo" = "a black and white photo".</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Compound Words -->
                 <div class="quiz-panel" id="quiz-compound-words"></div>
                 
                 <div class="section-footer">
@@ -115,101 +224,213 @@
                 </div>
             </section>
 
-            <!-- Prefixes Section -->
-            <section class="content-section" id="prefixes" style="display: none;">
+            <!-- Section 2.03: Prefixes & Suffixes -->
+            <section class="content-section" id="prefixes-suffixes">
                 <div class="section-header">
-                    <h2>2.07 Prefixes</h2>
+                    <h2>2.03 Prefixes & Suffixes</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Most prefixes are joined directly to the root word without a hyphen, but certain situations require hyphenation for clarity or pronunciation.</p>
+                    
                     <div class="rule-box">
-                        <h4>Hyphenate With Prefixes When:</h4>
+                        <h3>When to Hyphenate Prefixes</h3>
                         <ul>
-                            <li>Before proper nouns: <em>anti-Canadian, pro-European</em></li>
-                            <li>Before capitals: <em>pre-Confederation, post-WWII</em></li>
-                            <li>With ex- meaning former: <em>ex-president, ex-wife</em></li>
-                            <li>To avoid confusion: <em>re-cover vs. recover</em></li>
+                            <li><strong>Before proper nouns:</strong> anti-Canadian, pro-American</li>
+                            <li><strong>Before capital letters:</strong> pre-MBA, non-EU</li>
+                            <li><strong>To avoid doubling vowels:</strong> anti-inflammatory, co-operate</li>
+                            <li><strong>With self- prefix:</strong> self-control, self-evident</li>
+                            <li><strong>With ex- meaning former:</strong> ex-president, ex-wife</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Common Prefixes</h4>
+                    <div class="examples-box">
+                        <h4>Common Prefixes</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Prefix</th>
+                                    <th>Usually No Hyphen</th>
+                                    <th>Hyphen Required</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>anti-</td>
+                                    <td>antibiotic, antisocial</td>
+                                    <td>anti-Canadian, anti-inflammatory</td>
+                                </tr>
+                                <tr>
+                                    <td>co-</td>
+                                    <td>cooperate, coordinate</td>
+                                    <td>co-worker, co-operate (optional)</td>
+                                </tr>
+                                <tr>
+                                    <td>pre-</td>
+                                    <td>prewar, predetermined</td>
+                                    <td>pre-Confederation, pre-MBA</td>
+                                </tr>
+                                <tr>
+                                    <td>re-</td>
+                                    <td>rewrite, reorganize</td>
+                                    <td>re-enter, re-elect</td>
+                                </tr>
+                                <tr>
+                                    <td>non-</td>
+                                    <td>nonviolent, nonprofit</td>
+                                    <td>non-Canadian, non-EU</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Special Prefix Cases</h3>
+                        <ul>
+                            <li><strong>self-:</strong> Always hyphenated (self-control, self-service)</li>
+                            <li><strong>ex-:</strong> Hyphenated when meaning "former" (ex-minister)</li>
+                            <li><strong>all-:</strong> Usually hyphenated (all-Canadian, all-purpose)</li>
+                            <li><strong>well-:</strong> Hyphenated before nouns (well-being, well-known)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Avoiding Ambiguity</h4>
+                        <div class="example-item good">
+                            <p><strong>Clear with hyphen:</strong></p>
                             <ul>
-                                <li><strong>anti-:</strong> anti-war, anti-virus</li>
-                                <li><strong>co-:</strong> co-worker, co-operate</li>
-                                <li><strong>ex-:</strong> ex-minister, ex-employee</li>
-                                <li><strong>non-:</strong> non-profit, non-violent</li>
-                                <li><strong>pre-:</strong> pre-school, pre-war</li>
-                                <li><strong>re-:</strong> re-examine, re-enter</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>No Hyphen Needed</h4>
-                            <ul>
-                                <li>multicoloured</li>
-                                <li>overestimate</li>
-                                <li>underemployed</li>
-                                <li>international</li>
-                                <li>extraordinary</li>
-                                <li>semiconductor</li>
+                                <li>re-cover (cover again) vs. recover (get well)</li>
+                                <li>re-creation (creating again) vs. recreation (leisure)</li>
+                                <li>co-op (cooperative) vs. coop (chicken house)</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Suffixes</h3>
+                        <ul>
+                            <li><strong>Generally no hyphen:</strong> Most suffixes join directly</li>
+                            <li><strong>Exception -elect:</strong> president-elect, governor-elect</li>
+                            <li><strong>Exception -free and -like:</strong> sugar-free, child-like</li>
+                            <li><strong>With numbers:</strong> 20-something, 40-year-old</li>
+                        </ul>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Prefixes -->
-                <div class="quiz-panel" id="quiz-prefixes"></div>
+                <div class="quiz-panel" id="quiz-prefixes-suffixes"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('prefixes')">
+                    <button class="btn btn-primary" onclick="completeSection('prefixes-suffixes')">
                         Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <!-- Word Division Section -->
-            <section class="content-section" id="word-division" style="display: none;">
+            <!-- Section 2.04: Word Division -->
+            <section class="content-section" id="word-division">
                 <div class="section-header">
-                    <h2>2.13 Word Division</h2>
+                    <h2>2.04 Word Division</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Word division occurs when a word must be broken at the end of a line. While modern word processing reduces this need, understanding proper division remains important for typesetting and justified text.</p>
+                    
                     <div class="rule-box">
-                        <h4>Basic Rules for Line Breaks</h4>
+                        <h3>Basic Rules for Word Division</h3>
                         <ul>
-                            <li>Divide between syllables</li>
-                            <li>Keep at least 2 letters on each line</li>
-                            <li>Don't divide one-syllable words</li>
-                            <li>Avoid dividing proper names</li>
+                            <li><strong>Divide between syllables:</strong> Use dictionary syllable breaks</li>
+                            <li><strong>Keep prefixes intact:</strong> mis-under-stand (not mi-sunder-stand)</li>
+                            <li><strong>Keep suffixes intact:</strong> friend-ship (not friends-hip)</li>
+                            <li><strong>Divide compound words at the hyphen:</strong> mother-in-law</li>
+                            <li><strong>Leave at least 3 characters:</strong> Don't divide very short words</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Correct Divisions</h4>
+                    <div class="examples-box">
+                        <h4>Correct Word Divisions</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct divisions:</strong></p>
                             <ul>
                                 <li>gov-ern-ment</li>
-                                <li>Cana-dian</li>
-                                <li>admin-is-tra-tion</li>
-                                <li>impor-tant</li>
+                                <li>man-age-ment</li>
+                                <li>rep-re-sen-ta-tive</li>
+                                <li>un-der-stand-ing</li>
+                                <li>co-op-er-a-tion</li>
                             </ul>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Avoid These</h4>
+                        <div class="example-item bad">
+                            <p><strong>✗ Incorrect divisions:</strong></p>
                             <ul>
-                                <li>❌ a-bout (too few letters)</li>
-                                <li>❌ through (one syllable)</li>
-                                <li>❌ Otta-wa (proper name)</li>
-                                <li>❌ e-mail (too few letters)</li>
+                                <li>go-vernment (breaks prefix)</li>
+                                <li>manage-ment (breaks suffix)</li>
+                                <li>rep-resent-ative (awkward break)</li>
+                                <li>a-bout (too few letters)</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Avoid These Divisions</h4>
+                        <ul>
+                            <li><strong>Single letters:</strong> Don't leave or carry single letters (a-bout, man-y)</li>
+                            <li><strong>Two letters:</strong> Avoid divisions leaving only two letters (al-so, of-ten)</li>
+                            <li><strong>Proper names:</strong> Generally don't divide personal or place names</li>
+                            <li><strong>Numbers and dates:</strong> Keep intact when possible</li>
+                            <li><strong>Abbreviations:</strong> Never divide abbreviations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Special Considerations</h3>
+                        <ul>
+                            <li><strong>Double consonants:</strong> Usually divide between them (com-mit-tee)</li>
+                            <li><strong>Vowel combinations:</strong> Don't separate diphthongs (rea-son, not re-ason)</li>
+                            <li><strong>-ing endings:</strong> Usually take the whole suffix (work-ing)</li>
+                            <li><strong>Silent -e:</strong> Usually goes with preceding syllable (hous-es)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government Terms</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Word</th>
+                                    <th>Correct Division</th>
+                                    <th>Syllables</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>administration</td>
+                                    <td>ad-min-is-tra-tion</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>parliamentary</td>
+                                    <td>par-lia-men-tary</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>constitutional</td>
+                                    <td>con-sti-tu-tion-al</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>jurisdiction</td>
+                                    <td>ju-ris-dic-tion</td>
+                                    <td>4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Modern Practice</h4>
+                        <p>With modern word processing, avoid word division when possible. Use it only when necessary for justified text or narrow columns, and always check syllable breaks in a dictionary.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Word Division -->
                 <div class="quiz-panel" id="quiz-word-division"></div>
                 
                 <div class="section-footer">
@@ -219,42 +440,128 @@
                 </div>
             </section>
 
-            <!-- Special Cases Section -->
-            <section class="content-section" id="special-cases" style="display: none;">
+            <!-- Section 2.05: Special Cases -->
+            <section class="content-section" id="special-cases">
                 <div class="section-header">
-                    <h2>2.15 Special Cases</h2>
+                    <h2>2.05 Special Cases</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Certain hyphenation situations require special attention due to evolving usage, ambiguity concerns, or established conventions in Canadian government writing.</p>
+                    
                     <div class="rule-box">
-                        <h4>Special Hyphenation Rules</h4>
-                        <p>Some words require special attention beyond the basic rules.</p>
+                        <h3>Age and Time Expressions</h3>
+                        <ul>
+                            <li><strong>Ages as adjectives:</strong> 30-year-old minister, 5-year-old child</li>
+                            <li><strong>Ages as nouns:</strong> a 30 year old, the 5 year old</li>
+                            <li><strong>Time periods:</strong> 10-minute break, 3-hour meeting</li>
+                            <li><strong>Academic years:</strong> 2023-24 school year, 2023-2024 budget</li>
+                        </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Suspended Hyphens</h4>
-                            <p>When several compounds share a common element:</p>
+                    <div class="examples-box">
+                        <h4>Age and Time Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>As adjectives (hyphenated):</strong></p>
                             <ul>
-                                <li>two- and three-year terms</li>
-                                <li>pre- and post-war periods</li>
-                                <li>first-, second-, and third-class mail</li>
+                                <li>The 45-year-old prime minister addressed the nation</li>
+                                <li>A 10-minute presentation is scheduled</li>
+                                <li>The 3-day conference was successful</li>
+                                <li>A 20-year commitment to climate action</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>Temporary Compounds</h4>
-                            <p>Created for specific contexts:</p>
+                            <p><strong>As nouns (not hyphenated):</strong></p>
                             <ul>
-                                <li>state-of-the-art technology</li>
-                                <li>matter-of-fact approach</li>
-                                <li>behind-the-scenes work</li>
+                                <li>The prime minister, a 45 year old, addressed the nation</li>
+                                <li>The presentation lasted 10 minutes</li>
+                                <li>The conference ran for 3 days</li>
+                                <li>The commitment spans 20 years</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Colour Compounds</h3>
+                        <ul>
+                            <li><strong>Two colours:</strong> blue-green water, red-orange sunset</li>
+                            <li><strong>Colour + noun:</strong> navy-blue suit, sky-blue eyes</li>
+                            <li><strong>Colour modifiers:</strong> light-blue shirt, dark-green forest</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Direction and Location</h4>
+                        <div class="example-item good">
+                            <p><strong>Compound directions (hyphenated):</strong></p>
+                            <ul>
+                                <li>north-south highway</li>
+                                <li>east-west trade corridor</li>
+                                <li>northeast-southwest diagonal</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Regional terms:</strong></p>
+                            <ul>
+                                <li>Atlantic Canada (no hyphen)</li>
+                                <li>Western Canada (no hyphen)</li>
+                                <li>Central Canada (no hyphen)</li>
+                                <li>French-Canadian culture (hyphenated adjective)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Technology and Modern Terms</h3>
+                        <ul>
+                            <li><strong>Email:</strong> email (closed, no hyphen) - modern usage</li>
+                            <li><strong>Internet terms:</strong> website, online, smartphone</li>
+                            <li><strong>E-prefixes:</strong> e-commerce, e-government (still hyphenated)</li>
+                            <li><strong>Cyber terms:</strong> cybersecurity (closed), cyber-attack (hyphenated)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government-Specific Terms</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Correct Form</th>
+                                    <th>Usage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Policy making</td>
+                                    <td>policy-making (adj.), policy making (noun)</td>
+                                    <td>policy-making process, engaged in policy making</td>
+                                </tr>
+                                <tr>
+                                    <td>Decision making</td>
+                                    <td>decision-making (adj.), decision making (noun)</td>
+                                    <td>decision-making authority, involved in decision making</td>
+                                </tr>
+                                <tr>
+                                    <td>Cost effective</td>
+                                    <td>cost-effective (adj.), cost effective (pred.)</td>
+                                    <td>cost-effective solution, the solution is cost effective</td>
+                                </tr>
+                                <tr>
+                                    <td>Long term</td>
+                                    <td>long-term (adj.), long term (noun)</td>
+                                    <td>long-term planning, planning for the long term</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Evolving Usage</h4>
+                        <p>Technology terms evolve rapidly. What was "e-mail" is now "email." Check current government style guides and dictionaries for the most up-to-date conventions.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Special Cases -->
                 <div class="quiz-panel" id="quiz-special-cases"></div>
                 
                 <div class="section-footer">
@@ -264,52 +571,154 @@
                 </div>
             </section>
 
-            <!-- Technical Terms Section -->
-            <section class="content-section" id="technical-terms" style="display: none;">
+            <!-- Section 2.06: Technical Terms -->
+            <section class="content-section" id="technical-terms">
                 <div class="section-header">
-                    <h2>2.17 Technical Terms</h2>
+                    <h2>2.06 Technical Terms</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Technical, scientific, and specialized terms often have specific hyphenation conventions. Government writing frequently includes technical content that requires precise formatting.</p>
+                    
                     <div class="rule-box">
-                        <h4>Technical and Scientific Terms</h4>
-                        <p>Technical fields often have specific hyphenation conventions.</p>
+                        <h3>Scientific and Medical Terms</h3>
+                        <ul>
+                            <li><strong>Chemical compounds:</strong> Follow scientific conventions</li>
+                            <li><strong>Medical terms:</strong> Check medical dictionaries</li>
+                            <li><strong>Units of measure:</strong> kilowatt-hour, person-year</li>
+                            <li><strong>Statistical terms:</strong> t-test, chi-square, p-value</li>
+                        </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Scientific Terms</h4>
+                    <div class="examples-box">
+                        <h4>Scientific Measurements</h4>
+                        <div class="example-item good">
+                            <p><strong>Hyphenated compounds:</strong></p>
                             <ul>
-                                <li>X-ray, Y-axis</li>
-                                <li>T-shirt, I-beam</li>
-                                <li>alpha-particle</li>
-                                <li>beta-testing</li>
+                                <li>kilowatt-hour consumption</li>
+                                <li>person-year calculations</li>
+                                <li>cost-benefit analysis</li>
+                                <li>risk-assessment procedures</li>
+                                <li>peer-reviewed research</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>Government Terms</h4>
+                            <p><strong>Technical modifiers:</strong></p>
                             <ul>
-                                <li>Governor-in-Council</li>
-                                <li>Attorney-General</li>
-                                <li>Secretary-General</li>
-                                <li>Commander-in-Chief</li>
+                                <li>state-of-the-art technology</li>
+                                <li>evidence-based policy</li>
+                                <li>data-driven decisions</li>
+                                <li>real-time monitoring</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Legal and Regulatory Terms</h3>
+                        <ul>
+                            <li><strong>Legal compounds:</strong> cease-and-desist, attorney-client</li>
+                            <li><strong>Regulatory terms:</strong> compliance-related, audit-ready</li>
+                            <li><strong>Cross-references:</strong> above-mentioned, afore-said</li>
+                            <li><strong>Legal status:</strong> court-ordered, government-funded</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Financial and Economic Terms</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Term Type</th>
+                                    <th>Examples</th>
+                                    <th>Usage Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ratios</td>
+                                    <td>debt-to-income, cost-to-benefit</td>
+                                    <td>Hyphenate ratio expressions</td>
+                                </tr>
+                                <tr>
+                                    <td>Market terms</td>
+                                    <td>bull-market conditions, bear-market trends</td>
+                                    <td>When used as adjectives</td>
+                                </tr>
+                                <tr>
+                                    <td>Time periods</td>
+                                    <td>quarter-over-quarter, year-on-year</td>
+                                    <td>Comparative time expressions</td>
+                                </tr>
+                                <tr>
+                                    <td>Budget terms</td>
+                                    <td>across-the-board cuts, line-by-line review</td>
+                                    <td>Established budget terminology</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Information Technology</h3>
+                        <ul>
+                            <li><strong>Network terms:</strong> client-server, peer-to-peer</li>
+                            <li><strong>Security terms:</strong> end-to-end encryption, two-factor authentication</li>
+                            <li><strong>Development terms:</strong> user-friendly, plug-and-play</li>
+                            <li><strong>System terms:</strong> real-time processing, multi-user environment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Environmental and Climate Terms</h4>
+                        <div class="example-item good">
+                            <p><strong>Environmental compounds:</strong></p>
+                            <ul>
+                                <li>greenhouse-gas emissions</li>
+                                <li>carbon-neutral policies</li>
+                                <li>renewable-energy sources</li>
+                                <li>climate-change adaptation</li>
+                                <li>ecosystem-based management</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Social and Policy Terms</h3>
+                        <ul>
+                            <li><strong>Social policy:</strong> means-tested benefits, income-based assistance</li>
+                            <li><strong>Demographics:</strong> age-related services, gender-based analysis</li>
+                            <li><strong>Public health:</strong> evidence-based medicine, population-level interventions</li>
+                            <li><strong>Education:</strong> competency-based learning, outcome-focused programs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Staying Current</h4>
+                        <p>Technical terminology evolves rapidly. Consult current specialized dictionaries, style guides, and professional organizations for the most accurate hyphenation of technical terms.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Consistency in Technical Writing</h4>
+                        <p>When writing technical documents, create a terminology list at the beginning of your project. Ensure all writers on the team use the same hyphenation conventions for specialized terms.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Technical Terms -->
                 <div class="quiz-panel" id="quiz-technical-terms"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('technical-terms')">
-                        Mark Complete & Continue
+                        Complete Chapter 2!
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <!-- Include JavaScript modules -->
     <script type="module" src="../shared/js/router.js"></script>
@@ -318,7 +727,6 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
-        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
@@ -326,186 +734,27 @@
         const sections = [
             { id: 'introduction', title: '2.01 Introduction' },
             { id: 'compound-words', title: '2.02 Compound Words' },
-            { id: 'prefixes', title: '2.07 Prefixes' },
-            { id: 'word-division', title: '2.13 Word Division' },
-            { id: 'special-cases', title: '2.15 Special Cases' },
-            { id: 'technical-terms', title: '2.17 Technical Terms' }
+            { id: 'prefixes-suffixes', title: '2.03 Prefixes & Suffixes' },
+            { id: 'word-division', title: '2.04 Word Division' },
+            { id: 'special-cases', title: '2.05 Special Cases' },
+            { id: 'technical-terms', title: '2.06 Technical Terms' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
-        function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 2 Complete!</h3>
-                    <p>You've mastered hyphenation rules. Ready for the next chapter?</p>
-                    <div class="modal-actions">
-                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
-                            Stay Here
-                        </button>
-                        <a href="../index.html" class="btn btn-primary">
-                            Back to Dashboard
-                        </a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Hyphenation',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the main purpose of hyphens?',
-                            options: [
-                                { label: 'To make words longer', correct: false },
-                                { label: 'To join words and prevent confusion', correct: true },
-                                { label: 'To replace periods', correct: false },
-                                { label: 'To indicate pauses', correct: false }
-                            ],
-                            rationale: 'Hyphens join words to create new meanings and prevent misreading.',
-                            ref: '§2.01'
-                        }
-                    ]
-                },
-                'compound-words': {
-                    title: 'Compound Words',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should "part time worker" be written when used as an adjective?',
-                            options: [
-                                { label: 'part time worker', correct: false },
-                                { label: 'part-time worker', correct: true },
-                                { label: 'parttime worker', correct: false },
-                                { label: 'part_time worker', correct: false }
-                            ],
-                            rationale: 'Compound adjectives before nouns are typically hyphenated.',
-                            ref: '§2.02'
-                        }
-                    ]
-                },
-                prefixes: {
-                    title: 'Prefixes',
-                    questions: [
-                        {
-                            type: 'fill-blank',
-                            stem: 'How should you write "former president"?',
-                            answer: 'ex-president',
-                            rationale: 'Always hyphenate "ex-" when meaning former.',
-                            ref: '§2.07'
-                        }
-                    ]
-                },
-                'word-division': {
-                    title: 'Word Division',
-                    questions: [
-                        {
-                            type: 'true-false',
-                            stem: 'You can divide any word at the end of a line.',
-                            correct: false,
-                            rationale: 'Words must be divided between syllables, and one-syllable words cannot be divided.',
-                            ref: '§2.13'
-                        }
-                    ]
-                },
-                'special-cases': {
-                    title: 'Special Cases',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should you write "state of the art technology"?',
-                            options: [
-                                { label: 'state of the art technology', correct: false },
-                                { label: 'state-of-the-art technology', correct: true },
-                                { label: 'state of the-art technology', correct: false },
-                                { label: 'stateoftheart technology', correct: false }
-                            ],
-                            rationale: 'Temporary compounds used as adjectives are fully hyphenated.',
-                            ref: '§2.15'
-                        }
-                    ]
-                },
-                'technical-terms': {
-                    title: 'Technical Terms',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which is the correct form?',
-                            options: [
-                                { label: 'Governor in Council', correct: false },
-                                { label: 'Governor-in-Council', correct: true },
-                                { label: 'GovernorInCouncil', correct: false },
-                                { label: 'Governor_in_Council', correct: false }
-                            ],
-                            rationale: 'Government titles with multiple parts are hyphenated.',
-                            ref: '§2.17'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = this.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(this);
                 });
             });
+            
+            // Show first section by default
+            showSection('introduction');
         }
         
         function showSection(sectionId) {
@@ -528,18 +777,95 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+        
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 2 Complete!</h3>
+                    <p>Excellent work! You've mastered hyphenation and compound words. Your compound words and text breaks will be properly formatted.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
+                        </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/quizzes/ch02-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 2');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
-        
-        window.addEventListener('progress-changed', updateProgressBar);
     </script>
 </body>
 </html>

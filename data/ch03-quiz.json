@@ -1,140 +1,296 @@
 {
-  "canadian-spelling": {
-    "id": "ch03-canadian",
-    "title": "Canadian Spelling Conventions",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "Which is the correct Canadian spelling?",
-        "options": [
-          { "label": "color", "correct": false },
-          { "label": "colour", "correct": true },
-          { "label": "colur", "correct": false },
-          { "label": "coulor", "correct": false }
-        ],
-        "rationale": "Canadian spelling typically uses British '-our' endings.",
-        "ref": "§3.01"
-      },
-      {
-        "id": "q2",
-        "type": "multi-select",
-        "stem": "Select all correct Canadian spellings:",
-        "options": [
-          { "label": "centre", "correct": true },
-          { "label": "theater", "correct": false },
-          { "label": "honour", "correct": true },
-          { "label": "realize", "correct": true }
-        ],
-        "rationale": "Canadian spelling uses 'centre' and 'honour' but accepts both -ize and -ise endings."
-      },
-      {
-        "id": "q3",
-        "type": "fill-blank",
-        "stem": "The ___ reviewed the financial statements.",
-        "answer": "councillor",
-        "alternatives": ["councilor"],
-        "rationale": "Canadian spelling prefers double 'l' in councillor.",
-        "ref": "§3.03"
-      }
-    ]
+  "chapterId": "ch03",
+  "chapterTitle": "Spelling",
+  "sections": {
+    "canadian-spelling": {
+      "id": "canadian-spelling-quiz",
+      "title": "Canadian Spelling Conventions",
+      "questions": [
+        {
+          "id": "cs-01",
+          "type": "mcq",
+          "stem": "Which spelling follows Canadian conventions?",
+          "options": [
+            {"label": "color, center, organize", "correct": false},
+            {"label": "colour, centre, organize", "correct": true},
+            {"label": "colour, center, organise", "correct": false},
+            {"label": "color, centre, organise", "correct": false}
+          ],
+          "rationale": "Canadian spelling uses British -our and -re endings but American -ize endings: colour, centre, organize.",
+          "ref": "§3.02"
+        },
+        {
+          "id": "cs-02",
+          "type": "fill-blank",
+          "stem": "Complete using Canadian spelling: The Minister of __________ announced that the new __________ will __________ community programs.",
+          "blanks": [
+            {"id": "blank1", "answer": ["Labour"], "position": 1},
+            {"id": "blank2", "answer": ["centre"], "position": 2},
+            {"id": "blank3", "answer": ["organize"], "position": 3}
+          ],
+          "rationale": "Canadian spelling: Labour (not Labor), centre (not center), organize (not organise).",
+          "ref": "§3.02"
+        },
+        {
+          "id": "cs-03",
+          "type": "error-spot",
+          "stem": "Click on the incorrectly spelled word:",
+          "text": "The theater will honor local artists and organise a special fundraising event.",
+          "errors": [
+            {"text": "theater", "position": 2, "correction": "theatre", "reason": "Canadian spelling uses -re ending"},
+            {"text": "honor", "position": 4, "correction": "honour", "reason": "Canadian spelling uses -our ending"},
+            {"text": "organise", "position": 8, "correction": "organize", "reason": "Canadian spelling uses -ize ending"}
+          ],
+          "rationale": "Canadian spelling: theatre, honour, organize (combining British and American patterns).",
+          "ref": "§3.02"
+        },
+        {
+          "id": "cs-04",
+          "type": "matching",
+          "stem": "Match the word type with Canadian spelling:",
+          "pairs": [
+            {"left": "-our words", "right": "colour, flavour, honour"},
+            {"left": "-re words", "right": "centre, theatre, metre"},
+            {"left": "-ize words", "right": "organize, realize, recognize"},
+            {"left": "Always -ise", "right": "advertise, exercise, supervise"}
+          ],
+          "rationale": "Canadian spelling follows specific patterns for different word endings.",
+          "ref": "§3.02"
+        },
+        {
+          "id": "cs-05",
+          "type": "drag-drop",
+          "stem": "Arrange these from Canadian to American spelling:",
+          "items": [
+            {"id": "item1", "text": "cheque, grey, defence", "order": 1},
+            {"id": "item2", "text": "centre, colour, organize", "order": 2},
+            {"id": "item3", "text": "center, color, organize", "order": 3},
+            {"id": "item4", "text": "check, gray, defense", "order": 4}
+          ],
+          "rationale": "Canadian spellings range from distinctly British to mixed British-American patterns.",
+          "ref": "§3.02"
+        }
+      ]
+    },
+    "variants": {
+      "id": "variants-quiz",
+      "title": "Spelling Variants and Alternatives",
+      "questions": [
+        {
+          "id": "v-01",
+          "type": "mcq",
+          "stem": "Which statement about spelling variants is correct?",
+          "options": [
+            {"label": "Always use the first spelling listed in the dictionary", "correct": false},
+            {"label": "Choose one variant and use it consistently throughout the document", "correct": true},
+            {"label": "Mix variants freely to add variety", "correct": false},
+            {"label": "Always prefer American variants", "correct": false}
+          ],
+          "rationale": "Consistency within a document is more important than which variant you choose.",
+          "ref": "§3.03"
+        },
+        {
+          "id": "v-02",
+          "type": "fill-blank",
+          "stem": "Choose consistent variants: The financial __________ will help students __________ in the program. The __________ building houses administrative offices.",
+          "blanks": [
+            {"id": "blank1", "answer": ["adviser", "advisor"], "position": 1},
+            {"id": "blank2", "answer": ["enrol", "enroll"], "position": 2},
+            {"id": "blank3", "answer": ["grey", "gray"], "position": 3}
+          ],
+          "rationale": "Both spellings in each pair are acceptable, but choose one form and use consistently.",
+          "ref": "§3.03"
+        },
+        {
+          "id": "v-03",
+          "type": "matching",
+          "stem": "Match the context with the preferred variant:",
+          "pairs": [
+            {"left": "Legal document", "right": "judgement, acknowledgement"},
+            {"left": "General government", "right": "judgment, acknowledgment"},
+            {"left": "Modern usage", "right": "jail, email"},
+            {"left": "Traditional forms", "right": "gaol, e-mail"}
+          ],
+          "rationale": "Different contexts may prefer different variants, but consistency within each document is key.",
+          "ref": "§3.03"
+        },
+        {
+          "id": "v-04",
+          "type": "error-spot",
+          "stem": "Click on the inconsistent spelling in this document:",
+          "text": "The adviser will help enroll students. Later, the advisor will assist with enrolment procedures.",
+          "errors": [
+            {"text": "advisor", "position": 9, "correction": "adviser", "reason": "Should match 'adviser' used earlier"},
+            {"text": "enrolment", "position": 13, "correction": "enrollment", "reason": "Should match 'enroll' pattern used earlier"}
+          ],
+          "rationale": "Consistency requires using the same variant throughout: either adviser/enrol or advisor/enroll.",
+          "ref": "§3.03"
+        },
+        {
+          "id": "v-05",
+          "type": "mcq",
+          "stem": "Which compound word distinction is correct?",
+          "options": [
+            {"label": "anyone vs. any one have the same meaning", "correct": false},
+            {"label": "'Anyone can apply' vs. 'Any one person may apply'", "correct": true},
+            {"label": "always use the closed form (anyone, everyone)", "correct": false},
+            {"label": "always use the open form (any one, every one)", "correct": false}
+          ],
+          "rationale": "'Anyone' means 'anybody,' while 'any one' means 'any single one.' The meaning determines the form.",
+          "ref": "§3.03"
+        }
+      ]
+    },
+    "word-endings": {
+      "id": "word-endings-quiz",
+      "title": "Word Endings and Patterns",
+      "questions": [
+        {
+          "id": "we-01",
+          "type": "mcq",
+          "stem": "Which word endings are spelled correctly?",
+          "options": [
+            {"label": "government, acknowledgement, accessible", "correct": true},
+            {"label": "goverment, acknowledgment, accessable", "correct": false},
+            {"label": "governement, acknowledgement, accesible", "correct": false},
+            {"label": "government, aknowledgement, accessible", "correct": false}
+          ],
+          "rationale": "Correct spellings follow established patterns: -ment, -ement (for some words), -ible (for certain words).",
+          "ref": "§3.04"
+        },
+        {
+          "id": "we-02",
+          "type": "fill-blank",
+          "stem": "Complete the word endings: The commit_____ will provide assist_____ to ensure compli_____ with the new guid_____.",
+          "blanks": [
+            {"id": "blank1", "answer": ["tee"], "position": 1},
+            {"id": "blank2", "answer": ["ance"], "position": 2},
+            {"id": "blank3", "answer": ["ance"], "position": 3},
+            {"id": "blank4", "answer": ["ance"], "position": 4}
+          ],
+          "rationale": "Committee (double t + ee), assistance/compliance/guidance all end in -ance.",
+          "ref": "§3.04"
+        },
+        {
+          "id": "we-03",
+          "type": "matching",
+          "stem": "Match the ending pattern with examples:",
+          "pairs": [
+            {"left": "-ance endings", "right": "assistance, compliance, guidance"},
+            {"left": "-ence endings", "right": "conference, preference, reference"},
+            {"left": "-ible endings", "right": "accessible, responsible, credible"},
+            {"left": "-able endings", "right": "acceptable, comfortable, reasonable"}
+          ],
+          "rationale": "Different word patterns follow specific ending conventions.",
+          "ref": "§3.04"
+        },
+        {
+          "id": "we-04",
+          "type": "error-spot",
+          "stem": "Click on the incorrect word ending:",
+          "text": "The responsible manager showed excellance in providing dependible service during the conferance.",
+          "errors": [
+            {"text": "excellance", "position": 4, "correction": "excellence", "reason": "Should end in -ence"},
+            {"text": "dependible", "position": 7, "correction": "dependable", "reason": "Should end in -able"},
+            {"text": "conferance", "position": 11, "correction": "conference", "reason": "Should end in -ence"}
+          ],
+          "rationale": "These words follow -ence/-able patterns: excellence, dependable, conference.",
+          "ref": "§3.04"
+        },
+        {
+          "id": "we-05",
+          "type": "mcq",
+          "stem": "Which job title follows correct Canadian spelling patterns?",
+          "options": [
+            {"label": "advisor, coordinater, directur", "correct": false},
+            {"label": "adviser, coordinator, director", "correct": true},
+            {"label": "advisur, coordinator, directer", "correct": false},
+            {"label": "advisor, coordinater, director", "correct": false}
+          ],
+          "rationale": "Adviser (preferred Canadian), coordinator (-or ending), director (-or ending).",
+          "ref": "§3.04"
+        }
+      ]
+    },
+    "troublesome-words": {
+      "id": "troublesome-words-quiz",
+      "title": "Troublesome Words and Common Errors",
+      "questions": [
+        {
+          "id": "tw-01",
+          "type": "mcq",
+          "stem": "Which word is spelled correctly?",
+          "options": [
+            {"label": "accomodate", "correct": false},
+            {"label": "accommodate", "correct": true},
+            {"label": "acommodate", "correct": false},
+            {"label": "acomodate", "correct": false}
+          ],
+          "rationale": "Accommodate has double 'c' and double 'm': it can accommodate two c's and two m's.",
+          "ref": "§3.05"
+        },
+        {
+          "id": "tw-02",
+          "type": "fill-blank",
+          "stem": "Complete the troublesome words: The __________ will __________ review the __________ budget proposals.",
+          "blanks": [
+            {"id": "blank1", "answer": ["committee"], "position": 1},
+            {"id": "blank2", "answer": ["definitely"], "position": 2},
+            {"id": "blank3", "answer": ["separate"], "position": 3}
+          ],
+          "rationale": "Committee (double m, double t), definitely (not definately), separate (not seperate).",
+          "ref": "§3.05"
+        },
+        {
+          "id": "tw-03",
+          "type": "error-spot",
+          "stem": "Click on the misspelled word:",
+          "text": "The goverment will recieve neccessary correspondance about foriegn policy developement.",
+          "errors": [
+            {"text": "goverment", "position": 2, "correction": "government", "reason": "Missing 'n'"},
+            {"text": "recieve", "position": 4, "correction": "receive", "reason": "i before e except after c"},
+            {"text": "neccessary", "position": 5, "correction": "necessary", "reason": "One 'c', two 's'"},
+            {"text": "correspondance", "position": 6, "correction": "correspondence", "reason": "Should end in -ence"},
+            {"text": "foriegn", "position": 8, "correction": "foreign", "reason": "e before i in this word"},
+            {"text": "developement", "position": 10, "correction": "development", "reason": "No 'e' before -ment"}
+          ],
+          "rationale": "Multiple common spelling errors in government terminology.",
+          "ref": "§3.05"
+        },
+        {
+          "id": "tw-04",
+          "type": "matching",
+          "stem": "Match the word with its memory aid:",
+          "pairs": [
+            {"left": "separate", "right": "There's a rat in separate"},
+            {"left": "necessary", "right": "One collar, two socks"},
+            {"left": "definitely", "right": "There's definitely a finite in the middle"},
+            {"left": "accommodate", "right": "It can accommodate two c's and two m's"}
+          ],
+          "rationale": "Memory aids help remember correct spellings of troublesome words.",
+          "ref": "§3.05"
+        },
+        {
+          "id": "tw-05",
+          "type": "mcq",
+          "stem": "Which homophone pair is used correctly?",
+          "options": [
+            {"label": "The principle concern of the principal", "correct": false},
+            {"label": "The principal concern of the principle", "correct": false},
+            {"label": "The principal concern of the principal", "correct": true},
+            {"label": "The principle concern of the principle", "correct": false}
+          ],
+          "rationale": "Principal = main/chief (concern), principal = head person (of school). Principle = rule/standard.",
+          "ref": "§3.05"
+        }
+      ]
+    }
   },
-  "homonyms": {
-    "id": "ch03-homonyms",
-    "title": "Homonyms and Similar Words",
-    "questions": [
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "Choose the correct word: The ___ of the building is impressive.",
-        "options": [
-          { "label": "cite", "correct": false },
-          { "label": "site", "correct": true },
-          { "label": "sight", "correct": false }
-        ],
-        "rationale": "'Site' refers to location; 'cite' means to quote; 'sight' relates to vision.",
-        "ref": "§3.05"
-      },
-      {
-        "id": "q5",
-        "type": "error-spot",
-        "stem": "Click on the spelling error:",
-        "text": "The committee will loose its mandate next year",
-        "errorIndex": 3,
-        "rationale": "Should be 'lose' (to be deprived of); 'loose' means not tight."
-      },
-      {
-        "id": "q6",
-        "type": "drag-drop",
-        "stem": "Match the word to its meaning:",
-        "options": [
-          { "label": "principal = main or chief", "order": 1 },
-          { "label": "principle = fundamental rule", "order": 2 },
-          { "label": "stationary = not moving", "order": 3 },
-          { "label": "stationery = writing materials", "order": 4 }
-        ]
-      }
-    ]
-  },
-  "ei-ie": {
-    "id": "ch03-ei-ie",
-    "title": "Words with ei and ie",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "Which word follows the 'i before e except after c' rule?",
-        "options": [
-          { "label": "weird", "correct": false },
-          { "label": "receive", "correct": true },
-          { "label": "science", "correct": false },
-          { "label": "foreign", "correct": false }
-        ],
-        "rationale": "'Receive' follows the rule; the others are exceptions.",
-        "ref": "§3.06"
-      },
-      {
-        "id": "q8",
-        "type": "fill-blank",
-        "stem": "I ___ your offer yesterday.",
-        "answer": "received",
-        "rationale": "After 'c', use 'ei' in receive.",
-        "ref": "§3.06"
-      }
-    ]
-  },
-  "plurals": {
-    "id": "ch03-plurals",
-    "title": "Plural Forms",
-    "questions": [
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "What is the correct plural of 'attorney general'?",
-        "options": [
-          { "label": "attorney generals", "correct": false },
-          { "label": "attorneys general", "correct": true },
-          { "label": "attorneys generals", "correct": false },
-          { "label": "attorney-generals", "correct": false }
-        ],
-        "rationale": "In compound titles, pluralize the main noun.",
-        "ref": "§3.17"
-      },
-      {
-        "id": "q10",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "analysis", "back": "analyses" },
-          { "front": "criterion", "back": "criteria" },
-          { "front": "phenomenon", "back": "phenomena" },
-          { "front": "datum", "back": "data" },
-          { "front": "medium", "back": "media" },
-          { "front": "appendix", "back": "appendices" },
-          { "front": "basis", "back": "bases" },
-          { "front": "curriculum", "back": "curricula" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 20,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "30-40 minutes",
+    "passingScore": 80
   }
 }

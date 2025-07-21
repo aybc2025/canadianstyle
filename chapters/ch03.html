@@ -8,78 +8,120 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 3: Spelling</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
-                </div>
-                <span class="progress-text">Progress</span>
-            </div>
-        </header>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">3.01 Introduction</a>
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 3
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">3</div>
+                <div>
+                    <h1>Spelling</h1>
+                    <p>Use correct Canadian spelling conventions and handle spelling variants</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">3.01 Introduction</a>
                 <a href="#canadian-spelling" class="tab-link" data-section="canadian-spelling">3.02 Canadian Spelling</a>
-                <a href="#variants" class="tab-link" data-section="variants">3.03 Variants</a>
+                <a href="#variants" class="tab-link" data-section="variants">3.03 Spelling Variants</a>
                 <a href="#word-endings" class="tab-link" data-section="word-endings">3.04 Word Endings</a>
                 <a href="#troublesome-words" class="tab-link" data-section="troublesome-words">3.05 Troublesome Words</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 3.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>3.01 Introduction to Canadian Spelling</h2>
+                    <h2>3.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Canadian spelling reflects our unique position between British and American traditions. The Government of Canada follows established conventions that balance historical British usage with practical considerations for North American readers.</p>
+                <div class="lesson-content">
+                    <p>Canadian spelling combines British and American influences, creating a unique system that reflects Canada's linguistic heritage. Government writers must be consistent and follow established Canadian conventions.</p>
                     
-                    <div class="key-principles">
-                        <h3>Canadian Spelling Principles</h3>
+                    <div class="key-principle">
+                        <h3>Key Principle</h3>
+                        <p>When in doubt about spelling, consult Canadian dictionaries first. The Canadian Oxford Dictionary and Gage Canadian Dictionary are authoritative sources for Canadian spelling.</p>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Canadian Spelling Characteristics</h4>
                         <ul>
-                            <li>Generally follows British spelling conventions</li>
-                            <li>Some American spellings are accepted</li>
-                            <li>Consistency within documents is essential</li>
-                            <li>Prefer simpler spellings when variants exist</li>
+                            <li><strong>British influence:</strong> colour, flavour, honour (not color, flavor, honor)</li>
+                            <li><strong>British influence:</strong> centre, theatre (not center, theater)</li>
+                            <li><strong>American influence:</strong> organization, realize (not organisation, realise)</li>
+                            <li><strong>American influence:</strong> tire, curb (not tyre, kerb)</li>
+                            <li><strong>Mixed usage:</strong> Both forms acceptable in some cases</li>
                         </ul>
                     </div>
                     
-                    <div class="spelling-overview">
-                        <h3>Key Differences</h3>
-                        <div class="comparison-grid">
-                            <div class="comparison-item">
-                                <h4>Canadian/British</h4>
-                                <ul>
-                                    <li>colour, favour, honour</li>
-                                    <li>centre, theatre</li>
-                                    <li>defence, licence (noun)</li>
-                                    <li>travelling, modelling</li>
-                                </ul>
-                            </div>
-                            <div class="comparison-item">
-                                <h4>American</h4>
-                                <ul>
-                                    <li>color, favor, honor</li>
-                                    <li>center, theater</li>
-                                    <li>defense, license (noun)</li>
-                                    <li>traveling, modeling</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="examples-box">
+                        <h4>Canadian vs. British vs. American</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Canadian</th>
+                                    <th>British</th>
+                                    <th>American</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colour</td>
+                                    <td>colour</td>
+                                    <td>color</td>
+                                </tr>
+                                <tr>
+                                    <td>centre</td>
+                                    <td>centre</td>
+                                    <td>center</td>
+                                </tr>
+                                <tr>
+                                    <td>organize</td>
+                                    <td>organise</td>
+                                    <td>organize</td>
+                                </tr>
+                                <tr>
+                                    <td>tire</td>
+                                    <td>tyre</td>
+                                    <td>tire</td>
+                                </tr>
+                                <tr>
+                                    <td>cheque</td>
+                                    <td>cheque</td>
+                                    <td>check</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Consistency is Essential</h4>
+                        <p>Choose one spelling system and use it consistently throughout your document. Don't mix Canadian and American spellings in the same piece.</p>
                     </div>
                 </div>
-                
-                <!-- Quiz Panel for Introduction -->
-                <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
@@ -88,57 +130,98 @@
                 </div>
             </section>
 
-            <!-- Canadian Spelling Section -->
-            <section class="content-section" id="canadian-spelling" style="display: none;">
+            <!-- Section 3.02: Canadian Spelling -->
+            <section class="content-section" id="canadian-spelling">
                 <div class="section-header">
-                    <h2>3.02 Canadian Spelling Conventions</h2>
+                    <h2>3.02 Canadian Spelling</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>-our Endings</h4>
-                        <p>Canadian spelling retains the British "our" in most words:</p>
-                        <ul>
-                            <li>colour, flavour, honour, labour</li>
-                            <li>behaviour, favour, humour, rigour</li>
-                            <li>splendour, vapour, vigour</li>
-                        </ul>
-                        <p><strong>Exception:</strong> Drop the "u" before suffixes: <em>colourful, favourite, honourable</em></p>
-                    </div>
+                <div class="lesson-content">
+                    <p>Canadian spelling follows specific patterns that distinguish it from both British and American conventions. Understanding these patterns helps ensure consistency in government documents.</p>
                     
                     <div class="rule-box">
-                        <h4>-re Endings</h4>
-                        <p>Use "re" endings for:</p>
+                        <h3>-our endings (British pattern)</h3>
+                        <p>Canadian spelling retains the British '-our' endings in most words:</p>
                         <ul>
-                            <li>centre, theatre, fibre</li>
-                            <li>litre, metre, kilometre</li>
-                            <li>calibre, lustre, sombre</li>
+                            <li><strong>colour</strong> (not color)</li>
+                            <li><strong>flavour</strong> (not flavor)</li>
+                            <li><strong>honour</strong> (not honor)</li>
+                            <li><strong>labour</strong> (not labor)</li>
+                            <li><strong>neighbour</strong> (not neighbor)</li>
+                            <li><strong>rumour</strong> (not rumor)</li>
+                            <li><strong>humour</strong> (not humor)</li>
                         </ul>
-                        <p><strong>But:</strong> Some words use "er": <em>chapter, disaster, monster</em></p>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Defence vs Defense</h4>
+                    <div class="examples-box">
+                        <h4>Government Usage Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Canadian spelling:</strong></p>
                             <ul>
-                                <li><strong>Noun:</strong> defence, offence</li>
-                                <li><strong>Verb:</strong> defend, offend</li>
-                                <li><strong>Adjective:</strong> defensive, offensive</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Licence vs License</h4>
-                            <ul>
-                                <li><strong>Noun:</strong> driver's licence</li>
-                                <li><strong>Verb:</strong> to license</li>
-                                <li><strong>Practice:</strong> practice (noun), practise (verb)</li>
+                                <li>The Minister of Labour announced new policies</li>
+                                <li>Honour guards attended the ceremony</li>
+                                <li>The government favoured the new proposal</li>
+                                <li>Neighbourhood consultations will begin</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>-re endings (British pattern)</h3>
+                        <p>Canadian spelling uses '-re' endings for certain words:</p>
+                        <ul>
+                            <li><strong>centre</strong> (not center)</li>
+                            <li><strong>theatre</strong> (not theater)</li>
+                            <li><strong>metre</strong> (not meter)</li>
+                            <li><strong>fibre</strong> (not fiber)</li>
+                            <li><strong>sombre</strong> (not somber)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>-ize endings (American pattern)</h3>
+                        <p>Unlike British spelling, Canadian uses '-ize' not '-ise':</p>
+                        <ul>
+                            <li><strong>organize</strong> (not organise)</li>
+                            <li><strong>realize</strong> (not realise)</li>
+                            <li><strong>recognize</strong> (not recognise)</li>
+                            <li><strong>emphasize</strong> (not emphasise)</li>
+                            <li><strong>summarize</strong> (not summarise)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Exception: Some words always use -ise</h4>
+                        <div class="example-item warning">
+                            <p><strong>Always -ise (never -ize):</strong></p>
+                            <ul>
+                                <li>advertise</li>
+                                <li>compromise</li>
+                                <li>exercise</li>
+                                <li>supervise</li>
+                                <li>surprise</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Other Canadian Preferences</h3>
+                        <ul>
+                            <li><strong>cheque</strong> (not check for bank instrument)</li>
+                            <li><strong>grey</strong> (not gray)</li>
+                            <li><strong>doughnut</strong> (not donut)</li>
+                            <li><strong>catalogue</strong> (not catalog)</li>
+                            <li><strong>defence</strong> (not defense)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Memory Aids</h4>
+                        <p><strong>For -our words:</strong> Think "Canadian honour" - we keep the 'u' for tradition.<br>
+                        <strong>For -ize words:</strong> Think "organize" - we follow the 'z' pattern like Americans.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Canadian Spelling -->
                 <div class="quiz-panel" id="quiz-canadian-spelling"></div>
                 
                 <div class="section-footer">
@@ -148,60 +231,119 @@
                 </div>
             </section>
 
-            <!-- Variants Section -->
-            <section class="content-section" id="variants" style="display: none;">
+            <!-- Section 3.03: Spelling Variants -->
+            <section class="content-section" id="variants">
                 <div class="section-header">
-                    <h2>3.03 Acceptable Variants</h2>
+                    <h2>3.03 Spelling Variants</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Some words have acceptable alternative spellings in Canadian English. In government writing, choose one form and use it consistently throughout your document.</p>
+                    
                     <div class="rule-box">
-                        <h4>When Both Spellings Are Acceptable</h4>
-                        <p>Some words have equally acceptable variants. Choose one and use consistently:</p>
+                        <h3>Acceptable Variants</h3>
+                        <p>These words have two acceptable Canadian spellings:</p>
+                        <ul>
+                            <li><strong>adviser/advisor</strong> (both acceptable)</li>
+                            <li><strong>doughnut/donut</strong> (doughnut preferred)</li>
+                            <li><strong>enrol/enroll</strong> (enrol preferred)</li>
+                            <li><strong>grey/gray</strong> (grey preferred)</li>
+                            <li><strong>jail/gaol</strong> (jail preferred)</li>
+                            <li><strong>mould/mold</strong> (mould preferred)</li>
+                        </ul>
                     </div>
                     
-                    <div class="variants-grid">
-                        <div class="variant-group">
-                            <h4>Technical Terms</h4>
+                    <div class="examples-box">
+                        <h4>Government Preferences</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Word</th>
+                                    <th>Preferred</th>
+                                    <th>Alternative</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Financial advisor</td>
+                                    <td>adviser</td>
+                                    <td>advisor</td>
+                                    <td>Both common in government</td>
+                                </tr>
+                                <tr>
+                                    <td>Student enrollment</td>
+                                    <td>enrolment</td>
+                                    <td>enrollment</td>
+                                    <td>British form preferred</td>
+                                </tr>
+                                <tr>
+                                    <td>Color description</td>
+                                    <td>grey</td>
+                                    <td>gray</td>
+                                    <td>Grey for colour, Gray for names</td>
+                                </tr>
+                                <tr>
+                                    <td>Prison facility</td>
+                                    <td>jail</td>
+                                    <td>gaol</td>
+                                    <td>Modern form preferred</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Regional and Professional Variations</h3>
+                        <ul>
+                            <li><strong>Legal terms:</strong> May follow traditional British spellings</li>
+                            <li><strong>Medical terms:</strong> Often follow American conventions</li>
+                            <li><strong>Scientific terms:</strong> International standards may apply</li>
+                            <li><strong>Technical terms:</strong> Industry standards often dictate spelling</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Specialized Terminology</h4>
+                        <div class="example-item good">
+                            <p><strong>Legal (traditional):</strong></p>
                             <ul>
-                                <li>advisor / adviser</li>
-                                <li>disk / disc (computing vs. audio)</li>
-                                <li>donut / doughnut</li>
-                                <li>email / e-mail</li>
+                                <li>judgement (legal context)</li>
+                                <li>acknowledgement (legal documents)</li>
+                                <li>gaol (historical legal documents)</li>
                             </ul>
                         </div>
-                        
-                        <div class="variant-group">
-                            <h4>Compound Words</h4>
+                        <div class="example-item">
+                            <p><strong>General (modern):</strong></p>
                             <ul>
-                                <li>tomorrow / to-morrow</li>
-                                <li>today / to-day</li>
-                                <li>website / web site</li>
-                                <li>online / on-line</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="variant-group">
-                            <h4>Numbers</h4>
-                            <ul>
-                                <li>per cent / percent</li>
-                                <li>any one / anyone (depends on meaning)</li>
-                                <li>some time / sometime</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="variant-group">
-                            <h4>Preferred Canadian</h4>
-                            <ul>
-                                <li><strong>Prefer:</strong> adviser, doughnut</li>
-                                <li><strong>Prefer:</strong> email, website, online</li>
-                                <li><strong>Prefer:</strong> per cent</li>
+                                <li>judgment (general use)</li>
+                                <li>acknowledgment (general use)</li>
+                                <li>jail (modern usage)</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Compound Word Variants</h3>
+                        <ul>
+                            <li><strong>any one/anyone:</strong> "any one person" vs. "anyone can apply"</li>
+                            <li><strong>every one/everyone:</strong> "every one of them" vs. "everyone agrees"</li>
+                            <li><strong>some time/sometime:</strong> "some time ago" vs. "sometime next week"</li>
+                            <li><strong>all right/alright:</strong> "all right" preferred in formal writing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Avoid Mixing Variants</h4>
+                        <p>If you choose "adviser," don't use "advisor" elsewhere in the same document. Consistency within documents is more important than following a particular variant.</p>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Creating a Style Sheet</h4>
+                        <p>For long documents or ongoing projects, create a style sheet listing your chosen variants. Share this with all writers on the project.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Variants -->
                 <div class="quiz-panel" id="quiz-variants"></div>
                 
                 <div class="section-footer">
@@ -211,57 +353,138 @@
                 </div>
             </section>
 
-            <!-- Word Endings Section -->
-            <section class="content-section" id="word-endings" style="display: none;">
+            <!-- Section 3.04: Word Endings -->
+            <section class="content-section" id="word-endings">
                 <div class="section-header">
                     <h2>3.04 Word Endings</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Canadian spelling follows specific patterns for word endings that combine British and American influences. Understanding these patterns helps with consistent spelling of related words.</p>
+                    
                     <div class="rule-box">
-                        <h4>Double L Rules</h4>
-                        <p>Canadian spelling generally doubles the "l" when adding suffixes:</p>
+                        <h3>-ment vs. -ement endings</h3>
+                        <p>Most words use '-ment' but some require '-ement':</p>
                         <ul>
-                            <li>travel → travelling, travelled, traveller</li>
-                            <li>model → modelling, modelled, modeller</li>
-                            <li>level → levelling, levelled</li>
-                            <li>label → labelling, labelled</li>
+                            <li><strong>-ment endings:</strong> government, payment, treatment, assessment</li>
+                            <li><strong>-ement endings:</strong> acknowledgement, judgement, abridgement</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Common Government Terms</h4>
+                        <div class="example-item good">
+                            <p><strong>-ment endings:</strong></p>
+                            <ul>
+                                <li>The government announced new funding</li>
+                                <li>Payment processing will be automated</li>
+                                <li>Assessment criteria have been updated</li>
+                                <li>Development plans are being reviewed</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>-ement endings:</strong></p>
+                            <ul>
+                                <li>Acknowledgement of receipt is required</li>
+                                <li>The judgement was appealed</li>
+                                <li>An abridgement of the report is available</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>-able vs. -ible endings</h3>
+                        <p>More words end in '-able' than '-ible'. Learn the common '-ible' words:</p>
+                        <ul>
+                            <li><strong>-ible words:</strong> accessible, admissible, compatible, credible, eligible, flexible, horrible, impossible, incredible, responsible, terrible, visible</li>
+                            <li><strong>-able words:</strong> Most others (acceptable, available, comfortable, dependable, reasonable, suitable)</li>
                         </ul>
                     </div>
                     
                     <div class="rule-box">
-                        <h4>-ize vs -ise</h4>
-                        <p>Canadian spelling generally prefers -ize endings:</p>
+                        <h3>-ance vs. -ence endings</h3>
+                        <p>These endings sound the same but have different spellings:</p>
                         <ul>
-                            <li>organize, recognize, realize</li>
-                            <li>modernize, standardize, authorize</li>
-                            <li>emphasize, summarize, analyze</li>
+                            <li><strong>-ance words:</strong> assistance, attendance, compliance, guidance, importance, performance, resistance</li>
+                            <li><strong>-ence words:</strong> conference, correspondence, difference, excellence, experience, patience, preference, reference</li>
                         </ul>
-                        <p><strong>But use -ise for:</strong> advertise, exercise, supervise, comprise</p>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>-ment Endings</h4>
+                    <div class="examples-box">
+                        <h4>Memory Aids for -ance/-ence</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Related Verb/Adjective</th>
+                                    <th>Noun Ending</th>
+                                    <th>Example</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>assist</td>
+                                    <td>-ance</td>
+                                    <td>assistance</td>
+                                </tr>
+                                <tr>
+                                    <td>attend</td>
+                                    <td>-ance</td>
+                                    <td>attendance</td>
+                                </tr>
+                                <tr>
+                                    <td>prefer</td>
+                                    <td>-ence</td>
+                                    <td>preference</td>
+                                </tr>
+                                <tr>
+                                    <td>refer</td>
+                                    <td>-ence</td>
+                                    <td>reference</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>-er vs. -or endings</h3>
+                        <p>Most agent nouns end in '-er', but some professions use '-or':</p>
+                        <ul>
+                            <li><strong>-er endings:</strong> adviser, manager, officer, planner, researcher, teacher, worker</li>
+                            <li><strong>-or endings:</strong> administrator, auditor, coordinator, director, supervisor</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Double vs. Single Consonants</h3>
+                        <p>Canadian spelling generally follows British patterns for doubling:</p>
+                        <ul>
+                            <li><strong>Double 'l':</strong> travelled, modelling, counsellor</li>
+                            <li><strong>Double 's':</strong> focussed (alternative to focused)</li>
+                            <li><strong>Single consonant:</strong> canceled (alternative to cancelled)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government Job Titles</h4>
+                        <div class="example-item good">
+                            <p><strong>Common patterns:</strong></p>
                             <ul>
-                                <li>acknowledgment (not acknowledgement)</li>
-                                <li>judgment (not judgement)</li>
-                                <li>But: abridgement, arrangement</li>
+                                <li>Policy adviser (or advisor)</li>
+                                <li>Program manager</li>
+                                <li>Financial officer</li>
+                                <li>Communications director</li>
+                                <li>Project coordinator</li>
+                                <li>Senior administrator</li>
                             </ul>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>-ful vs -full</h4>
-                            <ul>
-                                <li>careful, helpful, wonderful</li>
-                                <li>Never use -full ending</li>
-                                <li>Exception: "full" as separate word</li>
-                            </ul>
-                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Learning Strategy</h4>
+                        <p>When uncertain about word endings, look for related words you know how to spell. For example, if you know "prefer," you can remember "preference" ends in '-ence'.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Word Endings -->
                 <div class="quiz-panel" id="quiz-word-endings"></div>
                 
                 <div class="section-footer">
@@ -271,82 +494,160 @@
                 </div>
             </section>
 
-            <!-- Troublesome Words Section -->
-            <section class="content-section" id="troublesome-words" style="display: none;">
+            <!-- Section 3.05: Troublesome Words -->
+            <section class="content-section" id="troublesome-words">
                 <div class="section-header">
                     <h2>3.05 Troublesome Words</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Certain words cause frequent spelling errors in government writing. These troublesome words require special attention and memorization.</p>
+                    
                     <div class="rule-box">
-                        <h4>Commonly Confused Spellings</h4>
-                        <p>These words are frequently misspelled or confused:</p>
-                    </div>
-                    
-                    <div class="troublesome-grid">
-                        <div class="word-group">
-                            <h4>A</h4>
-                            <ul>
-                                <li><strong>affect</strong> (verb) vs <strong>effect</strong> (noun)</li>
-                                <li><strong>all right</strong> (not alright)</li>
-                                <li><strong>a lot</strong> (not alot)</li>
-                                <li><strong>accommodate</strong> (double c, double m)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="word-group">
-                            <h4>B-D</h4>
-                            <ul>
-                                <li><strong>beginning</strong> (double n)</li>
-                                <li><strong>calendar</strong> (not calender)</li>
-                                <li><strong>committee</strong> (double m, double t)</li>
-                                <li><strong>definite</strong> (not definate)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="word-group">
-                            <h4>E-L</h4>
-                            <ul>
-                                <li><strong>embarrass</strong> (double r, double s)</li>
-                                <li><strong>guarantee</strong> (not garauntee)</li>
-                                <li><strong>independent</strong> (ends in -ent)</li>
-                                <li><strong>liaison</strong> (not liason)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="word-group">
-                            <h4>M-Z</h4>
-                            <ul>
-                                <li><strong>maintenance</strong> (not maintainance)</li>
-                                <li><strong>occurred</strong> (double r)</li>
-                                <li><strong>privilege</strong> (not priviledge)</li>
-                                <li><strong>separate</strong> (not seperate)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="memory-aids">
-                        <h4>Memory Aids</h4>
+                        <h3>Commonly Misspelled Government Terms</h3>
                         <ul>
-                            <li><strong>Affect/Effect:</strong> <em>A</em>ffect is an <em>A</em>ction (verb)</li>
-                            <li><strong>Separate:</strong> There's <em>a rat</em> in separate</li>
-                            <li><strong>Privilege:</strong> It's a <em>privilege</em>, not a <em>priviledge</em></li>
-                            <li><strong>Definitely:</strong> <em>Finite</em> is inside <em>definitely</em></li>
+                            <li><strong>accommodate</strong> (double c, double m)</li>
+                            <li><strong>beginning</strong> (double n)</li>
+                            <li><strong>committee</strong> (double m, double t)</li>
+                            <li><strong>correspondence</strong> (double r)</li>
+                            <li><strong>definitely</strong> (not definately)</li>
+                            <li><strong>environment</strong> (no 'i' before 'r')</li>
+                            <li><strong>foreign</strong> (e before i)</li>
+                            <li><strong>government</strong> (no 'a' between 'n' and 'm')</li>
                         </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Memory Aids for Difficult Words</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Word</th>
+                                    <th>Common Error</th>
+                                    <th>Memory Aid</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>accommodate</td>
+                                    <td>accomodate</td>
+                                    <td>It can accommodate two c's and two m's</td>
+                                </tr>
+                                <tr>
+                                    <td>definitely</td>
+                                    <td>definately</td>
+                                    <td>There's definitely a finite in the middle</td>
+                                </tr>
+                                <tr>
+                                    <td>separate</td>
+                                    <td>seperate</td>
+                                    <td>There's a rat in separate</td>
+                                </tr>
+                                <tr>
+                                    <td>necessary</td>
+                                    <td>neccessary</td>
+                                    <td>One collar (c) and two socks (s) are necessary</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Words with Silent Letters</h3>
+                        <ul>
+                            <li><strong>debt, doubt</strong> (silent 'b')</li>
+                            <li><strong>foreign, sovereign</strong> (silent 'g')</li>
+                            <li><strong>parliament</strong> (silent 'i')</li>
+                            <li><strong>mortgage</strong> (silent 't')</li>
+                            <li><strong>knowledge</strong> (silent 'w')</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Homophones in Government Writing</h3>
+                        <ul>
+                            <li><strong>principal/principle:</strong> The principal concern vs. the principle of fairness</li>
+                            <li><strong>affect/effect:</strong> The policy will affect citizens vs. the effect of the policy</li>
+                            <li><strong>complement/compliment:</strong> This complements the policy vs. pay a compliment</li>
+                            <li><strong>councillor/counsellor:</strong> City councillor vs. guidance counsellor</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Frequently Confused Spellings</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct spellings:</strong></p>
+                            <ul>
+                                <li>The committee will accommodate all requests</li>
+                                <li>Correspondence must be definitely filed</li>
+                                <li>Foreign investment affects the environment</li>
+                                <li>Parliament passed necessary legislation</li>
+                                <li>The principal principle guides our decisions</li>
+                            </ul>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>✗ Common errors:</strong></p>
+                            <ul>
+                                <li>The comittee will accomodate all requests</li>
+                                <li>Correspondance must be definately filed</li>
+                                <li>Foriegn investment effects the enviroment</li>
+                                <li>Parliment passed neccessary legislation</li>
+                                <li>The principle principal guides our decisions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Technical and Professional Terms</h3>
+                        <ul>
+                            <li><strong>bureaucracy</strong> (not beaurocracy)</li>
+                            <li><strong>business</strong> (not buisness)</li>
+                            <li><strong>maintenance</strong> (not maintainance)</li>
+                            <li><strong>occurrence</strong> (double c, double r)</li>
+                            <li><strong>privilege</strong> (not priviledge)</li>
+                            <li><strong>receive</strong> (i before e except after c)</li>
+                            <li><strong>schedule</strong> (sch- beginning)</li>
+                            <li><strong>tomorrow</strong> (one 'm', two 'r's)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Canadian-Specific Challenges</h3>
+                        <ul>
+                            <li><strong>lieutenant</strong> (unusual spelling for pronunciation)</li>
+                            <li><strong>manoeuvre</strong> (British spelling retained)</li>
+                            <li><strong>cheque</strong> (not check for bank instrument)</li>
+                            <li><strong>labour</strong> (not labor)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Proofreading Strategy</h4>
+                        <p>Keep a personal list of words you frequently misspell. Use spell-check but don't rely on it entirely - it won't catch "principle" when you meant "principal."</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Spell-Check Limitations</h4>
+                        <p>Spell-check programs may not recognize Canadian spellings and might flag correct words like "colour" or "centre." Configure your spell-checker for Canadian English when possible.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Troublesome Words -->
                 <div class="quiz-panel" id="quiz-troublesome-words"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('troublesome-words')">
-                        Mark Complete & Continue
+                        Complete Chapter 3!
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <!-- Include JavaScript modules -->
     <script type="module" src="../shared/js/router.js"></script>
@@ -355,7 +656,6 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
-        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
@@ -363,173 +663,26 @@
         const sections = [
             { id: 'introduction', title: '3.01 Introduction' },
             { id: 'canadian-spelling', title: '3.02 Canadian Spelling' },
-            { id: 'variants', title: '3.03 Variants' },
+            { id: 'variants', title: '3.03 Spelling Variants' },
             { id: 'word-endings', title: '3.04 Word Endings' },
             { id: 'troublesome-words', title: '3.05 Troublesome Words' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
-        function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 3 Complete!</h3>
-                    <p>You've mastered Canadian spelling rules. Ready for the next chapter?</p>
-                    <div class="modal-actions">
-                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
-                            Stay Here
-                        </button>
-                        <a href="../index.html" class="btn btn-primary">
-                            Back to Dashboard
-                        </a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Canadian Spelling',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Canadian spelling generally follows which tradition?',
-                            options: [
-                                { label: 'American spelling', correct: false },
-                                { label: 'British spelling', correct: true },
-                                { label: 'French spelling', correct: false },
-                                { label: 'No established convention', correct: false }
-                            ],
-                            rationale: 'Canadian spelling generally follows British conventions with some American influences.',
-                            ref: '§3.01'
-                        }
-                    ]
-                },
-                'canadian-spelling': {
-                    title: 'Canadian Spelling Conventions',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which is the correct Canadian spelling?',
-                            options: [
-                                { label: 'color', correct: false },
-                                { label: 'colour', correct: true },
-                                { label: 'colur', correct: false },
-                                { label: 'coler', correct: false }
-                            ],
-                            rationale: 'Canadian spelling retains the British "our" ending in words like colour.',
-                            ref: '§3.02'
-                        }
-                    ]
-                },
-                variants: {
-                    title: 'Acceptable Variants',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which variant is preferred in Canadian government writing?',
-                            options: [
-                                { label: 'advisor', correct: false },
-                                { label: 'adviser', correct: true },
-                                { label: 'both are equally acceptable', correct: false },
-                                { label: 'neither is correct', correct: false }
-                            ],
-                            rationale: 'Canadian government style prefers "adviser" over "advisor".',
-                            ref: '§3.03'
-                        }
-                    ]
-                },
-                'word-endings': {
-                    title: 'Word Endings',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should "travel" + "ing" be spelled in Canadian English?',
-                            options: [
-                                { label: 'traveling', correct: false },
-                                { label: 'travelling', correct: true },
-                                { label: 'traviling', correct: false },
-                                { label: 'traveleing', correct: false }
-                            ],
-                            rationale: 'Canadian spelling doubles the "l" when adding suffixes to words ending in "l".',
-                            ref: '§3.04'
-                        }
-                    ]
-                },
-                'troublesome-words': {
-                    title: 'Troublesome Words',
-                    questions: [
-                        {
-                            type: 'fill-blank',
-                            stem: 'The new policy will _____ all employees. (influence)',
-                            answer: 'affect',
-                            rationale: 'Affect is the verb meaning to influence.',
-                            ref: '§3.05'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = this.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(this);
                 });
             });
+            
+            // Show first section by default
+            showSection('introduction');
         }
         
         function showSection(sectionId) {
@@ -552,18 +705,96 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+        
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 3 Complete!</h3>
+                    <p>Congratulations! You've mastered Canadian spelling! Your writing will be clearer and more effective.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
+                        </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                // Load quiz data from JSON file
+                const response = await fetch(`../data/quizzes/ch03-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 3');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
-        
-        window.addEventListener('progress-changed', updateProgressBar);
     </script>
 </body>
 </html>

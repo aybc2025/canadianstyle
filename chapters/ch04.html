@@ -8,79 +8,128 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 4: Capitalization</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
-                </div>
-                <span class="progress-text">Progress</span>
-            </div>
-        </header>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">4.01 Introduction</a>
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 4
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">4</div>
+                <div>
+                    <h1>Capitalization</h1>
+                    <p>Master the rules for capitalizing words in Canadian government writing</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">4.01 Introduction</a>
                 <a href="#initial-words" class="tab-link" data-section="initial-words">4.02 Initial Words</a>
                 <a href="#personal-names" class="tab-link" data-section="personal-names">4.03 Personal Names</a>
-                <a href="#government" class="tab-link" data-section="government">4.05 Government Bodies</a>
-                <a href="#titles" class="tab-link" data-section="titles">4.08 Titles of Office</a>
-                <a href="#geography" class="tab-link" data-section="geography">4.21 Geographical Terms</a>
-                <a href="#publications" class="tab-link" data-section="publications">4.29 Publications</a>
-                <a href="#headings" class="tab-link" data-section="headings">4.31 Headings</a>
+                <a href="#government" class="tab-link" data-section="government">4.04 Government</a>
+                <a href="#titles" class="tab-link" data-section="titles">4.05 Titles</a>
+                <a href="#geography" class="tab-link" data-section="geography">4.06 Geography</a>
+                <a href="#publications" class="tab-link" data-section="publications">4.07 Publications</a>
+                <a href="#headings" class="tab-link" data-section="headings">4.08 Headings</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 4.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>4.01 Introduction to Capitalization</h2>
+                    <h2>4.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Proper capitalization enhances clarity and shows respect for names, titles, and important concepts. This chapter covers Canadian government conventions for capitalizing various elements in official writing.</p>
+                <div class="lesson-content">
+                    <p>Capitalization rules help readers distinguish between different types of words and understand their importance. Consistent capitalization enhances clarity and follows established conventions in Canadian government writing.</p>
                     
-                    <div class="key-principles">
-                        <h3>General Principles</h3>
+                    <div class="key-principle">
+                        <h3>Key Principle</h3>
+                        <p>Capitalize proper nouns (specific names) and the first word of sentences. When in doubt, use lowercase unless you have a specific reason to capitalize.</p>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>Basic Capitalization Rules</h4>
                         <ul>
-                            <li>Capitalize proper nouns and adjectives</li>
-                            <li>Use capitals sparingly for maximum impact</li>
-                            <li>Follow Canadian government conventions</li>
-                            <li>Be consistent throughout documents</li>
+                            <li><strong>First words:</strong> Sentences, quotations, lines of poetry</li>
+                            <li><strong>Proper nouns:</strong> Names of specific people, places, things</li>
+                            <li><strong>Proper adjectives:</strong> Adjectives derived from proper nouns</li>
+                            <li><strong>Official titles:</strong> When used before names</li>
+                            <li><strong>Important words in titles:</strong> Books, documents, headings</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Basic Rules</h4>
-                            <ul>
-                                <li>First word of sentences</li>
-                                <li>Proper names: <em>John Smith, Ottawa</em></li>
-                                <li>Official titles: <em>Prime Minister</em></li>
-                                <li>Government bodies: <em>Parliament</em></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Avoid Over-Capitalizing</h4>
-                            <ul>
-                                <li>Common nouns: <em>the minister</em></li>
-                                <li>General references: <em>federal government</em></li>
-                                <li>Generic titles: <em>a deputy minister</em></li>
-                                <li>Compass directions: <em>north, south</em></li>
-                            </ul>
-                        </div>
+                    <div class="examples-box">
+                        <h4>Proper vs. Common Nouns</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Common Noun (lowercase)</th>
+                                    <th>Proper Noun (capitalized)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>the minister</td>
+                                    <td>Minister Johnson</td>
+                                </tr>
+                                <tr>
+                                    <td>the department</td>
+                                    <td>Department of Justice Canada</td>
+                                </tr>
+                                <tr>
+                                    <td>the city</td>
+                                    <td>Ottawa</td>
+                                </tr>
+                                <tr>
+                                    <td>the university</td>
+                                    <td>University of Toronto</td>
+                                </tr>
+                                <tr>
+                                    <td>canadian literature</td>
+                                    <td>Canadian literature</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h4>When NOT to Capitalize</h4>
+                        <ul>
+                            <li><strong>Generic references:</strong> "the department announced" (not specific)</li>
+                            <li><strong>Common nouns:</strong> "government employees" (general group)</li>
+                            <li><strong>Seasons:</strong> spring, summer, fall, winter</li>
+                            <li><strong>Directions:</strong> north, south, east, west (unless part of proper name)</li>
+                            <li><strong>Academic subjects:</strong> mathematics, english (unless language or specific course)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Overcapitalization</h4>
+                        <p>Avoid unnecessary capitalization. Government writing should not capitalize words simply for emphasis or perceived importance. Use capitalization rules consistently.</p>
                     </div>
                 </div>
-                
-                <!-- Quiz Panel for Introduction -->
-                <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
@@ -89,48 +138,111 @@
                 </div>
             </section>
 
-            <!-- Initial Words Section -->
-            <section class="content-section" id="initial-words" style="display: none;">
+            <!-- Section 4.02: Initial Words -->
+            <section class="content-section" id="initial-words">
                 <div class="section-header">
                     <h2>4.02 Initial Words</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>The first word of sentences, quotations, and certain other constructions should be capitalized according to specific rules.</p>
+                    
                     <div class="rule-box">
-                        <h4>Capitalize First Words Of:</h4>
+                        <h3>Sentence Beginnings</h3>
                         <ul>
-                            <li>Sentences and sentence fragments</li>
-                            <li>Direct quotations</li>
-                            <li>Lines of poetry</li>
-                            <li>Items in formal lists</li>
-                            <li>Headings and titles</li>
+                            <li><strong>First word of sentence:</strong> Always capitalize</li>
+                            <li><strong>After periods:</strong> New sentence begins</li>
+                            <li><strong>After colons:</strong> Capitalize if complete sentence follows</li>
+                            <li><strong>After question marks:</strong> New sentence begins</li>
+                            <li><strong>After exclamation marks:</strong> New sentence begins</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
+                    <div class="examples-box">
+                        <h4>Colon Usage</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Complete sentence after colon (capitalize):</strong></p>
+                            <p>The report reached one conclusion: The current system is inadequate.</p>
+                        </div>
                         <div class="example-item">
-                            <h4>Sentences & Quotations</h4>
+                            <p><strong>✓ Fragment after colon (lowercase):</strong></p>
+                            <p>The report identified three problems: budget constraints, staff shortages, and outdated equipment.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Quotations</h3>
+                        <ul>
+                            <li><strong>Direct quotations:</strong> Capitalize first word if complete sentence</li>
+                            <li><strong>Partial quotations:</strong> Don't capitalize unless proper noun</li>
+                            <li><strong>Interrupted quotations:</strong> Don't capitalize resumption</li>
+                            <li><strong>Block quotations:</strong> Follow original capitalization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Quotation Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Complete sentence:</strong></p>
+                            <p>The Minister said, "This policy will benefit all Canadians."</p>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Partial quotation:</strong></p>
+                            <p>The Minister described the policy as "beneficial to all Canadians."</p>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Interrupted quotation:</strong></p>
+                            <p>"This policy," said the Minister, "will benefit all Canadians."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Lists and Bullet Points</h3>
+                        <ul>
+                            <li><strong>Sentence-style lists:</strong> Capitalize first word of each item</li>
+                            <li><strong>Fragment lists:</strong> Usually lowercase unless proper noun</li>
+                            <li><strong>Numbered lists:</strong> Follow same rules as bullet points</li>
+                            <li><strong>Consistency:</strong> Be consistent within each list</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>List Capitalization</h4>
+                        <div class="example-item good">
+                            <p><strong>Complete sentences:</strong></p>
+                            <p>The committee will consider three options:</p>
                             <ul>
-                                <li>The report was completed on time.</li>
-                                <li>She said, "The meeting is at 2 p.m."</li>
-                                <li>Question: How many attended?</li>
-                                <li>Note: This applies to all documents.</li>
+                                <li>The department can hire additional staff.</li>
+                                <li>Current employees can receive overtime pay.</li>
+                                <li>External contractors can supplement the team.</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>Lists & Headings</h4>
+                            <p><strong>Fragments:</strong></p>
+                            <p>The committee identified three needs:</p>
                             <ul>
-                                <li>The following items are required:</li>
-                                <li>• Application form</li>
-                                <li>• Two references</li>
-                                <li>• Proof of identity</li>
+                                <li>additional staff</li>
+                                <li>overtime funding</li>
+                                <li>external support</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>After Dashes and Parentheses</h3>
+                        <ul>
+                            <li><strong>Em dashes:</strong> Don't capitalize unless new sentence</li>
+                            <li><strong>Parenthetical sentences:</strong> Capitalize if independent</li>
+                            <li><strong>Parenthetical fragments:</strong> Don't capitalize</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Consistency Rule</h4>
+                        <p>Whatever style you choose for lists, headings, or other elements, maintain it consistently throughout your document.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Initial Words -->
                 <div class="quiz-panel" id="quiz-initial-words"></div>
                 
                 <div class="section-footer">
@@ -140,44 +252,136 @@
                 </div>
             </section>
 
-            <!-- Personal Names Section -->
-            <section class="content-section" id="personal-names" style="display: none;">
+            <!-- Section 4.03: Personal Names -->
+            <section class="content-section" id="personal-names">
                 <div class="section-header">
                     <h2>4.03 Personal Names</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Personal names and related elements require careful attention to capitalization, especially in formal government documents where accuracy and respect are essential.</p>
+                    
                     <div class="rule-box">
-                        <h4>Capitalizing Personal Names</h4>
-                        <p>All parts of personal names are capitalized, including prefixes and particles.</p>
+                        <h3>Names and Titles</h3>
+                        <ul>
+                            <li><strong>Full names:</strong> Capitalize all parts (John Smith)</li>
+                            <li><strong>Surnames only:</strong> Capitalize (Mr. Smith)</li>
+                            <li><strong>Given names only:</strong> Capitalize (John)</li>
+                            <li><strong>Titles before names:</strong> Capitalize (Dr. Smith, Prime Minister Trudeau)</li>
+                            <li><strong>Titles after names:</strong> Usually lowercase (John Smith, prime minister)</li>
+                        </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Names with Prefixes</h4>
+                    <div class="examples-box">
+                        <h4>Title Usage</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Titles before names (capitalize):</strong></p>
                             <ul>
-                                <li>Mary MacDonald</li>
-                                <li>Jean-Claude Van Damme</li>
-                                <li>Ludwig van Beethoven</li>
-                                <li>Vincent van Gogh</li>
-                                <li>Joachim von Ribbentrop</li>
+                                <li>Prime Minister Trudeau announced the policy</li>
+                                <li>Minister Johnson will attend the meeting</li>
+                                <li>Dr. Smith presented the research</li>
+                                <li>Professor Brown teaches at the university</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>Special Cases</h4>
+                            <p><strong>✓ Titles after names or alone (lowercase):</strong></p>
                             <ul>
-                                <li>O'Connor, O'Neill</li>
-                                <li>McLeod, McKenzie</li>
-                                <li>St. John, St. Laurent</li>
-                                <li>da Vinci, de la Cruz</li>
-                                <li>ibn Sina, ben Gurion</li>
+                                <li>Justin Trudeau, prime minister of Canada</li>
+                                <li>Sarah Johnson, minister of health</li>
+                                <li>The prime minister announced the policy</li>
+                                <li>The minister will attend the meeting</li>
                             </ul>
                         </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Honorific Titles</h3>
+                        <ul>
+                            <li><strong>The Honourable:</strong> Before names of certain officials</li>
+                            <li><strong>The Right Honourable:</strong> Prime Minister and certain others</li>
+                            <li><strong>His/Her Excellency:</strong> Governor General, ambassadors</li>
+                            <li><strong>His/Her Majesty:</strong> Monarchs</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Canadian Official Titles</h4>
+                        <div class="example-item good">
+                            <p><strong>Examples of formal titles:</strong></p>
+                            <ul>
+                                <li>The Right Honourable Justin Trudeau, Prime Minister of Canada</li>
+                                <li>The Honourable Chrystia Freeland, Deputy Prime Minister</li>
+                                <li>Her Excellency Mary Simon, Governor General of Canada</li>
+                                <li>The Honourable Justice Smith (Supreme Court)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Academic and Professional Designations</h3>
+                        <ul>
+                            <li><strong>Academic degrees:</strong> Capitalize when abbreviated (Ph.D., M.A.)</li>
+                            <li><strong>Professional titles:</strong> Capitalize before names (Professor Smith)</li>
+                            <li><strong>Generic references:</strong> Lowercase (the professor, the doctor)</li>
+                            <li><strong>Department affiliations:</strong> Capitalize official names</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Academic Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Specific references (capitalize):</strong></p>
+                            <ul>
+                                <li>Professor Sarah Brown, Department of Economics</li>
+                                <li>Dr. Michael Johnson, Chief Medical Officer</li>
+                                <li>Dean Elizabeth Wilson</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Generic references (lowercase):</strong></p>
+                            <ul>
+                                <li>The professor presented the research</li>
+                                <li>A doctor reviewed the proposal</li>
+                                <li>The dean approved the program</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Cultural and Religious Considerations</h3>
+                        <ul>
+                            <li><strong>Names from other cultures:</strong> Follow individual preferences</li>
+                            <li><strong>Religious titles:</strong> Capitalize before names (Father Smith, Rabbi Cohen)</li>
+                            <li><strong>Nobility titles:</strong> Capitalize when part of name (Sir John)</li>
+                            <li><strong>Indigenous names:</strong> Respect traditional naming conventions</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Special Cases</h4>
+                        <div class="example-item good">
+                            <p><strong>Various naming conventions:</strong></p>
+                            <ul>
+                                <li>Jean-Pierre Dubois (hyphenated French name)</li>
+                                <li>Mary Two Eagles (Indigenous name)</li>
+                                <li>Li Wei (Chinese name order)</li>
+                                <li>van der Berg (Dutch particles)</li>
+                                <li>O'Brien (Irish prefix)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Verification</h4>
+                        <p>When writing about specific individuals, verify the correct spelling and capitalization of their names and titles. Check official biographies or government directories.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Respectful Usage</h4>
+                        <p>Always use names and titles respectfully and accurately. When uncertain about preferences, ask the individual or consult official sources.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Personal Names -->
                 <div class="quiz-panel" id="quiz-personal-names"></div>
                 
                 <div class="section-footer">
@@ -187,46 +391,166 @@
                 </div>
             </section>
 
-            <!-- Government Bodies Section -->
-            <section class="content-section" id="government" style="display: none;">
+            <!-- Section 4.04: Government -->
+            <section class="content-section" id="government">
                 <div class="section-header">
-                    <h2>4.05 Government Bodies</h2>
+                    <h2>4.04 Government</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Government entities, institutions, and bodies have specific capitalization conventions that reflect their official status and help distinguish between general and specific references.</p>
+                    
                     <div class="rule-box">
-                        <h4>Capitalizing Government Terms</h4>
-                        <p>Capitalize specific government bodies, but not general references.</p>
+                        <h3>Government Institutions</h3>
+                        <ul>
+                            <li><strong>Specific institutions:</strong> Capitalize official names</li>
+                            <li><strong>Generic references:</strong> Lowercase general terms</li>
+                            <li><strong>Parliament:</strong> Capitalize when referring to Canadian Parliament</li>
+                            <li><strong>Government:</strong> Capitalize when referring to specific administration</li>
+                        </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Specific Bodies (Capitalize)</h4>
+                    <div class="examples-box">
+                        <h4>Parliamentary References</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Specific institutions (capitalize):</strong></p>
                             <ul>
-                                <li>Parliament, House of Commons</li>
-                                <li>Senate, Supreme Court</li>
-                                <li>Cabinet, Privy Council</li>
-                                <li>Government of Canada</li>
-                                <li>Treasury Board</li>
-                                <li>Federal Court of Appeal</li>
+                                <li>Parliament of Canada</li>
+                                <li>House of Commons</li>
+                                <li>Senate of Canada</li>
+                                <li>Supreme Court of Canada</li>
+                                <li>Federal Court of Canada</li>
                             </ul>
                         </div>
-                        
                         <div class="example-item">
-                            <h4>General References (lowercase)</h4>
+                            <p><strong>✓ Generic references (lowercase):</strong></p>
                             <ul>
-                                <li>federal government</li>
-                                <li>the government</li>
-                                <li>parliamentary procedure</li>
-                                <li>ministerial responsibility</li>
-                                <li>cabinet meeting</li>
-                                <li>a supreme court</li>
+                                <li>The parliamentary committee met yesterday</li>
+                                <li>Federal and provincial governments</li>
+                                <li>The supreme court of the province</li>
+                                <li>Municipal governments across Canada</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Federal Departments and Agencies</h3>
+                        <ul>
+                            <li><strong>Full official names:</strong> Always capitalize</li>
+                            <li><strong>Short forms:</strong> Capitalize if commonly recognized</li>
+                            <li><strong>Generic references:</strong> Lowercase "the department"</li>
+                            <li><strong>Crown corporations:</strong> Capitalize official names</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Department Examples</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Full Name</th>
+                                    <th>Short Form</th>
+                                    <th>Generic Reference</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Department of Justice Canada</td>
+                                    <td>Justice Canada</td>
+                                    <td>the department</td>
+                                </tr>
+                                <tr>
+                                    <td>Health Canada</td>
+                                    <td>Health Canada</td>
+                                    <td>the health department</td>
+                                </tr>
+                                <tr>
+                                    <td>Employment and Social Development Canada</td>
+                                    <td>ESDC</td>
+                                    <td>the employment department</td>
+                                </tr>
+                                <tr>
+                                    <td>Canada Revenue Agency</td>
+                                    <td>CRA</td>
+                                    <td>the revenue agency</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Provincial and Municipal Government</h3>
+                        <ul>
+                            <li><strong>Official names:</strong> Government of Ontario, City of Toronto</li>
+                            <li><strong>Generic references:</strong> provincial government, municipal council</li>
+                            <li><strong>Legislatures:</strong> Legislative Assembly of Ontario</li>
+                            <li><strong>Courts:</strong> Ontario Court of Justice</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Provincial Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Specific (capitalize):</strong></p>
+                            <ul>
+                                <li>Government of British Columbia</li>
+                                <li>Legislative Assembly of Alberta</li>
+                                <li>Assemblée nationale du Québec</li>
+                                <li>City of Vancouver</li>
+                                <li>Region of Peel</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>✓ Generic (lowercase):</strong></p>
+                            <ul>
+                                <li>The provincial government announced</li>
+                                <li>Municipal governments across Ontario</li>
+                                <li>The legislative assembly voted</li>
+                                <li>Regional and municipal councils</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>International References</h3>
+                        <ul>
+                            <li><strong>Foreign governments:</strong> Government of the United States</li>
+                            <li><strong>International bodies:</strong> United Nations, European Union</li>
+                            <li><strong>Treaties and agreements:</strong> North American Free Trade Agreement</li>
+                            <li><strong>Generic references:</strong> foreign governments, international organizations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Legal and Constitutional Terms</h4>
+                        <div class="example-item good">
+                            <p><strong>Constitutional documents and concepts:</strong></p>
+                            <ul>
+                                <li>Constitution Act, 1982</li>
+                                <li>Charter of Rights and Freedoms</li>
+                                <li>British North America Act</li>
+                                <li>Crown copyright (the Crown as institution)</li>
+                                <li>The Crown in Right of Canada</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Committees and Boards</h3>
+                        <ul>
+                            <li><strong>Standing committees:</strong> Standing Committee on Finance</li>
+                            <li><strong>Special committees:</strong> Special Committee on Electoral Reform</li>
+                            <li><strong>Boards and tribunals:</strong> Immigration and Refugee Board</li>
+                            <li><strong>Advisory bodies:</strong> Economic Advisory Council</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Official Names</h4>
+                        <p>Always verify official names of government bodies. They may change over time or have specific formal designations that differ from common usage.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Government -->
                 <div class="quiz-panel" id="quiz-government"></div>
                 
                 <div class="section-footer">
@@ -236,49 +560,156 @@
                 </div>
             </section>
 
-            <!-- Titles of Office Section -->
-            <section class="content-section" id="titles" style="display: none;">
+            <!-- Section 4.05: Titles -->
+            <section class="content-section" id="titles">
                 <div class="section-header">
-                    <h2>4.08 Titles of Office</h2>
+                    <h2>4.05 Titles</h2>
                 </div>
                 
-                <div class="content-block">
+                <div class="lesson-content">
+                    <p>Titles of publications, documents, artworks, and other works follow specific capitalization conventions. These rules help distinguish titles from regular text and show respect for creative works.</p>
+                    
                     <div class="rule-box">
-                        <h4>When to Capitalize Titles</h4>
+                        <h3>Title Case Rules</h3>
+                        <p><strong>Capitalize:</strong></p>
                         <ul>
-                            <li>Before a person's name</li>
-                            <li>When referring to a specific office holder</li>
-                            <li>In formal address or signature</li>
-                            <li>When standing alone as a title of respect</li>
+                            <li><strong>First and last words</strong> always</li>
+                            <li><strong>All nouns, pronouns, verbs, adjectives, adverbs</strong></li>
+                            <li><strong>Subordinating conjunctions</strong> (because, although, since)</li>
+                            <li><strong>Prepositions of 5+ letters</strong> (between, through, without)</li>
+                        </ul>
+                        <p><strong>Don't capitalize:</strong></p>
+                        <ul>
+                            <li><strong>Articles:</strong> a, an, the</li>
+                            <li><strong>Short prepositions:</strong> of, on, in, at, by, for</li>
+                            <li><strong>Coordinating conjunctions:</strong> and, but, or, nor, yet, so</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Capitalize</h4>
+                    <div class="examples-box">
+                        <h4>Title Capitalization Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct capitalization:</strong></p>
                             <ul>
-                                <li>Prime Minister Trudeau</li>
-                                <li>The Prime Minister announced...</li>
-                                <li>Minister of Finance</li>
-                                <li>Chief Justice McLachlin</li>
-                                <li>Speaker of the House</li>
+                                <li>The Canadian Style: A Guide to Writing and Editing</li>
+                                <li>Report on the Impact of Climate Change in Northern Communities</li>
+                                <li>Guidelines for Writing Effective Policy Documents</li>
+                                <li>Building a Better Future: Strategic Plan 2024-2029</li>
+                                <li>What Every Canadian Should Know About Digital Privacy</li>
                             </ul>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Lowercase</h4>
+                        <div class="example-item bad">
+                            <p><strong>✗ Incorrect capitalization:</strong></p>
                             <ul>
-                                <li>John Smith, prime minister</li>
-                                <li>the ministers met</li>
-                                <li>a deputy minister</li>
-                                <li>former prime minister</li>
-                                <li>acting chief justice</li>
+                                <li>The canadian style: a guide to writing and editing</li>
+                                <li>Report On The Impact Of Climate Change In Northern Communities</li>
+                                <li>Guidelines For Writing Effective Policy Documents</li>
+                                <li>Building A Better Future: Strategic Plan 2024-2029</li>
+                                <li>what every canadian should know about digital privacy</li>
                             </ul>
                         </div>
                     </div>
+                    
+                    <div class="rule-box">
+                        <h3>Government Document Titles</h3>
+                        <ul>
+                            <li><strong>Acts and legislation:</strong> Use official capitalization</li>
+                            <li><strong>Policy documents:</strong> Follow title case rules</li>
+                            <li><strong>Reports:</strong> Capitalize as published</li>
+                            <li><strong>Regulations:</strong> Use official names</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Legal and Policy Documents</h4>
+                        <div class="example-item good">
+                            <p><strong>Legislation and regulations:</strong></p>
+                            <ul>
+                                <li>Privacy Act</li>
+                                <li>Access to Information Act</li>
+                                <li>Criminal Code</li>
+                                <li>Official Languages Regulations</li>
+                                <li>Immigration and Refugee Protection Act</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Policy and strategy documents:</strong></p>
+                            <ul>
+                                <li>Federal Sustainable Development Strategy</li>
+                                <li>Digital Operations Strategic Plan</li>
+                                <li>Policy on Service and Digital</li>
+                                <li>Directive on Automated Decision-Making</li>
+                            </ul>
+                        </div>
+                    </examples-box>
+                    
+                    <div class="rule-box">
+                        <h3>Academic and Scientific Works</h3>
+                        <ul>
+                            <li><strong>Books:</strong> Title case, italicized</li>
+                            <li><strong>Journal articles:</strong> Title case, in quotation marks</li>
+                            <li><strong>Reports:</strong> Title case, usually italicized</li>
+                            <li><strong>Conferences:</strong> Title case for formal names</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Academic Citation Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Various publication types:</strong></p>
+                            <ul>
+                                <li><em>Public Administration in Canada: Selected Readings</em> (book)</li>
+                                <li>"The Role of Technology in Modern Governance" (article)</li>
+                                <li><em>Annual Report on the Access to Information Act</em> (report)</li>
+                                <li>Canadian Public Administration Conference (conference)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Media and Entertainment</h3>
+                        <ul>
+                            <li><strong>Newspapers:</strong> <em>The Globe and Mail</em>, <em>Toronto Star</em></li>
+                            <li><strong>Magazines:</strong> <em>Maclean's</em>, <em>Canadian Geographic</em></li>
+                            <li><strong>TV shows:</strong> <em>The National</em>, <em>Marketplace</em></li>
+                            <li><strong>Movies:</strong> <em>Atanarjuat: The Fast Runner</em></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Special Cases</h3>
+                        <ul>
+                            <li><strong>Hyphenated words:</strong> Capitalize both parts if both are important</li>
+                            <li><strong>Subtitles:</strong> Capitalize first word after colon</li>
+                            <li><strong>Series titles:</strong> Follow individual volume capitalization</li>
+                            <li><strong>Quotations in titles:</strong> Maintain original capitalization</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Special Capitalization Cases</h4>
+                        <div class="example-item good">
+                            <p><strong>Hyphenated and complex titles:</strong></p>
+                            <ul>
+                                <li>Twenty-First Century Challenges in Public Administration</li>
+                                <li>E-Government: Digital Transformation in the Public Sector</li>
+                                <li>French-English Relations: A Historical Perspective</li>
+                                <li>Post-Secondary Education: Trends and Opportunities</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Consistency Check</h4>
+                        <p>When citing the same work multiple times, ensure consistent capitalization. Keep a style sheet for frequently referenced documents.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Official vs. Common Usage</h4>
+                        <p>Some titles may be commonly written with different capitalization than their official form. Always check the official version for formal documents.</p>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Titles -->
                 <div class="quiz-panel" id="quiz-titles"></div>
                 
                 <div class="section-footer">
@@ -288,52 +719,184 @@
                 </div>
             </section>
 
-            <!-- Geography Section -->
-            <section class="content-section" id="geography" style="display: none;">
+            <!-- Section 4.06: Geography -->
+            <section class="content-section" id="geography">
                 <div class="section-header">
-                    <h2>4.21 Geographical Terms</h2>
+                    <h2>4.06 Geography</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Geographical Capitalization</h4>
-                        <p>Capitalize proper geographical names but not generic terms.</p>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Proper Names (Capitalize)</h4>
-                            <ul>
-                                <li>Rocky Mountains</li>
-                                <li>Great Lakes</li>
-                                <li>Atlantic Ocean</li>
-                                <li>Saskatchewan River</li>
-                                <li>Hudson Bay</li>
-                                <li>Niagara Falls</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Generic Terms (lowercase)</h4>
-                            <ul>
-                                <li>the river</li>
-                                <li>the mountains</li>
-                                <li>the ocean</li>
-                                <li>northern Canada</li>
-                                <li>western provinces</li>
-                                <li>the falls</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="lesson-content">
+                    <p>Geographic names and directional terms follow specific capitalization rules that help distinguish between proper place names and general geographic references.</p>
                     
                     <div class="rule-box">
-                        <h4>Compass Directions</h4>
-                        <p><strong>Capitalize:</strong> When part of proper name (North America, Western Canada)</p>
-                        <p><strong>Lowercase:</strong> When indicating direction (drive north, eastern regions)</p>
+                        <h3>Place Names</h3>
+                        <ul>
+                            <li><strong>Countries:</strong> Canada, United States, France</li>
+                            <li><strong>Provinces/States:</strong> Ontario, British Columbia, California</li>
+                            <li><strong>Cities:</strong> Ottawa, Toronto, Vancouver</li>
+                            <li><strong>Geographic features:</strong> Hudson Bay, Rocky Mountains, Lake Ontario</li>
+                            <li><strong>Regions:</strong> Atlantic Canada, the Prairies, the Maritimes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Canadian Geographic Names</h4>
+                        <div class="example-item good">
+                            <p><strong>Provinces and territories:</strong></p>
+                            <ul>
+                                <li>British Columbia, Alberta, Saskatchewan, Manitoba</li>
+                                <li>Ontario, Quebec, New Brunswick, Nova Scotia</li>
+                                <li>Prince Edward Island, Newfoundland and Labrador</li>
+                                <li>Northwest Territories, Nunavut, Yukon</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Major cities:</strong></p>
+                            <ul>
+                                <li>Ottawa, Toronto, Montreal, Vancouver</li>
+                                <li>Calgary, Edmonton, Winnipeg, Halifax</li>
+                                <li>Quebec City, Victoria, Regina, Charlottetown</li>
+                                <li>St. John's, Whitehorse, Yellowknife, Iqaluit</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Directions and Regions</h3>
+                        <ul>
+                            <li><strong>Specific regions:</strong> Capitalize when referring to recognized areas</li>
+                            <li><strong>General directions:</strong> Lowercase compass directions</li>
+                            <li><strong>Adjectives:</strong> Usually capitalize regional adjectives</li>
+                            <li><strong>Part of proper name:</strong> Capitalize when part of official name</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Directional Terms</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Specific regions (capitalize):</strong></p>
+                            <ul>
+                                <li>Western Canada, Eastern Canada</li>
+                                <li>Northern Ontario, Southern Alberta</li>
+                                <li>the North (referring to northern Canada)</li>
+                                <li>the West (referring to western provinces)</li>
+                                <li>the Maritimes, the Prairies</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>✓ General directions (lowercase):</strong></p>
+                            <ul>
+                                <li>Travel north on Highway 401</li>
+                                <li>The wind is blowing from the west</li>
+                                <li>Turn south at the intersection</li>
+                                <li>The office is located east of downtown</li>
+                            </ul>
+                        </div>
+                    </examples-box>
+                    
+                    <div class="rule-box">
+                        <h3>Natural Features</h3>
+                        <ul>
+                            <li><strong>Named features:</strong> Lake Superior, Mount Logan, Fraser River</li>
+                            <li><strong>Generic terms:</strong> the lake, the mountain, the river</li>
+                            <li><strong>Multiple features:</strong> the Great Lakes, the Canadian Rockies</li>
+                            <li><strong>Unofficial names:</strong> Follow local usage</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Natural Features</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Specific Name (capitalize)</th>
+                                    <th>Generic Reference (lowercase)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Lakes</td>
+                                    <td>Lake Ontario, Great Bear Lake</td>
+                                    <td>the lake, northern lakes</td>
+                                </tr>
+                                <tr>
+                                    <td>Rivers</td>
+                                    <td>St. Lawrence River, Mackenzie River</td>
+                                    <td>the river, major rivers</td>
+                                </tr>
+                                <tr>
+                                    <td>Mountains</td>
+                                    <td>Mount Logan, Rocky Mountains</td>
+                                    <td>the mountain, mountain ranges</td>
+                                </tr>
+                                <tr>
+                                    <td>Bays</td>
+                                    <td>Hudson Bay, Georgian Bay</td>
+                                    <td>the bay, arctic bays</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Streets and Addresses</h3>
+                        <ul>
+                            <li><strong>Street names:</strong> Capitalize all parts of official names</li>
+                            <li><strong>Abbreviations:</strong> Follow postal conventions</li>
+                            <li><strong>Directions in names:</strong> Capitalize when part of street name</li>
+                            <li><strong>Generic terms:</strong> Lowercase when not part of specific name</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Address Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Street addresses:</strong></p>
+                            <ul>
+                                <li>123 Main Street</li>
+                                <li>456 Queen Street West</li>
+                                <li>789 Rue Saint-Jacques</li>
+                                <li>321 Broadway Avenue</li>
+                                <li>654 Parliament Hill Circle</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>International Locations</h3>
+                        <ul>
+                            <li><strong>Country names:</strong> Follow official English names</li>
+                            <li><strong>Major cities:</strong> Use established English forms</li>
+                            <li><strong>Foreign terms:</strong> Capitalize according to local conventions</li>
+                            <li><strong>Translated names:</strong> Follow accepted English translations</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>International Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Countries and cities:</strong></p>
+                            <ul>
+                                <li>United Kingdom, United States, People's Republic of China</li>
+                                <li>London, New York, Beijing, Mexico City</li>
+                                <li>Côte d'Ivoire, São Paulo, München (when using local names)</li>
+                                <li>Ivory Coast, Sao Paulo, Munich (anglicized forms)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Official Sources</h4>
+                        <p>For Canadian place names, consult the Canadian Geographical Names Database. For international locations, use official government sources or established references.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Changing Names</h4>
+                        <p>Geographic names can change over time. Verify current official names, especially for international locations and Indigenous place names that may have been updated.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Geography -->
                 <div class="quiz-panel" id="quiz-geography"></div>
                 
                 <div class="section-footer">
@@ -343,47 +906,192 @@
                 </div>
             </section>
 
-            <!-- Publications Section -->
-            <section class="content-section" id="publications" style="display: none;">
+            <!-- Section 4.07: Publications -->
+            <section class="content-section" id="publications">
                 <div class="section-header">
-                    <h2>4.29 Publications</h2>
+                    <h2>4.07 Publications</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Publication Titles</h4>
-                        <p>Capitalize the first word, last word, and all important words in titles of publications.</p>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Books & Documents</h4>
-                            <ul>
-                                <li><em>The Canadian Style</em></li>
-                                <li><em>A Guide to Plain Language</em></li>
-                                <li><em>Annual Report on Privacy</em></li>
-                                <li><em>Procedures for Ministers' Offices</em></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Articles & Chapters</h4>
-                            <ul>
-                                <li>"Using Plain Language in Government"</li>
-                                <li>"Chapter 4: Capitalization Rules"</li>
-                                <li>"The Art of Clear Writing"</li>
-                                <li>"Guidelines for Web Content"</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="lesson-content">
+                    <p>Publications, media, and creative works have specific capitalization and formatting conventions that help distinguish different types of content and show proper attribution.</p>
                     
                     <div class="rule-box">
-                        <h4>Don't Capitalize</h4>
-                        <p>Articles (a, an, the), prepositions under 5 letters (of, in, on, to), and coordinating conjunctions (and, but, or) unless they are the first or last word.</p>
+                        <h3>Books and Major Publications</h3>
+                        <ul>
+                            <li><strong>Titles:</strong> Use title case capitalization</li>
+                            <li><strong>Formatting:</strong> Italicize book titles</li>
+                            <li><strong>Subtitles:</strong> Capitalize first word after colon</li>
+                            <li><strong>Series:</strong> Capitalize series names</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Book Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Canadian books and publications:</strong></p>
+                            <ul>
+                                <li><em>The Canadian Style: A Guide to Writing and Editing</em></li>
+                                <li><em>Two Solitudes</em> by Hugh MacLennan</li>
+                                <li><em>A Short History of Canada</em> by Desmond Morton</li>
+                                <li><em>The Handmaid's Tale</em> by Margaret Atwood</li>
+                                <li><em>Who Has Seen the Wind</em> by W.O. Mitchell</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Periodicals</h3>
+                        <ul>
+                            <li><strong>Newspapers:</strong> Italicize, include "The" if part of official name</li>
+                            <li><strong>Magazines:</strong> Italicize titles</li>
+                            <li><strong>Journals:</strong> Italicize, use full official titles</li>
+                            <li><strong>Newsletters:</strong> Italicize or use quotation marks consistently</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Periodical Examples</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Examples</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Newspapers</td>
+                                    <td><em>The Globe and Mail</em>, <em>Toronto Star</em>, <em>La Presse</em></td>
+                                    <td>Include "The" if official</td>
+                                </tr>
+                                <tr>
+                                    <td>Magazines</td>
+                                    <td><em>Maclean's</em>, <em>Canadian Geographic</em>, <em>L'actualité</em></td>
+                                    <td>Always italicized</td>
+                                </tr>
+                                <tr>
+                                    <td>Academic Journals</td>
+                                    <td><em>Canadian Public Administration</em>, <em>Policy Options</em></td>
+                                    <td>Use full titles</td>
+                                </tr>
+                                <tr>
+                                    <td>Government Publications</td>
+                                    <td><em>Canada Gazette</em>, <em>Parliamentary Debates</em></td>
+                                    <td>Official publication names</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Articles and Shorter Works</h3>
+                        <ul>
+                            <li><strong>Journal articles:</strong> Title case, quotation marks</li>
+                            <li><strong>Newspaper articles:</strong> Title case, quotation marks</li>
+                            <li><strong>Book chapters:</strong> Title case, quotation marks</li>
+                            <li><strong>Reports:</strong> Usually italicized if standalone</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Article Citation Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Various article types:</strong></p>
+                            <ul>
+                                <li>"Digital Government Transformation in Canada" (<em>Policy Options</em>)</li>
+                                <li>"Budget 2024 Highlights" (<em>The Globe and Mail</em>)</li>
+                                <li>"Public Service Reform" in <em>Canadian Public Administration</em></li>
+                                <li>"Indigenous Reconciliation Efforts" (<em>Maclean's</em>)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Digital and Electronic Media</h3>
+                        <ul>
+                            <li><strong>Websites:</strong> Italicize site names</li>
+                            <li><strong>Blog posts:</strong> Quotation marks for individual posts</li>
+                            <li><strong>Podcasts:</strong> Italicize series names</li>
+                            <li><strong>Videos:</strong> Quotation marks for individual episodes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Digital Media Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Online content:</strong></p>
+                            <ul>
+                                <li><em>Canada.ca</em> (website)</li>
+                                <li>"Digital Services Updates" on <em>Canada.ca</em> (blog post)</li>
+                                <li><em>The House</em> (CBC Radio podcast)</li>
+                                <li>"Budget Analysis" episode of <em>The House</em></li>
+                                <li><em>The National</em> (TV program)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Government Documents</h3>
+                        <ul>
+                            <li><strong>Acts and legislation:</strong> Italicize when referring to the document</li>
+                            <li><strong>Regulations:</strong> Follow legislative format</li>
+                            <li><strong>Policy documents:</strong> Title case, usually italicized</li>
+                            <li><strong>Reports:</strong> Title case, italicized if major publication</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government Document Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Official government publications:</strong></p>
+                            <ul>
+                                <li><em>Privacy Act</em> (legislation)</li>
+                                <li><em>Federal Sustainable Development Strategy</em> (policy document)</li>
+                                <li><em>Public Accounts of Canada</em> (annual report)</li>
+                                <li><em>Report of the Auditor General</em> (annual publication)</li>
+                                <li><em>Budget 2024: Fairness for Every Generation</em> (budget document)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Creative Works</h3>
+                        <ul>
+                            <li><strong>Films:</strong> Italicize titles</li>
+                            <li><strong>TV shows:</strong> Italicize series titles</li>
+                            <li><strong>Songs:</strong> Quotation marks for individual songs</li>
+                            <li><strong>Albums:</strong> Italicize album titles</li>
+                            <li><strong>Artworks:</strong> Italicize titles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Canadian Creative Works</h4>
+                        <div class="example-item good">
+                            <p><strong>Films and television:</strong></p>
+                            <ul>
+                                <li><em>Atanarjuat: The Fast Runner</em> (film)</li>
+                                <li><em>Corner Gas</em> (TV series)</li>
+                                <li><em>Anne of Green Gables</em> (various adaptations)</li>
+                                <li><em>The Red Green Show</em> (TV series)</li>
+                            </ul>
+                            
+                            <p><strong>Music and art:</strong></p>
+                            <ul>
+                                <li>"The Weight" by The Band (song)</li>
+                                <li><em>Music from Big Pink</em> by The Band (album)</li>
+                                <li><em>The Jack Pine</em> by Tom Thomson (painting)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Consistency is Key</h4>
+                        <p>Choose a consistent style for formatting publications and stick with it throughout your document. The most important thing is consistency rather than perfect adherence to a particular style guide.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Publications -->
                 <div class="quiz-panel" id="quiz-publications"></div>
                 
                 <div class="section-footer">
@@ -393,57 +1101,198 @@
                 </div>
             </section>
 
-            <!-- Headings Section -->
-            <section class="content-section" id="headings" style="display: none;">
+            <!-- Section 4.08: Headings -->
+            <section class="content-section" id="headings">
                 <div class="section-header">
-                    <h2>4.31 Headings</h2>
+                    <h2>4.08 Headings</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Heading Styles</h4>
-                        <p>Canadian government writing uses sentence-style capitalization for most headings.</p>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Sentence Style (Preferred)</h4>
-                            <ul>
-                                <li>Introduction to the program</li>
-                                <li>Application procedures</li>
-                                <li>Required documentation</li>
-                                <li>Contact information</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Title Style (Formal Documents)</h4>
-                            <ul>
-                                <li>Annual Report to Parliament</li>
-                                <li>Strategic Plan for Implementation</li>
-                                <li>Guidelines for Public Consultation</li>
-                                <li>Policy on Official Languages</li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="lesson-content">
+                    <p>Headings organize documents and guide readers through content. Consistent capitalization in headings improves readability and creates a professional appearance.</p>
                     
                     <div class="rule-box">
-                        <h4>Consistency is Key</h4>
-                        <p>Choose one style and use it consistently throughout your document. Sentence style is generally preferred for web content and most government documents.</p>
+                        <h3>Heading Capitalization Styles</h3>
+                        <ul>
+                            <li><strong>Title case:</strong> Capitalize major words (recommended for formal documents)</li>
+                            <li><strong>Sentence case:</strong> Capitalize only first word and proper nouns</li>
+                            <li><strong>All caps:</strong> Use sparingly, can be hard to read</li>
+                            <li><strong>Initial caps:</strong> Capitalize first letter of each word (avoid)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Heading Style Comparison</h4>
+                        <div class="example-item good">
+                            <p><strong>Title case (recommended):</strong></p>
+                            <ul>
+                                <li>Implementation of Digital Services Strategy</li>
+                                <li>Budget Analysis and Financial Projections</li>
+                                <li>Recommendations for Policy Development</li>
+                                <li>Next Steps and Timeline for Action</li>
+                            </ul>
+                        </div>
+                        <div class="example-item">
+                            <p><strong>Sentence case (acceptable):</strong></p>
+                            <ul>
+                                <li>Implementation of digital services strategy</li>
+                                <li>Budget analysis and financial projections</li>
+                                <li>Recommendations for policy development</li>
+                                <li>Next steps and timeline for action</li>
+                            </ul>
+                        </div>
+                        <div class="example-item warning">
+                            <p><strong>All caps (use sparingly):</strong></p>
+                            <ul>
+                                <li>IMPLEMENTATION OF DIGITAL SERVICES STRATEGY</li>
+                                <li>BUDGET ANALYSIS AND FINANCIAL PROJECTIONS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Title Case Rules for Headings</h3>
+                        <p><strong>Capitalize:</strong></p>
+                        <ul>
+                            <li><strong>First and last words</strong> always</li>
+                            <li><strong>All nouns, verbs, adjectives, adverbs</strong></li>
+                            <li><strong>Pronouns</strong> (I, you, he, she, it, we, they)</li>
+                            <li><strong>Subordinating conjunctions</strong> (because, although, if, when)</li>
+                        </ul>
+                        <p><strong>Don't capitalize:</strong></p>
+                        <ul>
+                            <li><strong>Articles:</strong> a, an, the</li>
+                            <li><strong>Short prepositions:</strong> of, in, on, at, by, for, with</li>
+                            <li><strong>Coordinating conjunctions:</strong> and, but, or, nor, yet, so</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Government Document Headings</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct title case:</strong></p>
+                            <ul>
+                                <li>Analysis of Current Economic Conditions</li>
+                                <li>Report on the Status of Digital Transformation</li>
+                                <li>Guidelines for Effective Public Consultation</li>
+                                <li>Review of Policies and Procedures</li>
+                                <li>Implementation Plan for the New System</li>
+                            </ul>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>✗ Incorrect capitalization:</strong></p>
+                            <ul>
+                                <li>Analysis Of Current Economic Conditions</li>
+                                <li>Report On The Status Of Digital Transformation</li>
+                                <li>Guidelines For Effective Public Consultation</li>
+                                <li>review of policies and procedures</li>
+                                <li>IMPLEMENTATION PLAN FOR THE NEW SYSTEM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Numbered and Lettered Headings</h3>
+                        <ul>
+                            <li><strong>Numbers and letters:</strong> Follow with period or parenthesis</li>
+                            <li><strong>Decimal system:</strong> 1.1, 1.2, 1.2.1, 1.2.2</li>
+                            <li><strong>Traditional outline:</strong> I. A. 1. a.</li>
+                            <li><strong>Consistency:</strong> Use same system throughout document</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Numbered Heading Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Decimal numbering system:</strong></p>
+                            <ul>
+                                <li>1. Executive Summary</li>
+                                <li>2. Current Situation Analysis</li>
+                                <li>&nbsp;&nbsp;2.1 Background and Context</li>
+                                <li>&nbsp;&nbsp;2.2 Key Challenges Identified</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;2.2.1 Budget Constraints</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;2.2.2 Staffing Issues</li>
+                                <li>3. Recommendations and Next Steps</li>
+                            </ul>
+                        </div>
+                    </examples-box>
+                    
+                    <div class="rule-box">
+                        <h3>Special Heading Situations</h3>
+                        <ul>
+                            <li><strong>Questions as headings:</strong> Capitalize as complete sentences</li>
+                            <li><strong>Acronyms in headings:</strong> Keep original capitalization</li>
+                            <li><strong>Hyphenated words:</strong> Capitalize both parts if both are significant</li>
+                            <li><strong>Proper nouns:</strong> Always capitalize regardless of position</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Special Cases</h4>
+                        <div class="example-item good">
+                            <p><strong>Various special situations:</strong></p>
+                            <ul>
+                                <li>What Are the Benefits of Digital Transformation? (question)</li>
+                                <li>Implementation of AI-Based Solutions (hyphenated term)</li>
+                                <li>Compliance with GDPR Requirements (acronym)</li>
+                                <li>Collaboration Between Canada and the United States (proper nouns)</li>
+                                <li>Twenty-First Century Challenges in Governance (hyphenated number)</li>
+                            </ul>
+                        </div>
+                    </examples-box>
+                    
+                    <div class="rule-box">
+                        <h3>Table of Contents Considerations</h3>
+                        <ul>
+                            <li><strong>Exact replication:</strong> TOC should match heading capitalization</li>
+                            <li><strong>Page references:</strong> Ensure accuracy</li>
+                            <li><strong>Indentation:</strong> Show heading hierarchy clearly</li>
+                            <li><strong>Dot leaders:</strong> Connect headings to page numbers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Table of Contents Format</h4>
+                        <div class="example-item good">
+                            <div class="toc-example">
+                                <p><strong>Table of Contents</strong></p>
+                                <p>Executive Summary ................................. 2<br>
+                                1. Introduction and Background ...................... 4<br>
+                                2. Current Situation Analysis ....................... 6<br>
+                                &nbsp;&nbsp;2.1 Policy Framework ............................ 6<br>
+                                &nbsp;&nbsp;2.2 Implementation Challenges ................... 8<br>
+                                3. Recommendations and Next Steps .................. 12<br>
+                                4. Conclusion ...................................... 15</p>
+                            </div>
+                        </div>
+                    </examples-box>
+                    
+                    <div class="tip-box">
+                        <h4>💡 Automated Tools</h4>
+                        <p>Most word processors can automatically generate tables of contents from your headings. Use heading styles consistently to take advantage of these features.</p>
+                    </div>
+                    
+                    <div class="warning-box">
+                        <h4>⚠️ Accessibility</h4>
+                        <p>Proper heading structure isn't just about appearance—it's essential for accessibility. Screen readers use heading hierarchy to help users navigate documents.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Headings -->
                 <div class="quiz-panel" id="quiz-headings"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('headings')">
-                        Mark Complete & Continue
+                        Complete Chapter 4!
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <!-- Include JavaScript modules -->
     <script type="module" src="../shared/js/router.js"></script>
@@ -452,7 +1301,6 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
-        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
@@ -461,221 +1309,28 @@
             { id: 'introduction', title: '4.01 Introduction' },
             { id: 'initial-words', title: '4.02 Initial Words' },
             { id: 'personal-names', title: '4.03 Personal Names' },
-            { id: 'government', title: '4.05 Government Bodies' },
-            { id: 'titles', title: '4.08 Titles of Office' },
-            { id: 'geography', title: '4.21 Geographical Terms' },
-            { id: 'publications', title: '4.29 Publications' },
-            { id: 'headings', title: '4.31 Headings' }
+            { id: 'government', title: '4.04 Government' },
+            { id: 'titles', title: '4.05 Titles' },
+            { id: 'geography', title: '4.06 Geography' },
+            { id: 'publications', title: '4.07 Publications' },
+            { id: 'headings', title: '4.08 Headings' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
-        function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 4 Complete!</h3>
-                    <p>You've mastered capitalization rules. Ready for the next chapter?</p>
-                    <div class="modal-actions">
-                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
-                            Stay Here
-                        </button>
-                        <a href="../index.html" class="btn btn-primary">
-                            Back to Dashboard
-                        </a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Capitalization',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which principle guides Canadian government capitalization?',
-                            options: [
-                                { label: 'Capitalize everything important', correct: false },
-                                { label: 'Use capitals sparingly for maximum impact', correct: true },
-                                { label: 'Follow American conventions', correct: false },
-                                { label: 'Capitalize all nouns', correct: false }
-                            ],
-                            rationale: 'Canadian style emphasizes judicious use of capitals for clarity and impact.',
-                            ref: '§4.01'
-                        }
-                    ]
-                },
-                'initial-words': {
-                    title: 'Initial Words',
-                    questions: [
-                        {
-                            type: 'true-false',
-                            stem: 'The first word of every line in a bulleted list should be capitalized.',
-                            correct: true,
-                            rationale: 'First words of list items are capitalized in formal lists.',
-                            ref: '§4.02'
-                        }
-                    ]
-                },
-                'personal-names': {
-                    title: 'Personal Names',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should "mary macdonald" be written?',
-                            options: [
-                                { label: 'mary macdonald', correct: false },
-                                { label: 'Mary MacDonald', correct: true },
-                                { label: 'Mary Macdonald', correct: false },
-                                { label: 'MARY MACDONALD', correct: false }
-                            ],
-                            rationale: 'Both parts of hyphenated surnames are capitalized.',
-                            ref: '§4.03'
-                        }
-                    ]
-                },
-                government: {
-                    title: 'Government Terms',
-                    questions: [
-                        {
-                            type: 'fill-blank',
-                            stem: 'The ___ of Canada announced new policies.',
-                            answer: 'Government',
-                            rationale: 'Capitalize "Government" in "Government of Canada".',
-                            ref: '§4.05'
-                        }
-                    ]
-                },
-                titles: {
-                    title: 'Titles of Office',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which is correct?',
-                            options: [
-                                { label: 'prime minister Smith', correct: false },
-                                { label: 'Prime Minister Smith', correct: true },
-                                { label: 'Prime minister Smith', correct: false },
-                                { label: 'PRIME MINISTER Smith', correct: false }
-                            ],
-                            rationale: 'Capitalize titles when they appear before a person\'s name.',
-                            ref: '§4.08'
-                        }
-                    ]
-                },
-                geography: {
-                    title: 'Geographical Terms',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which is correct?',
-                            options: [
-                                { label: 'the rocky mountains', correct: false },
-                                { label: 'The Rocky Mountains', correct: true },
-                                { label: 'the Rocky mountains', correct: false },
-                                { label: 'The rocky Mountains', correct: false }
-                            ],
-                            rationale: 'Proper geographical names are fully capitalized.',
-                            ref: '§4.21'
-                        }
-                    ]
-                },
-                publications: {
-                    title: 'Publications',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should this title be capitalized: "a guide to plain language"?',
-                            options: [
-                                { label: 'a guide to plain language', correct: false },
-                                { label: 'A Guide to Plain Language', correct: true },
-                                { label: 'A Guide To Plain Language', correct: false },
-                                { label: 'A GUIDE TO PLAIN LANGUAGE', correct: false }
-                            ],
-                            rationale: 'In titles, capitalize first/last words and important words, but not short prepositions.',
-                            ref: '§4.29'
-                        }
-                    ]
-                },
-                headings: {
-                    title: 'Headings',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the preferred heading style for Canadian government documents?',
-                            options: [
-                                { label: 'ALL CAPS STYLE', correct: false },
-                                { label: 'Title Case Style', correct: false },
-                                { label: 'Sentence style capitalization', correct: true },
-                                { label: 'no capitalization', correct: false }
-                            ],
-                            rationale: 'Sentence-style capitalization is preferred for most government headings.',
-                            ref: '§4.31'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = this.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(this);
                 });
             });
+            
+            // Show first section by default
+            showSection('introduction');
         }
         
         function showSection(sectionId) {
@@ -698,18 +1353,95 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+        
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 4 Complete!</h3>
+                    <p>Excellent! You've mastered capitalization rules. Your documents will have consistent and professional formatting.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
+                            Stay Here
+                        </button>
+                        <a href="../index.html" class="btn btn-primary">
+                            Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+        
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/quizzes/ch04-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 4');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
-        
-        window.addEventListener('progress-changed', updateProgressBar);
     </script>
 </body>
 </html>

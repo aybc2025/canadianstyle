@@ -1,291 +1,361 @@
 {
-  "title-page": {
-    "id": "ch11-title-page",
-    "title": "Title Page",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "What information should appear on a report title page?",
-        "options": [
-          { "label": "Title only", "correct": false },
-          { "label": "Title, author, and date", "correct": true },
-          { "label": "Title and author only", "correct": false },
-          { "label": "Title and table of contents", "correct": false }
-        ],
-        "rationale": "Title pages should include the report title, author(s), organization, and date.",
-        "ref": "§11.02"
-      },
-      {
-        "id": "q2",
-        "type": "mcq",
-        "stem": "How should the title be positioned on the title page?",
-        "options": [
-          { "label": "At the very top", "correct": false },
-          { "label": "Centered vertically and horizontally", "correct": true },
-          { "label": "Aligned to the left margin", "correct": false },
-          { "label": "At the bottom of the page", "correct": false }
-        ],
-        "rationale": "The title should be centered both vertically and horizontally on the page.",
-        "ref": "§11.02"
-      },
-      {
-        "id": "q3",
-        "type": "fill-blank",
-        "stem": "The title page should not include a _____ number.",
-        "answer": "page",
-        "rationale": "Title pages are not numbered as part of the report pagination.",
-        "ref": "§11.02"
-      }
-    ]
+  "chapterId": "ch11",
+  "chapterTitle": "Reports & Minutes",
+  "sections": {
+    "report-structure": {
+      "id": "report-structure-quiz",
+      "title": "Report Structure and Organization",
+      "questions": [
+        {
+          "id": "rs-01",
+          "type": "mcq",
+          "stem": "What is the recommended length for an executive summary?",
+          "options": [
+            {"label": "Half a page maximum", "correct": false},
+            {"label": "1-2 pages or 10% of total length maximum", "correct": true},
+            {"label": "One page per main section", "correct": false},
+            {"label": "As long as necessary to cover all points", "correct": false}
+          ],
+          "rationale": "Executive summaries should be 1-2 pages for most reports, or maximum 10% of the total document length.",
+          "ref": "§11.02"
+        },
+        {
+          "id": "rs-02",
+          "type": "drag-drop",
+          "stem": "Arrange these report sections in the correct order:",
+          "items": [
+            {"id": "item1", "text": "Title Page", "order": 1},
+            {"id": "item2", "text": "Executive Summary", "order": 2},
+            {"id": "item3", "text": "Table of Contents", "order": 3},
+            {"id": "item4", "text": "Introduction", "order": 4},
+            {"id": "item5", "text": "Body Sections", "order": 5},
+            {"id": "item6", "text": "Conclusions and Recommendations", "order": 6},
+            {"id": "item7", "text": "References", "order": 7},
+            {"id": "item8", "text": "Appendices", "order": 8}
+          ],
+          "rationale": "This is the standard order for government report sections, following established conventions.",
+          "ref": "§11.02"
+        },
+        {
+          "id": "rs-03",
+          "type": "fill-blank",
+          "stem": "Complete this recommendation format: '__________ 1: That the Department __________ a new training program by March 2025, as outlined in Section 4.2, to address the __________.'",
+          "blanks": [
+            {"id": "blank1", "answer": ["Recommendation"], "position": 1},
+            {"id": "blank2", "answer": ["implement", "establish", "develop"], "position": 2},
+            {"id": "blank3", "answer": ["skills gap", "identified issues", "problems identified"], "position": 3}
+          ],
+          "rationale": "Recommendations should be numbered, specific, actionable, and reference supporting sections.",
+          "ref": "§11.02"
+        },
+        {
+          "id": "rs-04",
+          "type": "matching",
+          "stem": "Match the organizational pattern with its best use:",
+          "pairs": [
+            {"left": "Chronological", "right": "Events in time order"},
+            {"left": "Problem-solution", "right": "Issues and proposed fixes"},
+            {"left": "Comparative", "right": "Analysis of alternatives"},
+            {"left": "Priority-based", "right": "Most to least important"}
+          ],
+          "rationale": "Different organizational patterns serve different purposes in report structure.",
+          "ref": "§11.02"
+        },
+        {
+          "id": "rs-05",
+          "type": "mcq",
+          "stem": "What should be included in the introduction section?",
+          "options": [
+            {"label": "Only the purpose of the report", "correct": false},
+            {"label": "Background, purpose, scope, methodology, and limitations", "correct": true},
+            {"label": "Summary of all findings", "correct": false},
+            {"label": "Detailed analysis of data", "correct": false}
+          ],
+          "rationale": "The introduction should provide context, purpose, scope, methodology, and any limitations of the report.",
+          "ref": "§11.02"
+        }
+      ]
+    },
+    "headings": {
+      "id": "headings-quiz",
+      "title": "Headings and Document Navigation",
+      "questions": [
+        {
+          "id": "h-01",
+          "type": "mcq",
+          "stem": "Which heading style shows the best parallel structure?",
+          "options": [
+            {"label": "Analyzing Budget, Cost Savings, What We Recommend", "correct": false},
+            {"label": "Analyzing Current Budget, Identifying Cost Savings, Recommending Changes", "correct": true},
+            {"label": "Budget Analysis, How to Save Money, Our Recommendations", "correct": false},
+            {"label": "The Budget, Saving Money, What to Do Next", "correct": false}
+          ],
+          "rationale": "Parallel structure uses consistent grammatical forms across headings (all -ing verbs in this case).",
+          "ref": "§11.03"
+        },
+        {
+          "id": "h-02",
+          "type": "fill-blank",
+          "stem": "Complete this numbered heading system: 1. Introduction, 2. Current Situation, __________. Background, __________. Key Issues, 3. Recommendations",
+          "blanks": [
+            {"id": "blank1", "answer": ["2.1", "2.1."], "position": 1},
+            {"id": "blank2", "answer": ["2.2", "2.2."], "position": 2}
+          ],
+          "rationale": "The decimal numbering system uses 2.1, 2.2 for subsections under section 2.",
+          "ref": "§11.03"
+        },
+        {
+          "id": "h-03",
+          "type": "error-spot",
+          "stem": "Click on the heading that breaks parallel structure:",
+          "text": "3.1 Analyzing Current Performance\n3.2 Identifying Improvement Areas\n3.3 What We Should Do Next\n3.4 Implementing New Procedures",
+          "errors": [
+            {"text": "3.3 What We Should Do Next", "position": 3, "correction": "3.3 Recommending Next Steps", "reason": "Should maintain parallel -ing structure like other headings"}
+          ],
+          "rationale": "All headings in a series should follow the same grammatical pattern.",
+          "ref": "§11.03"
+        },
+        {
+          "id": "h-04",
+          "type": "matching",
+          "stem": "Match the heading level with its typical format:",
+          "pairs": [
+            {"left": "Level 1", "right": "MAJOR SECTIONS (ALL CAPS, BOLD)"},
+            {"left": "Level 2", "right": "Main Subsections (Bold, Title Case)"},
+            {"left": "Level 3", "right": "Specific Topics (Italic, Title Case)"},
+            {"left": "Level 4", "right": "Detailed Subtopics (Regular text)"}
+          ],
+          "rationale": "Typography-based heading systems use different font treatments to show hierarchy.",
+          "ref": "§11.03"
+        },
+        {
+          "id": "h-05",
+          "type": "mcq",
+          "stem": "How many heading levels should you typically use in a report?",
+          "options": [
+            {"label": "No more than 2 levels", "correct": false},
+            {"label": "No more than 4 levels", "correct": true},
+            {"label": "As many as needed", "correct": false},
+            {"label": "Exactly 3 levels", "correct": false}
+          ],
+          "rationale": "Reports should typically use no more than 4 heading levels to avoid confusion and maintain clarity.",
+          "ref": "§11.03"
+        }
+      ]
+    },
+    "front-matter": {
+      "id": "front-matter-quiz",
+      "title": "Front Matter and Document Setup",
+      "questions": [
+        {
+          "id": "fm-01",
+          "type": "mcq",
+          "stem": "What page numbering system should be used for front matter?",
+          "options": [
+            {"label": "Arabic numerals (1, 2, 3)", "correct": false},
+            {"label": "Roman numerals (i, ii, iii)", "correct": true},
+            {"label": "Letters (a, b, c)", "correct": false},
+            {"label": "No page numbers", "correct": false}
+          ],
+          "rationale": "Front matter typically uses Roman numerals (i, ii, iii) while main text uses Arabic numerals.",
+          "ref": "§11.04"
+        },
+        {
+          "id": "fm-02",
+          "type": "fill-blank",
+          "stem": "Complete the title page information: Report title, Subtitle (if needed), __________, Date of publication, Department name, __________",
+          "blanks": [
+            {"id": "blank1", "answer": ["Author(s) or organization", "Author", "Organization"], "position": 1},
+            {"id": "blank2", "answer": ["Report number", "File reference", "Report number or file reference"], "position": 2}
+          ],
+          "rationale": "Title pages should include author/organization and report number or file reference for identification.",
+          "ref": "§11.04"
+        },
+        {
+          "id": "fm-03",
+          "type": "drag-drop",
+          "stem": "Arrange the front matter components in correct order:",
+          "items": [
+            {"id": "item1", "text": "Title Page", "order": 1},
+            {"id": "item2", "text": "Letter of Transmittal", "order": 2},
+            {"id": "item3", "text": "Executive Summary", "order": 3},
+            {"id": "item4", "text": "Table of Contents", "order": 4},
+            {"id": "item5", "text": "List of Tables and Figures", "order": 5},
+            {"id": "item6", "text": "Acknowledgements", "order": 6}
+          ],
+          "rationale": "This is the standard order for front matter components in government reports.",
+          "ref": "§11.04"
+        },
+        {
+          "id": "fm-04",
+          "type": "mcq",
+          "stem": "When should you include a List of Tables and Figures?",
+          "options": [
+            {"label": "In every report", "correct": false},
+            {"label": "When there are 5 or more tables/figures", "correct": true},
+            {"label": "Only in reports over 50 pages", "correct": false},
+            {"label": "Only when specifically requested", "correct": false}
+          ],
+          "rationale": "Include a List of Tables and Figures when you have 5 or more tables/figures to help readers navigate.",
+          "ref": "§11.04"
+        },
+        {
+          "id": "fm-05",
+          "type": "mcq",
+          "stem": "What is the key requirement for an executive summary?",
+          "options": [
+            {"label": "It should repeat the introduction", "correct": false},
+            {"label": "It must be a standalone document that makes sense without the full report", "correct": true},
+            {"label": "It should include all the data from the report", "correct": false},
+            {"label": "It should focus only on recommendations", "correct": false}
+          ],
+          "rationale": "The executive summary must be self-contained and provide all key information for decision-makers.",
+          "ref": "§11.04"
+        }
+      ]
+    },
+    "tables-charts": {
+      "id": "tables-charts-quiz",
+      "title": "Tables, Charts, and Data Presentation",
+      "questions": [
+        {
+          "id": "tc-01",
+          "type": "mcq",
+          "stem": "When should you use tables instead of charts?",
+          "options": [
+            {"label": "When showing trends over time", "correct": false},
+            {"label": "When readers need exact values and detailed comparisons", "correct": true},
+            {"label": "When showing proportions of a whole", "correct": false},
+            {"label": "When displaying relationships between variables", "correct": false}
+          ],
+          "rationale": "Tables are best for exact values, detailed comparisons, and reference data; charts are better for trends and patterns.",
+          "ref": "§11.06"
+        },
+        {
+          "id": "tc-02",
+          "type": "fill-blank",
+          "stem": "Complete the table citation: '__________ 1: Budget Allocations by Department ($ millions)' followed by the table, then '__________ : Public Accounts of Canada, 2024'",
+          "blanks": [
+            {"id": "blank1", "answer": ["Table"], "position": 1},
+            {"id": "blank2", "answer": ["Source"], "position": 2}
+          ],
+          "rationale": "Tables should be numbered sequentially, have descriptive titles above, and cite sources below.",
+          "ref": "§11.06"
+        },
+        {
+          "id": "tc-03",
+          "type": "matching",
+          "stem": "Match the chart type with its best use:",
+          "pairs": [
+            {"left": "Line charts", "right": "Trends over time"},
+            {"left": "Bar charts", "right": "Comparisons between categories"},
+            {"left": "Pie charts", "right": "Parts of a whole"},
+            {"left": "Scatter plots", "right": "Relationships between variables"}
+          ],
+          "rationale": "Different chart types are designed for different kinds of data relationships.",
+          "ref": "§11.06"
+        },
+        {
+          "id": "tc-04",
+          "type": "error-spot",
+          "stem": "Click on the missing element in this table reference:",
+          "text": "Budget allocations increased significantly across departments, as detailed in the attached spreadsheet.",
+          "errors": [
+            {"text": "attached spreadsheet", "position": 10, "correction": "Table 1", "reason": "Should specifically reference the table number"}
+          ],
+          "rationale": "Tables and figures should be specifically referenced by number in the text.",
+          "ref": "§11.06"
+        },
+        {
+          "id": "tc-05",
+          "type": "mcq",
+          "stem": "What accessibility consideration is important for charts?",
+          "options": [
+            {"label": "Use as many colors as possible", "correct": false},
+            {"label": "Don't rely solely on color to convey information", "correct": true},
+            {"label": "Make text as small as possible", "correct": false},
+            {"label": "Avoid using any text labels", "correct": false}
+          ],
+          "rationale": "Charts should not rely solely on color because of color blindness; use patterns, shapes, or labels as well.",
+          "ref": "§11.06"
+        }
+      ]
+    },
+    "minutes": {
+      "id": "minutes-quiz",
+      "title": "Meeting Minutes and Documentation",
+      "questions": [
+        {
+          "id": "min-01",
+          "type": "mcq",
+          "stem": "What is the most common type of minutes for government committees?",
+          "options": [
+            {"label": "Verbatim minutes (word-for-word)", "correct": false},
+            {"label": "Summary minutes (key points and outcomes)", "correct": true},
+            {"label": "Action minutes (decisions only)", "correct": false},
+            {"label": "No formal minutes", "correct": false}
+          ],
+          "rationale": "Summary minutes that capture key points of discussion and outcomes are most common for government meetings.",
+          "ref": "§11.07"
+        },
+        {
+          "id": "min-02",
+          "type": "fill-blank",
+          "stem": "Complete this motion record: 'M. Brown moved that the committee __________ approval of the Digital Services Strategy. Seconded by L. Wong. __________.'",
+          "blanks": [
+            {"id": "blank1", "answer": ["recommend", "approve"], "position": 1},
+            {"id": "blank2", "answer": ["Carried", "Defeated"], "position": 2}
+          ],
+          "rationale": "Motion records should include the mover, the motion text, seconder, and outcome (Carried/Defeated).",
+          "ref": "§11.07"
+        },
+        {
+          "id": "min-03",
+          "type": "error-spot",
+          "stem": "Click on the incorrect writing style in these minutes:",
+          "text": "We decided to approve the budget. The committee felt that our previous concerns had been addressed. I think this was a good decision.",
+          "errors": [
+            {"text": "We decided", "position": 1, "correction": "The committee decided", "reason": "Minutes should use third person, not first person"},
+            {"text": "our previous concerns", "position": 8, "correction": "the committee's previous concerns", "reason": "Should maintain third person perspective"},
+            {"text": "I think", "position": 14, "correction": "The committee concluded", "reason": "Minutes should be objective, not personal opinion"}
+          ],
+          "rationale": "Minutes should use third person, past tense, and objective language.",
+          "ref": "§11.07"
+        },
+        {
+          "id": "min-04",
+          "type": "matching",
+          "stem": "Match the minutes section with its content:",
+          "pairs": [
+            {"left": "Meeting details", "right": "Date, time, location, chair"},
+            {"left": "Attendance", "right": "Present members and regrets"},
+            {"left": "Decision format", "right": "Motion details and outcome"},
+            {"left": "Action items", "right": "Tasks, responsibility, deadlines"}
+          ],
+          "rationale": "Different sections of minutes serve specific documentation purposes.",
+          "ref": "§11.07"
+        },
+        {
+          "id": "min-05",
+          "type": "mcq",
+          "stem": "When should draft minutes be circulated?",
+          "options": [
+            {"label": "At the next meeting", "correct": false},
+            {"label": "Within 48 hours of the meeting", "correct": true},
+            {"label": "Within one week", "correct": false},
+            {"label": "Only when requested", "correct": false}
+          ],
+          "rationale": "Draft minutes should be circulated within 48 hours while the meeting is still fresh in participants' minds.",
+          "ref": "§11.07"
+        }
+      ]
+    }
   },
-  "table-contents": {
-    "id": "ch11-table-contents",
-    "title": "Table of Contents",
-    "questions": [
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "What should be included in a table of contents?",
-        "options": [
-          { "label": "Major headings only", "correct": false },
-          { "label": "All headings and subheadings with page numbers", "correct": true },
-          { "label": "Chapter titles only", "correct": false },
-          { "label": "Appendices only", "correct": false }
-        ],
-        "rationale": "Include all major headings and significant subheadings with corresponding page numbers.",
-        "ref": "§11.03"
-      },
-      {
-        "id": "q5",
-        "type": "mcq",
-        "stem": "How should page numbers be shown in the table of contents?",
-        "options": [
-          { "label": "In parentheses after each heading", "correct": false },
-          { "label": "Right-aligned with dot leaders", "correct": true },
-          { "label": "Left-aligned under headings", "correct": false },
-          { "label": "Only at chapter breaks", "correct": false }
-        ],
-        "rationale": "Page numbers should be right-aligned, typically with dot leaders connecting to headings.",
-        "ref": "§11.03"
-      },
-      {
-        "id": "q6",
-        "type": "mcq",
-        "stem": "When is a table of contents necessary?",
-        "options": [
-          { "label": "In all reports", "correct": false },
-          { "label": "Only in reports over 50 pages", "correct": false },
-          { "label": "In reports with multiple sections or over 10 pages", "correct": true },
-          { "label": "Only in formal reports", "correct": false }
-        ],
-        "rationale": "Include a table of contents when the report has multiple sections or exceeds about 10 pages.",
-        "ref": "§11.03"
-      }
-    ]
-  },
-  "executive-summary": {
-    "id": "ch11-executive-summary",
-    "title": "Executive Summary",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "What is the purpose of an executive summary?",
-        "options": [
-          { "label": "To introduce the authors", "correct": false },
-          { "label": "To provide key findings and recommendations", "correct": true },
-          { "label": "To list all sources used", "correct": false },
-          { "label": "To outline the research methodology", "correct": false }
-        ],
-        "rationale": "Executive summaries highlight key findings, conclusions, and recommendations for busy readers.",
-        "ref": "§11.04"
-      },
-      {
-        "id": "q8",
-        "type": "mcq",
-        "stem": "How long should an executive summary typically be?",
-        "options": [
-          { "label": "As long as needed", "correct": false },
-          { "label": "One to two pages maximum", "correct": true },
-          { "label": "At least five pages", "correct": false },
-          { "label": "Exactly one page", "correct": false }
-        ],
-        "rationale": "Executive summaries should be concise, typically one to two pages regardless of report length.",
-        "ref": "§11.04"
-      },
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "Should an executive summary include new information not in the report?",
-        "options": [
-          { "label": "Yes, to add value", "correct": false },
-          { "label": "No, it should only summarize existing content", "correct": true },
-          { "label": "Only if space permits", "correct": false },
-          { "label": "Yes, but only in appendices", "correct": false }
-        ],
-        "rationale": "Executive summaries should only contain information that appears in the full report.",
-        "ref": "§11.04"
-      }
-    ]
-  },
-  "body": {
-    "id": "ch11-body",
-    "title": "Report Body",
-    "questions": [
-      {
-        "id": "q10",
-        "type": "mcq",
-        "stem": "How should report headings be formatted?",
-        "options": [
-          { "label": "All headings the same size", "correct": false },
-          { "label": "In a clear hierarchy with consistent formatting", "correct": true },
-          { "label": "Numbered consecutively only", "correct": false },
-          { "label": "In italics throughout", "correct": false }
-        ],
-        "rationale": "Use a clear hierarchy of headings with consistent formatting to show document structure.",
-        "ref": "§11.05"
-      },
-      {
-        "id": "q11",
-        "type": "multi-select",
-        "stem": "What elements help create clear report structure? (Select all that apply)",
-        "options": [
-          { "label": "Numbered headings", "correct": true },
-          { "label": "Consistent formatting", "correct": true },
-          { "label": "Logical progression", "correct": true },
-          { "label": "Random topic order", "correct": false },
-          { "label": "White space", "correct": true }
-        ],
-        "rationale": "Clear structure requires numbered headings, consistent formatting, logical flow, and adequate white space."
-      },
-      {
-        "id": "q12",
-        "type": "fill-blank",
-        "stem": "Each major section should begin with a _____ that introduces the content.",
-        "answer": "topic sentence",
-        "rationale": "Topic sentences or introductory paragraphs help orient readers to each section's content.",
-        "ref": "§11.05"
-      }
-    ]
-  },
-  "appendices": {
-    "id": "ch11-appendices",
-    "title": "Appendices",
-    "questions": [
-      {
-        "id": "q13",
-        "type": "mcq",
-        "stem": "What type of information belongs in appendices?",
-        "options": [
-          { "label": "Essential information for understanding", "correct": false },
-          { "label": "Supporting material that would interrupt the flow", "correct": true },
-          { "label": "All research data", "correct": false },
-          { "label": "Author biographies", "correct": false }
-        ],
-        "rationale": "Appendices contain supporting material that would interrupt the main text flow if included.",
-        "ref": "§11.06"
-      },
-      {
-        "id": "q14",
-        "type": "mcq",
-        "stem": "How should appendices be labeled?",
-        "options": [
-          { "label": "Numerically (1, 2, 3)", "correct": false },
-          { "label": "Alphabetically (A, B, C)", "correct": true },
-          { "label": "By topic name only", "correct": false },
-          { "label": "No labels needed", "correct": false }
-        ],
-        "rationale": "Appendices are typically labeled alphabetically: Appendix A, Appendix B, etc.",
-        "ref": "§11.06"
-      },
-      {
-        "id": "q15",
-        "type": "mcq",
-        "stem": "Should appendices be mentioned in the main text?",
-        "options": [
-          { "label": "No, readers will find them", "correct": false },
-          { "label": "Yes, with cross-references", "correct": true },
-          { "label": "Only if they're important", "correct": false },
-          { "label": "Only in the table of contents", "correct": false }
-        ],
-        "rationale": "Reference appendices in the main text so readers know when to consult them.",
-        "ref": "§11.06"
-      }
-    ]
-  },
-  "minutes": {
-    "id": "ch11-minutes",
-    "title": "Meeting Minutes",
-    "questions": [
-      {
-        "id": "q16",
-        "type": "mcq",
-        "stem": "What information must be included in meeting minutes?",
-        "options": [
-          { "label": "Exact quotes from all speakers", "correct": false },
-          { "label": "Date, attendees, decisions, and action items", "correct": true },
-          { "label": "Personal opinions about discussions", "correct": false },
-          { "label": "Detailed descriptions of arguments", "correct": false }
-        ],
-        "rationale": "Minutes should record date, attendees, decisions made, and action items assigned.",
-        "ref": "§11.07"
-      },
-      {
-        "id": "q17",
-        "type": "mcq",
-        "stem": "How should action items be recorded in minutes?",
-        "options": [
-          { "label": "In a separate section with clear assignments", "correct": true },
-          { "label": "Mixed throughout the discussion notes", "correct": false },
-          { "label": "Only if requested by participants", "correct": false },
-          { "label": "In an email after the meeting", "correct": false }
-        ],
-        "rationale": "Action items should be clearly identified with responsible parties and deadlines.",
-        "ref": "§11.07"
-      },
-      {
-        "id": "q18",
-        "type": "error-spot",
-        "stem": "Click on what's missing from this minute entry:",
-        "text": "John reported on budget status. Discussion followed.",
-        "errorIndex": 1,
-        "rationale": "Missing the actual content of John's report and any decisions or outcomes."
-      }
-    ]
-  },
-  "formatting": {
-    "id": "ch11-formatting",
-    "title": "Formatting Guidelines",
-    "questions": [
-      {
-        "id": "q19",
-        "type": "mcq",
-        "stem": "What spacing should be used for report text?",
-        "options": [
-          { "label": "Single spacing throughout", "correct": false },
-          { "label": "Double spacing throughout", "correct": false },
-          { "label": "1.5 spacing for readability", "correct": true },
-          { "label": "Varies by section", "correct": false }
-        ],
-        "rationale": "1.5 line spacing provides good readability for most report formats.",
-        "ref": "§11.08"
-      },
-      {
-        "id": "q20",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Title page numbering", "back": "No page number shown" },
-          { "front": "Table of contents", "back": "All headings with page numbers" },
-          { "front": "Executive summary length", "back": "1-2 pages maximum" },
-          { "front": "Heading format", "back": "Clear hierarchy, consistent style" },
-          { "front": "Appendix labeling", "back": "Alphabetical (A, B, C)" },
-          { "front": "Minutes must include", "back": "Date, attendees, decisions, actions" },
-          { "front": "Report spacing", "back": "1.5 line spacing" },
-          { "front": "Executive summary content", "back": "Only information from main report" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 25,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "35-45 minutes",
+    "passingScore": 80
   }
 }
