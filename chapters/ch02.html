@@ -829,7 +829,7 @@
         // Load section quizzes from JSON files
         async function loadSectionQuizzes() {
             try {
-                const response = await fetch(`../data/quizzes/ch02-quiz.json`);
+                const response = await fetch(`../data/ch02-quiz.json`);
                 if (!response.ok) {
                     console.warn('Quiz data not available for chapter 2');
                     return;
