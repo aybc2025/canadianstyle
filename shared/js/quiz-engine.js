@@ -330,7 +330,7 @@ export class QuizEngine {
         // Add click listeners
         textContainer.addEventListener('click', (e) => {
             if (e.target.classList.contains('clickable-word')) {
-                const clickedWord = e.target.dataset.word;
+                const clickedWord = e.target.dataset.word ? e.target.dataset.word.trim() : '';
                 const isCorrect = clickedWord === question.errorPosition.trim();
                 
                 // Remove previous selections
@@ -527,7 +527,7 @@ export class QuizEngine {
         const selected = this.container.querySelector('.selected');
         if (!selected) return null;
         
-        const selectedWord = selected.dataset.word;
+        const selectedWord = selected.dataset.word ? selected.dataset.word.trim() : '';
         const isCorrect = selectedWord === question.errorPosition.trim();
         
         return {
