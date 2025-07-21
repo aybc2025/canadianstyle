@@ -117,14 +117,26 @@ export class QuizEngine {
         
         // Render actions
         quizActions.innerHTML = `
-            <button class="btn btn-outline quiz-btn-prev" onclick="this.closest('.quiz-engine-container').quizEngine.previousQuestion()" 
-                    ${this.currentQuestionIndex === 0 ? 'disabled' : ''}>
-                Previous
-            </button>
-            <button class="btn btn-primary quiz-btn-next" onclick="this.closest('.quiz-engine-container').quizEngine.nextQuestion()">
-                ${this.currentQuestionIndex === this.questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
-            </button>
-        `;
+    <button class="btn btn-outline quiz-btn-prev" 
+            ${this.currentQuestionIndex === 0 ? 'disabled' : ''}>
+        Previous
+    </button>
+    <button class="btn btn-primary quiz-btn-next">
+        ${this.currentQuestionIndex === this.questions.length - 1 ? 'Finish Quiz' : 'Next Question'}
+    </button>
+`;
+
+// הוסף event listeners אחרי יצירת הכפתורים:
+const prevBtn = quizActions.querySelector('.quiz-btn-prev');
+const nextBtn = quizActions.querySelector('.quiz-btn-next');
+
+if (prevBtn && !prevBtn.disabled) {
+    prevBtn.addEventListener('click', () => this.previousQuestion());
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => this.nextQuestion());
+}
         
         // Add event listeners for interactive elements
         this.attachEventListeners(question);
