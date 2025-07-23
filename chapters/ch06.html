@@ -8,386 +8,360 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 6: Italics</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
-                </div>
-                <span class="progress-text">Progress</span>
-            </div>
-        </header>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">6.01 Introduction</a>
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 6
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">6</div>
+                <div>
+                    <h1>Italics</h1>
+                    <p>Proper use of italics for emphasis and special terms</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">6.01 Introduction</a>
                 <a href="#emphasis" class="tab-link" data-section="emphasis">6.02 Emphasis</a>
                 <a href="#titles" class="tab-link" data-section="titles">6.03 Titles</a>
                 <a href="#foreign-words" class="tab-link" data-section="foreign-words">6.04 Foreign Words</a>
+                <a href="#legal-cases" class="tab-link" data-section="legal-cases">6.05 Legal Cases</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 6.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>6.01 Introduction to Italics</h2>
+                    <h2>6.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Italics serve specific purposes in Canadian government writing: to indicate titles, foreign words, and occasional emphasis. Use italics sparingly and consistently to maintain professional appearance and readability.</p>
+                <div class="lesson-content">
+                    <p>Italics serve specific purposes in professional writing. Use them judiciously for maximum effect and clear communication.</p>
                     
                     <div class="key-principles">
                         <h3>When to Use Italics</h3>
                         <ul>
-                            <li>Titles of books, newspapers, magazines, and major works</li>
-                            <li>Foreign words not yet adopted into English</li>
-                            <li>Scientific names and legal case names</li>
+                            <li>Titles of major works</li>
+                            <li>Foreign words not yet naturalized in English</li>
+                            <li>Legal case names</li>
+                            <li>Scientific names of species</li>
                             <li>Occasional emphasis (sparingly)</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Common Uses</h4>
-                            <ul>
-                                <li><em>The Globe and Mail</em> (newspaper)</li>
-                                <li><em>Annual Report</em> (publication)</li>
-                                <li><em>raison d'être</em> (foreign phrase)</li>
-                                <li><em>R. v. Smith</em> (legal case)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Avoid Italics For</h4>
-                            <ul>
-                                <li>Article titles (use quotation marks)</li>
-                                <li>Common foreign words (café, menu)</li>
-                                <li>Frequent emphasis (reduces impact)</li>
-                                <li>Entire paragraphs (hard to read)</li>
-                            </ul>
-                        </div>
+                    <div class="warning-box">
+                        <h4>⚠️ Avoid Overuse</h4>
+                        <p>Too much italic text reduces its effectiveness and makes documents harder to read. Use italics strategically, not for general emphasis.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Introduction -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
+                        Complete Section → Emphasis
                     </button>
                 </div>
             </section>
 
-            <!-- Emphasis Section -->
-            <section class="content-section" id="emphasis" style="display: none;">
+            <!-- Section 6.02: Emphasis -->
+            <section class="content-section" id="emphasis">
                 <div class="section-header">
                     <h2>6.02 Emphasis</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Using Italics for Emphasis</h4>
-                        <p>Italics can provide emphasis, but should be used sparingly. Too much emphasis reduces its effectiveness and makes text harder to read.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Occasional Emphasis</h3>
+                    <p>Use italics sparingly for emphasis. Often, sentence structure provides better emphasis than typography:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Appropriate Emphasis</h4>
-                            <ul>
-                                <li>This is <em>not</em> acceptable</li>
-                                <li>The deadline is <em>tomorrow</em></li>
-                                <li>We <em>must</em> complete this today</li>
-                                <li>The <em>only</em> solution is to revise</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Good Uses</h4>
+                            <p>This is <em>not</em> the time for delays.<br>
+                            We need <em>action</em>, not more discussion.<br>
+                            The deadline is <em>tomorrow</em>.</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Better Alternatives</h4>
-                            <ul>
-                                <li><strong>Bold:</strong> for headings and labels</li>
-                                <li><strong>Structure:</strong> better paragraph organization</li>
-                                <li><strong>Word choice:</strong> stronger verbs and nouns</li>
-                                <li><strong>Punctuation:</strong> dashes for dramatic effect</li>
-                            </ul>
+                        <div class="example-card avoid">
+                            <h4>❌ Overuse</h4>
+                            <p>This <em>important</em> document <em>requires</em> your <em>immediate</em> attention.</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Guidelines</h4>
+                    <h3>Better Alternatives</h3>
+                    <div class="rule-section">
+                        <h4>Instead of Italics for Emphasis:</h4>
                         <ul>
-                            <li>Limit to one or two emphasized words per paragraph</li>
-                            <li>Don't italicize entire sentences or phrases</li>
-                            <li>Avoid italics in headings and titles</li>
-                            <li>Consider if emphasis is truly necessary</li>
+                            <li><strong>Word order:</strong> "Essential is immediate action" vs. "Immediate action is <em>essential</em>"</li>
+                            <li><strong>Strong verbs:</strong> "We must act" vs. "We <em>need</em> to act"</li>
+                            <li><strong>Precise words:</strong> "The deadline" vs. "The <em>important</em> deadline"</li>
+                            <li><strong>Sentence structure:</strong> "Action—not discussion—is needed"</li>
                         </ul>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Effective Examples</h4>
-                            <ul>
-                                <li>Applications <em>must</em> be received by Friday</li>
-                                <li>This applies to <em>all</em> employees</li>
-                                <li>Payment is due <em>immediately</em></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Overuse (Avoid)</h4>
-                            <ul>
-                                <li>❌ <em>All applications must be received by Friday</em></li>
-                                <li>❌ This is <em>very important</em> and <em>urgent</em></li>
-                                <li>❌ <em>Please note</em> that <em>all employees</em> must...</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Emphasis -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-emphasis"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('emphasis')">
-                        Mark Complete & Continue
+                        Complete Section → Titles
                     </button>
                 </div>
             </section>
 
-            <!-- Titles Section -->
-            <section class="content-section" id="titles" style="display: none;">
+            <!-- Section 6.03: Titles -->
+            <section class="content-section" id="titles">
                 <div class="section-header">
-                    <h2>6.03 Titles</h2>
+                    <h2>6.03 Titles of Works</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>When to Italicize Titles</h4>
-                        <p>Italicize titles of complete, independent works. Use quotation marks for parts of larger works.</p>
+                <div class="lesson-content">
+                    <h3>Major Works</h3>
+                    <p>Use italics for titles of major standalone works:</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Books</h4>
+                            <p><em>The Canadian Style</em><br>
+                            <em>Pride and Prejudice</em><br>
+                            <em>The Charter of Rights and Freedoms</em></p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Periodicals</h4>
+                            <p><em>The Globe and Mail</em><br>
+                            <em>Maclean's</em><br>
+                            <em>Canadian Public Administration</em></p>
+                        </div>
                     </div>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Italicized Titles</h4>
-                            <ul>
-                                <li><strong>Books:</strong> <em>The Canadian Style</em></li>
-                                <li><strong>Newspapers:</strong> <em>The Globe and Mail</em></li>
-                                <li><strong>Magazines:</strong> <em>Maclean's</em></li>
-                                <li><strong>Reports:</strong> <em>Annual Report to Parliament</em></li>
-                                <li><strong>Films:</strong> <em>The Sweet Hereafter</em></li>
-                                <li><strong>TV shows:</strong> <em>The National</em></li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Other Major Works</h4>
+                            <p><em>Hamlet</em> (play)<br>
+                            <em>The Lord of the Rings</em> (film)<br>
+                            <em>Symphony No. 9</em> (music)</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Quotation Marks</h4>
-                            <ul>
-                                <li><strong>Articles:</strong> "Climate Change Policy"</li>
-                                <li><strong>Chapters:</strong> "Introduction to Grammar"</li>
-                                <li><strong>Short stories:</strong> "The Hockey Sweater"</li>
-                                <li><strong>Songs:</strong> "O Canada"</li>
-                                <li><strong>Episodes:</strong> "The Prime Minister's Interview"</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Government Documents</h4>
+                            <p><em>Budget 2024</em><br>
+                            <em>Speech from the Throne</em><br>
+                            <em>Annual Report</em></p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Government Documents</h4>
+                    <h3>Use Quotation Marks Instead</h3>
+                    <div class="rule-section">
+                        <h4>For Smaller Works:</h4>
                         <ul>
-                            <li><strong>Major reports:</strong> <em>Truth and Reconciliation Commission Report</em></li>
-                            <li><strong>Acts:</strong> <em>Official Languages Act</em></li>
-                            <li><strong>White papers:</strong> <em>A New Framework for Immigration</em></li>
-                            <li><strong>Policy documents:</strong> <em>Digital Charter Implementation Plan</em></li>
+                            <li><strong>Articles:</strong> "Building Better Communities"</li>
+                            <li><strong>Chapters:</strong> "Introduction to Policy"</li>
+                            <li><strong>Short stories:</strong> "The Gift of the Magi"</li>
+                            <li><strong>Songs:</strong> "O Canada"</li>
                         </ul>
                     </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Special Cases</h4>
-                            <ul>
-                                <li><strong>Series:</strong> <em>Canadian Public Policy</em> (journal)</li>
-                                <li><strong>Websites:</strong> Canada.ca (no italics)</li>
-                                <li><strong>Blogs:</strong> <em>Policy Horizons Canada</em></li>
-                                <li><strong>Databases:</strong> <em>Statistics Canada</em></li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Internal Documents</h4>
-                            <ul>
-                                <li><strong>Major:</strong> <em>Strategic Plan 2024-2029</em></li>
-                                <li><strong>Minor:</strong> "Weekly Status Report"</li>
-                                <li><strong>Memos:</strong> "Budget Update - March 2024"</li>
-                                <li><strong>Procedures:</strong> "Emergency Response Protocol"</li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Titles -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-titles"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('titles')">
-                        Mark Complete & Continue
+                        Complete Section → Foreign Words
                     </button>
                 </div>
             </section>
 
-            <!-- Foreign Words Section -->
-            <section class="content-section" id="foreign-words" style="display: none;">
+            <!-- Section 6.04: Foreign Words -->
+            <section class="content-section" id="foreign-words">
                 <div class="section-header">
-                    <h2>6.04 Foreign Words</h2>
+                    <h2>6.04 Foreign Words and Phrases</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>When to Italicize Foreign Words</h4>
-                        <p>Italicize foreign words that have not been fully adopted into English. Once a word is considered part of English, italics are no longer needed.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Non-Naturalized Foreign Terms</h3>
+                    <p>Use italics for foreign words not yet adopted into English:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Still Foreign (Italicize)</h4>
-                            <ul>
-                                <li><em>raison d'être</em> (reason for being)</li>
-                                <li><em>vis-à-vis</em> (in relation to)</li>
-                                <li><em>de facto</em> (in fact)</li>
-                                <li><em>per se</em> (by itself)</li>
-                                <li><em>sine qua non</em> (essential element)</li>
-                                <li><em>ad hoc</em> (for this purpose)</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Use Italics</h4>
+                            <p>We need an <em>ad hoc</em> committee<br>
+                            This is the <em>sine qua non</em> of good policy<br>
+                            The <em>raison d'être</em> for this program</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Now English (No Italics)</h4>
-                            <ul>
-                                <li>café, menu, résumé</li>
-                                <li>depot, bureau, entrepreneur</li>
-                                <li>kindergarten, gesundheit</li>
-                                <li>fiesta, plaza, tornado</li>
-                                <li>karate, sushi, tsunami</li>
-                                <li>etc., i.e., e.g.</li>
-                            </ul>
+                        <div class="example-card avoid">
+                            <h4>❌ Don't Italicize</h4>
+                            <p>per se (common in English)<br>
+                            et cetera (abbreviated as etc.)<br>
+                            status quo (naturalized)</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Canadian Context</h4>
-                        <p>In Canadian government writing, consider both English and French contexts:</p>
+                    <h3>Scientific Names</h3>
+                    <p>Always italicize genus and species names:</p>
+                    
+                    <div class="rule-section">
+                        <h4>Examples</h4>
                         <ul>
-                            <li><strong>French terms:</strong> Often part of Canadian English</li>
-                            <li><strong>Legal terms:</strong> May be italicized even if familiar</li>
-                            <li><strong>Place names:</strong> Generally no italics</li>
-                            <li><strong>Official titles:</strong> Use original language, may italicize</li>
+                            <li><em>Acer saccharum</em> (sugar maple)</li>
+                            <li><em>Castor canadensis</em> (Canadian beaver)</li>
+                            <li><em>Pinus strobus</em> (white pine)</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Legal and Scientific</h4>
-                            <ul>
-                                <li><em>R. v. Smith</em> (case citation)</li>
-                                <li><em>prima facie</em> (at first sight)</li>
-                                <li><em>habeas corpus</em> (have the body)</li>
-                                <li><em>Homo sapiens</em> (scientific name)</li>
-                                <li><em>in camera</em> (in private)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Canadian French</h4>
-                            <ul>
-                                <li>Québec (place name, no italics)</li>
-                                <li>fleur-de-lis (now English)</li>
-                                <li><em>joie de vivre</em> (still foreign)</li>
-                                <li>poutine (now English)</li>
-                                <li><em>savoir-faire</em> (still foreign)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Guidelines for Decision</h4>
+                    <h3>Latin Abbreviations</h3>
+                    <div class="rule-section">
+                        <h4>Common Terms (No Italics)</h4>
                         <ul>
-                            <li>Check current Canadian dictionaries</li>
-                            <li>Consider your audience's familiarity</li>
-                            <li>When in doubt, italicize and define</li>
-                            <li>Be consistent throughout documents</li>
+                            <li><strong>e.g.</strong> (for example)</li>
+                            <li><strong>i.e.</strong> (that is)</li>
+                            <li><strong>etc.</strong> (and so forth)</li>
+                            <li><strong>vs.</strong> (versus)</li>
                         </ul>
                     </div>
                     
+                    <h3>Plurals of Foreign Terms</h3>
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>With Definitions</h4>
-                            <ul>
-                                <li>The <em>status quo</em> (existing state) must change</li>
-                                <li>We need an <em>ad hoc</em> committee for this</li>
-                                <li>This is the <em>sine qua non</em> of good policy</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Retained Foreign Plurals</h4>
+                            <p><em>datum</em> → <em>data</em> (now English)<br>
+                            <em>memorandum</em> → <em>memoranda</em><br>
+                            <em>criterion</em> → <em>criteria</em></p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Plurals</h4>
-                            <ul>
-                                <li><em>datum</em> → <em>data</em> (now English)</li>
-                                <li><em>memorandum</em> → <em>memoranda</em></li>
-                                <li><em>criterion</em> → <em>criteria</em></li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ English Plurals</h4>
+                            <p><em>forum</em> → forums<br>
+                            <em>focus</em> → focuses<br>
+                            <em>campus</em> → campuses</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Foreign Words -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-foreign-words"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('foreign-words')">
-                        Mark Complete & Continue
+                        Complete Section → Legal Cases
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="../shared/js/router.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/components.js"></script>
+            <!-- Section 6.05: Legal Cases -->
+            <section class="content-section" id="legal-cases">
+                <div class="section-header">
+                    <h2>6.05 Legal Cases</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <h3>Case Names</h3>
+                    <p>Italicize the names of legal cases when cited in text:</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ In Text</h4>
+                            <p>The <em>Charter</em> case established...<br>
+                            In <em>R. v. Morgentaler</em>, the court ruled...<br>
+                            The decision in <em>Roncarelli v. Duplessis</em></p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ In Citations</h4>
+                            <p><em>Reference re Same-Sex Marriage</em>, 2004 SCC 79<br>
+                            <em>R. v. Oakes</em>, [1986] 1 SCR 103<br>
+                            <em>Chaoulli v. Quebec</em>, 2005 SCC 35</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Government Parties</h3>
+                    <div class="rule-section">
+                        <h4>Standard Abbreviations</h4>
+                        <ul>
+                            <li><strong>R. v.</strong> (Regina versus - criminal cases)</li>
+                            <li><strong>Reference re</strong> (constitutional references)</li>
+                            <li><strong>Attorney General of Canada v.</strong> (government cases)</li>
+                            <li><strong>The Queen v.</strong> (formal Crown cases)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Legislation</h3>
+                    <p>Italicize the names of acts and statutes:</p>
+                    
+                    <div class="rule-section">
+                        <h4>Examples</h4>
+                        <ul>
+                            <li><em>Canadian Charter of Rights and Freedoms</em></li>
+                            <li><em>Employment Standards Act</em></li>
+                            <li><em>Criminal Code</em></li>
+                            <li><em>Official Languages Act</em></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-legal-cases"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('legal-cases')">
+                        Complete Chapter
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. 
+            Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { getProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
+        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch06';
         const sections = [
             { id: 'introduction', title: '6.01 Introduction' },
             { id: 'emphasis', title: '6.02 Emphasis' },
             { id: 'titles', title: '6.03 Titles' },
-            { id: 'foreign-words', title: '6.04 Foreign Words' }
+            { id: 'foreign-words', title: '6.04 Foreign Words' },
+            { id: 'legal-cases', title: '6.05 Legal Cases' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
+        // Initialize progress bar
         function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const progress = getProgress(CHAPTER_ID);
+            const chapterProgress = progress || {};
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
+            document.getElementById('chapterProgress').style.width = percentage + '%';
         }
         
         // Mark section as complete
@@ -399,7 +373,8 @@
             const currentIndex = sections.findIndex(s => s.id === sectionId);
             if (currentIndex < sections.length - 1) {
                 const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
             } else {
                 // Chapter complete
                 showCompletionModal();
@@ -412,7 +387,8 @@
             modal.innerHTML = `
                 <div class="modal-content">
                     <h3>🎉 Chapter 6 Complete!</h3>
-                    <p>You've mastered the use of italics. Ready for the next chapter?</p>
+                    <p>You've mastered the proper use of italics! 
+                    Your documents will now use emphasis effectively and appropriately.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -426,100 +402,28 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Italics',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the main principle for using italics?',
-                            options: [
-                                { label: 'Use them frequently for emphasis', correct: false },
-                                { label: 'Use them sparingly and consistently', correct: true },
-                                { label: 'Use them only for foreign words', correct: false },
-                                { label: 'Use them instead of quotation marks', correct: false }
-                            ],
-                            rationale: 'Italics should be used sparingly and consistently to maintain professional appearance.',
-                            ref: '§6.01'
-                        }
-                    ]
-                },
-                emphasis: {
-                    title: 'Emphasis',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How many words should typically be emphasized per paragraph?',
-                            options: [
-                                { label: 'As many as needed', correct: false },
-                                { label: 'One or two words maximum', correct: true },
-                                { label: 'No more than five words', correct: false },
-                                { label: 'At least three words', correct: false }
-                            ],
-                            rationale: 'Limit emphasis to one or two words per paragraph for maximum effectiveness.',
-                            ref: '§6.02'
-                        }
-                    ]
-                },
-                titles: {
-                    title: 'Titles',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which title should be italicized?',
-                            options: [
-                                { label: '"The Prime Minister\'s Speech" (article)', correct: false },
-                                { label: 'The Globe and Mail (newspaper)', correct: true },
-                                { label: '"Chapter 1: Introduction" (chapter)', correct: false },
-                                { label: '"O Canada" (song)', correct: false }
-                            ],
-                            rationale: 'Newspaper titles are italicized as complete, independent works.',
-                            ref: '§6.03'
-                        }
-                    ]
-                },
-                'foreign-words': {
-                    title: 'Foreign Words',
-                    questions: [
-                        {
-                            type: 'fill-blank',
-                            stem: 'Should "café" be italicized in Canadian government writing?',
-                            answer: 'no',
-                            rationale: 'Café is now part of English and doesn\'t need italics.',
-                            ref: '§6.04'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+        // Section navigation
+        function initSectionNavigation() {
+            const tabs = document.querySelectorAll('.tab-link');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = tab.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(tab);
                 });
             });
+            
+            // Handle initial hash
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                const tab = document.querySelector(`[data-section="${hash}"]`);
+                if (tab) tab.click();
+            } else {
+                // Default to first section
+                showSection('introduction');
+                updateActiveTab(tabs[0]);
+            }
         }
         
         function showSection(sectionId) {
@@ -542,14 +446,44 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
-            
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 6');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
         
