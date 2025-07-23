@@ -8,514 +8,417 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 8: Quotations & Quotation Marks</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
-                </div>
-                <span class="progress-text">Progress</span>
-            </div>
-        </header>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">8.01 Introduction</a>
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 8
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">8</div>
+                <div>
+                    <h1>Quotations & Quotation Marks</h1>
+                    <p>Proper quotation format and punctuation rules</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">8.01 Introduction</a>
                 <a href="#quotation-marks" class="tab-link" data-section="quotation-marks">8.02 Quotation Marks</a>
-                <a href="#dialogue" class="tab-link" data-section="dialogue">8.15 Dialogue</a>
-                <a href="#citations" class="tab-link" data-section="citations">8.20 Citations</a>
-                <a href="#block-quotes" class="tab-link" data-section="block-quotes">8.25 Block Quotes</a>
+                <a href="#nested-quotations" class="tab-link" data-section="nested-quotations">8.15 Nested Quotations</a>
+                <a href="#block-quotations" class="tab-link" data-section="block-quotations">8.20 Block Quotations</a>
+                <a href="#omissions-insertions" class="tab-link" data-section="omissions-insertions">8.25 Omissions & Insertions</a>
                 <a href="#punctuation" class="tab-link" data-section="punctuation">8.30 Punctuation</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 8.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>8.01 Introduction to Quotations</h2>
+                    <h2>8.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Quotation marks indicate direct speech, titles of shorter works, and words used in special ways. Canadian style follows specific conventions for accuracy and consistency in quoting sources.</p>
+                <div class="lesson-content">
+                    <p>Quotations require careful attention to format, punctuation, and accuracy. This chapter covers the conventions for incorporating other people's words into your writing.</p>
                     
                     <div class="key-principles">
-                        <h3>Basic Principles</h3>
+                        <h3>Key Principles</h3>
                         <ul>
-                            <li>Quote sources exactly and accurately</li>
-                            <li>Use quotation marks consistently</li>
-                            <li>Integrate quotes smoothly into text</li>
-                            <li>Provide proper attribution</li>
+                            <li>Maintain complete accuracy in quoted material</li>
+                            <li>Use quotation marks to distinguish others' words</li>
+                            <li>Follow Canadian punctuation conventions</li>
+                            <li>Introduce quotations clearly and grammatically</li>
+                            <li>Use block format for long quotations</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Types of Quotations</h4>
-                            <ul>
-                                <li><strong>Direct speech:</strong> "I agree," she said</li>
-                                <li><strong>Titles:</strong> "Chapter 1: Overview"</li>
-                                <li><strong>Special terms:</strong> "user-friendly" interface</li>
-                                <li><strong>Definitions:</strong> "Efficiency" means optimal use</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Canadian Style Features</h4>
-                            <ul>
-                                <li>Double quotation marks for main quotes</li>
-                                <li>Single quotes within double quotes</li>
-                                <li>Logical punctuation placement</li>
-                                <li>Consistent capitalization rules</li>
-                            </ul>
-                        </div>
+                    <div class="warning-box">
+                        <h4>⚠️ Accuracy is Essential</h4>
+                        <p>Never alter quotations without clear indication. Use [sic] for errors in the original, and brackets [ ] for your clarifications.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Introduction -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
+                        Complete Section → Quotation Marks
                     </button>
                 </div>
             </section>
 
-            <!-- Quotation Marks Section -->
-            <section class="content-section" id="quotation-marks" style="display: none;">
+            <!-- Section 8.02: Quotation Marks -->
+            <section class="content-section" id="quotation-marks">
                 <div class="section-header">
                     <h2>8.02 Quotation Marks</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Double vs. Single Quotation Marks</h4>
-                        <p>Use double quotation marks for main quotations and single marks for quotes within quotes.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Basic Usage</h3>
+                    <p>Use double quotation marks (" ") for direct quotations:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Double Quotation Marks</h4>
-                            <ul>
-                                <li>"We need to act quickly," the minister said</li>
-                                <li>The report is titled "Economic Outlook 2025"</li>
-                                <li>The term "stakeholder" appears frequently</li>
-                                <li>"Please submit your application by Friday"</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Direct Quotations</h4>
+                            <p>The minister said, "We will proceed with the plan."<br>
+                            "This is unacceptable," replied the opposition leader.<br>
+                            The report states, "Funding will increase by 15%."</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Single Quotation Marks</h4>
-                            <ul>
-                                <li>She said, "The memo states 'urgent action required'"</li>
-                                <li>"Read chapter 'Getting Started' first"</li>
-                                <li>"The term 'user-friendly' is overused"</li>
-                                <li>"We discussed 'Plan B' at the meeting"</li>
-                            </ul>
+                        <div class="example-card avoid">
+                            <h4>❌ Indirect Quotations</h4>
+                            <p>The minister said that "they would proceed."<br>
+                            She mentioned that "it was important."</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Titles and Special Terms</h4>
+                    <h3>Other Uses of Quotation Marks</h3>
+                    <div class="rule-section">
+                        <h4>Special Terms</h4>
                         <ul>
-                            <li><strong>Article titles:</strong> "The Future of Remote Work"</li>
-                            <li><strong>Chapter titles:</strong> "Introduction to Management"</li>
-                            <li><strong>Song titles:</strong> "O Canada"</li>
-                            <li><strong>Special meaning:</strong> The so-called "experts"</li>
+                            <li><strong>Irony or emphasis:</strong> The "solution" created more problems</li>
+                            <li><strong>Unfamiliar terms:</strong> This "blog" contains useful information</li>
+                            <li><strong>Technical jargon:</strong> Users must "ping" the server</li>
+                            <li><strong>Titles of articles:</strong> "Building Better Communities"</li>
                         </ul>
                     </div>
                     
+                    <h3>Dialogue</h3>
+                    <p>Each speaker's words begin a new paragraph:</p>
+                    
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Technical Terms</h4>
-                            <ul>
-                                <li>Click the "Submit" button</li>
-                                <li>Select "File" then "Print"</li>
-                                <li>The "Settings" menu appears</li>
-                                <li>Type "Y" for yes or "N" for no</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Irony and Special Usage</h4>
-                            <ul>
-                                <li>Their "efficient" system took hours</li>
-                                <li>The "quick" meeting lasted three hours</li>
-                                <li>His "helpful" suggestion created problems</li>
-                                <li>The "simple" process has 20 steps</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Dialogue Format</h4>
+                            <p>"What is the current status?" asked the director.<br><br>
+                            "We're ahead of schedule," the manager replied.<br><br>
+                            "Excellent. Please continue with the next phase."</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Quotation Marks -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-quotation-marks"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('quotation-marks')">
-                        Mark Complete & Continue
+                        Complete Section → Nested Quotations
                     </button>
                 </div>
             </section>
 
-            <!-- Dialogue Section -->
-            <section class="content-section" id="dialogue" style="display: none;">
+            <!-- Section 8.15: Nested Quotations -->
+            <section class="content-section" id="nested-quotations">
                 <div class="section-header">
-                    <h2>8.15 Writing Dialogue</h2>
+                    <h2>8.15 Nested Quotations</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Dialogue Formatting</h4>
-                        <p>Start a new paragraph each time the speaker changes, and use proper punctuation with speech tags.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Quotes Within Quotes</h3>
+                    <p>Use single quotation marks (' ') for quotations within quotations:</p>
                     
-                    <div class="dialogue-example">
-                        <h4>Correct Dialogue Format:</h4>
-                        <div class="dialogue-text">
-                            <p>"Good morning, Minister," the deputy said as she entered the office.</p>
-                            <p>"Good morning, Sarah. What's on the agenda today?"</p>
-                            <p>"We have three meetings scheduled," she replied, consulting her notes. "The budget review is first."</p>
-                            <p>"Excellent. Are the documents ready?"</p>
-                            <p>"Yes, they're on your desk."</p>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Nested Quotations</h4>
+                            <p>The professor explained, "When Shakespeare wrote 'To be or not to be,' he was exploring existential questions."<br><br>
+                            She said, "I remember the headline clearly: 'Government Announces New Policy.'"</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Punctuation with Speech Tags</h4>
+                    <h3>Complex Nesting</h3>
+                    <p>For quotes within quotes within quotes, alternate between double and single marks:</p>
+                    
+                    <div class="rule-section">
+                        <h4>Pattern</h4>
                         <ul>
-                            <li><strong>Tag after:</strong> "Hello," she said.</li>
-                            <li><strong>Tag before:</strong> She said, "Hello."</li>
-                            <li><strong>Tag in middle:</strong> "Hello," she said, "how are you?"</li>
-                            <li><strong>No tag:</strong> "Hello." (period inside)</li>
+                            <li><strong>First level:</strong> "..." (double)</li>
+                            <li><strong>Second level:</strong> '...' (single)</li>
+                            <li><strong>Third level:</strong> "..." (double again)</li>
                         </ul>
                     </div>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Questions and Exclamations</h4>
-                            <ul>
-                                <li>"Are you ready?" she asked.</li>
-                                <li>"Absolutely!" he replied.</li>
-                                <li>"When," she asked, "will you finish?"</li>
-                                <li>"Never!" was his emphatic response.</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Complex Example</h4>
+                            <p>The reporter wrote, "The witness testified, 'The suspect shouted "I didn't do it!" before running away.'"</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Interrupted Speech</h4>
-                            <ul>
-                                <li>"I think we should—" "No, wait."</li>
-                                <li>"The meeting is—" She paused.</li>
-                                <li>"We need to..." He trailed off.</li>
-                                <li>"But—" "Let me finish."</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Speech Tag Alternatives</h4>
-                        <p>Vary speech tags for better writing:</p>
-                        <ul>
-                            <li><strong>Basic:</strong> said, asked, replied</li>
-                            <li><strong>Emotion:</strong> whispered, shouted, muttered</li>
-                            <li><strong>Manner:</strong> explained, announced, suggested</li>
-                            <li><strong>Action beats:</strong> She smiled. "That's perfect."</li>
-                        </ul>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Dialogue -->
-                <div class="quiz-panel" id="quiz-dialogue"></div>
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-nested-quotations"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('dialogue')">
-                        Mark Complete & Continue
+                    <button class="btn btn-primary" onclick="completeSection('nested-quotations')">
+                        Complete Section → Block Quotations
                     </button>
                 </div>
             </section>
 
-            <!-- Citations Section -->
-            <section class="content-section" id="citations" style="display: none;">
+            <!-- Section 8.20: Block Quotations -->
+            <section class="content-section" id="block-quotations">
                 <div class="section-header">
-                    <h2>8.20 Citations and Attribution</h2>
+                    <h2>8.20 Block Quotations</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Integrating Quotations</h4>
-                        <p>Introduce quotations smoothly and provide clear attribution to sources.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>When to Use Block Format</h3>
+                    <p>Use block format for quotations longer than four lines of text:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Introducing Quotes</h4>
-                            <ul>
-                                <li>According to the minister, "Budget priorities will shift"</li>
-                                <li>The report states that "revenue increased by 15%"</li>
-                                <li>As Smith argues, "Policy reform is essential"</li>
-                                <li>The data shows that "unemployment fell sharply"</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Attribution Placement</h4>
-                            <ul>
-                                <li>"We must act now," the minister said</li>
-                                <li>The minister said, "We must act now"</li>
-                                <li>"We must," the minister said, "act now"</li>
-                                <li>"We must act now" (Minister's Office, 2024)</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Block Format</h4>
+                            <p>The report concluded:</p>
+                            <blockquote>
+                                The evidence clearly demonstrates that current policies are inadequate to address the growing challenges in this sector. Immediate action is required to prevent further deterioration of services. The government must act decisively to implement the recommended changes within the next fiscal year.
+                            </blockquote>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Partial Quotations</h4>
-                        <p>Integrate quoted phrases naturally into your sentences:</p>
+                    <h3>Block Format Rules</h3>
+                    <div class="rule-section">
+                        <h4>Formatting Guidelines</h4>
                         <ul>
-                            <li>The minister called the results "very encouraging"</li>
-                            <li>Officials described the plan as "ambitious but achievable"</li>
-                            <li>The report warns of "significant challenges ahead"</li>
+                            <li><strong>No quotation marks:</strong> The indentation shows it's a quotation</li>
+                            <li><strong>Indent from left margin:</strong> Usually 1.25 cm or 5 spaces</li>
+                            <li><strong>Single-space the quotation:</strong> Even if the main text is double-spaced</li>
+                            <li><strong>Introduce with a colon:</strong> The minister stated:</li>
+                            <li><strong>Citation follows:</strong> Place citation after the final period</li>
                         </ul>
                     </div>
                     
+                    <h3>Poetry and Verse</h3>
+                    <p>For poetry, preserve the original line breaks:</p>
+                    
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Alterations to Quotes</h4>
-                            <ul>
-                                <li><strong>Additions:</strong> "We [the government] will proceed"</li>
-                                <li><strong>Omissions:</strong> "The plan... will succeed"</li>
-                                <li><strong>Changes:</strong> "[T]he plan will succeed" (capitalization)</li>
-                                <li><strong>Errors:</strong> "The plan [sic] will succeed"</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Paraphrasing vs. Quoting</h4>
-                            <ul>
-                                <li><strong>Quote:</strong> The minister said, "We will increase funding"</li>
-                                <li><strong>Paraphrase:</strong> The minister promised increased funding</li>
-                                <li><strong>Mixed:</strong> The minister promised "significant" funding increases</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Poetry Format</h4>
+                            <p>The national anthem begins:</p>
+                            <blockquote>
+                                O Canada! Our home and native land!<br>
+                                True patriot love in all thy sons command.<br>
+                                With glowing hearts we see thee rise,<br>
+                                The True North strong and free!
+                            </blockquote>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Citations -->
-                <div class="quiz-panel" id="quiz-citations"></div>
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-block-quotations"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('citations')">
-                        Mark Complete & Continue
+                    <button class="btn btn-primary" onclick="completeSection('block-quotations')">
+                        Complete Section → Omissions & Insertions
                     </button>
                 </div>
             </section>
 
-            <!-- Block Quotes Section -->
-            <section class="content-section" id="block-quotes" style="display: none;">
+            <!-- Section 8.25: Omissions & Insertions -->
+            <section class="content-section" id="omissions-insertions">
                 <div class="section-header">
-                    <h2>8.25 Block Quotations</h2>
+                    <h2>8.25 Omissions and Insertions</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>When to Use Block Quotes</h4>
-                        <p>Use block quotations for longer quotes (typically 40+ words) that deserve special emphasis.</p>
+                <div class="lesson-content">
+                    <h3>Ellipses for Omissions</h3>
+                    <p>Use three dots (...) to show where you've omitted text from a quotation:</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Ellipses Usage</h4>
+                            <p><strong>Original:</strong> "The policy will affect all departments, including finance, human resources, and operations, starting next month."<br><br>
+                            <strong>With omission:</strong> "The policy will affect all departments ... starting next month."</p>
+                        </div>
                     </div>
                     
-                    <div class="block-quote-example">
-                        <h4>Block Quote Format:</h4>
-                        <p>The Prime Minister outlined the government's approach:</p>
-                        <blockquote>
-                            Our strategy is built on three pillars: economic growth through innovation, environmental sustainability through responsible development, and social progress through inclusive policies. These principles will guide all our decisions and ensure that Canada remains competitive while maintaining our values and protecting our environment for future generations.
-                        </blockquote>
-                        <p>This comprehensive approach addresses multiple challenges simultaneously.</p>
+                    <h3>Square Brackets for Insertions</h3>
+                    <p>Use square brackets [ ] for your own words inserted into quotations:</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Clarifications</h4>
+                            <p>"We expect [the new policy] to be implemented by March."<br>
+                            "The program [announced yesterday] will benefit many families."<br>
+                            "This initiative [the housing project] requires additional funding."</p>
+                        </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Block Quote Guidelines</h4>
+                    <h3>Using [sic]</h3>
+                    <p>Use [sic] to indicate errors in the original quotation:</p>
+                    
+                    <div class="rule-section">
+                        <h4>Examples</h4>
                         <ul>
-                            <li>Indent the entire quote (usually 1/2 inch or 1.3 cm)</li>
-                            <li>Do not use quotation marks around the block</li>
-                            <li>Maintain double spacing if document is double-spaced</li>
-                            <li>Include citation after the closing punctuation</li>
+                            <li>"The goverment [sic] will respond soon."</li>
+                            <li>"There was alot [sic] of confusion about the policy."</li>
+                            <li>"The program will begin in Febuary [sic]."</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>With Citation</h4>
-                            <div class="block-quote-example">
-                                <p>The report concludes:</p>
-                                <blockquote>
-                                    The evidence clearly demonstrates that early intervention programs produce measurable improvements in educational outcomes, with participants showing 25% better performance on standardized tests and 40% higher graduation rates compared to control groups.
-                                </blockquote>
-                                <p class="citation">(Educational Research Institute, 2024, p. 156)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Multiple Paragraphs</h4>
-                            <div class="block-quote-example">
-                                <p>The policy document states:</p>
-                                <blockquote>
-                                    <p>Climate action requires immediate and sustained effort across all sectors of society. Government cannot solve this challenge alone.</p>
-                                    <p>We need partnerships with business, civil society, and individual Canadians to achieve our ambitious targets for 2030 and beyond.</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Capitalization Changes</h3>
+                    <p>When you change the first letter of a quotation to fit your sentence structure, indicate this with brackets:</p>
                     
-                    <div class="rule-box">
-                        <h4>Poetry and Verse</h4>
-                        <p>For poetry, maintain original line breaks and spacing:</p>
-                        <blockquote style="text-align: left;">
-                            O Canada!<br>
-                            Our home and native land!<br>
-                            True patriot love in all thy sons command.
-                        </blockquote>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Capitalization Changes</h4>
+                            <p><strong>Original:</strong> "the policy will be effective immediately."<br>
+                            <strong>Incorporated:</strong> The minister announced that "[t]he policy will be effective immediately."</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Block Quotes -->
-                <div class="quiz-panel" id="quiz-block-quotes"></div>
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-omissions-insertions"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('block-quotes')">
-                        Mark Complete & Continue
+                    <button class="btn btn-primary" onclick="completeSection('omissions-insertions')">
+                        Complete Section → Punctuation
                     </button>
                 </div>
             </section>
 
-            <!-- Punctuation Section -->
-            <section class="content-section" id="punctuation" style="display: none;">
+            <!-- Section 8.30: Punctuation -->
+            <section class="content-section" id="punctuation">
                 <div class="section-header">
-                    <h2>8.30 Punctuation with Quotation Marks</h2>
+                    <h2>8.30 Punctuation with Quotations</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Canadian Punctuation Style</h4>
-                        <p>Canadian style uses logical punctuation: periods and commas go inside quotation marks only when they're part of the quoted material.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Canadian (Logical) Punctuation</h3>
+                    <p>In Canada, place punctuation logically—inside quotation marks only if it's part of the quoted material:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Periods and Commas</h4>
-                            <ul>
-                                <li><strong>Part of quote:</strong> She said, "I agree."</li>
-                                <li><strong>Not part of quote:</strong> She called it "urgent".</li>
-                                <li><strong>List item:</strong> The options are "yes", "no", and "maybe".</li>
-                                <li><strong>Before tag:</strong> "I agree," she said.</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Canadian Style</h4>
+                            <p>She said, "We will proceed with the plan."<br>
+                            Did he say "urgent"?<br>
+                            She called it "urgent".<br>
+                            The report mentions "critical issues".</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Questions and Exclamations</h4>
-                            <ul>
-                                <li><strong>Quote is question:</strong> She asked, "Are you ready?"</li>
-                                <li><strong>Sentence is question:</strong> Did she say "ready"?</li>
-                                <li><strong>Both questions:</strong> Did she ask, "Are you ready?"</li>
-                                <li><strong>Exclamation:</strong> He shouted, "Stop!"</li>
-                            </ul>
+                        <div class="example-card avoid">
+                            <h4>❌ American Style</h4>
+                            <p>She called it "urgent."<br>
+                            The report mentions "critical issues."</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Semicolons and Colons</h4>
-                        <p>Semicolons and colons always go outside quotation marks:</p>
+                    <h3>Specific Rules</h3>
+                    <div class="rule-section">
+                        <h4>Periods and Commas</h4>
                         <ul>
-                            <li>She said "yes"; however, she had concerns</li>
-                            <li>Three people said "no": Smith, Jones, and Brown</li>
-                            <li>The report mentions "urgent action"; we must respond</li>
+                            <li><strong>Inside:</strong> When they end the quoted sentence</li>
+                            <li><strong>Outside:</strong> When they're part of your sentence structure</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Complex Examples</h4>
-                            <ul>
-                                <li>"Are you," she asked, "coming to the meeting?"</li>
-                                <li>He said, "I'll be there at 9:00."</li>
-                                <li>The memo states "high priority"; we should respond quickly</li>
-                                <li>She called it "essential"; I called it "optional".</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>American vs. Canadian Style</h4>
-                            <ul>
-                                <li><strong>American:</strong> She said "yes."</li>
-                                <li><strong>Canadian:</strong> She said "yes".</li>
-                                <li><strong>American:</strong> The "best" option.</li>
-                                <li><strong>Canadian:</strong> The "best" option.</li>
-                            </ul>
-                        </div>
+                    <div class="rule-section">
+                        <h4>Question Marks and Exclamation Points</h4>
+                        <ul>
+                            <li><strong>Inside:</strong> When the quoted material is a question/exclamation</li>
+                            <li><strong>Outside:</strong> When your sentence is the question/exclamation</li>
+                        </ul>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Special Cases</h4>
-                        <ul>
-                            <li><strong>Titles with punctuation:</strong> "Who's Afraid of Virginia Woolf?"</li>
-                            <li><strong>Technical terms:</strong> Click "File", then "Save".</li>
-                            <li><strong>Multiple quotes:</strong> "Yes", "no", and "maybe" are the options</li>
-                            <li><strong>Ellipsis:</strong> "We should..." she began</li>
-                        </ul>
+                    <h3>Examples in Context</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Various Punctuation</h4>
+                            <ul>
+                                <li><strong>Period inside:</strong> He said, "We're ready."</li>
+                                <li><strong>Period outside:</strong> She mentioned "readiness".</li>
+                                <li><strong>Question inside:</strong> "Are you ready?" she asked.</li>
+                                <li><strong>Question outside:</strong> Did she say "ready"?</li>
+                                <li><strong>Multiple quotes:</strong> "Yes", "no", and "maybe" are the options</li>
+                                <li><strong>Ellipsis:</strong> "We should..." she began</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Punctuation -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-punctuation"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('punctuation')">
-                        Mark Complete & Continue
+                        Complete Chapter
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="../shared/js/router.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/components.js"></script>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. 
+            Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { getProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
+        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch08';
         const sections = [
             { id: 'introduction', title: '8.01 Introduction' },
             { id: 'quotation-marks', title: '8.02 Quotation Marks' },
-            { id: 'dialogue', title: '8.15 Dialogue' },
-            { id: 'citations', title: '8.20 Citations' },
-            { id: 'block-quotes', title: '8.25 Block Quotes' },
+            { id: 'nested-quotations', title: '8.15 Nested Quotations' },
+            { id: 'block-quotations', title: '8.20 Block Quotations' },
+            { id: 'omissions-insertions', title: '8.25 Omissions & Insertions' },
             { id: 'punctuation', title: '8.30 Punctuation' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
+        // Initialize progress bar
         function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const progress = getProgress(CHAPTER_ID);
+            const chapterProgress = progress || {};
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
+            document.getElementById('chapterProgress').style.width = percentage + '%';
         }
         
         // Mark section as complete
@@ -527,7 +430,8 @@
             const currentIndex = sections.findIndex(s => s.id === sectionId);
             if (currentIndex < sections.length - 1) {
                 const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
             } else {
                 // Chapter complete
                 showCompletionModal();
@@ -540,7 +444,8 @@
             modal.innerHTML = `
                 <div class="modal-content">
                     <h3>🎉 Chapter 8 Complete!</h3>
-                    <p>You've mastered quotations and quotation marks. Ready for the next chapter?</p>
+                    <p>You've mastered quotations and quotation marks! 
+                    Your writing will now properly incorporate and cite other people's words.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -554,139 +459,28 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Quotations',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the primary purpose of quotation marks?',
-                            options: [
-                                { label: 'To make text look professional', correct: false },
-                                { label: 'To indicate direct speech and special terms', correct: true },
-                                { label: 'To emphasize important words', correct: false },
-                                { label: 'To replace italics', correct: false }
-                            ],
-                            rationale: 'Quotation marks primarily indicate direct speech, titles, and special terms.',
-                            ref: '§8.01'
-                        }
-                    ]
-                },
-                'quotation-marks': {
-                    title: 'Quotation Marks',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which uses quotation marks correctly?',
-                            options: [
-                                { label: 'She said, "The memo states \'urgent action required\'"', correct: true },
-                                { label: 'She said, \'The memo states "urgent action required"\'', correct: false },
-                                { label: 'She said, "The memo states "urgent action required""', correct: false },
-                                { label: 'She said, (The memo states "urgent action required")', correct: false }
-                            ],
-                            rationale: 'Use double quotes for main quotations and single quotes within doubles.',
-                            ref: '§8.02'
-                        }
-                    ]
-                },
-                dialogue: {
-                    title: 'Writing Dialogue',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What should you do when a new person speaks?',
-                            options: [
-                                { label: 'Continue in the same paragraph', correct: false },
-                                { label: 'Start a new paragraph', correct: true },
-                                { label: 'Use a semicolon', correct: false },
-                                { label: 'Add extra quotation marks', correct: false }
-                            ],
-                            rationale: 'Always start a new paragraph when a different person speaks.',
-                            ref: '§8.15'
-                        }
-                    ]
-                },
-                citations: {
-                    title: 'Citations',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should you indicate an addition to a quote?',
-                            options: [
-                                { label: 'Use parentheses (addition)', correct: false },
-                                { label: 'Use square brackets [addition]', correct: true },
-                                { label: 'Use italics addition', correct: false },
-                                { label: 'Use asterisks *addition*', correct: false }
-                            ],
-                            rationale: 'Use square brackets to indicate additions or changes to quoted material.',
-                            ref: '§8.20'
-                        }
-                    ]
-                },
-                'block-quotes': {
-                    title: 'Block Quotes',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'When should you use a block quotation?',
-                            options: [
-                                { label: 'For any important quote', correct: false },
-                                { label: 'For quotes of 40+ words', correct: true },
-                                { label: 'For quotes from officials', correct: false },
-                                { label: 'For quotes in lists', correct: false }
-                            ],
-                            rationale: 'Block quotes are typically used for longer quotations (40+ words).',
-                            ref: '§8.25'
-                        }
-                    ]
-                },
-                punctuation: {
-                    title: 'Punctuation with Quotes',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'In Canadian style, where does the period go: She called it "urgent"',
-                            options: [
-                                { label: 'She called it "urgent."', correct: false },
-                                { label: 'She called it "urgent".', correct: true },
-                                { label: 'She called it "urgent,"', correct: false },
-                                { label: 'She called it "urgent";', correct: false }
-                            ],
-                            rationale: 'Canadian style uses logical punctuation - periods go outside when not part of the quote.',
-                            ref: '§8.30'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+        // Section navigation
+        function initSectionNavigation() {
+            const tabs = document.querySelectorAll('.tab-link');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = tab.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(tab);
                 });
             });
+            
+            // Handle initial hash
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                const tab = document.querySelector(`[data-section="${hash}"]`);
+                if (tab) tab.click();
+            } else {
+                // Default to first section
+                showSection('introduction');
+                updateActiveTab(tabs[0]);
+            }
         }
         
         function showSection(sectionId) {
@@ -709,14 +503,44 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
-            
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 8');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
         
