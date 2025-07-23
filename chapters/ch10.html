@@ -8,558 +8,404 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 10: Letters & Memorandums</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 10
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">10</div>
+                <div>
+                    <h1>Letters & Memorandums</h1>
+                    <p>Professional correspondence format and conventions</p>
                 </div>
-                <span class="progress-text">Progress</span>
             </div>
-        </header>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </header>
 
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">10.01 Introduction</a>
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">10.01 Introduction</a>
                 <a href="#business-letters" class="tab-link" data-section="business-letters">10.02 Business Letters</a>
-                <a href="#memos" class="tab-link" data-section="memos">10.15 Memorandums</a>
-                <a href="#formatting" class="tab-link" data-section="formatting">10.25 Formatting</a>
-                <a href="#addresses" class="tab-link" data-section="addresses">10.30 Addresses</a>
-                <a href="#signatures" class="tab-link" data-section="signatures">10.40 Signatures</a>
+                <a href="#memorandums" class="tab-link" data-section="memorandums">10.03 Memorandums</a>
+                <a href="#formatting" class="tab-link" data-section="formatting">10.04 Formatting</a>
+                <a href="#addresses" class="tab-link" data-section="addresses">10.05 Addresses</a>
+                <a href="#signatures" class="tab-link" data-section="signatures">10.06 Signatures</a>
+                <a href="#electronic" class="tab-link" data-section="electronic">10.07 Electronic Communication</a>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 10.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>10.01 Introduction to Correspondence</h2>
+                    <h2>10.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Professional correspondence reflects the quality and credibility of government communications. This chapter covers Canadian government standards for letters, memorandums, and other formal correspondence.</p>
+                <div class="lesson-content">
+                    <p>Professional correspondence reflects your organization's image and competence. This chapter covers formatting and writing conventions for business letters, memorandums, and electronic communications.</p>
                     
                     <div class="key-principles">
                         <h3>Correspondence Principles</h3>
                         <ul>
                             <li>Clear, concise, and courteous communication</li>
-                            <li>Consistent formatting and professional appearance</li>
+                            <li>Consistent formatting and layout</li>
                             <li>Appropriate tone for audience and purpose</li>
-                            <li>Compliance with government standards</li>
+                            <li>Complete and accurate information</li>
+                            <li>Professional appearance</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Types of Correspondence</h4>
-                            <ul>
-                                <li><strong>Business letters:</strong> External communication</li>
-                                <li><strong>Memorandums:</strong> Internal communication</li>
-                                <li><strong>Formal notes:</strong> Diplomatic correspondence</li>
-                                <li><strong>Electronic mail:</strong> Digital communication</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Government Context</h4>
-                            <ul>
-                                <li>Represents the Government of Canada</li>
-                                <li>Must follow accessibility standards</li>
-                                <li>Subject to access to information laws</li>
-                                <li>Reflects public service values</li>
-                            </ul>
-                        </div>
+                    <div class="tip-box">
+                        <h4>💡 First Impressions Matter</h4>
+                        <p>Your correspondence is often the first contact people have with your organization. Make it count with professional formatting and clear, helpful content.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Introduction -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
+                        Complete Section → Business Letters
                     </button>
                 </div>
             </section>
 
-            <!-- Business Letters Section -->
-            <section class="content-section" id="business-letters" style="display: none;">
+            <!-- Section 10.02: Business Letters -->
+            <section class="content-section" id="business-letters">
                 <div class="section-header">
                     <h2>10.02 Business Letters</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Business Letter Structure</h4>
-                        <p>Government business letters follow a standard format that ensures professional presentation and effective communication.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Letter Components</h3>
+                    <p>A standard business letter includes these elements in order:</p>
                     
-                    <div class="letter-template">
-                        <h4>Standard Business Letter Format:</h4>
-                        <div class="letter-example">
-                            <div class="letterhead">
-                                <p><strong>GOVERNMENT OF CANADA</strong><br>
-                                Department of Justice Canada<br>
-                                284 Wellington Street<br>
-                                Ottawa, Ontario K1A 0H8</p>
-                            </div>
-                            
-                            <div class="letter-body">
-                                <p class="date-line">March 15, 2025</p>
-                                
-                                <div class="recipient-address">
-                                    <p>Ms. Sarah Johnson<br>
-                                    Director of Communications<br>
-                                    Canadian Bar Association<br>
-                                    500 - 865 Carling Avenue<br>
-                                    Ottawa, Ontario K1S 5S8</p>
-                                </div>
-                                
-                                <p class="salutation">Dear Ms. Johnson:</p>
-                                
-                                <p>Thank you for your letter of March 1, 2025, regarding the proposed amendments to the Criminal Code. We appreciate your organization's thoughtful input on this important legislation.</p>
-                                
-                                <p>The Department of Justice is carefully reviewing all submissions received during the consultation period. Your recommendations regarding the implementation timeline will be given due consideration as we finalize the regulatory framework.</p>
-                                
-                                <p>We will ensure that the Canadian Bar Association receives advance notice of any regulatory changes and implementation schedules. Should you have any questions about this matter, please do not hesitate to contact me directly.</p>
-                                
-                                <p class="closing">Yours sincerely,</p>
-                                
-                                <div class="signature-block">
-                                    <p class="signature-space">[Signature]</p>
-                                    <p><strong>David Thompson</strong><br>
-                                    Assistant Deputy Minister<br>
-                                    Policy Development Branch</p>
-                                </div>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Letter Structure</h4>
+                            <ol>
+                                <li><strong>Letterhead</strong> (organization's contact information)</li>
+                                <li><strong>Date</strong> (spelled out: March 15, 2024)</li>
+                                <li><strong>Inside address</strong> (recipient's name and address)</li>
+                                <li><strong>Salutation</strong> (Dear Ms. Johnson:)</li>
+                                <li><strong>Body</strong> (main message in paragraphs)</li>
+                                <li><strong>Complimentary close</strong> (Sincerely,)</li>
+                                <li><strong>Signature block</strong> (name and title)</li>
+                                <li><strong>Enclosures</strong> (if applicable)</li>
+                            </ol>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Essential Elements</h4>
+                    <h3>Salutations</h3>
+                    <div class="rule-section">
+                        <h4>Formal Options</h4>
                         <ul>
-                            <li><strong>Letterhead:</strong> Official government identification</li>
-                            <li><strong>Date:</strong> Full date in Canadian format</li>
-                            <li><strong>Inside address:</strong> Complete recipient information</li>
-                            <li><strong>Salutation:</strong> Appropriate greeting</li>
-                            <li><strong>Body:</strong> Clear, organized message</li>
-                            <li><strong>Closing:</strong> Professional sign-off</li>
-                            <li><strong>Signature block:</strong> Name, title, department</li>
+                            <li><strong>Specific person:</strong> Dear Ms. Johnson: / Dear Mr. Chen:</li>
+                            <li><strong>Unknown gender:</strong> Dear A. Johnson:</li>
+                            <li><strong>Position known:</strong> Dear Director: / Dear Hiring Manager:</li>
+                            <li><strong>General:</strong> Dear Sir or Madam: / To Whom It May Concern:</li>
                         </ul>
                     </div>
                     
+                    <h3>Complimentary Closes</h3>
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Salutations</h4>
-                            <ul>
-                                <li><strong>Formal:</strong> Dear Ms. Smith:</li>
-                                <li><strong>Unknown name:</strong> Dear Sir or Madam:</li>
-                                <li><strong>Group:</strong> Dear Colleagues:</li>
-                                <li><strong>Officials:</strong> Dear Minister:</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Appropriate Closes</h4>
+                            <p><strong>Formal:</strong> Sincerely, / Yours truly,<br>
+                            <strong>Less formal:</strong> Best regards, / Kind regards,<br>
+                            <strong>Respectful:</strong> Respectfully yours,</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Closings</h4>
-                            <ul>
-                                <li><strong>Standard:</strong> Yours sincerely,</li>
-                                <li><strong>Formal:</strong> Yours truly,</li>
-                                <li><strong>Respectful:</strong> Respectfully yours,</li>
-                                <li><strong>Collaborative:</strong> Yours in partnership,</li>
-                            </ul>
+                        <div class="example-card avoid">
+                            <h4>❌ Avoid</h4>
+                            <p>Cheers, / Thanks, / TTYL,<br>
+                            Love, / Your friend,</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Business Letters -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-business-letters"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('business-letters')">
-                        Mark Complete & Continue
+                        Complete Section → Memorandums
                     </button>
                 </div>
             </section>
 
-            <!-- Memos Section -->
-            <section class="content-section" id="memos" style="display: none;">
+            <!-- Section 10.03: Memorandums -->
+            <section class="content-section" id="memorandums">
                 <div class="section-header">
-                    <h2>10.15 Memorandums</h2>
+                    <h2>10.03 Memorandums</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Memorandum Purpose</h4>
-                        <p>Memorandums facilitate internal communication within government, providing clear, documented information exchange between departments, branches, and individuals.</p>
-                    </div>
-                    
-                    <div class="memo-template">
-                        <h4>Standard Memorandum Format:</h4>
-                        <div class="memo-example">
-                            <div class="memo-header">
-                                <p><strong>MEMORANDUM</strong></p>
-                                <hr>
-                                <div class="memo-fields">
-                                    <p><strong>TO:</strong> Sarah Wilson, Director General, Policy Branch</p>
-                                    <p><strong>FROM:</strong> Michael Chen, Senior Policy Analyst</p>
-                                    <p><strong>DATE:</strong> March 15, 2025</p>
-                                    <p><strong>SUBJECT:</strong> Quarterly Report on Immigration Processing Times</p>
-                                </div>
-                                <hr>
-                            </div>
-                            
-                            <div class="memo-body">
-                                <p><strong>Purpose</strong></p>
-                                <p>This memorandum provides an update on immigration processing times for Q1 2025 and recommends actions to address current delays.</p>
-                                
-                                <p><strong>Background</strong></p>
-                                <p>Processing times have increased by 15% compared to Q4 2024, primarily due to increased application volumes and staffing challenges in regional offices.</p>
-                                
-                                <p><strong>Current Status</strong></p>
-                                <ul>
-                                    <li>Average processing time: 18 months (target: 12 months)</li>
-                                    <li>Backlog: 45,000 applications</li>
-                                    <li>Regional variations: Atlantic (22 months), West (14 months)</li>
-                                </ul>
-                                
-                                <p><strong>Recommendations</strong></p>
-                                <ol>
-                                    <li>Increase temporary staffing in Atlantic region</li>
-                                    <li>Implement digital processing pilot program</li>
-                                    <li>Revise service standards based on current capacity</li>
-                                </ol>
-                                
-                                <p><strong>Next Steps</strong></p>
-                                <p>I will prepare detailed implementation plans for each recommendation and circulate them for review by March 30, 2025.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Memorandum Elements</h4>
-                        <ul>
-                            <li><strong>Header:</strong> "MEMORANDUM" or "MEMO"</li>
-                            <li><strong>TO:</strong> Recipient name and title</li>
-                            <li><strong>FROM:</strong> Sender name and title</li>
-                            <li><strong>DATE:</strong> Full date</li>
-                            <li><strong>SUBJECT:</strong> Clear, specific topic</li>
-                            <li><strong>Body:</strong> Organized content with clear structure</li>
-                        </ul>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Memo Format</h3>
+                    <p>Memorandums are used for internal communication. They have a standard header format:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Subject Line Guidelines</h4>
-                            <ul>
-                                <li><strong>Specific:</strong> "Budget Variance Report - Q1 2025"</li>
-                                <li><strong>Action-oriented:</strong> "Request for Approval - New Hiring"</li>
-                                <li><strong>Informative:</strong> "Update on Climate Action Plan"</li>
-                                <li><strong>Concise:</strong> Avoid unnecessary words</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Memo Header</h4>
+                            <p><strong>MEMORANDUM</strong><br><br>
+                            <strong>TO:</strong> All Department Managers<br>
+                            <strong>FROM:</strong> Sarah Johnson, Director<br>
+                            <strong>DATE:</strong> March 15, 2024<br>
+                            <strong>SUBJECT:</strong> New Meeting Room Booking System</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Distribution</h4>
-                            <ul>
-                                <li><strong>Primary recipient:</strong> In TO field</li>
-                                <li><strong>Copies:</strong> cc: (carbon copy)</li>
-                                <li><strong>Blind copies:</strong> bcc: (when appropriate)</li>
-                                <li><strong>File copy:</strong> For records management</li>
-                            </ul>
+                    </div>
+                    
+                    <h3>Subject Lines</h3>
+                    <p>Write clear, specific subject lines that summarize the memo's purpose:</p>
+                    
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Clear Subjects</h4>
+                            <p>Policy Update: Remote Work Guidelines<br>
+                            Deadline Reminder: Budget Submissions Due March 30<br>
+                            Training Opportunity: Customer Service Workshop</p>
                         </div>
+                        <div class="example-card avoid">
+                            <h4>❌ Vague Subjects</h4>
+                            <p>Update<br>
+                            Important Information<br>
+                            FYI</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Memo Body</h3>
+                    <div class="rule-section">
+                        <h4>Writing Guidelines</h4>
+                        <ul>
+                            <li><strong>Purpose first:</strong> State the main point in the opening paragraph</li>
+                            <li><strong>Be concise:</strong> Use bullet points for lists and action items</li>
+                            <li><strong>No salutation:</strong> Start directly with the message</li>
+                            <li><strong>No signature:</strong> The FROM line identifies the author</li>
+                            <li><strong>Action required:</strong> Clearly state what recipients should do</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Memos -->
-                <div class="quiz-panel" id="quiz-memos"></div>
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-memorandums"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('memos')">
-                        Mark Complete & Continue
+                    <button class="btn btn-primary" onclick="completeSection('memorandums')">
+                        Complete Section → Formatting
                     </button>
                 </div>
             </section>
 
-            <!-- Formatting Section -->
-            <section class="content-section" id="formatting" style="display: none;">
+            <!-- Section 10.04: Formatting -->
+            <section class="content-section" id="formatting">
                 <div class="section-header">
-                    <h2>10.25 Formatting Standards</h2>
+                    <h2>10.04 Formatting Standards</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>General Formatting Guidelines</h4>
-                        <p>Consistent formatting enhances readability and projects a professional image for government correspondence.</p>
-                    </div>
-                    
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Margins and Spacing</h4>
-                            <ul>
-                                <li><strong>Margins:</strong> 1 inch (2.5 cm) all sides</li>
-                                <li><strong>Line spacing:</strong> Single-spaced within paragraphs</li>
-                                <li><strong>Paragraph spacing:</strong> Double space between paragraphs</li>
-                                <li><strong>Indentation:</strong> None for block format</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Font and Typography</h4>
-                            <ul>
-                                <li><strong>Font:</strong> Times New Roman, Arial, or Calibri</li>
-                                <li><strong>Size:</strong> 11 or 12 point</li>
-                                <li><strong>Emphasis:</strong> Bold for headings, minimal italics</li>
-                                <li><strong>Consistency:</strong> Same font throughout document</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Letterhead Requirements</h4>
+                <div class="lesson-content">
+                    <h3>Page Layout</h3>
+                    <div class="rule-section">
+                        <h4>Standard Specifications</h4>
                         <ul>
-                            <li><strong>Government identifier:</strong> "Government of Canada"</li>
-                            <li><strong>Department name:</strong> Official bilingual name</li>
-                            <li><strong>Address:</strong> Complete mailing address</li>
-                            <li><strong>Contact information:</strong> Phone, email, website</li>
+                            <li><strong>Margins:</strong> 2.5 cm (1 inch) on all sides</li>
+                            <li><strong>Font:</strong> 12-point Times New Roman or Arial</li>
+                            <li><strong>Line spacing:</strong> Single-spaced within paragraphs, double-spaced between</li>
+                            <li><strong>Alignment:</strong> Left-aligned for most elements</li>
+                            <li><strong>Page numbers:</strong> Bottom centre or top right, starting on page 2</li>
                         </ul>
                     </div>
                     
+                    <h3>Spacing Guidelines</h3>
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Page Layout</h4>
-                            <ul>
-                                <li><strong>First page:</strong> Official letterhead</li>
-                                <li><strong>Subsequent pages:</strong> Header with page number</li>
-                                <li><strong>Page numbers:</strong> Bottom center or top right</li>
-                                <li><strong>White space:</strong> Adequate margins and spacing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Electronic Format</h4>
-                            <ul>
-                                <li><strong>File format:</strong> PDF for final versions</li>
-                                <li><strong>Accessibility:</strong> Tagged PDFs when required</li>
-                                <li><strong>Security:</strong> Appropriate classification markings</li>
-                                <li><strong>Version control:</strong> Clear file naming conventions</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Proper Spacing</h4>
+                            <p><strong>Between date and inside address:</strong> 3-4 lines<br>
+                            <strong>Between address and salutation:</strong> 2 lines<br>
+                            <strong>Between salutation and body:</strong> 1 line<br>
+                            <strong>Between body and close:</strong> 2 lines<br>
+                            <strong>Between close and signature:</strong> 4 lines for handwritten signature</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Bilingual Requirements</h4>
-                        <p>For bilingual correspondence:</p>
+                    <h3>Special Elements</h3>
+                    <div class="rule-section">
+                        <h4>Additional Notations</h4>
                         <ul>
-                            <li>Both languages on letterhead</li>
-                            <li>Appropriate language for recipient</li>
-                            <li>Translation quality assurance</li>
-                            <li>Cultural sensitivity considerations</li>
+                            <li><strong>Enclosures:</strong> Enclosure (or Encl.) — list attachments</li>
+                            <li><strong>Copies:</strong> c: (carbon copy) or cc: (courtesy copy)</li>
+                            <li><strong>Confidential:</strong> Mark at top and bottom of each page</li>
+                            <li><strong>Reference numbers:</strong> Include file or reference numbers when required</li>
                         </ul>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Formatting -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-formatting"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('formatting')">
-                        Mark Complete & Continue
+                        Complete Section → Addresses
                     </button>
                 </div>
             </section>
 
-            <!-- Addresses Section -->
-            <section class="content-section" id="addresses" style="display: none;">
+            <!-- Section 10.05: Addresses -->
+            <section class="content-section" id="addresses">
                 <div class="section-header">
-                    <h2>10.30 Addresses</h2>
+                    <h2>10.05 Address Formats</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Address Formatting</h4>
-                        <p>Proper address formatting ensures mail delivery and reflects attention to detail in government correspondence.</p>
-                    </div>
-                    
-                    <div class="address-examples">
-                        <h4>Canadian Address Format:</h4>
-                        <div class="address-sample">
-                            <h5>Individual:</h5>
-                            <p>Ms. Janet Smith<br>
-                            Director of Operations<br>
-                            ABC Corporation<br>
-                            1234 Main Street, Suite 567<br>
-                            Toronto, Ontario M5V 3A8</p>
-                            
-                            <h5>Government Office:</h5>
-                            <p>The Honourable John Doe<br>
-                            Minister of Finance<br>
-                            Department of Finance Canada<br>
-                            90 Elgin Street<br>
-                            Ottawa, Ontario K1A 0G5</p>
-                            
-                            <h5>International:</h5>
-                            <p>Dr. Maria Rodriguez<br>
-                            Institute for Policy Research<br>
-                            1500 K Street NW, Suite 400<br>
-                            Washington, DC 20005<br>
-                            UNITED STATES</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Address Elements</h4>
-                        <ul>
-                            <li><strong>Name line:</strong> Full name with title</li>
-                            <li><strong>Title line:</strong> Position and organization</li>
-                            <li><strong>Street address:</strong> Number, street, unit</li>
-                            <li><strong>City, province/state:</strong> With proper spacing</li>
-                            <li><strong>Postal code:</strong> Correct format</li>
-                            <li><strong>Country:</strong> For international mail</li>
-                        </ul>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Canadian Address Format</h3>
+                    <p>Follow Canada Post standards for consistent addressing:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Titles and Honorifics</h4>
-                            <ul>
-                                <li><strong>Government officials:</strong> The Honourable</li>
-                                <li><strong>Academic:</strong> Dr., Professor</li>
-                                <li><strong>Professional:</strong> Mr., Ms., Mrs.</li>
-                                <li><strong>Military:</strong> Colonel, General</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ Standard Format</h4>
+                            <p>Ms. Sarah Johnson<br>
+                            Director of Communications<br>
+                            Department of Environment<br>
+                            123 Main Street<br>
+                            Ottawa ON  K1A 0A6</p>
                         </div>
-                        
-                        <div class="example-item">
-                            <h4>Postal Abbreviations</h4>
-                            <ul>
-                                <li><strong>Provinces:</strong> ON, BC, AB, QC</li>
-                                <li><strong>Directions:</strong> N, S, E, W, NE, NW</li>
-                                <li><strong>Street types:</strong> St, Ave, Blvd, Dr</li>
-                                <li><strong>Unit types:</strong> Apt, Suite, Unit, Floor</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ With Suite Number</h4>
+                            <p>Mr. David Chen<br>
+                            Policy Analyst<br>
+                            Treasury Board Secretariat<br>
+                            Suite 400, 90 Elgin Street<br>
+                            Ottawa ON  K1A 0T6</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Special Considerations</h4>
+                    <h3>Provincial Abbreviations</h3>
+                    <div class="rule-section">
+                        <h4>Standard Abbreviations</h4>
                         <ul>
-                            <li><strong>Privacy:</strong> Protect personal information</li>
-                            <li><strong>Accuracy:</strong> Verify addresses before sending</li>
-                            <li><strong>Updates:</strong> Maintain current contact information</li>
-                            <li><strong>Accessibility:</strong> Consider alternative formats</li>
+                            <li><strong>BC</strong> - British Columbia</li>
+                            <li><strong>AB</strong> - Alberta</li>
+                            <li><strong>SK</strong> - Saskatchewan</li>
+                            <li><strong>MB</strong> - Manitoba</li>
+                            <li><strong>ON</strong> - Ontario</li>
+                            <li><strong>QC</strong> - Quebec</li>
+                            <li><strong>NB</strong> - New Brunswick</li>
+                            <li><strong>NS</strong> - Nova Scotia</li>
+                            <li><strong>PE</strong> - Prince Edward Island</li>
+                            <li><strong>NL</strong> - Newfoundland and Labrador</li>
+                            <li><strong>NT</strong> - Northwest Territories</li>
+                            <li><strong>NU</strong> - Nunavut</li>
+                            <li><strong>YT</strong> - Yukon</li>
                         </ul>
+                    </div>
+                    
+                    <h3>International Addresses</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ US Address</h4>
+                            <p>Dr. Maria Rodriguez<br>
+                            Environmental Protection Agency<br>
+                            1200 Pennsylvania Avenue NW<br>
+                            Washington DC  20460<br>
+                            UNITED STATES</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ UK Address</h4>
+                            <p>Mr. James Wilson<br>
+                            Department for Environment<br>
+                            2 Marsham Street<br>
+                            London SW1P 4DF<br>
+                            UNITED KINGDOM</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Addresses -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-addresses"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('addresses')">
-                        Mark Complete & Continue
+                        Complete Section → Signatures
                     </button>
                 </div>
             </section>
 
-            <!-- Signatures Section -->
-            <section class="content-section" id="signatures" style="display: none;">
+            <!-- Section 10.06: Signatures -->
+            <section class="content-section" id="signatures">
                 <div class="section-header">
-                    <h2>10.40 Signatures and Sign-offs</h2>
+                    <h2>10.06 Signature Blocks</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Signature Block Components</h4>
-                        <p>Professional signature blocks provide clear identification and contact information for recipients.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Signature Block Format</h3>
+                    <p>The signature block provides the writer's identification and credentials:</p>
                     
-                    <div class="signature-examples">
-                        <h4>Standard Signature Block:</h4>
-                        <div class="signature-sample">
-                            <h5>Basic Format:</h5>
-                            <div class="signature-block">
-                                <p class="closing">Yours sincerely,</p>
-                                <p class="signature-space">[Handwritten signature]</p>
-                                <p><strong>Sarah M. Johnson</strong><br>
-                                Assistant Deputy Minister<br>
-                                Strategic Policy Branch<br>
-                                Department of Innovation, Science and Economic Development</p>
-                                <p>Tel: 613-555-0123<br>
-                                Email: sarah.johnson@canada.ca</p>
-                            </div>
-                            
-                            <h5>With Delegation:</h5>
-                            <div class="signature-block">
-                                <p class="closing">Yours sincerely,</p>
-                                <p class="signature-space">[Handwritten signature]</p>
-                                <p><strong>Michael Chen</strong><br>
-                                for Sarah M. Johnson<br>
-                                Assistant Deputy Minister<br>
-                                Strategic Policy Branch</p>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Standard Format</h4>
+                            <p>Sincerely,<br><br><br><br>
+                            Sarah Johnson<br>
+                            Director, Communications<br>
+                            Department of Environment</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ With Credentials</h4>
+                            <p>Yours truly,<br><br><br><br>
+                            Dr. Michael Chen, P.Eng.<br>
+                            Senior Policy Advisor<br>
+                            Infrastructure Canada</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Electronic Signatures</h4>
+                    <h3>Special Situations</h3>
+                    <div class="rule-section">
+                        <h4>Signing Authority</h4>
                         <ul>
-                            <li><strong>Digital signatures:</strong> Legally recognized authentication</li>
-                            <li><strong>Electronic signatures:</strong> Scanned or typed names</li>
-                            <li><strong>Security:</strong> Appropriate for document sensitivity</li>
-                            <li><strong>Standards:</strong> Government-approved signature systems</li>
+                            <li><strong>On behalf of:</strong> Use when signing for someone else</li>
+                            <li><strong>Acting:</strong> Include "Acting" in the title when temporarily in role</li>
+                            <li><strong>Multiple signatories:</strong> Joint approval</li>
+                            <li><strong>Copies:</strong> "Original signed by"</li>
+                            <li><strong>Urgent matters:</strong> Telephone confirmation</li>
+                            <li><strong>Confidential:</strong> Secure handling procedures</li>
                         </ul>
                     </div>
                     
+                    <h3>Contact Information</h3>
+                    <p>Include relevant contact details when appropriate:</p>
+                    
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Delegation Indicators</h4>
-                            <ul>
-                                <li><strong>"for":</strong> Acting with authority</li>
-                                <li><strong>"per":</strong> On behalf of (secretary)</li>
-                                <li><strong>"Acting":</strong> Temporary appointment</li>
-                                <li><strong>"A/":</strong> Abbreviated acting designation</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Contact Information</h4>
-                            <ul>
-                                <li><strong>Telephone:</strong> Direct line preferred</li>
-                                <li><strong>Email:</strong> Official government address</li>
-                                <li><strong>Address:</strong> If different from letterhead</li>
-                                <li><strong>Alternative contact:</strong> When appropriate</li>
-                            </ul>
+                        <div class="example-card good">
+                            <h4>✅ With Contact Details</h4>
+                            <p>Lisa Wang<br>
+                            Senior Analyst<br>
+                            Policy Research Division<br>
+                            Direct: 613-555-0123<br>
+                            Email: lisa.wang@canada.ca</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Signature Authority</h4>
-                        <ul>
-                            <li><strong>Delegation:</strong> Within assigned authority</li>
-                            <li><strong>Approval:</strong> Required for significant commitments</li>
-                            <li><strong>Recording:</strong> Maintain signature cards</li>
-                            <li><strong>Security:</strong> Protect signature integrity</li>
-                        </ul>
-                    </div>
-                    
+                    <h3>Quality Control Guidelines</h3>
                     <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Special Situations</h4>
-                            <ul>
-                                <li><strong>Multiple signatories:</strong> Joint approval</li>
-                                <li><strong>Copies:</strong> "Original signed by"</li>
-                                <li><strong>Urgent matters:</strong> Telephone confirmation</li>
-                                <li><strong>Confidential:</strong> Secure handling procedures</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Quality Control</h4>
+                        <div class="example-card good">
+                            <h4>✅ Best Practices</h4>
                             <ul>
                                 <li><strong>Review:</strong> Verify content before signing</li>
                                 <li><strong>Authority:</strong> Confirm signing authority</li>
@@ -570,52 +416,124 @@
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Signatures -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-signatures"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('signatures')">
-                        Mark Complete & Continue
+                        Complete Section → Electronic Communication
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="../shared/js/router.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/components.js"></script>
+            <!-- Section 10.07: Electronic Communication -->
+            <section class="content-section" id="electronic">
+                <div class="section-header">
+                    <h2>10.07 Electronic Communication</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <h3>Email Standards</h3>
+                    <p>Professional email follows similar principles to traditional correspondence:</p>
+                    
+                    <div class="rule-section">
+                        <h4>Email Guidelines</h4>
+                        <ul>
+                            <li><strong>Subject line:</strong> Clear, specific, and actionable</li>
+                            <li><strong>Greeting:</strong> Appropriate for relationship and context</li>
+                            <li><strong>Body:</strong> Concise, well-organized, professional</li>
+                            <li><strong>Signature:</strong> Include name, title, and contact information</li>
+                            <li><strong>Attachments:</strong> Reference them in the email body</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Subject Line Best Practices</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Effective Subjects</h4>
+                            <p>Action Required: Budget Review by March 30<br>
+                            Meeting Confirmation: April 15 Project Update<br>
+                            Response Needed: Policy Draft Comments</p>
+                        </div>
+                        <div class="example-card avoid">
+                            <h4>❌ Poor Subjects</h4>
+                            <p>Quick question<br>
+                            FYI<br>
+                            Follow up</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Email Etiquette</h3>
+                    <div class="rule-section">
+                        <h4>Professional Standards</h4>
+                        <ul>
+                            <li><strong>Response time:</strong> Acknowledge within 24 hours</li>
+                            <li><strong>Reply vs. Reply All:</strong> Consider who needs the information</li>
+                            <li><strong>Tone:</strong> Professional and courteous</li>
+                            <li><strong>Formatting:</strong> Use paragraphs and bullet points</li>
+                            <li><strong>Confidentiality:</strong> Mark sensitive information appropriately</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Digital Signatures</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Professional Signature</h4>
+                            <p>Best regards,<br><br>
+                            Sarah Johnson<br>
+                            Director, Communications<br>
+                            Department of Environment and Climate Change<br>
+                            Tel: 613-555-0123 | Cell: 613-555-0124<br>
+                            Email: sarah.johnson@canada.ca<br>
+                            www.canada.ca/environment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-electronic"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('electronic')">
+                        Complete Chapter
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. 
+            Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { getProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
+        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch10';
         const sections = [
             { id: 'introduction', title: '10.01 Introduction' },
             { id: 'business-letters', title: '10.02 Business Letters' },
-            { id: 'memos', title: '10.15 Memorandums' },
-            { id: 'formatting', title: '10.25 Formatting' },
-            { id: 'addresses', title: '10.30 Addresses' },
-            { id: 'signatures', title: '10.40 Signatures' }
+            { id: 'memorandums', title: '10.03 Memorandums' },
+            { id: 'formatting', title: '10.04 Formatting' },
+            { id: 'addresses', title: '10.05 Addresses' },
+            { id: 'signatures', title: '10.06 Signatures' },
+            { id: 'electronic', title: '10.07 Electronic Communication' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
+        // Initialize progress bar
         function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const progress = getProgress(CHAPTER_ID);
+            const chapterProgress = progress || {};
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
+            document.getElementById('chapterProgress').style.width = percentage + '%';
         }
         
         // Mark section as complete
@@ -627,7 +545,8 @@
             const currentIndex = sections.findIndex(s => s.id === sectionId);
             if (currentIndex < sections.length - 1) {
                 const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
             } else {
                 // Chapter complete
                 showCompletionModal();
@@ -640,7 +559,8 @@
             modal.innerHTML = `
                 <div class="modal-content">
                     <h3>🎉 Chapter 10 Complete!</h3>
-                    <p>You've mastered government correspondence. Ready for the next chapter?</p>
+                    <p>You've mastered professional correspondence! 
+                    Your letters, memos, and emails will now reflect the highest standards of government communication.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -654,139 +574,28 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Correspondence',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the primary purpose of government correspondence standards?',
-                            options: [
-                                { label: 'To make documents look impressive', correct: false },
-                                { label: 'To ensure professional and effective communication', correct: true },
-                                { label: 'To comply with legal requirements only', correct: false },
-                                { label: 'To save time and money', correct: false }
-                            ],
-                            rationale: 'Government correspondence standards ensure professional, clear, and effective communication.',
-                            ref: '§10.01'
-                        }
-                    ]
-                },
-                'business-letters': {
-                    title: 'Business Letters',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the standard closing for a government business letter?',
-                            options: [
-                                { label: 'Sincerely,', correct: false },
-                                { label: 'Yours sincerely,', correct: true },
-                                { label: 'Best regards,', correct: false },
-                                { label: 'Thank you,', correct: false }
-                            ],
-                            rationale: '"Yours sincerely," is the standard closing for government business letters.',
-                            ref: '§10.02'
-                        }
-                    ]
-                },
-                memos: {
-                    title: 'Memorandums',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What are the four essential header elements of a memorandum?',
-                            options: [
-                                { label: 'TO, FROM, DATE, SUBJECT', correct: true },
-                                { label: 'TO, FROM, CC, SUBJECT', correct: false },
-                                { label: 'FROM, DATE, RE, COPY', correct: false },
-                                { label: 'TO, DATE, SUBJECT, PRIORITY', correct: false }
-                            ],
-                            rationale: 'Standard memo headers include TO, FROM, DATE, and SUBJECT.',
-                            ref: '§10.15'
-                        }
-                    ]
-                },
-                formatting: {
-                    title: 'Formatting',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the standard margin size for government correspondence?',
-                            options: [
-                                { label: '0.5 inch (1.3 cm)', correct: false },
-                                { label: '1 inch (2.5 cm)', correct: true },
-                                { label: '1.5 inches (3.8 cm)', correct: false },
-                                { label: '2 inches (5 cm)', correct: false }
-                            ],
-                            rationale: 'Standard margins are 1 inch (2.5 cm) on all sides.',
-                            ref: '§10.25'
-                        }
-                    ]
-                },
-                addresses: {
-                    title: 'Addresses',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'How should a government minister be addressed?',
-                            options: [
-                                { label: 'Mr. John Smith, Minister', correct: false },
-                                { label: 'The Honourable John Smith', correct: true },
-                                { label: 'Minister John Smith', correct: false },
-                                { label: 'Hon. John Smith', correct: false }
-                            ],
-                            rationale: 'Government ministers are addressed as "The Honourable [Full Name]".',
-                            ref: '§10.30'
-                        }
-                    ]
-                },
-                signatures: {
-                    title: 'Signatures',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What does "for" indicate in a signature block?',
-                            options: [
-                                { label: 'Secretary signing on behalf', correct: false },
-                                { label: 'Acting with delegated authority', correct: true },
-                                { label: 'Temporary replacement', correct: false },
-                                { label: 'Copy sent to someone', correct: false }
-                            ],
-                            rationale: '"For" indicates the person is signing with delegated authority from the named official.',
-                            ref: '§10.40'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+        // Section navigation
+        function initSectionNavigation() {
+            const tabs = document.querySelectorAll('.tab-link');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = tab.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(tab);
                 });
             });
+            
+            // Handle initial hash
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                const tab = document.querySelector(`[data-section="${hash}"]`);
+                if (tab) tab.click();
+            } else {
+                // Default to first section
+                showSection('introduction');
+                updateActiveTab(tabs[0]);
+            }
         }
         
         function showSection(sectionId) {
@@ -809,14 +618,44 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
-            
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 10');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
         
