@@ -8,862 +8,579 @@
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <div class="chapter-container">
-        <header class="chapter-header">
-            <div class="breadcrumb">
-                <a href="../index.html" class="breadcrumb-link">← Dashboard</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">Chapter 12: Usage</span>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
-            <div class="chapter-progress">
-                <div class="progress-bar">
-                    <div class="progress-fill" id="chapterProgress"></div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 12
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">12</div>
+                <div>
+                    <h1>Usage</h1>
+                    <p>Common word choices and expressions in professional writing</p>
                 </div>
-                <span class="progress-text">Progress</span>
             </div>
-        </header>
-
-        <nav class="chapter-nav">
-            <div class="nav-links">
-                <a href="#introduction" class="tab-link active" data-section="introduction">12.01 Introduction</a>
-                <a href="#prepositions" class="tab-link" data-section="prepositions">12.02 Prepositional Usage</a>
-                <a href="#affect-effect" class="tab-link" data-section="affect-effect">Affect vs Effect</a>
-                <a href="#compose-comprise" class="tab-link" data-section="compose-comprise">Compose vs Comprise</a>
-                <a href="#less-fewer" class="tab-link" data-section="less-fewer">Less vs Fewer</a>
-                <a href="#that-which" class="tab-link" data-section="that-which">That vs Which</a>
-                <a href="#common-errors" class="tab-link" data-section="common-errors">Common Errors</a>
-                <a href="#idioms" class="tab-link" data-section="idioms">Canadian Idioms</a>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
             </div>
-        </nav>
+        </div>
+    </header>
 
-        <main class="chapter-content">
-            <!-- Introduction Section -->
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link" data-section="introduction">12.01 Introduction</a>
+                <a href="#prepositions" class="tab-link" data-section="prepositions">12.02 Prepositions</a>
+                <a href="#affect-effect" class="tab-link" data-section="affect-effect">12.03 Affect vs Effect</a>
+                <a href="#compose-comprise" class="tab-link" data-section="compose-comprise">12.04 Compose vs Comprise</a>
+                <a href="#less-fewer" class="tab-link" data-section="less-fewer">12.05 Less vs Fewer</a>
+                <a href="#that-which" class="tab-link" data-section="that-which">12.06 That vs Which</a>
+                <a href="#common-errors" class="tab-link" data-section="common-errors">12.07 Common Errors</a>
+                <a href="#idioms" class="tab-link" data-section="idioms">12.08 Canadian Idioms</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 12.01: Introduction -->
             <section class="content-section" id="introduction">
                 <div class="section-header">
-                    <h2>12.01 Introduction to Usage</h2>
+                    <h2>12.01 Introduction</h2>
                 </div>
                 
-                <div class="content-block">
-                    <p>Proper usage ensures clarity, precision, and professionalism in government writing. This chapter addresses common usage problems and provides guidance for choosing the right words and expressions in Canadian government communications.</p>
+                <div class="lesson-content">
+                    <p>Correct word usage enhances clarity and credibility in professional writing. This chapter addresses commonly confused words and expressions in Canadian English.</p>
                     
                     <div class="key-principles">
                         <h3>Usage Principles</h3>
                         <ul>
-                            <li>Precision in word choice and meaning</li>
-                            <li>Standard Canadian English conventions</li>
-                            <li>Clarity for diverse audiences</li>
-                            <li>Consistency within documents and departments</li>
+                            <li>Choose precise words that convey your exact meaning</li>
+                            <li>Understand subtle differences between similar terms</li>
+                            <li>Use Canadian conventions and spelling</li>
+                            <li>Avoid common errors that weaken your message</li>
+                            <li>Consider your audience and context</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-grid">
-                        <div class="example-item">
-                            <h4>Common Usage Challenges</h4>
-                            <ul>
-                                <li><strong>Word confusion:</strong> affect/effect, less/fewer</li>
-                                <li><strong>Preposition choice:</strong> different from/than</li>
-                                <li><strong>Verb agreement:</strong> none is/are</li>
-                                <li><strong>Pronoun reference:</strong> that/which</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <h4>Canadian Context</h4>
-                            <ul>
-                                <li>Balance British and American influences</li>
-                                <li>Recognize regional variations</li>
-                                <li>Reflect official bilingualism</li>
-                                <li>Serve diverse populations</li>
-                            </ul>
-                        </div>
+                    <div class="tip-box">
+                        <h4>💡 When in Doubt</h4>
+                        <p>Keep a current Canadian dictionary handy. Usage evolves, and staying current with accepted conventions helps maintain professional credibility.</p>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Introduction -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-introduction"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
+                        Complete Section → Prepositions
                     </button>
                 </div>
             </section>
 
-            <!-- Prepositions Section -->
-            <section class="content-section" id="prepositions" style="display: none;">
+            <!-- Section 12.02: Prepositions -->
+            <section class="content-section" id="prepositions">
                 <div class="section-header">
                     <h2>12.02 Prepositional Usage</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Common Prepositional Challenges</h4>
-                        <p>Prepositions show relationships between words, but the correct choice often depends on context and idiomatic usage.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Common Prepositional Pairs</h3>
+                    <p>Many words require specific prepositions to convey the intended meaning:</p>
                     
-                    <div class="preposition-pairs">
-                        <h4>Frequently Confused Prepositions:</h4>
-                        
-                        <div class="usage-comparison">
-                            <h5>Different from vs. Different than</h5>
-                            <div class="comparison-grid">
-                                <div class="correct-usage">
-                                    <h6>Preferred (Canadian):</h6>
-                                    <ul>
-                                        <li>This policy is different <strong>from</strong> the previous one</li>
-                                        <li>Our approach differs <strong>from</strong> theirs</li>
-                                        <li>The results were different <strong>from</strong> expectations</li>
-                                    </ul>
-                                </div>
-                                <div class="alternative-usage">
-                                    <h6>Acceptable (before clauses):</h6>
-                                    <ul>
-                                        <li>The outcome was different <strong>than</strong> we expected</li>
-                                        <li>Results were different <strong>than</strong> predicted</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Correct Usage</h4>
+                            <p><strong>Different from</strong> (not different than)<br>
+                            <strong>Independent of</strong> (not independent from)<br>
+                            <strong>Comprised of</strong> (not comprised by)<br>
+                            <strong>Consistent with</strong> (not consistent to)</p>
                         </div>
-                        
-                        <div class="usage-comparison">
-                            <h5>Between vs. Among</h5>
-                            <div class="comparison-grid">
-                                <div class="correct-usage">
-                                    <h6>Between (two items or distinct groups):</h6>
-                                    <ul>
-                                        <li>Agreement <strong>between</strong> Canada and the US</li>
-                                        <li>Choose <strong>between</strong> the two options</li>
-                                        <li>Negotiations <strong>between</strong> the three provinces</li>
-                                    </ul>
-                                </div>
-                                <div class="alternative-usage">
-                                    <h6>Among (three or more in a group):</h6>
-                                    <ul>
-                                        <li>Distribute the funds <strong>among</strong> the departments</li>
-                                        <li>Discussion <strong>among</strong> committee members</li>
-                                        <li>Consensus <strong>among</strong> stakeholders</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="usage-comparison">
-                            <h5>In vs. Into</h5>
-                            <div class="comparison-grid">
-                                <div class="correct-usage">
-                                    <h6>In (location, position):</h6>
-                                    <ul>
-                                        <li>The minister is <strong>in</strong> the office</li>
-                                        <li>Files are <strong>in</strong> the cabinet</li>
-                                        <li>We are <strong>in</strong> agreement</li>
-                                    </ul>
-                                </div>
-                                <div class="alternative-usage">
-                                    <h6>Into (motion, change):</h6>
-                                    <ul>
-                                        <li>Walk <strong>into</strong> the conference room</li>
-                                        <li>Translate the policy <strong>into</strong> action</li>
-                                        <li>Divide <strong>into</strong> three groups</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ More Examples</h4>
+                            <p><strong>According to</strong> the report<br>
+                            <strong>In accordance with</strong> policy<br>
+                            <strong>With respect to</strong> your inquiry<br>
+                            <strong>In regard to</strong> (not in regards to)</p>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h4>Preposition Guidelines</h4>
+                    <h3>Location and Direction</h3>
+                    <div class="rule-section">
+                        <h4>Specific Contexts</h4>
                         <ul>
-                            <li><strong>Avoid redundancy:</strong> "Where is it at?" → "Where is it?"</li>
-                            <li><strong>Don't strand unnecessarily:</strong> "This is what I'm referring to" is acceptable</li>
-                            <li><strong>Use standard combinations:</strong> comply with, different from, independent of</li>
-                            <li><strong>Consider the relationship:</strong> time, place, manner, cause</li>
+                            <li><strong>At vs In:</strong> At the meeting (event), In the room (location)</li>
+                            <li><strong>To vs Into:</strong> Go to the office, Walk into the building</li>
+                            <li><strong>Between vs Among:</strong> Between two options, Among several choices</li>
+                            <li><strong>On vs Upon:</strong> On the table (simple location), Upon reflection (formal)</li>
                         </ul>
+                    </div>
+                    
+                    <h3>Time Expressions</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Time Prepositions</h4>
+                            <p><strong>On</strong> Monday, Tuesday (specific days)<br>
+                            <strong>In</strong> March, 2024 (months, years)<br>
+                            <strong>At</strong> 3:00 p.m., noon (specific times)<br>
+                            <strong>Within</strong> 30 days (duration)</p>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Prepositions -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-prepositions"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('prepositions')">
-                        Mark Complete & Continue
+                        Complete Section → Affect vs Effect
                     </button>
                 </div>
             </section>
 
-            <!-- Affect vs Effect Section -->
-            <section class="content-section" id="affect-effect" style="display: none;">
+            <!-- Section 12.03: Affect vs Effect -->
+            <section class="content-section" id="affect-effect">
                 <div class="section-header">
-                    <h2>Affect vs. Effect</h2>
+                    <h2>12.03 Affect vs Effect</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>The Basic Distinction</h4>
-                        <p><strong>Affect</strong> is usually a verb (action). <strong>Effect</strong> is usually a noun (result).</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Basic Distinction</h3>
+                    <p><strong>Affect</strong> is usually a verb; <strong>Effect</strong> is usually a noun:</p>
                     
-                    <div class="affect-effect-guide">
-                        <div class="word-explanation">
-                            <h5>AFFECT (verb) = to influence or change</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>The new policy will <strong>affect</strong> all employees</li>
-                                    <li>Budget cuts may <strong>affect</strong> program delivery</li>
-                                    <li>Weather conditions <strong>affected</strong> the schedule</li>
-                                    <li>How will this decision <strong>affect</strong> our timeline?</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="memory-aid">
-                                <p><strong>Memory aid:</strong> <em>A</em>ffect = <em>A</em>ction (verb)</p>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Affect (Verb)</h4>
+                            <p>The new policy will <strong>affect</strong> all employees.<br>
+                            Budget cuts <strong>affected</strong> our timeline.<br>
+                            How did the change <strong>affect</strong> productivity?</p>
                         </div>
-                        
-                        <div class="word-explanation">
-                            <h5>EFFECT (noun) = result or consequence</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>The <strong>effect</strong> of the policy was positive</li>
-                                    <li>Budget cuts had a negative <strong>effect</strong></li>
-                                    <li>The weather had no <strong>effect</strong> on attendance</li>
-                                    <li>What is the <strong>effect</strong> of this decision?</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="memory-aid">
-                                <p><strong>Memory aid:</strong> <em>E</em>ffect = <em>E</em>nd result (noun)</p>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ Effect (Noun)</h4>
+                            <p>The <strong>effect</strong> of the policy was immediate.<br>
+                            What <strong>effect</strong> did the cuts have?<br>
+                            The <strong>effects</strong> were far-reaching.</p>
                         </div>
                     </div>
                     
-                    <div class="advanced-usage">
-                        <h4>Less Common Uses:</h4>
-                        <div class="advanced-examples">
-                            <div class="usage-example">
-                                <h5>Effect as a verb (to bring about):</h5>
-                                <ul>
-                                    <li>The new minister hopes to <strong>effect</strong> change</li>
-                                    <li>We need to <strong>effect</strong> reforms quickly</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="usage-example">
-                                <h5>Affect as a noun (psychology - emotional state):</h5>
-                                <ul>
-                                    <li>The patient showed a flat <strong>affect</strong></li>
-                                    <li>Her <strong>affect</strong> was appropriate to the situation</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="practice-tips">
-                        <h4>Quick Test:</h4>
+                    <h3>Memory Aids</h3>
+                    <div class="rule-section">
+                        <h4>Remember:</h4>
                         <ul>
-                            <li>Try substituting "influence" → use <strong>affect</strong></li>
-                            <li>Try substituting "result" → use <strong>effect</strong></li>
-                            <li>Look for "the" before the word → usually <strong>effect</strong></li>
-                            <li>Look for "will" before the word → usually <strong>affect</strong></li>
+                            <li><strong>A</strong>ffect = <strong>A</strong>ction (verb)</li>
+                            <li><strong>E</strong>ffect = <strong>E</strong>nd result (noun)</li>
+                            <li><strong>Cause and effect:</strong> The cause affects; the effect follows</li>
+                            <li><strong>Test:</strong> Can you substitute "influence"? Use affect</li>
                         </ul>
                     </div>
+                    
+                    <h3>Less Common Uses</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Effect as Verb</h4>
+                            <p>The new director will <strong>effect</strong> change.<br>
+                            (meaning: bring about, cause)</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Affect as Noun</h4>
+                            <p>The patient showed little <strong>affect</strong>.<br>
+                            (psychology term: emotional response)</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- Quiz Panel for Affect Effect -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-affect-effect"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('affect-effect')">
-                        Mark Complete & Continue
+                        Complete Section → Compose vs Comprise
                     </button>
                 </div>
             </section>
 
-            <!-- Compose vs Comprise Section -->
-            <section class="content-section" id="compose-comprise" style="display: none;">
+            <!-- Section 12.04: Compose vs Comprise -->
+            <section class="content-section" id="compose-comprise">
                 <div class="section-header">
-                    <h2>Compose vs. Comprise</h2>
+                    <h2>12.04 Compose vs Comprise</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>The Key Distinction</h4>
-                        <p><strong>Compose</strong> = to make up, form. <strong>Comprise</strong> = to include, contain.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Key Distinction</h3>
+                    <p><strong>Compose</strong> means "to make up"; <strong>Comprise</strong> means "to include" or "to consist of":</p>
                     
-                    <div class="compose-comprise-guide">
-                        <div class="word-explanation">
-                            <h5>COMPOSE = to make up or form (parts → whole)</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>Ten provinces <strong>compose</strong> Canada</li>
-                                    <li>Three departments <strong>compose</strong> the ministry</li>
-                                    <li>These elements <strong>compose</strong> the final report</li>
-                                    <li>Five members <strong>compose</strong> the committee</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="alternative-forms">
-                                <p><strong>Alternative:</strong> "Canada is <strong>composed of</strong> ten provinces"</p>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Compose</h4>
+                            <p>Ten provinces <strong>compose</strong> Canada.<br>
+                            (The parts make up the whole)<br>
+                            Five chapters <strong>compose</strong> this section.</p>
                         </div>
-                        
-                        <div class="word-explanation">
-                            <h5>COMPRISE = to include or contain (whole → parts)</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>Canada <strong>comprises</strong> ten provinces</li>
-                                    <li>The ministry <strong>comprises</strong> three departments</li>
-                                    <li>The report <strong>comprises</strong> five chapters</li>
-                                    <li>The committee <strong>comprises</strong> five members</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="warning-note">
-                                <p><strong>Avoid:</strong> "comprised of" (redundant)</p>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ Comprise</h4>
+                            <p>Canada <strong>comprises</strong> ten provinces.<br>
+                            (The whole includes the parts)<br>
+                            This section <strong>comprises</strong> five chapters.</p>
                         </div>
                     </div>
                     
-                    <div class="memory-aids">
-                        <h4>Memory Aids:</h4>
-                        <div class="memory-techniques">
-                            <div class="technique">
-                                <h5>Direction of Relationship:</h5>
-                                <ul>
-                                    <li><strong>Compose:</strong> Parts → Whole (multiple things make one thing)</li>
-                                    <li><strong>Comprise:</strong> Whole → Parts (one thing contains multiple things)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="technique">
-                                <h5>Substitution Test:</h5>
-                                <ul>
-                                    <li><strong>Compose:</strong> Can substitute "make up" or "form"</li>
-                                    <li><strong>Comprise:</strong> Can substitute "include" or "contain"</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <h3>Memory Aid</h3>
+                    <div class="rule-section">
+                        <h4>Direction Test:</h4>
+                        <ul>
+                            <li><strong>Parts compose the whole</strong> (upward direction)</li>
+                            <li><strong>Whole comprises the parts</strong> (downward direction)</li>
+                            <li><strong>Never:</strong> "comprised of" (redundant)</li>
+                            <li><strong>Alternative:</strong> Use "consists of" instead of comprise</li>
+                        </ul>
                     </div>
                     
-                    <div class="common-errors">
-                        <h4>Common Errors to Avoid:</h4>
-                        <div class="error-examples">
-                            <div class="error-item">
-                                <p>❌ <em>The committee is comprised of five members</em></p>
-                                <p>✅ <em>The committee comprises five members</em></p>
-                                <p>✅ <em>The committee is composed of five members</em></p>
-                            </div>
-                            
-                            <div class="error-item">
-                                <p>❌ <em>Five members comprise the committee</em></p>
-                                <p>✅ <em>Five members compose the committee</em></p>
-                                <p>✅ <em>The committee comprises five members</em></p>
-                            </div>
+                    <h3>Common Errors</h3>
+                    <div class="examples-grid">
+                        <div class="example-card avoid">
+                            <h4>❌ Incorrect</h4>
+                            <p>Canada is comprised of ten provinces.<br>
+                            The team is comprised of experts.</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Correct</h4>
+                            <p>Canada comprises ten provinces.<br>
+                            Ten provinces compose Canada.<br>
+                            The team consists of experts.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Compose Comprise -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-compose-comprise"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('compose-comprise')">
-                        Mark Complete & Continue
+                        Complete Section → Less vs Fewer
                     </button>
                 </div>
             </section>
 
-            <!-- Less vs Fewer Section -->
-            <section class="content-section" id="less-fewer" style="display: none;">
+            <!-- Section 12.05: Less vs Fewer -->
+            <section class="content-section" id="less-fewer">
                 <div class="section-header">
-                    <h2>Less vs. Fewer</h2>
+                    <h2>12.05 Less vs Fewer</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>The Countability Rule</h4>
-                        <p><strong>Fewer</strong> for things you can count. <strong>Less</strong> for things you can't count or measure as quantity.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Count vs Non-Count</h3>
+                    <p>Use <strong>fewer</strong> with countable items; use <strong>less</strong> with uncountable quantities:</p>
                     
-                    <div class="less-fewer-guide">
-                        <div class="word-explanation">
-                            <h5>FEWER = countable items (discrete units)</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li><strong>Fewer</strong> employees attended the meeting</li>
-                                    <li>We received <strong>fewer</strong> applications this year</li>
-                                    <li><strong>Fewer</strong> than 20 people responded</li>
-                                    <li>The department has <strong>fewer</strong> resources</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="category-examples">
-                                <p><strong>Use with:</strong> people, dollars, hours, pages, departments, applications</p>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Fewer (Countable)</h4>
+                            <p><strong>Fewer</strong> employees attended<br>
+                            <strong>Fewer</strong> meetings were scheduled<br>
+                            <strong>Fewer</strong> applications were received<br>
+                            <strong>Fewer</strong> than 20 people</p>
                         </div>
-                        
-                        <div class="word-explanation">
-                            <h5>LESS = uncountable quantities (mass nouns)</h5>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>We have <strong>less</strong> time than expected</li>
-                                    <li><strong>Less</strong> funding is available this year</li>
-                                    <li>The project requires <strong>less</strong> effort</li>
-                                    <li>There was <strong>less</strong> interest in the proposal</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="category-examples">
-                                <p><strong>Use with:</strong> time, money, water, information, support, interest</p>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ Less (Uncountable)</h4>
+                            <p><strong>Less</strong> time was available<br>
+                            <strong>Less</strong> money was spent<br>
+                            <strong>Less</strong> information was provided<br>
+                            <strong>Less</strong> than $100</p>
                         </div>
                     </div>
                     
-                    <div class="special-cases">
-                        <h4>Special Cases and Exceptions:</h4>
-                        <div class="special-rules">
-                            <div class="rule-item">
-                                <h5>Distance, time, and money (as units):</h5>
-                                <ul>
-                                    <li><strong>Less</strong> than 10 kilometres (distance as unit)</li>
-                                    <li><strong>Less</strong> than 30 minutes (time as unit)</li>
-                                    <li><strong>Less</strong> than $100 (money as amount)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="rule-item">
-                                <h5>Percentages and fractions:</h5>
-                                <ul>
-                                    <li><strong>Less</strong> than 50 per cent</li>
-                                    <li><strong>Less</strong> than half the budget</li>
-                                    <li><strong>Less</strong> than one-third of participants</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="rule-item">
-                                <h5>Emphasis on quantity vs. number:</h5>
-                                <ul>
-                                    <li>"<strong>Fewer</strong> people" (counting individuals)</li>
-                                    <li>"<strong>Less</strong> staff" (thinking of staff as collective resource)</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <h3>Test Method</h3>
+                    <div class="rule-section">
+                        <h4>Quick Check:</h4>
+                        <ul>
+                            <li><strong>Can you count it?</strong> Use fewer</li>
+                            <li><strong>Is it a mass/quantity?</strong> Use less</li>
+                            <li><strong>Would you use "many"?</strong> Use fewer</li>
+                            <li><strong>Would you use "much"?</strong> Use less</li>
+                        </ul>
                     </div>
                     
-                    <div class="quick-test">
-                        <h4>Quick Test:</h4>
-                        <div class="test-methods">
-                            <div class="test-item">
-                                <h5>The Plural Test:</h5>
-                                <p>If you can make the noun plural, use <strong>fewer</strong></p>
-                                <p><em>Example: application → applications = use "fewer applications"</em></p>
-                            </div>
-                            
-                            <div class="test-item">
-                                <h5>The "Amount of" Test:</h5>
-                                <p>If you would say "amount of," use <strong>less</strong></p>
-                                <p>If you would say "number of," use <strong>fewer</strong></p>
-                            </div>
+                    <h3>Special Cases</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Time and Distance</h4>
+                            <p><strong>Less than</strong> three hours<br>
+                            <strong>Less than</strong> 50 kilometres<br>
+                            (Time and distance are measured as quantities)</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Money</h4>
+                            <p><strong>Less than</strong> $50<br>
+                            <strong>Fewer</strong> dollars<br>
+                            (Money as amount vs. individual units)</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Less Fewer -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-less-fewer"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('less-fewer')">
-                        Mark Complete & Continue
+                        Complete Section → That vs Which
                     </button>
                 </div>
             </section>
 
-            <!-- That vs Which Section -->
-            <section class="content-section" id="that-which" style="display: none;">
+            <!-- Section 12.06: That vs Which -->
+            <section class="content-section" id="that-which">
                 <div class="section-header">
-                    <h2>That vs. Which</h2>
+                    <h2>12.06 That vs Which</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>The Essential vs. Non-essential Rule</h4>
-                        <p><strong>That</strong> introduces essential information (no commas). <strong>Which</strong> introduces non-essential information (with commas).</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Restrictive vs Non-Restrictive</h3>
+                    <p>Use <strong>that</strong> for essential information (no commas); use <strong>which</strong> for additional information (with commas):</p>
                     
-                    <div class="that-which-guide">
-                        <div class="word-explanation">
-                            <h5>THAT = essential/restrictive (no commas)</h5>
-                            <div class="explanation-text">
-                                <p>Essential information that restricts or defines which specific thing you're talking about.</p>
-                            </div>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>The policy <strong>that</strong> was approved yesterday takes effect immediately</li>
-                                    <li>Employees <strong>that</strong> work overtime receive compensation</li>
-                                    <li>Reports <strong>that</strong> contain errors must be revised</li>
-                                    <li>The department <strong>that</strong> handles immigration is very busy</li>
-                                </ul>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ That (Restrictive)</h4>
+                            <p>The report <strong>that</strong> you requested is ready.<br>
+                            (Specifies which report)<br>
+                            Policies <strong>that</strong> affect safety are prioritized.</p>
                         </div>
-                        
-                        <div class="word-explanation">
-                            <h5>WHICH = non-essential/non-restrictive (with commas)</h5>
-                            <div class="explanation-text">
-                                <p>Additional information that could be removed without changing the meaning.</p>
-                            </div>
-                            <div class="examples-list">
-                                <ul>
-                                    <li>The new policy, <strong>which</strong> was approved yesterday, takes effect immediately</li>
-                                    <li>Our employees, <strong>which</strong> number over 500, are highly skilled</li>
-                                    <li>The annual report, <strong>which</strong> contains detailed statistics, is now available</li>
-                                    <li>Parliament Hill, <strong>which</strong> attracts many tourists, houses our government</li>
-                                </ul>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ Which (Non-Restrictive)</h4>
+                            <p>The report, <strong>which</strong> took weeks to complete, is ready.<br>
+                            (Adds extra information)<br>
+                            The new policy, <strong>which</strong> affects all staff, starts Monday.</p>
                         </div>
                     </div>
                     
-                    <div class="detailed-examples">
-                        <h4>Compare These Examples:</h4>
-                        <div class="comparison-pairs">
-                            <div class="comparison-pair">
-                                <div class="restrictive-example">
-                                    <h5>Restrictive (that):</h5>
-                                    <p>"Policies <strong>that</strong> violate privacy rights will be reviewed."</p>
-                                    <p class="explanation">→ Only policies that violate privacy rights (not all policies)</p>
-                                </div>
-                                <div class="non-restrictive-example">
-                                    <h5>Non-restrictive (which):</h5>
-                                    <p>"Our policies, <strong>which</strong> violate privacy rights, will be reviewed."</p>
-                                    <p class="explanation">→ All our policies happen to violate privacy rights</p>
-                                </div>
-                            </div>
-                            
-                            <div class="comparison-pair">
-                                <div class="restrictive-example">
-                                    <h5>Restrictive (that):</h5>
-                                    <p>"The meeting <strong>that</strong> starts at 2 p.m. is mandatory."</p>
-                                    <p class="explanation">→ Specifies which meeting (the 2 p.m. one)</p>
-                                </div>
-                                <div class="non-restrictive-example">
-                                    <h5>Non-restrictive (which):</h5>
-                                    <p>"The staff meeting, <strong>which</strong> starts at 2 p.m., is mandatory."</p>
-                                    <p class="explanation">→ Additional detail about the already-identified meeting</p>
-                                </div>
-                            </div>
-                        </div>
+                    <h3>Test Method</h3>
+                    <div class="rule-section">
+                        <h4>Essential Information Test:</h4>
+                        <ul>
+                            <li><strong>Can you remove the clause?</strong> If yes, use "which" with commas</li>
+                            <li><strong>Is the clause essential for meaning?</strong> If yes, use "that" without commas</li>
+                            <li><strong>Does it identify which one?</strong> Use "that"</li>
+                            <li><strong>Does it add extra details?</strong> Use "which"</li>
+                        </ul>
                     </div>
                     
-                    <div class="memory-aids">
-                        <h4>Memory Aids:</h4>
-                        <div class="memory-techniques">
-                            <div class="technique">
-                                <h5>The Comma Test:</h5>
-                                <p>If you can put the clause in parentheses or remove it entirely without changing the basic meaning, use <strong>which</strong> with commas.</p>
-                            </div>
-                            
-                            <div class="technique">
-                                <h5>The "By the way" Test:</h5>
-                                <p>If the clause feels like "by the way" information, use <strong>which</strong> with commas.</p>
-                            </div>
-                            
-                            <div class="technique">
-                                <h5>The Essential Test:</h5>
-                                <p>If removing the clause would change which thing you're talking about, use <strong>that</strong> without commas.</p>
-                            </div>
+                    <h3>Who vs That</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ People</h4>
+                            <p>Employees <strong>who</strong> work overtime...<br>
+                            (Preferred for people)<br>
+                            Employees <strong>that</strong> work overtime...<br>
+                            (Acceptable but less preferred)</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Things</h4>
+                            <p>Documents <strong>that</strong> require approval...<br>
+                            Equipment <strong>which</strong> needs maintenance...</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for That Which -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-that-which"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('that-which')">
-                        Mark Complete & Continue
+                        Complete Section → Common Errors
                     </button>
                 </div>
             </section>
 
-            <!-- Common Errors Section -->
-            <section class="content-section" id="common-errors" style="display: none;">
+            <!-- Section 12.07: Common Errors -->
+            <section class="content-section" id="common-errors">
                 <div class="section-header">
-                    <h2>Common Usage Errors</h2>
+                    <h2>12.07 Common Usage Errors</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Frequently Confused Words</h4>
-                        <p>These word pairs are often confused in government writing, leading to unclear or incorrect communication.</p>
-                    </div>
-                    
-                    <div class="error-categories">
-                        <div class="error-category">
-                            <h4>Commonly Confused Pairs:</h4>
-                            
-                            <div class="confusion-pair">
-                                <h5>Ensure vs. Insure vs. Assure</h5>
-                                <ul>
-                                    <li><strong>Ensure</strong> = to make certain: "We will ensure the policy is implemented"</li>
-                                    <li><strong>Insure</strong> = to provide insurance: "Insure your property against damage"</li>
-                                    <li><strong>Assure</strong> = to convince or promise: "I assure you the funds are available"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="confusion-pair">
-                                <h5>Principal vs. Principle</h5>
-                                <ul>
-                                    <li><strong>Principal</strong> = main, primary: "The principal reason for the change"</li>
-                                    <li><strong>Principle</strong> = rule, standard: "The principle of fairness guides our decisions"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="confusion-pair">
-                                <h5>Complement vs. Compliment</h5>
-                                <ul>
-                                    <li><strong>Complement</strong> = to complete: "This policy complements existing regulations"</li>
-                                    <li><strong>Compliment</strong> = to praise: "The minister complimented the team's work"</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="confusion-pair">
-                                <h5>Discreet vs. Discrete</h5>
-                                <ul>
-                                    <li><strong>Discreet</strong> = careful, tactful: "Handle this matter with discreet diplomacy"</li>
-                                    <li><strong>Discrete</strong> = separate, distinct: "The program has three discrete phases"</li>
-                                </ul>
-                            </div>
+                <div class="lesson-content">
+                    <h3>Frequently Confused Words</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Accept vs Except</h4>
+                            <p><strong>Accept:</strong> receive willingly<br>
+                            <strong>Except:</strong> excluding<br>
+                            "I accept all terms except clause 5."</p>
                         </div>
-                        
-                        <div class="error-category">
-                            <h4>Agreement Problems:</h4>
-                            
-                            <div class="agreement-rule">
-                                <h5>Subject-Verb Agreement</h5>
-                                <ul>
-                                    <li><strong>Collective nouns:</strong> "The committee <em>is</em> meeting" (as unit) vs. "The committee <em>are</em> divided" (as individuals)</li>
-                                    <li><strong>None:</strong> "None of the reports <em>is</em> complete" (formal) or "None of the reports <em>are</em> complete" (informal)</li>
-                                    <li><strong>Data:</strong> "The data <em>shows</em>" (commonly accepted) or "The data <em>show</em>" (traditional)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="agreement-rule">
-                                <h5>Pronoun Agreement</h5>
-                                <ul>
-                                    <li><strong>Everyone/somebody:</strong> "Everyone should submit <em>their</em> report" (modern usage)</li>
-                                    <li><strong>Each:</strong> "Each department will receive <em>its</em> allocation"</li>
-                                    <li><strong>Either/neither:</strong> "Neither option meets <em>its</em> objectives"</li>
-                                </ul>
-                            </div>
+                        <div class="example-card good">
+                            <h4>✅ Advice vs Advise</h4>
+                            <p><strong>Advice:</strong> noun (recommendation)<br>
+                            <strong>Advise:</strong> verb (to recommend)<br>
+                            "I advise you to follow this advice."</p>
                         </div>
                     </div>
                     
-                    <div class="redundancy-errors">
-                        <h4>Redundancy and Wordiness:</h4>
-                        <div class="redundancy-examples">
-                            <div class="redundancy-item">
-                                <p>❌ <em>Free gift, future plans, past history</em></p>
-                                <p>✅ <em>Gift, plans, history</em></p>
-                            </div>
-                            
-                            <div class="redundancy-item">
-                                <p>❌ <em>In order to implement the new policy</em></p>
-                                <p>✅ <em>To implement the new policy</em></p>
-                            </div>
-                            
-                            <div class="redundancy-item">
-                                <p>❌ <em>The reason why is because</em></p>
-                                <p>✅ <em>The reason is</em> or <em>Because</em></p>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Principal vs Principle</h4>
+                            <p><strong>Principal:</strong> main, chief, head person<br>
+                            <strong>Principle:</strong> rule, belief<br>
+                            "The principal reason follows this principle."</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Compliment vs Complement</h4>
+                            <p><strong>Compliment:</strong> praise<br>
+                            <strong>Complement:</strong> complete, go well with<br>
+                            "The data complements the report nicely."</p>
+                        </div>
+                    </div>
+                    
+                    <h3>Redundant Expressions</h3>
+                    <div class="rule-section">
+                        <h4>Avoid These Redundancies:</h4>
+                        <ul>
+                            <li><strong>Instead of "past history":</strong> history</li>
+                            <li><strong>Instead of "future plans":</strong> plans</li>
+                            <li><strong>Instead of "advance warning":</strong> warning</li>
+                            <li><strong>Instead of "end result":</strong> result</li>
+                            <li><strong>Instead of "close proximity":</strong> proximity</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Wordy Expressions</h3>
+                    <div class="examples-grid">
+                        <div class="example-card avoid">
+                            <h4>❌ Wordy</h4>
+                            <p>due to the fact that<br>
+                            in order to<br>
+                            with regard to<br>
+                            at this point in time</p>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ Concise</h4>
+                            <p>because<br>
+                            to<br>
+                            about<br>
+                            now</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Common Errors -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-common-errors"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('common-errors')">
-                        Mark Complete & Continue
+                        Complete Section → Canadian Idioms
                     </button>
                 </div>
             </section>
 
-            <!-- Canadian Idioms Section -->
-            <section class="content-section" id="idioms" style="display: none;">
+            <!-- Section 12.08: Canadian Idioms -->
+            <section class="content-section" id="idioms">
                 <div class="section-header">
-                    <h2>Canadian Idioms and Expressions</h2>
+                    <h2>12.08 Canadian Idioms and Expressions</h2>
                 </div>
                 
-                <div class="content-block">
-                    <div class="rule-box">
-                        <h4>Canadian Usage Patterns</h4>
-                        <p>Canadian English has distinctive features that reflect our unique cultural and linguistic heritage.</p>
-                    </div>
+                <div class="lesson-content">
+                    <h3>Canadian vs American Usage</h3>
+                    <p>Some expressions differ between Canadian and American English:</p>
                     
-                    <div class="canadian-features">
-                        <div class="feature-category">
-                            <h4>Distinctive Canadian Terms:</h4>
-                            <div class="canadian-terms">
-                                <div class="term-group">
-                                    <h5>Government and Politics:</h5>
-                                    <ul>
-                                        <li><strong>First Ministers' Meeting</strong> (Prime Minister + Premiers)</li>
-                                        <li><strong>Crown corporation</strong> (government-owned company)</li>
-                                        <li><strong>Order in Council</strong> (executive decision)</li>
-                                        <li><strong>Governor in Council</strong> (Governor General acting on advice)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="term-group">
-                                    <h5>Legal and Administrative:</h5>
-                                    <ul>
-                                        <li><strong>Federal-provincial-territorial</strong> (FPT coordination)</li>
-                                        <li><strong>Territorial government</strong> (vs. provincial)</li>
-                                        <li><strong>First Nations, Inuit and Métis</strong> (Indigenous peoples)</li>
-                                        <li><strong>Official Languages Commissioner</strong></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-category">
-                            <h4>Canadian vs. American/British Usage:</h4>
-                            <div class="usage-comparisons">
-                                <div class="comparison-table">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Canadian</th>
-                                                <th>American</th>
-                                                <th>British</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>washroom</td>
-                                                <td>restroom</td>
-                                                <td>toilet</td>
-                                            </tr>
-                                            <tr>
-                                                <td>parkade</td>
-                                                <td>parking garage</td>
-                                                <td>car park</td>
-                                            </tr>
-                                            <tr>
-                                                <td>hydro bill</td>
-                                                <td>electric bill</td>
-                                                <td>electricity bill</td>
-                                            </tr>
-                                            <tr>
-                                                <td>postal code</td>
-                                                <td>ZIP code</td>
-                                                <td>postcode</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-category">
-                            <h4>Formal Government Usage:</h4>
-                            <div class="formal-usage">
-                                <div class="usage-group">
-                                    <h5>Titles and Forms of Address:</h5>
-                                    <ul>
-                                        <li><strong>The Right Honourable</strong> (Prime Minister, Governor General)</li>
-                                        <li><strong>The Honourable</strong> (Ministers, judges, lieutenants governor)</li>
-                                        <li><strong>Her Majesty</strong> or <strong>His Majesty</strong> (formal reference to the monarch)</li>
-                                        <li><strong>Madam Speaker</strong> or <strong>Mr. Speaker</strong></li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="usage-group">
-                                    <h5>Official Expressions:</h5>
-                                    <ul>
-                                        <li><strong>Royal Assent</strong> (bill becomes law)</li>
-                                        <li><strong>Governor in Council</strong> (Cabinet decisions)</li>
-                                        <li><strong>Peace, order and good government</strong> (constitutional principle)</li>
-                                        <li><strong>Her Majesty's Government</strong> (formal reference)</li>
-                                    </ul>
-                                </div>
-                            </div>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Canadian Preferences</h4>
+                            <p><strong>Write an exam</strong> (vs. take an exam)<br>
+                            <strong>Grade 12</strong> (vs. 12th grade)<br>
+                            <strong>University</strong> (vs. college for 4-year degrees)<br>
+                            <strong>Washroom</strong> (vs. bathroom in public spaces)</p>
                         </div>
                     </div>
                     
-                    <div class="bilingual-considerations">
-                        <h4>Bilingual Context:</h4>
-                        <div class="bilingual-usage">
-                            <div class="bilingual-rule">
-                                <h5>French Influence on Canadian English:</h5>
-                                <ul>
-                                    <li><strong>Depanneur</strong> (corner store, especially in Quebec context)</li>
-                                    <li><strong>Autoroute</strong> (highway, in Quebec)</li>
-                                    <li><strong>Francophone/Anglophone</strong> (language community designations)</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="bilingual-rule">
-                                <h5>Official Language Considerations:</h5>
-                                <ul>
-                                    <li>Use both official names: "Department of National Defence/Ministère de la Défense nationale"</li>
-                                    <li>Respect French language requirements in Quebec</li>
-                                    <li>Consider minority language community needs</li>
-                                </ul>
-                            </div>
+                    <h3>Government and Legal Terms</h3>
+                    <div class="rule-section">
+                        <h4>Canadian Conventions:</h4>
+                        <ul>
+                            <li><strong>Crown corporation</strong> (not government corporation)</li>
+                            <li><strong>First Nations</strong> (preferred over Native or Indian)</li>
+                            <li><strong>Employment Insurance</strong> (not unemployment insurance)</li>
+                            <li><strong>Canada Pension Plan</strong> (specific Canadian program)</li>
+                        </ul>
+                    </div>
+                    
+                    <h3>Bilingual Considerations</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Official Language Context</h4>
+                            <ul>
+                                <li>Use both official names: "Department of National Defence/Ministère de la Défense nationale"</li>
+                                <li>Respect French language requirements in Quebec</li>
+                                <li>Consider minority language community needs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <h3>Measurement and Currency</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Canadian Standards</h4>
+                            <p><strong>Metric system:</strong> kilometres, celsius, litres<br>
+                            <strong>Canadian dollar:</strong> Specify when discussing other currencies<br>
+                            <strong>Postal codes:</strong> K1A 0A6 format<br>
+                            <strong>Date format:</strong> YYYY-MM-DD for official documents</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Quiz Panel for Idioms -->
+                <!-- Quiz Panel -->
                 <div class="quiz-panel" id="quiz-idioms"></div>
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('idioms')">
-                        Mark Complete & Continue
+                        Complete Chapter
                     </button>
                 </div>
             </section>
-        </main>
-    </div>
+        </div>
+    </main>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="../shared/js/router.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/components.js"></script>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Government of Canada. 
+            Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+        </div>
+    </footer>
 
     <script type="module">
         import { router } from '../shared/js/router.js';
-        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
+        import { getProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
+        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch12';
         const sections = [
             { id: 'introduction', title: '12.01 Introduction' },
-            { id: 'prepositions', title: '12.02 Prepositional Usage' },
-            { id: 'affect-effect', title: 'Affect vs Effect' },
-            { id: 'compose-comprise', title: 'Compose vs Comprise' },
-            { id: 'less-fewer', title: 'Less vs Fewer' },
-            { id: 'that-which', title: 'That vs Which' },
-            { id: 'common-errors', title: 'Common Errors' },
-            { id: 'idioms', title: 'Canadian Idioms' }
+            { id: 'prepositions', title: '12.02 Prepositions' },
+            { id: 'affect-effect', title: '12.03 Affect vs Effect' },
+            { id: 'compose-comprise', title: '12.04 Compose vs Comprise' },
+            { id: 'less-fewer', title: '12.05 Less vs Fewer' },
+            { id: 'that-which', title: '12.06 That vs Which' },
+            { id: 'common-errors', title: '12.07 Common Errors' },
+            { id: 'idioms', title: '12.08 Canadian Idioms' }
         ];
         
-        // Initialize router
-        router.init(CHAPTER_ID, sections);
-        
-        // Update progress bar using correct API
+        // Initialize progress bar
         function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const progress = getProgress(CHAPTER_ID);
+            const chapterProgress = progress || {};
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
+            document.getElementById('chapterProgress').style.width = percentage + '%';
         }
         
         // Mark section as complete
@@ -875,7 +592,8 @@
             const currentIndex = sections.findIndex(s => s.id === sectionId);
             if (currentIndex < sections.length - 1) {
                 const nextSection = sections[currentIndex + 1];
-                router.navigateTo(CHAPTER_ID, nextSection.id);
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
             } else {
                 // Chapter complete
                 showCompletionModal();
@@ -888,7 +606,8 @@
             modal.innerHTML = `
                 <div class="modal-content">
                     <h3>🎉 Chapter 12 Complete!</h3>
-                    <p>You've mastered usage rules and common errors. Ready for the next chapter?</p>
+                    <p>You've mastered proper word usage! 
+                    Your writing will now be more precise, clear, and professionally Canadian.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -902,168 +621,28 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes - FIXED VERSION
-        async function loadSectionQuizzes() {
-            // Sample quiz data - in real implementation, this would come from JSON files
-            const quizData = {
-                introduction: {
-                    title: 'Introduction to Usage',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the primary goal of proper usage in government writing?',
-                            options: [
-                                { label: 'To sound impressive and academic', correct: false },
-                                { label: 'To ensure clarity, precision, and professionalism', correct: true },
-                                { label: 'To follow British conventions exactly', correct: false },
-                                { label: 'To use complex vocabulary', correct: false }
-                            ],
-                            rationale: 'Proper usage ensures clarity, precision, and professionalism in government communications.',
-                            ref: '§12.01'
-                        }
-                    ]
-                },
-                prepositions: {
-                    title: 'Prepositional Usage',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which preposition is preferred in Canadian government writing?',
-                            options: [
-                                { label: 'Different than', correct: false },
-                                { label: 'Different from', correct: true },
-                                { label: 'Different to', correct: false },
-                                { label: 'All are equally acceptable', correct: false }
-                            ],
-                            rationale: 'Canadian style prefers "different from" over "different than".',
-                            ref: '§12.02'
-                        }
-                    ]
-                },
-                'affect-effect': {
-                    title: 'Affect vs Effect',
-                    questions: [
-                        {
-                            type: 'fill-blank',
-                            stem: 'The new policy will _____ all employees.',
-                            answer: 'affect',
-                            rationale: 'Affect is the verb meaning to influence or change.',
-                            ref: '§12.03'
-                        }
-                    ]
-                },
-                'compose-comprise': {
-                    title: 'Compose vs Comprise',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which is correct?',
-                            options: [
-                                { label: 'The committee is comprised of five members', correct: false },
-                                { label: 'The committee comprises five members', correct: true },
-                                { label: 'Five members comprise the committee', correct: false },
-                                { label: 'The committee is comprised by five members', correct: false }
-                            ],
-                            rationale: 'The whole (committee) comprises the parts (members).',
-                            ref: '§12.03'
-                        }
-                    ]
-                },
-                'less-fewer': {
-                    title: 'Less vs Fewer',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'We have ___ time than expected.',
-                            options: [
-                                { label: 'less', correct: true },
-                                { label: 'fewer', correct: false },
-                                { label: 'lesser', correct: false },
-                                { label: 'few', correct: false }
-                            ],
-                            rationale: 'Use "less" for uncountable nouns like time.',
-                            ref: '§12.03'
-                        }
-                    ]
-                },
-                'that-which': {
-                    title: 'That vs Which',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which sentence is punctuated correctly?',
-                            options: [
-                                { label: 'The policy, that was approved yesterday, takes effect today', correct: false },
-                                { label: 'The policy that was approved yesterday takes effect today', correct: true },
-                                { label: 'The policy which was approved yesterday takes effect today', correct: false },
-                                { label: 'The policy, which was approved yesterday takes effect today', correct: false }
-                            ],
-                            rationale: 'Use "that" without commas for essential/restrictive information.',
-                            ref: '§12.03'
-                        }
-                    ]
-                },
-                'common-errors': {
-                    title: 'Common Errors',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'Which word means "to make certain"?',
-                            options: [
-                                { label: 'Insure', correct: false },
-                                { label: 'Ensure', correct: true },
-                                { label: 'Assure', correct: false },
-                                { label: 'All mean the same thing', correct: false }
-                            ],
-                            rationale: 'Ensure means to make certain; insure means to provide insurance; assure means to convince.',
-                            ref: '§12.03'
-                        }
-                    ]
-                },
-                idioms: {
-                    title: 'Canadian Idioms',
-                    questions: [
-                        {
-                            type: 'mcq',
-                            stem: 'What is the distinctly Canadian term for a government-owned company?',
-                            options: [
-                                { label: 'Public corporation', correct: false },
-                                { label: 'Crown corporation', correct: true },
-                                { label: 'State enterprise', correct: false },
-                                { label: 'Federal company', correct: false }
-                            ],
-                            rationale: 'Crown corporation is the distinctive Canadian term for government-owned companies.',
-                            ref: '§12.03'
-                        }
-                    ]
-                }
-            };
-            
-            // Initialize quizzes using FIXED API
-            for (const section of sections) {
-                const quiz = quizData[section.id];
-                if (quiz) {
-                    const container = document.getElementById(`quiz-${section.id}`);
-                    if (container) {
-                        // FIXED: Use correct constructor parameters
-                        const engine = new QuizEngine(quiz, CHAPTER_ID, section.id);
-                        const quizElement = engine.render();
-                        container.appendChild(quizElement);
-                    }
-                }
-            }
-        }
-        
-        // Initialize navigation
-        function initializeNavigation() {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.addEventListener('click', (e) => {
+        // Section navigation
+        function initSectionNavigation() {
+            const tabs = document.querySelectorAll('.tab-link');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
                     e.preventDefault();
-                    const sectionId = link.dataset.section;
+                    const sectionId = tab.getAttribute('data-section');
                     showSection(sectionId);
-                    updateActiveTab(link);
+                    updateActiveTab(tab);
                 });
             });
+            
+            // Handle initial hash
+            const hash = window.location.hash.replace('#', '');
+            if (hash && document.getElementById(hash)) {
+                const tab = document.querySelector(`[data-section="${hash}"]`);
+                if (tab) tab.click();
+            } else {
+                // Default to first section
+                showSection('introduction');
+                updateActiveTab(tabs[0]);
+            }
         }
         
         function showSection(sectionId) {
@@ -1086,14 +665,44 @@
             activeLink.classList.add('active');
         }
         
-        // Initialize everything
-        document.addEventListener('DOMContentLoaded', () => {
-            updateProgressBar();
-            loadSectionQuizzes();
-            initializeNavigation();
-            
-            if (!window.location.hash) {
-                router.navigateTo(CHAPTER_ID, 'introduction');
+        // Load section quizzes from JSON files
+        async function loadSectionQuizzes() {
+            try {
+                const response = await fetch(`../data/quizzes/${CHAPTER_ID}-quiz.json`);
+                if (!response.ok) {
+                    console.warn('Quiz data not available for chapter 12');
+                    return;
+                }
+                
+                const quizData = await response.json();
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const sectionQuizData = quizData.sections?.[section.id];
+                    if (sectionQuizData && sectionQuizData.questions) {
+                        const quizContainer = document.getElementById(`quiz-${section.id}`);
+                        if (quizContainer) {
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
+                        }
+                    }
+                });
+            } catch (error) {
+                console.warn('Error loading quiz data:', error);
+            }
+        }
+        
+        // Initialize page
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+        
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
             }
         });
         
