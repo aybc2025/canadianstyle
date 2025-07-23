@@ -1,312 +1,339 @@
 {
-  "editing-levels": {
-    "id": "ch16-editing-levels",
-    "title": "Levels of Editing",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "What is the primary focus of structural editing?",
-        "options": [
-          { "label": "Grammar and punctuation", "correct": false },
-          { "label": "Overall organization and content flow", "correct": true },
-          { "label": "Spelling and typos", "correct": false },
-          { "label": "Citation format", "correct": false }
-        ],
-        "rationale": "Structural editing focuses on the big picture: organization, flow, logic, and content development.",
-        "ref": "§16.02"
-      },
-      {
-        "id": "q2",
-        "type": "drag-drop",
-        "stem": "Order these editing levels from first to last:",
-        "options": [
-          { "label": "Structural editing (organization, content)", "order": 1 },
-          { "label": "Stylistic editing (clarity, tone)", "order": 2 },
-          { "label": "Copy editing (grammar, mechanics)", "order": 3 },
-          { "label": "Proofreading (final errors)", "order": 4 }
-        ],
-        "rationale": "Editing proceeds from big picture to small details: structure → style → mechanics → final check."
-      },
-      {
-        "id": "q3",
-        "type": "mcq",
-        "stem": "What does stylistic editing focus on?",
-        "options": [
-          { "label": "Major reorganization", "correct": false },
-          { "label": "Clarity, tone, and readability", "correct": true },
-          { "label": "Spelling and punctuation", "correct": false },
-          { "label": "Fact-checking", "correct": false }
-        ],
-        "rationale": "Stylistic editing improves clarity, tone, word choice, and sentence structure.",
-        "ref": "§16.03"
-      },
-      {
-        "id": "q4",
-        "type": "multi-select",
-        "stem": "What does copy editing address? (Select all that apply)",
-        "options": [
-          { "label": "Grammar and syntax", "correct": true },
-          { "label": "Spelling and punctuation", "correct": true },
-          { "label": "Consistency in style", "correct": true },
-          { "label": "Major content reorganization", "correct": false },
-          { "label": "Citation format", "correct": true }
-        ],
-        "rationale": "Copy editing handles grammar, spelling, punctuation, consistency, and formatting details."
-      }
-    ]
+  "sections": {
+    "editing-levels": {
+      "id": "ch16-editing-levels",
+      "title": "Levels of Editing",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "stem": "What is the primary focus of structural editing?",
+          "options": [
+            { "label": "Grammar and punctuation", "correct": false },
+            { "label": "Overall organization and content flow", "correct": true },
+            { "label": "Spelling and typos", "correct": false },
+            { "label": "Citation format", "correct": false }
+          ],
+          "rationale": "Structural editing focuses on the big picture: organization, flow, logic, and content development.",
+          "ref": "§16.02"
+        },
+        {
+          "id": "q2",
+          "type": "drag-drop",
+          "stem": "Order these editing levels from first to last:",
+          "options": [
+            { "label": "Structural editing (organization, content)", "order": 1 },
+            { "label": "Stylistic editing (clarity, tone)", "order": 2 },
+            { "label": "Copy editing (grammar, mechanics)", "order": 3 },
+            { "label": "Proofreading (final errors)", "order": 4 }
+          ],
+          "rationale": "Editing proceeds from big picture to small details: structure → style → mechanics → final check."
+        },
+        {
+          "id": "q3",
+          "type": "mcq",
+          "stem": "Why should you edit in this specific order?",
+          "options": [
+            { "label": "It's traditional", "correct": false },
+            { "label": "It's more efficient and effective", "correct": true },
+            { "label": "It's required by style guides", "correct": false },
+            { "label": "It's easier for beginners", "correct": false }
+          ],
+          "rationale": "Working from big picture to details is more efficient - no point fixing grammar in paragraphs you might delete.",
+          "ref": "§16.02"
+        }
+      ]
+    },
+    "structural-editing": {
+      "id": "ch16-structural-editing",
+      "title": "Structural Editing",
+      "questions": [
+        {
+          "id": "q4",
+          "type": "mcq",
+          "stem": "What is the main goal of structural editing?",
+          "options": [
+            { "label": "Fix spelling errors", "correct": false },
+            { "label": "Improve sentence flow", "correct": false },
+            { "label": "Ensure logical organization and completeness", "correct": true },
+            { "label": "Check citation format", "correct": false }
+          ],
+          "rationale": "Structural editing focuses on organization, logic, content development, and overall document structure.",
+          "ref": "§16.03"
+        },
+        {
+          "id": "q5",
+          "type": "multi-select",
+          "stem": "What should you examine during structural editing? (Select all that apply)",
+          "options": [
+            { "label": "Logical sequence of ideas", "correct": true },
+            { "label": "Completeness of information", "correct": true },
+            { "label": "Comma placement", "correct": false },
+            { "label": "Balance between sections", "correct": true },
+            { "label": "Spelling accuracy", "correct": false }
+          ],
+          "rationale": "Structural editing focuses on big-picture issues: organization, content, and logical flow."
+        },
+        {
+          "id": "q6",
+          "type": "fill-blank",
+          "stem": "During structural editing, don't worry about _____ errors at this stage.",
+          "answer": "minor",
+          "alternatives": ["small", "grammar", "mechanical"],
+          "rationale": "Focus on big-picture issues first; minor errors will be addressed in later editing stages.",
+          "ref": "§16.03"
+        }
+      ]
+    },
+    "stylistic-editing": {
+      "id": "ch16-stylistic-editing",
+      "title": "Stylistic Editing",
+      "questions": [
+        {
+          "id": "q7",
+          "type": "mcq",
+          "stem": "What does stylistic editing focus on?",
+          "options": [
+            { "label": "Major reorganization", "correct": false },
+            { "label": "Clarity, tone, and readability", "correct": true },
+            { "label": "Spelling and punctuation", "correct": false },
+            { "label": "Fact-checking", "correct": false }
+          ],
+          "rationale": "Stylistic editing improves clarity, tone, word choice, and sentence structure.",
+          "ref": "§16.04"
+        },
+        {
+          "id": "q8",
+          "type": "mcq",
+          "stem": "Which shows improved style?",
+          "options": [
+            { "label": "It is important to note that we will implement the system", "correct": false },
+            { "label": "We will implement the system", "correct": true },
+            { "label": "Implementation of the system will occur", "correct": false },
+            { "label": "The system implementation will be undertaken", "correct": false }
+          ],
+          "rationale": "Good stylistic editing eliminates unnecessary words and uses clear, direct language.",
+          "ref": "§16.04"
+        },
+        {
+          "id": "q9",
+          "type": "error-spot",
+          "stem": "Click on the wordy phrase that should be simplified:",
+          "text": "Due to the fact that the meeting was cancelled",
+          "errorIndex": 1,
+          "rationale": "'Due to the fact that' should be simplified to 'because'."
+        },
+        {
+          "id": "q10",
+          "type": "drag-drop",
+          "stem": "Match wordy phrases with concise alternatives:",
+          "options": [
+            { "label": "in order to → to", "order": 1 },
+            { "label": "at this point in time → now", "order": 2 },
+            { "label": "in the event that → if", "order": 3 },
+            { "label": "due to the fact that → because", "order": 4 }
+          ],
+          "rationale": "Stylistic editing eliminates unnecessary words and phrases."
+        }
+      ]
+    },
+    "copy-editing": {
+      "id": "ch16-copy-editing",
+      "title": "Copy Editing",
+      "questions": [
+        {
+          "id": "q11",
+          "type": "multi-select",
+          "stem": "What does copy editing address? (Select all that apply)",
+          "options": [
+            { "label": "Grammar and syntax", "correct": true },
+            { "label": "Spelling and punctuation", "correct": true },
+            { "label": "Consistency in style", "correct": true },
+            { "label": "Major content reorganization", "correct": false },
+            { "label": "Citation format", "correct": true }
+          ],
+          "rationale": "Copy editing handles grammar, spelling, punctuation, consistency, and formatting details."
+        },
+        {
+          "id": "q12",
+          "type": "mcq",
+          "stem": "Which is a copy editing concern?",
+          "options": [
+            { "label": "Adding new content", "correct": false },
+            { "label": "Reorganizing paragraphs", "correct": false },
+            { "label": "Subject-verb agreement", "correct": true },
+            { "label": "Changing the document's purpose", "correct": false }
+          ],
+          "rationale": "Copy editing focuses on mechanical correctness, including grammar rules like subject-verb agreement.",
+          "ref": "§16.05"
+        },
+        {
+          "id": "q13",
+          "type": "fill-blank",
+          "stem": "Copy editors should check _____ of style choices throughout the document.",
+          "answer": "consistency",
+          "rationale": "Consistency in style choices (capitalization, abbreviations, numbers) is a key copy editing responsibility.",
+          "ref": "§16.05"
+        }
+      ]
+    },
+    "proofreading": {
+      "id": "ch16-proofreading",
+      "title": "Proofreading",
+      "questions": [
+        {
+          "id": "q14",
+          "type": "mcq",
+          "stem": "When should proofreading occur?",
+          "options": [
+            { "label": "Before structural editing", "correct": false },
+            { "label": "Before copy editing", "correct": false },
+            { "label": "After all other editing is complete", "correct": true },
+            { "label": "Throughout the writing process", "correct": false }
+          ],
+          "rationale": "Proofreading is the final step, after all content and style issues have been resolved.",
+          "ref": "§16.06"
+        },
+        {
+          "id": "q15",
+          "type": "multi-select",
+          "stem": "What should you check during proofreading? (Select all that apply)",
+          "options": [
+            { "label": "Final typos and spelling errors", "correct": true },
+            { "label": "Formatting and layout", "correct": true },
+            { "label": "Page numbers and cross-references", "correct": true },
+            { "label": "Major content gaps", "correct": false },
+            { "label": "Document organization", "correct": false }
+          ],
+          "rationale": "Proofreading catches final errors, formatting issues, and layout problems."
+        },
+        {
+          "id": "q16",
+          "type": "mcq",
+          "stem": "Which proofreading technique helps catch missing words?",
+          "options": [
+            { "label": "Reading backwards", "correct": false },
+            { "label": "Reading aloud", "correct": true },
+            { "label": "Using spell-check", "correct": false },
+            { "label": "Reading faster", "correct": false }
+          ],
+          "rationale": "Reading aloud helps you catch missing words and awkward phrasing that your eyes might skip.",
+          "ref": "§16.06"
+        }
+      ]
+    },
+    "marks": {
+      "id": "ch16-marks",
+      "title": "Proofreader's Marks",
+      "questions": [
+        {
+          "id": "q17",
+          "type": "mcq",
+          "stem": "What does the symbol '^' mean in proofreading?",
+          "options": [
+            { "label": "Delete", "correct": false },
+            { "label": "Insert", "correct": true },
+            { "label": "Transpose", "correct": false },
+            { "label": "New paragraph", "correct": false }
+          ],
+          "rationale": "The caret symbol (^) indicates where to insert text or punctuation.",
+          "ref": "§16.07"
+        },
+        {
+          "id": "q18",
+          "type": "drag-drop",
+          "stem": "Match proofreading symbols with their meanings:",
+          "options": [
+            { "label": "dele or ⌐ = delete", "order": 1 },
+            { "label": "^ = insert", "order": 2 },
+            { "label": "tr = transpose", "order": 3 },
+            { "label": "¶ = new paragraph", "order": 4 },
+            { "label": "stet = let it stand (ignore correction)", "order": 5 }
+          ],
+          "rationale": "Standard proofreading symbols communicate specific editing instructions."
+        },
+        {
+          "id": "q19",
+          "type": "mcq",
+          "stem": "What does 'stet' mean?",
+          "options": [
+            { "label": "Delete this text", "correct": false },
+            { "label": "Insert a space", "correct": false },
+            { "label": "Let it stand (ignore previous correction)", "correct": true },
+            { "label": "Start a new paragraph", "correct": false }
+          ],
+          "rationale": "'Stet' (Latin for 'let it stand') cancels a previous correction.",
+          "ref": "§16.07"
+        },
+        {
+          "id": "q20",
+          "type": "fill-blank",
+          "stem": "To indicate that two letters should switch positions, use the symbol _____.",
+          "answer": "tr",
+          "rationale": "'tr' (transpose) indicates that elements should switch positions.",
+          "ref": "§16.07"
+        }
+      ]
+    },
+    "checklist": {
+      "id": "ch16-checklist",
+      "title": "Revision Checklist",
+      "questions": [
+        {
+          "id": "q21",
+          "type": "mcq",
+          "stem": "Why are revision checklists useful?",
+          "options": [
+            { "label": "They replace the need for careful reading", "correct": false },
+            { "label": "They ensure systematic coverage of all elements", "correct": true },
+            { "label": "They speed up the editing process", "correct": false },
+            { "label": "They eliminate the need for proofreading", "correct": false }
+          ],
+          "rationale": "Checklists ensure you systematically check all important elements without missing anything.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "q22",
+          "type": "multi-select",
+          "stem": "What should be checked at the stylistic level? (Select all that apply)",
+          "options": [
+            { "label": "Tone is appropriate and consistent", "correct": true },
+            { "label": "Wordiness has been eliminated", "correct": true },
+            { "label": "Page numbers are correct", "correct": false },
+            { "label": "Parallel structure is maintained", "correct": true },
+            { "label": "Citations are complete", "correct": false }
+          ],
+          "rationale": "Stylistic checks focus on tone, conciseness, and sentence structure."
+        },
+        {
+          "id": "q23",
+          "type": "mcq",
+          "stem": "What is the most important principle for effective revision?",
+          "options": [
+            { "label": "Work as quickly as possible", "correct": false },
+            { "label": "Try to catch everything in one pass", "correct": false },
+            { "label": "Take breaks and get fresh perspective", "correct": true },
+            { "label": "Focus only on grammar errors", "correct": false }
+          ],
+          "rationale": "Good writing is rewriting. Fresh perspective from breaks or other readers catches more issues.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "q24",
+          "type": "fill-blank",
+          "stem": "Remember that good writing is _____.",
+          "answer": "rewriting",
+          "rationale": "The revision process is essential - good writing comes from rewriting and improving drafts.",
+          "ref": "§16.08"
+        }
+      ]
+    }
   },
-  "proofreading": {
-    "id": "ch16-proofreading",
-    "title": "Proofreading",
-    "questions": [
-      {
-        "id": "q5",
-        "type": "mcq",
-        "stem": "When should proofreading occur?",
-        "options": [
-          { "label": "Before any other editing", "correct": false },
-          { "label": "At the same time as copy editing", "correct": false },
-          { "label": "After all other editing is complete", "correct": true },
-          { "label": "Only if time permits", "correct": false }
-        ],
-        "rationale": "Proofreading is the final stage, done after all other editing is complete.",
-        "ref": "§16.05"
-      },
-      {
-        "id": "q6",
-        "type": "mcq",
-        "stem": "What is the main purpose of proofreading?",
-        "options": [
-          { "label": "To improve writing style", "correct": false },
-          { "label": "To catch remaining surface errors", "correct": true },
-          { "label": "To reorganize content", "correct": false },
-          { "label": "To fact-check information", "correct": false }
-        ],
-        "rationale": "Proofreading catches typos, missed errors, and formatting problems.",
-        "ref": "§16.05"
-      },
-      {
-        "id": "q7",
-        "type": "multi-select",
-        "stem": "Good proofreading techniques include: (Select all that apply)",
-        "options": [
-          { "label": "Reading slowly and carefully", "correct": true },
-          { "label": "Reading backwards for spelling", "correct": true },
-          { "label": "Reading aloud", "correct": true },
-          { "label": "Relying on spell-check only", "correct": false },
-          { "label": "Taking breaks between reading sessions", "correct": true }
-        ],
-        "rationale": "Effective proofreading uses multiple techniques and fresh eyes."
-      },
-      {
-        "id": "q8",
-        "type": "error-spot",
-        "stem": "Click on the proofreading error:",
-        "text": "The comittee will meet on Wendesday to discuss the budget.",
-        "errorIndex": 1,
-        "rationale": "Spelling error: 'committee' (double 't') and 'Wednesday'."
-      }
-    ]
-  },
-  "symbols": {
-    "id": "ch16-symbols",
-    "title": "Proofreading Symbols",
-    "questions": [
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "What does the symbol '⌃' mean in proofreading?",
-        "options": [
-          { "label": "Delete", "correct": false },
-          { "label": "Insert", "correct": true },
-          { "label": "Transpose", "correct": false },
-          { "label": "New paragraph", "correct": false }
-        ],
-        "rationale": "The caret symbol (⌃) indicates where to insert text or punctuation.",
-        "ref": "§16.06"
-      },
-      {
-        "id": "q10",
-        "type": "drag-drop",
-        "stem": "Match proofreading symbols with their meanings:",
-        "options": [
-          { "label": "dele or ⌐ = delete", "order": 1 },
-          { "label": "⌃ = insert", "order": 2 },
-          { "label": "tr = transpose", "order": 3 },
-          { "label": "¶ = new paragraph", "order": 4 },
-          { "label": "stet = let it stand (ignore correction)", "order": 5 }
-        ],
-        "rationale": "Standard proofreading symbols communicate specific editing instructions."
-      },
-      {
-        "id": "q11",
-        "type": "mcq",
-        "stem": "What does 'stet' mean?",
-        "options": [
-          { "label": "Delete this text", "correct": false },
-          { "label": "Insert a space", "correct": false },
-          { "label": "Let it stand (ignore previous correction)", "correct": true },
-          { "label": "Start a new paragraph", "correct": false }
-        ],
-        "rationale": "'Stet' (Latin for 'let it stand') cancels a previous correction.",
-        "ref": "§16.06"
-      },
-      {
-        "id": "q12",
-        "type": "fill-blank",
-        "stem": "To indicate that two letters should switch positions, use the symbol _____.",
-        "answer": "tr",
-        "rationale": "'tr' (transpose) indicates that elements should switch positions.",
-        "ref": "§16.06"
-      }
-    ]
-  },
-  "checklists": {
-    "id": "ch16-checklists",
-    "title": "Editing Checklists",
-    "questions": [
-      {
-        "id": "q13",
-        "type": "mcq",
-        "stem": "Why are editing checklists useful?",
-        "options": [
-          { "label": "They replace the need for careful reading", "correct": false },
-          { "label": "They ensure systematic coverage of all elements", "correct": true },
-          { "label": "They speed up the editing process", "correct": false },
-          { "label": "They eliminate the need for proofreading", "correct": false }
-        ],
-        "rationale": "Checklists ensure you systematically check all important elements.",
-        "ref": "§16.07"
-      },
-      {
-        "id": "q14",
-        "type": "multi-select",
-        "stem": "A good revision checklist should include: (Select all that apply)",
-        "options": [
-          { "label": "Content organization", "correct": true },
-          { "label": "Clarity and coherence", "correct": true },
-          { "label": "Grammar and mechanics", "correct": true },
-          { "label": "Personal opinions about the topic", "correct": false },
-          { "label": "Formatting consistency", "correct": true }
-        ],
-        "rationale": "Checklists should cover content, clarity, mechanics, and formatting."
-      },
-      {
-        "id": "q15",
-        "type": "mcq",
-        "stem": "When using a checklist, you should:",
-        "options": [
-          { "label": "Check everything in one quick pass", "correct": false },
-          { "label": "Focus on one type of issue at a time", "correct": true },
-          { "label": "Only use it for important documents", "correct": false },
-          { "label": "Skip items that seem obvious", "correct": false }
-        ],
-        "rationale": "Focus on one category at a time for more thorough checking.",
-        "ref": "§16.07"
-      }
-    ]
-  },
-  "technology": {
-    "id": "ch16-technology",
-    "title": "Technology Tools",
-    "questions": [
-      {
-        "id": "q16",
-        "type": "mcq",
-        "stem": "What is the main limitation of spell-check programs?",
-        "options": [
-          { "label": "They're too slow", "correct": false },
-          { "label": "They don't catch correctly spelled wrong words", "correct": true },
-          { "label": "They change too much", "correct": false },
-          { "label": "They only work in English", "correct": false }
-        ],
-        "rationale": "Spell-check won't catch 'there/their/they're' or other correctly spelled wrong words.",
-        "ref": "§16.08"
-      },
-      {
-        "id": "q17",
-        "type": "mcq",
-        "stem": "How should you use grammar-checking software?",
-        "options": [
-          { "label": "Accept all suggestions automatically", "correct": false },
-          { "label": "As a helpful tool requiring human judgment", "correct": true },
-          { "label": "Only for final proofreading", "correct": false },
-          { "label": "Ignore it completely", "correct": false }
-        ],
-        "rationale": "Grammar checkers are tools that require human judgment to evaluate suggestions.",
-        "ref": "§16.08"
-      },
-      {
-        "id": "q18",
-        "type": "multi-select",
-        "stem": "Technology tools can help with: (Select all that apply)",
-        "options": [
-          { "label": "Finding obvious spelling errors", "correct": true },
-          { "label": "Checking basic grammar", "correct": true },
-          { "label": "Ensuring document consistency", "correct": true },
-          { "label": "Evaluating content quality", "correct": false },
-          { "label": "Making style decisions", "correct": false }
-        ],
-        "rationale": "Technology helps with mechanics but can't replace human judgment on content and style."
-      }
-    ]
-  },
-  "final-review": {
-    "id": "ch16-final-review",
-    "title": "Final Review",
-    "questions": [
-      {
-        "id": "q19",
-        "type": "mcq",
-        "stem": "What should you do before final submission?",
-        "options": [
-          { "label": "Just run spell-check one more time", "correct": false },
-          { "label": "Have someone else review the document", "correct": true },
-          { "label": "Only check the conclusion", "correct": false },
-          { "label": "Reduce the document length", "correct": false }
-        ],
-        "rationale": "Fresh eyes often catch errors the writer has missed.",
-        "ref": "§16.09"
-      },
-      {
-        "id": "q20",
-        "type": "mcq",
-        "stem": "Why is it hard to proofread your own writing?",
-        "options": [
-          { "label": "You write too quickly", "correct": false },
-          { "label": "You see what you intended to write, not what's there", "correct": true },
-          { "label": "You don't know the rules well enough", "correct": false },
-          { "label": "You care too much about the content", "correct": false }
-        ],
-        "rationale": "Writers often read what they meant to write rather than what's actually on the page.",
-        "ref": "§16.09"
-      },
-      {
-        "id": "q21",
-        "type": "fill-blank",
-        "stem": "The final review should check for _____, consistency, and accuracy.",
-        "answer": "completeness",
-        "rationale": "Final review ensures completeness, consistency, and accuracy before submission.",
-        "ref": "§16.09"
-      },
-      {
-        "id": "q22",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Structural editing", "back": "Organization and content flow" },
-          { "front": "Stylistic editing", "back": "Clarity, tone, readability" },
-          { "front": "Copy editing", "back": "Grammar, spelling, mechanics" },
-          { "front": "Proofreading", "back": "Final error check" },
-          { "front": "⌃ symbol", "back": "Insert" },
-          { "front": "dele symbol", "back": "Delete" },
-          { "front": "stet", "back": "Let it stand (ignore correction)" },
-          { "front": "tr symbol", "back": "Transpose" },
-          { "front": "Spell-check limitation", "back": "Doesn't catch wrong words spelled correctly" },
-          { "front": "Final review", "back": "Completeness, consistency, accuracy" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 24,
+    "questionTypes": ["mcq", "fill-blank", "drag-drop", "error-spot", "multi-select"],
+    "difficulty": "intermediate",
+    "timeEstimate": "35-40 minutes",
+    "passingScore": 80
   }
 }
