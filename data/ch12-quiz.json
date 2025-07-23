@@ -1,176 +1,218 @@
 {
-  "common-errors": {
-    "id": "ch12-common-errors",
-    "title": "Common Usage Errors",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "Which sentence uses 'between' correctly?",
-        "options": [
-          { "label": "Choose between the three options.", "correct": false },
-          { "label": "Choose between the two options.", "correct": true },
-          { "label": "Choose between all the options.", "correct": false },
-          { "label": "Choose between these many choices.", "correct": false }
-        ],
-        "rationale": "Use 'between' for two items; use 'among' for three or more.",
-        "ref": "§12.02"
-      },
-      {
-        "id": "q2",
-        "type": "mcq",
-        "stem": "Which is correct?",
-        "options": [
-          { "label": "The data are conclusive.", "correct": true },
-          { "label": "The data is conclusive.", "correct": false },
-          { "label": "The datas are conclusive.", "correct": false },
-          { "label": "The datum are conclusive.", "correct": false }
-        ],
-        "rationale": "'Data' is the plural of 'datum' and takes plural verbs.",
-        "ref": "§12.02"
-      },
-      {
-        "id": "q3",
-        "type": "error-spot",
-        "stem": "Click on the usage error:",
-        "text": "The amount of people attending was surprising",
-        "errorIndex": 1,
-        "rationale": "Should be 'number of people' (countable) not 'amount of people'."
-      },
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "Which sentence uses 'fewer' and 'less' correctly?",
-        "options": [
-          { "label": "Less people attended than expected.", "correct": false },
-          { "label": "Fewer people attended than expected.", "correct": true },
-          { "label": "Less items were sold.", "correct": false },
-          { "label": "Fewer sugar is needed.", "correct": false }
-        ],
-        "rationale": "Use 'fewer' with countable nouns (people), 'less' with uncountable nouns (sugar).",
-        "ref": "§12.02"
-      },
-      {
-        "id": "q5",
-        "type": "fill-blank",
-        "stem": "The committee _____ their decision yesterday. (has announced/have announced)",
-        "answer": "announced",
-        "rationale": "In Canadian usage, collective nouns like 'committee' typically take singular verbs.",
-        "ref": "§12.02"
-      },
-      {
-        "id": "q6",
-        "type": "mcq",
-        "stem": "Which demonstrates correct subject-verb agreement?",
-        "options": [
-          { "label": "Neither the manager nor the employees was happy.", "correct": false },
-          { "label": "Neither the manager nor the employees were happy.", "correct": true },
-          { "label": "Neither the employees nor the manager were happy.", "correct": false },
-          { "label": "Neither the manager or the employees was happy.", "correct": false }
-        ],
-        "rationale": "With 'neither...nor', the verb agrees with the closer subject (employees = plural).",
-        "ref": "§12.02"
-      }
-    ]
+  "sections": {
+    "prepositions": {
+      "id": "ch12-prepositions",
+      "title": "Prepositions",
+      "questions": [
+        {
+          "id": "q1",
+          "type": "mcq",
+          "stem": "Which preposition is correct?",
+          "options": [
+            { "label": "different from", "correct": true },
+            { "label": "different than", "correct": false },
+            { "label": "different to", "correct": false },
+            { "label": "different with", "correct": false }
+          ],
+          "rationale": "In Canadian English, use 'different from' rather than 'different than'.",
+          "ref": "§12.02"
+        },
+        {
+          "id": "q2",
+          "type": "mcq",
+          "stem": "Complete: 'comply _____ the regulations'",
+          "options": [
+            { "label": "to", "correct": false },
+            { "label": "with", "correct": true },
+            { "label": "by", "correct": false },
+            { "label": "on", "correct": false }
+          ],
+          "rationale": "Use 'comply with' not 'comply to'.",
+          "ref": "§12.02"
+        },
+        {
+          "id": "q3",
+          "type": "fill-blank",
+          "stem": "She is responsible _____ the budget.",
+          "answer": "for",
+          "rationale": "Use 'responsible for' when referring to duties or obligations.",
+          "ref": "§12.02"
+        }
+      ]
+    },
+    "affect-effect": {
+      "id": "ch12-affect-effect",
+      "title": "Affect vs Effect",
+      "questions": [
+        {
+          "id": "q4",
+          "type": "mcq",
+          "stem": "Choose the correct sentence:",
+          "options": [
+            { "label": "The rain will effect our plans.", "correct": false },
+            { "label": "The rain will affect our plans.", "correct": true },
+            { "label": "The rain will have an affect on our plans.", "correct": false },
+            { "label": "The affect of rain is significant.", "correct": false }
+          ],
+          "rationale": "'Affect' is typically a verb meaning to influence; 'effect' is typically a noun meaning result.",
+          "ref": "§12.03"
+        },
+        {
+          "id": "q5",
+          "type": "fill-blank",
+          "stem": "The _____ of the new policy was immediate.",
+          "answer": "effect",
+          "rationale": "Use 'effect' as a noun meaning result or consequence.",
+          "ref": "§12.03"
+        }
+      ]
+    },
+    "compose-comprise": {
+      "id": "ch12-compose-comprise",
+      "title": "Compose vs Comprise",
+      "questions": [
+        {
+          "id": "q6",
+          "type": "mcq",
+          "stem": "Which sentence is correct?",
+          "options": [
+            { "label": "The committee is comprised of five members.", "correct": false },
+            { "label": "The committee comprises five members.", "correct": true },
+            { "label": "Five members comprise the committee.", "correct": false },
+            { "label": "The committee is composed from five members.", "correct": false }
+          ],
+          "rationale": "'Comprise' means 'to include' - the whole comprises the parts.",
+          "ref": "§12.04"
+        },
+        {
+          "id": "q7",
+          "type": "fill-blank",
+          "stem": "The report is _____ of three sections.",
+          "answer": "composed",
+          "rationale": "Use 'composed of' - the parts compose the whole.",
+          "ref": "§12.04"
+        }
+      ]
+    },
+    "less-fewer": {
+      "id": "ch12-less-fewer",
+      "title": "Less vs Fewer",
+      "questions": [
+        {
+          "id": "q8",
+          "type": "mcq",
+          "stem": "Which is correct?",
+          "options": [
+            { "label": "Less people attended than expected.", "correct": false },
+            { "label": "Fewer people attended than expected.", "correct": true },
+            { "label": "Less individuals came to the meeting.", "correct": false },
+            { "label": "Fewer water was consumed.", "correct": false }
+          ],
+          "rationale": "Use 'fewer' with countable nouns (people), 'less' with uncountable nouns (water).",
+          "ref": "§12.05"
+        },
+        {
+          "id": "q9",
+          "type": "error-spot",
+          "stem": "Click on the error:",
+          "text": "We need less employees and more efficiency",
+          "errorIndex": 2,
+          "rationale": "Should be 'fewer employees' because employees are countable."
+        }
+      ]
+    },
+    "that-which": {
+      "id": "ch12-that-which",
+      "title": "That vs Which",
+      "questions": [
+        {
+          "id": "q10",
+          "type": "mcq",
+          "stem": "Which sentence correctly uses restrictive clause?",
+          "options": [
+            { "label": "The report, which was submitted yesterday, needs revision.", "correct": false },
+            { "label": "The report that was submitted yesterday needs revision.", "correct": true },
+            { "label": "The report which was submitted yesterday needs revision.", "correct": false },
+            { "label": "The report, that was submitted yesterday, needs revision.", "correct": false }
+          ],
+          "rationale": "Use 'that' for restrictive clauses (no commas) to specify which report.",
+          "ref": "§12.06"
+        },
+        {
+          "id": "q11",
+          "type": "fill-blank",
+          "stem": "Our office, _____ is located downtown, opens at 8 AM.",
+          "answer": "which",
+          "rationale": "Use 'which' for non-restrictive clauses with commas.",
+          "ref": "§12.06"
+        }
+      ]
+    },
+    "common-errors": {
+      "id": "ch12-common-errors",
+      "title": "Common Usage Errors",
+      "questions": [
+        {
+          "id": "q12",
+          "type": "mcq",
+          "stem": "Which sentence uses 'between' correctly?",
+          "options": [
+            { "label": "Choose between the three options.", "correct": false },
+            { "label": "Choose between the two options.", "correct": true },
+            { "label": "Choose between all the options.", "correct": false },
+            { "label": "Choose between these many choices.", "correct": false }
+          ],
+          "rationale": "Use 'between' for two items; use 'among' for three or more.",
+          "ref": "§12.07"
+        },
+        {
+          "id": "q13",
+          "type": "mcq",
+          "stem": "Which is correct?",
+          "options": [
+            { "label": "The data are conclusive.", "correct": true },
+            { "label": "The data is conclusive.", "correct": false },
+            { "label": "The datas are conclusive.", "correct": false },
+            { "label": "The datum are conclusive.", "correct": false }
+          ],
+          "rationale": "'Data' is the plural of 'datum' and takes plural verbs.",
+          "ref": "§12.07"
+        }
+      ]
+    },
+    "idioms": {
+      "id": "ch12-idioms",
+      "title": "Canadian Idioms",
+      "questions": [
+        {
+          "id": "q14",
+          "type": "mcq",
+          "stem": "Which expression is preferred in Canadian English?",
+          "options": [
+            { "label": "I could care less", "correct": false },
+            { "label": "I couldn't care less", "correct": true },
+            { "label": "I don't care less", "correct": false },
+            { "label": "I won't care less", "correct": false }
+          ],
+          "rationale": "'I couldn't care less' is the logical form - it's impossible to care less than you do.",
+          "ref": "§12.08"
+        },
+        {
+          "id": "q15",
+          "type": "fill-blank",
+          "stem": "The meeting was cancelled due _____ bad weather.",
+          "answer": "to",
+          "rationale": "In Canadian English, use 'due to' (not 'due because of').",
+          "ref": "§12.08"
+        }
+      ]
+    }
   },
-  "word-choice": {
-    "id": "ch12-word-choice",
-    "title": "Word Choice Issues",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "What's the difference between 'affect' and 'effect'?",
-        "options": [
-          { "label": "No difference, they're interchangeable", "correct": false },
-          { "label": "'Affect' is a verb, 'effect' is a noun", "correct": true },
-          { "label": "'Affect' is a noun, 'effect' is a verb", "correct": false },
-          { "label": "Both are always nouns", "correct": false }
-        ],
-        "rationale": "'Affect' is typically a verb (to influence); 'effect' is typically a noun (a result).",
-        "ref": "§12.03"
-      },
-      {
-        "id": "q8",
-        "type": "drag-drop",
-        "stem": "Match the commonly confused words:",
-        "options": [
-          { "label": "principal = main, most important", "order": 1 },
-          { "label": "principle = fundamental rule or belief", "order": 2 },
-          { "label": "complement = to complete or make perfect", "order": 3 },
-          { "label": "compliment = to praise or express admiration", "order": 4 }
-        ],
-        "rationale": "These word pairs are often confused but have distinct meanings."
-      },
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "Which sentence uses 'imply' and 'infer' correctly?",
-        "options": [
-          { "label": "The speaker inferred that costs would rise.", "correct": false },
-          { "label": "I implied from her tone that she was angry.", "correct": false },
-          { "label": "The speaker implied that costs would rise.", "correct": true },
-          { "label": "The data infers a clear trend.", "correct": false }
-        ],
-        "rationale": "Speakers 'imply' (suggest); listeners 'infer' (deduce).",
-        "ref": "§12.03"
-      },
-      {
-        "id": "q10",
-        "type": "multi-select",
-        "stem": "Which are correct uses of 'lay' and 'lie'? (Select all that apply)",
-        "options": [
-          { "label": "Please lay the book on the table.", "correct": true },
-          { "label": "I need to lie down for a rest.", "correct": true },
-          { "label": "The book is laying on the table.", "correct": false },
-          { "label": "Yesterday I laid down for a nap.", "correct": false }
-        ],
-        "rationale": "'Lay' requires an object (lay something down); 'lie' doesn't (lie down yourself)."
-      },
-      {
-        "id": "q11",
-        "type": "error-spot",
-        "stem": "Click on the word choice error:",
-        "text": "The policy will effect significant changes in procedures",
-        "errorIndex": 3,
-        "rationale": "Should be 'affect' (verb meaning to influence) not 'effect' (noun meaning result)."
-      },
-      {
-        "id": "q12",
-        "type": "fill-blank",
-        "stem": "The new procedures will help _____ that all requirements are met. (ensure/insure)",
-        "answer": "ensure",
-        "rationale": "'Ensure' means to make certain; 'insure' relates to insurance protection.",
-        "ref": "§12.03"
-      },
-      {
-        "id": "q13",
-        "type": "mcq",
-        "stem": "Which sentence correctly uses 'who' and 'whom'?",
-        "options": [
-          { "label": "Who did you give the report to?", "correct": false },
-          { "label": "Whom did you give the report to?", "correct": true },
-          { "label": "Who did receive the report?", "correct": false },
-          { "label": "The person whom wrote the report is here.", "correct": false }
-        ],
-        "rationale": "Use 'whom' when it's the object (to whom); use 'who' when it's the subject.",
-        "ref": "§12.03"
-      },
-      {
-        "id": "q14",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "between/among", "back": "between (2), among (3+)" },
-          { "front": "fewer/less", "back": "fewer (countable), less (uncountable)" },
-          { "front": "affect/effect", "back": "affect (verb), effect (noun)" },
-          { "front": "imply/infer", "back": "speaker implies, listener infers" },
-          { "front": "principal/principle", "back": "principal (main), principle (rule)" },
-          { "front": "lay/lie", "back": "lay (needs object), lie (no object)" },
-          { "front": "who/whom", "back": "who (subject), whom (object)" },
-          { "front": "ensure/insure", "back": "ensure (make certain), insure (insurance)" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 15,
+    "questionTypes": ["mcq", "fill-blank", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "20-25 minutes",
+    "passingScore": 80
   }
 }
