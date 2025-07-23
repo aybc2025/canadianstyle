@@ -6,67 +6,6 @@
     <title>Chapter 15: Geographical Names - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
-    <style>
-        .provinces-table {
-            margin: var(--cs-space-l) 0;
-            overflow-x: auto;
-        }
-        
-        .usage-rules {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: var(--cs-space-l);
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .rule-section {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-        }
-        
-        .rule-section h4 {
-            color: var(--cs-red);
-            margin-top: 0;
-        }
-        
-        .special-notes {
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .note-item {
-            background: var(--cs-info-bg);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin-bottom: var(--cs-space-m);
-        }
-        
-        .note-item h4 {
-            color: var(--cs-info);
-            margin-top: 0;
-            margin-bottom: var(--cs-space-s);
-        }
-        
-        .note-item:last-child {
-            margin-bottom: 0;
-        }
-        
-        .special-cases {
-            background: var(--cs-warning-bg);
-            padding: var(--cs-space-l);
-            border-radius: 8px;
-            margin: var(--cs-space-l) 0;
-        }
-        
-        .special-cases h4 {
-            color: var(--cs-warning);
-            margin-top: var(--cs-space-l);
-        }
-        
-        .special-cases h4:first-child {
-            margin-top: 0;
-        }
-    </style>
 </head>
 <body>
     <header class="site-header">
@@ -90,7 +29,7 @@
                 <div class="chapter-icon">15</div>
                 <div>
                     <h1>Geographical Names</h1>
-                    <p>Correct usage and capitalization of place names</p>
+                    <p>Correct spellings and forms for place names</p>
                 </div>
             </div>
             <div class="progress-bar">
@@ -103,10 +42,11 @@
         <div class="container">
             <div class="tabs-list">
                 <a href="#introduction" class="tab-link" data-section="introduction">15.01 Introduction</a>
-                <a href="#canadian" class="tab-link" data-section="canadian">15.02 Canadian Names</a>
-                <a href="#foreign" class="tab-link" data-section="foreign">15.03 Foreign Names</a>
-                <a href="#adjectives" class="tab-link" data-section="adjectives">15.04 Adjectives and Nouns</a>
-                <a href="#provinces" class="tab-link" data-section="provinces">15.05 Provinces & Territories</a>
+                <a href="#canadian-places" class="tab-link" data-section="canadian-places">15.02 Canadian Places</a>
+                <a href="#foreign-places" class="tab-link" data-section="foreign-places">15.03 Foreign Places</a>
+                <a href="#adjectives" class="tab-link" data-section="adjectives">15.04 Geographical Adjectives</a>
+                <a href="#provinces-territories" class="tab-link" data-section="provinces-territories">15.05 Provinces & Territories</a>
+                <a href="#abbreviations" class="tab-link" data-section="abbreviations">15.06 Abbreviations</a>
             </div>
         </div>
     </nav>
@@ -143,60 +83,71 @@
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Complete Section → Canadian Names
+                        Complete Section → Canadian Places
                     </button>
                 </div>
             </section>
 
-            <!-- Section 15.02: Canadian Names -->
-            <section class="content-section" id="canadian">
+            <!-- Section 15.02: Canadian Places -->
+            <section class="content-section" id="canadian-places">
                 <div class="section-header">
-                    <h2>15.02 Canadian Names</h2>
+                    <h2>15.02 Canadian Places</h2>
                 </div>
                 
                 <div class="lesson-content">
                     <h3>Official Sources</h3>
-                    <p>For Canadian place names, consult:</p>
+                    <p>For Canadian place names, consult authoritative sources:</p>
                     <ul>
-                        <li>The Geographical Names Board of Canada</li>
-                        <li>Provincial geographical names authorities</li>
-                        <li>Canada Gazetteer Atlas</li>
-                        <li>Official municipal websites</li>
+                        <li><strong>Canadian Geographical Names Database:</strong> The official source</li>
+                        <li><strong>Natural Resources Canada:</strong> Federal naming authority</li>
+                        <li><strong>Provincial geographical naming boards:</strong> Local authorities</li>
+                        <li><strong>Statistics Canada:</strong> For census divisions</li>
                     </ul>
-                    
-                    <h3>Special Considerations</h3>
-                    <div class="usage-rules">
-                        <div class="rule-section">
-                            <h4>Indigenous Names</h4>
-                            <ul>
-                                <li>Use current official spellings</li>
-                                <li>Many names have been changed from colonial versions</li>
-                                <li>Respect Indigenous pronunciation guides</li>
-                                <li>Be aware of ongoing name changes</li>
-                            </ul>
-                        </div>
-                        <div class="rule-section">
-                            <h4>French Names</h4>
-                            <ul>
-                                <li>Preserve accents and special characters</li>
-                                <li>Don't translate unless common practice</li>
-                                <li>Use official bilingual versions when available</li>
-                                <li>Example: Québec (not Quebec in formal writing)</li>
-                            </ul>
-                        </div>
+
+                    <h3>Common Spelling Issues</h3>
+                    <div class="replacement-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Correct</th>
+                                    <th>Common Error</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Winnipeg</td>
+                                    <td>Winnepeg</td>
+                                </tr>
+                                <tr>
+                                    <td>Saskatchewan</td>
+                                    <td>Saskatchawan</td>
+                                </tr>
+                                <tr>
+                                    <td>Yukon</td>
+                                    <td>The Yukon</td>
+                                </tr>
+                                <tr>
+                                    <td>Nunavut</td>
+                                    <td>Nunuvut</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    
-                    <h3>Common Issues</h3>
+
+                    <h3>French Place Names</h3>
+                    <p>Respect official French spellings and formatting:</p>
                     <div class="examples-grid">
                         <div class="example-card avoid">
                             <h4>❌ Avoid</h4>
-                            <p>St. John's, Newfoundland<br>
+                            <p>St-Jean-sur-Richelieu<br>
+                            St. John's, Newfoundland<br>
                             Saint John, New Brunswick<br>
                             (confusing the two cities)</p>
                         </div>
                         <div class="example-card prefer">
-                            <h4>✅ Be Specific</h4>
-                            <p>St. John's, Newfoundland and Labrador<br>
+                            <h4>✅ Prefer</h4>
+                            <p>Saint-Jean-sur-Richelieu<br>
+                            St. John's, Newfoundland and Labrador<br>
                             Saint John, New Brunswick<br>
                             (clear distinction)</p>
                         </div>
@@ -204,72 +155,102 @@
                 </div>
                 
                 <!-- Quiz Panel -->
-                <div class="quiz-panel" id="quiz-canadian"></div>
+                <div class="quiz-panel" id="quiz-canadian-places"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('canadian')">
-                        Complete Section → Foreign Names
+                    <button class="btn btn-primary" onclick="completeSection('canadian-places')">
+                        Complete Section → Foreign Places
                     </button>
                 </div>
             </section>
 
-            <!-- Section 15.03: Foreign Names -->
-            <section class="content-section" id="foreign">
+            <!-- Section 15.03: Foreign Places -->
+            <section class="content-section" id="foreign-places">
                 <div class="section-header">
-                    <h2>15.03 Foreign Names</h2>
+                    <h2>15.03 Foreign Places</h2>
                 </div>
                 
                 <div class="lesson-content">
                     <h3>Current vs. Historical Names</h3>
-                    <p>Use current names unless writing in historical context:</p>
+                    <p>Use current, internationally recognized names:</p>
+                    
+                    <div class="replacement-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Current Name</th>
+                                    <th>Former Name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mumbai</td>
+                                    <td>Bombay</td>
+                                </tr>
+                                <tr>
+                                    <td>Beijing</td>
+                                    <td>Peking</td>
+                                </tr>
+                                <tr>
+                                    <td>Ho Chi Minh City</td>
+                                    <td>Saigon</td>
+                                </tr>
+                                <tr>
+                                    <td>Myanmar</td>
+                                    <td>Burma</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>English Forms vs. Local Forms</h3>
+                    <p>Use commonly accepted English forms for international audience:</p>
                     
                     <div class="examples-grid">
-                        <div class="example-card historical">
-                            <h4>📚 Historical Context</h4>
-                            <p>Ceylon gained independence in 1948<br>
-                            Bombay was the commercial center<br>
-                            (appropriate when discussing the past)</p>
+                        <div class="example-card prefer">
+                            <h4>✅ English Forms</h4>
+                            <ul>
+                                <li>Rome (not Roma)</li>
+                                <li>Munich (not München)</li>
+                                <li>Florence (not Firenze)</li>
+                                <li>Moscow (not Moskva)</li>
+                            </ul>
                         </div>
-                        <div class="example-card current">
-                            <h4>🌍 Current Context</h4>
-                            <p>Sri Lanka's economy today<br>
-                            Mumbai's financial district<br>
-                            (use current names)</p>
+                        <div class="example-card consider">
+                            <h4>🤔 Consider Context</h4>
+                            <p>Use local forms when:</p>
+                            <ul>
+                                <li>Writing for local audience</li>
+                                <li>Discussing local culture</li>
+                                <li>Citing official documents</li>
+                                <li>Showing respect for local preferences</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <h3>Transliteration</h3>
-                    <p>When transliterating from other alphabets:</p>
+
+                    <h3>Disputed or Sensitive Names</h3>
                     <ul>
-                        <li>Use established English spellings when they exist</li>
-                        <li>Follow consistent transliteration systems</li>
-                        <li>Consider your audience's familiarity</li>
-                        <li>Provide pronunciation guides when helpful</li>
+                        <li>Use neutral, widely accepted terms</li>
+                        <li>Consider your audience's perspective</li>
+                        <li>Provide context when necessary</li>
+                        <li>Consult recent authoritative sources</li>
                     </ul>
-                    
-                    <div class="special-cases">
-                        <h4>Special Cases</h4>
-                        <p><strong>Ukraine:</strong> Use "Ukraine" not "the Ukraine"</p>
-                        <p><strong>Netherlands:</strong> "the Netherlands" (always with "the")</p>
-                        <p><strong>Philippines:</strong> "the Philippines" (always with "the")</p>
-                        <p><strong>Czech Republic/Czechia:</strong> Both are acceptable</p>
-                    </div>
                 </div>
                 
                 <!-- Quiz Panel -->
-                <div class="quiz-panel" id="quiz-foreign"></div>
+                <div class="quiz-panel" id="quiz-foreign-places"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('foreign')">
-                        Complete Section → Adjectives and Nouns
+                    <button class="btn btn-primary" onclick="completeSection('foreign-places')">
+                        Complete Section → Geographical Adjectives
                     </button>
                 </div>
             </section>
 
-            <!-- Section 15.04: Adjectives and Nouns -->
+            <!-- Section 15.04: Geographical Adjectives -->
             <section class="content-section" id="adjectives">
                 <div class="section-header">
-                    <h2>15.04 Adjectives and Nouns</h2>
+                    <h2>15.04 Geographical Adjectives</h2>
                 </div>
                 
                 <div class="lesson-content">
@@ -309,30 +290,41 @@
                                 <tr>
                                     <td>Prince Edward Island</td>
                                     <td>Prince Edward Islander</td>
-                                    <td>Prince Edward Islander traditions</td>
+                                    <td>Islander traditions</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
-                    <h3>Capitalization Rules</h3>
-                    <div class="rule-section">
-                        <h4>Always Capitalize</h4>
-                        <ul>
-                            <li>Proper adjectives: "American foreign policy"</li>
-                            <li>Nouns referring to people: "Canadians believe..."</li>
-                            <li>Languages: "She speaks French fluently"</li>
-                        </ul>
+
+                    <h3>International Examples</h3>
+                    <div class="examples-grid">
+                        <div class="example-card good">
+                            <h4>✅ Correct Forms</h4>
+                            <ul>
+                                <li>European Union (not Europe Union)</li>
+                                <li>Asian markets (not Asia markets)</li>
+                                <li>American policy (not America policy)</li>
+                                <li>African nations (not Africa nations)</li>
+                            </ul>
+                        </div>
+                        <div class="example-card good">
+                            <h4>✅ People References</h4>
+                            <ul>
+                                <li>Torontonians (not Toronto people)</li>
+                                <li>New Yorkers (not New York people)</li>
+                                <li>Londoners (not London people)</li>
+                                <li>Parisians (not Paris people)</li>
+                            </ul>
+                        </div>
                     </div>
-                    
-                    <div class="rule-section">
-                        <h4>Don't Capitalize</h4>
-                        <ul>
-                            <li>Common nouns not referring to people: "french fries"</li>
-                            <li>Compass directions used descriptively: "northern Ontario"</li>
-                            <li>Generic geographical terms: "the river" (when not part of proper name)</li>
-                        </ul>
-                    </div>
+
+                    <h3>Special Cases</h3>
+                    <ul>
+                        <li><strong>United States:</strong> American (not US-ian)</li>
+                        <li><strong>United Kingdom:</strong> British (for the country), English/Scottish/Welsh/Northern Irish (for regions)</li>
+                        <li><strong>Netherlands:</strong> Dutch (not Netherlandish)</li>
+                        <li><strong>Switzerland:</strong> Swiss (not Switzerlandish)</li>
+                    </ul>
                 </div>
                 
                 <!-- Quiz Panel -->
@@ -346,129 +338,205 @@
             </section>
 
             <!-- Section 15.05: Provinces & Territories -->
-            <section class="content-section" id="provinces">
+            <section class="content-section" id="provinces-territories">
                 <div class="section-header">
                     <h2>15.05 Provinces & Territories</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <h3>Official Names and Abbreviations</h3>
-                    <div class="provinces-table">
+                    <h3>Full Names vs. Abbreviations</h3>
+                    <p>Spell out province and territory names in running text. Use abbreviations only in addresses, tables, and lists where space is limited.</p>
+
+                    <h3>Postal Abbreviations</h3>
+                    <div class="replacement-table">
                         <table>
                             <thead>
                                 <tr>
                                     <th>Province/Territory</th>
-                                    <th>Abbreviation</th>
                                     <th>Postal Code</th>
-                                    <th>Residents Called</th>
+                                    <th>Traditional Abbrev.</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>British Columbia</td>
-                                    <td>B.C.</td>
-                                    <td>BC</td>
-                                    <td>British Columbians</td>
-                                </tr>
-                                <tr>
                                     <td>Alberta</td>
-                                    <td>Alta.</td>
                                     <td>AB</td>
-                                    <td>Albertans</td>
+                                    <td>Alta.</td>
                                 </tr>
                                 <tr>
-                                    <td>Saskatchewan</td>
-                                    <td>Sask.</td>
-                                    <td>SK</td>
-                                    <td>Saskatchewanians</td>
+                                    <td>British Columbia</td>
+                                    <td>BC</td>
+                                    <td>B.C.</td>
                                 </tr>
                                 <tr>
                                     <td>Manitoba</td>
-                                    <td>Man.</td>
                                     <td>MB</td>
-                                    <td>Manitobans</td>
-                                </tr>
-                                <tr>
-                                    <td>Ontario</td>
-                                    <td>Ont.</td>
-                                    <td>ON</td>
-                                    <td>Ontarians</td>
-                                </tr>
-                                <tr>
-                                    <td>Quebec</td>
-                                    <td>Que.</td>
-                                    <td>QC</td>
-                                    <td>Quebecers</td>
+                                    <td>Man.</td>
                                 </tr>
                                 <tr>
                                     <td>New Brunswick</td>
-                                    <td>N.B.</td>
                                     <td>NB</td>
-                                    <td>New Brunswickers</td>
-                                </tr>
-                                <tr>
-                                    <td>Nova Scotia</td>
-                                    <td>N.S.</td>
-                                    <td>NS</td>
-                                    <td>Nova Scotians</td>
-                                </tr>
-                                <tr>
-                                    <td>Prince Edward Island</td>
-                                    <td>P.E.I.</td>
-                                    <td>PE</td>
-                                    <td>Prince Edward Islanders</td>
+                                    <td>N.B.</td>
                                 </tr>
                                 <tr>
                                     <td>Newfoundland and Labrador</td>
-                                    <td>N.L.</td>
                                     <td>NL</td>
-                                    <td>Newfoundlanders and Labradorians</td>
+                                    <td>N.L.</td>
                                 </tr>
                                 <tr>
                                     <td>Northwest Territories</td>
-                                    <td>N.W.T.</td>
                                     <td>NT</td>
-                                    <td>Northwesters</td>
+                                    <td>N.W.T.</td>
+                                </tr>
+                                <tr>
+                                    <td>Nova Scotia</td>
+                                    <td>NS</td>
+                                    <td>N.S.</td>
                                 </tr>
                                 <tr>
                                     <td>Nunavut</td>
-                                    <td>—</td>
                                     <td>NU</td>
-                                    <td>Nunavummiut</td>
+                                    <td>Nvt.</td>
+                                </tr>
+                                <tr>
+                                    <td>Ontario</td>
+                                    <td>ON</td>
+                                    <td>Ont.</td>
+                                </tr>
+                                <tr>
+                                    <td>Prince Edward Island</td>
+                                    <td>PE</td>
+                                    <td>P.E.I.</td>
+                                </tr>
+                                <tr>
+                                    <td>Quebec</td>
+                                    <td>QC</td>
+                                    <td>Que.</td>
+                                </tr>
+                                <tr>
+                                    <td>Saskatchewan</td>
+                                    <td>SK</td>
+                                    <td>Sask.</td>
                                 </tr>
                                 <tr>
                                     <td>Yukon</td>
-                                    <td>Y.T.</td>
                                     <td>YT</td>
-                                    <td>Yukoners</td>
+                                    <td>Y.T.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    
-                    <div class="special-notes">
-                        <div class="note-item">
-                            <h4>Quebec vs. Québec</h4>
-                            <p>In English: "Quebec" (without accent) is generally acceptable<br>
-                            In formal writing: "Québec" (with accent) shows respect for French usage</p>
-                        </div>
-                        <div class="note-item">
-                            <h4>Yukon Territory</h4>
-                            <p>Official name is simply "Yukon" (not "Yukon Territory")</p>
-                        </div>
-                        <div class="note-item">
-                            <h4>Abbreviation Periods</h4>
-                            <p>Traditional abbreviations use periods (B.C., N.S.)<br>
-                            Postal codes don't use periods (BC, NS)</p>
-                        </div>
-                    </div>
+
+                    <h3>Important Notes</h3>
+                    <ul>
+                        <li><strong>Newfoundland and Labrador:</strong> Use the full name; abbreviation is NL (not the old NF)</li>
+                        <li><strong>Yukon:</strong> Just "Yukon," not "the Yukon" or "Yukon Territory"</li>
+                        <li><strong>Quebec vs. Québec:</strong> Use accent in French contexts, plain "Quebec" in English</li>
+                        <li><strong>Northwest Territories:</strong> Plural "Territories"</li>
+                    </ul>
                 </div>
                 
                 <!-- Quiz Panel -->
-                <div class="quiz-panel" id="quiz-provinces"></div>
+                <div class="quiz-panel" id="quiz-provinces-territories"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('provinces')">
+                    <button class="btn btn-primary" onclick="completeSection('provinces-territories')">
+                        Complete Section → Abbreviations
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 15.06: Abbreviations -->
+            <section class="content-section" id="abbreviations">
+                <div class="section-header">
+                    <h2>15.06 Abbreviations</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <h3>When to Abbreviate</h3>
+                    <p>Abbreviate geographical names only when:</p>
+                    <ul>
+                        <li>Space is extremely limited (tables, lists, addresses)</li>
+                        <li>Standard abbreviations are well-known to your audience</li>
+                        <li>Consistency requires it (all entries in a table)</li>
+                        <li>The abbreviation appears in official documents you're citing</li>
+                    </ul>
+
+                    <h3>International Abbreviations</h3>
+                    <div class="replacement-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>ISO Code</th>
+                                    <th>Common Abbrev.</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>United States</td>
+                                    <td>US</td>
+                                    <td>U.S.</td>
+                                </tr>
+                                <tr>
+                                    <td>United Kingdom</td>
+                                    <td>GB</td>
+                                    <td>U.K.</td>
+                                </tr>
+                                <tr>
+                                    <td>European Union</td>
+                                    <td>EU</td>
+                                    <td>E.U.</td>
+                                </tr>
+                                <tr>
+                                    <td>Russian Federation</td>
+                                    <td>RU</td>
+                                    <td>Russia</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Street and Address Abbreviations</h3>
+                    <div class="examples-grid">
+                        <div class="example-card prefer">
+                            <h4>✅ Standard Abbreviations</h4>
+                            <ul>
+                                <li>St. (Street)</li>
+                                <li>Ave. (Avenue)</li>
+                                <li>Blvd. (Boulevard)</li>
+                                <li>Rd. (Road)</li>
+                                <li>Dr. (Drive)</li>
+                                <li>Cres. (Crescent)</li>
+                            </ul>
+                        </div>
+                        <div class="example-card consider">
+                            <h4>🤔 Consider Context</h4>
+                            <p>In formal documents, spell out:</p>
+                            <ul>
+                                <li>Geographic names in running text</li>
+                                <li>Names in document titles</li>
+                                <li>First mention of places</li>
+                                <li>When clarity is paramount</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Consistency Guidelines</h3>
+                    <ul>
+                        <li>Be consistent throughout a document</li>
+                        <li>Establish abbreviation patterns early</li>
+                        <li>Consider your audience's familiarity</li>
+                        <li>Provide a list of abbreviations if many are used</li>
+                        <li>When in doubt, spell it out</li>
+                    </ul>
+                </div>
+                
+                <!-- Quiz Panel -->
+                <div class="quiz-panel" id="quiz-abbreviations"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('abbreviations')">
                         Complete Chapter
                     </button>
                 </div>
@@ -478,8 +546,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 Government of Canada. 
-            Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
         </div>
     </footer>
 
@@ -492,10 +559,11 @@
         const CHAPTER_ID = 'ch15';
         const sections = [
             { id: 'introduction', title: '15.01 Introduction' },
-            { id: 'canadian', title: '15.02 Canadian Names' },
-            { id: 'foreign', title: '15.03 Foreign Names' },
-            { id: 'adjectives', title: '15.04 Adjectives and Nouns' },
-            { id: 'provinces', title: '15.05 Provinces & Territories' }
+            { id: 'canadian-places', title: '15.02 Canadian Places' },
+            { id: 'foreign-places', title: '15.03 Foreign Places' },
+            { id: 'adjectives', title: '15.04 Geographical Adjectives' },
+            { id: 'provinces-territories', title: '15.05 Provinces & Territories' },
+            { id: 'abbreviations', title: '15.06 Abbreviations' }
         ];
         
         // Initialize progress bar
@@ -532,7 +600,7 @@
                 <div class="modal-content">
                     <h3>🎉 Chapter 15 Complete!</h3>
                     <p>You've mastered geographical names and their proper usage. 
-                    Your writing will now show appropriate respect for places and their people.</p>
+                    Your writing will now accurately reflect Canadian and international place names.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -553,8 +621,20 @@
                 tab.addEventListener('click', (e) => {
                     e.preventDefault();
                     const sectionId = tab.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(tab);
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Show/hide sections
+                    const sections = document.querySelectorAll('.content-section');
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    document.getElementById(sectionId).classList.add('active');
+                    
+                    // Update URL hash
+                    window.location.hash = sectionId;
                 });
             });
             
@@ -565,35 +645,14 @@
                 if (tab) tab.click();
             } else {
                 // Default to first section
-                showSection('introduction');
-                updateActiveTab(tabs[0]);
+                tabs[0]?.click();
             }
-        }
-        
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-        
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            activeLink.classList.add('active');
         }
         
         // Load section quizzes from JSON files
         async function loadSectionQuizzes() {
             try {
-                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+                const response = await fetch(`../data/ch15-quiz.json`);
                 if (!response.ok) {
                     console.warn('Quiz data not available for chapter 15');
                     return;
