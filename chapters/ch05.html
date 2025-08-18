@@ -10,513 +10,805 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+            <div class="header-content">
+                <div class="site-title">
+                    <img src="../shared/img/maple-logo.svg" alt="Canadian Maple Leaf" class="logo">
+                    <span>The Canadian Style</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="../index.html" class="nav-link">Dashboard</a>
+                    <a href="../index.html#chapters" class="nav-link">All Chapters</a>
+                </nav>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
         </div>
     </header>
 
-    <div class="chapter-hero">
+    <main class="main-content">
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 5
+            <div class="chapter-header">
+                <div class="chapter-info">
+                    <span class="chapter-number">Chapter 5</span>
+                    <h1 class="chapter-title">Numerical Expressions</h1>
+                    <p class="chapter-description">Master the rules for writing numbers in Canadian style</p>
+                </div>
+                <div class="progress-indicator">
+                    <div class="progress-ring">
+                        <svg class="progress-svg" width="60" height="60">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4"/>
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4" 
+                                    stroke-dasharray="157" stroke-dashoffset="157" class="progress-circle"/>
+                        </svg>
+                        <span class="progress-text">0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="section-tabs">
+                <button class="tab-link active" data-section="basic-rules">
+                    5.01 Basic Rules
+                </button>
+                <button class="tab-link" data-section="sentence-beginning">
+                    5.02 Sentence Beginning
+                </button>
+                <button class="tab-link" data-section="money-measurements">
+                    5.03 Money & Measurements
+                </button>
+                <button class="tab-link" data-section="dates-time">
+                    5.04 Dates & Time
+                </button>
+                <button class="tab-link" data-section="percentages-statistics">
+                    5.05 Percentages & Statistics
+                </button>
+                <button class="tab-link" data-section="special-applications">
+                    5.06 Special Applications
+                </button>
             </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">5</div>
-                <div>
-                    <h1>Numerical Expressions</h1>
-                    <p>Clear and consistent presentation of numbers in your writing</p>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
 
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">5.01 Introduction</a>
-                <a href="#round-numbers" class="tab-link" data-section="round-numbers">5.02 Round Numbers</a>
-                <a href="#consistency" class="tab-link" data-section="consistency">5.03 Consistency</a>
-                <a href="#initial" class="tab-link" data-section="initial">5.04 Beginning Sentences</a>
-                <a href="#quantities" class="tab-link" data-section="quantities">5.05 Quantities</a>
-                <a href="#money" class="tab-link" data-section="money">5.06 Money</a>
-                <a href="#percentages" class="tab-link" data-section="percentages">5.07 Percentages</a>
-                <a href="#time" class="tab-link" data-section="time">5.08 Time</a>
-                <a href="#dates" class="tab-link" data-section="dates">5.09 Dates</a>
-            </div>
-        </div>
-    </nav>
+            <section id="basic-rules" class="content-section">
+                <div class="section-content">
+                    <h2>5.01 Basic Number Rules</h2>
+                    
+                    <div class="info-box">
+                        <h3>🔢 The Foundation Rule</h3>
+                        <p>Understanding when to spell out numbers versus using numerals is essential for professional writing.</p>
+                    </div>
 
-    <main class="chapter-content">
-        <div class="container">
-            <!-- Section 5.01: Introduction -->
-            <section class="content-section" id="introduction">
-                <div class="section-header">
-                    <h2>5.01 Introduction</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Clear presentation of numerical information improves document readability and professionalism. Consistency in how you express numbers helps readers focus on your content rather than being distracted by formatting variations.</p>
-                    
-                    <h3>Basic Principles</h3>
-                    <ul>
-                        <li><strong>Consistency:</strong> Use the same style throughout your document</li>
-                        <li><strong>Context:</strong> Consider your audience and document type</li>
-                        <li><strong>Clarity:</strong> Choose the format that's easiest to understand</li>
-                    </ul>
-                    
-                    <div class="rule-box">
-                        <h4>General Guidelines</h4>
+                    <h3>The Basic Rule</h3>
+                    <div class="basic-rule-box">
+                        <div class="rule-part">
+                            <h4>Spell Out:</h4>
+                            <div class="rule-content">
+                                <p><strong>Numbers one through nine</strong></p>
+                                <ul>
+                                    <li>five reports</li>
+                                    <li>nine participants</li>
+                                    <li>three meetings</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rule-part">
+                            <h4>Use Numerals:</h4>
+                            <div class="rule-content">
+                                <p><strong>Numbers 10 and above</strong></p>
+                                <ul>
+                                    <li>15 departments</li>
+                                    <li>25 employees</li>
+                                    <li>100 applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Consistency Within Sentences</h3>
+                    <div class="consistency-examples">
+                        <div class="example-pair">
+                            <div class="example-correct">
+                                <span class="label">✅ Consistent</span>
+                                <span class="text">"We ordered 5 computers, 15 chairs, and 25 desks."</span>
+                                <span class="explanation">All numerals because one number is 10+</span>
+                            </div>
+                            <div class="example-incorrect">
+                                <span class="label">❌ Inconsistent</span>
+                                <span class="text">"We ordered five computers, 15 chairs, and 25 desks."</span>
+                                <span class="explanation">Mixed styles in same context</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Large Numbers</h3>
+                    <div class="large-numbers">
+                        <h4>Combine Words and Numerals for Clarity</h4>
                         <ul>
-                            <li>Spell out numbers one to nine; use numerals for 10 and above</li>
-                            <li>Always spell out numbers that begin sentences</li>
-                            <li>Be consistent within categories (all ages, all percentages, etc.)</li>
-                            <li>Use numerals in technical and scientific documents</li>
+                            <li>2.5 million (not 2,500,000)</li>
+                            <li>$4.2 billion</li>
+                            <li>15.6 thousand</li>
+                        </ul>
+                        
+                        <h4>Use Commas in Full Numerals</h4>
+                        <ul>
+                            <li>1,250 employees</li>
+                            <li>15,000 applications</li>
+                            <li>2,500,000 voters</li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-introduction"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Complete Section → Round Numbers
-                    </button>
-                </div>
-            </section>
 
-            <!-- Section 5.02: Round Numbers -->
-            <section class="content-section" id="round-numbers">
-                <div class="section-header">
-                    <h2>5.02 Round Numbers and Large Numbers</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Expressing Large Numbers</h3>
-                    <p>Use a combination of numerals and words for large round numbers to improve readability:</p>
-                    
-                    <div class="examples-box">
-                        <h4>Large Numbers</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Preferred for readability:</strong></p>
-                            <ul>
-                                <li>3 million (not 3,000,000)</li>
-                                <li>45 billion (not 45,000,000,000)</li>
-                                <li>2.5 million</li>
-                                <li>$15 billion</li>
-                            </ul>
-                        </div>
-                        <div class="example-item acceptable">
-                            <p><strong>✓ Acceptable in financial contexts:</strong></p>
-                            <ul>
-                                <li>$3,000,000 (in budget documents)</li>
-                                <li>45,000,000,000 (in statistical reports)</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Comma Usage</h4>
-                        <ul>
-                            <li>Use commas in numbers of four digits or more: 1,000</li>
-                            <li>No commas in years: 2024, not 2,024</li>
-                            <li>No commas in postal codes, phone numbers, or page numbers</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-round-numbers"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('round-numbers')">
-                        Complete Section → Consistency
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 5.03: Consistency -->
-            <section class="content-section" id="consistency">
-                <div class="section-header">
-                    <h2>5.03 Consistency in Number Usage</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Maintaining Consistency</h3>
-                    <p>When numbers appear in the same context, treat them consistently:</p>
-                    
-                    <div class="examples-box">
-                        <h4>Consistent Series</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Consistent (all numerals because highest is 10+):</strong></p>
-                            <ul>
-                                <li>We received 3, 15, and 27 applications from the three regions.</li>
-                                <li>The committee has 12, 8, and 15 members from each department.</li>
-                            </ul>
-                        </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Inconsistent (mixing styles):</strong></p>
-                            <ul>
-                                <li>We received three, 15, and 27 applications from the three regions.</li>
-                                <li>The committee has 12, eight, and fifteen members from each department.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Category Consistency</h4>
-                        <p>Be consistent within categories but not necessarily across different types:</p>
-                        <ul>
-                            <li><strong>Ages:</strong> All spelled out or all numerals</li>
-                            <li><strong>Measurements:</strong> Usually numerals</li>
-                            <li><strong>Money:</strong> Usually numerals with $ symbol</li>
-                            <li><strong>Percentages:</strong> Usually numerals with % symbol</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-consistency"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('consistency')">
-                        Complete Section → Beginning Sentences
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 5.04: Beginning Sentences -->
-            <section class="content-section" id="initial">
-                <div class="section-header">
-                    <h2>5.04 Numbers at the Beginning of Sentences</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Sentence-Initial Numbers</h3>
-                    <p>Always spell out numbers that begin sentences, regardless of your usual style:</p>
-                    
-                    <div class="examples-box">
-                        <h4>Sentence Beginnings</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Correct:</strong></p>
-                            <ul>
-                                <li>Fifteen participants attended the workshop.</li>
-                                <li>Two hundred and fifty applications were received.</li>
-                                <li>Thirty-five percent of respondents agreed.</li>
-                            </ul>
-                        </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Incorrect:</strong></p>
-                            <ul>
-                                <li>15 participants attended the workshop.</li>
-                                <li>250 applications were received.</li>
-                                <li>35% of respondents agreed.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
                     <div class="tip-box">
-                        <h4>💡 Rewriting Options</h4>
-                        <p>If spelling out creates awkward wording, consider rewriting:</p>
-                        <ul>
-                            <li><strong>Instead of:</strong> "One thousand two hundred and fifty-seven people attended..."</li>
-                            <li><strong>Write:</strong> "The event attracted 1,257 attendees."</li>
-                        </ul>
+                        <h4>💡 Memory Device</h4>
+                        <p>If you can count it on your fingers (1-9), spell it out. If you need more than your fingers (10+), use numerals.</p>
                     </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-initial"></div>
-                
+
+                <div class="quiz-panel" id="quiz-basic-rules"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('initial')">
-                        Complete Section → Quantities
+                    <button class="btn btn-primary" onclick="completeSection('basic-rules')">
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 5.05: Quantities -->
-            <section class="content-section" id="quantities">
-                <div class="section-header">
-                    <h2>5.05 Quantities and Measurements</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Technical and Scientific Numbers</h3>
-                    <p>Use numerals for quantities with units of measurement:</p>
+            <section id="sentence-beginning" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>5.02 Numbers at Sentence Beginning</h2>
                     
-                    <div class="rule-box">
-                        <h4>Always Use Numerals For</h4>
-                        <ul>
-                            <li><strong>Measurements:</strong> 5 metres, 10 kilometres, 3 litres</li>
-                            <li><strong>Weights:</strong> 15 kilograms, 2.5 tonnes</li>
-                            <li><strong>Temperatures:</strong> 25°C, -10°C</li>
-                            <li><strong>Scientific data:</strong> 3.7 pH, 99.5% pure</li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>✏️ Starting Strong</h3>
+                        <p>Numbers at the beginning of sentences require special handling for readability.</p>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Measurements</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ With units (use numerals):</strong></p>
-                            <ul>
-                                <li>The room is 5 metres by 8 metres.</li>
-                                <li>Add 2 tablespoons of flour.</li>
-                                <li>The building is 15 storeys high.</li>
-                            </ul>
-                        </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Without units (follow standard rules):</strong></p>
-                            <ul>
-                                <li>We need five more chairs. (not 5 more chairs)</li>
-                                <li>Three options are available. (not 3 options)</li>
-                            </ul>
+
+                    <h3>The Cardinal Rule</h3>
+                    <div class="cardinal-rule">
+                        <div class="rule-statement">
+                            <h4>Always spell out numbers that begin a sentence</h4>
+                            <p>This applies regardless of the basic number rule.</p>
                         </div>
                     </div>
+
+                    <h3>Examples and Solutions</h3>
+                    <div class="solution-examples">
+                        <div class="example-set">
+                            <h4>Preferred: Spell Out</h4>
+                            <div class="example-item correct">
+                                <span class="text">Fifteen participants attended the workshop.</span>
+                            </div>
+                            <div class="example-item correct">
+                                <span class="text">Twenty-five percent of respondents agreed.</span>
+                            </div>
+                            <div class="example-item correct">
+                                <span class="text">One hundred applications were received.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="example-set">
+                            <h4>Alternative: Rewrite the Sentence</h4>
+                            <div class="comparison-pair">
+                                <div class="before">
+                                    <span class="label">Instead of:</span>
+                                    <span class="text">"25 people attended"</span>
+                                </div>
+                                <div class="after">
+                                    <span class="label">Write:</span>
+                                    <span class="text">"A total of 25 people attended"</span>
+                                </div>
+                            </div>
+                            <div class="comparison-pair">
+                                <div class="before">
+                                    <span class="label">Instead of:</span>
+                                    <span class="text">"1,500 responses were collected"</span>
+                                </div>
+                                <div class="after">
+                                    <span class="label">Write:</span>
+                                    <span class="text">"We collected 1,500 responses"</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Special Cases</h3>
+                    <div class="special-cases">
+                        <div class="case-item">
+                            <h4>Very Large Numbers</h4>
+                            <p>For very large numbers, rewriting is often clearer:</p>
+                            <div class="comparison-pair">
+                                <span class="awkward">Awkward: "Two million five hundred thousand dollars was allocated"</span>
+                                <span class="better">Better: "The allocation was $2.5 million"</span>
+                            </div>
+                        </div>
+                        
+                        <div class="case-item">
+                            <h4>Years and Dates</h4>
+                            <p>Avoid starting sentences with years:</p>
+                            <div class="comparison-pair">
+                                <span class="awkward">Avoid: "2023 was a challenging year"</span>
+                                <span class="better">Prefer: "The year 2023 was challenging"</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Never Do This</h4>
+                        <p>Never start a sentence with a numeral: "25 people attended" ❌</p>
+                        <p>Always spell out or rewrite: "Twenty-five people attended" ✅ or "A group of 25 people attended" ✅</p>
+                    </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-quantities"></div>
-                
+
+                <div class="quiz-panel" id="quiz-sentence-beginning"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('quantities')">
-                        Complete Section → Money
+                    <button class="btn btn-primary" onclick="completeSection('sentence-beginning')">
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 5.06: Money -->
-            <section class="content-section" id="money">
-                <div class="section-header">
-                    <h2>5.06 Money and Currency</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Currency Formatting</h3>
-                    <p>Use consistent formats for monetary amounts:</p>
+            <section id="money-measurements" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>5.03 Money and Measurements</h2>
                     
-                    <div class="rule-box">
-                        <h4>Standard Formats</h4>
-                        <ul>
-                            <li><strong>Under $1:</strong> 75 cents or $0.75</li>
-                            <li><strong>Whole dollars:</strong> $15 (not $15.00 in text)</li>
-                            <li><strong>Mixed amounts:</strong> $15.75</li>
-                            <li><strong>Large amounts:</strong> $2.5 million or $2,500,000</li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>💰 Precision Matters</h3>
+                        <p>Money and measurements follow specific rules that override the basic number guidelines.</p>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Currency Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Correct formats:</strong></p>
+
+                    <h3>Money Rules</h3>
+                    <div class="money-rules">
+                        <div class="rule-section">
+                            <h4>Always Use Numerals for Money</h4>
+                            <p>Regardless of amount, monetary values use numerals:</p>
                             <ul>
-                                <li>The budget increased by $1.2 million.</li>
-                                <li>Coffee costs $3.50 per cup.</li>
-                                <li>The program will cost $75,000 annually.</li>
-                                <li>Admission is free (or costs nothing).</li>
+                                <li>$5 (not five dollars)</li>
+                                <li>$15.50</li>
+                                <li>$1,250</li>
+                                <li>$2.5 million</li>
                             </ul>
                         </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Avoid:</strong></p>
+                        
+                        <div class="rule-section">
+                            <h4>Currency Formatting</h4>
+                            <div class="currency-examples">
+                                <div class="format-item">
+                                    <span class="format">Canadian Dollars:</span>
+                                    <span class="example">$125.50, $1,250</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format">Other Currencies:</span>
+                                    <span class="example">€100, ¥500, £75</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="format">No Decimals for Whole Amounts:</span>
+                                    <span class="example">$25 (not $25.00)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Measurement Rules</h3>
+                    <div class="measurement-rules">
+                        <div class="metric-system">
+                            <h4>Metric Measurements</h4>
+                            <p>Always use numerals with metric units:</p>
                             <ul>
-                                <li>The budget increased by $1,200,000.00.</li>
-                                <li>Coffee costs $3.5 per cup.</li>
-                                <li>Admission is $0.00.</li>
+                                <li>5 metres (not five metres)</li>
+                                <li>25 kilometres</li>
+                                <li>3.5 litres</li>
+                                <li>150 grams</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="imperial-system">
+                            <h4>Imperial Measurements</h4>
+                            <p>Also use numerals with imperial units:</p>
+                            <ul>
+                                <li>5 feet 6 inches</li>
+                                <li>25 pounds</li>
+                                <li>3 miles</li>
+                                <li>2 gallons</li>
                             </ul>
                         </div>
                     </div>
-                    
+
+                    <h3>Unit Abbreviations</h3>
+                    <div class="abbreviation-guide">
+                        <div class="abbrev-category">
+                            <h4>Common Metric Abbreviations</h4>
+                            <div class="abbrev-grid">
+                                <div class="abbrev-pair">
+                                    <span class="unit">kilometre</span>
+                                    <span class="abbrev">km</span>
+                                </div>
+                                <div class="abbrev-pair">
+                                    <span class="unit">metre</span>
+                                    <span class="abbrev">m</span>
+                                </div>
+                                <div class="abbrev-pair">
+                                    <span class="unit">centimetre</span>
+                                    <span class="abbrev">cm</span>
+                                </div>
+                                <div class="abbrev-pair">
+                                    <span class="unit">kilogram</span>
+                                    <span class="abbrev">kg</span>
+                                </div>
+                                <div class="abbrev-pair">
+                                    <span class="unit">litre</span>
+                                    <span class="abbrev">L</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="abbrev-rules">
+                            <h4>Abbreviation Guidelines</h4>
+                            <ul>
+                                <li>No periods in metric abbreviations: km, not km.</li>
+                                <li>Same abbreviation for singular and plural: 1 kg, 5 kg</li>
+                                <li>Space between number and unit: 25 km (not 25km)</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="tip-box">
-                        <h4>💡 International Currency</h4>
-                        <p>Specify currency when discussing international amounts: US$50 million, £25,000, €100</p>
+                        <h4>💡 Professional Tip</h4>
+                        <p>In technical writing, always use numerals with units of measurement, even for numbers under 10. This ensures precision and consistency.</p>
                     </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-money"></div>
-                
+
+                <div class="quiz-panel" id="quiz-money-measurements"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('money')">
-                        Complete Section → Percentages
+                    <button class="btn btn-primary" onclick="completeSection('money-measurements')">
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 5.07: Percentages -->
-            <section class="content-section" id="percentages">
-                <div class="section-header">
-                    <h2>5.07 Percentages and Ratios</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Percentage Formats</h3>
-                    <p>Use numerals with the percent symbol or spelled out "percent":</p>
+            <section id="dates-time" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>5.04 Dates and Time</h2>
                     
-                    <div class="rule-box">
-                        <h4>Standard Usage</h4>
-                        <ul>
-                            <li><strong>Scientific/technical:</strong> 25% (with symbol)</li>
-                            <li><strong>Formal writing:</strong> 25 percent (spelled out)</li>
-                            <li><strong>Beginning sentences:</strong> Twenty-five percent</li>
-                            <li><strong>Casual references:</strong> Either format is acceptable</li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>🗓️ Temporal Precision</h3>
+                        <p>Dates and times require specific formatting for clarity and international understanding.</p>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Percentage Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Correct usage:</strong></p>
-                            <ul>
-                                <li>Support increased by 15 percent.</li>
-                                <li>The response rate was 67%.</li>
-                                <li>Twenty-five percent of participants agreed.</li>
-                                <li>Less than 1 percent responded.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Ratios and Proportions</h4>
-                        <ul>
-                            <li><strong>Ratios:</strong> 3:1 ratio, 5 to 1</li>
-                            <li><strong>Fractions:</strong> one-half, two-thirds, 3/4</li>
-                            <li><strong>Decimals:</strong> 0.5, 0.33, 0.75</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-percentages"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('percentages')">
-                        Complete Section → Time
-                    </button>
-                </div>
-            </section>
 
-            <!-- Section 5.08: Time -->
-            <section class="content-section" id="time">
-                <div class="section-header">
-                    <h2>5.08 Time Expressions</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Clock Time</h3>
-                    <p>Use consistent formats for time expressions:</p>
-                    
-                    <div class="rule-box">
-                        <h4>Time Formats</h4>
-                        <ul>
-                            <li><strong>On the hour:</strong> 3 p.m. (not 3:00 p.m.)</li>
-                            <li><strong>With minutes:</strong> 3:30 p.m., 11:45 a.m.</li>
-                            <li><strong>Noon and midnight:</strong> noon, midnight (not 12 p.m./a.m.)</li>
-                            <li><strong>24-hour format:</strong> 15:30, 23:45 (military/technical contexts)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Time Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Correct:</strong></p>
-                            <ul>
-                                <li>The meeting starts at 2 p.m.</li>
-                                <li>Office hours are 9 a.m. to 5 p.m.</li>
-                                <li>Lunch is served from 11:30 a.m. to 1:30 p.m.</li>
-                                <li>The deadline is noon on Friday.</li>
-                            </ul>
-                        </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Avoid:</strong></p>
-                            <ul>
-                                <li>The meeting starts at 2:00 p.m.</li>
-                                <li>The deadline is 12 p.m. on Friday.</li>
-                                <li>Office hours are 9 AM to 5 PM.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Duration and Age</h4>
-                        <ul>
-                            <li><strong>Duration:</strong> 2 hours, 30 minutes, 5 seconds</li>
-                            <li><strong>Age:</strong> 25 years old, a 25-year-old person</li>
-                            <li><strong>Periods:</strong> 1990s, 21st century</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-time"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('time')">
-                        Complete Section → Dates
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 5.09: Dates -->
-            <section class="content-section" id="dates">
-                <div class="section-header">
-                    <h2>5.09 Dates and Years</h2>
-                </div>
-                
-                <div class="lesson-content">
                     <h3>Date Formats</h3>
-                    <p>Use the international standard format for dates in government documents:</p>
-                    
-                    <div class="rule-box">
-                        <h4>Canadian Government Standard</h4>
-                        <ul>
-                            <li><strong>Full dates:</strong> 2024-03-15 (ISO format) or March 15, 2024</li>
-                            <li><strong>Month and year:</strong> March 2024</li>
-                            <li><strong>Years only:</strong> 2024</li>
-                            <li><strong>Approximate dates:</strong> early 2024, mid-March, late 1990s</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Date Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Preferred formats:</strong></p>
-                            <ul>
-                                <li>The report was published on 2024-03-15.</li>
-                                <li>The meeting is scheduled for March 15, 2024.</li>
-                                <li>Applications are due by March 30.</li>
-                                <li>The policy took effect in early 2024.</li>
-                            </ul>
+                    <div class="date-formats">
+                        <div class="format-option">
+                            <h4>Standard Canadian Format</h4>
+                            <div class="format-example">
+                                <span class="format">Month Day, Year</span>
+                                <span class="example">March 15, 2024</span>
+                            </div>
+                            <p class="usage">Use in formal documents, letters, reports</p>
                         </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Avoid ambiguous formats:</strong></p>
-                            <ul>
-                                <li>03/15/24 (unclear which is month/day)</li>
-                                <li>15/03/2024 (non-standard in North America)</li>
-                                <li>March 15th, 2024 (unnecessary ordinal)</li>
-                            </ul>
+                        
+                        <div class="format-option">
+                            <h4>International Format</h4>
+                            <div class="format-example">
+                                <span class="format">Day Month Year</span>
+                                <span class="example">15 March 2024</span>
+                            </div>
+                            <p class="usage">Common in international correspondence</p>
+                        </div>
+                        
+                        <div class="format-option">
+                            <h4>Numerical Format (ISO 8601)</h4>
+                            <div class="format-example">
+                                <span class="format">YYYY-MM-DD</span>
+                                <span class="example">2024-03-15</span>
+                            </div>
+                            <p class="usage">Ideal for databases, technical documents</p>
                         </div>
                     </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Historical Dates</h4>
-                        <p>For historical contexts, you may use traditional formats: "July 1, 1867" for Confederation, but be consistent within your document.</p>
+
+                    <h3>Month Abbreviations</h3>
+                    <div class="month-abbreviations">
+                        <div class="month-grid">
+                            <div class="month-pair">
+                                <span class="full">January</span>
+                                <span class="abbrev">Jan.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">February</span>
+                                <span class="abbrev">Feb.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">March</span>
+                                <span class="abbrev">Mar.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">April</span>
+                                <span class="abbrev">Apr.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">May</span>
+                                <span class="abbrev">May</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">June</span>
+                                <span class="abbrev">June</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">July</span>
+                                <span class="abbrev">July</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">August</span>
+                                <span class="abbrev">Aug.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">September</span>
+                                <span class="abbrev">Sept.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">October</span>
+                                <span class="abbrev">Oct.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">November</span>
+                                <span class="abbrev">Nov.</span>
+                            </div>
+                            <div class="month-pair">
+                                <span class="full">December</span>
+                                <span class="abbrev">Dec.</span>
+                            </div>
+                        </div>
+                        <p class="note">Note: May, June, and July are not abbreviated</p>
                     </div>
-                    
-                    <div class="rule-box">
-                        <h4>Decades and Centuries</h4>
-                        <ul>
-                            <li><strong>Decades:</strong> 1990s, the nineties</li>
-                            <li><strong>Centuries:</strong> 21st century, twentieth century</li>
-                            <li><strong>Fiscal years:</strong> 2023-24 fiscal year</li>
-                        </ul>
+
+                    <h3>Time Formats</h3>
+                    <div class="time-formats">
+                        <div class="time-rules">
+                            <h4>Standard Time Format</h4>
+                            <ul>
+                                <li>9:30 a.m. (with periods)</li>
+                                <li>2:15 p.m.</li>
+                                <li>12:00 noon (or simply "noon")</li>
+                                <li>12:00 midnight (or simply "midnight")</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="time-rules">
+                            <h4>24-Hour Format</h4>
+                            <ul>
+                                <li>09:30 (9:30 a.m.)</li>
+                                <li>14:15 (2:15 p.m.)</li>
+                                <li>23:45 (11:45 p.m.)</li>
+                            </ul>
+                            <p class="usage">Common in military, medical, and international contexts</p>
+                        </div>
+                    </div>
+
+                    <h3>Ordinal Numbers in Dates</h3>
+                    <div class="ordinal-rules">
+                        <div class="ordinal-usage">
+                            <h4>❌ Avoid Ordinals in Standard Dates</h4>
+                            <p class="incorrect">March 15th, 2024 (avoid)</p>
+                            <p class="correct">March 15, 2024 (preferred)</p>
+                        </div>
+                        
+                        <div class="ordinal-usage">
+                            <h4>✅ Use Ordinals in Text</h4>
+                            <p class="example">"The meeting is on the 15th of March."</p>
+                            <p class="example">"She arrived on the third day."</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ International Considerations</h4>
+                        <p>Be aware that DD/MM/YYYY format is common internationally, while MM/DD/YYYY is North American. Always clarify when ambiguity is possible: 03/04/2024 could be March 4 or April 3.</p>
                     </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-dates"></div>
-                
+
+                <div class="quiz-panel" id="quiz-dates-time"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('dates')">
-                        Complete Chapter
+                    <button class="btn btn-primary" onclick="completeSection('dates-time')">
+                        Mark as Complete
+                    </button>
+                </div>
+            </section>
+
+            <section id="percentages-statistics" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>5.05 Percentages and Statistics</h2>
+                    
+                    <div class="info-box">
+                        <h3>📊 Data Communication</h3>
+                        <p>Statistical information requires precise formatting to communicate data clearly and professionally.</p>
+                    </div>
+
+                    <h3>Percentage Rules</h3>
+                    <div class="percentage-rules">
+                        <div class="rule-section">
+                            <h4>Always Use Numerals with Percentages</h4>
+                            <p>Regardless of the basic number rule, percentages always use numerals:</p>
+                            <ul>
+                                <li>5% (not five percent)</li>
+                                <li>25.5%</li>
+                                <li>0.3%</li>
+                                <li>100%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-section">
+                            <h4>Percent vs. % Symbol</h4>
+                            <div class="format-comparison">
+                                <div class="format-option">
+                                    <h5>Use % Symbol When:</h5>
+                                    <ul>
+                                        <li>In technical documents</li>
+                                        <li>In tables and charts</li>
+                                        <li>In statistical reports</li>
+                                        <li>Space is limited</li>
+                                    </ul>
+                                </div>
+                                <div class="format-option">
+                                    <h5>Spell Out "Percent" When:</h5>
+                                    <ul>
+                                        <li>In formal writing</li>
+                                        <li>In narrative text</li>
+                                        <li>Following organizational style</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Decimal Places in Statistics</h3>
+                    <div class="decimal-guidelines">
+                        <div class="precision-levels">
+                            <h4>Choose Appropriate Precision</h4>
+                            <div class="precision-examples">
+                                <div class="precision-item">
+                                    <span class="context">General reporting:</span>
+                                    <span class="format">25% (whole numbers)</span>
+                                </div>
+                                <div class="precision-item">
+                                    <span class="context">Detailed analysis:</span>
+                                    <span class="format">25.3% (one decimal)</span>
+                                </div>
+                                <div class="precision-item">
+                                    <span class="context">Scientific data:</span>
+                                    <span class="format">25.34% (two decimals)</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="consistency-rule">
+                            <h4>Maintain Consistency</h4>
+                            <p>Within a document, use the same level of precision:</p>
+                            <div class="consistency-example">
+                                <span class="consistent">✅ Consistent: 25%, 30%, 45%</span>
+                                <span class="inconsistent">❌ Mixed: 25%, 30.0%, 45.2%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Statistical Expressions</h3>
+                    <div class="statistical-expressions">
+                        <div class="expression-category">
+                            <h4>Ratios and Proportions</h4>
+                            <ul>
+                                <li>3:1 ratio (or 3 to 1)</li>
+                                <li>2 out of 3 respondents</li>
+                                <li>1 in 4 participants</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expression-category">
+                            <h4>Ranges and Approximations</h4>
+                            <ul>
+                                <li>between 25% and 30%</li>
+                                <li>approximately 50%</li>
+                                <li>more than 75%</li>
+                                <li>fewer than 10%</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="expression-category">
+                            <h4>Fractional Expressions</h4>
+                            <ul>
+                                <li>one-half (50%)</li>
+                                <li>one-quarter (25%)</li>
+                                <li>two-thirds (67%)</li>
+                                <li>three-quarters (75%)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Large Numbers in Statistics</h3>
+                    <div class="large-number-stats">
+                        <h4>Combine Numerals and Words for Clarity</h4>
+                        <div class="large-number-examples">
+                            <div class="number-format">
+                                <span class="number">2.5 million people</span>
+                                <span class="not">not 2,500,000 people</span>
+                            </div>
+                            <div class="number-format">
+                                <span class="number">$4.2 billion budget</span>
+                                <span class="not">not $4,200,000,000 budget</span>
+                            </div>
+                            <div class="number-format">
+                                <span class="number">15.6 thousand responses</span>
+                                <span class="not">not 15,600 responses</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Data Presentation Tip</h4>
+                        <p>When presenting multiple statistics, use parallel structure and consistent formatting to help readers compare data easily.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-percentages-statistics"></div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('percentages-statistics')">
+                        Mark as Complete
+                    </button>
+                </div>
+            </section>
+
+            <section id="special-applications" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>5.06 Special Applications</h2>
+                    
+                    <div class="info-box">
+                        <h3>🎯 Context-Specific Rules</h3>
+                        <p>Certain contexts require specific number formatting that may override general rules.</p>
+                    </div>
+
+                    <h3>Addresses and Postal Information</h3>
+                    <div class="address-rules">
+                        <div class="address-category">
+                            <h4>Street Addresses</h4>
+                            <ul>
+                                <li>123 Main Street (always numerals)</li>
+                                <li>5 Elm Avenue</li>
+                                <li>1247 Queen Street West</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="address-category">
+                            <h4>Apartment and Suite Numbers</h4>
+                            <ul>
+                                <li>Apartment 4B</li>
+                                <li>Suite 205</li>
+                                <li>Unit 12</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="address-category">
+                            <h4>Postal Codes</h4>
+                            <ul>
+                                <li>M5V 3A8 (Canadian format)</li>
+                                <li>90210 (US ZIP code)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Ages and Anniversaries</h3>
+                    <div class="age-rules">
+                        <div class="age-category">
+                            <h4>Specific Ages</h4>
+                            <ul>
+                                <li>She is 25 years old</li>
+                                <li>a 5-year-old child</li>
+                                <li>employees aged 18 to 65</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="age-category">
+                            <h4>General Age References</h4>
+                            <ul>
+                                <li>people in their twenties</li>
+                                <li>a man in his fifties</li>
+                                <li>children under ten</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="age-category">
+                            <h4>Anniversaries and Milestones</h4>
+                            <ul>
+                                <li>25th anniversary</li>
+                                <li>50th birthday</li>
+                                <li>10th annual conference</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Document References</h3>
+                    <div class="document-refs">
+                        <div class="ref-category">
+                            <h4>Page Numbers</h4>
+                            <ul>
+                                <li>page 15</li>
+                                <li>pages 20-25</li>
+                                <li>see page 5</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ref-category">
+                            <h4>Chapter and Section Numbers</h4>
+                            <ul>
+                                <li>Chapter 3</li>
+                                <li>Section 4.2</li>
+                                <li>Appendix B</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ref-category">
+                            <h4>Figure and Table Numbers</h4>
+                            <ul>
+                                <li>Figure 12</li>
+                                <li>Table 3.4</li>
+                                <li>Chart 8</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Technical and Scientific Contexts</h3>
+                    <div class="technical-contexts">
+                        <div class="tech-category">
+                            <h4>Scientific Notation</h4>
+                            <ul>
+                                <li>3.2 × 10<sup>6</sup></li>
+                                <li>1.5 × 10<sup>-3</sup></li>
+                                <li>2.4 × 10<sup>12</sup></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Model and Version Numbers</h4>
+                            <ul>
+                                <li>Version 2.1</li>
+                                <li>Model X250</li>
+                                <li>iPhone 14</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h4>Mathematical Expressions</h4>
+                            <ul>
+                                <li>The equation x + 5 = 12</li>
+                                <li>A 45-degree angle</li>
+                                <li>Temperature of -10°C</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Sports and Competition</h3>
+                    <div class="sports-numbers">
+                        <div class="sports-category">
+                            <h4>Scores</h4>
+                            <ul>
+                                <li>The final score was 3-2</li>
+                                <li>won 21 to 18</li>
+                                <li>a 5-4 victory</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sports-category">
+                            <h4>Rankings and Statistics</h4>
+                            <ul>
+                                <li>ranked 3rd in the league</li>
+                                <li>scored 25 points</li>
+                                <li>batting .325</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <h4>🎉 Numbers Mastery</h4>
+                        <p>You've mastered the comprehensive rules for numerical expressions in Canadian writing. Your documents will now communicate data clearly and follow professional standards consistently.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-special-applications"></div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('special-applications')">
+                        Complete Chapter 5!
                     </button>
                 </div>
             </section>
@@ -529,62 +821,53 @@
         </div>
     </footer>
 
+    <!-- Include JavaScript modules -->
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
+
     <script type="module">
-        import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch05';
         const sections = [
-            { id: 'introduction', title: '5.01 Introduction' },
-            { id: 'round-numbers', title: '5.02 Round Numbers' },
-            { id: 'consistency', title: '5.03 Consistency' },
-            { id: 'initial', title: '5.04 Beginning Sentences' },
-            { id: 'quantities', title: '5.05 Quantities' },
-            { id: 'money', title: '5.06 Money' },
-            { id: 'percentages', title: '5.07 Percentages' },
-            { id: 'time', title: '5.08 Time' },
-            { id: 'dates', title: '5.09 Dates' }
+            { id: 'basic-rules', title: '5.01 Basic Rules' },
+            { id: 'sentence-beginning', title: '5.02 Sentence Beginning' },
+            { id: 'money-measurements', title: '5.03 Money & Measurements' },
+            { id: 'dates-time', title: '5.04 Dates & Time' },
+            { id: 'percentages-statistics', title: '5.05 Percentages & Statistics' },
+            { id: 'special-applications', title: '5.06 Special Applications' }
         ];
         
-        // Initialize progress bar
-        function updateProgressBar() {
-            const progress = getProgress(CHAPTER_ID);
-            const chapterProgress = progress || {};
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            document.getElementById('chapterProgress').style.width = percentage + '%';
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                    updateActiveTab(this);
+                });
+            });
+            
+            // Show first section by default
+            showSection('basic-rules');
         }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                showSection(nextSection.id);
-                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
         
         function showSection(sectionId) {
             // Hide all sections
             document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
+                section.style.display = 'none';
             });
             
             // Show target section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
-                targetSection.classList.add('active');
+                targetSection.style.display = 'block';
             }
         }
         
@@ -592,36 +875,46 @@
             document.querySelectorAll('.tab-link').forEach(link => {
                 link.classList.remove('active');
             });
-            if (activeLink) {
-                activeLink.classList.add('active');
+            activeLink.classList.add('active');
+        }
+        
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const total = sections.length;
+            const percentage = Math.round((completed / total) * 100);
+            
+            const progressCircle = document.querySelector('.progress-circle');
+            const progressText = document.querySelector('.progress-text');
+            
+            if (progressCircle && progressText) {
+                const circumference = 2 * Math.PI * 25; // r=25
+                const offset = circumference - (percentage / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                progressText.textContent = `${percentage}%`;
             }
         }
         
-        // Section navigation
-        function initSectionNavigation() {
-            const tabs = document.querySelectorAll('.tab-link');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const sectionId = tab.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(tab);
-                    window.location.hash = sectionId;
-                });
-            });
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
             
-            // Handle initial hash
-            const hash = window.location.hash.replace('#', '');
-            if (hash && document.getElementById(hash)) {
-                const tab = document.querySelector(`[data-section="${hash}"]`);
-                if (tab) {
-                    showSection(hash);
-                    updateActiveTab(tab);
-                }
-            } else {
-                // Default to first section
-                showSection('introduction');
-                updateActiveTab(tabs[0]);
+            // Show completion message
+            const currentSection = document.getElementById(sectionId);
+            const button = currentSection.querySelector('.btn-primary');
+            button.textContent = '✓ Completed';
+            button.classList.add('completed');
+        }
+        
+        // Show completion modal if chapter is finished
+        function checkChapterCompletion() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            
+            if (completed === sections.length) {
+                showCompletionModal();
             }
         }
         
@@ -630,8 +923,8 @@
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h3>🎉 Chapter 5 Complete!</h3>
-                    <p>Your documents will now present numbers clearly and consistently.</p>
+                    <h2>🎉 Chapter 5 Complete!</h2>
+                    <p>Excellent work! You've mastered numerical expressions in Canadian writing. Your data communication will be clear and professional.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
