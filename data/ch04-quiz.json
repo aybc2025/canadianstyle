@@ -1,141 +1,208 @@
 {
-  "initial-words": {
-    "id": "ch04-initial",
-    "title": "Initial Words and Sentences",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "Which sentence uses correct capitalization after a colon?",
-        "options": [
-          { "label": "Remember: The deadline is Friday.", "correct": true },
-          { "label": "Remember: the deadline is Friday.", "correct": false },
-          { "label": "Three items needed: paper, pens, folders.", "correct": false },
-          { "label": "Three items needed: Paper, pens, folders.", "correct": false }
-        ],
-        "rationale": "Capitalize after a colon only if what follows is a complete sentence.",
-        "ref": "§4.02"
-      },
-      {
-        "id": "q2",
-        "type": "multi-select",
-        "stem": "Which require capitalization? (Select all)",
-        "options": [
-          { "label": "First word of a direct quotation", "correct": true },
-          { "label": "First word after a semicolon", "correct": false },
-          { "label": "First word of each list item (complete sentences)", "correct": true },
-          { "label": "First word after a comma", "correct": false }
-        ],
-        "rationale": "Capitalize direct quotations and complete sentences in lists."
-      }
-    ]
+  "id": "ch04",
+  "title": "Capitalization",
+  "description": "Master Canadian capitalization rules",
+  "sections": {
+    "general-principles": {
+      "id": "general-principles",
+      "title": "General Principles Quiz",
+      "questions": [
+        {
+          "id": "cap-q1",
+          "type": "mcq",
+          "stem": "Which sentence demonstrates correct capitalization?",
+          "options": [
+            {"label": "The Prime Minister of canada met with the President.", "correct": false},
+            {"label": "The prime minister of Canada met with the president.", "correct": true},
+            {"label": "The Prime Minister of Canada met with the President.", "correct": false},
+            {"label": "the prime minister of canada met with the president.", "correct": false}
+          ],
+          "rationale": "Generic titles like 'prime minister' and 'president' are not capitalized unless used as part of a formal address.",
+          "ref": "§4.05"
+        },
+        {
+          "id": "cap-q2",
+          "type": "fill-blank",
+          "stem": "Complete with proper capitalization:",
+          "text": "The ____ of Justice announced new regulations.",
+          "answer": "Minister",
+          "rationale": "Cabinet positions are capitalized when referring to the specific person holding the office.",
+          "ref": "§4.05"
+        },
+        {
+          "id": "cap-q3",
+          "type": "error-spot",
+          "stem": "Find the capitalization error in this sentence:",
+          "text": "The University Of Toronto offers many Programs in Engineering.",
+          "errorWord": "Programs",
+          "rationale": "General academic subjects and programs are not capitalized unless they are proper nouns.",
+          "ref": "§4.12"
+        }
+      ]
+    },
+    "proper-nouns": {
+      "id": "proper-nouns",
+      "title": "Proper Nouns Quiz",
+      "questions": [
+        {
+          "id": "prop-q1",
+          "type": "mcq",
+          "stem": "Which proper noun is correctly capitalized?",
+          "options": [
+            {"label": "lake superior", "correct": false},
+            {"label": "Lake Superior", "correct": true},
+            {"label": "LAKE SUPERIOR", "correct": false},
+            {"label": "Lake superior", "correct": false}
+          ],
+          "rationale": "Geographic proper nouns should have the first letter of each significant word capitalized.",
+          "ref": "§4.21"
+        },
+        {
+          "id": "prop-q2",
+          "type": "matching",
+          "stem": "Match each term with its correct capitalization rule:",
+          "pairs": [
+            {"left": "Rocky Mountains", "right": "Geographic feature - capitalize"},
+            {"left": "the mountains", "right": "Generic reference - lowercase"},
+            {"left": "Mount Everest", "right": "Specific mountain - capitalize"},
+            {"left": "a tall mountain", "right": "Common noun - lowercase"}
+          ],
+          "ref": "§4.21"
+        }
+      ]
+    },
+    "titles-positions": {
+      "id": "titles-positions",
+      "title": "Titles and Positions Quiz",
+      "questions": [
+        {
+          "id": "title-q1",
+          "type": "drag-drop",
+          "stem": "Arrange these titles in order from highest to lowest level of capitalization:",
+          "instructions": "Drag to arrange from most capitalized to least capitalized usage:",
+          "items": [
+            {"text": "President Smith", "order": 1},
+            {"text": "The President announced", "order": 2},
+            {"text": "presidential duties", "order": 3},
+            {"text": "a former president", "order": 4}
+          ],
+          "rationale": "Titles are capitalized when used as direct address, partially when referring to the office, and lowercase when used generically.",
+          "ref": "§4.08"
+        },
+        {
+          "id": "title-q2",
+          "type": "mcq",
+          "stem": "When should professional titles be capitalized?",
+          "options": [
+            {"label": "Always, to show respect", "correct": false},
+            {"label": "Only when they precede a person's name", "correct": true},
+            {"label": "Never, to maintain equality", "correct": false},
+            {"label": "Only in formal documents", "correct": false}
+          ],
+          "rationale": "Professional titles are capitalized when they directly precede a person's name, forming part of their proper designation.",
+          "ref": "§4.09"
+        }
+      ]
+    },
+    "organizations": {
+      "id": "organizations",
+      "title": "Organizations Quiz",
+      "questions": [
+        {
+          "id": "org-q1",
+          "type": "fill-blank",
+          "stem": "Complete the organization name:",
+          "text": "The ____ ____ of ____ announced new policies.",
+          "answers": ["Department", "of", "Health"],
+          "rationale": "Government department names are fully capitalized as proper nouns.",
+          "ref": "§4.06"
+        },
+        {
+          "id": "org-q2",
+          "type": "error-spot",
+          "stem": "Find the capitalization error:",
+          "text": "The canadian red cross society provides emergency assistance.",
+          "errorWord": "canadian",
+          "rationale": "Organization names containing geographic references should capitalize the geographic element.",
+          "ref": "§4.06"
+        }
+      ]
+    },
+    "academic-subjects": {
+      "id": "academic-subjects",
+      "title": "Academic Subjects Quiz",
+      "questions": [
+        {
+          "id": "acad-q1",
+          "type": "mcq",
+          "stem": "Which academic subject is correctly written?",
+          "options": [
+            {"label": "I study Mathematics and Physics.", "correct": false},
+            {"label": "I study mathematics and physics.", "correct": true},
+            {"label": "I study Mathematics and physics.", "correct": false},
+            {"label": "I Study Mathematics And Physics.", "correct": false}
+          ],
+          "rationale": "General academic subjects are not capitalized unless they are proper nouns (like languages or specific course titles).",
+          "ref": "§4.12"
+        },
+        {
+          "id": "acad-q2",
+          "type": "matching",
+          "stem": "Match each subject with its correct capitalization:",
+          "pairs": [
+            {"left": "I'm taking French", "right": "Language - capitalize"},
+            {"left": "I'm studying chemistry", "right": "General subject - lowercase"},
+            {"left": "Chemistry 101", "right": "Specific course - capitalize"},
+            {"left": "advanced mathematics", "right": "General reference - lowercase"}
+          ],
+          "ref": "§4.12"
+        }
+      ]
+    },
+    "special-cases": {
+      "id": "special-cases",
+      "title": "Special Cases Quiz",
+      "questions": [
+        {
+          "id": "spec-q1",
+          "type": "error-spot",
+          "stem": "Find the capitalization error in this sentence:",
+          "text": "We celebrate canada day every July 1st with fireworks.",
+          "errorWord": "canada",
+          "rationale": "Holiday names should be fully capitalized as proper nouns.",
+          "ref": "§4.17"
+        },
+        {
+          "id": "spec-q2",
+          "type": "drag-drop",
+          "stem": "Arrange these religious terms by capitalization level:",
+          "instructions": "Order from most to least capitalized:",
+          "items": [
+            {"text": "God (deity)", "order": 1},
+            {"text": "Biblical", "order": 2},
+            {"text": "religious studies", "order": 3},
+            {"text": "a prayer", "order": 4}
+          ],
+          "rationale": "Religious proper nouns are capitalized, while general religious terms are lowercase.",
+          "ref": "§4.19"
+        },
+        {
+          "id": "spec-q3",
+          "type": "fill-blank",
+          "stem": "Complete with proper capitalization:",
+          "text": "The ____ ____ meets every Tuesday in the ____ building.",
+          "answers": ["City", "Council", "municipal"],
+          "rationale": "Specific government bodies are capitalized, while general building types are lowercase.",
+          "ref": "§4.05-4.06"
+        }
+      ]
+    }
   },
-  "titles": {
-    "id": "ch04-titles",
-    "title": "Titles of Office or Rank",
-    "questions": [
-      {
-        "id": "q3",
-        "type": "mcq",
-        "stem": "Which is correctly capitalized?",
-        "options": [
-          { "label": "The Prime Minister of Canada spoke.", "correct": true },
-          { "label": "The prime minister of Canada spoke.", "correct": false },
-          { "label": "Canada's prime minister spoke.", "correct": false },
-          { "label": "Justin Trudeau, Prime Minister, spoke.", "correct": true }
-        ],
-        "rationale": "Capitalize titles when they precede names or refer to specific officeholders.",
-        "ref": "§4.08"
-      },
-      {
-        "id": "q4",
-        "type": "error-spot",
-        "stem": "Click on the capitalization error:",
-        "text": "The Minister met with several Deputy Ministers",
-        "errorIndex": 6,
-        "rationale": "Generic references to positions should be lowercase: 'deputy ministers'."
-      },
-      {
-        "id": "q5",
-        "type": "fill-blank",
-        "stem": "She was appointed ___ of Finance.",
-        "answer": "Minister",
-        "rationale": "Capitalize official titles of specific positions.",
-        "ref": "§4.08"
-      }
-    ]
-  },
-  "government": {
-    "id": "ch04-government",
-    "title": "Government Bodies",
-    "questions": [
-      {
-        "id": "q6",
-        "type": "mcq",
-        "stem": "Which is correctly capitalized?",
-        "options": [
-          { "label": "the Government of Canada", "correct": true },
-          { "label": "the government of Canada", "correct": false },
-          { "label": "The federal government", "correct": false },
-          { "label": "The Federal Government", "correct": false }
-        ],
-        "rationale": "Capitalize 'Government' when part of formal name; lowercase in general references.",
-        "ref": "§4.05"
-      },
-      {
-        "id": "q7",
-        "type": "multi-select",
-        "stem": "Which should be capitalized? (Select all)",
-        "options": [
-          { "label": "Parliament (referring to Canadian Parliament)", "correct": true },
-          { "label": "parliamentary procedure", "correct": false },
-          { "label": "the House of Commons", "correct": true },
-          { "label": "federal departments", "correct": false }
-        ],
-        "rationale": "Capitalize specific institutions but not general references."
-      }
-    ]
-  },
-  "publications": {
-    "id": "ch04-publications",
-    "title": "Publications and Works",
-    "questions": [
-      {
-        "id": "q8",
-        "type": "mcq",
-        "stem": "In 'The Canadian Style', which words are capitalized?",
-        "options": [
-          { "label": "The, Canadian, Style", "correct": true },
-          { "label": "The, Canadian", "correct": false },
-          { "label": "The, Style", "correct": false },
-          { "label": "All words", "correct": false }
-        ],
-        "rationale": "In titles, capitalize all major words; articles only when first.",
-        "ref": "§4.29"
-      },
-      {
-        "id": "q9",
-        "type": "drag-drop",
-        "stem": "Order from most to least capitals in titles:",
-        "options": [
-          { "label": "To Kill a Mockingbird", "order": 1 },
-          { "label": "Gone with the Wind", "order": 2 },
-          { "label": "Of Mice and Men", "order": 3 }
-        ],
-        "rationale": "Prepositions and articles are lowercase unless first word."
-      },
-      {
-        "id": "q10",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "the constitution", "back": "the Constitution (when referring to specific document)" },
-          { "front": "canadian charter of rights", "back": "Canadian Charter of Rights and Freedoms" },
-          { "front": "act of parliament", "back": "Act of Parliament" },
-          { "front": "ottawa river", "back": "Ottawa River" },
-          { "front": "st. lawrence seaway", "back": "St. Lawrence Seaway" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 18,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "25-30 minutes",
+    "passingScore": 80
   }
 }
