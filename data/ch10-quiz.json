@@ -1,266 +1,265 @@
 {
-  "business-letters": {
-    "id": "ch10-business-letters",
-    "title": "Business Letters",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "What is the correct order for business letter elements?",
-        "options": [
-          { "label": "Date, recipient address, salutation, body, closing", "correct": true },
-          { "label": "Salutation, date, recipient address, body, closing", "correct": false },
-          { "label": "Date, salutation, recipient address, body, closing", "correct": false },
-          { "label": "Recipient address, date, salutation, body, closing", "correct": false }
-        ],
-        "rationale": "Standard business letter format: date, inside address, salutation, body, complimentary close.",
-        "ref": "§10.02"
-      },
-      {
-        "id": "q2",
-        "type": "mcq",
-        "stem": "How should the salutation be formatted in a business letter?",
-        "options": [
-          { "label": "Dear Sir or Madam,", "correct": false },
-          { "label": "Dear Mr. Smith:", "correct": true },
-          { "label": "Dear Mr. Smith;", "correct": false },
-          { "label": "Dear Mr. Smith-", "correct": false }
-        ],
-        "rationale": "Use a colon after the salutation in business letters (comma in personal letters).",
-        "ref": "§10.02"
-      },
-      {
-        "id": "q3",
-        "type": "fill-blank",
-        "stem": "The complimentary close should be followed by a _____ and positioned _____ on the page.",
-        "answer": "comma, right",
-        "rationale": "Complimentary close takes a comma and aligns with the date on the right.",
-        "ref": "§10.02"
-      }
-    ]
+  "id": "ch10",
+  "title": "Letters and Memorandums",
+  "description": "Master professional correspondence formatting and style",
+  "sections": {
+    "letter-format": {
+      "id": "letter-format",
+      "title": "Letter Format and Structure Quiz",
+      "questions": [
+        {
+          "id": "format-q1",
+          "type": "drag-drop",
+          "stem": "Arrange the parts of a business letter in correct order:",
+          "instructions": "Order from top to bottom of the letter:",
+          "items": [
+            {"text": "Letterhead/Return Address", "order": 1},
+            {"text": "Date", "order": 2},
+            {"text": "Inside Address", "order": 3},
+            {"text": "Salutation", "order": 4},
+            {"text": "Body", "order": 5},
+            {"text": "Complimentary Close", "order": 6},
+            {"text": "Signature Block", "order": 7}
+          ],
+          "rationale": "This is the standard order for Canadian business letter format.",
+          "ref": "§10.02"
+        },
+        {
+          "id": "format-q2",
+          "type": "mcq",
+          "stem": "What spacing should be used between paragraphs in a business letter?",
+          "options": [
+            {"label": "Single spacing throughout", "correct": false},
+            {"label": "Double spacing throughout", "correct": false},
+            {"label": "Single space within paragraphs, double space between paragraphs", "correct": true},
+            {"label": "No specific spacing requirement", "correct": false}
+          ],
+          "rationale": "Canadian business letters use single spacing within paragraphs and double spacing between elements.",
+          "ref": "§10.05"
+        },
+        {
+          "id": "format-q3",
+          "type": "fill-blank",
+          "stem": "Complete the proper date format for a Canadian business letter:",
+          "text": "_______ __, 2024",
+          "answers": ["March", "15"],
+          "hint": "Use the full month name and day without ordinal endings.",
+          "rationale": "Canadian business letters use the format: Month Day, Year (e.g., March 15, 2024).",
+          "ref": "§10.06"
+        }
+      ]
+    },
+    "salutations-closings": {
+      "id": "salutations-closings",
+      "title": "Salutations and Closings Quiz",
+      "questions": [
+        {
+          "id": "sal-q1",
+          "type": "matching",
+          "stem": "Match each salutation with its appropriate use:",
+          "pairs": [
+            {"left": "Dear Mr. Smith:", "right": "Known male recipient"},
+            {"left": "Dear Ms. Johnson:", "right": "Known female recipient"},
+            {"left": "Dear Sir or Madam:", "right": "Unknown recipient"},
+            {"left": "To Whom It May Concern:", "right": "General inquiry"}
+          ],
+          "rationale": "Different salutations serve different purposes based on your knowledge of the recipient.",
+          "ref": "§10.17"
+        },
+        {
+          "id": "sal-q2",
+          "type": "mcq",
+          "stem": "Which complimentary closing is most appropriate for a formal business letter?",
+          "options": [
+            {"label": "Sincerely yours,", "correct": true},
+            {"label": "Best regards,", "correct": false},
+            {"label": "Yours truly,", "correct": false},
+            {"label": "Respectfully,", "correct": false}
+          ],
+          "rationale": "'Sincerely yours' is the most formal and widely accepted closing for Canadian business correspondence.",
+          "ref": "§10.20"
+        },
+        {
+          "id": "sal-q3",
+          "type": "error-spot",
+          "stem": "Find the punctuation error in this salutation:",
+          "text": "Dear Dr. Brown;",
+          "errorWord": ";",
+          "rationale": "Salutations should end with a colon (:) in business letters, not a semicolon.",
+          "ref": "§10.17"
+        }
+      ]
+    },
+    "addressing": {
+      "id": "addressing",
+      "title": "Addressing and Titles Quiz",
+      "questions": [
+        {
+          "id": "addr-q1",
+          "type": "mcq",
+          "stem": "How should titles be handled in the inside address?",
+          "options": [
+            {"label": "Always use full titles", "correct": true},
+            {"label": "Abbreviate all titles", "correct": false},
+            {"label": "Omit titles entirely", "correct": false},
+            {"label": "Use titles only for doctors", "correct": false}
+          ],
+          "rationale": "Use complete, properly spelled titles in the inside address for formality and accuracy.",
+          "ref": "§10.13"
+        },
+        {
+          "id": "addr-q2",
+          "type": "fill-blank",
+          "stem": "Complete the proper address format:",
+          "text": "Ms. Sarah ______\n______ Manager\nABC Corporation\n123 Main Street\n______, ON M5V 3A8",
+          "answers": ["Johnson", "Marketing", "Toronto"],
+          "hint": "Consider standard Canadian address formatting.",
+          "rationale": "Canadian addresses follow: Name, Title, Organization, Street, City, Province, Postal Code.",
+          "ref": "§10.13"
+        },
+        {
+          "id": "addr-q3",
+          "type": "error-spot",
+          "stem": "Find the error in this address:",
+          "text": "Mr. john smith\nSenior Analyst\n456 oak street\nVancouver, bc V6B 2M9",
+          "errorWord": "john",
+          "rationale": "Names should be properly capitalized: Mr. John Smith.",
+          "ref": "§10.13"
+        }
+      ]
+    },
+    "memorandums": {
+      "id": "memorandums",
+      "title": "Memorandums Quiz",
+      "questions": [
+        {
+          "id": "memo-q1",
+          "type": "mcq",
+          "stem": "What are the standard header elements of a memorandum?",
+          "options": [
+            {"label": "TO, FROM, DATE, SUBJECT", "correct": true},
+            {"label": "TO, FROM, RE, DATE", "correct": false},
+            {"label": "MEMO TO, FROM, REGARDING", "correct": false},
+            {"label": "ADDRESSEE, SENDER, DATE, TOPIC", "correct": false}
+          ],
+          "rationale": "Standard memo headers include TO, FROM, DATE, and SUBJECT in that order.",
+          "ref": "§10.27"
+        },
+        {
+          "id": "memo-q2",
+          "type": "fill-blank",
+          "stem": "Complete the memo header format:",
+          "text": "MEMORANDUM\n\n__: All Staff\n__: John Manager\n__: March 15, 2024\n__: New Office Policies",
+          "answers": ["TO", "FROM", "DATE", "SUBJECT"],
+          "rationale": "These are the four standard elements of a memo header.",
+          "ref": "§10.27"
+        },
+        {
+          "id": "memo-q3",
+          "type": "drag-drop",
+          "stem": "Arrange these memo characteristics from most to least formal:",
+          "instructions": "Most formal to least formal:",
+          "items": [
+            {"text": "Official company memo", "order": 1},
+            {"text": "Departmental memo", "order": 2},
+            {"text": "Team memo", "order": 3},
+            {"text": "Informal note", "order": 4}
+          ],
+          "rationale": "Formality decreases as the audience becomes smaller and more familiar.",
+          "ref": "§10.27"
+        }
+      ]
+    },
+    "special-elements": {
+      "id": "special-elements",
+      "title": "Special Elements Quiz",
+      "questions": [
+        {
+          "id": "spec-q1",
+          "type": "mcq",
+          "stem": "Where should the attention line be placed?",
+          "options": [
+            {"label": "Before the inside address", "correct": false},
+            {"label": "Between the inside address and salutation", "correct": true},
+            {"label": "After the salutation", "correct": false},
+            {"label": "At the end of the letter", "correct": false}
+          ],
+          "rationale": "The attention line goes between the inside address and the salutation when needed.",
+          "ref": "§10.16"
+        },
+        {
+          "id": "spec-q2",
+          "type": "fill-blank",
+          "stem": "Format the subject line correctly:",
+          "text": "____: Annual Budget Review",
+          "answer": "SUBJECT",
+          "hint": "Consider standard subject line formatting.",
+          "rationale": "Subject lines typically begin with 'SUBJECT:' or 'RE:' in capital letters.",
+          "ref": "§10.18"
+        },
+        {
+          "id": "spec-q3",
+          "type": "matching",
+          "stem": "Match each special notation with its placement:",
+          "pairs": [
+            {"left": "c: (copy notation)", "right": "After signature block"},
+            {"left": "CONFIDENTIAL", "right": "Top of letter"},
+            {"left": "Enclosure:", "right": "After signature block"},
+            {"left": "P.S.", "right": "After all other elements"}
+          ],
+          "rationale": "Different notations have specific placement requirements for clarity and convention.",
+          "ref": "§10.24-10.25"
+        }
+      ]
+    },
+    "electronic-correspondence": {
+      "id": "electronic-correspondence",
+      "title": "Electronic Correspondence Quiz",
+      "questions": [
+        {
+          "id": "email-q1",
+          "type": "mcq",
+          "stem": "How does email formatting differ from traditional letters?",
+          "options": [
+            {"label": "No differences - use identical formatting", "correct": false},
+            {"label": "Less formal but maintain professional structure", "correct": true},
+            {"label": "Completely informal approach", "correct": false},
+            {"label": "Use only abbreviations and short forms", "correct": false}
+          ],
+          "rationale": "Email can be less formal but should maintain professional standards and clear structure.",
+          "ref": "§10.07"
+        },
+        {
+          "id": "email-q2",
+          "type": "error-spot",
+          "stem": "Find the error in this email greeting:",
+          "text": "hello john,\n\ni hope this email finds you well.",
+          "errorWord": "hello",
+          "rationale": "Email greetings should be properly capitalized: Hello John, or Dear John,",
+          "ref": "§10.07"
+        },
+        {
+          "id": "email-q3",
+          "type": "drag-drop",
+          "stem": "Rank these email elements by importance:",
+          "instructions": "Most important to least important for professional email:",
+          "items": [
+            {"text": "Clear subject line", "order": 1},
+            {"text": "Professional greeting", "order": 2},
+            {"text": "Concise body", "order": 3},
+            {"text": "Appropriate signature", "order": 4}
+          ],
+          "rationale": "Subject line is crucial for email management, followed by professional greeting, clear content, and proper signature.",
+          "ref": "§10.07"
+        }
+      ]
+    }
   },
-  "memorandums": {
-    "id": "ch10-memorandums",
-    "title": "Memorandums",
-    "questions": [
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "What are the standard headings for a memorandum?",
-        "options": [
-          { "label": "To, From, Date, Re:", "correct": false },
-          { "label": "To:, From:, Date:, Subject:", "correct": true },
-          { "label": "Recipient, Sender, Date, Topic", "correct": false },
-          { "label": "For, By, When, About", "correct": false }
-        ],
-        "rationale": "Standard memo format uses To:, From:, Date:, and Subject: headings.",
-        "ref": "§10.03"
-      },
-      {
-        "id": "q5",
-        "type": "mcq",
-        "stem": "How does memo format differ from letter format?",
-        "options": [
-          { "label": "Memos use salutations and closings", "correct": false },
-          { "label": "Memos omit salutations and complimentary closes", "correct": true },
-          { "label": "Memos are always longer", "correct": false },
-          { "label": "Memos require signatures", "correct": false }
-        ],
-        "rationale": "Memos go directly to the message after the heading block—no salutation or closing.",
-        "ref": "§10.03"
-      },
-      {
-        "id": "q6",
-        "type": "error-spot",
-        "stem": "Click on the error in this memo heading:",
-        "text": "To: All Staff From: Manager Date: March 15 Subject Budget Review",
-        "errorIndex": 8,
-        "rationale": "Missing colon after 'Subject' - should be 'Subject:'"
-      }
-    ]
-  },
-  "electronic-mail": {
-    "id": "ch10-email",
-    "title": "Electronic Mail",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "multi-select",
-        "stem": "What are advantages of electronic mail? (Select all that apply)",
-        "options": [
-          { "label": "Speed of delivery", "correct": true },
-          { "label": "Can send to multiple recipients", "correct": true },
-          { "label": "Can include attachments", "correct": true },
-          { "label": "Always completely secure", "correct": false },
-          { "label": "Automatic legal validation", "correct": false }
-        ],
-        "rationale": "Email offers speed, versatility, and attachment capability, but security isn't guaranteed.",
-        "ref": "§10.04"
-      },
-      {
-        "id": "q8",
-        "type": "mcq",
-        "stem": "What is a key disadvantage of email communication?",
-        "options": [
-          { "label": "Takes too long to send", "correct": false },
-          { "label": "Can be intercepted or forged", "correct": true },
-          { "label": "Cannot include attachments", "correct": false },
-          { "label": "Only works within organizations", "correct": false }
-        ],
-        "rationale": "Email can be intercepted and forged, especially across different networks.",
-        "ref": "§10.04"
-      },
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "How should email subject lines be written?",
-        "options": [
-          { "label": "Always in all caps", "correct": false },
-          { "label": "As clear, specific descriptions", "correct": true },
-          { "label": "With minimal information", "correct": false },
-          { "label": "Using abbreviations only", "correct": false }
-        ],
-        "rationale": "Subject lines should clearly and specifically describe the email content.",
-        "ref": "§10.04"
-      }
-    ]
-  },
-  "forms-address": {
-    "id": "ch10-forms-address",
-    "title": "Forms of Address",
-    "questions": [
-      {
-        "id": "q10",
-        "type": "mcq",
-        "stem": "How should you address the Prime Minister in a formal letter?",
-        "options": [
-          { "label": "Dear Prime Minister", "correct": false },
-          { "label": "Dear Mr./Ms. [Surname]", "correct": false },
-          { "label": "Right Honourable Prime Minister", "correct": true },
-          { "label": "Your Excellency", "correct": false }
-        ],
-        "rationale": "The Prime Minister is addressed as 'Right Honourable Prime Minister' in formal correspondence.",
-        "ref": "§10.05"
-      },
-      {
-        "id": "q11",
-        "type": "mcq",
-        "stem": "How should you address a federal cabinet minister?",
-        "options": [
-          { "label": "Dear Minister", "correct": false },
-          { "label": "Honourable [Name]", "correct": true },
-          { "label": "Your Honour", "correct": false },
-          { "label": "Dear Sir/Madam", "correct": false }
-        ],
-        "rationale": "Federal cabinet ministers are addressed as 'Honourable [Full Name]'.",
-        "ref": "§10.05"
-      },
-      {
-        "id": "q12",
-        "type": "drag-drop",
-        "stem": "Match the title with the correct form of address:",
-        "options": [
-          { "label": "Prime Minister = Right Honourable", "order": 1 },
-          { "label": "Cabinet Minister = Honourable", "order": 2 },
-          { "label": "Judge = Your Honour", "order": 3 },
-          { "label": "Doctor = Dr.", "order": 4 }
-        ],
-        "rationale": "Different titles require specific forms of formal address."
-      }
-    ]
-  },
-  "signatures": {
-    "id": "ch10-signatures",
-    "title": "Signatures",
-    "questions": [
-      {
-        "id": "q13",
-        "type": "mcq",
-        "stem": "Where should the signature block be positioned?",
-        "options": [
-          { "label": "Aligned with the left margin", "correct": false },
-          { "label": "Centered on the page", "correct": false },
-          { "label": "Aligned with the date and complimentary close", "correct": true },
-          { "label": "Wherever convenient", "correct": false }
-        ],
-        "rationale": "Signature block aligns with the date and complimentary close, typically on the right.",
-        "ref": "§10.06"
-      },
-      {
-        "id": "q14",
-        "type": "mcq",
-        "stem": "What should appear below the handwritten signature?",
-        "options": [
-          { "label": "Nothing else needed", "correct": false },
-          { "label": "Typed name and title", "correct": true },
-          { "label": "Date only", "correct": false },
-          { "label": "Organization name only", "correct": false }
-        ],
-        "rationale": "Include typed name and title below the handwritten signature for clarity.",
-        "ref": "§10.06"
-      }
-    ]
-  },
-  "envelopes": {
-    "id": "ch10-envelopes",
-    "title": "Envelopes",
-    "questions": [
-      {
-        "id": "q15",
-        "type": "mcq",
-        "stem": "Where should the return address be placed?",
-        "options": [
-          { "label": "Upper right corner", "correct": false },
-          { "label": "Upper left corner", "correct": true },
-          { "label": "Lower left corner", "correct": false },
-          { "label": "Back of envelope", "correct": false }
-        ],
-        "rationale": "Return address goes in the upper left corner of the envelope.",
-        "ref": "§10.07"
-      },
-      {
-        "id": "q16",
-        "type": "fill-blank",
-        "stem": "The recipient's address should be positioned in the _____ of the envelope.",
-        "answer": "centre",
-        "rationale": "Recipient's address is centered on the envelope face.",
-        "ref": "§10.07"
-      }
-    ]
-  },
-  "international-mail": {
-    "id": "ch10-international",
-    "title": "International Mail",
-    "questions": [
-      {
-        "id": "q17",
-        "type": "mcq",
-        "stem": "How should country names appear in international addresses?",
-        "options": [
-          { "label": "In the local language only", "correct": false },
-          { "label": "In English and the local language", "correct": false },
-          { "label": "In English, in capital letters", "correct": true },
-          { "label": "Using country codes only", "correct": false }
-        ],
-        "rationale": "Country names should be written in English and in capital letters for international mail.",
-        "ref": "§10.08"
-      },
-      {
-        "id": "q18",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Business letter salutation", "back": "Use colon (Dear Mr. Smith:)" },
-          { "front": "Memo format", "back": "To:, From:, Date:, Subject:" },
-          { "front": "Email advantage", "back": "Speed and versatility" },
-          { "front": "Email disadvantage", "back": "Security concerns" },
-          { "front": "Prime Minister address", "back": "Right Honourable" },
-          { "front": "Cabinet Minister address", "back": "Honourable" },
-          { "front": "Signature position", "back": "Aligns with date and close" },
-          { "front": "Return address position", "back": "Upper left corner" },
-          { "front": "International country names", "back": "English, capital letters" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 21,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "30-35 minutes",
+    "passingScore": 80
   }
 }
