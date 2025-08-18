@@ -145,32 +145,32 @@
         {
           "id": "initial-words",
           "title": "4.02 Initial Words",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "personal-names",
           "title": "4.03 Personal Names",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "government",
-          "title": "4.04 Government",
-          "hasQuiz": true
+          "title": "4.04 Government Bodies",
+          "hasQuiz": false
         },
         {
           "id": "titles",
-          "title": "4.05 Titles",
-          "hasQuiz": true
+          "title": "4.05 Titles & Positions",
+          "hasQuiz": false
         },
         {
           "id": "geography",
           "title": "4.06 Geography",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "publications",
           "title": "4.07 Publications",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "headings",
@@ -195,41 +195,41 @@
         {
           "id": "round-numbers",
           "title": "5.02 Round Numbers",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "consistency",
           "title": "5.03 Consistency",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "initial",
-          "title": "5.04 Initial Numbers",
-          "hasQuiz": true
+          "title": "5.04 Beginning Sentences",
+          "hasQuiz": false
         },
         {
           "id": "quantities",
-          "title": "5.05 Quantities",
-          "hasQuiz": true
+          "title": "5.05 Quantities & Measurements",
+          "hasQuiz": false
         },
         {
           "id": "money",
           "title": "5.06 Money",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "percentages",
-          "title": "5.07 Percentages",
-          "hasQuiz": true
+          "title": "5.07 Percentages & Statistics",
+          "hasQuiz": false
         },
         {
           "id": "time",
           "title": "5.08 Time",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "dates",
-          "title": "5.09 Dates",
+          "title": "5.09 Dates & Special Applications",
           "hasQuiz": true
         }
       ],
@@ -340,7 +340,7 @@
       ],
       "totalSections": 12
     },
-    {
+   {
       "id": "ch08",
       "number": "08",
       "title": "Quotations",
@@ -355,27 +355,27 @@
         {
           "id": "quotation-marks",
           "title": "8.02 Quotation Marks",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "nested-quotations",
           "title": "8.03 Nested Quotations",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "block-quotations",
           "title": "8.04 Block Quotations",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "omissions-insertions",
           "title": "8.05 Omissions & Insertions",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "punctuation-quotations",
           "title": "8.06 Punctuation with Quotations",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "indirect-quotations",
@@ -384,46 +384,6 @@
         }
       ],
       "totalSections": 7
-    },
-    {
-      "id": "ch09",
-      "number": "09",
-      "title": "Reference Matter",
-      "description": "Format bibliographies, footnotes, and citations.",
-      "category": "typography",
-      "sections": [
-        {
-          "id": "introduction",
-          "title": "9.01 Introduction",
-          "hasQuiz": false
-        },
-        {
-          "id": "footnotes",
-          "title": "9.02 Footnotes",
-          "hasQuiz": true
-        },
-        {
-          "id": "bibliography",
-          "title": "9.03 Bibliography",
-          "hasQuiz": true
-        },
-        {
-          "id": "citations",
-          "title": "9.04 Citations",
-          "hasQuiz": true
-        },
-        {
-          "id": "indexes",
-          "title": "9.05 Indexes",
-          "hasQuiz": true
-        },
-        {
-          "id": "electronic-sources",
-          "title": "9.06 Electronic Sources",
-          "hasQuiz": true
-        }
-      ],
-      "totalSections": 6
     },
     {
       "id": "ch10",
@@ -440,27 +400,27 @@
         {
           "id": "business-letters",
           "title": "10.02 Business Letters",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "memos",
           "title": "10.03 Memorandums",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "formatting",
           "title": "10.04 Formatting",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "addresses",
           "title": "10.05 Addresses",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "signatures",
           "title": "10.06 Signatures",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "electronic-correspondence",
@@ -670,22 +630,22 @@
         {
           "id": "canadian-places",
           "title": "15.02 Canadian Places",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "foreign-places",
           "title": "15.03 Foreign Places",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "adjectives",
           "title": "15.04 Geographical Adjectives",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "provinces-territories",
           "title": "15.05 Provinces & Territories",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "abbreviations",
@@ -698,7 +658,7 @@
     {
       "id": "ch16",
       "number": "16",
-      "title": "Revision & Proofreading",
+      "title": "Revision & Proofreading", 
       "description": "Polish your writing through systematic revision.",
       "category": "style",
       "sections": [
@@ -710,32 +670,32 @@
         {
           "id": "editing-levels",
           "title": "16.02 Levels of Editing",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "structural-editing",
           "title": "16.03 Structural Editing",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "stylistic-editing",
           "title": "16.04 Stylistic Editing",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "copy-editing",
           "title": "16.05 Copy Editing",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "proofreading",
           "title": "16.06 Proofreading",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "marks",
           "title": "16.07 Proofreader's Marks",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "checklist",
