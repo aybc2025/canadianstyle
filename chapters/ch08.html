@@ -1124,32 +1124,64 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes from JSON files
-        async function loadSectionQuizzes() {
-            try {
-                const response = await fetch(`../data/ch08-quiz.json`);
-                if (!response.ok) {
-                    console.warn('Quiz data not available for chapter 8');
-                    return;
-                }
-                
-                const quizData = await response.json();
-                
-                // Initialize quizzes for sections that have them
-                sections.forEach(section => {
-                    const sectionQuizData = quizData.sections?.[section.id];
-                    if (sectionQuizData && sectionQuizData.questions) {
-                        const quizContainer = document.getElementById(`quiz-${section.id}`);
-                        if (quizContainer) {
-                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
-                            quizEngine.render(quizContainer);
+        // Load section quizzes from JSON files - FIXED for Chapter 8
+async function loadSectionQuizzes() {
+    try {
+        const response = await fetch(`../data/ch08-quiz.json`);
+        if (!response.ok) {
+            console.warn('Quiz data not available for chapter 8');
+            return;
+        }
+        
+        const quizData = await response.json();
+        
+        // Only load quiz for the final section (indirect-quotations)
+        const finalSection = 'indirect-quotations';
+        const sectionQuizData = quizData.sections?.[finalSection];
+        
+        if (sectionQuizData) {
+            const quizPanel = document.getElementById(`quiz-${finalSection}`);
+            if (quizPanel) {
+                const quizEngine = new QuizEngine({
+                    containerId: `quiz-${finalSection}`,
+                    questions: sectionQuizData.questions,
+                    title: sectionQuizData.title,
+                    onComplete: (results) => {
+                        if (results.passed) {
+                            completeSection(finalSection);
+                            showChapterCompletionModal();
                         }
                     }
                 });
-            } catch (error) {
-                console.warn('Error loading quiz data:', error);
+                quizPanel.appendChild(quizEngine.render());
             }
         }
+    } catch (error) {
+        console.error('Error loading quizzes:', error);
+    }
+}
+
+// Complete section function - FIXED
+function completeSection(sectionId) {
+    if (typeof markSectionComplete === 'function') {
+        markSectionComplete('ch08', sectionId);
+    }
+    updateProgressBar();
+    
+    // Only show completion modal for the final section
+    if (sectionId === 'indirect-quotations') {
+        showChapterCompletionModal();
+    } else {
+        // Move to next section
+        const sections = ['introduction', 'quotation-marks', 'nested-quotations', 'block-quotations', 'omissions-insertions', 'punctuation-quotations', 'indirect-quotations'];
+        const currentIndex = sections.indexOf(sectionId);
+        if (currentIndex < sections.length - 1) {
+            const nextSection = sections[currentIndex + 1];
+            const nextTab = document.querySelector(`[data-section="${nextSection}"]`);
+            if (nextTab) nextTab.click();
+        }
+    }
+}
         
         // Initialize page
         initSectionNavigation();
