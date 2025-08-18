@@ -1,141 +1,268 @@
 {
-  "emphasis": {
-    "id": "ch06-emphasis",
-    "title": "Emphasis and Stress",
-    "questions": [
-      {
-        "id": "q1",
-        "type": "mcq",
-        "stem": "When should italics be used for emphasis?",
-        "options": [
-          { "label": "Frequently, to make text more interesting", "correct": false },
-          { "label": "Sparingly, when other methods won't work", "correct": true },
-          { "label": "Never, bold is always better", "correct": false },
-          { "label": "Only in academic writing", "correct": false }
-        ],
-        "rationale": "Italics for emphasis should be used sparingly and only when other methods of emphasis won't achieve the desired effect.",
-        "ref": "§6.02"
-      },
-      {
-        "id": "q2",
-        "type": "error-spot",
-        "stem": "Click on the inappropriate use of italics:",
-        "text": "The *very important* meeting will discuss *budget*, *staff*, and *policies*",
-        "errorIndex": 3,
-        "rationale": "Overusing italics for emphasis weakens their effect. Use italics sparingly."
-      },
-      {
-        "id": "q3",
-        "type": "mcq",
-        "stem": "Which is the best way to emphasize a key point?",
-        "options": [
-          { "label": "Use italics throughout the paragraph", "correct": false },
-          { "label": "Structure your writing to give natural emphasis", "correct": true },
-          { "label": "Use bold and italics together", "correct": false },
-          { "label": "Use all capitals", "correct": false }
-        ],
-        "rationale": "Good writing structure provides natural emphasis better than typographic devices.",
-        "ref": "§6.02"
-      }
-    ]
+  "id": "ch06",
+  "title": "Italics",
+  "description": "Learn when and how to use italics effectively",
+  "sections": {
+    "basic-principles": {
+      "id": "basic-principles",
+      "title": "Basic Principles of Italics Quiz",
+      "questions": [
+        {
+          "id": "ital-q1",
+          "type": "mcq",
+          "stem": "What is the primary purpose of italics in text?",
+          "options": [
+            {"label": "To make text look more elegant", "correct": false},
+            {"label": "To emphasize and distinguish specific types of content", "correct": true},
+            {"label": "To replace bold formatting", "correct": false},
+            {"label": "To indicate informal writing", "correct": false}
+          ],
+          "rationale": "Italics serve specific functions: emphasis, distinguishing titles, foreign words, and special terminology.",
+          "ref": "§6.01"
+        },
+        {
+          "id": "ital-q2",
+          "type": "error-spot",
+          "stem": "Find the incorrect use of italics:",
+          "text": "The *report* was written by Dr. Smith and published in the *Journal of Science*.",
+          "errorWord": "report",
+          "rationale": "Common words don't need italics; only the journal title should be italicized.",
+          "ref": "§6.01"
+        }
+      ]
+    },
+    "emphasis": {
+      "id": "emphasis",
+      "title": "Italics for Emphasis Quiz",
+      "questions": [
+        {
+          "id": "emph-q1",
+          "type": "mcq",
+          "stem": "When should italics be used for emphasis?",
+          "options": [
+            {"label": "Frequently, to make writing more dynamic", "correct": false},
+            {"label": "Sparingly, only when necessary for clarity", "correct": true},
+            {"label": "Never, as it looks unprofessional", "correct": false},
+            {"label": "Only in informal documents", "correct": false}
+          ],
+          "rationale": "Overuse of italics for emphasis diminishes their effectiveness. Use sparingly and purposefully.",
+          "ref": "§6.02"
+        },
+        {
+          "id": "emph-q2",
+          "type": "fill-blank",
+          "stem": "Complete using appropriate emphasis:",
+          "text": "The deadline is ______ tomorrow, not next week.",
+          "answer": "definitely",
+          "hint": "Consider whether italics would help clarify the meaning.",
+          "rationale": "Use italics for emphasis only when the meaning would be unclear without it.",
+          "ref": "§6.02"
+        }
+      ]
+    },
+    "foreign-words": {
+      "id": "foreign-words",
+      "title": "Foreign Words and Phrases Quiz",
+      "questions": [
+        {
+          "id": "foreign-q1",
+          "type": "matching",
+          "stem": "Match each foreign phrase with its italicization rule:",
+          "pairs": [
+            {"left": "et cetera (etc.)", "right": "Common - no italics"},
+            {"left": "carte blanche", "right": "Foreign - use italics"},
+            {"left": "ad hoc committee", "right": "Latin - use italics"},
+            {"left": "per capita", "right": "Established - no italics"}
+          ],
+          "rationale": "Foreign words and phrases are italicized unless they have become established in English usage.",
+          "ref": "§6.03"
+        },
+        {
+          "id": "foreign-q2",
+          "type": "mcq",
+          "stem": "Which sentence correctly handles foreign terms?",
+          "options": [
+            {"label": "The restaurant serves authentic *cuisine française*.", "correct": true},
+            {"label": "We need to establish a better *modus operandi*.", "correct": false},
+            {"label": "Please send this *via* email.", "correct": false},
+            {"label": "The *etc.* items are listed below.", "correct": false}
+          ],
+          "rationale": "Foreign phrases are italicized, but commonly used Latin terms like 'via' and 'etc.' are not.",
+          "ref": "§6.03-6.04"
+        },
+        {
+          "id": "foreign-q3",
+          "type": "drag-drop",
+          "stem": "Arrange these terms by their need for italics:",
+          "instructions": "Most likely to need italics to least likely:",
+          "items": [
+            {"text": "schadenfreude (German)", "order": 1},
+            {"text": "feng shui (Chinese)", "order": 2},
+            {"text": "ad hoc (Latin)", "order": 3},
+            {"text": "et cetera (Latin)", "order": 4}
+          ],
+          "rationale": "Less common foreign words need italics more than established Latin terms.",
+          "ref": "§6.03-6.04"
+        }
+      ]
+    },
+    "titles-publications": {
+      "id": "titles-publications",
+      "title": "Titles and Publications Quiz",
+      "questions": [
+        {
+          "id": "title-q1",
+          "type": "mcq",
+          "stem": "Which titles should be italicized?",
+          "options": [
+            {"label": "Books, magazines, and newspapers", "correct": true},
+            {"label": "All titles, regardless of type", "correct": false},
+            {"label": "Only book titles", "correct": false},
+            {"label": "No titles should be italicized", "correct": false}
+          ],
+          "rationale": "Major works (books, periodicals, films, etc.) are italicized, while shorter works use quotation marks.",
+          "ref": "§6.05"
+        },
+        {
+          "id": "title-q2",
+          "type": "fill-blank",
+          "stem": "Format these titles correctly:",
+          "text": "She read the article \"Climate Change\" in ______ magazine.",
+          "answer": "Scientific American",
+          "hint": "Consider what gets italics versus quotation marks.",
+          "rationale": "Magazine names are italicized, while article titles use quotation marks.",
+          "ref": "§6.05"
+        },
+        {
+          "id": "title-q3",
+          "type": "error-spot",
+          "stem": "Find the title formatting error:",
+          "text": "The movie *Inception* is based on the short story \"The Dream.\"",
+          "errorWord": "none",
+          "rationale": "This is actually correct - movies are italicized, short stories use quotation marks.",
+          "ref": "§6.05"
+        }
+      ]
+    },
+    "technical-terms": {
+      "id": "technical-terms",
+      "title": "Technical and Scientific Terms Quiz",
+      "questions": [
+        {
+          "id": "tech-q1",
+          "type": "mcq",
+          "stem": "When should scientific names be italicized?",
+          "options": [
+            {"label": "All scientific terms", "correct": false},
+            {"label": "Genus and species names only", "correct": true},
+            {"label": "Only when first mentioned", "correct": false},
+            {"label": "Never in formal writing", "correct": false}
+          ],
+          "rationale": "Binomial nomenclature (genus and species) is always italicized in scientific writing.",
+          "ref": "§6.11"
+        },
+        {
+          "id": "tech-q2",
+          "type": "fill-blank",
+          "stem": "Complete the scientific name:",
+          "text": "The common house cat is scientifically known as ______.",
+          "answer": "Felis catus",
+          "hint": "Remember the formatting for genus and species.",
+          "rationale": "Scientific binomial names are always italicized.",
+          "ref": "§6.11"
+        },
+        {
+          "id": "tech-q3",
+          "type": "matching",
+          "stem": "Match each term type with its formatting rule:",
+          "pairs": [
+            {"left": "Homo sapiens", "right": "Italicize - scientific name"},
+            {"left": "DNA molecule", "right": "Regular - common term"},
+            {"left": "E. coli bacteria", "right": "Italicize - species name"},
+            {"left": "chemical formula", "right": "Regular - technical term"}
+          ],
+          "rationale": "Only formal taxonomic names require italics, not general scientific terms.",
+          "ref": "§6.11"
+        }
+      ]
+    },
+    "legal-references": {
+      "id": "legal-references",
+      "title": "Legal References Quiz",
+      "questions": [
+        {
+          "id": "legal-q1",
+          "type": "mcq",
+          "stem": "How should case names be formatted in legal writing?",
+          "options": [
+            {"label": "Always in quotation marks", "correct": false},
+            {"label": "Always italicized", "correct": true},
+            {"label": "Regular text only", "correct": false},
+            {"label": "Depends on the court level", "correct": false}
+          ],
+          "rationale": "Legal case names are conventionally italicized in legal citations.",
+          "ref": "§6.06"
+        },
+        {
+          "id": "legal-q2",
+          "type": "error-spot",
+          "stem": "Find the legal formatting error:",
+          "text": "The precedent was set in \"Brown v. Board of Education\" (1954).",
+          "errorWord": "\"Brown",
+          "rationale": "Case names should be italicized, not in quotation marks: Brown v. Board of Education.",
+          "ref": "§6.06"
+        }
+      ]
+    },
+    "special-uses": {
+      "id": "special-uses",
+      "title": "Special Uses Quiz",
+      "questions": [
+        {
+          "id": "spec-q1",
+          "type": "mcq",
+          "stem": "When are letters or words italicized when used as examples?",
+          "options": [
+            {"label": "Never", "correct": false},
+            {"label": "When referring to the letter or word itself", "correct": true},
+            {"label": "Only in academic writing", "correct": false},
+            {"label": "Only when they're foreign", "correct": false}
+          ],
+          "rationale": "Letters, words, or phrases used as linguistic examples (metalinguistically) are italicized.",
+          "ref": "§6.08"
+        },
+        {
+          "id": "spec-q2",
+          "type": "fill-blank",
+          "stem": "Complete using appropriate formatting:",
+          "text": "The word ______ is often misspelled as \"recieve.\"",
+          "answer": "receive",
+          "hint": "Consider how to format a word being discussed as a word.",
+          "rationale": "Words being discussed as words themselves should be italicized.",
+          "ref": "§6.08"
+        },
+        {
+          "id": "spec-q3",
+          "type": "drag-drop",
+          "stem": "Arrange these uses of italics by how common they are:",
+          "instructions": "Most common to least common in professional writing:",
+          "items": [
+            {"text": "Book and publication titles", "order": 1},
+            {"text": "Foreign words and phrases", "order": 2},
+            {"text": "Emphasis (sparingly)", "order": 3},
+            {"text": "Words as linguistic examples", "order": 4}
+          ],
+          "rationale": "Publication titles are most common, followed by foreign terms, occasional emphasis, and metalinguistic usage.",
+          "ref": "§6.01-6.12"
+        }
+      ]
+    }
   },
-  "titles": {
-    "id": "ch06-titles",
-    "title": "Titles of Works",
-    "questions": [
-      {
-        "id": "q4",
-        "type": "mcq",
-        "stem": "Which titles should be italicized?",
-        "options": [
-          { "label": "Books, newspapers, magazines", "correct": true },
-          { "label": "Articles, short stories, poems", "correct": false },
-          { "label": "Chapter titles", "correct": false },
-          { "label": "All of the above", "correct": false }
-        ],
-        "rationale": "Italicize titles of books, newspapers, magazines, movies, plays, and other major works.",
-        "ref": "§6.03"
-      },
-      {
-        "id": "q5",
-        "type": "multi-select",
-        "stem": "Which titles should be in quotation marks, not italics? (Select all)",
-        "options": [
-          { "label": "Newspaper articles", "correct": true },
-          { "label": "Magazine articles", "correct": true },
-          { "label": "Book chapters", "correct": true },
-          { "label": "Novels", "correct": false },
-          { "label": "Short stories", "correct": true }
-        ],
-        "rationale": "Use quotation marks for parts of larger works: articles, chapters, short stories."
-      },
-      {
-        "id": "q6",
-        "type": "fill-blank",
-        "stem": "I read an article called _____ in the _Toronto Star_.",
-        "answer": "\"City Budget Approved\"",
-        "rationale": "Article titles go in quotation marks; newspaper names are italicized.",
-        "ref": "§6.03"
-      }
-    ]
-  },
-  "foreign-words": {
-    "id": "ch06-foreign",
-    "title": "Foreign Words and Phrases",
-    "questions": [
-      {
-        "id": "q7",
-        "type": "mcq",
-        "stem": "When should foreign words be italicized?",
-        "options": [
-          { "label": "Always", "correct": false },
-          { "label": "When they haven't been anglicized", "correct": true },
-          { "label": "Never", "correct": false },
-          { "label": "Only in academic writing", "correct": false }
-        ],
-        "rationale": "Italicize foreign words that haven't been fully adopted into English.",
-        "ref": "§6.04"
-      },
-      {
-        "id": "q8",
-        "type": "drag-drop",
-        "stem": "Sort these words by whether they need italics:",
-        "options": [
-          { "label": "café (no italics - anglicized)", "order": 1 },
-          { "label": "déjà vu (no italics - common)", "order": 2 },
-          { "label": "Weltanschauung (italics - not anglicized)", "order": 3 },
-          { "label": "schadenfreude (italics - foreign)", "order": 4 }
-        ],
-        "rationale": "Common foreign terms don't need italics; uncommon ones do."
-      },
-      {
-        "id": "q9",
-        "type": "mcq",
-        "stem": "Which Latin phrase doesn't need italics?",
-        "options": [
-          { "label": "sine qua non", "correct": false },
-          { "label": "etc.", "correct": true },
-          { "label": "sui generis", "correct": false },
-          { "label": "inter alia", "correct": false }
-        ],
-        "rationale": "Common abbreviations like 'etc.' are so familiar they don't need italics.",
-        "ref": "§6.04"
-      },
-      {
-        "id": "q10",
-        "type": "quickfire",
-        "timeLimit": 30,
-        "cards": [
-          { "front": "Book title", "back": "Italics" },
-          { "front": "Magazine article", "back": "Quotation marks" },
-          { "front": "Foreign phrase (unfamiliar)", "back": "Italics" },
-          { "front": "Movie title", "back": "Italics" },
-          { "front": "Song title", "back": "Quotation marks" },
-          { "front": "TV show", "back": "Italics" },
-          { "front": "Episode title", "back": "Quotation marks" },
-          { "front": "Painting title", "back": "Italics" }
-        ]
-      }
-    ]
+  "metadata": {
+    "totalQuestions": 19,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
+    "difficulty": "intermediate",
+    "timeEstimate": "25-30 minutes",
+    "passingScore": 80
   }
 }
