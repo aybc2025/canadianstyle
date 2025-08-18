@@ -9,24 +9,24 @@ const STORAGE_KEY = 'csProgress';
 const STORAGE_VERSION = '2.0';
 const BACKUP_KEY = 'csProgressBackup';
 
-// Chapter sections mapping - COMPLETE AND VALIDATED
+// Chapter sections mapping - UPDATED FOR FIXED CHAPTERS
 const CHAPTER_SECTIONS = {
     ch01: ['introduction', 'general-principles', 'sentence-capitals', 'proper-nouns', 'government-bodies', 'titles-positions', 'geographic-names', 'brand-names', 'academic-degrees'],
     ch02: ['introduction', 'compound-words', 'prefixes-suffixes', 'word-division', 'special-cases', 'technical-terms'],
     ch03: ['introduction', 'canadian-spelling', 'variants', 'word-endings', 'troublesome-words'],
-    ch04: ['introduction', 'initial-words', 'personal-names', 'government', 'titles', 'geography', 'publications', 'headings'],
-    ch05: ['introduction', 'round-numbers', 'consistency', 'initial', 'quantities', 'money', 'percentages', 'time', 'dates'],
+    ch04: ['introduction', 'initial-words', 'personal-names', 'government', 'titles', 'geography', 'publications', 'headings'], // FIXED - quiz only on 'headings'
+    ch05: ['introduction', 'round-numbers', 'consistency', 'initial', 'quantities', 'money', 'percentages', 'time', 'dates'], // FIXED - quiz only on 'dates'
     ch06: ['introduction', 'emphasis', 'titles', 'foreign-words', 'legal-cases'],
     ch07: ['introduction', 'periods', 'commas', 'semicolons', 'colons', 'question-marks', 'exclamation-marks', 'apostrophes', 'parentheses-brackets', 'ellipsis', 'quotation-marks', 'dashes'],
-    ch08: ['introduction', 'quotation-marks', 'nested-quotations', 'block-quotations', 'omissions-insertions', 'punctuation-quotations', 'indirect-quotations'],
+    ch08: ['introduction', 'quotation-marks', 'nested-quotations', 'block-quotations', 'omissions-insertions', 'punctuation-quotations', 'indirect-quotations'], // FIXED - quiz only on 'indirect-quotations'
     ch09: ['introduction', 'footnotes', 'bibliography', 'citations', 'indexes', 'electronic-sources'],
-    ch10: ['introduction', 'business-letters', 'memos', 'formatting', 'addresses', 'signatures', 'electronic-correspondence'],
+    ch10: ['introduction', 'business-letters', 'memos', 'formatting', 'addresses', 'signatures', 'electronic-correspondence'], // FIXED - quiz only on 'electronic-correspondence'
     ch11: ['introduction', 'report-structure', 'headings', 'front-matter', 'appendices', 'tables-charts', 'minutes', 'formatting'],
     ch12: ['introduction', 'prepositions', 'affect-effect', 'compose-comprise', 'less-fewer', 'that-which', 'common-errors', 'idioms'],
     ch13: ['introduction', 'reader-focus', 'organization', 'vocabulary', 'sentences', 'layout', 'testing'],
     ch14: ['introduction', 'gender-inclusive', 'racial-cultural', 'disabilities', 'age-related', 'general-principles'],
-    ch15: ['introduction', 'canadian-places', 'foreign-places', 'adjectives', 'provinces-territories', 'abbreviations'],
-    ch16: ['introduction', 'editing-levels', 'structural-editing', 'stylistic-editing', 'copy-editing', 'proofreading', 'marks', 'checklist']
+    ch15: ['introduction', 'canadian-places', 'foreign-places', 'adjectives', 'provinces-territories', 'abbreviations'], // FIXED - quiz only on 'abbreviations'
+    ch16: ['introduction', 'editing-levels', 'structural-editing', 'stylistic-editing', 'copy-editing', 'proofreading', 'marks', 'checklist'] // FIXED - quiz only on 'checklist'
 };
 
 // Default progress structure
