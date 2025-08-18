@@ -10,319 +10,1029 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+            <div class="header-content">
+                <div class="site-title">
+                    <img src="../shared/img/maple-logo.svg" alt="Canadian Maple Leaf" class="logo">
+                    <span>The Canadian Style</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="../index.html" class="nav-link">Dashboard</a>
+                    <a href="../index.html#chapters" class="nav-link">All Chapters</a>
+                </nav>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
         </div>
     </header>
 
-    <div class="chapter-hero">
+    <main class="main-content">
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 6
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">6</div>
-                <div>
-                    <h1>Italics</h1>
-                    <p>Proper use of italics for emphasis and special terms</p>
+            <div class="chapter-header">
+                <div class="chapter-info">
+                    <span class="chapter-number">Chapter 6</span>
+                    <h1 class="chapter-title">Italics</h1>
+                    <p class="chapter-description">Learn when and how to use italics effectively in your writing</p>
                 </div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
-
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">6.01 Introduction</a>
-                <a href="#emphasis" class="tab-link" data-section="emphasis">6.02 Emphasis</a>
-                <a href="#titles" class="tab-link" data-section="titles">6.03 Titles</a>
-                <a href="#foreign-words" class="tab-link" data-section="foreign-words">6.04 Foreign Words</a>
-                <a href="#legal-cases" class="tab-link" data-section="legal-cases">6.05 Legal Cases</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="chapter-content">
-        <div class="container">
-            <!-- Section 6.01: Introduction -->
-            <section class="content-section" id="introduction">
-                <div class="section-header">
-                    <h2>6.01 Introduction</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Italics serve specific purposes in professional writing. They help distinguish certain types of content from regular text and add emphasis when appropriate. Understanding when and when not to use italics ensures your documents maintain a professional appearance.</p>
-                    
-                    <h3>When to Use Italics</h3>
-                    <ul>
-                        <li><strong>Titles:</strong> Books, periodicals, films, artworks</li>
-                        <li><strong>Foreign words:</strong> Non-English terms not yet adopted into English</li>
-                        <li><strong>Scientific names:</strong> Species and genus names</li>
-                        <li><strong>Legal cases:</strong> Court case names</li>
-                        <li><strong>Emphasis:</strong> Sparingly, for important words or phrases</li>
-                    </ul>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ Overuse Warning</h4>
-                        <p>Avoid overusing italics for emphasis. Too much italic text becomes difficult to read and loses its impact. Use bold or other formatting alternatives when appropriate.</p>
+                <div class="progress-indicator">
+                    <div class="progress-ring">
+                        <svg class="progress-svg" width="60" height="60">
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4"/>
+                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4" 
+                                    stroke-dasharray="157" stroke-dashoffset="157" class="progress-circle"/>
+                        </svg>
+                        <span class="progress-text">0%</span>
                     </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-introduction"></div>
-                
+            </div>
+
+            <nav class="section-tabs">
+                <button class="tab-link active" data-section="basic-principles">
+                    6.01 Basic Principles
+                </button>
+                <button class="tab-link" data-section="emphasis">
+                    6.02 Emphasis
+                </button>
+                <button class="tab-link" data-section="foreign-words">
+                    6.03 Foreign Words & Phrases
+                </button>
+                <button class="tab-link" data-section="titles-publications">
+                    6.04 Titles & Publications
+                </button>
+                <button class="tab-link" data-section="technical-terms">
+                    6.05 Technical & Scientific Terms
+                </button>
+                <button class="tab-link" data-section="legal-references">
+                    6.06 Legal References
+                </button>
+                <button class="tab-link" data-section="special-uses">
+                    6.07 Special Uses
+                </button>
+            </nav>
+
+            <section id="basic-principles" class="content-section">
+                <div class="section-content">
+                    <h2>6.01 Basic Principles of Italics</h2>
+                    
+                    <div class="info-box">
+                        <h3>✨ The Power of Emphasis</h3>
+                        <p>Italics are a powerful typographical tool for distinction, emphasis, and clarity in professional writing.</p>
+                    </div>
+
+                    <h3>Primary Functions of Italics</h3>
+                    <div class="function-grid">
+                        <div class="function-card">
+                            <h4>🎯 Emphasis</h4>
+                            <p>Draw attention to important words or phrases</p>
+                            <div class="example">
+                                "This is <em>absolutely</em> critical."
+                            </div>
+                        </div>
+                        
+                        <div class="function-card">
+                            <h4>📚 Titles</h4>
+                            <p>Distinguish titles of major works</p>
+                            <div class="example">
+                                Read <em>The Great Gatsby</em> for class.
+                            </div>
+                        </div>
+                        
+                        <div class="function-card">
+                            <h4>🌍 Foreign Terms</h4>
+                            <p>Mark non-English words and phrases</p>
+                            <div class="example">
+                                The French term <em>laissez-faire</em> means...
+                            </div>
+                        </div>
+                        
+                        <div class="function-card">
+                            <h4>🔬 Technical Terms</h4>
+                            <p>Highlight specialized terminology</p>
+                            <div class="example">
+                                The species <em>Homo sapiens</em> evolved...
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>When NOT to Use Italics</h3>
+                    <div class="avoid-list">
+                        <div class="avoid-item">
+                            <h4>❌ Don't Overuse for Emphasis</h4>
+                            <p>Excessive italics lose their impact and make text hard to read.</p>
+                            <div class="comparison">
+                                <span class="wrong">This is <em>very</em> <em>important</em> and <em>absolutely</em> <em>critical</em>.</span>
+                                <span class="right">This is <em>absolutely critical</em>.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="avoid-item">
+                            <h4>❌ Don't Use for Common Words</h4>
+                            <p>Regular English words don't need italics unless emphasized for specific reasons.</p>
+                            <div class="comparison">
+                                <span class="wrong">The <em>report</em> was <em>written</em> yesterday.</span>
+                                <span class="right">The report was written yesterday.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="avoid-item">
+                            <h4>❌ Don't Mix with Other Emphasis</h4>
+                            <p>Avoid combining italics with bold, underline, or quotation marks for emphasis.</p>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Golden Rule</h4>
+                        <p>Use italics purposefully and sparingly. Every italic word should have a clear reason for being emphasized or distinguished.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-basic-principles"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Complete Section → Emphasis
+                    <button class="btn btn-primary" onclick="completeSection('basic-principles')">
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 6.02: Emphasis -->
-            <section class="content-section" id="emphasis">
-                <div class="section-header">
-                    <h2>6.02 Emphasis</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Using Italics for Emphasis</h3>
-                    <p>Italics can provide emphasis, but use them sparingly and strategically:</p>
+            <section id="emphasis" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.02 Italics for Emphasis</h2>
                     
-                    <div class="rule-box">
-                        <h4>When to Emphasize</h4>
-                        <ul>
-                            <li>Key terms being defined for the first time</li>
-                            <li>Words that need special attention in context</li>
-                            <li>Contrasting elements in a comparison</li>
-                            <li>Words being discussed as words</li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>🎪 Strategic Emphasis</h3>
+                        <p>Use italics for emphasis sparingly and strategically to maintain their effectiveness.</p>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Emphasis Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Appropriate emphasis:</strong></p>
-                            <ul>
-                                <li>The program focuses on <em>prevention</em> rather than treatment.</li>
-                                <li>What does <em>sustainable</em> mean in this context?</li>
-                                <li>The word <em>government</em> appears 47 times in the document.</li>
-                            </ul>
+
+                    <h3>When to Use Italics for Emphasis</h3>
+                    <div class="emphasis-scenarios">
+                        <div class="scenario">
+                            <h4>✅ Clarifying Meaning</h4>
+                            <p>When the meaning would be unclear without emphasis:</p>
+                            <div class="example">
+                                "I said <em>call</em> him, not <em>email</em> him."
+                            </div>
                         </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Overuse of emphasis:</strong></p>
-                            <ul>
-                                <li>This is <em>very important</em> and <em>must be done</em> <em>immediately</em>.</li>
-                                <li>The <em>new policy</em> will <em>significantly improve</em> our <em>operations</em>.</li>
-                            </ul>
+                        
+                        <div class="scenario">
+                            <h4>✅ Contrasting Ideas</h4>
+                            <p>To highlight contrasts or comparisons:</p>
+                            <div class="example">
+                                "The policy applies to <em>all</em> employees, not just senior staff."
+                            </div>
+                        </div>
+                        
+                        <div class="scenario">
+                            <h4>✅ Unexpected Information</h4>
+                            <p>To draw attention to surprising or contrary information:</p>
+                            <div class="example">
+                                "Sales actually <em>increased</em> during the recession."
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Alternatives to Italics</h4>
-                        <p>Consider other emphasis methods: <strong>bold text</strong>, CAPITALS (sparingly), or restructuring sentences to naturally emphasize important points.</p>
+
+                    <h3>Alternatives to Italics for Emphasis</h3>
+                    <div class="alternatives-grid">
+                        <div class="alternative">
+                            <h4>Sentence Structure</h4>
+                            <div class="comparison">
+                                <span class="label">Instead of:</span>
+                                <span class="text">"Quality is <em>very</em> important."</span>
+                            </div>
+                            <div class="comparison">
+                                <span class="label">Try:</span>
+                                <span class="text">"Quality is essential to our success."</span>
+                            </div>
+                        </div>
+                        
+                        <div class="alternative">
+                            <h4>Strong Vocabulary</h4>
+                            <div class="comparison">
+                                <span class="label">Instead of:</span>
+                                <span class="text">"This is <em>really</em> good."</span>
+                            </div>
+                            <div class="comparison">
+                                <span class="label">Try:</span>
+                                <span class="text">"This is exceptional."</span>
+                            </div>
+                        </div>
+                        
+                        <div class="alternative">
+                            <h4>Strategic Placement</h4>
+                            <div class="comparison">
+                                <span class="label">Instead of:</span>
+                                <span class="text">"The deadline is <em>tomorrow</em>."</span>
+                            </div>
+                            <div class="comparison">
+                                <span class="label">Try:</span>
+                                <span class="text">"Tomorrow is the deadline."</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Professional Context Guidelines</h3>
+                    <div class="context-guidelines">
+                        <div class="context-item">
+                            <h4>📄 Formal Documents</h4>
+                            <p>Use italics for emphasis very sparingly in formal documents. Rely more on clear writing and structure.</p>
+                        </div>
+                        
+                        <div class="context-item">
+                            <h4>📧 Email Communication</h4>
+                            <p>Occasional emphasis is acceptable in emails, but don't overuse. Consider your audience and relationship.</p>
+                        </div>
+                        
+                        <div class="context-item">
+                            <h4>📊 Presentations</h4>
+                            <p>Use italics to highlight key points on slides, but combine with other design elements for maximum impact.</p>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Emphasis Fatigue</h4>
+                        <p>Too much emphasis creates "emphasis fatigue" where readers start ignoring italicized text. Use emphasis like seasoning - a little goes a long way.</p>
                     </div>
                 </div>
-                
+
                 <div class="quiz-panel" id="quiz-emphasis"></div>
-                
+
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('emphasis')">
-                        Complete Section → Titles
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 6.03: Titles -->
-            <section class="content-section" id="titles">
-                <div class="section-header">
-                    <h2>6.03 Titles of Works</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Publications and Creative Works</h3>
-                    <p>Use italics for titles of major works and publications:</p>
+            <section id="foreign-words" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.03 Foreign Words and Phrases</h2>
                     
-                    <div class="rule-box">
-                        <h4>Use Italics For</h4>
-                        <ul>
-                            <li><strong>Books:</strong> <em>The Canadian Style</em></li>
-                            <li><strong>Newspapers:</strong> <em>The Globe and Mail</em></li>
-                            <li><strong>Magazines:</strong> <em>Maclean's</em></li>
-                            <li><strong>Films:</strong> <em>The National Dream</em></li>
-                            <li><strong>TV shows:</strong> <em>The Nature of Things</em></li>
-                            <li><strong>Artworks:</strong> <em>The Jack Pine</em></li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>🌍 Global Communication</h3>
+                        <p>Italics help readers identify and understand foreign terms in English text.</p>
                     </div>
-                    
-                    <div class="rule-box">
-                        <h4>Use Quotation Marks For</h4>
-                        <ul>
-                            <li><strong>Articles:</strong> "Climate Policy in Canada"</li>
-                            <li><strong>Short stories:</strong> "The Hockey Sweater"</li>
-                            <li><strong>Poems:</strong> "In Flanders Fields"</li>
-                            <li><strong>Songs:</strong> "O Canada"</li>
-                            <li><strong>Chapter titles:</strong> "Introduction to Grammar"</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Title Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Correct formatting:</strong></p>
-                            <ul>
-                                <li>The article "Digital Government Services" appeared in <em>Canadian Public Administration</em>.</li>
-                                <li>The film <em>Atanarjuat</em> won international acclaim.</li>
-                                <li>Chapter 3, "Effective Writing," discusses clarity.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-titles"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('titles')">
-                        Complete Section → Foreign Words
-                    </button>
-                </div>
-            </section>
 
-            <!-- Section 6.04: Foreign Words -->
-            <section class="content-section" id="foreign-words">
-                <div class="section-header">
-                    <h2>6.04 Foreign Words and Phrases</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Non-English Terms</h3>
-                    <p>Use italics for foreign words that haven't been adopted into English:</p>
-                    
-                    <div class="rule-box">
-                        <h4>Use Italics For</h4>
-                        <ul>
-                            <li><strong>Latin phrases:</strong> <em>ad hoc</em>, <em>prima facie</em>, <em>per se</em></li>
-                            <li><strong>French terms:</strong> <em>raison d'être</em>, <em>coup d'état</em></li>
-                            <li><strong>Unfamiliar terms:</strong> <em>Gemeinschaft</em>, <em>ubuntu</em></li>
-                            <li><strong>Scientific names:</strong> <em>Acer saccharum</em> (sugar maple)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Don't Use Italics For</h4>
-                        <ul>
-                            <li><strong>Common borrowed words:</strong> café, résumé, fiancé</li>
-                            <li><strong>Place names:</strong> Quebec, Montreal, Toronto</li>
-                            <li><strong>Proper names:</strong> Pierre Trudeau, René Lévesque</li>
-                            <li><strong>Naturalized terms:</strong> entrepreneur, genre, elite</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Foreign Word Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Italicized (not yet naturalized):</strong></p>
-                            <ul>
-                                <li>The committee will meet on an <em>ad hoc</em> basis.</li>
-                                <li>This represents a significant <em>tour de force</em>.</li>
-                                <li>The species <em>Castor canadensis</em> is the national animal.</li>
-                            </ul>
+                    <h3>When to Italicize Foreign Terms</h3>
+                    <div class="foreign-rules">
+                        <div class="rule-section">
+                            <h4>✅ Italicize These Foreign Terms</h4>
+                            <div class="foreign-examples">
+                                <div class="language-group">
+                                    <h5>French</h5>
+                                    <ul>
+                                        <li><em>carte blanche</em> (complete freedom)</li>
+                                        <li><em>coup de grâce</em> (finishing blow)</li>
+                                        <li><em>raison d'être</em> (reason for existence)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="language-group">
+                                    <h5>Latin</h5>
+                                    <ul>
+                                        <li><em>ad hoc</em> (for this purpose)</li>
+                                        <li><em>bona fide</em> (in good faith)</li>
+                                        <li><em>prima facie</em> (at first sight)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="language-group">
+                                    <h5>German</h5>
+                                    <ul>
+                                        <li><em>schadenfreude</em> (pleasure from others' misfortune)</li>
+                                        <li><em>zeitgeist</em> (spirit of the age)</li>
+                                        <li><em>weltanschauung</em> (worldview)</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="example-item bad">
-                            <p><strong>✗ Not italicized (naturalized words):</strong></p>
-                            <ul>
-                                <li>The café serves excellent coffee.</li>
-                                <li>Please submit your résumé by Friday.</li>
-                                <li>She has a certain je ne sais quoi. (exception: still italicized)</li>
-                            </ul>
+                        
+                        <div class="rule-section">
+                            <h4>❌ Don't Italicize These Established Terms</h4>
+                            <div class="established-examples">
+                                <div class="established-group">
+                                    <h5>Common Latin Terms</h5>
+                                    <ul>
+                                        <li>etc. (et cetera)</li>
+                                        <li>i.e. (id est)</li>
+                                        <li>e.g. (exempli gratia)</li>
+                                        <li>via (by way of)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="established-group">
+                                    <h5>Adopted Foreign Words</h5>
+                                    <ul>
+                                        <li>café, résumé, naïve</li>
+                                        <li>kindergarten, karate</li>
+                                        <li>pizza, pasta, sushi</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
+
+                    <h3>Guidelines for Determining Usage</h3>
+                    <div class="determination-guide">
+                        <div class="guide-step">
+                            <h4>1. Check the Dictionary</h4>
+                            <p>If the word appears in standard English dictionaries without special marking, it's usually established.</p>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4>2. Consider Your Audience</h4>
+                            <p>Terms familiar to your specific audience may not need italics, even if they're foreign to general readers.</p>
+                        </div>
+                        
+                        <div class="guide-step">
+                            <h4>3. When in Doubt, Italicize</h4>
+                            <p>It's better to italicize unnecessarily than to leave foreign terms unmarked.</p>
+                        </div>
+                    </div>
+
+                    <h3>Special Considerations</h3>
+                    <div class="special-considerations">
+                        <div class="consideration">
+                            <h4>🔤 Proper Nouns</h4>
+                            <p>Foreign proper nouns (names, places) are not italicized:</p>
+                            <div class="example">
+                                "We visited Paris and saw the Louvre." (not <em>Paris</em> or <em>Louvre</em>)
+                            </div>
+                        </div>
+                        
+                        <div class="consideration">
+                            <h4>🔀 Mixed Languages</h4>
+                            <p>In documents with multiple foreign languages, be consistent in your approach to italicization.</p>
+                        </div>
+                        
+                        <div class="consideration">
+                            <h4>📖 Definitions</h4>
+                            <p>When providing definitions, italicize the foreign term but not the definition:</p>
+                            <div class="example">
+                                "The concept of <em>gemütlichkeit</em> refers to warmth and friendliness."
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tip-box">
-                        <h4>💡 When in Doubt</h4>
-                        <p>Check a recent dictionary. If the word appears without italics, it's likely been adopted into English. Canadian government writing tends to be conservative with italicization.</p>
+                        <h4>💡 Style Guide Check</h4>
+                        <p>Different organizations may have specific policies about foreign terms. Always check your organization's style guide for specific requirements.</p>
                     </div>
                 </div>
-                
+
                 <div class="quiz-panel" id="quiz-foreign-words"></div>
-                
+
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('foreign-words')">
-                        Complete Section → Legal Cases
+                        Mark as Complete
                     </button>
                 </div>
             </section>
 
-            <!-- Section 6.05: Legal Cases -->
-            <section class="content-section" id="legal-cases">
-                <div class="section-header">
-                    <h2>6.05 Legal Cases and Citations</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <h3>Court Cases and Legal References</h3>
-                    <p>Italicize the names of legal cases and certain legal references:</p>
+            <section id="titles-publications" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.04 Titles and Publications</h2>
                     
-                    <div class="rule-box">
-                        <h4>Use Italics For</h4>
-                        <ul>
-                            <li><strong>Case names:</strong> <em>R. v. Morgentaler</em></li>
-                            <li><strong>Civil cases:</strong> <em>Roncarelli v. Duplessis</em></li>
-                            <li><strong>Constitutional references:</strong> <em>Reference re Secession of Quebec</em></li>
-                            <li><strong>Legal publications:</strong> <em>Canadian Charter of Rights and Freedoms</em></li>
-                        </ul>
+                    <div class="info-box">
+                        <h3>📚 Distinguishing Major Works</h3>
+                        <p>Italics help readers distinguish between different types of published works and media.</p>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Legal Citation Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Proper legal formatting:</strong></p>
+
+                    <h3>What Gets Italicized</h3>
+                    <div class="italicized-works">
+                        <div class="work-category">
+                            <h4>📖 Books and Major Publications</h4>
                             <ul>
-                                <li>In <em>R. v. Oakes</em>, the Court established the proportionality test.</li>
-                                <li>The <em>Canadian Charter of Rights and Freedoms</em> protects fundamental rights.</li>
-                                <li>The case of <em>Baker v. Canada</em> addressed procedural fairness.</li>
+                                <li><em>The Great Gatsby</em> (novel)</li>
+                                <li><em>A Brief History of Time</em> (non-fiction book)</li>
+                                <li><em>The Oxford Dictionary</em> (reference work)</li>
+                                <li><em>Annual Report 2023</em> (major report)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-category">
+                            <h4>📰 Periodicals</h4>
+                            <ul>
+                                <li><em>The Globe and Mail</em> (newspaper)</li>
+                                <li><em>Maclean's</em> (magazine)</li>
+                                <li><em>Nature</em> (academic journal)</li>
+                                <li><em>Canadian Public Policy</em> (professional journal)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-category">
+                            <h4>🎬 Media and Entertainment</h4>
+                            <ul>
+                                <li><em>Inception</em> (film)</li>
+                                <li><em>Breaking Bad</em> (TV series)</li>
+                                <li><em>Hamilton</em> (play/musical)</li>
+                                <li><em>The Dark Side of the Moon</em> (album)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="work-category">
+                            <h4>🖥️ Digital Publications</h4>
+                            <ul>
+                                <li><em>Wikipedia</em> (website)</li>
+                                <li><em>TED Talks</em> (video series)</li>
+                                <li><em>Serial</em> (podcast)</li>
+                                <li><em>The Daily</em> (news podcast)</li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <div class="rule-box">
-                        <h4>Don't Italicize</h4>
-                        <ul>
-                            <li><strong>Statutes:</strong> Criminal Code, Income Tax Act</li>
-                            <li><strong>Regulations:</strong> Privacy Regulations</li>
-                            <li><strong>Acts:</strong> Official Languages Act</li>
-                            <li><strong>Legal concepts:</strong> reasonable doubt, due process</li>
-                        </ul>
+
+                    <h3>What Gets Quotation Marks Instead</h3>
+                    <div class="quoted-works">
+                        <div class="quote-category">
+                            <h4>📄 Shorter Works and Components</h4>
+                            <ul>
+                                <li>"The Road Not Taken" (poem)</li>
+                                <li>"Climate Change Solutions" (journal article)</li>
+                                <li>"Politics Today" (TV episode)</li>
+                                <li>"Yesterday" (song)</li>
+                                <li>"Introduction" (book chapter)</li>
+                            </ul>
+                        </div>
                     </div>
-                    
+
+                    <h3>Decision Framework</h3>
+                    <div class="decision-framework">
+                        <div class="framework-step">
+                            <h4>🤔 Ask These Questions:</h4>
+                            <ol>
+                                <li><strong>Is it a complete, independent work?</strong> → Use italics</li>
+                                <li><strong>Is it part of a larger work?</strong> → Use quotation marks</li>
+                                <li><strong>Could it stand alone?</strong> → Use italics</li>
+                                <li><strong>Is it published within something else?</strong> → Use quotation marks</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <h3>Examples in Context</h3>
+                    <div class="context-examples">
+                        <div class="example-set">
+                            <h4>Academic Writing</h4>
+                            <div class="example">
+                                "In her article 'Climate Policy Innovation' published in <em>Canadian Public Policy</em>, Dr. Smith argues..."
+                            </div>
+                        </div>
+                        
+                        <div class="example-set">
+                            <h4>Media References</h4>
+                            <div class="example">
+                                "The documentary <em>An Inconvenient Truth</em> features the song 'I Need to Wake Up' by Melissa Etheridge."
+                            </div>
+                        </div>
+                        
+                        <div class="example-set">
+                            <h4>Literary Analysis</h4>
+                            <div class="example">
+                                "The poem 'The Hollow Men' appears in T.S. Eliot's collection <em>Poems 1909-1925</em>."
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-cases">
+                        <h3>Special Cases</h3>
+                        <div class="case-item">
+                            <h4>🌐 Online Content</h4>
+                            <p>For websites, blogs, and online publications, follow the same rules: major sites and publications get italics, individual posts or pages get quotation marks.</p>
+                        </div>
+                        
+                        <div class="case-item">
+                            <h4>📱 Apps and Software</h4>
+                            <p>Software names and app names are typically italicized: <em>Microsoft Word</em>, <em>Instagram</em>, <em>Zoom</em>.</p>
+                        </div>
+                    </div>
+
                     <div class="tip-box">
-                        <h4>💡 Legal Writing Tip</h4>
-                        <p>In legal documents, follow your jurisdiction's style guide. Some courts prefer different formatting conventions for case names and citations.</p>
+                        <h4>💡 Consistency Rule</h4>
+                        <p>Be consistent throughout your document. If you italicize one newspaper name, italicize all newspaper names. Consistency helps readers understand your formatting system.</p>
                     </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-titles-publications"></div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('titles-publications')">
+                        Mark as Complete
+                    </button>
+                </div>
+            </section>
+
+            <section id="technical-terms" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.05 Technical and Scientific Terms</h2>
                     
-                    <div class="examples-box">
-                        <h4>Mixed Legal Text</h4>
-                        <div class="example-item good">
-                            <p><strong>✓ Combining italics and regular text:</strong></p>
+                    <div class="info-box">
+                        <h3>🔬 Scientific Precision</h3>
+                        <p>In technical and scientific writing, italics serve specific functions for clarity and convention.</p>
+                    </div>
+
+                    <h3>Scientific Names (Binomial Nomenclature)</h3>
+                    <div class="binomial-rules">
+                        <div class="rule-explanation">
+                            <h4>Always Italicize Genus and Species</h4>
+                            <p>Scientific names of organisms follow the binomial system and are always italicized:</p>
+                        </div>
+                        
+                        <div class="binomial-examples">
+                            <div class="example-category">
+                                <h5>Animals</h5>
+                                <ul>
+                                    <li><em>Homo sapiens</em> (humans)</li>
+                                    <li><em>Canis lupus</em> (gray wolf)</li>
+                                    <li><em>Felis catus</em> (domestic cat)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="example-category">
+                                <h5>Plants</h5>
+                                <ul>
+                                    <li><em>Quercus alba</em> (white oak)</li>
+                                    <li><em>Rosa rubiginosa</em> (sweet briar)</li>
+                                    <li><em>Acer saccharum</em> (sugar maple)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="example-category">
+                                <h5>Microorganisms</h5>
+                                <ul>
+                                    <li><em>Escherichia coli</em> (E. coli bacteria)</li>
+                                    <li><em>Saccharomyces cerevisiae</em> (baker's yeast)</li>
+                                    <li><em>Plasmodium falciparum</em> (malaria parasite)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Formatting Rules for Scientific Names</h3>
+                    <div class="formatting-rules">
+                        <div class="rule-item">
+                            <h4>📝 Capitalization</h4>
                             <ul>
-                                <li>The Supreme Court's decision in <em>R. v. Stinchcombe</em> under the Criminal Code established disclosure obligations.</li>
-                                <li>Section 15 of the <em>Canadian Charter of Rights and Freedoms</em> guarantees equality rights.</li>
+                                <li><strong>Genus:</strong> Always capitalized (<em>Homo</em>)</li>
+                                <li><strong>Species:</strong> Always lowercase (<em>sapiens</em>)</li>
+                                <li><strong>Both:</strong> Always italicized</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <h4>✂️ Abbreviations</h4>
+                            <p>After first mention, genus can be abbreviated:</p>
+                            <div class="example">
+                                "First mention: <em>Escherichia coli</em><br>
+                                Subsequent mentions: <em>E. coli</em>"
+                            </div>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <h4>🔗 Higher Classifications</h4>
+                            <p>Higher taxonomic levels are not italicized:</p>
+                            <div class="example">
+                                "Family: Hominidae<br>
+                                Genus: <em>Homo</em><br>
+                                Species: <em>Homo sapiens</em>"
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Mathematical and Statistical Terms</h3>
+                    <div class="math-terms">
+                        <div class="math-category">
+                            <h4>Variables and Symbols</h4>
+                            <p>Mathematical variables are typically italicized:</p>
+                            <ul>
+                                <li>The equation <em>y</em> = <em>mx</em> + <em>b</em></li>
+                                <li>Where <em>n</em> = sample size</li>
+                                <li>The value of <em>x</em> approaches infinity</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="math-category">
+                            <h4>Statistical Notation</h4>
+                            <p>Statistical symbols and test names:</p>
+                            <ul>
+                                <li><em>p</em> < 0.05 (probability value)</li>
+                                <li><em>t</em>-test, <em>F</em>-test</li>
+                                <li><em>r</em> = 0.75 (correlation coefficient)</li>
                             </ul>
                         </div>
                     </div>
+
+                    <h3>Chemical and Technical Terms</h3>
+                    <div class="chemical-terms">
+                        <div class="chem-rule">
+                            <h4>🧪 Chemical Names</h4>
+                            <p>Generally, chemical formulas and common chemical names are not italicized:</p>
+                            <ul>
+                                <li>H₂O (water)</li>
+                                <li>NaCl (sodium chloride)</li>
+                                <li>glucose, acetone, benzene</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="chem-rule">
+                            <h4>⚙️ Technical Terms</h4>
+                            <p>Technical terms are usually not italicized unless they're foreign or being defined:</p>
+                            <ul>
+                                <li>bandwidth, algorithm, protocol</li>
+                                <li>But: The concept of <em>Gestalt</em> in design...</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Field-Specific Guidelines</h3>
+                    <div class="field-guidelines">
+                        <div class="field">
+                            <h4>🧬 Biology</h4>
+                            <ul>
+                                <li>Species names: always italicized</li>
+                                <li>Gene names: varies by organism (check style guide)</li>
+                                <li>Protein names: usually not italicized</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="field">
+                            <h4>🧮 Mathematics</h4>
+                            <ul>
+                                <li>Variables: italicized</li>
+                                <li>Functions: italicized (<em>f(x)</em>)</li>
+                                <li>Constants: may vary (π, <em>e</em>)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="field">
+                            <h4>🏥 Medicine</h4>
+                            <ul>
+                                <li>Disease organisms: italicized</li>
+                                <li>Drug names: not italicized</li>
+                                <li>Anatomical terms: usually not italicized</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Discipline-Specific Rules</h4>
+                        <p>Different scientific disciplines have specific style guides (APA, ACS, AMA, etc.). Always check the appropriate style guide for your field, as rules can vary significantly.</p>
+                    </div>
                 </div>
-                
-                <div class="quiz-panel" id="quiz-legal-cases"></div>
-                
+
+                <div class="quiz-panel" id="quiz-technical-terms"></div>
+
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('legal-cases')">
-                        Complete Chapter
+                    <button class="btn btn-primary" onclick="completeSection('technical-terms')">
+                        Mark as Complete
+                    </button>
+                </div>
+            </section>
+
+            <section id="legal-references" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.06 Legal References</h2>
+                    
+                    <div class="info-box">
+                        <h3>⚖️ Legal Documentation Standards</h3>
+                        <p>Legal writing has specific conventions for using italics in case names, statutes, and legal documents.</p>
+                    </div>
+
+                    <h3>Case Names</h3>
+                    <div class="case-names">
+                        <div class="case-rule">
+                            <h4>Always Italicize Case Names</h4>
+                            <p>Legal case names are conventionally italicized in legal writing:</p>
+                            <div class="case-examples">
+                                <ul>
+                                    <li><em>Brown v. Board of Education</em></li>
+                                    <li><em>R. v. Morgentaler</em></li>
+                                    <li><em>Reference re Secession of Quebec</em></li>
+                                    <li><em>Donoghue v. Stevenson</em></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="case-formatting">
+                            <h4>Case Name Formatting</h4>
+                            <div class="format-rules">
+                                <div class="format-item">
+                                    <span class="rule">Full Citation:</span>
+                                    <span class="example"><em>R. v. Oakes</em>, [1986] 1 S.C.R. 103</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="rule">In Text:</span>
+                                    <span class="example">The court in <em>Oakes</em> established...</span>
+                                </div>
+                                <div class="format-item">
+                                    <span class="rule">Parenthetical:</span>
+                                    <span class="example">The test was established (<em>R. v. Oakes</em>)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Statutes and Legislation</h3>
+                    <div class="statutes">
+                        <div class="statute-rule">
+                            <h4>Statute Names</h4>
+                            <p>Full statute names may be italicized, but common abbreviations are not:</p>
+                            <div class="statute-examples">
+                                <div class="comparison-pair">
+                                    <span class="full">Full name: <em>Canadian Charter of Rights and Freedoms</em></span>
+                                    <span class="short">Short form: Charter</span>
+                                </div>
+                                <div class="comparison-pair">
+                                    <span class="full">Full name: <em>Criminal Code of Canada</em></span>
+                                    <span class="short">Short form: Criminal Code</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="statute-sections">
+                            <h4>Section References</h4>
+                            <p>Section numbers and references are not italicized:</p>
+                            <ul>
+                                <li>Section 15 of the Charter</li>
+                                <li>s. 718.2(a) of the Criminal Code</li>
+                                <li>Subsection 2(b)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Legal Documents</h3>
+                    <div class="legal-docs">
+                        <div class="doc-category">
+                            <h4>📋 Court Documents</h4>
+                            <p>Names of specific legal documents may be italicized:</p>
+                            <ul>
+                                <li><em>Statement of Claim</em></li>
+                                <li><em>Notice of Motion</em></li>
+                                <li><em>Factum</em></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="doc-category">
+                            <h4>📖 Legal Publications</h4>
+                            <p>Legal texts and publications follow standard title rules:</p>
+                            <ul>
+                                <li><em>Canadian Constitutional Law</em> (book)</li>
+                                <li><em>Canadian Bar Review</em> (journal)</li>
+                                <li>"Constitutional Interpretation" (article)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Latin Legal Terms</h3>
+                    <div class="latin-terms">
+                        <div class="latin-rule">
+                            <h4>Italicize Latin Phrases</h4>
+                            <p>Latin terms commonly used in legal writing are italicized:</p>
+                            <div class="latin-examples">
+                                <div class="term-grid">
+                                    <div class="term-item">
+                                        <span class="latin"><em>stare decisis</em></span>
+                                        <span class="meaning">let the decision stand</span>
+                                    </div>
+                                    <div class="term-item">
+                                        <span class="latin"><em>res ipsa loquitur</em></span>
+                                        <span class="meaning">the thing speaks for itself</span>
+                                    </div>
+                                    <div class="term-item">
+                                        <span class="latin"><em>habeas corpus</em></span>
+                                        <span class="meaning">have the body</span>
+                                    </div>
+                                    <div class="term-item">
+                                        <span class="latin"><em>ultra vires</em></span>
+                                        <span class="meaning">beyond the powers</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="established-latin">
+                            <h4>Established Terms</h4>
+                            <p>Some Latin terms are so common in legal writing they may not need italics:</p>
+                            <ul>
+                                <li>per se</li>
+                                <li>inter alia</li>
+                                <li>prima facie</li>
+                            </ul>
+                            <p class="note">Check your jurisdiction's style guide for specific preferences.</p>
+                        </div>
+                    </div>
+
+                    <h3>Citation Formats</h3>
+                    <div class="citation-formats">
+                        <div class="format-example">
+                            <h4>Complete Citation</h4>
+                            <div class="citation">
+                                <em>Hunter v. Southam Inc.</em>, [1984] 2 S.C.R. 145, 11 D.L.R. (4th) 641.
+                            </div>
+                        </div>
+                        
+                        <div class="format-example">
+                            <h4>Subsequent Reference</h4>
+                            <div class="citation">
+                                <em>Hunter</em>, <em>supra</em> note 15 at para. 17.
+                            </div>
+                        </div>
+                        
+                        <div class="format-example">
+                            <h4>In Text Reference</h4>
+                            <div class="citation">
+                                The Supreme Court of Canada in <em>Hunter v. Southam</em> held that...
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Jurisdiction Matters</h4>
+                        <p>Legal citation styles vary by jurisdiction and court system. Always follow the specific citation guide required by your court, law school, or legal organization (e.g., McGill Guide in Canada, Bluebook in the US).</p>
+                    </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-legal-references"></div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('legal-references')">
+                        Mark as Complete
+                    </button>
+                </div>
+            </section>
+
+            <section id="special-uses" class="content-section" style="display: none;">
+                <div class="section-content">
+                    <h2>6.07 Special Uses</h2>
+                    
+                    <div class="info-box">
+                        <h3>🎭 Unique Applications</h3>
+                        <p>Italics have several specialized uses in different contexts and types of writing.</p>
+                    </div>
+
+                    <h3>Words as Words (Metalinguistic Use)</h3>
+                    <div class="metalinguistic">
+                        <div class="meta-rule">
+                            <h4>Italicize Words Being Discussed</h4>
+                            <p>When discussing words, letters, or phrases as linguistic objects, use italics:</p>
+                            <div class="meta-examples">
+                                <div class="example-item">
+                                    <span class="text">The word <em>serendipity</em> comes from a Persian fairy tale.</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="text">The letter <em>e</em> is the most common in English.</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="text">The phrase <em>jumping the shark</em> originated from a TV show.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="meta-context">
+                            <h4>Common Contexts</h4>
+                            <ul>
+                                <li>Grammar and style guides</li>
+                                <li>Dictionary definitions</li>
+                                <li>Language learning materials</li>
+                                <li>Linguistic analysis</li>
+                                <li>Editing and proofreading discussions</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Stage Directions and Scripts</h3>
+                    <div class="stage-directions">
+                        <div class="script-rule">
+                            <h4>Italicize Stage Directions</h4>
+                            <p>In plays, screenplays, and scripts, stage directions are italicized:</p>
+                            <div class="script-example">
+                                <div class="script-text">
+                                    HAMLET: To be or not to be, that is the question.<br>
+                                    <em>(pauses, looking at the skull)</em><br>
+                                    Whether 'tis nobler in the mind to suffer...
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="script-formats">
+                            <h4>Other Script Elements</h4>
+                            <ul>
+                                <li><em>Enter MACBETH</em></li>
+                                <li><em>Lights fade to black</em></li>
+                                <li><em>Sound of thunder</em></li>
+                                <li><em>She exits stage left</em></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Introducing New Terms</h3>
+                    <div class="new-terms">
+                        <div class="intro-rule">
+                            <h4>Highlighting New Terminology</h4>
+                            <p>When introducing technical terms or concepts for the first time:</p>
+                            <div class="intro-examples">
+                                <div class="example-item">
+                                    <span class="text">This process is called <em>photosynthesis</em>, the conversion of light energy into chemical energy.</span>
+                                </div>
+                                <div class="example-item">
+                                    <span class="text">The concept of <em>cognitive dissonance</em> explains the discomfort felt when holding contradictory beliefs.</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="subsequent-use">
+                            <h4>Subsequent References</h4>
+                            <p>After the first introduction, the term typically returns to regular formatting:</p>
+                            <div class="example">
+                                "First use: <em>Machine learning</em> is a subset of artificial intelligence...<br>
+                                Later use: Machine learning algorithms require large datasets..."
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Identifying Information</h3>
+                    <div class="identifying-info">
+                        <div class="id-rule">
+                            <h4>Names of Vehicles and Vessels</h4>
+                            <p>Names of specific ships, aircraft, spacecraft, and trains are italicized:</p>
+                            <div class="vehicle-examples">
+                                <div class="vehicle-category">
+                                    <h5>Ships</h5>
+                                    <ul>
+                                        <li><em>HMCS Halifax</em></li>
+                                        <li><em>Titanic</em></li>
+                                        <li><em>Queen Mary 2</em></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="vehicle-category">
+                                    <h5>Aircraft</h5>
+                                    <ul>
+                                        <li><em>Spirit of St. Louis</em></li>
+                                        <li><em>Air Force One</em></li>
+                                        <li><em>Enola Gay</em></li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="vehicle-category">
+                                    <h5>Spacecraft</h5>
+                                    <ul>
+                                        <li><em>Apollo 11</em></li>
+                                        <li><em>Voyager 1</em></li>
+                                        <li><em>International Space Station</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="generic-vehicles">
+                            <h4>Generic References</h4>
+                            <p>Generic vehicle types are not italicized:</p>
+                            <ul>
+                                <li>The aircraft landed safely</li>
+                                <li>Several ships were in port</li>
+                                <li>The spacecraft was launched</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3>Digital and Modern Usage</h3>
+                    <div class="digital-usage">
+                        <div class="digital-rule">
+                            <h4>Website and App Names</h4>
+                            <p>Major websites and applications are typically italicized:</p>
+                            <ul>
+                                <li><em>Facebook</em>, <em>Twitter</em>, <em>Instagram</em></li>
+                                <li><em>Google</em>, <em>YouTube</em>, <em>Wikipedia</em></li>
+                                <li><em>Microsoft Word</em>, <em>Adobe Photoshop</em></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="email-formatting">
+                            <h4>Email and Digital Communication</h4>
+                            <p>In plain text emails where italics aren't available, use alternatives:</p>
+                            <div class="email-alternatives">
+                                <div class="alt-method">
+                                    <span class="method">Underscores:</span>
+                                    <span class="example">_The Great Gatsby_</span>
+                                </div>
+                                <div class="alt-method">
+                                    <span class="method">Asterisks:</span>
+                                    <span class="example">*The Great Gatsby*</span>
+                                </div>
+                                <div class="alt-method">
+                                    <span class="method">Capitals:</span>
+                                    <span class="example">THE GREAT GATSBY</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="success-box">
+                        <h4>🎉 Italics Mastery Complete!</h4>
+                        <p>You now understand the full range of italic usage in professional writing. Use this knowledge to add clarity, emphasis, and proper formatting to your documents while maintaining readability and professional standards.</p>
+                    </div>
+                </div>
+
+                <div class="quiz-panel" id="quiz-special-uses"></div>
+
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('special-uses')">
+                        Complete Chapter 6!
                     </button>
                 </div>
             </section>
@@ -335,58 +1045,54 @@
         </div>
     </footer>
 
+    <!-- Include JavaScript modules -->
+    <script type="module" src="../shared/js/router.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
+
     <script type="module">
-        import { router } from '../shared/js/router.js';
-        import { getProgress, setProgress } from '../shared/js/progress.js';
+        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
         
         const CHAPTER_ID = 'ch06';
         const sections = [
-            { id: 'introduction', title: '6.01 Introduction' },
+            { id: 'basic-principles', title: '6.01 Basic Principles' },
             { id: 'emphasis', title: '6.02 Emphasis' },
-            { id: 'titles', title: '6.03 Titles' },
-            { id: 'foreign-words', title: '6.04 Foreign Words' },
-            { id: 'legal-cases', title: '6.05 Legal Cases' }
+            { id: 'foreign-words', title: '6.03 Foreign Words & Phrases' },
+            { id: 'titles-publications', title: '6.04 Titles & Publications' },
+            { id: 'technical-terms', title: '6.05 Technical & Scientific Terms' },
+            { id: 'legal-references', title: '6.06 Legal References' },
+            { id: 'special-uses', title: '6.07 Special Uses' }
         ];
         
-        // Initialize progress bar
-        function updateProgressBar() {
-            const progress = getProgress(CHAPTER_ID);
-            const chapterProgress = progress || {};
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
             
-            document.getElementById('chapterProgress').style.width = percentage + '%';
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                    updateActiveTab(this);
+                });
+            });
+            
+            // Show first section by default
+            showSection('basic-principles');
         }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                showSection(nextSection.id);
-                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
         
         function showSection(sectionId) {
             // Hide all sections
             document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
+                section.style.display = 'none';
             });
             
             // Show target section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
-                targetSection.classList.add('active');
+                targetSection.style.display = 'block';
             }
         }
         
@@ -394,36 +1100,46 @@
             document.querySelectorAll('.tab-link').forEach(link => {
                 link.classList.remove('active');
             });
-            if (activeLink) {
-                activeLink.classList.add('active');
+            activeLink.classList.add('active');
+        }
+        
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const total = sections.length;
+            const percentage = Math.round((completed / total) * 100);
+            
+            const progressCircle = document.querySelector('.progress-circle');
+            const progressText = document.querySelector('.progress-text');
+            
+            if (progressCircle && progressText) {
+                const circumference = 2 * Math.PI * 25; // r=25
+                const offset = circumference - (percentage / 100) * circumference;
+                progressCircle.style.strokeDashoffset = offset;
+                progressText.textContent = `${percentage}%`;
             }
         }
         
-        // Section navigation
-        function initSectionNavigation() {
-            const tabs = document.querySelectorAll('.tab-link');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const sectionId = tab.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(tab);
-                    window.location.hash = sectionId;
-                });
-            });
+        // Mark section as complete
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
             
-            // Handle initial hash
-            const hash = window.location.hash.replace('#', '');
-            if (hash && document.getElementById(hash)) {
-                const tab = document.querySelector(`[data-section="${hash}"]`);
-                if (tab) {
-                    showSection(hash);
-                    updateActiveTab(tab);
-                }
-            } else {
-                // Default to first section
-                showSection('introduction');
-                updateActiveTab(tabs[0]);
+            // Show completion message
+            const currentSection = document.getElementById(sectionId);
+            const button = currentSection.querySelector('.btn-primary');
+            button.textContent = '✓ Completed';
+            button.classList.add('completed');
+        }
+        
+        // Show completion modal if chapter is finished
+        function checkChapterCompletion() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            
+            if (completed === sections.length) {
+                showCompletionModal();
             }
         }
         
@@ -432,8 +1148,8 @@
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h3>🎉 Chapter 6 Complete!</h3>
-                    <p>Your documents will now use emphasis effectively and appropriately.</p>
+                    <h2>🎉 Chapter 6 Complete!</h2>
+                    <p>Excellent work! You've mastered the proper use of italics. Your writing will be clearer and more professional.</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
