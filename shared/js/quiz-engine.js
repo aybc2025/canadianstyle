@@ -142,15 +142,15 @@ export class QuizEngine {
         
         return `
             <div class="mcq-container">
-                ${isMultiSelect ? '<p class="instruction">Select all correct answers:</p>' : ''}
-                <div class="options-list">
+                ${isMultiSelect ? 
+                    '<p class="mcq-instructions">Select all correct answers:</p>' : 
+                    '<p class="mcq-instructions">Select the best answer:</p>'
+                }
+                <div class="mcq-options">
                     ${question.options.map((option, index) => `
-                        <label class="option-label">
-                            <input type="${inputType}" 
-                                   name="question-${question.id}" 
-                                   value="${index}"
-                                   class="option-input">
-                            <span class="option-text">${option.label}</span>
+                        <label class="mcq-option">
+                            <input type="${inputType}" name="question-${question.id}" value="${index}">
+                            <span class="option-label">${option.label}</span>
                         </label>
                     `).join('')}
                 </div>
@@ -162,11 +162,19 @@ export class QuizEngine {
      * Render Fill in the Blank Question
      */
     renderFillBlank(question) {
+        const parts = question.text.split('____');
+        
         return `
             <div class="fill-blank-container">
-                <div class="blank-sentence">
-                    ${question.stem.replace('___', '<input type="text" class="blank-input" placeholder="Enter your answer">')}
+                <div class="fill-blank-sentence">
+                    ${parts.map((part, index) => {
+                        if (index === parts.length - 1) {
+                            return part;
+                        }
+                        return `${part}<input type="text" class="blank-input" placeholder="?" data-blank="${index}">`;
+                    }).join('')}
                 </div>
+                ${question.hint ? `<p class="hint">💡 Hint: ${question.hint}</p>` : ''}
             </div>
         `;
     }
@@ -175,7 +183,8 @@ export class QuizEngine {
      * Render Matching Question
      */
     renderMatching(question) {
-        const rightItems = this.shuffleArray([...question.pairs.map(pair => pair.right)]);
+        const leftItems = question.pairs.map(pair => pair.left);
+        const rightItems = this.shuffleArray(question.pairs.map(pair => pair.right));
         
         return `
             <div class="matching-container">
@@ -183,11 +192,12 @@ export class QuizEngine {
                     <p>Match each item on the left with the correct item on the right:</p>
                 </div>
                 <div class="matching-pairs">
-                    ${question.pairs.map((pair, index) => `
-                        <div class="matching-row">
-                            <div class="matching-left">${pair.left}</div>
-                            <div class="matching-arrow">→</div>
-                            <div class="matching-right">
+                    ${question.pairs.map((pair, pairIndex) => `
+                        <div class="matching-pair">
+                            <div class="left-item">
+                                <span>${pair.left}</span>
+                            </div>
+                            <div class="right-item">
                                 <select class="matching-select" data-left-item="${pair.left}">
                                     <option value="">Choose...</option>
                                     ${rightItems.map((item, itemIndex) => `
@@ -203,10 +213,34 @@ export class QuizEngine {
     }
 
     /**
-     * Render Drag and Drop Question
+     * Render Drag and Drop Question - FIXED VERSION
      */
     renderDragDrop(question) {
-        const shuffledItems = this.shuffleArray([...question.items]);
+        // Handle different possible data structures
+        let itemsToRender = [];
+        
+        if (question.items && Array.isArray(question.items)) {
+            // Standard items array
+            itemsToRender = [...question.items];
+        } else if (question.options && Array.isArray(question.options)) {
+            // Alternative: options array
+            itemsToRender = question.options.map((opt, idx) => ({
+                text: opt.label || opt,
+                order: opt.order || idx + 1
+            }));
+        } else if (question.sequence && Array.isArray(question.sequence)) {
+            // Alternative: sequence array
+            itemsToRender = question.sequence.map((item, idx) => ({
+                text: item,
+                order: idx + 1
+            }));
+        } else {
+            // Fallback: create from any available data
+            console.warn('No suitable items found for drag-drop question, creating fallback');
+            return `<div class="error-message">Error: Invalid drag-drop question data</div>`;
+        }
+        
+        const shuffledItems = this.shuffleArray([...itemsToRender]);
         
         return `
             <div class="drag-drop-container">
@@ -215,7 +249,7 @@ export class QuizEngine {
                 </div>
                 <div class="sortable-list" id="sortable-${question.id}">
                     ${shuffledItems.map((item, index) => `
-                        <div class="sortable-item" data-order="${item.order}" data-text="${item.text}">
+                        <div class="sortable-item" draggable="true" data-order="${item.order}" data-text="${item.text}">
                             <span class="drag-handle">⋮⋮</span>
                             <span class="item-text">${item.text}</span>
                         </div>
@@ -229,17 +263,8 @@ export class QuizEngine {
      * Render Error Spotting Question
      */
     renderErrorSpot(question) {
-        // Split text and highlight the error position
-        const text = question.text;
-        const errorPosition = question.errorPosition;
-        
-        let highlightedText = text;
-        if (errorPosition && text.includes(errorPosition)) {
-            highlightedText = text.replace(
-                errorPosition,
-                `<span class="error-spot-target" data-error="${errorPosition}">${errorPosition}</span>`
-            );
-        }
+        // Split text and make words clickable
+        const words = question.text.split(/(\s+)/);
         
         return `
             <div class="error-spot-container">
@@ -247,7 +272,10 @@ export class QuizEngine {
                     <p>Click on the error in the following text:</p>
                 </div>
                 <div class="error-spot-text">
-                    ${highlightedText}
+                    ${words.map(word => {
+                        if (word.trim() === '') return word; // preserve whitespace
+                        return `<span class="clickable-word" data-word="${word.trim()}">${word}</span>`;
+                    }).join('')}
                 </div>
                 <div class="error-spot-feedback" style="display: none;"></div>
             </div>
@@ -269,23 +297,26 @@ export class QuizEngine {
     }
 
     /**
-     * Setup drag and drop functionality
+     * Setup drag and drop functionality - IMPROVED VERSION
      */
     setupDragAndDrop(question) {
         const sortableList = this.container.querySelector(`#sortable-${question.id}`);
         if (!sortableList) return;
         
-        // Simple drag and drop implementation
         let draggedElement = null;
         
         sortableList.addEventListener('dragstart', (e) => {
-            draggedElement = e.target.closest('.sortable-item');
-            e.target.style.opacity = '0.5';
+            if (e.target.classList.contains('sortable-item')) {
+                draggedElement = e.target;
+                e.target.style.opacity = '0.5';
+            }
         });
         
         sortableList.addEventListener('dragend', (e) => {
-            e.target.style.opacity = '';
-            draggedElement = null;
+            if (e.target.classList.contains('sortable-item')) {
+                e.target.style.opacity = '';
+                draggedElement = null;
+            }
         });
         
         sortableList.addEventListener('dragover', (e) => {
@@ -294,79 +325,36 @@ export class QuizEngine {
         
         sortableList.addEventListener('drop', (e) => {
             e.preventDefault();
-            const dropTarget = e.target.closest('.sortable-item');
-            if (dropTarget && draggedElement && dropTarget !== draggedElement) {
-                const rect = dropTarget.getBoundingClientRect();
-                const midpoint = rect.top + rect.height / 2;
+            if (!draggedElement) return;
+            
+            const targetElement = e.target.closest('.sortable-item');
+            if (targetElement && targetElement !== draggedElement) {
+                const allItems = Array.from(sortableList.children);
+                const draggedIndex = allItems.indexOf(draggedElement);
+                const targetIndex = allItems.indexOf(targetElement);
                 
-                if (e.clientY < midpoint) {
-                    sortableList.insertBefore(draggedElement, dropTarget);
+                if (draggedIndex < targetIndex) {
+                    targetElement.parentNode.insertBefore(draggedElement, targetElement.nextSibling);
                 } else {
-                    sortableList.insertBefore(draggedElement, dropTarget.nextSibling);
+                    targetElement.parentNode.insertBefore(draggedElement, targetElement);
                 }
             }
-        });
-        
-        // Make items draggable
-        sortableList.querySelectorAll('.sortable-item').forEach(item => {
-            item.draggable = true;
         });
     }
 
     /**
-     * Setup error spotting functionality - FIXED VERSION
+     * Setup error spotting functionality
      */
     setupErrorSpotting(question) {
-        const feedbackDiv = this.container.querySelector('.error-spot-feedback');
+        const clickableWords = this.container.querySelectorAll('.clickable-word');
         
-        // Validate that we have the required data
-        if (!question.errorPosition) {
-            console.warn('Error spotting question missing errorPosition:', question);
-            return;
-        }
-        
-        // Make all words clickable for error spotting
-        const textContainer = this.container.querySelector('.error-spot-text');
-        if (!textContainer) {
-            console.warn('Error spotting container not found');
-            return;
-        }
-        
-        const words = textContainer.textContent.split(/(\s+)/);
-        
-        textContainer.innerHTML = words.map(word => {
-            if (word.trim()) {
-                // Safe comparison with proper null checking
-                const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
-                const isError = word.trim() === errorPosition;
-                return `<span class="clickable-word ${isError ? 'error-word' : ''}" data-word="${word.trim()}">${word}</span>`;
-            }
-            return word;
-        }).join('');
-        
-        // Add click listeners
-        textContainer.addEventListener('click', (e) => {
-            if (e.target.classList.contains('clickable-word')) {
-                const clickedWord = e.target.dataset.word;
-                const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
-                const isCorrect = clickedWord === errorPosition;
-                
+        clickableWords.forEach(word => {
+            word.addEventListener('click', () => {
                 // Remove previous selections
-                textContainer.querySelectorAll('.selected').forEach(el => el.classList.remove('selected'));
-                textContainer.querySelectorAll('.incorrect-selection').forEach(el => el.classList.remove('incorrect-selection'));
-                
-                // Mark selection
-                e.target.classList.add(isCorrect ? 'selected' : 'incorrect-selection');
-                
-                // Show feedback
-                if (feedbackDiv) {
-                    feedbackDiv.style.display = 'block';
-                    const correction = question.correction || 'the correct form';
-                    feedbackDiv.innerHTML = isCorrect ? 
-                        `<div class="feedback correct">✅ Correct! "${clickedWord}" should be "${correction}"</div>` :
-                        `<div class="feedback incorrect">❌ Incorrect. Try again!</div>`;
-                }
-            }
+                clickableWords.forEach(w => w.classList.remove('selected'));
+                // Select clicked word
+                word.classList.add('selected');
+            });
         });
     }
 
@@ -374,66 +362,67 @@ export class QuizEngine {
      * Attach navigation event listeners
      */
     attachNavigationListeners() {
-        const nextBtn = this.container.querySelector('.quiz-next');
         const prevBtn = this.container.querySelector('.quiz-prev');
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                this.nextQuestion();
-            });
-        }
+        const nextBtn = this.container.querySelector('.quiz-next');
 
         if (prevBtn) {
             prevBtn.addEventListener('click', () => {
                 this.previousQuestion();
             });
         }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                const answer = this.collectCurrentAnswer();
+                if (answer) {
+                    this.storeAnswer(this.questions[this.currentQuestionIndex].id, answer);
+                }
+                this.nextQuestion();
+            });
+        }
     }
 
     /**
-     * Move to next question
+     * Navigate to next question
      */
     nextQuestion() {
-        const question = this.questions[this.currentQuestionIndex];
-        const answer = this.collectAnswer(question);
-        
-        if (!answer) {
-            this.showError('Please answer the question before continuing.');
-            return;
-        }
-
-        // Store the answer
-        this.answers[this.currentQuestionIndex] = answer;
-
-        // Move to next question or complete quiz
-        if (this.currentQuestionIndex < this.questions.length - 1) {
-            this.currentQuestionIndex++;
-            this.renderCurrentQuestion();
-        } else {
-            this.completeQuiz();
-        }
+        this.currentQuestionIndex++;
+        this.renderCurrentQuestion();
     }
 
     /**
-     * Move to previous question
+     * Navigate to previous question
      */
     previousQuestion() {
         if (this.currentQuestionIndex > 0) {
             this.currentQuestionIndex--;
             this.renderCurrentQuestion();
-            
-            // Restore previous answer if exists
-            const previousAnswer = this.answers[this.currentQuestionIndex];
-            if (previousAnswer) {
-                this.restoreAnswer(this.questions[this.currentQuestionIndex], previousAnswer);
-            }
+        }
+    }
+
+    /**
+     * Update progress indicators
+     */
+    updateProgress() {
+        const progressFill = this.container.querySelector('.progress-fill');
+        const currentQuestionSpan = this.container.querySelector('.current-question');
+        
+        if (progressFill) {
+            const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
+            progressFill.style.width = `${progress}%`;
+        }
+        
+        if (currentQuestionSpan) {
+            currentQuestionSpan.textContent = `Question ${this.currentQuestionIndex + 1}`;
         }
     }
 
     /**
      * Collect answer from current question
      */
-    collectAnswer(question) {
+    collectCurrentAnswer() {
+        const question = this.questions[this.currentQuestionIndex];
+        
         switch (question.type) {
             case 'mcq':
                 return this.collectMCQAnswer(question);
@@ -454,20 +443,16 @@ export class QuizEngine {
      * Collect MCQ answer
      */
     collectMCQAnswer(question) {
-        const inputs = this.container.querySelectorAll(`input[name="question-${question.id}"]:checked`);
-        if (inputs.length === 0) return null;
+        const checkedInputs = this.container.querySelectorAll(`input[name="question-${question.id}"]:checked`);
+        if (checkedInputs.length === 0) return null;
         
-        const selectedIndices = Array.from(inputs).map(input => parseInt(input.value));
-        const isMultiSelect = question.options.filter(opt => opt.correct).length > 1;
+        const selectedIndices = Array.from(checkedInputs).map(input => parseInt(input.value));
+        const correctIndices = question.options
+            .map((option, index) => option.correct ? index : null)
+            .filter(index => index !== null);
         
-        let isCorrect;
-        if (isMultiSelect) {
-            const correctIndices = question.options.map((opt, idx) => opt.correct ? idx : null).filter(idx => idx !== null);
-            isCorrect = selectedIndices.length === correctIndices.length && 
-                       selectedIndices.every(idx => correctIndices.includes(idx));
-        } else {
-            isCorrect = selectedIndices.length === 1 && question.options[selectedIndices[0]].correct;
-        }
+        const isCorrect = selectedIndices.length === correctIndices.length &&
+                         selectedIndices.every(index => correctIndices.includes(index));
         
         return {
             questionId: question.id,
@@ -478,21 +463,26 @@ export class QuizEngine {
     }
 
     /**
-     * Collect fill-in-the-blank answer
+     * Collect fill-blank answer
      */
     collectFillBlankAnswer(question) {
-        const input = this.container.querySelector('.blank-input');
-        if (!input || !input.value.trim()) return null;
+        const blankInputs = this.container.querySelectorAll('.blank-input');
+        if (blankInputs.length === 0) return null;
         
-        const userAnswer = input.value.trim();
-        const correctAnswers = question.acceptableAnswers || [question.answer];
-        const isCorrect = correctAnswers.some(answer => 
-            answer.toLowerCase() === userAnswer.toLowerCase()
-        );
+        const answers = Array.from(blankInputs).map(input => input.value.trim());
+        if (answers.some(answer => answer === '')) return null;
+        
+        const isCorrect = answers.every((answer, index) => {
+            if (Array.isArray(question.answers)) {
+                return question.answers[index].toLowerCase() === answer.toLowerCase();
+            } else {
+                return question.answer.toLowerCase() === answer.toLowerCase();
+            }
+        });
         
         return {
             questionId: question.id,
-            answer: userAnswer,
+            answers: answers,
             isCorrect: isCorrect,
             type: 'fill-blank'
         };
@@ -503,43 +493,54 @@ export class QuizEngine {
      */
     collectMatchingAnswer(question) {
         const selects = this.container.querySelectorAll('.matching-select');
-        const answers = {};
+        const userMatches = {};
         let allAnswered = true;
         
         selects.forEach(select => {
             const leftItem = select.dataset.leftItem;
-            const selectedRight = select.value;
-            
-            if (!selectedRight) {
+            const rightItem = select.value;
+            if (!rightItem) {
                 allAnswered = false;
                 return;
             }
-            
-            answers[leftItem] = selectedRight;
+            userMatches[leftItem] = rightItem;
         });
         
         if (!allAnswered) return null;
         
-        // Check correctness
         const isCorrect = question.pairs.every(pair => 
-            answers[pair.left] === pair.right
+            userMatches[pair.left] === pair.right
         );
         
         return {
             questionId: question.id,
-            answers: answers,
+            matches: userMatches,
             isCorrect: isCorrect,
             type: 'matching'
         };
     }
 
     /**
-     * Collect drag-drop answer
+     * Collect drag-drop answer - FIXED VERSION
      */
     collectDragDropAnswer(question) {
         const sortableItems = this.container.querySelectorAll('.sortable-item');
+        if (sortableItems.length === 0) return null;
+        
         const userOrder = Array.from(sortableItems).map(item => parseInt(item.dataset.order));
-        const correctOrder = question.items.map(item => item.order).sort((a, b) => a - b);
+        const correctOrder = [];
+        
+        // Determine correct order based on available data structure
+        if (question.items && Array.isArray(question.items)) {
+            correctOrder.push(...question.items.map(item => item.order).sort((a, b) => a - b));
+        } else if (question.correctOrder && Array.isArray(question.correctOrder)) {
+            correctOrder.push(...question.correctOrder);
+        } else {
+            // Fallback: assume sequential order
+            for (let i = 1; i <= sortableItems.length; i++) {
+                correctOrder.push(i);
+            }
+        }
         
         const isCorrect = userOrder.every((order, index) => order === correctOrder[index]);
         
@@ -559,8 +560,9 @@ export class QuizEngine {
         if (!selected) return null;
         
         const selectedWord = selected.dataset.word;
-        const errorPosition = question.errorPosition ? question.errorPosition.trim() : '';
-        const isCorrect = selectedWord === errorPosition;
+        const errorWord = question.errorWord || question.error || '';
+        const isCorrect = selectedWord.toLowerCase().replace(/[.,!?;:]/g, '') === 
+                         errorWord.toLowerCase().replace(/[.,!?;:]/g, '');
         
         return {
             questionId: question.id,
@@ -618,23 +620,26 @@ export class QuizEngine {
                 
                 <div class="results-message">
                     ${isPassing ? 
-                        '<p class="success-message">Excellent work! You\'ve mastered this section.</p>' :
-                        '<p class="retry-message">Keep studying! You need 80% to pass. Review the material and try again.</p>'
+                        '<p class="pass-message">Excellent work! You have a strong understanding of this topic.</p>' :
+                        '<p class="fail-message">Keep studying! Review the material and try again.</p>'
                     }
                 </div>
                 
                 <div class="results-breakdown">
                     <h4>Question Breakdown:</h4>
-                    ${this.answers.map((answer, index) => {
-                        const question = this.questions[index];
-                        return `
-                            <div class="result-item ${answer && answer.isCorrect ? 'correct' : 'incorrect'}">
-                                <span class="question-num">Q${index + 1}</span>
-                                <span class="result-icon">${answer && answer.isCorrect ? '✅' : '❌'}</span>
-                                <span class="result-text">${question.stem.substring(0, 50)}...</span>
-                            </div>
-                        `;
-                    }).join('')}
+                    <div class="question-results">
+                        ${this.questions.map((question, index) => {
+                            const answer = this.answers[index];
+                            const status = answer && answer.isCorrect ? '✅' : '❌';
+                            return `
+                                <div class="question-result">
+                                    <span class="question-number">Q${index + 1}</span>
+                                    <span class="question-status">${status}</span>
+                                    <span class="question-type">${question.type}</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
                 </div>
             </div>
         `;
@@ -642,31 +647,27 @@ export class QuizEngine {
         quizActions.innerHTML = `
             <div class="quiz-final-actions">
                 <button class="btn btn-outline quiz-restart">Try Again</button>
-                ${isPassing ? '<button class="btn btn-primary quiz-continue">Continue</button>' : ''}
+                <button class="btn btn-primary quiz-continue">Continue Learning</button>
             </div>
         `;
         
         // Attach final action listeners
-        const restartBtn = this.container.querySelector('.quiz-restart');
-        const continueBtn = this.container.querySelector('.quiz-continue');
+        this.container.querySelector('.quiz-restart')?.addEventListener('click', () => {
+            this.restartQuiz();
+        });
         
-        if (restartBtn) {
-            restartBtn.addEventListener('click', () => {
-                this.restart();
-            });
-        }
-        
-        if (continueBtn) {
-            continueBtn.addEventListener('click', () => {
-                this.emitCompletionEvent();
-            });
-        }
+        this.container.querySelector('.quiz-continue')?.addEventListener('click', () => {
+            // This will be handled by the parent page
+            this.container.dispatchEvent(new CustomEvent('quizComplete', {
+                detail: { score: this.score, passed: isPassing }
+            }));
+        });
     }
 
     /**
      * Restart the quiz
      */
-    restart() {
+    restartQuiz() {
         this.currentQuestionIndex = 0;
         this.answers = [];
         this.score = 0;
@@ -681,77 +682,23 @@ export class QuizEngine {
      */
     saveProgress() {
         try {
-            const progressKey = `quiz-progress-${this.chapterId}-${this.sectionId}`;
-            const progressData = {
+            const progressKey = `csProgress`;
+            const currentProgress = JSON.parse(localStorage.getItem(progressKey) || '{}');
+            
+            if (!currentProgress[this.chapterId]) {
+                currentProgress[this.chapterId] = {};
+            }
+            
+            currentProgress[this.chapterId][this.sectionId] = {
+                completed: this.isComplete,
                 score: this.score,
-                passed: this.score >= 80,
-                completedAt: new Date().toISOString(),
-                attempts: (JSON.parse(localStorage.getItem(progressKey))?.attempts || 0) + 1
+                timestamp: Date.now()
             };
             
-            localStorage.setItem(progressKey, JSON.stringify(progressData));
+            localStorage.setItem(progressKey, JSON.stringify(currentProgress));
         } catch (error) {
-            console.warn('Could not save quiz progress:', error);
+            console.warn('Could not save progress:', error);
         }
-    }
-
-    /**
-     * Emit completion event for progress tracking
-     */
-    emitCompletionEvent() {
-        const event = new CustomEvent('quiz-completed', {
-            detail: {
-                chapterId: this.chapterId,
-                sectionId: this.sectionId,
-                score: this.score,
-                percentage: this.score,
-                passed: this.score >= 80,
-                answers: this.answers,
-                timeSpent: Date.now() - this.startTime
-            }
-        });
-        window.dispatchEvent(event);
-    }
-
-    /**
-     * Update progress indicator
-     */
-    updateProgress() {
-        const currentQuestionSpan = this.container.querySelector('.current-question');
-        const progressFill = this.container.querySelector('.progress-fill');
-        
-        if (currentQuestionSpan) {
-            currentQuestionSpan.textContent = `Question ${this.currentQuestionIndex + 1}`;
-        }
-        
-        if (progressFill) {
-            const percentage = ((this.currentQuestionIndex) / this.questions.length) * 100;
-            progressFill.style.width = `${percentage}%`;
-        }
-    }
-
-    /**
-     * Show error message
-     */
-    showError(message) {
-        const existingError = this.container.querySelector('.quiz-error');
-        if (existingError) {
-            existingError.remove();
-        }
-        
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'quiz-error';
-        errorDiv.innerHTML = `<p class="error-message">⚠️ ${message}</p>`;
-        
-        const quizActions = this.container.querySelector('.quiz-actions');
-        quizActions.parentNode.insertBefore(errorDiv, quizActions);
-        
-        // Remove error after 3 seconds
-        setTimeout(() => {
-            if (errorDiv.parentNode) {
-                errorDiv.remove();
-            }
-        }, 3000);
     }
 
     /**
@@ -767,7 +714,7 @@ export class QuizEngine {
     }
 
     /**
-     * Restore answer to question (for navigation)
+     * Restore answer from previous attempt
      */
     restoreAnswer(question, answer) {
         if (!answer) return;
@@ -781,7 +728,7 @@ export class QuizEngine {
                 break;
             case 'fill-blank':
                 const input = this.container.querySelector('.blank-input');
-                if (input) input.value = answer.answer;
+                if (input && answer.answers) input.value = answer.answers[0];
                 break;
             // Add other types as needed
         }
@@ -792,7 +739,7 @@ export class QuizEngine {
      */
     static async loadQuizData(chapterId) {
         try {
-            const response = await fetch(`../data/quizzes/${chapterId}-quiz.json`);
+            const response = await fetch(`../data/${chapterId}-quiz.json`);
             if (!response.ok) {
                 throw new Error(`Quiz data not found for ${chapterId}`);
             }
