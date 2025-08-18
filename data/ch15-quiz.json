@@ -1,285 +1,250 @@
 {
+  "id": "ch15",
+  "title": "Geographical Names",
+  "description": "Master the Canadian conventions for geographical names and places",
   "sections": {
     "canadian-places": {
-      "id": "ch15-canadian-places",
-      "title": "Canadian Places",
+      "id": "canadian-places",
+      "title": "Canadian Place Names Quiz",
       "questions": [
         {
-          "id": "q1",
+          "id": "can-q1",
           "type": "mcq",
-          "stem": "What is the authoritative source for Canadian place names?",
+          "stem": "Which is the correct way to write Canadian province abbreviations in formal documents?",
           "options": [
-            { "label": "Statistics Canada", "correct": false },
-            { "label": "Canadian Geographical Names Database", "correct": true },
-            { "label": "Atlas of Canada", "correct": false },
-            { "label": "Provincial tourism websites", "correct": false }
+            {"label": "Alta., B.C., Man.", "correct": false},
+            {"label": "AB, BC, MB", "correct": true},
+            {"label": "Alberta, British Columbia, Manitoba", "correct": true},
+            {"label": "Both B and C are acceptable", "correct": true}
           ],
-          "rationale": "The Canadian Geographical Names Database is the official source for authorized place names.",
-          "ref": "§15.02"
-        },
-        {
-          "id": "q2",
-          "type": "mcq",
-          "stem": "How should Canadian place names be written?",
-          "options": [
-            { "label": "As they appear on maps", "correct": false },
-            { "label": "According to local preference", "correct": false },
-            { "label": "According to official government sources", "correct": true },
-            { "label": "In the most common spelling", "correct": false }
-          ],
-          "rationale": "Use official spellings from government geographical naming authorities.",
-          "ref": "§15.02"
-        },
-        {
-          "id": "q3",
-          "type": "fill-blank",
-          "stem": "The correct spelling is _____ not 'Winnepeg'.",
-          "answer": "Winnipeg",
-          "rationale": "Winnipeg (one 'n') is the correct official spelling of Manitoba's capital.",
-          "ref": "§15.02"
-        },
-        {
-          "id": "q4",
-          "type": "mcq",
-          "stem": "Which punctuation is correct for French place names in Quebec?",
-          "options": [
-            { "label": "Saint-Jean-sur-Richelieu", "correct": true },
-            { "label": "Saint Jean sur Richelieu", "correct": false },
-            { "label": "St-Jean-sur-Richelieu", "correct": false },
-            { "label": "St. Jean sur Richelieu", "correct": false }
-          ],
-          "rationale": "Use hyphens in French place names and spell out 'Saint'.",
-          "ref": "§15.02"
-        }
-      ]
-    },
-    "foreign-places": {
-      "id": "ch15-foreign-places",
-      "title": "Foreign Places",
-      "questions": [
-        {
-          "id": "q5",
-          "type": "mcq",
-          "stem": "How should foreign place names be written in English documents?",
-          "options": [
-            { "label": "Always in the original language", "correct": false },
-            { "label": "Using the commonly accepted English forms", "correct": true },
-            { "label": "With phonetic spelling", "correct": false },
-            { "label": "With English translations", "correct": false }
-          ],
-          "rationale": "Use established English forms: Rome (not Roma), Munich (not München).",
+          "rationale": "Use either the two-letter postal abbreviations (AB, BC) or spell out the full names in formal writing.",
           "ref": "§15.03"
         },
         {
-          "id": "q6",
-          "type": "drag-drop",
-          "stem": "Match current names with former names:",
-          "options": [
-            { "label": "Mumbai → Bombay", "order": 1 },
-            { "label": "Beijing → Peking", "order": 2 },
-            { "label": "Ho Chi Minh City → Saigon", "order": 3 },
-            { "label": "Myanmar → Burma", "order": 4 }
-          ],
-          "rationale": "Always use current, internationally recognized names in contemporary writing."
+          "id": "can-q2",
+          "type": "fill-blank",
+          "stem": "Complete the proper form of this Canadian place name:",
+          "text": "The meeting was held in ______, ______.",
+          "answers": ["St. John's", "Newfoundland and Labrador"],
+          "hint": "Consider the official names and proper punctuation.",
+          "rationale": "St. John's (with apostrophe) is the capital of Newfoundland and Labrador (full provincial name).",
+          "ref": "§15.04"
         },
         {
-          "id": "q7",
-          "type": "mcq",
-          "stem": "When might you use local forms instead of English forms?",
-          "options": [
-            { "label": "Never", "correct": false },
-            { "label": "When writing for a local audience", "correct": true },
-            { "label": "Always", "correct": false },
-            { "label": "Only in formal documents", "correct": false }
-          ],
-          "rationale": "Consider using local forms when writing for local audiences or discussing local culture.",
+          "id": "can-q3",
+          "type": "error-spot",
+          "stem": "Find the error in this Canadian place name:",
+          "text": "The conference will be held in Charlottetown, P.E.I. next month.",
+          "errorWord": "P.E.I.",
+          "rationale": "In formal writing, use either 'PE' or 'Prince Edward Island' rather than the old abbreviation 'P.E.I.'",
           "ref": "§15.03"
         }
       ]
     },
-    "adjectives": {
-      "id": "ch15-adjectives",
-      "title": "Geographical Adjectives",
+    "international-places": {
+      "id": "international-places",
+      "title": "International Place Names Quiz",
       "questions": [
         {
-          "id": "q8",
+          "id": "intl-q1",
+          "type": "matching",
+          "stem": "Match each international place with its correct Canadian English form:",
+          "pairs": [
+            {"left": "Beijing", "right": "Chinese capital (current preferred form)"},
+            {"left": "Peking", "right": "Former English name (avoid)"},
+            {"left": "Myanmar", "right": "Current official name"},
+            {"left": "Burma", "right": "Former name (historical context only)"}
+          ],
+          "rationale": "Use current internationally recognized names rather than outdated forms.",
+          "ref": "§15.07"
+        },
+        {
+          "id": "intl-q2",
           "type": "mcq",
-          "stem": "Which is the correct adjective form?",
+          "stem": "How should foreign place names be treated in Canadian English?",
           "options": [
-            { "label": "Europe Union", "correct": false },
-            { "label": "European Union", "correct": true },
-            { "label": "Europe's Union", "correct": false },
-            { "label": "Union of Europe", "correct": false }
+            {"label": "Always use the original language form", "correct": false},
+            {"label": "Use established English forms when they exist", "correct": true},
+            {"label": "Always translate literally", "correct": false},
+            {"label": "Use only official government translations", "correct": false}
           ],
-          "rationale": "Use proper adjective forms: European, Asian, American (not Europe, Asia, America).",
-          "ref": "§15.04"
+          "rationale": "Use established English forms (like Rome for Roma) but respect current official names for newer places.",
+          "ref": "§15.07"
         },
         {
-          "id": "q9",
-          "type": "multi-select",
-          "stem": "Which adjective forms are correct? (Select all that apply)",
-          "options": [
-            { "label": "European Union", "correct": true },
-            { "label": "Asian markets", "correct": true },
-            { "label": "Africa countries", "correct": false },
-            { "label": "American policy", "correct": true },
-            { "label": "Australia exports", "correct": false }
+          "id": "intl-q3",
+          "type": "drag-drop",
+          "stem": "Arrange these place names by preference in Canadian writing:",
+          "instructions": "Most preferred to least preferred:",
+          "items": [
+            {"text": "New York (established English)", "order": 1},
+            {"text": "Mumbai (current official name)", "order": 2},
+            {"text": "Bombay (former colonial name)", "order": 3},
+            {"text": "Nueva York (original language)", "order": 4}
           ],
-          "rationale": "Use proper adjective forms: European, Asian, American (not Europe, Asia, America)."
-        },
-        {
-          "id": "q10",
-          "type": "fill-blank",
-          "stem": "The _____ economy is growing rapidly. (adjective form of China)",
-          "answer": "Chinese",
-          "rationale": "Use 'Chinese' as the adjective form of China.",
-          "ref": "§15.04"
-        },
-        {
-          "id": "q11",
-          "type": "mcq",
-          "stem": "How should you refer to people from specific places?",
-          "options": [
-            { "label": "Always use the place name", "correct": false },
-            { "label": "Use the proper demonym", "correct": true },
-            { "label": "Use 'people from [place]'", "correct": false },
-            { "label": "Use abbreviations", "correct": false }
-          ],
-          "rationale": "Use proper demonyms: Torontonians, Montrealers, New Yorkers, etc.",
-          "ref": "§15.04"
+          "rationale": "Prefer established English forms, then current official names, then former names only in historical context.",
+          "ref": "§15.07"
         }
       ]
     },
-    "provinces-territories": {
-      "id": "ch15-provinces-territories",
-      "title": "Provinces and Territories",
+    "generic-terms": {
+      "id": "generic-terms",
+      "title": "Generic Geographic Terms Quiz",
       "questions": [
         {
-          "id": "q12",
+          "id": "gen-q1",
           "type": "mcq",
-          "stem": "When should you abbreviate province names?",
+          "stem": "When should generic geographic terms be capitalized?",
           "options": [
-            { "label": "Always", "correct": false },
-            { "label": "Never", "correct": false },
-            { "label": "In addresses and tables, using postal codes", "correct": true },
-            { "label": "Only in informal writing", "correct": false }
+            {"label": "Always, to show respect for places", "correct": false},
+            {"label": "Only when part of the official name", "correct": true},
+            {"label": "Never, as they are common nouns", "correct": false},
+            {"label": "Only for major geographic features", "correct": false}
           ],
-          "rationale": "Use postal abbreviations (ON, BC, QC) primarily in addresses and tables.",
-          "ref": "§15.05"
+          "rationale": "Capitalize generic terms only when they're part of the official proper name (Lake Superior vs. the lake).",
+          "ref": "§15.02"
         },
         {
-          "id": "q13",
-          "type": "drag-drop",
-          "stem": "Match provinces with their postal abbreviations:",
-          "options": [
-            { "label": "British Columbia → BC", "order": 1 },
-            { "label": "Ontario → ON", "order": 2 },
-            { "label": "Quebec → QC", "order": 3 },
-            { "label": "Nova Scotia → NS", "order": 4 },
-            { "label": "New Brunswick → NB", "order": 5 }
-          ],
-          "rationale": "Know the correct postal abbreviations for Canadian provinces."
+          "id": "gen-q2",
+          "type": "fill-blank",
+          "stem": "Complete with proper capitalization:",
+          "text": "We visited ______ ______ and then drove along the ______.",
+          "answers": ["Lake", "Ontario", "lake"],
+          "hint": "Consider when the generic term is part of the proper name vs. a general reference.",
+          "rationale": "'Lake Ontario' is the proper name, but 'the lake' is a general reference.",
+          "ref": "§15.02"
         },
         {
-          "id": "q14",
-          "type": "mcq",
-          "stem": "How should 'Newfoundland and Labrador' be abbreviated?",
-          "options": [
-            { "label": "NF", "correct": false },
-            { "label": "NL", "correct": true },
-            { "label": "NFL", "correct": false },
-            { "label": "N&L", "correct": false }
-          ],
-          "rationale": "The postal abbreviation for Newfoundland and Labrador is NL (not the old NF).",
-          "ref": "§15.05"
-        },
-        {
-          "id": "q15",
-          "type": "mcq",
-          "stem": "How should you refer to Canada's northernmost territory?",
-          "options": [
-            { "label": "The Yukon", "correct": false },
-            { "label": "Yukon Territory", "correct": false },
-            { "label": "Yukon", "correct": true },
-            { "label": "The Yukon Territory", "correct": false }
-          ],
-          "rationale": "Use simply 'Yukon' not 'the Yukon' or 'Yukon Territory'.",
-          "ref": "§15.05"
+          "id": "gen-q3",
+          "type": "error-spot",
+          "stem": "Find the capitalization error:",
+          "text": "The Rocky Mountains are beautiful, but I prefer the Mountains in the east.",
+          "errorWord": "Mountains",
+          "rationale": "When used generally (not as part of a proper name), 'mountains' should be lowercase.",
+          "ref": "§15.02"
         }
       ]
     },
     "abbreviations": {
-      "id": "ch15-abbreviations",
-      "title": "Abbreviations",
+      "id": "abbreviations",
+      "title": "Geographic Abbreviations Quiz",
       "questions": [
         {
-          "id": "q16",
+          "id": "abbr-q1",
+          "type": "matching",
+          "stem": "Match each Canadian territory/province with its correct postal abbreviation:",
+          "pairs": [
+            {"left": "British Columbia", "right": "BC"},
+            {"left": "Northwest Territories", "right": "NT"},
+            {"left": "Newfoundland and Labrador", "right": "NL"},
+            {"left": "Prince Edward Island", "right": "PE"}
+          ],
+          "rationale": "Canadian postal abbreviations are standardized two-letter codes without periods.",
+          "ref": "§15.03"
+        },
+        {
+          "id": "abbr-q2",
           "type": "mcq",
-          "stem": "When is it appropriate to abbreviate geographical names?",
+          "stem": "In formal addresses, which abbreviation style is preferred?",
           "options": [
-            { "label": "Always, to save space", "correct": false },
-            { "label": "Never, for clarity", "correct": false },
-            { "label": "Only when space is limited or for consistency", "correct": true },
-            { "label": "Only in informal writing", "correct": false }
+            {"label": "Que., B.C., Alta. (with periods)", "correct": false},
+            {"label": "QC, BC, AB (postal codes)", "correct": true},
+            {"label": "Quebec, British Columbia, Alberta (full names)", "correct": true},
+            {"label": "Both B and C are correct", "correct": true}
           ],
-          "rationale": "Abbreviate only when space is limited (tables, addresses) or consistency requires it.",
-          "ref": "§15.06"
+          "rationale": "Use either official postal abbreviations or full names, but avoid old-style abbreviations with periods.",
+          "ref": "§15.03"
         },
         {
-          "id": "q17",
+          "id": "abbr-q3",
+          "type": "drag-drop",
+          "stem": "Rank these address formats by formality:",
+          "instructions": "Most formal to least formal:",
+          "items": [
+            {"text": "Toronto, Ontario", "order": 1},
+            {"text": "Toronto, ON", "order": 2},
+            {"text": "Toronto, Ont.", "order": 3}
+          ],
+          "rationale": "Full names are most formal, postal codes are standard, old abbreviations are outdated.",
+          "ref": "§15.03"
+        }
+      ]
+    },
+    "indigenous-names": {
+      "id": "indigenous-names",
+      "title": "Indigenous Place Names Quiz",
+      "questions": [
+        {
+          "id": "ind-q1",
           "type": "mcq",
-          "stem": "What is the ISO code for the United States?",
+          "stem": "How should Indigenous place names be handled in Canadian writing?",
           "options": [
-            { "label": "USA", "correct": false },
-            { "label": "US", "correct": true },
-            { "label": "U.S.", "correct": false },
-            { "label": "USA", "correct": false }
+            {"label": "Use only English translations", "correct": false},
+            {"label": "Respect current Indigenous naming preferences", "correct": true},
+            {"label": "Use only historical names", "correct": false},
+            {"label": "Avoid Indigenous names entirely", "correct": false}
           ],
-          "rationale": "The ISO country code for the United States is 'US'.",
-          "ref": "§15.06"
+          "rationale": "Respect current Indigenous naming preferences and official designations when they exist.",
+          "ref": "§15.14"
         },
         {
-          "id": "q18",
-          "type": "multi-select",
-          "stem": "Which are standard street abbreviations? (Select all that apply)",
-          "options": [
-            { "label": "St. (Street)", "correct": true },
-            { "label": "Ave. (Avenue)", "correct": true },
-            { "label": "Blvd. (Boulevard)", "correct": true },
-            { "label": "Rd. (Road)", "correct": true },
-            { "label": "Str. (Street)", "correct": false }
-          ],
-          "rationale": "Standard abbreviations include St., Ave., Blvd., and Rd. (not Str.)."
-        },
-        {
-          "id": "q19",
+          "id": "ind-q2",
           "type": "fill-blank",
-          "stem": "In formal documents, _____ out geographical names in running text.",
-          "answer": "spell",
-          "rationale": "In formal writing, spell out geographical names in running text for clarity.",
+          "stem": "When writing about Indigenous territories, use ______ language that acknowledges their relationship to the land.",
+          "answer": "respectful",
+          "hint": "Consider appropriate terminology and sensitivity.",
+          "rationale": "Use respectful, current terminology that acknowledges Indigenous sovereignty and relationships to traditional territories.",
+          "ref": "§15.14"
+        }
+      ]
+    },
+    "directional-terms": {
+      "id": "directional-terms",
+      "title": "Directional Terms Quiz",
+      "questions": [
+        {
+          "id": "dir-q1",
+          "type": "mcq",
+          "stem": "When should directional terms be capitalized?",
+          "options": [
+            {"label": "Always, as they indicate specific places", "correct": false},
+            {"label": "When they refer to specific regions", "correct": true},
+            {"label": "Never, as they are common adjectives", "correct": false},
+            {"label": "Only in official government documents", "correct": false}
+          ],
+          "rationale": "Capitalize directional terms when they refer to specific, well-recognized regions (the West, Northern Ontario).",
           "ref": "§15.06"
         },
         {
-          "id": "q20",
-          "type": "mcq",
-          "stem": "What should you do when using many abbreviations in a document?",
-          "options": [
-            { "label": "Assume readers will understand them", "correct": false },
-            { "label": "Use fewer abbreviations", "correct": false },
-            { "label": "Provide a list of abbreviations", "correct": true },
-            { "label": "Define each one when first used", "correct": false }
+          "id": "dir-q2",
+          "type": "error-spot",
+          "stem": "Find the error in directional term usage:",
+          "text": "We drove North to the northern part of the province.",
+          "errorWord": "North",
+          "rationale": "Simple directions are lowercase ('drove north'), while regional references may be capitalized.",
+          "ref": "§15.06"
+        },
+        {
+          "id": "dir-q3",
+          "type": "matching",
+          "stem": "Match each usage with its correct capitalization:",
+          "pairs": [
+            {"left": "the North (Arctic region)", "right": "Capitalized - specific region"},
+            {"left": "drive north on Highway 1", "right": "Lowercase - simple direction"},
+            {"left": "Northern Ontario", "right": "Capitalized - regional designation"},
+            {"left": "the southern border", "right": "Lowercase - general reference"}
           ],
-          "rationale": "When using many abbreviations, provide a list for reference.",
+          "rationale": "Capitalize when referring to recognized regions, lowercase for simple directions or general references.",
           "ref": "§15.06"
         }
       ]
     }
   },
   "metadata": {
-    "totalQuestions": 20,
-    "questionTypes": ["mcq", "fill-blank", "drag-drop", "multi-select"],
+    "totalQuestions": 18,
+    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
     "difficulty": "intermediate",
-    "timeEstimate": "30-35 minutes",
+    "timeEstimate": "25-30 minutes",
     "passingScore": 80
   }
 }
