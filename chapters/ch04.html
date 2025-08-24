@@ -10,64 +10,56 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="header-content">
-                <div class="site-title">
-                    <img src="../shared/img/maple-logo.svg" alt="Canadian Maple Leaf" class="logo">
-                    <span>The Canadian Style</span>
-                </div>
-                <nav class="main-nav">
-                    <a href="../index.html" class="nav-link">Dashboard</a>
-                    <a href="../index.html#chapters" class="nav-link">All Chapters</a>
-                </nav>
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <div class="chapter-hero">
         <div class="container">
-            <div class="chapter-header">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 4
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">4</div>
                 <div class="chapter-info">
-                    <span class="chapter-number">Chapter 4</span>
-                    <h1 class="chapter-title">Capitalization</h1>
-                    <p class="chapter-description">Master the rules for proper capitalization in Canadian English</p>
-                </div>
-                <div class="progress-indicator">
-                    <div class="progress-ring">
-                        <svg class="progress-svg" width="60" height="60">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4"/>
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4" 
-                                    stroke-dasharray="157" stroke-dashoffset="157" class="progress-circle"/>
-                        </svg>
-                        <span class="progress-text">0%</span>
-                    </div>
+                    <h1>Capitalization</h1>
+                    <p>Master the rules for proper capitalization in Canadian English</p>
                 </div>
             </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
 
-            <nav class="section-tabs">
-                <button class="tab-link active" data-section="general-principles">
-                    4.01 General Principles
-                </button>
-                <button class="tab-link" data-section="proper-nouns">
-                    4.02 Proper Nouns
-                </button>
-                <button class="tab-link" data-section="titles-positions">
-                    4.03 Titles & Positions
-                </button>
-                <button class="tab-link" data-section="organizations">
-                    4.04 Organizations
-                </button>
-                <button class="tab-link" data-section="academic-subjects">
-                    4.05 Academic Subjects
-                </button>
-                <button class="tab-link" data-section="special-cases">
-                    4.06 Special Cases
-                </button>
-            </nav>
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#general-principles" class="tab-link active" data-section="general-principles">4.01 General Principles</a>
+                <a href="#proper-nouns" class="tab-link" data-section="proper-nouns">4.02 Proper Nouns</a>
+                <a href="#titles-positions" class="tab-link" data-section="titles-positions">4.03 Titles & Positions</a>
+                <a href="#organizations" class="tab-link" data-section="organizations">4.04 Organizations</a>
+                <a href="#academic-subjects" class="tab-link" data-section="academic-subjects">4.05 Academic Subjects</a>
+                <a href="#special-cases" class="tab-link" data-section="special-cases">4.06 Special Cases</a>
+            </div>
+        </div>
+    </nav>
 
-            <section id="general-principles" class="content-section">
-                <div class="section-content">
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 4.01: General Principles -->
+            <section class="content-section active" id="general-principles">
+                <div class="section-header">
                     <h2>4.01 General Principles</h2>
-                    
+                </div>
+                
+                <div class="lesson-content">
                     <div class="info-box">
                         <h3>📏 Foundation of Good Writing</h3>
                         <p>Proper capitalization enhances readability and shows attention to detail in professional writing.</p>
@@ -78,481 +70,247 @@
                         <div class="rule-item">
                             <h4>Always Capitalize</h4>
                             <ul>
-                                <li>First word of a sentence</li>
-                                <li>Proper nouns (specific names)</li>
+                                <li>The first word of a sentence</li>
+                                <li>Proper nouns (names of specific people, places, things)</li>
+                                <li>The pronoun "I"</li>
                                 <li>First word of a direct quotation</li>
-                                <li>Major words in titles</li>
                             </ul>
                         </div>
                         
                         <div class="rule-item">
-                            <h4>Generally Don't Capitalize</h4>
+                            <h4>Sometimes Capitalize</h4>
                             <ul>
-                                <li>Common nouns (general categories)</li>
-                                <li>Articles (a, an, the) in titles</li>
-                                <li>Prepositions under 5 letters in titles</li>
-                                <li>Generic references to titles or positions</li>
+                                <li>Titles when they precede names</li>
+                                <li>Directions when referring to regions</li>
+                                <li>Common nouns in specific contexts</li>
+                                <li>Job titles in formal addresses</li>
                             </ul>
                         </div>
                     </div>
 
-                    <h3>The Context Matters</h3>
-                    <div class="example-comparison">
-                        <div class="comparison-pair">
-                            <div class="example-correct">
-                                <span class="label">✅ Specific</span>
-                                <span class="text">The Prime Minister announced new policies.</span>
-                            </div>
-                            <div class="example-incorrect">
-                                <span class="label">❌ Generic</span>
-                                <span class="text">A prime minister has many responsibilities.</span>
-                            </div>
+                    <div class="examples-box">
+                        <h4>Examples in Context</h4>
+                        <div class="example-item good">
+                            <p><strong>Correct:</strong> "Prime Minister Trudeau announced the policy."</p>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>Incorrect:</strong> "prime minister trudeau announced the Policy."</p>
                         </div>
                     </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Quick Test</h4>
-                        <p>Ask yourself: "Am I referring to a specific, unique person, place, or thing?" If yes, capitalize. If it's a general category, use lowercase.</p>
-                    </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-general-principles"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('general-principles')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="proper-nouns" class="content-section" style="display: none;">
-                <div class="section-content">
+            <!-- Section 4.02: Proper Nouns -->
+            <section class="content-section" id="proper-nouns">
+                <div class="section-header">
                     <h2>4.02 Proper Nouns</h2>
-                    
-                    <div class="info-box">
-                        <h3>🌍 Names of Specific Things</h3>
-                        <p>Proper nouns name specific, unique entities and are always capitalized.</p>
-                    </div>
-
-                    <h3>Categories of Proper Nouns</h3>
-                    
-                    <div class="category-grid">
-                        <div class="category-card">
-                            <h4>People</h4>
-                            <ul>
-                                <li>Sarah Johnson</li>
-                                <li>Dr. Martin Luther King Jr.</li>
-                                <li>Prime Minister Trudeau</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="category-card">
-                            <h4>Places</h4>
-                            <ul>
-                                <li>Canada, Ontario, Toronto</li>
-                                <li>Lake Superior</li>
-                                <li>Rocky Mountains</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="category-card">
-                            <h4>Organizations</h4>
-                            <ul>
-                                <li>University of Toronto</li>
-                                <li>Canadian Broadcasting Corporation</li>
-                                <li>Parliament of Canada</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="category-card">
-                            <h4>Events & Periods</h4>
-                            <ul>
-                                <li>World War II</li>
-                                <li>Renaissance</li>
-                                <li>Canada Day</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Geographic Names</h3>
-                    <div class="geographic-examples">
-                        <div class="geo-rule">
-                            <h5>Capitalize all parts of official geographic names:</h5>
-                            <ul>
-                                <li>Lake Ontario (not Lake ontario)</li>
-                                <li>British Columbia (not british Columbia)</li>
-                                <li>St. Lawrence River (not St. lawrence River)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="geo-rule">
-                            <h5>Don't capitalize general geographic references:</h5>
-                            <ul>
-                                <li>the lake (when referring generally)</li>
-                                <li>the province</li>
-                                <li>the river</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4>⚠️ Common Mistake</h4>
-                        <p>Don't capitalize directional words unless they're part of a proper name or refer to a specific region: "drive north" vs. "the North" (Arctic region).</p>
-                    </div>
                 </div>
-
-                <div class="quiz-panel" id="quiz-proper-nouns"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('proper-nouns')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="titles-positions" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>4.03 Titles and Positions</h2>
+                
+                <div class="lesson-content">
+                    <p>Proper nouns name specific people, places, organizations, and unique things. They are always capitalized.</p>
                     
-                    <div class="info-box">
-                        <h3>👑 When Titles Get Capital Letters</h3>
-                        <p>The capitalization of titles depends on their use and position in the sentence.</p>
-                    </div>
-
-                    <h3>Title Capitalization Rules</h3>
-                    
-                    <div class="title-rules">
-                        <div class="rule-section">
-                            <h4>✅ Capitalize When:</h4>
-                            <ul>
-                                <li><strong>Before a name:</strong> President Smith, Dr. Johnson</li>
-                                <li><strong>As direct address:</strong> "Thank you, Prime Minister."</li>
-                                <li><strong>In formal contexts:</strong> The President announced...</li>
-                                <li><strong>In signatures/letterheads:</strong> John Smith, Director</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="rule-section">
-                            <h4>❌ Don't Capitalize When:</h4>
-                            <ul>
-                                <li><strong>Used generically:</strong> "The prime minister's role..."</li>
-                                <li><strong>After a name:</strong> "John Smith, the director, said..."</li>
-                                <li><strong>Plural forms:</strong> "Several presidents attended"</li>
-                                <li><strong>Former positions:</strong> "the former mayor"</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Examples in Context</h3>
-                    <div class="context-examples">
-                        <div class="example-set">
-                            <h5>Government Positions</h5>
-                            <div class="comparison-pair">
-                                <span class="correct">✅ Prime Minister Trudeau announced</span>
-                                <span class="incorrect">❌ The Prime Minister of canada</span>
-                            </div>
-                            <div class="comparison-pair">
-                                <span class="correct">✅ The prime minister's duties</span>
-                                <span class="incorrect">❌ Several Prime Ministers met</span>
-                            </div>
-                        </div>
-                        
-                        <div class="example-set">
-                            <h5>Professional Titles</h5>
-                            <div class="comparison-pair">
-                                <span class="correct">✅ Dr. Sarah Wilson</span>
-                                <span class="incorrect">❌ Sarah Wilson, The Doctor</span>
-                            </div>
-                            <div class="comparison-pair">
-                                <span class="correct">✅ Professor Martinez teaches</span>
-                                <span class="incorrect">❌ She is a Professor of history</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Memory Aid</h4>
-                        <p>If you can replace the title with the person's name and the sentence still makes sense, capitalize it. "President Smith arrived" → "John arrived" ✅</p>
-                    </div>
-                </div>
-
-                <div class="quiz-panel" id="quiz-titles-positions"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('titles-positions')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="organizations" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>4.04 Organizations</h2>
-                    
-                    <div class="info-box">
-                        <h3>🏢 Institutional Names</h3>
-                        <p>Organization names are proper nouns and follow specific capitalization patterns.</p>
-                    </div>
-
-                    <h3>Types of Organizations</h3>
-                    
-                    <div class="org-types">
-                        <div class="org-category">
-                            <h4>Government Bodies</h4>
-                            <ul>
-                                <li>Parliament of Canada</li>
-                                <li>House of Commons</li>
-                                <li>Department of National Defence</li>
-                                <li>Statistics Canada</li>
-                            </ul>
-                            <p class="note">Capitalize all significant words in official government names.</p>
-                        </div>
-                        
-                        <div class="org-category">
-                            <h4>Educational Institutions</h4>
-                            <ul>
-                                <li>University of British Columbia</li>
-                                <li>McGill University</li>
-                                <li>York University</li>
-                                <li>Centennial College</li>
-                            </ul>
-                            <p class="note">Include articles and prepositions as written in official names.</p>
-                        </div>
-                        
-                        <div class="org-category">
-                            <h4>Corporations & NGOs</h4>
-                            <ul>
-                                <li>Canadian Red Cross</li>
-                                <li>Royal Bank of Canada</li>
-                                <li>Air Canada</li>
-                                <li>United Nations</li>
-                            </ul>
-                            <p class="note">Follow the organization's official capitalization.</p>
-                        </div>
-                    </div>
-
-                    <h3>Generic vs. Specific References</h3>
-                    <div class="reference-examples">
-                        <div class="ref-pair">
-                            <div class="specific">
-                                <h5>Specific (Capitalize)</h5>
-                                <ul>
-                                    <li>The University of Toronto announced</li>
-                                    <li>Parliament voted today</li>
-                                    <li>The Department issued guidelines</li>
-                                </ul>
-                            </div>
-                            <div class="generic">
-                                <h5>Generic (Lowercase)</h5>
-                                <ul>
-                                    <li>She attends university</li>
-                                    <li>The parliamentary system</li>
-                                    <li>Each department has policies</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4>⚠️ Watch Out For</h4>
+                    <div class="rule-box">
+                        <h3>Categories of Proper Nouns</h3>
                         <ul>
-                            <li>Shortened forms: "the University" (if clear from context)</li>
-                            <li>Informal references: "the feds" for federal government</li>
-                            <li>Acronyms: CBC, RCMP, UN (always capitalized)</li>
+                            <li><strong>Personal Names:</strong> John Smith, Mary Johnson</li>
+                            <li><strong>Place Names:</strong> Toronto, Lake Ontario, Rocky Mountains</li>
+                            <li><strong>Organizations:</strong> Parliament of Canada, United Nations</li>
+                            <li><strong>Brand Names:</strong> Microsoft, Coca-Cola, iPhone</li>
+                            <li><strong>Historical Events:</strong> World War II, Confederation</li>
                         </ul>
                     </div>
+                    
+                    <div class="examples-box">
+                        <h4>Common vs. Proper Nouns</h4>
+                        <div class="comparison-table">
+                            <div class="comparison-row">
+                                <div class="common">city</div>
+                                <div class="proper">Vancouver</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="common">university</div>
+                                <div class="proper">University of Toronto</div>
+                            </div>
+                            <div class="comparison-row">
+                                <div class="common">river</div>
+                                <div class="proper">Fraser River</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
+                <div class="quiz-panel" id="quiz-proper-nouns"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('proper-nouns')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
+            <!-- Section 4.03: Titles & Positions -->
+            <section class="content-section" id="titles-positions">
+                <div class="section-header">
+                    <h2>4.03 Titles & Positions</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Capitalize titles when they directly precede a person's name or when used in formal address.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Capitalization Rules for Titles</h3>
+                        <ul>
+                            <li><strong>Before names:</strong> President Biden, Doctor Smith</li>
+                            <li><strong>In formal address:</strong> "Welcome, Mr. President"</li>
+                            <li><strong>After names:</strong> Generally lowercase unless very formal</li>
+                            <li><strong>Standing alone:</strong> Usually lowercase unless referring to specific office</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Title Usage Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Capitalize:</strong> "Minister Jones will attend."</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>✓ Lowercase:</strong> "The minister will attend."</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>✓ After name:</strong> "John Smith, president of the company"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-titles-positions"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('titles-positions')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 4.04: Organizations -->
+            <section class="content-section" id="organizations">
+                <div class="section-header">
+                    <h2>4.04 Organizations</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Capitalize the names of specific organizations, institutions, and government bodies.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Organization Types</h3>
+                        <ul>
+                            <li><strong>Government Bodies:</strong> House of Commons, Supreme Court of Canada</li>
+                            <li><strong>Educational Institutions:</strong> McGill University, Seneca College</li>
+                            <li><strong>Companies:</strong> Air Canada, Canadian Tire Corporation</li>
+                            <li><strong>Non-profits:</strong> Red Cross, United Way</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Specific vs. Generic References</h4>
+                        <div class="example-item good">
+                            <p><strong>Specific:</strong> "The University of British Columbia announced..."</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Generic:</strong> "Most universities require..."</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="quiz-panel" id="quiz-organizations"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('organizations')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="academic-subjects" class="content-section" style="display: none;">
-                <div class="section-content">
+            <!-- Section 4.05: Academic Subjects -->
+            <section class="content-section" id="academic-subjects">
+                <div class="section-header">
                     <h2>4.05 Academic Subjects</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Generally, academic subjects are lowercase unless they are proper nouns or part of a specific course title.</p>
                     
-                    <div class="info-box">
-                        <h3>📚 School Subject Capitalization</h3>
-                        <p>Academic subjects follow specific rules based on whether they're proper nouns or general fields.</p>
+                    <div class="rule-box">
+                        <h3>Subject Capitalization</h3>
+                        <ul>
+                            <li><strong>Lowercase:</strong> mathematics, history, physics, psychology</li>
+                            <li><strong>Capitalize:</strong> English, French, Spanish (languages)</li>
+                            <li><strong>Course Titles:</strong> Introduction to Psychology 101</li>
+                            <li><strong>Department Names:</strong> Department of Biology</li>
+                        </ul>
                     </div>
-
-                    <h3>When to Capitalize Academic Subjects</h3>
                     
-                    <div class="academic-rules">
-                        <div class="rule-group">
-                            <h4>✅ Always Capitalize</h4>
-                            <div class="rule-examples">
-                                <h5>Languages</h5>
-                                <ul>
-                                    <li>English, French, Spanish</li>
-                                    <li>Mandarin, Arabic, Hindi</li>
-                                </ul>
-                                
-                                <h5>Specific Course Titles</h5>
-                                <ul>
-                                    <li>Introduction to Psychology 101</li>
-                                    <li>Advanced Calculus</li>
-                                    <li>Canadian History Since 1867</li>
-                                </ul>
-                                
-                                <h5>Proper Nouns in Subject Names</h5>
-                                <ul>
-                                    <li>American literature</li>
-                                    <li>Shakespearean drama</li>
-                                    <li>Newtonian physics</li>
-                                </ul>
-                            </div>
+                    <div class="examples-box">
+                        <h4>Academic Context Examples</h4>
+                        <div class="example-item good">
+                            <p>"She studied biology and French literature."</p>
                         </div>
-                        
-                        <div class="rule-group">
-                            <h4>❌ Generally Don't Capitalize</h4>
-                            <div class="rule-examples">
-                                <h5>General Subject Areas</h5>
-                                <ul>
-                                    <li>mathematics, chemistry, biology</li>
-                                    <li>psychology, sociology, philosophy</li>
-                                    <li>history, geography, economics</li>
-                                </ul>
-                                
-                                <h5>Academic Fields</h5>
-                                <ul>
-                                    <li>She studies engineering</li>
-                                    <li>He majors in computer science</li>
-                                    <li>The physics department</li>
-                                </ul>
-                            </div>
+                        <div class="example-item good">
+                            <p>"The English Department offers creative writing courses."</p>
                         </div>
-                    </div>
-
-                    <h3>Context Examples</h3>
-                    <div class="context-grid">
-                        <div class="context-example">
-                            <h5>Course Registration</h5>
-                            <p class="correct">✅ "I'm taking English 201 and advanced chemistry this semester."</p>
-                            <p class="explanation">Course title gets capitals; general subject doesn't.</p>
-                        </div>
-                        
-                        <div class="context-example">
-                            <h5>Academic Discussion</h5>
-                            <p class="correct">✅ "She has a degree in mathematics with a minor in French."</p>
-                            <p class="explanation">General field lowercase; language capitalized.</p>
-                        </div>
-                        
-                        <div class="context-example">
-                            <h5>Department References</h5>
-                            <p class="correct">✅ "The English Department offers many literature courses."</p>
-                            <p class="explanation">Department name is capitalized as proper noun.</p>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Quick Rule</h4>
-                        <p>Languages are always capitalized. Other subjects are capitalized only when they're part of a specific course title or contain proper nouns.</p>
                     </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-academic-subjects"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('academic-subjects')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="special-cases" class="content-section" style="display: none;">
-                <div class="section-content">
+            <!-- Section 4.06: Special Cases -->
+            <section class="content-section" id="special-cases">
+                <div class="section-header">
                     <h2>4.06 Special Cases</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Some capitalization situations require special attention and may vary based on context or style guide preferences.</p>
                     
-                    <div class="info-box">
-                        <h3>🎯 Unique Situations</h3>
-                        <p>Some capitalization situations require special attention and memorization.</p>
+                    <div class="rule-box">
+                        <h3>Special Capitalization Situations</h3>
+                        <ul>
+                            <li><strong>Seasons:</strong> Generally lowercase (spring, summer, fall, winter)</li>
+                            <li><strong>Directions:</strong> Capitalize when referring to regions (the West, Eastern Canada)</li>
+                            <li><strong>Internet/Web:</strong> Follow current conventions</li>
+                            <li><strong>Hyphenated Words:</strong> Capitalize both parts if both are normally capitalized</li>
+                        </ul>
                     </div>
-
-                    <h3>Religious Terms</h3>
-                    <div class="religious-terms">
-                        <div class="term-category">
-                            <h4>✅ Capitalize</h4>
-                            <ul>
-                                <li>Names of deities: God, Allah, Buddha</li>
-                                <li>Religious texts: Bible, Quran, Torah</li>
-                                <li>Specific religions: Christianity, Islam, Judaism</li>
-                                <li>Religious figures: Jesus Christ, Prophet Muhammad</li>
-                            </ul>
+                    
+                    <div class="examples-box">
+                        <h4>Special Cases in Practice</h4>
+                        <div class="example-item good">
+                            <p><strong>Seasons:</strong> "We'll meet this fall" (lowercase)</p>
                         </div>
-                        <div class="term-category">
-                            <h4>❌ Don't Capitalize</h4>
-                            <ul>
-                                <li>General religious terms: prayer, worship, faith</li>
-                                <li>Religious concepts: heaven, hell (unless in specific theological context)</li>
-                                <li>General references: a god, the gods</li>
-                            </ul>
+                        <div class="example-item good">
+                            <p><strong>Regions:</strong> "Economic growth in the West" (capitalized)</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Directions:</strong> "Drive west on Highway 1" (lowercase)</p>
                         </div>
                     </div>
-
-                    <h3>Holidays and Events</h3>
-                    <div class="holiday-examples">
-                        <h4>Capitalize All Holiday Names</h4>
-                        <div class="holiday-grid">
-                            <div class="holiday-list">
-                                <h5>Canadian Holidays</h5>
-                                <ul>
-                                    <li>Canada Day</li>
-                                    <li>Victoria Day</li>
-                                    <li>Thanksgiving Day</li>
-                                    <li>Remembrance Day</li>
-                                </ul>
-                            </div>
-                            <div class="holiday-list">
-                                <h5>International Holidays</h5>
-                                <ul>
-                                    <li>Christmas Day</li>
-                                    <li>New Year's Day</li>
-                                    <li>Mother's Day</li>
-                                    <li>Father's Day</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Seasons and Time Periods</h3>
-                    <div class="time-examples">
-                        <div class="time-rule">
-                            <h4>❌ Don't Capitalize Seasons</h4>
-                            <p>spring, summer, fall/autumn, winter</p>
-                            <p class="example">"We'll review this in the spring."</p>
-                        </div>
-                        <div class="time-rule">
-                            <h4>✅ Capitalize Historical Periods</h4>
-                            <p>Renaissance, Middle Ages, Great Depression</p>
-                            <p class="example">"The Renaissance brought many changes."</p>
-                        </div>
-                    </div>
-
-                    <h3>Brand Names and Trademarks</h3>
-                    <div class="brand-rules">
-                        <div class="brand-example">
-                            <h4>Always Capitalize Brand Names</h4>
-                            <ul>
-                                <li>Coca-Cola (not coca-cola)</li>
-                                <li>iPhone (following company styling)</li>
-                                <li>Microsoft Word</li>
-                                <li>Tim Hortons</li>
-                            </ul>
-                        </div>
-                        <div class="brand-note">
-                            <p><strong>Note:</strong> Follow the company's official capitalization, even if it seems unconventional (like iPhone or eBay).</p>
-                        </div>
-                    </div>
-
+                    
                     <div class="success-box">
                         <h4>🎉 Capitalization Mastery</h4>
-                        <p>With these rules mastered, your writing will demonstrate professional attention to detail. Proper capitalization enhances credibility and readability.</p>
+                        <p>Proper capitalization enhances credibility and readability.</p>
                     </div>
                 </div>
 
@@ -580,6 +338,7 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
+        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
@@ -593,58 +352,18 @@
             { id: 'special-cases', title: '4.06 Special Cases' }
         ];
         
-        // Initialize section navigation
-        function initSectionNavigation() {
-            const tabLinks = document.querySelectorAll('.tab-link');
-            
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(this);
-                });
-            });
-            
-            // Show first section by default
-            showSection('general-principles');
-        }
-        
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-        
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            activeLink.classList.add('active');
-        }
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
         
         // Update progress bar
         function updateProgressBar() {
             const chapterProgress = getChapterProgress(CHAPTER_ID);
             const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const total = sections.length;
-            const percentage = Math.round((completed / total) * 100);
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressCircle = document.querySelector('.progress-circle');
-            const progressText = document.querySelector('.progress-text');
-            
-            if (progressCircle && progressText) {
-                const circumference = 2 * Math.PI * 25; // r=25
-                const offset = circumference - (percentage / 100) * circumference;
-                progressCircle.style.strokeDashoffset = offset;
-                progressText.textContent = `${percentage}%`;
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
             }
         }
         
@@ -653,30 +372,24 @@
             setProgress(CHAPTER_ID, sectionId, true);
             updateProgressBar();
             
-            // Show completion message
-            const currentSection = document.getElementById(sectionId);
-            const button = currentSection.querySelector('.btn-primary');
-            button.textContent = '✓ Completed';
-            button.classList.add('completed');
-        }
-        
-        // Show completion modal if chapter is finished
-        function checkChapterCompletion() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            
-            if (completed === sections.length) {
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                router.navigateTo(CHAPTER_ID, nextSection.id);
+            } else {
+                // Chapter complete
                 showCompletionModal();
             }
-        }
+        };
         
         function showCompletionModal() {
             const modal = document.createElement('div');
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h2>🎉 Chapter 4 Complete!</h2>
-                    <p>Excellent work! You've mastered Canadian capitalization rules. Your documents will have consistent and professional formatting.</p>
+                    <h3>🎉 Chapter 4 Complete!</h3>
+                    <p>You've mastered capitalization rules in Canadian writing!</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -690,77 +403,9 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes from JSON files - FIXED for Chapter 4
-async function loadSectionQuizzes() {
-    try {
-        const response = await fetch(`../data/ch04-quiz.json`);
-        if (!response.ok) {
-            console.warn('Quiz data not available for chapter 4');
-            return;
-        }
-        
-        const quizData = await response.json();
-        
-        // Only load quiz for the final section (headings)
-        const finalSection = 'headings';
-        const sectionQuizData = quizData.sections?.[finalSection];
-        
-        if (sectionQuizData) {
-            const quizPanel = document.getElementById(`quiz-${finalSection}`);
-            if (quizPanel) {
-                const quizEngine = new QuizEngine({
-                    containerId: `quiz-${finalSection}`,
-                    questions: sectionQuizData.questions,
-                    title: sectionQuizData.title,
-                    onComplete: (results) => {
-                        if (results.passed) {
-                            completeSection(finalSection);
-                            showChapterCompletionModal();
-                        }
-                    }
-                });
-                quizPanel.appendChild(quizEngine.render());
-            }
-        }
-    } catch (error) {
-        console.error('Error loading quizzes:', error);
-    }
-}
-
-// Complete section function - FIXED
-function completeSection(sectionId) {
-    if (typeof markSectionComplete === 'function') {
-        markSectionComplete('ch04', sectionId);
-    }
-    updateProgressBar();
-    
-    // Only show completion modal for the final section
-    if (sectionId === 'headings') {
-        showChapterCompletionModal();
-    } else {
-        // Move to next section
-        const sections = ['introduction', 'initial-words', 'personal-names', 'government', 'titles', 'geography', 'publications', 'headings'];
-        const currentIndex = sections.indexOf(sectionId);
-        if (currentIndex < sections.length - 1) {
-            const nextSection = sections[currentIndex + 1];
-            const nextTab = document.querySelector(`[data-section="${nextSection}"]`);
-            if (nextTab) nextTab.click();
-        }
-    }
-}
-        
-        // Initialize page
-        initSectionNavigation();
-        updateProgressBar();
-        loadSectionQuizzes();
-        
-        // Handle window beforeunload for quiz warnings
-        window.addEventListener('beforeunload', (event) => {
-            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-            if (activeQuiz) {
-                event.preventDefault();
-                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
-            }
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar();
         });
     </script>
 </body>
