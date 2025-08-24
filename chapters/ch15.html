@@ -10,1343 +10,602 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="header-content">
-                <div class="site-title">
-                    <img src="../shared/img/maple-logo.svg" alt="Canadian Maple Leaf" class="logo">
-                    <span>The Canadian Style</span>
-                </div>
-                <nav class="main-nav">
-                    <a href="../index.html" class="nav-link">Dashboard</a>
-                    <a href="../index.html#chapters" class="nav-link">All Chapters</a>
-                </nav>
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <div class="chapter-hero">
         <div class="container">
-            <div class="chapter-header">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 15
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">15</div>
                 <div class="chapter-info">
-                    <span class="chapter-number">Chapter 15</span>
-                    <h1 class="chapter-title">Geographical Names</h1>
-                    <p class="chapter-description">Master the Canadian conventions for geographical names and places</p>
-                </div>
-                <div class="progress-indicator">
-                    <div class="progress-ring">
-                        <svg class="progress-svg" width="60" height="60">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4"/>
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4" 
-                                    stroke-dasharray="157" stroke-dashoffset="157" class="progress-circle"/>
-                        </svg>
-                        <span class="progress-text">0%</span>
-                    </div>
+                    <h1>Geographical Names</h1>
+                    <p>Master the Canadian conventions for geographical names and places</p>
                 </div>
             </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
 
-            <nav class="section-tabs">
-                <button class="tab-link active" data-section="canadian-places">
-                    15.01 Canadian Place Names
-                </button>
-                <button class="tab-link" data-section="international-places">
-                    15.02 International Places
-                </button>
-                <button class="tab-link" data-section="generic-terms">
-                    15.03 Generic Terms
-                </button>
-                <button class="tab-link" data-section="abbreviations">
-                    15.04 Abbreviations
-                </button>
-                <button class="tab-link" data-section="indigenous-names">
-                    15.05 Indigenous Names
-                </button>
-                <button class="tab-link" data-section="directional-terms">
-                    15.06 Directional Terms
-                </button>
-            </nav>
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link active" data-section="introduction">15.01 Introduction</a>
+                <a href="#canadian-places" class="tab-link" data-section="canadian-places">15.02 Canadian Places</a>
+                <a href="#foreign-places" class="tab-link" data-section="foreign-places">15.03 Foreign Places</a>
+                <a href="#provinces-territories" class="tab-link" data-section="provinces-territories">15.04 Provinces & Territories</a>
+                <a href="#indigenous-names" class="tab-link" data-section="indigenous-names">15.05 Indigenous Names</a>
+                <a href="#abbreviations" class="tab-link" data-section="abbreviations">15.06 Abbreviations</a>
+            </div>
+        </div>
+    </nav>
 
-            <section id="canadian-places" class="content-section">
-                <div class="section-content">
-                    <h2>15.01 Canadian Place Names</h2>
-                    
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 15.01: Introduction -->
+            <section class="content-section active" id="introduction">
+                <div class="section-header">
+                    <h2>15.01 Introduction</h2>
+                </div>
+                
+                <div class="lesson-content">
                     <div class="info-box">
-                        <h3>🇨🇦 Our National Geography</h3>
-                        <p>Canadian place names reflect our rich cultural heritage and require consistent, respectful usage.</p>
+                        <h3>🗺️ Geographical Accuracy</h3>
+                        <p>Proper geographical naming reflects cultural sensitivity and ensures clear, accurate communication about places and regions.</p>
                     </div>
 
-                    <h3>Provinces and Territories</h3>
-                    <div class="provinces-territories">
+                    <h3>Importance of Correct Geographical Names</h3>
+                    <div class="importance-points">
+                        <div class="importance-item">
+                            <h4>🎯 Accuracy and Clarity</h4>
+                            <p>Correct geographical names prevent confusion and ensure readers understand exactly which location is being referenced.</p>
+                        </div>
+                        
+                        <div class="importance-item">
+                            <h4>🤝 Cultural Respect</h4>
+                            <p>Using proper names, especially for Indigenous territories and communities, demonstrates respect for cultural heritage and local preferences.</p>
+                        </div>
+                        
+                        <div class="importance-item">
+                            <h4>📄 Official Standards</h4>
+                            <p>Government and official documents must follow established naming conventions and authoritative sources.</p>
+                        </div>
+                    </div>
+
+                    <div class="naming-authorities">
+                        <h3>Authoritative Sources</h3>
+                        <div class="authority-grid">
+                            <div class="authority-source">
+                                <h4>🍁 Canadian Sources</h4>
+                                <ul>
+                                    <li>Geographical Names Board of Canada</li>
+                                    <li>Natural Resources Canada</li>
+                                    <li>Statistics Canada</li>
+                                    <li>Provincial/territorial name authorities</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="authority-source">
+                                <h4>🌍 International Sources</h4>
+                                <ul>
+                                    <li>United Nations Group of Experts on Geographical Names</li>
+                                    <li>International Organization for Standardization</li>
+                                    <li>Country-specific geographical agencies</li>
+                                    <li>Atlas and mapping authorities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="general-principles">
+                        <h3>General Principles</h3>
+                        <div class="principle-list">
+                            <div class="principle-item">
+                                <strong>Consistency:</strong> Use the same form of a name throughout a document
+                            </div>
+                            <div class="principle-item">
+                                <strong>Current Usage:</strong> Prefer current official names over historical ones
+                            </div>
+                            <div class="principle-item">
+                                <strong>Local Preference:</strong> Respect local and Indigenous naming preferences
+                            </div>
+                            <div class="principle-item">
+                                <strong>Context Appropriateness:</strong> Consider your audience and document type
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-introduction"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('introduction')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 15.02: Canadian Places -->
+            <section class="content-section" id="canadian-places">
+                <div class="section-header">
+                    <h2>15.02 Canadian Places</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Canadian geographical names follow specific conventions that reflect our bilingual heritage and cultural diversity.</p>
+                    
+                    <div class="canadian-naming">
+                        <h3>Major Cities and Regions</h3>
+                        <div class="city-examples">
+                            <div class="city-category">
+                                <h4>🏙️ Major Urban Centres</h4>
+                                <ul>
+                                    <li><strong>Toronto</strong> (not Greater Toronto Area in formal writing)</li>
+                                    <li><strong>Montréal</strong> (accent maintained in formal contexts)</li>
+                                    <li><strong>Vancouver</strong> (specify Metro Vancouver if needed)</li>
+                                    <li><strong>Calgary, Edmonton, Ottawa-Gatineau</strong></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="city-category">
+                                <h4>🏔️ Geographical Features</h4>
+                                <ul>
+                                    <li><strong>Rocky Mountains</strong> (not "the Rockies" in formal writing)</li>
+                                    <li><strong>Great Lakes</strong> (Lake Ontario, Lake Superior, etc.)</li>
+                                    <li><strong>St. Lawrence River</strong></li>
+                                    <li><strong>Hudson Bay, James Bay</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bilingual-considerations">
+                        <h3>Bilingual Naming Conventions</h3>
+                        <div class="bilingual-grid">
+                            <div class="bilingual-section">
+                                <h4>🇫🇷 French Names in English Context</h4>
+                                <ul>
+                                    <li>Montréal (maintain accent in formal writing)</li>
+                                    <li>Québec (province and city)</li>
+                                    <li>Trois-Rivières</li>
+                                    <li>Saguenay</li>
+                                </ul>
+                                <p class="note">In less formal contexts, accents may be omitted: Montreal, Quebec</p>
+                            </div>
+                            
+                            <div class="bilingual-section">
+                                <h4>🏴󠁧󠁢󠁥󠁮󠁧󠁿 English/French Equivalents</h4>
+                                <ul>
+                                    <li><strong>English:</strong> St. John's / <strong>French:</strong> Saint-Jean</li>
+                                    <li><strong>English:</strong> Thunder Bay / <strong>French:</strong> Baie-du-Tonnerre</li>
+                                    <li><strong>English:</strong> New Brunswick / <strong>French:</strong> Nouveau-Brunswick</li>
+                                </ul>
+                                <p class="note">Use the version appropriate to your document's language</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="regional-variations">
+                        <h3>Regional and Colloquial References</h3>
+                        <div class="regional-examples">
+                            <div class="regional-item">
+                                <h4>The Maritimes</h4>
+                                <p>Refers to New Brunswick, Nova Scotia, and Prince Edward Island</p>
+                            </div>
+                            <div class="regional-item">
+                                <h4>Atlantic Canada</h4>
+                                <p>Includes the Maritimes plus Newfoundland and Labrador</p>
+                            </div>
+                            <div class="regional-item">
+                                <h4>The Prairies</h4>
+                                <p>Manitoba, Saskatchewan, and Alberta</p>
+                            </div>
+                            <div class="regional-item">
+                                <h4>Central Canada</h4>
+                                <p>Ontario and Quebec (sometimes called "Eastern Canada")</p>
+                            </div>
+                            <div class="regional-item">
+                                <h4>The North</h4>
+                                <p>Yukon, Northwest Territories, and Nunavut</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-canadian-places"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('canadian-places')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 15.03: Foreign Places -->
+            <section class="content-section" id="foreign-places">
+                <div class="section-header">
+                    <h2>15.03 Foreign Places</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Foreign geographical names require attention to local conventions, transliteration, and current political realities.</p>
+                    
+                    <div class="foreign-naming">
+                        <h3>International Naming Conventions</h3>
+                        <div class="naming-principles">
+                            <div class="principle-box">
+                                <h4>🌐 Current Official Names</h4>
+                                <p>Use names currently recognized by the international community:</p>
+                                <ul>
+                                    <li><strong>Myanmar</strong> (not Burma, except in historical context)</li>
+                                    <li><strong>Democratic Republic of the Congo</strong> (not Zaire)</li>
+                                    <li><strong>Türkiye</strong> (updated from Turkey in 2022)</li>
+                                    <li><strong>North Macedonia</strong> (updated from Macedonia in 2019)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="principle-box">
+                                <h4>🏛️ Historical vs. Contemporary</h4>
+                                <p>Choose names appropriate to your context:</p>
+                                <ul>
+                                    <li><strong>Historical:</strong> "Ceylon gained independence in 1948"</li>
+                                    <li><strong>Contemporary:</strong> "Sri Lanka's current policies..."</li>
+                                    <li><strong>Historical:</strong> "Rhodesia declared independence in 1965"</li>
+                                    <li><strong>Contemporary:</strong> "Zimbabwe's economy..."</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="transliteration-guidelines">
+                        <h3>Transliteration and Romanization</h3>
+                        <div class="transliteration-examples">
+                            <div class="transliteration-category">
+                                <h4>🀄 Chinese Names</h4>
+                                <div class="example-pairs">
+                                    <div class="name-pair">
+                                        <span class="current">✓ Beijing</span>
+                                        <span class="old">✗ Peking (historical only)</span>
+                                    </div>
+                                    <div class="name-pair">
+                                        <span class="current">✓ Guangzhou</span>
+                                        <span class="old">✗ Canton (historical only)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="transliteration-category">
+                                <h4>🕌 Arabic Names</h4>
+                                <div class="example-pairs">
+                                    <div class="name-pair">
+                                        <span class="current">✓ Riyadh</span>
+                                        <span class="note">Standard international usage</span>
+                                    </div>
+                                    <div class="name-pair">
+                                        <span class="current">✓ Dubai</span>
+                                        <span class="note">Established English form</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="transliteration-category">
+                                <h4>🏛️ European Variations</h4>
+                                <div class="example-pairs">
+                                    <div class="name-pair">
+                                        <span class="current">✓ Prague</span>
+                                        <span class="note">English form (Czech: Praha)</span>
+                                    </div>
+                                    <div class="name-pair">
+                                        <span class="current">✓ Munich</span>
+                                        <span class="note">English form (German: München)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="disputed-territories">
+                        <h3>Disputed Territories and Sensitive Names</h3>
+                        <div class="sensitivity-guidelines">
+                            <div class="guideline-item">
+                                <h4>⚖️ Neutral Language</h4>
+                                <p>Use language that acknowledges different perspectives:</p>
+                                <ul>
+                                    <li>"the region of Kashmir" (rather than assigning to a single country)</li>
+                                    <li>"the territory of Taiwan" (neutral terminology)</li>
+                                    <li>"Jerusalem" (avoid taking positions on status)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="guideline-item">
+                                <h4>📋 Government Context</h4>
+                                <p>In official Canadian government documents, follow:</p>
+                                <ul>
+                                    <li>Global Affairs Canada naming conventions</li>
+                                    <li>UN official country names when appropriate</li>
+                                    <li>Established diplomatic positions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-foreign-places"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('foreign-places')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section 15.04: Provinces & Territories -->
+            <section class="content-section" id="provinces-territories">
+                <div class="section-header">
+                    <h2>15.04 Provinces & Territories</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Canadian provinces and territories have specific naming conventions and abbreviations that must be used consistently.</p>
+                    
+                    <div class="provinces-list">
+                        <h3>Official Province and Territory Names</h3>
                         <div class="province-grid">
-                            <div class="province-category">
-                                <h4>🏔️ Western Canada</h4>
+                            <div class="province-section">
+                                <h4>🏛️ Provinces</h4>
                                 <div class="province-list">
                                     <div class="province-item">
                                         <span class="full-name">British Columbia</span>
-                                        <span class="abbreviation">BC</span>
-                                        <span class="capital">Victoria</span>
+                                        <span class="abbrev">BC</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Alberta</span>
-                                        <span class="abbreviation">AB</span>
-                                        <span class="capital">Edmonton</span>
+                                        <span class="abbrev">AB</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Saskatchewan</span>
-                                        <span class="abbreviation">SK</span>
-                                        <span class="capital">Regina</span>
+                                        <span class="abbrev">SK</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Manitoba</span>
-                                        <span class="abbreviation">MB</span>
-                                        <span class="capital">Winnipeg</span>
+                                        <span class="abbrev">MB</span>
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <div class="province-category">
-                                <h4>🏙️ Central Canada</h4>
-                                <div class="province-list">
                                     <div class="province-item">
                                         <span class="full-name">Ontario</span>
-                                        <span class="abbreviation">ON</span>
-                                        <span class="capital">Toronto</span>
+                                        <span class="abbrev">ON</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Quebec</span>
-                                        <span class="abbreviation">QC</span>
-                                        <span class="capital">Quebec City</span>
+                                        <span class="abbrev">QC</span>
                                     </div>
-                                </div>
-                            </div>
-                            
-                            <div class="province-category">
-                                <h4>🌊 Atlantic Canada</h4>
-                                <div class="province-list">
                                     <div class="province-item">
                                         <span class="full-name">New Brunswick</span>
-                                        <span class="abbreviation">NB</span>
-                                        <span class="capital">Fredericton</span>
-                                    </div>
-                                    <div class="province-item">
-                                        <span class="full-name">Nova Scotia</span>
-                                        <span class="abbreviation">NS</span>
-                                        <span class="capital">Halifax</span>
+                                        <span class="abbrev">NB</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Prince Edward Island</span>
-                                        <span class="abbreviation">PE</span>
-                                        <span class="capital">Charlottetown</span>
+                                        <span class="abbrev">PE</span>
+                                    </div>
+                                    <div class="province-item">
+                                        <span class="full-name">Nova Scotia</span>
+                                        <span class="abbrev">NS</span>
                                     </div>
                                     <div class="province-item">
                                         <span class="full-name">Newfoundland and Labrador</span>
-                                        <span class="abbreviation">NL</span>
-                                        <span class="capital">St. John's</span>
+                                        <span class="abbrev">NL</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="province-category">
-                                <h4>❄️ Northern Canada</h4>
-                                <div class="province-list">
-                                    <div class="province-item">
-                                        <span class="full-name">Northwest Territories</span>
-                                        <span class="abbreviation">NT</span>
-                                        <span class="capital">Yellowknife</span>
-                                    </div>
-                                    <div class="province-item">
+                            <div class="territory-section">
+                                <h4>🏔️ Territories</h4>
+                                <div class="territory-list">
+                                    <div class="territory-item">
                                         <span class="full-name">Yukon</span>
-                                        <span class="abbreviation">YT</span>
-                                        <span class="capital">Whitehorse</span>
+                                        <span class="abbrev">YT</span>
+                                        <span class="note">(not "Yukon Territory")</span>
                                     </div>
-                                    <div class="province-item">
+                                    <div class="territory-item">
+                                        <span class="full-name">Northwest Territories</span>
+                                        <span class="abbrev">NT</span>
+                                    </div>
+                                    <div class="territory-item">
                                         <span class="full-name">Nunavut</span>
-                                        <span class="abbreviation">NU</span>
-                                        <span class="capital">Iqaluit</span>
+                                        <span class="abbrev">NU</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Major Canadian Cities</h3>
-                    <div class="major-cities">
-                        <div class="city-category">
-                            <h4>📊 Largest Metropolitan Areas</h4>
-                            <div class="city-list">
-                                <div class="city-item">
-                                    <span class="city-name">Toronto</span>
-                                    <span class="province">Ontario</span>
-                                    <span class="note">Canada's largest city</span>
-                                </div>
-                                <div class="city-item">
-                                    <span class="city-name">Montreal</span>
-                                    <span class="province">Quebec</span>
-                                    <span class="note">Largest French-speaking city</span>
-                                </div>
-                                <div class="city-item">
-                                    <span class="city-name">Vancouver</span>
-                                    <span class="province">British Columbia</span>
-                                    <span class="note">Pacific gateway</span>
-                                </div>
-                                <div class="city-item">
-                                    <span class="city-name">Calgary</span>
-                                    <span class="province">Alberta</span>
-                                    <span class="note">Energy centre</span>
-                                </div>
-                                <div class="city-item">
-                                    <span class="city-name">Edmonton</span>
-                                    <span class="province">Alberta</span>
-                                    <span class="note">Provincial capital</span>
-                                </div>
-                                <div class="city-item">
-                                    <span class="city-name">Ottawa</span>
-                                    <span class="province">Ontario</span>
-                                    <span class="note">National capital</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Special Naming Considerations</h3>
-                    <div class="naming-considerations">
-                        <div class="consideration-item">
-                            <h4>🔤 Capitalization Rules</h4>
-                            <ul>
-                                <li><strong>All significant words:</strong> British Columbia, Prince Edward Island</li>
-                                <li><strong>Articles and prepositions:</strong> Follow official spelling</li>
-                                <li><strong>Compound names:</strong> Each component capitalized</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="consideration-item">
-                            <h4>📍 Punctuation</h4>
-                            <ul>
-                                <li><strong>St. John's:</strong> With apostrophe and period (Newfoundland)</li>
-                                <li><strong>Saint John:</strong> No abbreviation (New Brunswick)</li>
-                                <li><strong>Hyphens:</strong> Trois-Rivières, Saint-Jérôme</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="consideration-item">
-                            <h4>🌐 Official Names</h4>
-                            <ul>
-                                <li><strong>Use current official names:</strong> Not historical variants</li>
-                                <li><strong>Check government sources:</strong> For authoritative spellings</li>
-                                <li><strong>Respect local preferences:</strong> When officially recognized</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Regional Variations</h3>
-                    <div class="regional-variations">
-                        <div class="variation-type">
-                            <h4>🗣️ Common vs. Official Names</h4>
-                            <div class="variation-examples">
-                                <div class="variation-item">
-                                    <span class="official">Official: Newfoundland and Labrador</span>
-                                    <span class="common">Common: Newfoundland</span>
-                                    <span class="usage">Use official name in formal writing</span>
-                                </div>
-                                <div class="variation-item">
-                                    <span class="official">Official: City of Toronto</span>
-                                    <span class="common">Common: Toronto</span>
-                                    <span class="usage">Common form acceptable in most contexts</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Geographic Features</h3>
-                    <div class="geographic-features">
-                        <div class="feature-category">
-                            <h4>🏔️ Mountains and Ranges</h4>
-                            <ul>
-                                <li>Rocky Mountains</li>
-                                <li>Coast Mountains</li>
-                                <li>Laurentian Mountains</li>
-                                <li>Appalachian Mountains</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-category">
-                            <h4>🌊 Bodies of Water</h4>
-                            <ul>
-                                <li>Great Lakes</li>
-                                <li>Lake Superior</li>
-                                <li>Hudson Bay</li>
-                                <li>Bay of Fundy</li>
-                                <li>St. Lawrence River</li>
-                                <li>Fraser River</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="feature-category">
-                            <h4>🏝️ Islands and Archipelagos</h4>
-                            <ul>
-                                <li>Vancouver Island</li>
-                                <li>Prince Edward Island</li>
-                                <li>Arctic Archipelago</li>
-                                <li>Thousand Islands</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Accuracy Tip</h4>
-                        <p>When in doubt about Canadian place names, consult the Geographical Names Board of Canada or Natural Resources Canada for official spellings and current names.</p>
-                    </div>
-                </div>
-
-                <div class="quiz-panel" id="quiz-canadian-places"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('canadian-places')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="international-places" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>15.02 International Place Names</h2>
                     
-                    <div class="info-box">
-                        <h3>🌍 Global Geography</h3>
-                        <p>International place names require sensitivity to current political realities and local preferences.</p>
-                    </div>
-
-                    <h3>Current vs. Historical Names</h3>
-                    <div class="current-historical">
-                        <div class="name-changes">
-                            <h4>🔄 Recent Name Changes</h4>
-                            <div class="change-examples">
-                                <div class="change-item">
-                                    <span class="current">✅ Current: Mumbai</span>
-                                    <span class="former">❌ Former: Bombay</span>
-                                    <span class="context">Use current name in modern writing</span>
-                                </div>
-                                <div class="change-item">
-                                    <span class="current">✅ Current: Beijing</span>
-                                    <span class="former">❌ Former: Peking</span>
-                                    <span class="context">Historical context may warrant former name</span>
-                                </div>
-                                <div class="change-item">
-                                    <span class="current">✅ Current: Myanmar</span>
-                                    <span class="former">❌ Former: Burma</span>
-                                    <span class="context">Political sensitivity required</span>
-                                </div>
-                                <div class="change-item">
-                                    <span class="current">✅ Current: Ho Chi Minh City</span>
-                                    <span class="former">❌ Former: Saigon</span>
-                                    <span class="context">Historical documents may use former name</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>English vs. Local Names</h3>
-                    <div class="english-local">
-                        <div class="naming-principle">
-                            <h4>📝 General Principles</h4>
-                            <ul>
-                                <li><strong>Established English forms:</strong> Use when widely recognized</li>
-                                <li><strong>Respect local preferences:</strong> Especially for new names</li>
-                                <li><strong>Consider your audience:</strong> Use forms readers will understand</li>
-                                <li><strong>Be consistent:</strong> Throughout a single document</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="name-examples">
-                            <h4>🌐 Examples by Category</h4>
-                            <div class="example-grid">
-                                <div class="example-category">
-                                    <h5>Established English Forms</h5>
-                                    <ul>
-                                        <li>Rome (not Roma)</li>
-                                        <li>Florence (not Firenze)</li>
-                                        <li>Moscow (not Moskva)</li>
-                                        <li>Vienna (not Wien)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="example-category">
-                                    <h5>Local Forms Preferred</h5>
-                                    <ul>
-                                        <li>Praha (not Prague) - increasingly used</li>
-                                        <li>Kyiv (not Kiev) - respects Ukrainian preference</li>
-                                        <li>Côte d'Ivoire (not Ivory Coast)</li>
-                                        <li>Türkiye (Turkey) - recent official change</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="example-category">
-                                    <h5>Context Dependent</h5>
-                                    <ul>
-                                        <li>Gdansk/Danzig (historical context matters)</li>
-                                        <li>Lviv/Lwów/Lemberg (varies by language)</li>
-                                        <li>Mumbai/Bombay (era of reference)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Country Name Conventions</h3>
-                    <div class="country-conventions">
-                        <div class="official-names">
-                            <h4>🏛️ Official Country Names</h4>
-                            <div class="country-examples">
-                                <div class="country-item">
-                                    <span class="short-form">China</span>
-                                    <span class="official-form">People's Republic of China</span>
-                                    <span class="usage">Use short form in most contexts</span>
-                                </div>
-                                <div class="country-item">
-                                    <span class="short-form">Russia</span>
-                                    <span class="official-form">Russian Federation</span>
-                                    <span class="usage">Both forms acceptable</span>
-                                </div>
-                                <div class="country-item">
-                                    <span class="short-form">United States</span>
-                                    <span class="official-form">United States of America</span>
-                                    <span class="usage">USA acceptable in informal contexts</span>
-                                </div>
-                                <div class="country-item">
-                                    <span class="short-form">United Kingdom</span>
-                                    <span class="official-form">United Kingdom of Great Britain and Northern Ireland</span>
-                                    <span class="usage">UK acceptable as abbreviation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Disputed Territories</h3>
-                    <div class="disputed-territories">
-                        <div class="sensitivity-guidelines">
-                            <h4>⚖️ Handling Sensitive Cases</h4>
-                            <ul>
-                                <li><strong>Use neutral language:</strong> Avoid taking political positions</li>
-                                <li><strong>Acknowledge disputes:</strong> When relevant to context</li>
-                                <li><strong>Follow Canadian policy:</strong> When representing Canada officially</li>
-                                <li><strong>Use descriptive terms:</strong> "territory," "region," "area"</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="sensitive-examples">
-                            <h4>📍 Examples of Sensitive Nomenclature</h4>
-                            <div class="sensitive-cases">
-                                <div class="case-item">
-                                    <span class="issue">Taiwan/Chinese Taipei</span>
-                                    <span class="approach">Use context-appropriate term</span>
-                                </div>
-                                <div class="case-item">
-                                    <span class="issue">Kosovo</span>
-                                    <span class="approach">Note recognition status if relevant</span>
-                                </div>
-                                <div class="case-item">
-                                    <span class="issue">Palestinian territories</span>
-                                    <span class="approach">Use descriptive, neutral language</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Continental and Regional Names</h3>
-                    <div class="continental-regional">
-                        <div class="continent-names">
-                            <h4>🌍 Continental Designations</h4>
-                            <div class="continent-list">
-                                <div class="continent-item">
-                                    <span class="name">North America</span>
-                                    <span class="note">Includes Canada, US, Mexico</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">South America</span>
-                                    <span class="note">Sometimes "Latin America" for cultural region</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">Europe</span>
-                                    <span class="note">Geographic vs. political definitions vary</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">Asia</span>
-                                    <span class="note">Often subdivided: East Asia, Southeast Asia, etc.</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">Africa</span>
-                                    <span class="note">Regional divisions: North, Sub-Saharan, etc.</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">Oceania/Australia</span>
-                                    <span class="note">Australia (continent) vs. Oceania (region)</span>
-                                </div>
-                                <div class="continent-item">
-                                    <span class="name">Antarctica</span>
-                                    <span class="note">International territory</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>International Organizations and Regions</h3>
-                    <div class="international-regions">
-                        <div class="org-regions">
-                            <h4>🏢 Political/Economic Regions</h4>
-                            <ul>
-                                <li><strong>European Union (EU):</strong> Political and economic union</li>
-                                <li><strong>ASEAN:</strong> Association of Southeast Asian Nations</li>
-                                <li><strong>African Union (AU):</strong> Continental organization</li>
-                                <li><strong>Middle East:</strong> Cultural/geographic region (terms vary)</li>
-                                <li><strong>Balkans:</strong> Southeastern European peninsula</li>
-                                <li><strong>Scandinavia:</strong> Northern European region</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Style Guidelines for International Names</h3>
-                    <div class="style-guidelines">
-                        <div class="guideline-set">
-                            <h4>📖 Reference Sources</h4>
-                            <ul>
-                                <li><strong>UN official names:</strong> For international documents</li>
-                                <li><strong>CIA World Factbook:</strong> For current information</li>
-                                <li><strong>Local embassy sources:</strong> For preferred spellings</li>
-                                <li><strong>Canadian government:</strong> For official Canadian positions</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guideline-set">
-                            <h4>✍️ Writing Practice</h4>
-                            <ul>
-                                <li><strong>First mention:</strong> Use full official name if needed</li>
-                                <li><strong>Subsequent references:</strong> Common short form acceptable</li>
-                                <li><strong>Parenthetical notes:</strong> (formerly...) when helpful</li>
-                                <li><strong>Consistency check:</strong> Review entire document for uniform usage</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4>⚠️ Political Sensitivity</h4>
-                        <p>Geographic names can be politically charged. Research current preferences and official positions, especially for recently independent countries, disputed territories, or places with ongoing political changes.</p>
-                    </div>
-                </div>
-
-                <div class="quiz-panel" id="quiz-international-places"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('international-places')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="generic-terms" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>15.03 Generic Geographic Terms</h2>
-                    
-                    <div class="info-box">
-                        <h3>🏷️ Common vs. Proper Usage</h3>
-                        <p>Generic geographic terms require careful attention to capitalization and context.</p>
-                    </div>
-
-                    <h3>Capitalization Rules</h3>
-                    <div class="capitalization-rules">
-                        <div class="rule-category">
-                            <h4>✅ Capitalize When Part of Proper Name</h4>
-                            <div class="capitalize-examples">
-                                <div class="example-item">
-                                    <span class="proper">Lake Ontario</span>
-                                    <span class="explanation">Lake is part of the official name</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="proper">Mount Everest</span>
-                                    <span class="explanation">Mount is part of the proper name</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="proper">Rocky Mountains</span>
-                                    <span class="explanation">Mountains is part of the proper name</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="proper">Fraser River</span>
-                                    <span class="explanation">River is part of the official designation</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="proper">Bay of Fundy</span>
-                                    <span class="explanation">Bay is part of the proper name</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="rule-category">
-                            <h4>❌ Don't Capitalize Generic References</h4>
-                            <div class="lowercase-examples">
-                                <div class="example-item">
-                                    <span class="generic">the lake</span>
-                                    <span class="explanation">General reference to any lake</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="generic">a mountain peak</span>
-                                    <span class="explanation">Non-specific reference</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="generic">several rivers</span>
-                                    <span class="explanation">Plural, non-specific</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="generic">the valley</span>
-                                    <span class="explanation">General reference</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="generic">coastal areas</span>
-                                    <span class="explanation">Descriptive, not proper name</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Context-Dependent Capitalization</h3>
-                    <div class="context-dependent">
-                        <div class="context-examples">
-                            <h4>🔄 Same Word, Different Usage</h4>
-                            <div class="comparison-set">
-                                <div class="comparison-item">
-                                    <h5>Lake Examples</h5>
-                                    <div class="comparison-pair">
-                                        <span class="proper">✅ We visited Lake Superior last summer.</span>
-                                        <span class="note">Proper name</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ The lake was frozen in winter.</span>
-                                        <span class="note">General reference</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ Superior is the largest of the Great Lakes.</span>
-                                        <span class="note">Name used alone</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="comparison-item">
-                                    <h5>Mountain Examples</h5>
-                                    <div class="comparison-pair">
-                                        <span class="proper">✅ Mount Robson is the highest peak in the Canadian Rockies.</span>
-                                        <span class="note">Proper name</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ The mountain was covered in snow.</span>
-                                        <span class="note">General reference</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ We climbed several mountains during our trip.</span>
-                                        <span class="note">Plural, general</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="comparison-item">
-                                    <h5>River Examples</h5>
-                                    <div class="comparison-pair">
-                                        <span class="proper">✅ The St. Lawrence River connects the Great Lakes to the ocean.</span>
-                                        <span class="note">Proper name</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ The river flows north to the sea.</span>
-                                        <span class="note">General reference</span>
-                                    </div>
-                                    <div class="comparison-pair">
-                                        <span class="generic">✅ Many rivers drain into Hudson Bay.</span>
-                                        <span class="note">Plural, general</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Common Geographic Terms</h3>
-                    <div class="geographic-terms">
-                        <div class="term-category">
-                            <h4>🏔️ Landforms</h4>
-                            <div class="term-grid">
-                                <div class="term-item">
-                                    <span class="term">mountain/mount</span>
-                                    <span class="proper-example">Mount Assiniboine</span>
-                                    <span class="generic-example">the mountain trail</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">hill</span>
-                                    <span class="proper-example">Parliament Hill</span>
-                                    <span class="generic-example">rolling hills</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">valley</span>
-                                    <span class="proper-example">Fraser Valley</span>
-                                    <span class="generic-example">a fertile valley</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">plateau</span>
-                                    <span class="proper-example">Canadian Shield</span>
-                                    <span class="generic-example">the plateau region</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">peninsula</span>
-                                    <span class="proper-example">Gaspé Peninsula</span>
-                                    <span class="generic-example">the narrow peninsula</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="term-category">
-                            <h4>🌊 Water Bodies</h4>
-                            <div class="term-grid">
-                                <div class="term-item">
-                                    <span class="term">lake</span>
-                                    <span class="proper-example">Lake Winnipeg</span>
-                                    <span class="generic-example">a pristine lake</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">river</span>
-                                    <span class="proper-example">Mackenzie River</span>
-                                    <span class="generic-example">the winding river</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">bay</span>
-                                    <span class="proper-example">Hudson Bay</span>
-                                    <span class="generic-example">a sheltered bay</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">strait</span>
-                                    <span class="proper-example">Strait of Georgia</span>
-                                    <span class="generic-example">the narrow strait</span>
-                                </div>
-                                <div class="term-item">
-                                    <span class="term">channel</span>
-                                    <span class="proper-example">English Channel</span>
-                                    <span class="generic-example">the shipping channel</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Prepositions with Geographic Names</h3>
-                    <div class="prepositions">
-                        <div class="preposition-rules">
-                            <h4>📍 Standard Usage Patterns</h4>
-                            <div class="usage-examples">
-                                <div class="usage-type">
-                                    <h5>With Articles</h5>
-                                    <ul>
-                                        <li><strong>the Great Lakes</strong> (plural forms often take "the")</li>
-                                        <li><strong>the Rocky Mountains</strong> (mountain ranges take "the")</li>
-                                        <li><strong>the Fraser River</strong> (rivers take "the")</li>
-                                        <li><strong>the Bay of Fundy</strong> (bays often take "the")</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="usage-type">
-                                    <h5>Without Articles</h5>
-                                    <ul>
-                                        <li><strong>Lake Ontario</strong> (individual lakes don't take "the")</li>
-                                        <li><strong>Mount Logan</strong> (individual mountains don't take "the")</li>
-                                        <li><strong>Vancouver Island</strong> (islands usually don't take "the")</li>
-                                        <li><strong>Hudson Bay</strong> (some bays don't take "the")</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Regional and Descriptive Terms</h3>
-                    <div class="regional-terms">
-                        <div class="descriptive-examples">
-                            <h4>🗺️ Geographic Regions</h4>
-                            <div class="region-examples">
-                                <div class="region-type">
-                                    <h5>Capitalize Established Regions</h5>
-                                    <ul>
-                                        <li>the Prairies (Canadian prairie provinces)</li>
-                                        <li>the Maritimes (Atlantic provinces)</li>
-                                        <li>Northern Ontario (recognized region)</li>
-                                        <li>the Arctic (polar region)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="region-type">
-                                    <h5>Don't Capitalize Descriptive Terms</h5>
-                                    <ul>
-                                        <li>northern Canada (directional description)</li>
-                                        <li>eastern Ontario (general direction)</li>
-                                        <li>coastal British Columbia (descriptive)</li>
-                                        <li>rural areas (general description)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Special Cases and Exceptions</h3>
-                    <div class="special-cases">
-                        <div class="exception-examples">
-                            <h4>🎯 Notable Exceptions</h4>
-                            <div class="exception-list">
-                                <div class="exception-item">
-                                    <span class="term">the North</span>
-                                    <span class="explanation">Capitalized when referring to Canadian Arctic region</span>
-                                </div>
-                                <div class="exception-item">
-                                    <span class="term">the West</span>
-                                    <span class="explanation">Capitalized when referring to Western Canada as a region</span>
-                                </div>
-                                <div class="exception-item">
-                                    <span class="term">the Shield</span>
-                                    <span class="explanation">Short form for Canadian Shield</span>
-                                </div>
-                                <div class="exception-item">
-                                    <span class="term">the Falls</span>
-                                    <span class="explanation">Short form for Niagara Falls</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Decision Guide</h4>
-                        <p>When unsure about capitalization, ask: "Is this word part of the official proper name?" If yes, capitalize. If it's a general descriptive term, use lowercase. When in doubt, check official government sources.</p>
-                    </div>
-                </div>
-
-                <div class="quiz-panel" id="quiz-generic-terms"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('generic-terms')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="abbreviations" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>15.04 Geographic Abbreviations</h2>
-                    
-                    <div class="info-box">
-                        <h3>📋 Standardized Short Forms</h3>
-                        <p>Geographic abbreviations promote consistency and efficiency in addresses and references.</p>
-                    </div>
-
-                    <h3>Canadian Postal Abbreviations</h3>
-                    <div class="postal-abbreviations">
-                        <div class="abbrev-table">
-                            <h4>🇨🇦 Provinces and Territories</h4>
-                            <div class="abbrev-grid">
-                                <div class="abbrev-header">
-                                    <span class="col-header">Province/Territory</span>
-                                    <span class="col-header">Abbreviation</span>
-                                    <span class="col-header">Former</span>
-                                </div>
-                                
-                                <div class="abbrev-row">
-                                    <span class="full-name">British Columbia</span>
-                                    <span class="abbrev-current">BC</span>
-                                    <span class="abbrev-former">B.C.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Alberta</span>
-                                    <span class="abbrev-current">AB</span>
-                                    <span class="abbrev-former">Alta.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Saskatchewan</span>
-                                    <span class="abbrev-current">SK</span>
-                                    <span class="abbrev-former">Sask.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Manitoba</span>
-                                    <span class="abbrev-current">MB</span>
-                                    <span class="abbrev-former">Man.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Ontario</span>
-                                    <span class="abbrev-current">ON</span>
-                                    <span class="abbrev-former">Ont.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Quebec</span>
-                                    <span class="abbrev-current">QC</span>
-                                    <span class="abbrev-former">Que.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">New Brunswick</span>
-                                    <span class="abbrev-current">NB</span>
-                                    <span class="abbrev-former">N.B.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Nova Scotia</span>
-                                    <span class="abbrev-current">NS</span>
-                                    <span class="abbrev-former">N.S.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Prince Edward Island</span>
-                                    <span class="abbrev-current">PE</span>
-                                    <span class="abbrev-former">P.E.I.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Newfoundland and Labrador</span>
-                                    <span class="abbrev-current">NL</span>
-                                    <span class="abbrev-former">Nfld.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Northwest Territories</span>
-                                    <span class="abbrev-current">NT</span>
-                                    <span class="abbrev-former">N.W.T.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Yukon</span>
-                                    <span class="abbrev-current">YT</span>
-                                    <span class="abbrev-former">Y.T.</span>
-                                </div>
-                                <div class="abbrev-row">
-                                    <span class="full-name">Nunavut</span>
-                                    <span class="abbrev-current">NU</span>
-                                    <span class="abbrev-former">(new territory)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Usage Guidelines</h3>
                     <div class="usage-guidelines">
-                        <div class="guideline-category">
-                            <h4>✅ When to Use Abbreviations</h4>
-                            <ul>
-                                <li><strong>Mailing addresses:</strong> Always use postal abbreviations</li>
-                                <li><strong>Tables and charts:</strong> Space-saving contexts</li>
-                                <li><strong>Data presentations:</strong> Statistical reports</li>
-                                <li><strong>Forms and databases:</strong> Standardized entries</li>
-                                <li><strong>Reference lists:</strong> Bibliographic citations</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="guideline-category">
-                            <h4>❌ When to Spell Out Full Names</h4>
-                            <ul>
-                                <li><strong>Formal documents:</strong> Official correspondence</li>
-                                <li><strong>Literary writing:</strong> Books, articles, essays</li>
-                                <li><strong>First mention:</strong> In formal reports</li>
-                                <li><strong>Ceremonial contexts:</strong> Speeches, proclamations</li>
-                                <li><strong>When clarity needed:</strong> International audiences</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>International Abbreviations</h3>
-                    <div class="international-abbreviations">
-                        <div class="country-abbrevs">
-                            <h4>🌍 Common Country Abbreviations</h4>
-                            <div class="country-examples">
-                                <div class="country-type">
-                                    <h5>ISO Standard Codes</h5>
-                                    <div class="iso-examples">
-                                        <div class="iso-item">
-                                            <span class="country">Canada</span>
-                                            <span class="iso2">CA</span>
-                                            <span class="iso3">CAN</span>
-                                        </div>
-                                        <div class="iso-item">
-                                            <span class="country">United States</span>
-                                            <span class="iso2">US</span>
-                                            <span class="iso3">USA</span>
-                                        </div>
-                                        <div class="iso-item">
-                                            <span class="country">United Kingdom</span>
-                                            <span class="iso2">GB</span>
-                                            <span class="iso3">GBR</span>
-                                        </div>
-                                        <div class="iso-item">
-                                            <span class="country">France</span>
-                                            <span class="iso2">FR</span>
-                                            <span class="iso3">FRA</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="country-type">
-                                    <h5>Common Usage</h5>
-                                    <ul>
-                                        <li><strong>USA/US:</strong> United States (both acceptable)</li>
-                                        <li><strong>UK:</strong> United Kingdom</li>
-                                        <li><strong>EU:</strong> European Union</li>
-                                        <li><strong>UN:</strong> United Nations</li>
-                                    </ul>
-                                </div>
+                        <h3>Usage Guidelines</h3>
+                        <div class="usage-examples">
+                            <div class="usage-category">
+                                <h4>📝 In Running Text</h4>
+                                <ul>
+                                    <li>"The conference will be held in <strong>British Columbia</strong>."</li>
+                                    <li>"<strong>Newfoundland and Labrador</strong> has unique geography."</li>
+                                    <li>"Economic development in <strong>Yukon</strong> is growing."</li>
+                                </ul>
+                                <p class="note">Use full names in formal writing</p>
+                            </div>
+                            
+                            <div class="usage-category">
+                                <h4>📊 In Tables and Lists</h4>
+                                <ul>
+                                    <li>Use abbreviations: <strong>BC, AB, SK, MB</strong></li>
+                                    <li>Be consistent within each document</li>
+                                    <li>Provide legend if needed</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="usage-category">
+                                <h4>📮 In Addresses</h4>
+                                <ul>
+                                    <li>Always use postal abbreviations</li>
+                                    <li>Toronto, <strong>ON</strong> M5V 2H1</li>
+                                    <li>Vancouver, <strong>BC</strong> V6B 1A1</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Street and Address Abbreviations</h3>
-                    <div class="street-abbreviations">
-                        <div class="street-terms">
-                            <h4>🏠 Street Type Abbreviations</h4>
-                            <div class="street-grid">
-                                <div class="street-item">
-                                    <span class="full-term">Street</span>
-                                    <span class="abbreviation">St.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Avenue</span>
-                                    <span class="abbreviation">Ave.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Boulevard</span>
-                                    <span class="abbreviation">Blvd.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Drive</span>
-                                    <span class="abbreviation">Dr.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Road</span>
-                                    <span class="abbreviation">Rd.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Lane</span>
-                                    <span class="abbreviation">Ln.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Circle</span>
-                                    <span class="abbreviation">Cir.</span>
-                                </div>
-                                <div class="street-item">
-                                    <span class="full-term">Court</span>
-                                    <span class="abbreviation">Ct.</span>
-                                </div>
+                    
+                    <div class="common-errors">
+                        <h3>Common Errors to Avoid</h3>
+                        <div class="error-grid">
+                            <div class="error-item">
+                                <span class="error-label">✗ Incorrect:</span>
+                                <span class="error-example">"Yukon Territory"</span>
+                                <span class="correct-label">✓ Correct:</span>
+                                <span class="correct-example">"Yukon"</span>
+                            </div>
+                            <div class="error-item">
+                                <span class="error-label">✗ Incorrect:</span>
+                                <span class="error-example">"Nfld." (old abbreviation)</span>
+                                <span class="correct-label">✓ Correct:</span>
+                                <span class="correct-example">"NL"</span>
+                            </div>
+                            <div class="error-item">
+                                <span class="error-label">✗ Incorrect:</span>
+                                <span class="error-example">"PEI" in formal text</span>
+                                <span class="correct-label">✓ Correct:</span>
+                                <span class="correct-example">"Prince Edward Island"</span>
                             </div>
                         </div>
-                        
-                        <div class="directional-abbrevs">
-                            <h4>🧭 Directional Abbreviations</h4>
-                            <div class="direction-grid">
-                                <div class="direction-item">
-                                    <span class="full-direction">North</span>
-                                    <span class="abbreviation">N.</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">South</span>
-                                    <span class="abbreviation">S.</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">East</span>
-                                    <span class="abbreviation">E.</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">West</span>
-                                    <span class="abbreviation">W.</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">Northeast</span>
-                                    <span class="abbreviation">NE</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">Northwest</span>
-                                    <span class="abbreviation">NW</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">Southeast</span>
-                                    <span class="abbreviation">SE</span>
-                                </div>
-                                <div class="direction-item">
-                                    <span class="full-direction">Southwest</span>
-                                    <span class="abbreviation">SW</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Academic and Professional Context</h3>
-                    <div class="academic-context">
-                        <div class="context-rules">
-                            <h4>🎓 Formal Writing Guidelines</h4>
-                            <div class="writing-contexts">
-                                <div class="context-type">
-                                    <h5>Academic Papers</h5>
-                                    <ul>
-                                        <li><strong>First mention:</strong> Spell out full name</li>
-                                        <li><strong>Subsequent mentions:</strong> Abbreviation acceptable</li>
-                                        <li><strong>Parenthetical:</strong> Include abbreviation after first mention</li>
-                                        <li><strong>Example:</strong> "British Columbia (BC) has diverse geography. BC's climate varies..."</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="context-type">
-                                    <h5>Business Writing</h5>
-                                    <ul>
-                                        <li><strong>Addresses:</strong> Always use postal abbreviations</li>
-                                        <li><strong>Body text:</strong> Spell out for formality</li>
-                                        <li><strong>Tables/data:</strong> Abbreviations acceptable</li>
-                                        <li><strong>International correspondence:</strong> Consider audience familiarity</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Consistency Guidelines</h3>
-                    <div class="consistency-guidelines">
-                        <div class="consistency-rules">
-                            <h4>📐 Maintaining Consistency</h4>
-                            <ul>
-                                <li><strong>Within documents:</strong> Use the same style throughout</li>
-                                <li><strong>Organization style:</strong> Follow institutional guidelines</li>
-                                <li><strong>Audience consideration:</strong> Match reader expectations</li>
-                                <li><strong>Context appropriateness:</strong> Formal vs. informal settings</li>
-                                <li><strong>International clarity:</strong> Explain abbreviations when needed</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="style-examples">
-                            <h4>📝 Style Examples</h4>
-                            <div class="style-comparison">
-                                <div class="style-formal">
-                                    <h5>Formal Style</h5>
-                                    <p>"The conference will be held in Toronto, Ontario, with satellite sessions in Vancouver, British Columbia."</p>
-                                </div>
-                                <div class="style-standard">
-                                    <h5>Standard Style</h5>
-                                    <p>"The conference will be held in Toronto, ON, with satellite sessions in Vancouver, BC."</p>
-                                </div>
-                                <div class="style-data">
-                                    <h5>Data/Table Style</h5>
-                                    <p>TO-ON | VAN-BC | MTL-QC</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="warning-box">
-                        <h4>⚠️ Avoid Outdated Abbreviations</h4>
-                        <p>Don't use old-style abbreviations like "P.E.I." or "N.W.T." in modern writing. The current postal abbreviations (PE, NT) are standard and should be used in all contemporary documents.</p>
                     </div>
                 </div>
-
-                <div class="quiz-panel" id="quiz-abbreviations"></div>
-
+                
+                <div class="quiz-panel" id="quiz-provinces-territories"></div>
+                
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('abbreviations')">
-                        Mark as Complete
+                    <button class="btn btn-primary" onclick="completeSection('provinces-territories')">
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="indigenous-names" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>15.05 Indigenous Place Names</h2>
+            <!-- Section 15.05: Indigenous Names -->
+            <section class="content-section" id="indigenous-names">
+                <div class="section-header">
+                    <h2>15.05 Indigenous Names</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Indigenous geographical names require special attention to accuracy, cultural sensitivity, and contemporary usage.</p>
                     
-                    <div class="info-box">
-                        <h3>🪶 Respectful Recognition</h3>
-                        <p>Indigenous place names deserve respectful treatment and recognition of their cultural significance and historical precedence.</p>
-                    </div>
-
-                    <h3>Principles of Respectful Usage</h3>
-                    <div class="respectful-principles">
-                        <div class="principle-category">
-                            <h4>🤝 Core Principles</h4>
-                            <ul>
-                                <li><strong>Acknowledge original names:</strong> Recognize Indigenous place names when appropriate</li>
-                                <li><strong>Use current preferences:</strong> Follow community-preferred spellings and usage</li>
-                                <li><strong>Respect cultural significance:</strong> Understand these names carry cultural meaning</li>
-                                <li><strong>Avoid appropriation:</strong> Don't use sacred names inappropriately</li>
-                                <li><strong>Educational approach:</strong> Help readers understand Indigenous geography</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Land Acknowledgments</h3>
-                    <div class="land-acknowledgments">
-                        <div class="acknowledgment-purpose">
-                            <h4>🌍 Purpose and Practice</h4>
-                            <p>Land acknowledgments recognize Indigenous peoples' historic and ongoing relationship with traditional territories.</p>
-                        </div>
-                        
-                        <div class="acknowledgment-elements">
-                            <h4>📋 Key Elements</h4>
-                            <div class="element-list">
-                                <div class="element-item">
-                                    <span class="element">Territory name:</span>
-                                    <span class="example">Traditional territory of the Mi'kmaq people</span>
-                                </div>
-                                <div class="element-item">
-                                    <span class="element">Current relationship:</span>
-                                    <span class="example">Ongoing stewardship and connection</span>
-                                </div>
-                                <div class="element-item">
-                                    <span class="element">Respectful language:</span>
-                                    <span class="example">Acknowledge without claiming ownership</span>
-                                </div>
-                                <div class="element-item">
-                                    <span class="element">Local specificity:</span>
-                                    <span class="example">Name specific nations/communities when known</span>
-                                </div>
+                    <div class="indigenous-principles">
+                        <h3>Guiding Principles</h3>
+                        <div class="principles-grid">
+                            <div class="principle-item">
+                                <h4>🤝 Respect and Recognition</h4>
+                                <p>Indigenous names reflect deep cultural connections to the land and should be used with respect and accuracy.</p>
                             </div>
-                        </div>
-                        
-                        <div class="acknowledgment-examples">
-                            <h4>📝 Example Acknowledgments</h4>
-                            <div class="example-set">
-                                <div class="example-item">
-                                    <h5>Formal Event</h5>
-                                    <p>"We acknowledge that we are gathering on the traditional territory of the [Nation name], and we recognize their ongoing relationship with this land."</p>
-                                </div>
-                                <div class="example-item">
-                                    <h5>Written Document</h5>
-                                    <p>"This research was conducted on the traditional territories of the [Nation names], whose stewardship of this land continues today."</p>
-                                </div>
+                            
+                            <div class="principle-item">
+                                <h4>✨ Current Usage</h4>
+                                <p>Prefer names currently used by Indigenous communities over historical colonial names when appropriate.</p>
+                            </div>
+                            
+                            <div class="principle-item">
+                                <h4>📚 Authoritative Sources</h4>
+                                <p>Consult Indigenous language authorities and community preferences for proper spelling and usage.</p>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Current Indigenous Place Names</h3>
-                    <div class="current-indigenous-names">
-                        <div class="name-categories">
-                            <h4>🗺️ Recognized Indigenous Names</h4>
-                            <div class="name-examples">
-                                <div class="name-category">
-                                    <h5>Communities</h5>
-                                    <ul>
-                                        <li><strong>Kahnawake:</strong> Mohawk community near Montreal</li>
-                                        <li><strong>Igloolik:</strong> Inuit community in Nunavut</li>
-                                        <li><strong>Tsawwassen:</strong> First Nation community in BC</li>
-                                        <li><strong>Wikwemikong:</strong> Unceded First Nation in Ontario</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="name-category">
-                                    <h5>Geographic Features</h5>
-                                    <ul>
-                                        <li><strong>Niagara:</strong> From Haudenosaunee meaning "thundering water"</li>
-                                        <li><strong>Saskatchewan:</strong> From Cree meaning "swift flowing river"</li>
-                                        <li><strong>Yukon:</strong> From Gwich'in meaning "great river"</li>
-                                        <li><strong>Nunavut:</strong> Inuktitut meaning "our land"</li>
-                                    </ul>
-                                </div>
+                    
+                    <div class="indigenous-examples">
+                        <h3>Examples of Indigenous Place Names</h3>
+                        <div class="indigenous-categories">
+                            <div class="indigenous-category">
+                                <h4>🏔️ Traditional Territory Names</h4>
+                                <ul>
+                                    <li><strong>Mi'kma'ki</strong> (traditional territory of Mi'kmaq people)</li>
+                                    <li><strong>Haudenosaunee</strong> (Six Nations territory)</li>
+                                    <li><strong>Anishinaabe Aki</strong> (traditional Ojibwe territory)</li>
+                                    <li><strong>Nitaskinan</strong> (Innu traditional territory)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="indigenous-category">
+                                <h4>🏘️ Community Names</h4>
+                                <ul>
+                                    <li><strong>Attawapiskat</strong> (Cree community in Ontario)</li>
+                                    <li><strong>Igloolik</strong> (Inuit community in Nunavut)</li>
+                                    <li><strong>Tsuu T'ina</strong> (Nation near Calgary)</li>
+                                    <li><strong>Haida Gwaii</strong> (formerly Queen Charlotte Islands)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="indigenous-category">
+                                <h4>🌊 Geographical Features</h4>
+                                <ul>
+                                    <li><strong>Gichi-Gami</strong> (Ojibwe name for Lake Superior)</li>
+                                    <li><strong>Denendeh</strong> (traditional Dene territory)</li>
+                                    <li><strong>Inuit Nunangat</strong> (Inuit homeland)</li>
+                                    <li><strong>Turtle Island</strong> (Indigenous name for North America)</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Dual and Alternative Names</h3>
-                    <div class="dual-names">
-                        <div class="naming-approaches">
-                            <h4>🔄 Using Multiple Names</h4>
-                            <div class="approach-examples">
-                                <div class="approach-type">
-                                    <h5>Parallel Usage</h5>
-                                    <p>Include both Indigenous and colonial names when appropriate:</p>
-                                    <ul>
-                                        <li>"Denendeh (Northwest Territories)"</li>
-                                        <li>"Ktaqmkuk (Newfoundland)"</li>
-                                        <li>"Turtle Island (North America)"</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="approach-type">
-                                    <h5>Historical Context</h5>
-                                    <p>Acknowledge name changes and their significance:</p>
-                                    <ul>
-                                        <li>"The area now known as Toronto, from the Mohawk word tkaronto"</li>
-                                        <li>"Kanata, from which Canada derives its name"</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Pronunciation and Spelling</h3>
-                    <div class="pronunciation-spelling">
-                        <div class="linguistic-considerations">
-                            <h4>🗣️ Linguistic Respect</h4>
-                            <ul>
-                                <li><strong>Use community-preferred spellings:</strong> Not anglicized versions</li>
-                                <li><strong>Include pronunciation guides:</strong> When helpful for readers</li>
-                                <li><strong>Respect orthographic systems:</strong> Follow Indigenous writing systems</li>
-                                <li><strong>Avoid "simplified" spellings:</strong> That distort original names</li>
-                                <li><strong>Consult authoritative sources:</strong> Community organizations, language keepers</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="spelling-examples">
-                            <h4>📝 Spelling Considerations</h4>
-                            <div class="spelling-cases">
-                                <div class="spelling-item">
-                                    <span class="preferred">✅ Mi'kmaq</span>
-                                    <span class="avoid">❌ Micmac</span>
-                                    <span class="note">Community-preferred spelling</span>
-                                </div>
-                                <div class="spelling-item">
-                                    <span class="preferred">✅ Anishinaabe</span>
-                                    <span class="avoid">❌ Ojibwe/Chippewa (context-dependent)</span>
-                                    <span class="note">Self-designation preferred</span>
-                                </div>
-                                <div class="spelling-item">
-                                    <span class="preferred">✅ Haudenosaunee</span>
-                                    <span class="avoid">❌ Iroquois</span>
-                                    <span class="note">Traditional name preferred</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Cultural Sensitivity Guidelines</h3>
+                    
                     <div class="cultural-sensitivity">
+                        <h3>Cultural Sensitivity Guidelines</h3>
                         <div class="sensitivity-practices">
-                            <h4>🎯 Best Practices</h4>
-                            <div class="practice-categories">
-                                <div class="practice-category">
-                                    <h5>Research and Consultation</h5>
-                                    <ul>
-                                        <li>Consult with relevant Indigenous communities</li>
-                                        <li>Use authoritative Indigenous sources</li>
-                                        <li>Verify current preferred usage</li>
-                                        <li>Understand historical and cultural context</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="practice-category">
-                                    <h5>Writing and Presentation</h5>
-                                    <ul>
-                                        <li>Capitalize Indigenous place names properly</li>
-                                        <li>Provide context when introducing unfamiliar names</li>
-                                        <li>Acknowledge the source of place name meanings</li>
-                                        <li>Use respectful, contemporary language</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="practice-category">
-                                    <h5>Avoiding Problems</h5>
-                                    <ul>
-                                        <li>Don't make up or guess at pronunciations</li>
-                                        <li>Avoid outdated or offensive terminology</li>
-                                        <li>Don't use sacred names inappropriately</li>
-                                        <li>Be careful with ceremonial or spiritual place names</li>
-                                    </ul>
-                                </div>
+                            <div class="practice-section">
+                                <h4>✓ Best Practices</h4>
+                                <ul>
+                                    <li>Include traditional names alongside colonial names when appropriate</li>
+                                    <li>Use current preferred spellings and pronunciations</li>
+                                    <li>Acknowledge traditional territories in appropriate contexts</li>
+                                    <li>Consult with Indigenous communities when possible</li>
+                                    <li>Respect the cultural significance of place names</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="practice-section">
+                                <h4>✗ Practices to Avoid</h4>
+                                <ul>
+                                    <li>Using outdated or anglicized versions</li>
+                                    <li>Assuming historical names are acceptable</li>
+                                    <li>Treating Indigenous names as merely alternative</li>
+                                    <li>Using names without understanding their significance</li>
+                                    <li>Appropriating sacred or ceremonial names</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Resources and References</h3>
-                    <div class="resources-references">
-                        <div class="resource-types">
-                            <h4>📚 Authoritative Sources</h4>
-                            <div class="resource-list">
+                    
+                    <div class="resource-consultation">
+                        <h3>Consultation Resources</h3>
+                        <div class="resource-categories">
+                            <div class="resource-section">
+                                <h4>🏛️ Official Sources</h4>
                                 <div class="resource-category">
-                                    <h5>Government Sources</h5>
+                                    <h5>Government Resources</h5>
                                     <ul>
-                                        <li>Indigenous and Northern Affairs Canada</li>
-                                        <li>Geographical Names Board of Canada</li>
+                                        <li>Indigenous Services Canada</li>
+                                        <li>Crown-Indigenous Relations Canada</li>
                                         <li>Natural Resources Canada</li>
                                         <li>Provincial Indigenous affairs departments</li>
                                     </ul>
                                 </div>
                                 
                                 <div class="resource-category">
-                                    <h5>Indigenous Organizations</h5>
+                                    <h5>Community Sources</h5>
                                     <ul>
-                                        <li>National Indigenous organizations</li>
+                                        <li>First Nations, Inuit, and Métis organizations</li>
                                         <li>Regional tribal councils</li>
                                         <li>Local band/nation offices</li>
                                         <li>Indigenous language authorities</li>
@@ -1366,306 +625,232 @@
                         </div>
                     </div>
 
-                    <h3>Implementation in Professional Writing</h3>
-                    <div class="professional-implementation">
-                        <div class="implementation-approaches">
-                            <h4>💼 Professional Context</h4>
+                    <div class="implementation">
+                        <h3>Implementation in Professional Writing</h3>
+                        <div class="implementation-examples">
                             <div class="context-examples">
                                 <div class="context-type">
-                                    <h5>Government Documents</h5>
+                                    <h4>💼 Government Documents</h4>
                                     <p>Follow established protocols for Indigenous place name recognition and land acknowledgments.</p>
+                                    <div class="example">
+                                        "This meeting takes place on the traditional territory of the Algonquin Anishinaabe people."
+                                    </div>
                                 </div>
                                 
                                 <div class="context-type">
-                                    <h5>Academic Writing</h5>
-                                    <p>Include Indigenous place names with appropriate context and attribution to demonstrate cultural awareness.</p>
+                                    <h4>🎓 Academic Writing</h4>
+                                    <p>Include Indigenous place names with appropriate context and attribution.</p>
+                                    <div class="example">
+                                        "The research was conducted in Haida Gwaii (formerly the Queen Charlotte Islands)."
+                                    </div>
                                 </div>
                                 
                                 <div class="context-type">
-                                    <h5>Business Communications</h5>
-                                    <p>Consider including land acknowledgments in formal communications, especially for organizations with Indigenous partnerships.</p>
-                                </div>
-                                
-                                <div class="context-type">
-                                    <h5>Public Communications</h5>
-                                    <p>Use Indigenous place names as educational opportunities to promote cultural understanding.</p>
+                                    <h4>📊 Business Communications</h4>
+                                    <p>Consider including land acknowledgments in formal communications.</p>
+                                    <div class="example">
+                                        "Our head office is located in Tkaronto (Toronto), on the traditional territory of many nations..."
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="success-box">
-                        <h4>🤝 Building Understanding</h4>
-                        <p>Using Indigenous place names respectfully helps acknowledge the rich cultural heritage of Canada's First Peoples and promotes reconciliation through recognition of their enduring connection to the land.</p>
-                    </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-indigenous-names"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('indigenous-names')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="directional-terms" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>15.06 Directional Terms</h2>
+            <!-- Section 15.06: Abbreviations -->
+            <section class="content-section" id="abbreviations">
+                <div class="section-header">
+                    <h2>15.06 Abbreviations</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Geographical abbreviations must follow Canadian standards and be used consistently throughout documents.</p>
                     
-                    <div class="info-box">
-                        <h3>🧭 Points of Reference</h3>
-                        <p>Directional terms require careful capitalization based on whether they refer to specific regions or general directions.</p>
-                    </div>
-
-                    <h3>Capitalization Rules</h3>
-                    <div class="directional-capitalization">
-                        <div class="cap-rule-category">
-                            <h4>✅ Capitalize When Referring to Specific Regions</h4>
-                            <div class="regional-examples">
-                                <div class="region-example">
-                                    <span class="term">the North</span>
-                                    <span class="context">Arctic region of Canada</span>
-                                    <span class="sentence">"Economic development in the North requires special consideration."</span>
+                    <div class="abbreviation-standards">
+                        <h3>Canadian Standards</h3>
+                        <div class="standard-categories">
+                            <div class="standard-section">
+                                <h4>📮 Postal Abbreviations</h4>
+                                <p>Always use these in addresses and postal contexts:</p>
+                                <div class="postal-grid">
+                                    <div class="postal-column">
+                                        <div class="postal-item">AB - Alberta</div>
+                                        <div class="postal-item">BC - British Columbia</div>
+                                        <div class="postal-item">MB - Manitoba</div>
+                                        <div class="postal-item">NB - New Brunswick</div>
+                                        <div class="postal-item">NL - Newfoundland and Labrador</div>
+                                    </div>
+                                    <div class="postal-column">
+                                        <div class="postal-item">NT - Northwest Territories</div>
+                                        <div class="postal-item">NS - Nova Scotia</div>
+                                        <div class="postal-item">NU - Nunavut</div>
+                                        <div class="postal-item">ON - Ontario</div>
+                                        <div class="postal-item">PE - Prince Edward Island</div>
+                                    </div>
+                                    <div class="postal-column">
+                                        <div class="postal-item">QC - Quebec</div>
+                                        <div class="postal-item">SK - Saskatchewan</div>
+                                        <div class="postal-item">YT - Yukon</div>
+                                    </div>
                                 </div>
-                                <div class="region-example">
-                                    <span class="term">the West</span>
-                                    <span class="context">Western Canada (BC, Alberta, Saskatchewan, Manitoba)</span>
-                                    <span class="sentence">"The West has experienced significant population growth."</span>
-                                </div>
-                                <div class="region-example">
-                                    <span class="term">Eastern Canada</span>
-                                    <span class="context">Recognized regional designation</span>
-                                    <span class="sentence">"Eastern Canada includes the Atlantic provinces and Quebec."</span>
-                                </div>
-                                <div class="region-example">
-                                    <span class="term">Northern Ontario</span>
-                                    <span class="context">Established regional designation</span>
-                                    <span class="sentence">"Mining is important to Northern Ontario's economy."</span>
+                            </div>
+                            
+                            <div class="standard-section">
+                                <h4>🗺️ Geographical Directions</h4>
+                                <div class="direction-examples">
+                                    <div class="direction-set">
+                                        <h5>Cardinal Directions</h5>
+                                        <ul>
+                                            <li>N (North), S (South), E (East), W (West)</li>
+                                            <li>NE (Northeast), NW (Northwest)</li>
+                                            <li>SE (Southeast), SW (Southwest)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="direction-usage">
+                                        <h5>Usage in Context</h5>
+                                        <ul>
+                                            <li><strong>In addresses:</strong> 123 Main St. N</li>
+                                            <li><strong>In maps/technical:</strong> 45°N latitude</li>
+                                            <li><strong>In running text:</strong> Spell out (north, southeast)</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="cap-rule-category">
-                            <h4>❌ Don't Capitalize General Directions</h4>
+                    </div>
+                    
+                    <div class="international-abbreviations">
+                        <h3>International Abbreviations</h3>
+                        <div class="international-grid">
+                            <div class="country-section">
+                                <h4>🌎 Common Country Codes</h4>
+                                <div class="country-examples">
+                                    <div class="country-item">
+                                        <span class="code">CA</span>
+                                        <span class="country">Canada</span>
+                                    </div>
+                                    <div class="country-item">
+                                        <span class="code">US</span>
+                                        <span class="country">United States</span>
+                                    </div>
+                                    <div class="country-item">
+                                        <span class="code">UK</span>
+                                        <span class="country">United Kingdom</span>
+                                    </div>
+                                    <div class="country-item">
+                                        <span class="code">MX</span>
+                                        <span class="country">Mexico</span>
+                                    </div>
+                                </div>
+                                <p class="note">Use ISO 3166-1 alpha-2 codes when specified</p>
+                            </div>
+                            
+                            <div class="us-states-section">
+                                <h4>🗽 US State Abbreviations</h4>
+                                <p>Use postal codes for US addresses:</p>
+                                <div class="us-examples">
+                                    <ul>
+                                        <li>NY (New York), CA (California)</li>
+                                        <li>FL (Florida), TX (Texas)</li>
+                                        <li>WA (Washington), OR (Oregon)</li>
+                                    </ul>
+                                </div>
+                                <p class="warning-note">⚠️ Don't confuse with Canadian abbreviations (CA = California in US, Canada internationally)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="usage-contexts">
+                        <h3>When to Use Abbreviations</h3>
+                        <div class="context-grid">
+                            <div class="context-appropriate">
+                                <h4>✓ Appropriate Contexts</h4>
+                                <ul>
+                                    <li><strong>Addresses and postal information</strong></li>
+                                    <li><strong>Tables, charts, and data presentations</strong></li>
+                                    <li><strong>Maps and technical documents</strong></li>
+                                    <li><strong>Space-constrained formats</strong></li>
+                                    <li><strong>Standardized forms and databases</strong></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="context-inappropriate">
+                                <h4>✗ Avoid in These Contexts</h4>
+                                <ul>
+                                    <li><strong>Formal letters and reports</strong></li>
+                                    <li><strong>Academic and scholarly writing</strong></li>
+                                    <li><strong>Public-facing documents</strong></li>
+                                    <li><strong>First mention in documents</strong></li>
+                                    <li><strong>When clarity might be compromised</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="directional-terms">
+                        <h3>Directional Terms</h3>
+                        <div class="directional-usage">
+                            <h4>Regional vs. Directional Usage</h4>
                             <div class="directional-examples">
-                                <div class="direction-example">
-                                    <span class="term">drive north</span>
-                                    <span class="context">Simple direction of travel</span>
-                                    <span class="sentence">"Drive north on Highway 401 for 50 kilometres."</span>
-                                </div>
-                                <div class="direction-example">
-                                    <span class="term">southern Ontario</span>
-                                    <span class="context">General directional description</span>
-                                    <span class="sentence">"Many cities in southern Ontario border the Great Lakes."</span>
-                                </div>
-                                <div class="direction-example">
-                                    <span class="term">western provinces</span>
-                                    <span class="context">Descriptive reference</span>
-                                    <span class="sentence">"Several western provinces have oil resources."</span>
-                                </div>
-                                <div class="direction-example">
-                                    <span class="term">east coast</span>
-                                    <span class="context">Geographic description</span>
-                                    <span class="sentence">"The east coast experiences harsh winter storms."</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Decision Framework</h3>
-                    <div class="decision-framework">
-                        <div class="decision-process">
-                            <h4>🤔 How to Decide: Regional vs. Directional</h4>
-                            <div class="decision-questions">
-                                <div class="question-item">
-                                    <span class="question">1. Is it a recognized political/cultural region?</span>
-                                    <span class="answer">→ Capitalize (the North, the Maritimes)</span>
-                                </div>
-                                <div class="question-item">
-                                    <span class="question">2. Would "the" sound natural before it?</span>
-                                    <span class="answer">→ Probably capitalize (the West, the East)</span>
-                                </div>
-                                <div class="question-item">
-                                    <span class="question">3. Is it describing location or movement?</span>
-                                    <span class="answer">→ Probably lowercase (drive west, northern border)</span>
-                                </div>
-                                <div class="question-item">
-                                    <span class="question">4. Could you substitute a specific place name?</span>
-                                    <span class="answer">→ Probably capitalize (the West = Western Canada)</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Canadian Regional Terms</h3>
-                    <div class="canadian-regions">
-                        <div class="established-regions">
-                            <h4>🇨🇦 Established Canadian Regions (Capitalize)</h4>
-                            <div class="region-grid">
-                                <div class="region-item">
-                                    <span class="region-name">the North</span>
-                                    <span class="region-definition">Arctic regions, territorial north</span>
-                                    <span class="region-example">"Infrastructure challenges in the North"</span>
-                                </div>
-                                <div class="region-item">
-                                    <span class="region-name">the West</span>
-                                    <span class="region-definition">Western Canada (usually BC to Manitoba)</span>
-                                    <span class="region-example">"Political attitudes in the West"</span>
-                                </div>
-                                <div class="region-item">
-                                    <span class="region-name">Central Canada</span>
-                                    <span class="region-definition">Ontario and Quebec</span>
-                                    <span class="region-example">"Central Canada's manufacturing sector"</span>
-                                </div>
-                                <div class="region-item">
-                                    <span class="region-name">the Maritimes</span>
-                                    <span class="region-definition">New Brunswick, Nova Scotia, Prince Edward Island</span>
-                                    <span class="region-example">"Fishing traditions in the Maritimes"</span>
-                                </div>
-                                <div class="region-item">
-                                    <span class="region-name">Atlantic Canada</span>
-                                    <span class="region-definition">Maritimes plus Newfoundland and Labrador</span>
-                                    <span class="region-example">"Tourism growth in Atlantic Canada"</span>
-                                </div>
-                                <div class="region-item">
-                                    <span class="region-name">the Prairies</span>
-                                    <span class="region-definition">Alberta, Saskatchewan, Manitoba</span>
-                                    <span class="region-example">"Agricultural production on the Prairies"</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Context-Sensitive Examples</h3>
-                    <div class="context-examples">
-                        <div class="example-pairs">
-                            <h4>🔄 Same Word, Different Contexts</h4>
-                            <div class="comparison-sets">
-                                <div class="comparison-set">
-                                    <h5>"North" Examples</h5>
-                                    <div class="comparison-item">
-                                        <span class="capitalized">✅ "The North faces unique challenges." (Arctic region)</span>
+                                <div class="directional-comparison">
+                                    <h5>Capitalization Rules</h5>
+                                    <div class="comparison-set">
+                                        <h6>"East" Examples</h6>
+                                        <div class="comparison-item">
+                                            <span class="capitalized">✓ "Economic policies in the East." (Eastern Canada)</span>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <span class="lowercase">✓ "Travel east on the Trans-Canada Highway." (direction)</span>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <span class="lowercase">✅ "The east wing of the building." (location description)</span>
+                                        </div>
                                     </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "Drive north to Sudbury." (direction)</span>
-                                    </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "The north shore of the lake." (geographical description)</span>
+                                    
+                                    <div class="comparison-set">
+                                        <h6>"West" Examples</h6>
+                                        <div class="comparison-item">
+                                            <span class="capitalized">✓ "Political representation for the West." (Western Canada)</span>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <span class="lowercase">✓ "The storm moved west." (direction of movement)</span>
+                                        </div>
+                                        <div class="comparison-item">
+                                            <span class="lowercase">✓ "Cities in western Alberta." (descriptive)</span>
+                                        </div>
                                     </div>
                                 </div>
                                 
-                                <div class="comparison-set">
-                                    <h5>"East" Examples</h5>
-                                    <div class="comparison-item">
-                                        <span class="capitalized">✅ "Economic development in the East." (Eastern Canada)</span>
+                                <div class="context-examples">
+                                    <h5>Context Matters</h5>
+                                    <div class="context-item">
+                                        <div class="context-example">
+                                            <strong>Regional:</strong> "The North faces unique challenges."
+                                        </div>
+                                        <div class="context-note">Refers to Canada's northern territories</div>
                                     </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "Travel east on the Trans-Canada Highway." (direction)</span>
+                                    <div class="context-item">
+                                        <div class="context-example">
+                                            <strong>Directional:</strong> "Drive north for 50 kilometres."
+                                        </div>
+                                        <div class="context-note">Indicates direction of travel</div>
                                     </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "The east wing of the building." (location description)</span>
+                                    <div class="context-item">
+                                        <div class="context-example">
+                                            <strong>Descriptive:</strong> "The route takes you through beautiful countryside in southern Ontario."
+                                        </div>
+                                        <div class="context-note">Consistent lowercase for directional movement</div>
                                     </div>
-                                </div>
-                                
-                                <div class="comparison-set">
-                                    <h5>"West" Examples</h5>
-                                    <div class="comparison-item">
-                                        <span class="capitalized">✅ "Political representation for the West." (Western Canada)</span>
-                                    </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "The storm moved west." (direction of movement)</span>
-                                    </div>
-                                    <div class="comparison-item">
-                                        <span class="lowercase">✅ "Cities in western Alberta." (geographical description)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>International Directional Terms</h3>
-                    <div class="international-directional">
-                        <div class="global-regions">
-                            <h4>🌍 Global Regional Designations</h4>
-                            <div class="global-examples">
-                                <div class="global-category">
-                                    <h5>Established Global Regions (Capitalize)</h5>
-                                    <ul>
-                                        <li><strong>the Middle East:</strong> Recognized cultural/political region</li>
-                                        <li><strong>the Far East:</strong> Traditional term for East Asia</li>
-                                        <li><strong>the West:</strong> Western civilization/countries</li>
-                                        <li><strong>the Global South:</strong> Economic/development designation</li>
-                                        <li><strong>Eastern Europe:</strong> Political/cultural region</li>
-                                        <li><strong>Southeast Asia:</strong> Geographic/political region</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="global-category">
-                                    <h5>General Directions (Lowercase)</h5>
-                                    <ul>
-                                        <li><strong>southern Africa:</strong> Geographic description</li>
-                                        <li><strong>northern Italy:</strong> Regional description</li>
-                                        <li><strong>western Europe:</strong> Geographic reference</li>
-                                        <li><strong>eastern coast:</strong> Directional description</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Compound Directional Terms</h3>
-                    <div class="compound-directional">
-                        <div class="compound-rules">
-                            <h4>📐 Combined Directions</h4>
-                            <div class="compound-examples">
-                                <div class="compound-type">
-                                    <h5>Hyphenated Forms</h5>
-                                    <ul>
-                                        <li><strong>north-central Ontario:</strong> Regional subdivision</li>
-                                        <li><strong>south-eastern British Columbia:</strong> Geographic area</li>
-                                        <li><strong>north-western territories:</strong> General reference</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="compound-type">
-                                    <h5>Two-Word Forms</h5>
-                                    <ul>
-                                        <li><strong>Northeast Passage:</strong> Specific geographic feature</li>
-                                        <li><strong>Southwest Ontario:</strong> Recognized region</li>
-                                        <li><strong>northwest wind:</strong> Weather direction</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Style Consistency Guidelines</h3>
-                    <div class="style-consistency">
-                        <div class="consistency-principles">
-                            <h4>📝 Maintaining Consistency</h4>
-                            <ul>
-                                <li><strong>Document-wide consistency:</strong> Use the same style throughout</li>
-                                <li><strong>Parallel structure:</strong> Treat similar terms the same way</li>
-                                <li><strong>Reader expectations:</strong> Follow conventions your audience expects</li>
-                                <li><strong>Institutional style:</strong> Follow organizational guidelines</li>
-                                <li><strong>International awareness:</strong> Consider global audience understanding</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="style-examples">
-                            <h4>📊 Consistency Examples</h4>
-                            <div class="consistent-usage">
-                                <div class="usage-example">
-                                    <h5>Regional Analysis</h5>
-                                    <p>"Economic growth varies significantly across Canada. The West has benefited from resource development, while the East has focused on manufacturing and services. Central Canada remains the economic heartland, and the North presents unique development challenges."</p>
-                                    <span class="note">Consistent capitalization for all regional references</span>
-                                </div>
-                                
-                                <div class="usage-example">
-                                    <h5>Travel Description</h5>
-                                    <p>"From Toronto, drive north to Barrie, then continue west to Collingwood. The route takes you through beautiful countryside in southern Ontario."</p>
-                                    <span class="note">Consistent lowercase for directional movement</span>
                                 </div>
                             </div>
                         </div>
@@ -1677,10 +862,10 @@
                     </div>
                 </div>
 
-                <div class="quiz-panel" id="quiz-directional-terms"></div>
+                <div class="quiz-panel" id="quiz-abbreviations"></div>
 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('directional-terms')">
+                    <button class="btn btn-primary" onclick="completeSection('abbreviations')">
                         Complete Chapter 15!
                     </button>
                 </div>
@@ -1701,71 +886,32 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
+        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
         const CHAPTER_ID = 'ch15';
         const sections = [
-            { id: 'canadian-places', title: '15.01 Canadian Place Names' },
-            { id: 'international-places', title: '15.02 International Places' },
-            { id: 'generic-terms', title: '15.03 Generic Terms' },
-            { id: 'abbreviations', title: '15.04 Abbreviations' },
+            { id: 'introduction', title: '15.01 Introduction' },
+            { id: 'canadian-places', title: '15.02 Canadian Places' },
+            { id: 'foreign-places', title: '15.03 Foreign Places' },
+            { id: 'provinces-territories', title: '15.04 Provinces & Territories' },
             { id: 'indigenous-names', title: '15.05 Indigenous Names' },
-            { id: 'directional-terms', title: '15.06 Directional Terms' }
+            { id: 'abbreviations', title: '15.06 Abbreviations' }
         ];
         
-        // Initialize section navigation
-        function initSectionNavigation() {
-            const tabLinks = document.querySelectorAll('.tab-link');
-            
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(this);
-                });
-            });
-            
-            // Show first section by default
-            showSection('canadian-places');
-        }
-        
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-        
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            activeLink.classList.add('active');
-        }
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
         
         // Update progress bar
         function updateProgressBar() {
             const chapterProgress = getChapterProgress(CHAPTER_ID);
             const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const total = sections.length;
-            const percentage = Math.round((completed / total) * 100);
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressCircle = document.querySelector('.progress-circle');
-            const progressText = document.querySelector('.progress-text');
-            
-            if (progressCircle && progressText) {
-                const circumference = 2 * Math.PI * 25; // r=25
-                const offset = circumference - (percentage / 100) * circumference;
-                progressCircle.style.strokeDashoffset = offset;
-                progressText.textContent = `${percentage}%`;
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
             }
         }
         
@@ -1774,30 +920,24 @@
             setProgress(CHAPTER_ID, sectionId, true);
             updateProgressBar();
             
-            // Show completion message
-            const currentSection = document.getElementById(sectionId);
-            const button = currentSection.querySelector('.btn-primary');
-            button.textContent = '✓ Completed';
-            button.classList.add('completed');
-        }
-        
-        // Show completion modal if chapter is finished
-        function checkChapterCompletion() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            
-            if (completed === sections.length) {
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                router.navigateTo(CHAPTER_ID, nextSection.id);
+            } else {
+                // Chapter complete
                 showCompletionModal();
             }
-        }
+        };
         
         function showCompletionModal() {
             const modal = document.createElement('div');
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h2>🎉 Chapter 15 Complete!</h2>
-                    <p>Excellent work! You've mastered geographical names in Canadian writing. Your writing will accurately represent places while respecting cultural sensitivities.</p>
+                    <h3>🎉 Chapter 15 Complete!</h3>
+                    <p>You've mastered geographical names in Canadian writing!</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -1811,77 +951,9 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes from JSON files - FIXED for Chapter 15
-async function loadSectionQuizzes() {
-    try {
-        const response = await fetch(`../data/ch15-quiz.json`);
-        if (!response.ok) {
-            console.warn('Quiz data not available for chapter 15');
-            return;
-        }
-        
-        const quizData = await response.json();
-        
-        // Only load quiz for the final section (abbreviations)
-        const finalSection = 'abbreviations';
-        const sectionQuizData = quizData.sections?.[finalSection];
-        
-        if (sectionQuizData) {
-            const quizPanel = document.getElementById(`quiz-${finalSection}`);
-            if (quizPanel) {
-                const quizEngine = new QuizEngine({
-                    containerId: `quiz-${finalSection}`,
-                    questions: sectionQuizData.questions,
-                    title: sectionQuizData.title,
-                    onComplete: (results) => {
-                        if (results.passed) {
-                            completeSection(finalSection);
-                            showChapterCompletionModal();
-                        }
-                    }
-                });
-                quizPanel.appendChild(quizEngine.render());
-            }
-        }
-    } catch (error) {
-        console.error('Error loading quizzes:', error);
-    }
-}
-
-// Complete section function - FIXED
-function completeSection(sectionId) {
-    if (typeof markSectionComplete === 'function') {
-        markSectionComplete('ch15', sectionId);
-    }
-    updateProgressBar();
-    
-    // Only show completion modal for the final section
-    if (sectionId === 'abbreviations') {
-        showChapterCompletionModal();
-    } else {
-        // Move to next section
-        const sections = ['introduction', 'canadian-places', 'foreign-places', 'adjectives', 'provinces-territories', 'abbreviations'];
-        const currentIndex = sections.indexOf(sectionId);
-        if (currentIndex < sections.length - 1) {
-            const nextSection = sections[currentIndex + 1];
-            const nextTab = document.querySelector(`[data-section="${nextSection}"]`);
-            if (nextTab) nextTab.click();
-        }
-    }
-}
-        
-        // Initialize page
-        initSectionNavigation();
-        updateProgressBar();
-        loadSectionQuizzes();
-        
-        // Handle window beforeunload for quiz warnings
-        window.addEventListener('beforeunload', (event) => {
-            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-            if (activeQuiz) {
-                event.preventDefault();
-                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
-            }
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar();
         });
     </script>
 </body>
