@@ -155,12 +155,12 @@
         {
           "id": "government",
           "title": "4.04 Government Bodies",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "titles",
           "title": "4.05 Titles & Positions",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "geography",
@@ -195,7 +195,7 @@
         {
           "id": "round-numbers",
           "title": "5.02 Round Numbers",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "consistency",
@@ -365,7 +365,7 @@
         {
           "id": "block-quotations",
           "title": "8.04 Block Quotations",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "omissions-insertions",
@@ -375,7 +375,7 @@
         {
           "id": "punctuation-quotations",
           "title": "8.06 Punctuation with Quotations",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "indirect-quotations",
@@ -665,12 +665,12 @@
         {
           "id": "introduction",
           "title": "16.01 Introduction",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "editing-levels",
           "title": "16.02 Levels of Editing",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "structural-editing",
