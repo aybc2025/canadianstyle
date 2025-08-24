@@ -10,990 +10,509 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="header-content">
-                <div class="site-title">
-                    <img src="../shared/img/maple-logo.svg" alt="Canadian Maple Leaf" class="logo">
-                    <span>The Canadian Style</span>
-                </div>
-                <nav class="main-nav">
-                    <a href="../index.html" class="nav-link">Dashboard</a>
-                    <a href="../index.html#chapters" class="nav-link">All Chapters</a>
-                </nav>
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
             </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
         </div>
     </header>
 
-    <main class="main-content">
+    <div class="chapter-hero">
         <div class="container">
-            <div class="chapter-header">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 8
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">8</div>
                 <div class="chapter-info">
-                    <span class="chapter-number">Chapter 8</span>
-                    <h1 class="chapter-title">Quotations and Quotation Marks</h1>
-                    <p class="chapter-description">Master the proper use of quotations and quotation marks in Canadian writing</p>
-                </div>
-                <div class="progress-indicator">
-                    <div class="progress-ring">
-                        <svg class="progress-svg" width="60" height="60">
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4"/>
-                            <circle cx="30" cy="30" r="25" fill="none" stroke="#e0e0e0" stroke-width="4" 
-                                    stroke-dasharray="157" stroke-dashoffset="157" class="progress-circle"/>
-                        </svg>
-                        <span class="progress-text">0%</span>
-                    </div>
+                    <h1>Quotations and Quotation Marks</h1>
+                    <p>Master the proper use of quotations and quotation marks in Canadian writing</p>
                 </div>
             </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
 
-            <nav class="section-tabs">
-                <button class="tab-link active" data-section="basic-rules">
-                    8.01 Basic Rules
-                </button>
-                <button class="tab-link" data-section="punctuation-with-quotes">
-                    8.02 Punctuation with Quotes
-                </button>
-                <button class="tab-link" data-section="block-quotations">
-                    8.03 Block Quotations
-                </button>
-                <button class="tab-link" data-section="quotations-within-quotations">
-                    8.04 Quotes within Quotes
-                </button>
-                <button class="tab-link" data-section="titles-and-special-uses">
-                    8.05 Titles & Special Uses
-                </button>
-                <button class="tab-link" data-section="special-senses">
-                    8.06 Words in Special Senses
-                </button>
-            </nav>
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#basic-rules" class="tab-link active" data-section="basic-rules">8.01 Basic Rules</a>
+                <a href="#punctuation-with-quotes" class="tab-link" data-section="punctuation-with-quotes">8.02 Punctuation with Quotes</a>
+                <a href="#block-quotations" class="tab-link" data-section="block-quotations">8.03 Block Quotations</a>
+                <a href="#nested-quotations" class="tab-link" data-section="nested-quotations">8.04 Nested Quotations</a>
+                <a href="#titles-special-uses" class="tab-link" data-section="titles-special-uses">8.05 Titles & Special Uses</a>
+                <a href="#indirect-quotations" class="tab-link" data-section="indirect-quotations">8.06 Indirect Speech</a>
+            </div>
+        </div>
+    </nav>
 
-            <section id="basic-rules" class="content-section">
-                <div class="section-content">
-                    <h2>8.01 Basic Quotation Rules</h2>
-                    
+    <main class="chapter-content">
+        <div class="container">
+            <!-- Section 8.01: Basic Rules -->
+            <section class="content-section active" id="basic-rules">
+                <div class="section-header">
+                    <h2>8.01 Basic Rules</h2>
+                </div>
+                
+                <div class="lesson-content">
                     <div class="info-box">
                         <h3>💬 Accurate Attribution</h3>
-                        <p>Quotation marks serve to distinguish direct speech, borrowed text, and special uses from your own writing.</p>
+                        <p>Quotation marks preserve the exact words of speakers and writers while clearly distinguishing them from your own text.</p>
                     </div>
 
                     <h3>When to Use Quotation Marks</h3>
-                    <div class="usage-grid">
-                        <div class="usage-card">
-                            <h4>📢 Direct Quotations</h4>
-                            <p>Exact words spoken or written by someone else</p>
-                            <div class="example">
-                                The minister said, "We will review the policy."
-                            </div>
+                    <div class="rule-box">
+                        <ul>
+                            <li><strong>Direct speech:</strong> Exact words spoken or written</li>
+                            <li><strong>Short titles:</strong> Articles, poems, songs, chapters</li>
+                            <li><strong>Technical terms:</strong> Words used in special senses</li>
+                            <li><strong>Irony or emphasis:</strong> Words used unusually</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Basic Quotation Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Direct speech:</strong> The minister said, "We will review the policy."</p>
                         </div>
-                        
-                        <div class="usage-card">
-                            <h4>📝 Cited Text</h4>
-                            <p>Direct excerpts from written sources</p>
-                            <div class="example">
-                                According to the report, "Climate change affects all regions."
-                            </div>
+                        <div class="example-item good">
+                            <p><strong>Short title:</strong> Read "Climate Action" in today's paper.</p>
                         </div>
-                        
-                        <div class="usage-card">
-                            <h4>📑 Titles of Short Works</h4>
-                            <p>Articles, poems, songs, short stories</p>
-                            <div class="example">
-                                Read the article "Economic Trends in Canada."
-                            </div>
-                        </div>
-                        
-                        <div class="usage-card">
-                            <h4>🎯 Special Meanings</h4>
-                            <p>Words used ironically or in a special sense</p>
-                            <div class="example">
-                                The "solution" created more problems.
-                            </div>
+                        <div class="example-item good">
+                            <p><strong>Special sense:</strong> The "solution" created more problems.</p>
                         </div>
                     </div>
-
-                    <h3>Direct vs. Indirect Quotations</h3>
-                    <div class="direct-indirect">
-                        <div class="quote-type">
-                            <h4>✅ Direct Quotation</h4>
-                            <p>Uses the exact words spoken or written:</p>
-                            <div class="examples">
-                                <div class="example-item">
-                                    <span class="text">She said, "I will attend the meeting."</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="text">The document states, "All employees must complete training."</span>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="quote-type">
-                            <h4>❌ Indirect Quotation (No Quotes)</h4>
-                            <p>Paraphrases or reports what was said:</p>
-                            <div class="examples">
-                                <div class="example-item">
-                                    <span class="text">She said that she would attend the meeting.</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="text">The document states that all employees must complete training.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Common Mistakes to Avoid</h3>
-                    <div class="mistakes-grid">
-                        <div class="mistake-item">
-                            <h4>❌ Mixed Direct/Indirect</h4>
-                            <div class="wrong">She said that "I will be there."</div>
-                            <div class="right">She said, "I will be there." OR She said that she would be there.</div>
-                        </div>
-                        
-                        <div class="mistake-item">
-                            <h4>❌ Unnecessary Quotes</h4>
-                            <div class="wrong">The "meeting" was held yesterday.</div>
-                            <div class="right">The meeting was held yesterday.</div>
-                        </div>
-                        
-                        <div class="mistake-item">
-                            <h4>❌ Missing Attribution</h4>
-                            <div class="wrong">"The economy is improving."</div>
-                            <div class="right">The minister said, "The economy is improving."</div>
-                        </div>
-                    </div>
-
-                    <h3>Quotation Accuracy</h3>
-                    <div class="accuracy-rules">
-                        <div class="accuracy-item">
-                            <h4>🎯 Exact Reproduction</h4>
-                            <p>Direct quotations must reproduce the original text exactly, including any errors.</p>
-                        </div>
-                        
-                        <div class="accuracy-item">
-                            <h4>📝 Indicating Changes</h4>
-                            <p>Use square brackets [ ] for clarifications and ellipsis points (...) for omissions.</p>
-                        </div>
-                        
-                        <div class="accuracy-item">
-                            <h4>⚖️ Fair Use</h4>
-                            <p>Quote only what's necessary. Extensive quotation may require permission.</p>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Attribution Tip</h4>
-                        <p>Always make it clear who said or wrote the quoted material. Floating quotations without attribution confuse readers.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Canadian vs. American Style</h3>
+                        <ul>
+                            <li><strong>Canadian:</strong> Double quotes for main quotations</li>
+                            <li><strong>Punctuation:</strong> Outside quotes unless part of quoted material</li>
+                            <li><strong>Nested quotes:</strong> Single quotes inside double quotes</li>
+                        </ul>
                     </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-basic-rules"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('basic-rules')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="punctuation-with-quotes" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>8.02 Punctuation with Quotation Marks</h2>
+            <!-- Section 8.02: Punctuation with Quotes -->
+            <section class="content-section" id="punctuation-with-quotes">
+                <div class="section-header">
+                    <h2>8.02 Punctuation with Quotes</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>The placement of punctuation with quotation marks follows specific Canadian conventions.</p>
                     
-                    <div class="info-box">
-                        <h3>📍 Placement Precision</h3>
-                        <p>The placement of punctuation marks with quotation marks follows specific Canadian conventions.</p>
+                    <div class="rule-box">
+                        <h3>Canadian Punctuation Rules</h3>
+                        <ul>
+                            <li><strong>Inside quotes:</strong> Only punctuation that's part of the quoted material</li>
+                            <li><strong>Outside quotes:</strong> Punctuation that belongs to your sentence</li>
+                            <li><strong>Question marks:</strong> Inside if the quote is a question</li>
+                            <li><strong>Periods and commas:</strong> Usually outside in Canadian style</li>
+                        </ul>
                     </div>
-
-                    <h3>Canadian/British Style Rules</h3>
-                    <div class="punctuation-rules">
-                        <div class="rule-category">
-                            <h4>✅ Inside Quotation Marks</h4>
-                            <div class="inside-rules">
-                                <div class="rule-item">
-                                    <h5>Periods and Commas</h5>
-                                    <p>Always go inside the closing quotation marks:</p>
-                                    <div class="examples">
-                                        <div class="example">She said, "I'll be there."</div>
-                                        <div class="example">"Hello," he replied.</div>
-                                        <div class="example">The article "Policy Changes," published last month, explains the new rules.</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rule-item">
-                                    <h5>Question Marks and Exclamation Marks</h5>
-                                    <p>Go inside when they're part of the quotation:</p>
-                                    <div class="examples">
-                                        <div class="example">She asked, "Will you attend?"</div>
-                                        <div class="example">He shouted, "Stop immediately!"</div>
-                                    </div>
-                                </div>
+                    
+                    <div class="examples-box">
+                        <h4>Punctuation Placement</h4>
+                        <div class="punctuation-examples">
+                            <div class="example-category">
+                                <h5>✓ Canadian Style (Correct)</h5>
+                                <ul>
+                                    <li>She asked, "Are you ready"?</li>
+                                    <li>He said "yes", then left.</li>
+                                    <li>Did she say "maybe"?</li>
+                                    <li>The sign read "Danger".</li>
+                                </ul>
                             </div>
-                        </div>
-                        
-                        <div class="rule-category">
-                            <h4>❌ Outside Quotation Marks</h4>
-                            <div class="outside-rules">
-                                <div class="rule-item">
-                                    <h5>Semicolons and Colons</h5>
-                                    <p>Always go outside the closing quotation marks:</p>
-                                    <div class="examples">
-                                        <div class="example">She said "yes"; however, she seemed uncertain.</div>
-                                        <div class="example">Remember the rule about "early birds": they get the worm.</div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rule-item">
-                                    <h5>Question Marks and Exclamation Marks</h5>
-                                    <p>Go outside when they apply to the whole sentence:</p>
-                                    <div class="examples">
-                                        <div class="example">Did she say "tomorrow"?</div>
-                                        <div class="example">I can't believe he said "maybe"!</div>
-                                    </div>
-                                </div>
+                            
+                            <div class="example-category">
+                                <h5>✓ When Quote Has Its Own Punctuation</h5>
+                                <ul>
+                                    <li>"Are you coming?" she asked.</li>
+                                    <li>"Help!" he shouted.</li>
+                                    <li>"Wait," she said, "I'm not ready."</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Decision Framework for Question/Exclamation Marks</h3>
-                    <div class="decision-framework">
-                        <div class="framework-step">
-                            <h4>🤔 Ask Yourself:</h4>
-                            <div class="decision-tree">
-                                <div class="decision-item">
-                                    <span class="question">Is the entire quoted sentence a question/exclamation?</span>
-                                    <span class="answer">→ Inside: "Are you coming?"</span>
-                                </div>
-                                <div class="decision-item">
-                                    <span class="question">Is your whole sentence a question about the quote?</span>
-                                    <span class="answer">→ Outside: Did he say "yes"?</span>
-                                </div>
-                                <div class="decision-item">
-                                    <span class="question">Are both the quote and sentence questions?</span>
-                                    <span class="answer">→ Inside only: Did she ask "Where are you going?"</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Complex Punctuation Examples</h3>
-                    <div class="complex-examples">
-                        <div class="example-category">
-                            <h4>Multiple Sentences</h4>
-                            <div class="example">
-                                He said, "The meeting is tomorrow. Please bring your reports."
-                            </div>
-                        </div>
-                        
-                        <div class="example-category">
-                            <h4>Interrupted Quotations</h4>
-                            <div class="example">
-                                "The project," she explained, "will take six months."
-                            </div>
-                        </div>
-                        
-                        <div class="example-category">
-                            <h4>Quotations with Citations</h4>
-                            <div class="example">
-                                "Climate change is accelerating," according to the UN report.
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Common Errors and Corrections</h3>
-                    <div class="error-corrections">
-                        <div class="error-set">
-                            <h4>Comma Placement</h4>
-                            <div class="comparison">
-                                <span class="wrong">❌ She said "hello", and smiled.</span>
-                                <span class="right">✅ She said "hello," and smiled.</span>
-                            </div>
-                        </div>
-                        
-                        <div class="error-set">
-                            <h4>Question Mark Placement</h4>
-                            <div class="comparison">
-                                <span class="wrong">❌ She asked "Are you ready"?</span>
-                                <span class="right">✅ She asked, "Are you ready?"</span>
-                            </div>
-                        </div>
-                        
-                        <div class="error-set">
-                            <h4>Semicolon Placement</h4>
-                            <div class="comparison">
-                                <span class="wrong">❌ He said "yes;" I was surprised.</span>
-                                <span class="right">✅ He said "yes"; I was surprised.</span>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <div class="warning-box">
-                        <h4>⚠️ American vs. Canadian Style</h4>
-                        <p>American style puts periods and commas inside quotation marks regardless of logic. Canadian style follows British conventions, which can be more logical but requires careful attention to context.</p>
+                        <h4>⚠️ American vs Canadian</h4>
+                        <p>American style puts periods and commas inside quotes regardless of meaning. Canadian style is more logical - punctuation goes where it belongs.</p>
+                    </div>
+                    
+                    <div class="comparison-table">
+                        <h4>Style Comparison</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Canadian Style</th>
+                                    <th>American Style</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>He said "no".</td>
+                                    <td>He said "no."</td>
+                                </tr>
+                                <tr>
+                                    <td>Did he say "yes"?</td>
+                                    <td>Did he say "yes"?</td>
+                                </tr>
+                                <tr>
+                                    <td>"Hello," she said.</td>
+                                    <td>"Hello," she said.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-punctuation-with-quotes"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('punctuation-with-quotes')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="block-quotations" class="content-section" style="display: none;">
-                <div class="section-content">
+            <!-- Section 8.03: Block Quotations -->
+            <section class="content-section" id="block-quotations">
+                <div class="section-header">
                     <h2>8.03 Block Quotations</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Long quotations are formatted as separate blocks of text without quotation marks.</p>
                     
-                    <div class="info-box">
-                        <h3>📄 Long Quotation Formatting</h3>
-                        <p>Block quotations provide a clear, readable format for longer quoted passages.</p>
+                    <div class="rule-box">
+                        <h3>Block Quote Guidelines</h3>
+                        <ul>
+                            <li><strong>Length:</strong> Usually 40+ words or 4+ lines</li>
+                            <li><strong>Indentation:</strong> Indent from left margin</li>
+                            <li><strong>No quotes:</strong> Don't use quotation marks</li>
+                            <li><strong>Introduction:</strong> Introduce with complete sentence and colon</li>
+                        </ul>
                     </div>
-
-                    <h3>When to Use Block Format</h3>
-                    <div class="block-criteria">
-                        <div class="criteria-list">
-                            <h4>Use Block Format When:</h4>
-                            <ul>
-                                <li><strong>40+ words</strong> in the quotation</li>
-                                <li><strong>4+ lines</strong> of typed text</li>
-                                <li><strong>Multiple sentences</strong> from the same source</li>
-                                <li><strong>Dialogue</strong> or conversation excerpts</li>
-                                <li><strong>Poetry</strong> or verse quotations</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="criteria-example">
-                            <h4>Example Qualifying Quote:</h4>
-                            <div class="sample-block">
-                                According to the policy document:
-                                <blockquote>
-                                    The new environmental regulations will take effect on January 1, 2025. All manufacturing facilities must comply with the updated emission standards within six months of the effective date. Failure to meet these requirements may result in significant penalties and potential facility closure.
-                                </blockquote>
-                            </div>
+                    
+                    <div class="examples-box">
+                        <h4>Block Quotation Format</h4>
+                        <div class="block-example">
+                            <p><strong>Introduction:</strong> The Prime Minister's speech emphasized unity:</p>
+                            <blockquote>
+                                Canada's strength has always come from our diversity and our ability to work together. We face challenges that require not just government action, but the collective effort of all Canadians. In the coming years, we must focus on building bridges, not walls, between communities.
+                            </blockquote>
+                            <p><strong>Follow-up text continues here...</strong></p>
                         </div>
                     </div>
-
-                    <h3>Block Quotation Formatting</h3>
-                    <div class="formatting-rules">
-                        <div class="format-rule">
-                            <h4>📏 Indentation</h4>
-                            <ul>
-                                <li>Indent the entire block 1 inch (2.5 cm) from the left margin</li>
-                                <li>Maintain normal right margin</li>
-                                <li>Do not indent the first line further unless it's a paragraph beginning</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="format-rule">
-                            <h4>📝 No Quotation Marks</h4>
-                            <ul>
-                                <li>The indentation signals that it's a quotation</li>
-                                <li>Only use quotes if they appear in the original text</li>
-                                <li>This avoids cluttered appearance</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="format-rule">
-                            <h4>📐 Spacing</h4>
-                            <ul>
-                                <li>Double-space before and after the block</li>
-                                <li>Single-space within the block quotation</li>
-                                <li>Maintain consistent spacing with your document</li>
-                            </ul>
-                        </div>
+                    
+                    <div class="rule-box">
+                        <h3>Block Quote Formatting</h3>
+                        <ul>
+                            <li><strong>Font:</strong> Same as body text (or slightly smaller)</li>
+                            <li><strong>Spacing:</strong> Usually single-spaced within quote</li>
+                            <li><strong>Margins:</strong> Extra space above and below</li>
+                            <li><strong>Attribution:</strong> Can follow the quote</li>
+                        </ul>
                     </div>
-
-                    <h3>Block Quotation Examples</h3>
-                    <div class="block-examples">
-                        <div class="example-type">
-                            <h4>Policy Document</h4>
-                            <div class="example-text">
-                                The annual report explains the institution's commitment:
-                                <blockquote>
-                                    Our organization remains dedicated to transparency and accountability in all operations. We will continue to publish quarterly reports, maintain open communication with stakeholders, and ensure that all decisions align with our core values of integrity, excellence, and service to the Canadian public.
-                                </blockquote>
-                                This commitment represents a significant shift in organizational culture.
-                            </div>
-                        </div>
-                        
-                        <div class="example-type">
-                            <h4>Academic Source</h4>
-                            <div class="example-text">
-                                Smith (2023) argues for a comprehensive approach:
-                                <blockquote>
-                                    Climate change mitigation requires coordinated action across multiple sectors. Government policy, corporate responsibility, and individual behavior change must work in concert to achieve meaningful reduction in greenhouse gas emissions. Without this multi-level approach, efforts will remain fragmented and insufficient to address the scale of the challenge.
-                                </blockquote>
-                                This perspective has gained support among environmental policy experts.
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Poetry and Verse</h3>
-                    <div class="poetry-rules">
-                        <div class="poetry-formatting">
-                            <h4>🎭 Special Considerations for Poetry</h4>
-                            <ul>
-                                <li>Preserve original line breaks and spacing</li>
-                                <li>Center short poems on the page</li>
-                                <li>Maintain original capitalization and punctuation</li>
-                                <li>Use block format even for short poems to preserve structure</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="poetry-example">
-                            <h4>Poetry Example:</h4>
-                            <div class="example-text">
-                                The opening stanza of Frost's famous poem sets the contemplative tone:
-                                <blockquote style="text-align: left; font-style: italic;">
-                                    Two roads diverged in a yellow wood,<br>
-                                    And sorry I could not travel both<br>
-                                    And be one traveler, long I stood<br>
-                                    And looked down one as far as I could<br>
-                                    To where it bent in the undergrowth;
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Citation with Block Quotes</h3>
-                    <div class="citation-rules">
-                        <div class="citation-placement">
-                            <h4>📚 Citation Placement</h4>
-                            <ul>
-                                <li>Place citation after the closing punctuation</li>
-                                <li>Do not add a period after the citation</li>
-                                <li>Use parenthetical format when appropriate</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="citation-example">
-                            <div class="example-text">
-                                <blockquote>
-                                    The research methodology must account for variables that could influence the outcome. Proper controls and randomization are essential for valid results.
-                                </blockquote>
-                                (Johnson & Smith, 2023, p. 45)
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <div class="tip-box">
-                        <h4>💡 Readability Tip</h4>
-                        <p>Introduce block quotations with a complete sentence ending in a colon. This helps readers understand the context and purpose of the quoted material.</p>
+                        <h4>💡 When to Use Block Format</h4>
+                        <p>Use block format for emphasis and readability with longer quotes. It helps readers distinguish quoted material from your analysis.</p>
                     </div>
                 </div>
-
+                
                 <div class="quiz-panel" id="quiz-block-quotations"></div>
-
+                
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('block-quotations')">
-                        Mark as Complete
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="quotations-within-quotations" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>8.04 Quotations Within Quotations</h2>
+            <!-- Section 8.04: Nested Quotations -->
+            <section class="content-section" id="nested-quotations">
+                <div class="section-header">
+                    <h2>8.04 Nested Quotations</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>When quotes contain other quotes, use a specific hierarchy of quotation marks.</p>
                     
-                    <div class="info-box">
-                        <h3>🪆 Nested Quotations</h3>
-                        <p>When quotations contain other quotations, specific punctuation conventions maintain clarity.</p>
+                    <div class="rule-box">
+                        <h3>Quote-within-Quote Rules</h3>
+                        <ul>
+                            <li><strong>Outer quote:</strong> Double quotation marks</li>
+                            <li><strong>Inner quote:</strong> Single quotation marks</li>
+                            <li><strong>Third level:</strong> Back to double quotes (rare)</li>
+                            <li><strong>Punctuation:</strong> Follows same rules as regular quotes</li>
+                        </ul>
                     </div>
-
-                    <h3>Single vs. Double Quotation Marks</h3>
-                    <div class="quote-hierarchy">
-                        <div class="hierarchy-level">
-                            <h4>📏 First Level: Double Quotes</h4>
-                            <p>Use double quotation marks for the main quotation:</p>
-                            <div class="example">
-                                She said, "The meeting starts at 2 p.m."
+                    
+                    <div class="examples-box">
+                        <h4>Nested Quotation Examples</h4>
+                        <div class="nested-examples">
+                            <div class="example-item good">
+                                <p><strong>Basic nested quote:</strong></p>
+                                <p>The teacher said, "Remember that Shakespeare wrote, 'To be or not to be, that is the question.'"</p>
                             </div>
-                        </div>
-                        
-                        <div class="hierarchy-level">
-                            <h4>📐 Second Level: Single Quotes</h4>
-                            <p>Use single quotation marks for quotes within quotes:</p>
-                            <div class="example">
-                                She said, "Remember the motto: 'Excellence in everything we do.'"
+                            
+                            <div class="example-item good">
+                                <p><strong>With interruption:</strong></p>
+                                <p>She explained, "The policy states, 'All employees must', and I quote directly, 'report by 5 p.m.'"</p>
                             </div>
-                        </div>
-                        
-                        <div class="hierarchy-level">
-                            <h4>📏 Third Level: Double Quotes Again</h4>
-                            <p>Alternate back to double quotes if needed:</p>
-                            <div class="example">
-                                He reported, "She told me, 'The sign said "Authorized Personnel Only" at the entrance.'"
+                            
+                            <div class="example-item good">
+                                <p><strong>Question within statement:</strong></p>
+                                <p>He asked, "Did she really say 'I quit'?"</p>
                             </div>
                         </div>
                     </div>
-
-                    <h3>Common Scenarios</h3>
-                    <div class="scenario-examples">
-                        <div class="scenario">
-                            <h4>🗣️ Reported Speech</h4>
-                            <p>When someone quotes what another person said:</p>
-                            <div class="example-set">
-                                <div class="example">
-                                    The manager explained, "The client said, 'We need this completed by Friday.'"
-                                </div>
-                                <div class="explanation">
-                                    The manager's words get double quotes; the client's words get single quotes.
-                                </div>
+                    
+                    <div class="visual-guide">
+                        <h4>Visual Guide to Nested Quotes</h4>
+                        <div class="quote-levels">
+                            <div class="quote-level">
+                                <span class="level-number">1st Level:</span>
+                                <span class="quote-example">"Main quotation here"</span>
                             </div>
-                        </div>
-                        
-                        <div class="scenario">
-                            <h4>📖 Quoting Written Material</h4>
-                            <p>When a quotation includes a title or another quoted phrase:</p>
-                            <div class="example-set">
-                                <div class="example">
-                                    The review stated, "The article 'Climate Solutions' provides valuable insights."
-                                </div>
-                                <div class="explanation">
-                                    The review gets double quotes; the article title gets single quotes.
-                                </div>
+                            <div class="quote-level">
+                                <span class="level-number">2nd Level:</span>
+                                <span class="quote-example">"Main quote with 'inner quote' inside"</span>
                             </div>
-                        </div>
-                        
-                        <div class="scenario">
-                            <h4>🏢 Institutional References</h4>
-                            <p>When quoting policies or mottos within speech:</p>
-                            <div class="example-set">
-                                <div class="example">
-                                    She reminded us, "Our policy clearly states 'All visitors must sign in at reception.'"
-                                </div>
-                                <div class="explanation">
-                                    Her speech gets double quotes; the policy text gets single quotes.
-                                </div>
+                            <div class="quote-level">
+                                <span class="level-number">3rd Level:</span>
+                                <span class="quote-example">"Outer with 'inner containing "deep quote"' levels"</span>
                             </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-nested-quotations"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('nested-quotations')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                    <h3>Punctuation with Nested Quotes</h3>
-                    <div class="nested-punctuation">
-                        <div class="punctuation-rule">
-                            <h4>🔤 Multiple End Marks</h4>
-                            <p>When both the inner and outer quotations end simultaneously:</p>
-                            <div class="example-grid">
-                                <div class="example-item">
-                                    <span class="situation">Both end with periods:</span>
-                                    <span class="text">He said, "She told me, 'The deadline is tomorrow.'"</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="situation">Inner quote is a question:</span>
-                                    <span class="text">She asked, "Did he say, 'Where is the meeting?'"</span>
-                                </div>
-                                <div class="example-item">
-                                    <span class="situation">Outer quote is a question:</span>
-                                    <span class="text">Did she say, "The answer is 'yes'"?</span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Section 8.05: Titles & Special Uses -->
+            <section class="content-section" id="titles-special-uses">
+                <div class="section-header">
+                    <h2>8.05 Titles & Special Uses</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Quotation marks are used for certain types of titles and words with special meanings.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Titles Using Quotation Marks</h3>
+                        <ul>
+                            <li><strong>Articles:</strong> "Climate Change and Policy"</li>
+                            <li><strong>Short stories:</strong> "The Gift of the Magi"</li>
+                            <li><strong>Poems:</strong> "In Flanders Fields"</li>
+                            <li><strong>Songs:</strong> "O Canada"</li>
+                            <li><strong>Episodes:</strong> "The Trouble with Tribbles"</li>
+                        </ul>
                     </div>
-
-                    <h3>British vs. American Conventions</h3>
-                    <div class="convention-comparison">
-                        <div class="convention">
-                            <h4>🇨🇦 Canadian/British Style</h4>
-                            <p>Single quotes for main quotations, double for nested:</p>
-                            <div class="example">
-                                She said, 'Remember our motto: "Excellence first."'
-                            </div>
-                            <p class="note">Less common in Canadian business writing</p>
-                        </div>
-                        
-                        <div class="convention">
-                            <h4>🇺🇸 American Style (Recommended for Canada)</h4>
-                            <p>Double quotes for main quotations, single for nested:</p>
-                            <div class="example">
-                                She said, "Remember our motto: 'Excellence first.'"
-                            </div>
-                            <p class="note">Standard in Canadian business and academic writing</p>
-                        </div>
+                    
+                    <div class="rule-box">
+                        <h3>Special Word Uses</h3>
+                        <ul>
+                            <li><strong>Irony:</strong> His "brilliant" idea failed completely</li>
+                            <li><strong>Technical terms:</strong> The "cloud" refers to online storage</li>
+                            <li><strong>Unusual usage:</strong> She's very "extra" today</li>
+                            <li><strong>Slang:</strong> That's totally "lit"</li>
+                        </ul>
                     </div>
-
-                    <h3>Complex Nested Examples</h3>
-                    <div class="complex-examples">
-                        <div class="complex-example">
-                            <h4>Business Communication</h4>
-                            <div class="example-text">
-                                The CEO announced, "Our new slogan will be 'Innovation Today, Success Tomorrow,' replacing the old motto 'Quality Above All.'"
+                    
+                    <div class="examples-box">
+                        <h4>Title and Special Use Examples</h4>
+                        <div class="title-special-examples">
+                            <div class="context-examples">
+                                <h5>📰 Articles and Short Works</h5>
+                                <div class="context-type">
+                                    <h6>🗞️ News and Magazine Articles</h6>
+                                    <div class="example">
+                                        Read "Economic Recovery Plans" in <em>The Globe and Mail</em>.
+                                    </div>
+                                    <div class="breakdown">
+                                        Article title gets quotes; newspaper name gets italics
+                                    </div>
+                                </div>
+                                
+                                <div class="context-type">
+                                    <h6>📺 TV Episodes</h6>
+                                    <div class="example">
+                                        "The One with the Embryos" from <em>Friends</em> is hilarious.
+                                    </div>
+                                    <div class="breakdown">
+                                        Episode title gets quotes; series name gets italics
+                                    </div>
+                                </div>
+                                
+                                <div class="context-type">
+                                    <h6>🎭 Performance Arts</h6>
+                                    <div class="example">
+                                        She performed "Tomorrow" from the musical <em>Annie</em> at the talent show.
+                                    </div>
+                                    <div class="breakdown">
+                                        Song gets quotes; musical gets italics
+                                    </div>
+                                </div>
                             </div>
-                            <div class="breakdown">
+                            
+                            <div class="special-meanings">
+                                <h5>💭 Words with Special Meanings</h5>
                                 <ul>
-                                    <li>CEO's announcement: double quotes</li>
-                                    <li>New slogan: single quotes</li>
-                                    <li>Old motto: single quotes</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="complex-example">
-                            <h4>Academic Writing</h4>
-                            <div class="example-text">
-                                According to Smith (2023), "The concept of 'sustainable development' differs significantly from earlier notions of 'environmental protection.'"
-                            </div>
-                            <div class="breakdown">
-                                <ul>
-                                    <li>Smith's statement: double quotes</li>
-                                    <li>Technical terms: single quotes</li>
+                                    <li>The "solution" created more problems. (ironic)</li>
+                                    <li>Click on "Settings" to change preferences. (interface element)</li>
+                                    <li>That outfit is so "yesterday". (slang usage)</li>
+                                    <li>The word "literally" is often misused. (word as word)</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div class="warning-box">
-                        <h4>⚠️ Avoid Over-Nesting</h4>
-                        <p>More than two levels of quotation can become confusing. Consider paraphrasing or restructuring sentences to avoid excessive nesting. If you must go to a third level, be extra careful with punctuation placement.</p>
+                        <h4>⚠️ Avoid Overuse</h4>
+                        <p>Don't use quotation marks for emphasis alone. Reserve them for genuine quotations, titles, and genuinely special word uses.</p>
                     </div>
                 </div>
-
-                <div class="quiz-panel" id="quiz-quotations-within-quotations"></div>
-
+                
+                <div class="quiz-panel" id="quiz-titles-special-uses"></div>
+                
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('quotations-within-quotations')">
-                        Mark as Complete
+                    <button class="btn btn-primary" onclick="completeSection('titles-special-uses')">
+                        Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <section id="titles-and-special-uses" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>8.05 Titles and Special Uses</h2>
-                    
-                    <div class="info-box">
-                        <h3>🏷️ Distinguishing Different Works</h3>
-                        <p>Quotation marks help distinguish between major works (which get italics) and shorter works or components.</p>
-                    </div>
-
-                    <h3>Works That Get Quotation Marks</h3>
-                    <div class="quoted-works">
-                        <div class="work-category">
-                            <h4>📰 Articles and Essays</h4>
-                            <ul>
-                                <li>"Climate Policy in Canada" (journal article)</li>
-                                <li>"Economic Trends" (magazine article)</li>
-                                <li>"Opinion: Education Reform" (newspaper editorial)</li>
-                                <li>"The Future of Work" (blog post)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-category">
-                            <h4>📖 Short Literary Works</h4>
-                            <ul>
-                                <li>"The Road Not Taken" (poem)</li>
-                                <li>"The Lottery" (short story)</li>
-                                <li>"The Gift of the Magi" (short story)</li>
-                                <li>"Stopping by Woods" (poem)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-category">
-                            <h4>🎵 Songs and Short Compositions</h4>
-                            <ul>
-                                <li>"O Canada" (national anthem)</li>
-                                <li>"Imagine" (song)</li>
-                                <li>"Für Elise" (short musical piece)</li>
-                                <li>"Yesterday" (Beatles song)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="work-category">
-                            <h4>📺 Episodes and Segments</h4>
-                            <ul>
-                                <li>"The One with the Prom Video" (TV episode)</li>
-                                <li>"Chapter 3: The New Beginning" (book chapter)</li>
-                                <li>"Market Update" (radio segment)</li>
-                                <li>"Introduction" (section of a report)</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Italics vs. Quotation Marks Decision Guide</h3>
-                    <div class="decision-guide">
-                        <div class="decision-flow">
-                            <div class="decision-step">
-                                <h4>🤔 Ask: Is it a complete, independent work?</h4>
-                                <div class="decision-branches">
-                                    <div class="branch">
-                                        <span class="answer">YES → Use <em>Italics</em></span>
-                                        <ul>
-                                            <li><em>Romeo and Juliet</em> (complete play)</li>
-                                            <li><em>The Globe and Mail</em> (newspaper)</li>
-                                            <li><em>Inception</em> (movie)</li>
-                                        </ul>
-                                    </div>
-                                    <div class="branch">
-                                        <span class="answer">NO → Use "Quotation Marks"</span>
-                                        <ul>
-                                            <li>"Act 2, Scene 1" (part of play)</li>
-                                            <li>"Editorial: Climate Action" (newspaper article)</li>
-                                            <li>"Behind the Scenes" (movie featurette)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Examples in Context</h3>
-                    <div class="context-examples">
-                        <div class="context-type">
-                            <h4>📚 Academic Writing</h4>
-                            <div class="example">
-                                In her article "Educational Innovation in Canada," published in the journal <em>Canadian Education Quarterly</em>, Dr. Smith examines...
-                            </div>
-                            <div class="breakdown">
-                                Article title gets quotes; journal name gets italics
-                            </div>
-                        </div>
-                        
-                        <div class="context-type">
-                            <h4>📺 Media References</h4>
-                            <div class="example">
-                                The episode "The Final Countdown" from the series <em>Lost</em> revealed crucial plot details.
-                            </div>
-                            <div class="breakdown">
-                                Episode title gets quotes; series name gets italics
-                            </div>
-                        </div>
-                        
-                        <div class="context-type">
-                            <h4>🎭 Performance Arts</h4>
-                            <div class="example">
-                                She performed "Tomorrow" from the musical <em>Annie</em> at the talent show.
-                            </div>
-                            <div class="breakdown">
-                                Song title gets quotes; musical name gets italics
-                            </div>
-                        </div>
-                    </div>
-
-                    <h3>Special Cases</h3>
-                    <div class="special-cases">
-                        <div class="special-case">
-                            <h4>🌐 Digital Content</h4>
-                            <div class="case-rules">
-                                <p><strong>Website/Blog Names:</strong> <em>The Huffington Post</em> (italics)</p>
-                                <p><strong>Individual Posts:</strong> "Five Tips for Success" (quotes)</p>
-                                <p><strong>Podcast Series:</strong> <em>Serial</em> (italics)</p>
-                                <p><strong>Podcast Episodes:</strong> "Episode 12: The Evidence" (quotes)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="special-case">
-                            <h4>📄 Government Documents</h4>
-                            <div class="case-rules">
-                                <p><strong>Major Reports:</strong> <em>Annual Report 2023</em> (italics)</p>
-                                <p><strong>Sections:</strong> "Executive Summary" (quotes)</p>
-                                <p><strong>Policy Papers:</strong> <em>Climate Action Framework</em> (italics)</p>
-                                <p><strong>Chapters:</strong> "Implementation Strategy" (quotes)</p>
-                            </div>
-                        </div>
-                        
-                        <div class="special-case">
-                            <h4>🏛️ Artistic Works</h4>
-                            <div class="case-rules">
-                                <p><strong>Exhibitions:</strong> <em>Canadian Landscapes</em> (italics)</p>
-                                <p><strong>Individual Pieces:</strong> "Sunset Over Lake Ontario" (quotes)</p>
-                                <p><strong>Concert Series:</strong> <em>Symphony Season 2024</em> (italics)</p>
-                                <p><strong>Individual Performances:</strong> "Beethoven's 9th Symphony" (quotes)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tip-box">
-                        <h4>💡 Consistency Rule</h4>
-                        <p>Be consistent throughout your document. If you put one article title in quotation marks, do the same for all article titles. Consistent formatting helps readers understand your system.</p>
-                    </div>
+            <!-- Section 8.06: Indirect Speech -->
+            <section class="content-section" id="indirect-quotations">
+                <div class="section-header">
+                    <h2>8.06 Indirect Speech</h2>
                 </div>
-
-                <div class="quiz-panel" id="quiz-titles-and-special-uses"></div>
-
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('titles-and-special-uses')">
-                        Mark as Complete
-                    </button>
-                </div>
-            </section>
-
-            <section id="special-senses" class="content-section" style="display: none;">
-                <div class="section-content">
-                    <h2>8.06 Words in Special Senses</h2>
+                
+                <div class="lesson-content">
+                    <p>Indirect speech reports what someone said without using their exact words. It doesn't require quotation marks.</p>
                     
-                    <div class="info-box">
-                        <h3>🎭 Beyond Literal Meaning</h3>
-                        <p>Quotation marks can indicate irony, special terminology, or non-standard usage of words.</p>
+                    <div class="rule-box">
+                        <h3>Direct vs. Indirect Speech</h3>
+                        <ul>
+                            <li><strong>Direct:</strong> Uses exact words + quotation marks</li>
+                            <li><strong>Indirect:</strong> Paraphrases meaning + no quotation marks</li>
+                            <li><strong>Verb changes:</strong> Tense often shifts in indirect speech</li>
+                            <li><strong>Pronoun changes:</strong> Perspective adjusts for reporter</li>
+                        </ul>
                     </div>
-
-                    <h3>Legitimate Uses of "Scare Quotes"</h3>
-                    <div class="legitimate-uses">
-                        <div class="use-category">
-                            <h4>🎯 Technical Terms</h4>
-                            <p>When introducing specialized terminology to a general audience:</p>
-                            <div class="examples">
-                                <div class="example">
-                                    In computing, "bandwidth" refers to data transmission capacity.
+                    
+                    <div class="examples-box">
+                        <h4>Direct vs. Indirect Examples</h4>
+                        <div class="comparison-examples">
+                            <div class="comparison-pair">
+                                <div class="direct-example">
+                                    <h5>Direct Speech</h5>
+                                    <p>The minister said, "We will implement the policy next month."</p>
                                 </div>
-                                <div class="example">
-                                    The legal concept of "due process" protects individual rights.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="use-category">
-                            <h4>🌍 Translated Terms</h4>
-                            <p>When providing English equivalents of foreign concepts:</p>
-                            <div class="examples">
-                                <div class="example">
-                                    The German concept of "schadenfreude" means taking pleasure in others' misfortune.
-                                </div>
-                                <div class="example">
-                                    In Japan, "nemawashi" refers to behind-the-scenes consensus building.
+                                <div class="indirect-example">
+                                    <h5>Indirect Speech</h5>
+                                    <p>The minister said that they would implement the policy the following month.</p>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="use-category">
-                            <h4>🗣️ Slang and Colloquialisms</h4>
-                            <p>When using informal language in formal writing:</p>
-                            <div class="examples">
-                                <div class="example">
-                                    The project was "dead in the water" after budget cuts.
+                            
+                            <div class="comparison-pair">
+                                <div class="direct-example">
+                                    <h5>Direct Question</h5>
+                                    <p>She asked, "Are you ready to proceed?"</p>
                                 </div>
-                                <div class="example">
-                                    Students often "cram" for exams instead of studying regularly.
+                                <div class="indirect-example">
+                                    <h5>Indirect Question</h5>
+                                    <p>She asked whether we were ready to proceed.</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <h3>Ironic and Critical Usage</h3>
-                    <div class="ironic-usage">
-                        <div class="irony-type">
-                            <h4>😏 Ironic Emphasis</h4>
-                            <p>To indicate skepticism or irony about a claim:</p>
-                            <div class="examples">
-                                <div class="example">
-                                    The "solution" actually created more problems.
+                            
+                            <div class="comparison-pair">
+                                <div class="direct-example">
+                                    <h5>Direct Command</h5>
+                                    <p>The supervisor said, "Please submit your reports by Friday."</p>
                                 </div>
-                                <div class="example">
-                                    The meeting was very "productive" – nothing was decided.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="irony-type">
-                            <h4>🤔 Questionable Claims</h4>
-                            <p>To distance yourself from dubious statements:</p>
-                            <div class="examples">
-                                <div class="example">
-                                    The company claimed the layoffs were "necessary for growth."
-                                </div>
-                                <div class="example">
-                                    The politician promised "real change" in his campaign.
+                                <div class="indirect-example">
+                                    <h5>Indirect Command</h5>
+                                    <p>The supervisor asked us to submit our reports by Friday.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <h3>What NOT to Put in Quotation Marks</h3>
-                    <div class="avoid-quotes">
-                        <div class="avoid-category">
-                            <h4>❌ Simple Emphasis</h4>
-                            <p>Don't use quotation marks just to emphasize words:</p>
-                            <div class="comparison">
-                                <span class="wrong">This is "very" important.</span>
-                                <span class="right">This is very important. OR This is <em>crucial</em>.</span>
-                            </div>
-                        </div>
-                        
-                        <div class="avoid-category">
-                            <h4>❌ Unnecessary Qualification</h4>
-                            <p>Don't use quotes around perfectly normal words:</p>
-                            <div class="comparison">
-                                <span class="wrong">We held a "meeting" yesterday.</span>
-                                <span class="right">We held a meeting yesterday.</span>
-                            </div>
-                        </div>
-                        
-                        <div class="avoid-category">
-                            <h4>❌ Apologetic Quotes</h4>
-                            <p>Don't use quotes to apologize for word choice:</p>
-                            <div class="comparison">
-                                <span class="wrong">The presentation was "awesome."</span>
-                                <span class="right">The presentation was excellent.</span>
-                            </div>
-                        </div>
+                    
+                    <div class="rule-box">
+                        <h3>When to Use Each</h3>
+                        <ul>
+                            <li><strong>Direct:</strong> For impact, authority, exact wording matters</li>
+                            <li><strong>Indirect:</strong> For summary, flow, general meaning</li>
+                            <li><strong>Legal contexts:</strong> Often require direct quotes</li>
+                            <li><strong>News writing:</strong> Mix both for variety and accuracy</li>
+                        </ul>
                     </div>
-
-                    <h3>Professional Context Guidelines</h3>
-                    <div class="professional-guidelines">
-                        <div class="context-guide">
-                            <h4>🏢 Business Writing</h4>
-                            <ul>
-                                <li>Use sparingly – overuse suggests insincerity</li>
-                                <li>Avoid ironic quotes in formal reports</li>
-                                <li>Acceptable for introducing new terminology</li>
-                                <li>Can be used to distance from others' claims</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="context-guide">
-                            <h4>📰 Journalism</h4>
-                            <ul>
-                                <li>Useful for reporting controversial statements</li>
-                                <li>Help maintain objectivity when presenting disputed claims</li>
-                                <li>Should not reflect reporter's personal opinion</li>
-                                <li>Must be balanced and fair</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="context-guide">
-                            <h4>🎓 Academic Writing</h4>
-                            <ul>
-                                <li>Appropriate for defining terms</li>
-                                <li>Useful for discussing language itself</li>
-                                <li>Avoid excessive ironic usage</li>
-                                <li>Be clear about your intent</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h3>Alternative Methods for Special Emphasis</h3>
-                    <div class="alternatives">
-                        <div class="alternative-method">
-                            <h4>📝 Explicit Statement</h4>
-                            <div class="comparison">
-                                <span class="quotes">The "solution" created problems.</span>
-                                <span class="explicit">The proposed solution actually created more problems.</span>
-                            </div>
-                        </div>
-                        
-                        <div class="alternative-method">
-                            <h4>🗣️ Attribution</h4>
-                            <div class="comparison">
-                                <span class="quotes">The project was "successful."</span>
-                                <span class="attribution">Management described the project as successful.</span>
-                            </div>
-                        </div>
-                        
-                        <div class="alternative-method">
-                            <h4>💭 Qualifying Language</h4>
-                            <div class="comparison">
-                                <span class="quotes">The "expert" gave advice.</span>
-                                <span class="qualifying">The self-proclaimed expert gave advice.</span>
-                            </div>
-                        </div>
+                    
+                    <div class="transformation-guide">
+                        <h4>Common Transformations</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Direct Speech</th>
+                                    <th>Indirect Speech</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>"I am ready."</td>
+                                    <td>She said she was ready.</td>
+                                </tr>
+                                <tr>
+                                    <td>"We will go tomorrow."</td>
+                                    <td>They said they would go the next day.</td>
+                                </tr>
+                                <tr>
+                                    <td>"Can you help me?"</td>
+                                    <td>He asked if I could help him.</td>
+                                </tr>
+                                <tr>
+                                    <td>"Don't be late!"</td>
+                                    <td>She told us not to be late.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
                     <div class="success-box">
-                        <h4>🎉 Quotation Mastery Complete!</h4>
-                        <p>You now understand the full range of quotation mark usage in Canadian writing. Use this knowledge to accurately attribute sources, properly format titles, and communicate effectively while maintaining clarity and professional standards.</p>
+                        <h4>🎉 Quotation Mastery</h4>
+                        <p>You've mastered quotations and quotation marks! Your writing will accurately represent sources and maintain professional standards.</p>
                     </div>
                 </div>
 
-                <div class="quiz-panel" id="quiz-special-senses"></div>
+                <div class="quiz-panel" id="quiz-indirect-quotations"></div>
 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('special-senses')">
+                    <button class="btn btn-primary" onclick="completeSection('indirect-quotations')">
                         Complete Chapter 8!
                     </button>
                 </div>
@@ -1014,6 +533,7 @@
     <script type="module" src="../shared/js/components.js"></script>
 
     <script type="module">
+        import { router } from '../shared/js/router.js';
         import { getChapterProgress, setProgress } from '../shared/js/progress.js';
         import { QuizEngine } from '../shared/js/quiz-engine.js';
         
@@ -1022,63 +542,23 @@
             { id: 'basic-rules', title: '8.01 Basic Rules' },
             { id: 'punctuation-with-quotes', title: '8.02 Punctuation with Quotes' },
             { id: 'block-quotations', title: '8.03 Block Quotations' },
-            { id: 'quotations-within-quotations', title: '8.04 Quotes within Quotes' },
-            { id: 'titles-and-special-uses', title: '8.05 Titles & Special Uses' },
-            { id: 'special-senses', title: '8.06 Words in Special Senses' }
+            { id: 'nested-quotations', title: '8.04 Nested Quotations' },
+            { id: 'titles-special-uses', title: '8.05 Titles & Special Uses' },
+            { id: 'indirect-quotations', title: '8.06 Indirect Speech' }
         ];
         
-        // Initialize section navigation
-        function initSectionNavigation() {
-            const tabLinks = document.querySelectorAll('.tab-link');
-            
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(this);
-                });
-            });
-            
-            // Show first section by default
-            showSection('basic-rules');
-        }
-        
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-        
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            activeLink.classList.add('active');
-        }
+        // Initialize router
+        router.init(CHAPTER_ID, sections);
         
         // Update progress bar
         function updateProgressBar() {
             const chapterProgress = getChapterProgress(CHAPTER_ID);
             const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const total = sections.length;
-            const percentage = Math.round((completed / total) * 100);
+            const percentage = Math.round((completed / sections.length) * 100);
             
-            const progressCircle = document.querySelector('.progress-circle');
-            const progressText = document.querySelector('.progress-text');
-            
-            if (progressCircle && progressText) {
-                const circumference = 2 * Math.PI * 25; // r=25
-                const offset = circumference - (percentage / 100) * circumference;
-                progressCircle.style.strokeDashoffset = offset;
-                progressText.textContent = `${percentage}%`;
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
             }
         }
         
@@ -1087,30 +567,24 @@
             setProgress(CHAPTER_ID, sectionId, true);
             updateProgressBar();
             
-            // Show completion message
-            const currentSection = document.getElementById(sectionId);
-            const button = currentSection.querySelector('.btn-primary');
-            button.textContent = '✓ Completed';
-            button.classList.add('completed');
-        }
-        
-        // Show completion modal if chapter is finished
-        function checkChapterCompletion() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            
-            if (completed === sections.length) {
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                router.navigateTo(CHAPTER_ID, nextSection.id);
+            } else {
+                // Chapter complete
                 showCompletionModal();
             }
-        }
+        };
         
         function showCompletionModal() {
             const modal = document.createElement('div');
             modal.className = 'completion-modal';
             modal.innerHTML = `
                 <div class="modal-content">
-                    <h2>🎉 Chapter 8 Complete!</h2>
-                    <p>Excellent work! You've mastered quotations and quotation marks. Your writing will accurately represent sources and maintain professional standards.</p>
+                    <h3>🎉 Chapter 8 Complete!</h3>
+                    <p>You've mastered quotations and quotation marks in Canadian writing!</p>
                     <div class="modal-actions">
                         <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
                             Stay Here
@@ -1124,77 +598,9 @@
             document.body.appendChild(modal);
         }
         
-        // Load section quizzes from JSON files - FIXED for Chapter 8
-async function loadSectionQuizzes() {
-    try {
-        const response = await fetch(`../data/ch08-quiz.json`);
-        if (!response.ok) {
-            console.warn('Quiz data not available for chapter 8');
-            return;
-        }
-        
-        const quizData = await response.json();
-        
-        // Only load quiz for the final section (indirect-quotations)
-        const finalSection = 'indirect-quotations';
-        const sectionQuizData = quizData.sections?.[finalSection];
-        
-        if (sectionQuizData) {
-            const quizPanel = document.getElementById(`quiz-${finalSection}`);
-            if (quizPanel) {
-                const quizEngine = new QuizEngine({
-                    containerId: `quiz-${finalSection}`,
-                    questions: sectionQuizData.questions,
-                    title: sectionQuizData.title,
-                    onComplete: (results) => {
-                        if (results.passed) {
-                            completeSection(finalSection);
-                            showChapterCompletionModal();
-                        }
-                    }
-                });
-                quizPanel.appendChild(quizEngine.render());
-            }
-        }
-    } catch (error) {
-        console.error('Error loading quizzes:', error);
-    }
-}
-
-// Complete section function - FIXED
-function completeSection(sectionId) {
-    if (typeof markSectionComplete === 'function') {
-        markSectionComplete('ch08', sectionId);
-    }
-    updateProgressBar();
-    
-    // Only show completion modal for the final section
-    if (sectionId === 'indirect-quotations') {
-        showChapterCompletionModal();
-    } else {
-        // Move to next section
-        const sections = ['introduction', 'quotation-marks', 'nested-quotations', 'block-quotations', 'omissions-insertions', 'punctuation-quotations', 'indirect-quotations'];
-        const currentIndex = sections.indexOf(sectionId);
-        if (currentIndex < sections.length - 1) {
-            const nextSection = sections[currentIndex + 1];
-            const nextTab = document.querySelector(`[data-section="${nextSection}"]`);
-            if (nextTab) nextTab.click();
-        }
-    }
-}
-        
-        // Initialize page
-        initSectionNavigation();
-        updateProgressBar();
-        loadSectionQuizzes();
-        
-        // Handle window beforeunload for quiz warnings
-        window.addEventListener('beforeunload', (event) => {
-            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-            if (activeQuiz) {
-                event.preventDefault();
-                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
-            }
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressBar();
         });
     </script>
 </body>
