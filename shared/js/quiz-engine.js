@@ -161,7 +161,10 @@ export class QuizEngine {
     /**
      * Render Fill in the Blank Question
      */
-    renderFillBlank(question) {
+    /**
+ * Render Fill in the Blank Question - FIXED VERSION
+ */
+renderFillBlank(question) {
     // Support both old and new data structures
     let questionText = question.text || question.stem;
     
