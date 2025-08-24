@@ -162,22 +162,47 @@ export class QuizEngine {
      * Render Fill in the Blank Question
      */
     renderFillBlank(question) {
-        const parts = question.text.split('____');
-        
-        return `
-            <div class="fill-blank-container">
-                <div class="fill-blank-sentence">
-                    ${parts.map((part, index) => {
-                        if (index === parts.length - 1) {
-                            return part;
-                        }
-                        return `${part}<input type="text" class="blank-input" placeholder="?" data-blank="${index}">`;
-                    }).join('')}
-                </div>
-                ${question.hint ? `<p class="hint">💡 Hint: ${question.hint}</p>` : ''}
-            </div>
-        `;
+    // Support both old and new data structures
+    let questionText = question.text || question.stem;
+    
+    // Handle case where the text field is missing entirely
+    if (!questionText) {
+        console.error('Fill-blank question missing text/stem field:', question);
+        return '<div class="error-message">Error: Question text not found</div>';
     }
+    
+    // Handle different fill-blank formats
+    let parts;
+    
+    if (questionText.includes('______')) {
+        // Multiple blanks format
+        parts = questionText.split('______');
+    } else if (questionText.includes('____')) {
+        // Standard blank format
+        parts = questionText.split('____');
+    } else if (questionText.includes('___')) {
+        // Alternative blank format
+        parts = questionText.split('___');
+    } else {
+        // No blanks found - show error
+        console.error('Fill-blank question has no blank markers:', question);
+        return '<div class="error-message">Error: No blank spaces found in question</div>';
+    }
+    
+    return `
+        <div class="fill-blank-container">
+            <div class="fill-blank-sentence">
+                ${parts.map((part, index) => {
+                    if (index === parts.length - 1) {
+                        return part;
+                    }
+                    return `${part}<input type="text" class="blank-input" placeholder="?" data-blank="${index}">`;
+                }).join('')}
+            </div>
+            ${question.hint ? `<p class="hint">💡 Hint: ${question.hint}</p>` : ''}
+        </div>
+    `;
+}
 
     /**
      * Render Matching Question
@@ -466,27 +491,49 @@ export class QuizEngine {
      * Collect fill-blank answer
      */
     collectFillBlankAnswer(question) {
-        const blankInputs = this.container.querySelectorAll('.blank-input');
-        if (blankInputs.length === 0) return null;
-        
-        const answers = Array.from(blankInputs).map(input => input.value.trim());
-        if (answers.some(answer => answer === '')) return null;
-        
-        const isCorrect = answers.every((answer, index) => {
-            if (Array.isArray(question.answers)) {
-                return question.answers[index].toLowerCase() === answer.toLowerCase();
-            } else {
-                return question.answer.toLowerCase() === answer.toLowerCase();
-            }
-        });
-        
-        return {
-            questionId: question.id,
-            answers: answers,
-            isCorrect: isCorrect,
-            type: 'fill-blank'
-        };
+    const blankInputs = this.container.querySelectorAll('.blank-input');
+    if (blankInputs.length === 0) return null;
+    
+    const answers = Array.from(blankInputs).map(input => input.value.trim());
+    if (answers.some(answer => answer === '')) return null;
+    
+    // Support different answer field structures
+    let correctAnswers = [];
+    
+    if (Array.isArray(question.answers)) {
+        // Multiple answers format: ["answer1", "answer2"]
+        correctAnswers = question.answers;
+    } else if (question.answer) {
+        // Single answer format: "answer" 
+        correctAnswers = [question.answer];
+    } else if (question.blanks && Array.isArray(question.blanks)) {
+        // Complex blanks format with answer arrays
+        correctAnswers = question.blanks.map(blank => 
+            Array.isArray(blank.answer) ? blank.answer : [blank.answer]
+        );
+    } else {
+        console.error('Fill-blank question missing answer field:', question);
+        return null;
     }
+    
+    // Check if answers are correct
+    const isCorrect = answers.every((answer, index) => {
+        const expectedAnswers = Array.isArray(correctAnswers[index]) 
+            ? correctAnswers[index] 
+            : [correctAnswers[index]];
+        
+        return expectedAnswers.some(expected => 
+            expected && expected.toLowerCase().trim() === answer.toLowerCase().trim()
+        );
+    });
+    
+    return {
+        questionId: question.id,
+        answers: answers,
+        isCorrect: isCorrect,
+        type: 'fill-blank'
+    };
+}
 
     /**
      * Collect matching answer
