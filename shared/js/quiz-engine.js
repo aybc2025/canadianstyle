@@ -789,13 +789,20 @@ renderFillBlank(question) {
      */
     static async loadQuizData(chapterId) {
         try {
+            console.log(`Loading quiz data for ${chapterId}...`);
+            
             const response = await fetch(`../data/${chapterId}-quiz.json`);
             if (!response.ok) {
-                throw new Error(`Quiz data not found for ${chapterId}`);
+                console.warn(`Quiz file not found: ${chapterId}-quiz.json (${response.status})`);
+                return null;
             }
-            return await response.json();
+            
+            const data = await response.json();
+            console.log(`Successfully loaded quiz data for ${chapterId}:`, data);
+            return data;
+            
         } catch (error) {
-            console.warn('Could not load quiz data:', error);
+            console.error(`Error loading quiz data for ${chapterId}:`, error);
             return null;
         }
     }
@@ -803,22 +810,38 @@ renderFillBlank(question) {
     /**
      * Static method to create quiz engine from chapter and section
      */
-    static async createFromSection(chapterId, sectionId) {
+   static async createFromSection(chapterId, sectionId) {
         try {
+            console.log(`Creating quiz for ${chapterId} section ${sectionId}...`);
+            
             const quizData = await QuizEngine.loadQuizData(chapterId);
-            if (!quizData || !quizData.sections || !quizData.sections[sectionId]) {
-                console.warn(`No quiz data found for ${chapterId} section ${sectionId}`);
+            if (!quizData) {
+                console.warn(`No quiz data available for ${chapterId}`);
+                return null;
+            }
+            
+            if (!quizData.sections || !quizData.sections[sectionId]) {
+                console.warn(`No quiz found for ${chapterId} section ${sectionId}`);
+                console.log('Available sections:', Object.keys(quizData.sections || {}));
                 return null;
             }
             
             const sectionQuizData = quizData.sections[sectionId];
+            if (!sectionQuizData.questions || sectionQuizData.questions.length === 0) {
+                console.warn(`No questions found for ${chapterId} section ${sectionId}`);
+                return null;
+            }
+            
+            console.log(`Successfully created quiz engine for ${chapterId}-${sectionId}`);
             return new QuizEngine(sectionQuizData, chapterId, sectionId);
+            
         } catch (error) {
-            console.error('Error creating quiz engine:', error);
+            console.error(`Error creating quiz engine for ${chapterId}-${sectionId}:`, error);
             return null;
         }
     }
 }
+
 
 // Export for global use
 window.QuizEngine = QuizEngine;
