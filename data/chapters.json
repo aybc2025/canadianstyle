@@ -145,12 +145,12 @@
         {
           "id": "initial-words",
           "title": "4.02 Initial Words",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "personal-names",
           "title": "4.03 Personal Names",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "government",
@@ -165,12 +165,12 @@
         {
           "id": "geography",
           "title": "4.06 Geography",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "publications",
           "title": "4.07 Publications",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "headings",
@@ -200,32 +200,32 @@
         {
           "id": "consistency",
           "title": "5.03 Consistency",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "initial",
           "title": "5.04 Beginning Sentences",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "quantities",
           "title": "5.05 Quantities & Measurements",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "money",
           "title": "5.06 Money",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "percentages",
           "title": "5.07 Percentages & Statistics",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "time",
           "title": "5.08 Time",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "dates",
@@ -340,7 +340,7 @@
       ],
       "totalSections": 12
     },
-   {
+    {
       "id": "ch08",
       "number": "08",
       "title": "Quotations",
@@ -355,12 +355,12 @@
         {
           "id": "quotation-marks",
           "title": "8.02 Quotation Marks",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "nested-quotations",
           "title": "8.03 Nested Quotations",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "block-quotations",
@@ -370,7 +370,7 @@
         {
           "id": "omissions-insertions",
           "title": "8.05 Omissions & Insertions",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "punctuation-quotations",
@@ -384,6 +384,46 @@
         }
       ],
       "totalSections": 7
+    },
+    {
+      "id": "ch09",
+      "number": "09",
+      "title": "Reference Matter",
+      "description": "Format bibliographies, footnotes, and citations.",
+      "category": "typography",
+      "sections": [
+        {
+          "id": "introduction",
+          "title": "9.01 Introduction",
+          "hasQuiz": false
+        },
+        {
+          "id": "footnotes",
+          "title": "9.02 Footnotes",
+          "hasQuiz": true
+        },
+        {
+          "id": "bibliography",
+          "title": "9.03 Bibliography",
+          "hasQuiz": true
+        },
+        {
+          "id": "citations",
+          "title": "9.04 Citations",
+          "hasQuiz": true
+        },
+        {
+          "id": "indexes",
+          "title": "9.05 Indexes",
+          "hasQuiz": true
+        },
+        {
+          "id": "electronic-sources",
+          "title": "9.06 Electronic Sources",
+          "hasQuiz": true
+        }
+      ],
+      "totalSections": 6
     },
     {
       "id": "ch10",
@@ -400,27 +440,27 @@
         {
           "id": "business-letters",
           "title": "10.02 Business Letters",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "memos",
           "title": "10.03 Memorandums",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "formatting",
           "title": "10.04 Formatting",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "addresses",
           "title": "10.05 Addresses",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "signatures",
           "title": "10.06 Signatures",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "electronic-correspondence",
@@ -524,7 +564,7 @@
         },
         {
           "id": "idioms",
-          "title": "12.08 Idioms",
+          "title": "12.08 Idioms & Expressions",
           "hasQuiz": true
         }
       ],
@@ -544,7 +584,7 @@
         },
         {
           "id": "reader-focus",
-          "title": "13.02 Reader Focus",
+          "title": "13.02 Focus on Your Reader",
           "hasQuiz": true
         },
         {
@@ -630,22 +670,22 @@
         {
           "id": "canadian-places",
           "title": "15.02 Canadian Places",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "foreign-places",
           "title": "15.03 Foreign Places",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "adjectives",
           "title": "15.04 Geographical Adjectives",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "provinces-territories",
           "title": "15.05 Provinces & Territories",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "abbreviations",
@@ -658,7 +698,7 @@
     {
       "id": "ch16",
       "number": "16",
-      "title": "Revision & Proofreading", 
+      "title": "Revision & Proofreading",
       "description": "Polish your writing through systematic revision.",
       "category": "style",
       "sections": [
@@ -675,27 +715,27 @@
         {
           "id": "structural-editing",
           "title": "16.03 Structural Editing",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "stylistic-editing",
           "title": "16.04 Stylistic Editing",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "copy-editing",
           "title": "16.05 Copy Editing",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "proofreading",
           "title": "16.06 Proofreading",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "marks",
           "title": "16.07 Proofreader's Marks",
-          "hasQuiz": false
+          "hasQuiz": true
         },
         {
           "id": "checklist",
@@ -709,7 +749,7 @@
   "metadata": {
     "version": "2.0",
     "created": "2024-01-01",
-    "updated": "2024-07-19",
+    "updated": "2024-08-24",
     "totalChapters": 16,
     "totalSections": 119,
     "categories": {
