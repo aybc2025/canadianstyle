@@ -14,19 +14,19 @@ const CHAPTER_SECTIONS = {
     ch01: ['introduction', 'general-principles', 'sentence-capitals', 'proper-nouns', 'government-bodies', 'titles-positions', 'geographic-names', 'brand-names', 'academic-degrees'],
     ch02: ['introduction', 'compound-words', 'prefixes-suffixes', 'word-division', 'special-cases', 'technical-terms'],
     ch03: ['introduction', 'canadian-spelling', 'variants', 'word-endings', 'troublesome-words'],
-    ch04: ['introduction', 'initial-words', 'personal-names', 'government', 'titles', 'geography', 'publications', 'headings'], // FIXED - quiz only on 'headings'
-    ch05: ['introduction', 'round-numbers', 'consistency', 'initial', 'quantities', 'money', 'percentages', 'time', 'dates'], // FIXED - quiz only on 'dates'
-    ch06: ['introduction', 'emphasis', 'titles', 'foreign-words', 'legal-cases'],
+    ch04: ['introduction', 'general-principles', 'proper-nouns', 'titles-positions', 'organizations', 'academic-subjects', 'special-cases'],
+    ch05: ['basic-rules', 'sentence-beginning', 'money-measurements', 'dates-time', 'percentages-statistics', 'special-applications'],
+    ch06: ['basic-principles', 'emphasis', 'foreign-words', 'titles-publications', 'technical-terms', 'legal-references', 'special-uses'],
     ch07: ['introduction', 'periods', 'commas', 'semicolons', 'colons', 'question-marks', 'exclamation-marks', 'apostrophes', 'parentheses-brackets', 'ellipsis', 'quotation-marks', 'dashes'],
-    ch08: ['introduction', 'quotation-marks', 'nested-quotations', 'block-quotations', 'omissions-insertions', 'punctuation-quotations', 'indirect-quotations'], // FIXED - quiz only on 'indirect-quotations'
+    ch08: ['basic-rules', 'punctuation-with-quotes', 'block-quotations', 'nested-quotations', 'titles-special-uses', 'indirect-quotations'],
     ch09: ['introduction', 'footnotes', 'bibliography', 'citations', 'indexes', 'electronic-sources'],
-    ch10: ['introduction', 'business-letters', 'memos', 'formatting', 'addresses', 'signatures', 'electronic-correspondence'], // FIXED - quiz only on 'electronic-correspondence'
-    ch11: ['introduction', 'report-structure', 'headings', 'front-matter', 'appendices', 'tables-charts', 'minutes', 'formatting'],
+    ch10: ['introduction', 'letters', 'memorandums', 'email', 'forms', 'templates'],
+    ch11: ['introduction', 'report-structure', 'formatting', 'headings', 'tables-figures', 'minutes', 'appendices'],
     ch12: ['introduction', 'prepositions', 'affect-effect', 'compose-comprise', 'less-fewer', 'that-which', 'common-errors', 'idioms'],
-    ch13: ['introduction', 'reader-focus', 'organization', 'vocabulary', 'sentences', 'layout', 'testing'],
+    ch13: ['introduction', 'clarity', 'conciseness', 'organization', 'tone', 'accessibility'], 
     ch14: ['introduction', 'gender-inclusive', 'racial-cultural', 'disabilities', 'age-related', 'general-principles'],
-    ch15: ['introduction', 'canadian-places', 'foreign-places', 'adjectives', 'provinces-territories', 'abbreviations'], // FIXED - quiz only on 'abbreviations'
-    ch16: ['introduction', 'editing-levels', 'structural-editing', 'stylistic-editing', 'copy-editing', 'proofreading', 'marks', 'checklist'] // FIXED - quiz only on 'checklist'
+    ch15: ['introduction', 'canadian-places', 'foreign-places', 'provinces-territories', 'indigenous-names', 'abbreviations'],
+    ch16: ['introduction', 'editing-levels', 'revision-strategies', 'proofreading-techniques', 'common-errors', 'final-checklist']
 };
 
 // Default progress structure
