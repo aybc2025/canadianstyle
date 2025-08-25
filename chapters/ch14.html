@@ -652,11 +652,8 @@
                     if (sectionQuizData && sectionQuizData.questions) {
                         const quizContainer = document.getElementById(`quiz-${section.id}`);
                         if (quizContainer) {
-                            const quizEngine = new QuizEngine(quizContainer, {
-                                questions: sectionQuizData.questions,
-                                chapterId: CHAPTER_ID,
-                                sectionId: section.id
-                            });
+                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                            quizEngine.render(quizContainer);
                         }
                     }
                 });
