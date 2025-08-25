@@ -115,7 +115,8 @@
     <script type="module" src="shared/js/components.js"></script>
 
     <script type="module">
-        import { getOverallProgress, getDetailedChapterProgress, resetAllProgress as resetProgress, exportProgress } from './shared/js/progress.js';
+        import { getOverallProgress, getDetailedChapterProgress, resetAllProgress as resetProgress, exportProgress,
+    importProgress } from './shared/js/progress.js';
 
         // Chapter configuration - matches chapters.json
         const CHAPTERS_CONFIG = {
@@ -310,68 +311,86 @@
         }
 
         // Global functions for modal interactions
-        window.showProgressStats = function() {
-            const modal = document.getElementById('progressModal');
-            const details = document.getElementById('progressDetails');
+       window.showProgressStats = function() {
+    const modal = document.getElementById('progressModal');
+    const details = document.getElementById('progressDetails');
+    
+    try {
+        const overallStats = getOverallProgress();
+        const chapterStats = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
+            const progress = getDetailedChapterProgress(id);
+            return {
+                id,
+                config,
+                progress: progress || { completedSections: 0, totalSections: 0 }
+            };
+        });
+
+        details.innerHTML = `
+            <div class="progress-summary">
+                <h4>Overall Progress</h4>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">${overallStats.percentage}%</div>
+                        <div class="stat-label">Total Complete</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${overallStats.completedSections}</div>
+                        <div class="stat-label">Sections Done</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${overallStats.chaptersCompleted}</div>
+                        <div class="stat-label">Chapters Done</div>
+                    </div>
+                </div>
+            </div>
             
-            try {
-                const overallStats = getOverallProgress();
-                const chapterStats = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
-                    const progress = getDetailedChapterProgress(id);
-                    return {
-                        id,
-                        config,
-                        progress: progress || { completedSections: 0, totalSections: 0 }
-                    };
-                });
-
-                details.innerHTML = `
-                    <div class="progress-summary">
-                        <h4>Overall Progress</h4>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats.percentage}%</div>
-                                <div class="stat-label">Total Complete</div>
+            <div class="chapter-progress-list">
+                <h4>Chapter Breakdown</h4>
+                ${chapterStats.map(({ id, config, progress }) => {
+                    const percentage = progress.totalSections > 0 ? 
+                        Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
+                    return `
+                        <div class="progress-item">
+                            <div class="progress-info">
+                                <span class="chapter-name">Chapter ${config.number}: ${config.title}</span>
+                                <span class="progress-fraction">${progress.completedSections}/${progress.totalSections} sections</span>
                             </div>
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats.completedSections}</div>
-                                <div class="stat-label">Sections Done</div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${percentage}%"></div>
                             </div>
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats.chaptersCompleted}</div>
-                                <div class="stat-label">Chapters Done</div>
-                            </div>
+                            <span class="progress-percent">${percentage}%</span>
                         </div>
-                    </div>
-                    
-                    <div class="chapter-progress-list">
-                        <h4>Chapter Breakdown</h4>
-                        ${chapterStats.map(({ id, config, progress }) => {
-                            const percentage = progress.totalSections > 0 ? 
-                                Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
-                            return `
-                                <div class="progress-item">
-                                    <div class="progress-info">
-                                        <span class="chapter-name">Chapter ${config.number}: ${config.title}</span>
-                                        <span class="progress-fraction">${progress.completedSections}/${progress.totalSections} sections</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: ${percentage}%"></div>
-                                    </div>
-                                    <span class="progress-percent">${percentage}%</span>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                `;
-                
-                modal.style.display = 'flex';
-            } catch (error) {
-                console.error('Error showing progress stats:', error);
-                alert('Error loading progress statistics. Please try again.');
-            }
-        };
-
+                    `;
+                }).join('')}
+            </div>
+            
+            <!-- כפתורי Import/Export -->
+            <div class="progress-actions">
+                <h4>📁 Backup & Restore</h4>
+                <div class="action-buttons">
+                    <button class="btn btn-primary" onclick="exportProgressData()" title="Download your progress as a JSON file">
+                        📤 Export Progress
+                    </button>
+                    <button class="btn btn-secondary" onclick="importProgressData()" title="Upload a JSON file with progress data">
+                        📥 Import Progress
+                    </button>
+                    <button class="btn btn-danger" onclick="resetAllProgress()" title="Reset all progress">
+                        🗑️ Reset All
+                    </button>
+                </div>
+                <p class="backup-note">
+                    <small>💡 Tip: Backup your progress regularly to avoid losing your learning data</small>
+                </p>
+            </div>
+        `;
+        
+        modal.style.display = 'flex';
+    } catch (error) {
+        console.error('Error showing progress stats:', error);
+        alert('Error loading progress statistics. Please try again.');
+    }
+};
         window.exportProgressData = function() {
             try {
                 const progressData = exportProgress();
@@ -395,6 +414,54 @@
                 alert('Error exporting progress data. Please try again.');
             }
         };
+
+        // 📥 פונקציה לייבוא קובץ JSON
+window.importProgressData = function() {
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = '.json';
+    fileInput.style.display = 'none';
+    
+    fileInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        
+        if (!file.name.toLowerCase().endsWith('.json')) {
+            alert('Please select a valid JSON file.');
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const jsonString = e.target.result;
+                
+                if (confirm('Are you sure you want to import new progress data? This will replace your current progress.')) {
+                    const success = importProgress(jsonString);
+                    
+                    if (success) {
+                        alert('Progress data imported successfully!');
+                        updateWelcomeStats();
+                        generateChapterCards();
+                        applyFilter(currentFilter);
+                        closeModal('progressModal');
+                    } else {
+                        alert('Error importing progress data. Please check that the file is valid.');
+                    }
+                }
+            } catch (error) {
+                console.error('Error importing progress:', error);
+                alert('Error reading the file. Please check that the file is valid and try again.');
+            }
+        };
+        
+        reader.readAsText(file);
+    });
+    
+    document.body.appendChild(fileInput);
+    fileInput.click();
+    document.body.removeChild(fileInput);
+};
 
         window.resetAllProgress = function() {
             if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
