@@ -143,42 +143,37 @@
           "hasQuiz": false
         },
         {
-          "id": "initial-words",
-          "title": "4.02 Initial Words",
+          "id": "general-principles",
+          "title": "4.02 General Principles",
           "hasQuiz": true
         },
         {
-          "id": "personal-names",
-          "title": "4.03 Personal Names",
+          "id": "proper-nouns",
+          "title": "4.03 Proper Nouns",
           "hasQuiz": true
         },
         {
-          "id": "government",
-          "title": "4.04 Government Bodies",
+          "id": "titles-positions",
+          "title": "4.04 Titles & Positions",
           "hasQuiz": true
         },
         {
-          "id": "titles",
-          "title": "4.05 Titles & Positions",
+          "id": "organizations",
+          "title": "4.05 Organizations",
           "hasQuiz": true
         },
         {
-          "id": "geography",
-          "title": "4.06 Geography",
+          "id": "academic-subjects",
+          "title": "4.06 Academic Subjects",
           "hasQuiz": true
         },
         {
-          "id": "publications",
-          "title": "4.07 Publications",
-          "hasQuiz": true
-        },
-        {
-          "id": "headings",
-          "title": "4.08 Headings",
+          "id": "special-cases",
+          "title": "4.07 Special Cases",
           "hasQuiz": true
         }
       ],
-      "totalSections": 8
+      "totalSections": 7
     },
     {
       "id": "ch05",
@@ -193,47 +188,37 @@
           "hasQuiz": false
         },
         {
-          "id": "round-numbers",
-          "title": "5.02 Round Numbers",
+          "id": "basic-rules",
+          "title": "5.02 Basic Rules",
           "hasQuiz": true
         },
         {
-          "id": "consistency",
-          "title": "5.03 Consistency",
+          "id": "sentence-beginning",
+          "title": "5.03 Sentence Beginning",
           "hasQuiz": true
         },
         {
-          "id": "initial",
-          "title": "5.04 Beginning Sentences",
+          "id": "money-measurements",
+          "title": "5.04 Money & Measurements",
           "hasQuiz": true
         },
         {
-          "id": "quantities",
-          "title": "5.05 Quantities & Measurements",
+          "id": "dates-time",
+          "title": "5.05 Dates & Time",
           "hasQuiz": true
         },
         {
-          "id": "money",
-          "title": "5.06 Money",
+          "id": "percentages-statistics",
+          "title": "5.06 Percentages & Statistics",
           "hasQuiz": true
         },
         {
-          "id": "percentages",
-          "title": "5.07 Percentages & Statistics",
-          "hasQuiz": true
-        },
-        {
-          "id": "time",
-          "title": "5.08 Time",
-          "hasQuiz": true
-        },
-        {
-          "id": "dates",
-          "title": "5.09 Dates & Special Applications",
+          "id": "special-applications",
+          "title": "5.07 Special Applications",
           "hasQuiz": true
         }
       ],
-      "totalSections": 9
+      "totalSections": 7
     },
     {
       "id": "ch06",
@@ -248,27 +233,42 @@
           "hasQuiz": false
         },
         {
-          "id": "emphasis",
-          "title": "6.02 Emphasis",
+          "id": "basic-principles",
+          "title": "6.02 Basic Principles",
           "hasQuiz": true
         },
         {
-          "id": "titles",
-          "title": "6.03 Titles",
+          "id": "emphasis",
+          "title": "6.03 Emphasis",
           "hasQuiz": true
         },
         {
           "id": "foreign-words",
-          "title": "6.04 Foreign Words",
+          "title": "6.04 Foreign Words & Phrases",
           "hasQuiz": true
         },
         {
-          "id": "legal-cases",
-          "title": "6.05 Legal Cases",
+          "id": "titles-publications",
+          "title": "6.05 Titles & Publications",
+          "hasQuiz": true
+        },
+        {
+          "id": "technical-terms",
+          "title": "6.06 Technical & Scientific Terms",
+          "hasQuiz": true
+        },
+        {
+          "id": "legal-references",
+          "title": "6.07 Legal References",
+          "hasQuiz": true
+        },
+        {
+          "id": "special-uses",
+          "title": "6.08 Special Uses",
           "hasQuiz": true
         }
       ],
-      "totalSections": 5
+      "totalSections": 8
     },
     {
       "id": "ch07",
@@ -353,13 +353,13 @@
           "hasQuiz": false
         },
         {
-          "id": "quotation-marks",
-          "title": "8.02 Quotation Marks",
+          "id": "basic-rules",
+          "title": "8.02 Basic Rules",
           "hasQuiz": true
         },
         {
-          "id": "nested-quotations",
-          "title": "8.03 Nested Quotations",
+          "id": "punctuation-with-quotes",
+          "title": "8.03 Punctuation with Quotes",
           "hasQuiz": true
         },
         {
@@ -368,13 +368,13 @@
           "hasQuiz": true
         },
         {
-          "id": "omissions-insertions",
-          "title": "8.05 Omissions & Insertions",
+          "id": "nested-quotations",
+          "title": "8.05 Nested Quotations",
           "hasQuiz": true
         },
         {
-          "id": "punctuation-quotations",
-          "title": "8.06 Punctuation with Quotations",
+          "id": "titles-special-uses",
+          "title": "8.06 Titles & Special Uses",
           "hasQuiz": true
         },
         {
@@ -454,21 +454,16 @@
         },
         {
           "id": "addresses",
-          "title": "10.05 Addresses",
-          "hasQuiz": true
-        },
-        {
-          "id": "signatures",
-          "title": "10.06 Signatures",
+          "title": "10.05 Addresses & Titles",
           "hasQuiz": true
         },
         {
           "id": "electronic-correspondence",
-          "title": "10.07 Electronic Correspondence",
+          "title": "10.06 Electronic Correspondence",
           "hasQuiz": true
         }
       ],
-      "totalSections": 7
+      "totalSections": 6
     },
     {
       "id": "ch11",
@@ -678,13 +673,13 @@
           "hasQuiz": true
         },
         {
-          "id": "adjectives",
-          "title": "15.04 Geographical Adjectives",
+          "id": "provinces-territories",
+          "title": "15.04 Provinces & Territories",
           "hasQuiz": true
         },
         {
-          "id": "provinces-territories",
-          "title": "15.05 Provinces & Territories",
+          "id": "indigenous-names",
+          "title": "15.05 Indigenous Names",
           "hasQuiz": true
         },
         {
@@ -705,45 +700,35 @@
         {
           "id": "introduction",
           "title": "16.01 Introduction",
-          "hasQuiz": true
+          "hasQuiz": false
         },
         {
           "id": "editing-levels",
-          "title": "16.02 Levels of Editing",
+          "title": "16.02 Editing Levels",
           "hasQuiz": true
         },
         {
-          "id": "structural-editing",
-          "title": "16.03 Structural Editing",
+          "id": "revision-strategies",
+          "title": "16.03 Revision Strategies",
           "hasQuiz": true
         },
         {
-          "id": "stylistic-editing",
-          "title": "16.04 Stylistic Editing",
+          "id": "proofreading-techniques",
+          "title": "16.04 Proofreading Techniques",
           "hasQuiz": true
         },
         {
-          "id": "copy-editing",
-          "title": "16.05 Copy Editing",
+          "id": "common-errors",
+          "title": "16.05 Common Errors",
           "hasQuiz": true
         },
         {
-          "id": "proofreading",
-          "title": "16.06 Proofreading",
-          "hasQuiz": true
-        },
-        {
-          "id": "marks",
-          "title": "16.07 Proofreader's Marks",
-          "hasQuiz": true
-        },
-        {
-          "id": "checklist",
-          "title": "16.08 Revision Checklist",
+          "id": "final-checklist",
+          "title": "16.06 Final Checklist",
           "hasQuiz": true
         }
       ],
-      "totalSections": 8
+      "totalSections": 6
     }
   ],
   "metadata": {
