@@ -72,7 +72,6 @@
             </div>
             <div class="modal-actions">
                 <button class="btn btn-outline" onclick="closeModal('progressModal')">Close</button>
-                <button class="btn btn-outline" onclick="resetAllProgress()">Reset All Progress</button>
             </div>
         </div>
     </div>
@@ -115,27 +114,26 @@
     <script type="module" src="shared/js/components.js"></script>
 
     <script type="module">
-        import { getOverallProgress, getDetailedChapterProgress, resetAllProgress as resetProgress, exportProgress,
-    importProgress } from './shared/js/progress.js';
+        import { getOverallProgress, getDetailedChapterProgress, resetAllProgress as resetProgress, exportProgress, importProgress } from './shared/js/progress.js';
 
         // Chapter configuration - matches chapters.json
         const CHAPTERS_CONFIG = {
             ch01: { number: "01", title: "Abbreviations", description: "Learn the proper use of abbreviations in Canadian government writing.", category: "typography" },
             ch02: { number: "02", title: "Hyphenation", description: "Master hyphenation, compounding, and word division.", category: "typography" },
             ch03: { number: "03", title: "Spelling", description: "Use correct Canadian spelling conventions.", category: "typography" },
-            ch04: { number: "04", title: "Capitalization", description: "Apply proper capitalization rules.", category: "typography" },
-            ch05: { number: "05", title: "Numerical Expressions", description: "Format numbers, dates, and quantities correctly.", category: "typography" },
-            ch06: { number: "06", title: "Italics", description: "Use italics appropriately for emphasis and titles.", category: "typography" },
-            ch07: { number: "07", title: "Punctuation", description: "Master all forms of punctuation.", category: "typography" },
-            ch08: { number: "08", title: "Quotations", description: "Handle quotations and quotation marks correctly.", category: "typography" },
-            ch09: { number: "09", title: "Reference Matter", description: "Format bibliographies, footnotes, and citations.", category: "typography" },
-            ch10: { number: "10", title: "Letters & Memorandums", description: "Write effective business correspondence.", category: "typography" },
-            ch11: { number: "11", title: "Reports & Minutes", description: "Structure and format reports and meeting minutes.", category: "typography" },
-            ch12: { number: "12", title: "Usage", description: "Navigate common usage problems and word choices.", category: "style" },
-            ch13: { number: "13", title: "Plain Language", description: "Write clearly and concisely for your readers.", category: "style" },
-            ch14: { number: "14", title: "Elimination of Stereotyping", description: "Use inclusive, bias-free language.", category: "style" },
-            ch15: { number: "15", title: "Geographical Names", description: "Use correct spellings and forms for place names.", category: "style" },
-            ch16: { number: "16", title: "Revision & Proofreading", description: "Polish your writing through systematic revision.", category: "style" }
+            ch04: { number: "04", title: "Capitalization", description: "Apply proper capitalization rules for Canadian writing.", category: "typography" },
+            ch05: { number: "05", title: "Numerical Expressions", description: "Express numbers correctly in government documents.", category: "typography" },
+            ch06: { number: "06", title: "Italics", description: "Use italics effectively for emphasis and titles.", category: "typography" },
+            ch07: { number: "07", title: "Punctuation", description: "Master comprehensive punctuation rules.", category: "typography" },
+            ch08: { number: "08", title: "Quotations", description: "Handle quotations and quotation marks properly.", category: "typography" },
+            ch09: { number: "09", title: "Reference Matter", description: "Format footnotes, citations, and bibliographies.", category: "typography" },
+            ch10: { number: "10", title: "Letters and Memorandums", description: "Write professional correspondence.", category: "typography" },
+            ch11: { number: "11", title: "Reports and Minutes", description: "Structure formal reports and meeting minutes.", category: "typography" },
+            ch12: { number: "12", title: "Usages", description: "Navigate common usage questions and word choice.", category: "style" },
+            ch13: { number: "13", title: "Plain Language", description: "Write clearly and accessibly for all readers.", category: "style" },
+            ch14: { number: "14", title: "Bias-Free Language", description: "Use inclusive and respectful language.", category: "style" },
+            ch15: { number: "15", title: "Geographical Names", description: "Handle place names and geographical references.", category: "style" },
+            ch16: { number: "16", title: "Revision and Proofreading", description: "Perfect your editing and proofreading skills.", category: "style" }
         };
 
         let currentFilter = 'all';
@@ -144,20 +142,17 @@
         function initializeDashboard() {
             updateWelcomeStats();
             generateChapterCards();
-            setupFilterButtons();
             setupEventListeners();
-            
-            console.log('Dashboard initialized successfully');
         }
 
-        // Update welcome section statistics
+        // Update welcome statistics
         function updateWelcomeStats() {
             try {
-                const stats = getOverallProgress();
+                const overallStats = getOverallProgress();
                 
-                document.getElementById('totalProgress').textContent = `${stats.percentage}%`;
-                document.getElementById('chaptersCompleted').textContent = stats.chaptersCompleted;
-                document.getElementById('sectionsCompleted').textContent = stats.completedSections;
+                document.getElementById('totalProgress').textContent = `${overallStats.percentage}%`;
+                document.getElementById('chaptersCompleted').textContent = overallStats.chaptersCompleted || 0;
+                document.getElementById('sectionsCompleted').textContent = overallStats.completedSections || 0;
             } catch (error) {
                 console.error('Error updating welcome stats:', error);
             }
@@ -167,102 +162,62 @@
         function generateChapterCards() {
             const grid = document.getElementById('chaptersGrid');
             if (!grid) return;
-
-            grid.innerHTML = ''; // Clear existing cards
-
-            Object.entries(CHAPTERS_CONFIG).forEach(([chapterId, config]) => {
-                const card = createChapterCard(chapterId, config);
-                grid.appendChild(card);
-            });
-        }
-
-        // Create individual chapter card
-        function createChapterCard(chapterId, config) {
-            const chapterProgress = getDetailedChapterProgress(chapterId);
-            const completionPercentage = chapterProgress ? 
-                Math.round((chapterProgress.completedSections / chapterProgress.totalSections) * 100) : 0;
             
-            const isCompleted = completionPercentage === 100;
-            const hasProgress = completionPercentage > 0;
-
-            const card = document.createElement('div');
-            card.className = `chapter-card ${config.category}`;
-            card.dataset.category = config.category;
-            
-            card.innerHTML = `
-                <div class="card-header">
-                    <div class="chapter-number">${config.number}</div>
-                    <div class="card-title">
-                        <h3>${config.title}</h3>
-                        <span class="chapter-category">${config.category === 'typography' ? 'Typography & Format' : 'Style & Usage'}</span>
-                    </div>
-                </div>
-                
-                <div class="card-description">
-                    <p>${config.description}</p>
-                </div>
-                
-                <div class="card-footer">
-                    <div class="progress-container">
-                        <svg class="progress-ring" width="60" height="60">
-                            <circle class="progress-circle" cx="30" cy="30" r="26" 
-                                    stroke-dasharray="${2 * Math.PI * 26}" 
-                                    stroke-dashoffset="${2 * Math.PI * 26 * (1 - completionPercentage / 100)}">
-                            </circle>
-                            <circle class="progress-circle progress" cx="30" cy="30" r="26" 
-                                    stroke-dasharray="${2 * Math.PI * 26}" 
-                                    stroke-dashoffset="${2 * Math.PI * 26 * (1 - completionPercentage / 100)}">
-                            </circle>
-                        </svg>
-                        <div class="progress-text">
-                            <div class="progress-percentage">${completionPercentage}%</div>
-                            <div class="progress-label">Complete</div>
+            try {
+                const cards = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
+                    const progress = getDetailedChapterProgress(id);
+                    const percentage = progress && progress.totalSections > 0 ? 
+                        Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
+                    
+                    return `
+                        <div class="chapter-card" data-category="${config.category}" data-chapter="${id}">
+                            <div class="card-header">
+                                <div class="chapter-number">${config.number}</div>
+                                <div class="card-title">
+                                    <h3>${config.title}</h3>
+                                    <span class="category-label">${config.category}</span>
+                                </div>
+                            </div>
+                            <div class="card-description">
+                                <p>${config.description}</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="progress-container">
+                                    <svg class="progress-ring" width="60" height="60">
+                                        <circle class="progress-circle" cx="30" cy="30" r="26" style="stroke-dasharray: ${163.3 * percentage / 100} 163.3;"></circle>
+                                        <circle class="progress-circle progress" cx="30" cy="30" r="26"></circle>
+                                    </svg>
+                                    <span class="progress-text">${percentage}% done</span>
+                                </div>
+                                <div class="card-actions">
+                                    <a href="chapters/${id}.html" class="btn btn-primary">
+                                        ${percentage > 0 ? 'Continue' : 'Start Chapter'}
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    
-                    <div class="card-actions">
-                        ${isCompleted 
-                            ? '<span class="completion-badge">✅ Complete</span>'
-                            : hasProgress 
-                                ? `<a href="chapters/${chapterId}.html" class="btn btn-primary">Continue</a>`
-                                : `<a href="chapters/${chapterId}.html" class="btn btn-outline">Start Learning</a>`
-                        }
-                        ${isCompleted ? `<a href="chapters/${chapterId}.html" class="btn btn-outline btn-sm">Review</a>` : ''}
-                    </div>
-                </div>
-            `;
-
-            return card;
-        }
-
-        // Setup filter buttons
-        function setupFilterButtons() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const filter = button.dataset.filter;
-                    
-                    // Update active state
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    button.classList.add('active');
-                    
-                    // Apply filter
-                    applyFilter(filter);
-                    currentFilter = filter;
-                });
-            });
-        }
-
-        // Apply chapter filter
-        function applyFilter(filter) {
-            const cards = document.querySelectorAll('.chapter-card');
-            
-            cards.forEach(card => {
-                const category = card.dataset.category;
-                const shouldShow = filter === 'all' || filter === category;
+                    `;
+                }).join('');
                 
-                card.style.display = shouldShow ? 'block' : 'none';
+                grid.innerHTML = cards;
+            } catch (error) {
+                console.error('Error generating chapter cards:', error);
+            }
+        }
+
+        // Apply filter
+        function applyFilter(filter) {
+            currentFilter = filter;
+            
+            // Update active button
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.filter === filter);
+            });
+            
+            // Show/hide cards
+            document.querySelectorAll('.chapter-card').forEach(card => {
+                const category = card.dataset.category;
+                card.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
             });
 
             // Update filter button text with counts
@@ -282,6 +237,13 @@
 
         // Setup event listeners
         function setupEventListeners() {
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    applyFilter(btn.dataset.filter);
+                });
+            });
+
             // Listen for progress changes
             window.addEventListener('progress-changed', () => {
                 updateWelcomeStats();
@@ -311,86 +273,87 @@
         }
 
         // Global functions for modal interactions
-       window.showProgressStats = function() {
-    const modal = document.getElementById('progressModal');
-    const details = document.getElementById('progressDetails');
-    
-    try {
-        const overallStats = getOverallProgress();
-        const chapterStats = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
-            const progress = getDetailedChapterProgress(id);
-            return {
-                id,
-                config,
-                progress: progress || { completedSections: 0, totalSections: 0 }
-            };
-        });
+        window.showProgressStats = function() {
+            const modal = document.getElementById('progressModal');
+            const details = document.getElementById('progressDetails');
+            
+            try {
+                const overallStats = getOverallProgress();
+                const chapterStats = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
+                    const progress = getDetailedChapterProgress(id);
+                    return {
+                        id,
+                        config,
+                        progress: progress || { completedSections: 0, totalSections: 0 }
+                    };
+                });
 
-        details.innerHTML = `
-            <div class="progress-summary">
-                <h4>Overall Progress</h4>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-value">${overallStats.percentage}%</div>
-                        <div class="stat-label">Total Complete</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">${overallStats.completedSections}</div>
-                        <div class="stat-label">Sections Done</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-value">${overallStats.chaptersCompleted}</div>
-                        <div class="stat-label">Chapters Done</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="chapter-progress-list">
-                <h4>Chapter Breakdown</h4>
-                ${chapterStats.map(({ id, config, progress }) => {
-                    const percentage = progress.totalSections > 0 ? 
-                        Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
-                    return `
-                        <div class="progress-item">
-                            <div class="progress-info">
-                                <span class="chapter-name">Chapter ${config.number}: ${config.title}</span>
-                                <span class="progress-fraction">${progress.completedSections}/${progress.totalSections} sections</span>
+                details.innerHTML = `
+                    <div class="progress-summary">
+                        <h4>Overall Progress</h4>
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">${overallStats.percentage}%</div>
+                                <div class="stat-label">Total Complete</div>
                             </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: ${percentage}%"></div>
+                            <div class="stat-card">
+                                <div class="stat-value">${overallStats.completedSections}</div>
+                                <div class="stat-label">Sections Done</div>
                             </div>
-                            <span class="progress-percent">${percentage}%</span>
+                            <div class="stat-card">
+                                <div class="stat-value">${overallStats.chaptersCompleted}</div>
+                                <div class="stat-label">Chapters Done</div>
+                            </div>
                         </div>
-                    `;
-                }).join('')}
-            </div>
-            
-            <!-- כפתורי Import/Export -->
-            <div class="progress-actions">
-                <h4>📁 Backup & Restore</h4>
-                <div class="action-buttons">
-                    <button class="btn btn-primary" onclick="exportProgressData()" title="Download your progress as a JSON file">
-                        📤 Export Progress
-                    </button>
-                    <button class="btn btn-secondary" onclick="importProgressData()" title="Upload a JSON file with progress data">
-                        📥 Import Progress
-                    </button>
-                    <button class="btn btn-danger" onclick="resetAllProgress()" title="Reset all progress">
-                        🗑️ Reset All
-                    </button>
-                </div>
-                <p class="backup-note">
-                    <small>💡 Tip: Backup your progress regularly to avoid losing your learning data</small>
-                </p>
-            </div>
-        `;
-        
-        modal.style.display = 'flex';
-    } catch (error) {
-        console.error('Error showing progress stats:', error);
-        alert('Error loading progress statistics. Please try again.');
-    }
-};
+                    </div>
+                    
+                    <div class="chapter-progress-list">
+                        <h4>Chapter Breakdown</h4>
+                        ${chapterStats.map(({ id, config, progress }) => {
+                            const percentage = progress.totalSections > 0 ? 
+                                Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
+                            return `
+                                <div class="progress-item">
+                                    <div class="progress-info">
+                                        <span class="chapter-name">Chapter ${config.number}: ${config.title}</span>
+                                        <span class="progress-fraction">${progress.completedSections}/${progress.totalSections} sections</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: ${percentage}%"></div>
+                                    </div>
+                                    <span class="progress-percent">${percentage}%</span>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                    
+                    <!-- כפתורי Import/Export -->
+                    <div class="progress-actions">
+                        <h4>📁 Backup & Restore</h4>
+                        <div class="action-buttons">
+                            <button class="btn btn-primary" onclick="exportProgressData()" title="Download your progress as a JSON file">
+                                📤 Export Progress
+                            </button>
+                            <button class="btn btn-secondary" onclick="importProgressData()" title="Upload a JSON file with progress data">
+                                📥 Import Progress
+                            </button>
+                            <button class="btn btn-danger" onclick="resetAllProgress()" title="Reset all progress">
+                                🗑️ Reset All
+                            </button>
+                        </div>
+                        <p class="backup-note">
+                            <small>💡 Tip: Backup your progress regularly to avoid losing your learning data</small>
+                        </p>
+                    </div>
+                `;
+                
+                modal.style.display = 'flex';
+            } catch (error) {
+                console.error('Error showing progress stats:', error);
+                alert('Error loading progress statistics. Please try again.');
+            }
+        };
+
         window.exportProgressData = function() {
             try {
                 const progressData = exportProgress();
@@ -416,52 +379,57 @@
         };
 
         // 📥 פונקציה לייבוא קובץ JSON
-window.importProgressData = function() {
-    const fileInput = document.createElement('input');
-    fileInput.type = 'file';
-    fileInput.accept = '.json';
-    fileInput.style.display = 'none';
-    
-    fileInput.addEventListener('change', function(event) {
-        const file = event.target.files[0];
-        if (!file) return;
-        
-        if (!file.name.toLowerCase().endsWith('.json')) {
-            alert('Please select a valid JSON file.');
-            return;
-        }
-        
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const jsonString = e.target.result;
+        window.importProgressData = function() {
+            const fileInput = document.createElement('input');
+            fileInput.type = 'file';
+            fileInput.accept = '.json';
+            fileInput.style.display = 'none';
+            
+            fileInput.addEventListener('change', function(event) {
+                const file = event.target.files[0];
+                if (!file) return;
                 
-                if (confirm('Are you sure you want to import new progress data? This will replace your current progress.')) {
-                    const success = importProgress(jsonString);
-                    
-                    if (success) {
-                        alert('Progress data imported successfully!');
-                        updateWelcomeStats();
-                        generateChapterCards();
-                        applyFilter(currentFilter);
-                        closeModal('progressModal');
-                    } else {
-                        alert('Error importing progress data. Please check that the file is valid.');
-                    }
+                if (!file.name.toLowerCase().endsWith('.json')) {
+                    alert('Please select a valid JSON file.');
+                    return;
                 }
-            } catch (error) {
-                console.error('Error importing progress:', error);
-                alert('Error reading the file. Please check that the file is valid and try again.');
-            }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    try {
+                        const jsonString = e.target.result;
+                        
+                        if (confirm('Are you sure you want to import new progress data? This will replace your current progress.')) {
+                            const success = importProgress(jsonString);
+                            
+                            if (success) {
+                                alert('Progress data imported successfully!');
+                                // עדכון התצוגה
+                                updateWelcomeStats();
+                                generateChapterCards();
+                                applyFilter(currentFilter);
+                                closeModal('progressModal');
+                            } else {
+                                alert('Error importing progress data. Please check that the file is valid.');
+                            }
+                        }
+                    } catch (error) {
+                        console.error('Error importing progress:', error);
+                        alert('Error reading the file. Please check that the file is valid and try again.');
+                    }
+                };
+                
+                reader.onerror = function() {
+                    alert('Error reading the file. Please try again.');
+                };
+                
+                reader.readAsText(file);
+            });
+            
+            document.body.appendChild(fileInput);
+            fileInput.click();
+            document.body.removeChild(fileInput);
         };
-        
-        reader.readAsText(file);
-    });
-    
-    document.body.appendChild(fileInput);
-    fileInput.click();
-    document.body.removeChild(fileInput);
-};
 
         window.resetAllProgress = function() {
             if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
@@ -529,59 +497,18 @@ window.importProgressData = function() {
         }
         
         .stat-label {
+            color: rgba(255, 255, 255, 0.8);
             font-size: var(--cs-font-size-sm);
-            opacity: 0.9;
-        }
-        
-        .chapter-category {
-            font-size: var(--cs-font-size-xs);
-            color: var(--cs-grey-500);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         
-        .card-actions {
-            display: flex;
-            flex-direction: column;
-            gap: var(--cs-space-s);
-        }
-        
-        .completion-badge {
-            color: #10b981;
-            font-weight: var(--cs-font-weight-medium);
-            font-size: var(--cs-font-size-sm);
-        }
-        
-        .progress-summary {
-            margin-bottom: var(--cs-space-xl);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: var(--cs-space-m);
-            margin-top: var(--cs-space-m);
-        }
-        
-        .stat-card {
-            background: var(--cs-grey-50);
-            padding: var(--cs-space-m);
-            border-radius: var(--cs-border-radius);
-            text-align: center;
-        }
-        
-        .stat-value {
-            font-size: var(--cs-font-size-2xl);
-            font-weight: var(--cs-font-weight-bold);
-            color: var(--cs-red);
-        }
-        
         .progress-item {
             display: grid;
-            grid-template-columns: 1fr 100px 50px;
+            grid-template-columns: 2fr 1fr auto;
             align-items: center;
             gap: var(--cs-space-m);
-            padding: var(--cs-space-s) 0;
+            padding: var(--cs-space-m);
             border-bottom: 1px solid var(--cs-grey-200);
         }
         
