@@ -1250,3 +1250,137 @@ tr:last-child td {
         display: none;
     }
 }
+
+const additionalStyles = `
+<style>
+/* Progress Modal Enhancements */
+.progress-actions {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.progress-actions h4 {
+    color: var(--cs-red);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.action-buttons .btn {
+    flex: 1;
+    min-width: 140px;
+    max-width: 180px;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.action-buttons .btn-primary {
+    background: var(--cs-red);
+    color: white;
+    border-color: var(--cs-red);
+}
+
+.action-buttons .btn-primary:hover {
+    background: #c51017;
+    border-color: #c51017;
+    transform: translateY(-1px);
+}
+
+.action-buttons .btn-secondary {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.action-buttons .btn-secondary:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-1px);
+}
+
+.action-buttons .btn-danger {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+}
+
+.action-buttons .btn-danger:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+    transform: translateY(-1px);
+}
+
+.backup-note {
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+.backup-note small {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.stat-card {
+    background: #f9fafb;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cs-red);
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
+.modal-content {
+    max-width: 700px !important;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+}
