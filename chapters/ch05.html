@@ -598,6 +598,31 @@
                 showCompletionModal();
             }
         };
+
+       async function loadSectionQuizzes() {
+    try {
+        const response = await fetch(`../data/ch05-quiz.json`);
+        if (!response.ok) {
+            console.warn('Quiz data not available for chapter 5');
+            return;
+        }
+        
+        const quizData = await response.json();
+        
+        sections.forEach(section => {
+            const sectionQuizData = quizData.sections?.[section.id];
+            if (sectionQuizData && sectionQuizData.questions) {
+                const quizContainer = document.getElementById(`quiz-${section.id}`);
+                if (quizContainer) {
+                    const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                    quizEngine.render(quizContainer);
+                }
+            }
+        });
+    } catch (error) {
+        console.warn('Error loading quiz data:', error);
+    }
+} 
         
         function showCompletionModal() {
             const modal = document.createElement('div');
@@ -622,6 +647,7 @@
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', function() {
             updateProgressBar();
+    loadSectionQuizzes();
         });
     </script>
 </body>
