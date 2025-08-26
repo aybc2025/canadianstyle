@@ -1,99 +1,101 @@
 {
-  "chapterId": "ch09",
-  "chapterTitle": "Reference Matter",
+  "chapter": "ch09",
+  "title": "Reference Matter",
+  "description": "Test your knowledge of footnotes, citations, bibliographies, indexes, and reference formatting.",
   "sections": {
     "footnotes": {
       "id": "footnotes-quiz",
-      "title": "Footnotes and Note Systems",
+      "title": "Footnotes and Endnotes",
       "questions": [
         {
           "id": "fn-01",
           "type": "mcq",
-          "stem": "Where should footnote numbers be placed in text?",
+          "stem": "Where should footnote numbers appear in relation to punctuation?",
           "options": [
             {"label": "Before punctuation marks", "correct": false},
             {"label": "After punctuation marks", "correct": true},
-            {"label": "In the middle of words", "correct": false},
-            {"label": "Only at the end of paragraphs", "correct": false}
+            {"label": "Either before or after", "correct": false},
+            {"label": "Only at the end of sentences", "correct": false}
           ],
-          "rationale": "Footnote numbers should be placed after punctuation marks, not before them.",
+          "rationale": "Footnote numbers should appear after punctuation marks to maintain proper text flow.",
           "ref": "§9.02"
         },
         {
           "id": "fn-02",
-          "type": "fill-blank",
-          "stem": "Complete this footnote citation: ¹ Department of Justice Canada, __________ (Ottawa: Government of Canada, 2023), __________.",
-          "blanks": [
-            {"id": "blank1", "answer": ["Policy Implementation Guide", "Title of Document"], "position": 1},
-            {"id": "blank2", "answer": ["15", "page number"], "position": 2}
+          "type": "mcq",
+          "stem": "What does 'Ibid.' mean in footnotes?",
+          "options": [
+            {"label": "The same author as previous note", "correct": false},
+            {"label": "In the same book", "correct": false},
+            {"label": "The same source as immediately preceding note", "correct": true},
+            {"label": "In the bibliography", "correct": false}
           ],
-          "rationale": "Government document footnotes include: Department, Title in italics, (Location: Publisher, Year), page.",
+          "rationale": "'Ibid.' (ibidem) means 'in the same place' and refers to the immediately preceding citation.",
           "ref": "§9.02"
         },
         {
           "id": "fn-03",
-          "type": "error-spot",
-          "stem": "Click on the incorrectly formatted footnote number:",
-          "text": "The policy was implemented in 2023¹, resulting in significant changes.² However, critics argued³ that the timeline was problematic.",
-          "errors": [
-            {"text": "argued³", "position": 11, "correction": "argued³", "reason": "Footnote number should come after punctuation, not before"}
-          ],
-          "rationale": "Footnote numbers should be placed after punctuation marks and at the end of sentences.",
+          "type": "fill-blank",
+          "stem": "For subsequent references to the same work, use a ________ version of the title rather than 'op. cit.'",
+          "answer": "shortened",
+          "alternatives": ["short", "brief", "abbreviated"],
+          "rationale": "Modern practice favors shortened titles over the Latin 'op. cit.' for clarity.",
           "ref": "§9.02"
         },
         {
           "id": "fn-04",
-          "type": "matching",
-          "stem": "Match the footnote type with its purpose:",
-          "pairs": [
-            {"left": "Source citation", "right": "Identify where information came from"},
-            {"left": "Explanatory note", "right": "Provide additional context"},
-            {"left": "Cross-reference", "right": "Direct readers to related sections"},
-            {"left": "Translation", "right": "Provide English versions of foreign terms"}
+          "type": "error-spot",
+          "stem": "Find the error in this footnote:",
+          "text": "¹Smith, John. Canadian Policy Analysis. Ottawa: Government Publishing, 2023. p. 45.",
+          "errors": [
+            {"text": "Canadian Policy Analysis", "position": 2, "correction": "Canadian Policy Analysis", "reason": "Book titles should be italicized"},
+            {"text": "p. 45", "position": 7, "correction": "45", "reason": "Page numbers in footnotes don't need 'p.' prefix"}
           ],
-          "rationale": "Different types of footnotes serve different purposes in documentation.",
+          "rationale": "Book titles should be italicized, and page numbers don't need 'p.' in footnotes.",
           "ref": "§9.02"
         },
         {
           "id": "fn-05",
           "type": "mcq",
-          "stem": "What is the correct format for citing Canadian legislation in a footnote?",
+          "stem": "How should footnotes be spaced on the page?",
           "options": [
-            {"label": "Privacy Act, 1985", "correct": false},
-            {"label": "Privacy Act, R.S.C., 1985, c. P-21", "correct": true},
-            {"label": "Privacy Act (Canada)", "correct": false},
-            {"label": "The Privacy Act of Canada", "correct": false}
+            {"label": "Double spaced like the main text", "correct": false},
+            {"label": "Single spaced within footnotes", "correct": true},
+            {"label": "1.5 spacing throughout", "correct": false},
+            {"label": "Triple spaced for clarity", "correct": false}
           ],
-          "rationale": "Canadian legislation citations include the title, statute series, year, and chapter number.",
+          "rationale": "Footnotes should be single spaced within each note to save space while maintaining readability.",
           "ref": "§9.02"
         }
       ]
     },
     "bibliography": {
       "id": "bibliography-quiz",
-      "title": "Bibliography and Reference Lists",
+      "title": "Bibliography Formatting",
       "questions": [
         {
           "id": "bib-01",
           "type": "mcq",
-          "stem": "What is the difference between a bibliography and a reference list?",
+          "stem": "How should bibliography entries be arranged?",
           "options": [
-            {"label": "There is no difference", "correct": false},
-            {"label": "Bibliography includes all sources consulted; references include only cited sources", "correct": true},
-            {"label": "Bibliography is for books only; references are for articles", "correct": false},
-            {"label": "Bibliography is alphabetical; references are chronological", "correct": false}
+            {"label": "By date of publication", "correct": false},
+            {"label": "By importance to the topic", "correct": false},
+            {"label": "Alphabetically by author's last name", "correct": true},
+            {"label": "By type of source", "correct": false}
           ],
-          "rationale": "A bibliography includes all sources consulted during research, while a reference list includes only sources actually cited in the text.",
+          "rationale": "Bibliography entries are arranged alphabetically by author's last name or by title if no author.",
           "ref": "§9.03"
         },
         {
           "id": "bib-02",
-          "type": "fill-blank",
-          "stem": "Complete this bibliography entry: Smith, John. __________. Toronto: University of Toronto Press, 2023.",
-          "blanks": [
-            {"id": "blank1", "answer": ["Canadian Government Policy", "Title of Book"], "position": 1}
+          "type": "error-spot",
+          "stem": "Find the formatting error in this bibliography entry:",
+          "text": "Brown, Michael. Fiscal Policy Trends. Canadian Public Administration 67, no. 2 (2023): 145-162.",
+          "errors": [
+            {"text": "Fiscal Policy Trends", "position": 3, "correction": "\"Fiscal Policy Trends\"", "reason": "Article titles should be in quotation marks"},
+            {"text": "Canadian Public Administration", "position": 5, "correction": "Canadian Public Administration", "reason": "Journal titles should be italicized"}
           ],
-          "rationale": "Book titles in bibliographies should be italicized and follow the author name.",
+          "rationale": "Article titles use quotation marks while journal titles are italicized.",
           "ref": "§9.03"
         },
         {
@@ -111,18 +113,6 @@
         },
         {
           "id": "bib-04",
-          "type": "error-spot",
-          "stem": "Click on the formatting error in this bibliography entry:",
-          "text": "Wilson, Sarah. Policy Implementation Challenges. Canadian Public Administration 67, no. 2 (2023): 145-162.",
-          "errors": [
-            {"text": "Policy Implementation Challenges", "position": 3, "correction": "\"Policy Implementation Challenges\"", "reason": "Article titles should be in quotation marks"},
-            {"text": "Canadian Public Administration", "position": 6, "correction": "Canadian Public Administration", "reason": "Journal names should be italicized"}
-          ],
-          "rationale": "Article titles use quotation marks, journal names are italicized.",
-          "ref": "§9.03"
-        },
-        {
-          "id": "bib-05",
           "type": "mcq",
           "stem": "How should entries with no author be alphabetized in a bibliography?",
           "options": [
@@ -132,6 +122,15 @@
             {"label": "By publication date", "correct": false}
           ],
           "rationale": "Sources with no author are alphabetized by title, ignoring initial articles.",
+          "ref": "§9.03"
+        },
+        {
+          "id": "bib-05",
+          "type": "fill-blank",
+          "stem": "Bibliography entries should use ________ indent formatting.",
+          "answer": "hanging",
+          "alternatives": ["reverse", "inverted"],
+          "rationale": "Hanging indent (first line flush left, subsequent lines indented) is standard for bibliographies.",
           "ref": "§9.03"
         }
       ]
@@ -156,192 +155,310 @@
         {
           "id": "cit-02",
           "type": "fill-blank",
-          "stem": "Complete this APA-style in-text citation: The study found significant improvements __________, demonstrating policy effectiveness.",
-          "blanks": [
-            {"id": "blank1", "answer": ["(Johnson, 2023)", "(Smith & Wilson, 2023)", "(Author, Year)"], "position": 1}
-          ],
-          "rationale": "APA in-text citations include author's last name and publication year in parentheses.",
+          "stem": "Complete this APA-style in-text citation: The study found significant improvements ________, demonstrating policy effectiveness.",
+          "answer": "(Wilson, 2023, p. 45)",
+          "alternatives": ["(Wilson 2023: 45)", "(Wilson, 2023: 45)"],
+          "rationale": "APA style uses (Author, Year, p. Page) format for in-text citations with page numbers.",
           "ref": "§9.04"
         },
         {
           "id": "cit-03",
-          "type": "matching",
-          "stem": "Match the citation style with its in-text format:",
-          "pairs": [
-            {"left": "Footnote/Endnote", "right": "Superscript numbers¹"},
-            {"left": "APA (Author-Date)", "right": "(Smith, 2023)"},
-            {"left": "Numbered Reference", "right": "[1]"},
-            {"left": "Legal Citation", "right": "Privacy Act, s. 7"}
+          "type": "mcq",
+          "stem": "Which citation system uses numbers in square brackets?",
+          "options": [
+            {"label": "Author-Date system", "correct": false},
+            {"label": "Numbered system", "correct": true},
+            {"label": "Note system", "correct": false},
+            {"label": "Alphabetical system", "correct": false}
           ],
-          "rationale": "Different citation systems use different in-text reference formats.",
+          "rationale": "The numbered system uses numbers in square brackets [1] or parentheses (1) for citations.",
           "ref": "§9.04"
         },
         {
           "id": "cit-04",
           "type": "error-spot",
-          "stem": "Click on the citation error:",
-          "text": "According to the Privacy Act, R.S.C. 1985, c. P-21, personal information must be protected (s. 7).",
+          "stem": "Find the error in this citation:",
+          "text": "Recent policy changes have improved efficiency Wilson, 2023.",
           "errors": [
-            {"text": "R.S.C. 1985", "position": 6, "correction": "R.S.C., 1985", "reason": "Missing comma after R.S.C."}
+            {"text": "efficiency Wilson", "position": 6, "correction": "efficiency (Wilson, 2023)", "reason": "Citation should be enclosed in parentheses"}
           ],
-          "rationale": "Legal citations require proper punctuation: R.S.C., 1985 (with comma).",
+          "rationale": "In-text citations should be properly formatted within parentheses.",
           "ref": "§9.04"
         },
         {
           "id": "cit-05",
           "type": "mcq",
-          "stem": "What information is essential for citing online government sources?",
+          "stem": "What information must be included when citing a direct quotation?",
           "options": [
-            {"label": "Only the URL", "correct": false},
-            {"label": "Author, title, date, URL, and access date", "correct": true},
-            {"label": "Just the website name", "correct": false},
-            {"label": "Only the publication date", "correct": false}
+            {"label": "Only author and year", "correct": false},
+            {"label": "Author, year, and page number", "correct": true},
+            {"label": "Only the page number", "correct": false},
+            {"label": "Author and title only", "correct": false}
           ],
-          "rationale": "Online government sources require complete citation information including access dates due to frequent changes.",
+          "rationale": "Direct quotations require complete citation information including specific page numbers.",
           "ref": "§9.04"
         }
       ]
     },
     "indexes": {
       "id": "indexes-quiz",
-      "title": "Indexes and Information Access",
+      "title": "Index Construction",
       "questions": [
         {
           "id": "idx-01",
           "type": "mcq",
           "stem": "What is the primary purpose of an index?",
           "options": [
-            {"label": "To list all the sources used", "correct": false},
-            {"label": "To provide alphabetical access to topics and concepts", "correct": true},
-            {"label": "To summarize the document", "correct": false},
-            {"label": "To replace the table of contents", "correct": false}
+            {"label": "To list all words in a document", "correct": false},
+            {"label": "To provide an alphabetical guide to significant content", "correct": true},
+            {"label": "To replace the table of contents", "correct": false},
+            {"label": "To show the document's structure", "correct": false}
           ],
-          "rationale": "Indexes provide alphabetical access to topics, names, and concepts within a document.",
+          "rationale": "An index provides alphabetical access to significant names, places, and subjects in a document.",
           "ref": "§9.05"
         },
         {
           "id": "idx-02",
-          "type": "fill-blank",
-          "stem": "Complete this index entry: Government departments __________ Environment and Climate Change Canada, 34 __________ Health Canada, 56, 78",
-          "blanks": [
-            {"id": "blank1", "answer": ["\\n    ", "newline and indent"], "position": 1},
-            {"id": "blank2", "answer": ["\\n    ", "newline and indent"], "position": 2}
+          "type": "mcq",
+          "stem": "How should personal names be listed in an index?",
+          "options": [
+            {"label": "First name, last name", "correct": false},
+            {"label": "Last name, first name", "correct": true},
+            {"label": "By title or position", "correct": false},
+            {"label": "Alphabetically by first name", "correct": false}
           ],
-          "rationale": "Subentries in indexes are indented under main entries to show hierarchy.",
+          "rationale": "Personal names are indexed by surname: 'Smith, John' not 'John Smith.'",
           "ref": "§9.05"
         },
         {
           "id": "idx-03",
-          "type": "matching",
-          "stem": "Match the index entry type with its example:",
-          "pairs": [
-            {"left": "Simple entry", "right": "Budget, 15, 23, 67-72"},
-            {"left": "Entry with subentries", "right": "Government departments [with indented list]"},
-            {"left": "Cross-reference", "right": "EI. See Employment insurance"},
-            {"left": "'See also' reference", "right": "Public servants. See also Civil service"}
+          "type": "error-spot",
+          "stem": "Find the formatting error in this index entry:",
+          "text": "Government departments\nFinance, 23, 45-47\nHealth, 67, 89\nTransport, 102-105",
+          "errors": [
+            {"text": "Finance, 23, 45-47", "position": 2, "correction": "    Finance, 23, 45-47", "reason": "Subentries should be indented"}
           ],
-          "rationale": "Different types of index entries serve different organizational purposes.",
+          "rationale": "Index subentries must be properly indented to show hierarchy.",
           "ref": "§9.05"
         },
         {
           "id": "idx-04",
-          "type": "mcq",
-          "stem": "How should page ranges be shown in index entries?",
-          "options": [
-            {"label": "23, 24, 25, 26, 27", "correct": false},
-            {"label": "23-27", "correct": true},
-            {"label": "23 to 27", "correct": false},
-            {"label": "pp. 23-27", "correct": false}
-          ],
-          "rationale": "Page ranges in indexes use hyphens: 23-27, not individual page numbers or 'pp.' abbreviations.",
+          "type": "fill-blank",
+          "stem": "For page ranges in an index, use ________ to connect the numbers.",
+          "answer": "hyphens",
+          "alternatives": ["dashes", "en dashes"],
+          "rationale": "Page ranges use hyphens or en dashes: '45-47' not '45 to 47.'",
           "ref": "§9.05"
         },
         {
           "id": "idx-05",
-          "type": "error-spot",
-          "stem": "Click on the alphabetization error in this index:",
-          "text": "Employment insurance, 45\nEnvironment protection, 67\nEI benefits, 23\nHealth services, 89",
-          "errors": [
-            {"text": "EI benefits, 23", "position": 3, "correction": "Move to proper alphabetical position", "reason": "EI should be alphabetized as 'Employment Insurance' and placed appropriately"}
+          "type": "mcq",
+          "stem": "What type of cross-reference directs readers from a non-preferred term?",
+          "options": [
+            {"label": "See also", "correct": false},
+            {"label": "See", "correct": true},
+            {"label": "Compare", "correct": false},
+            {"label": "Refer to", "correct": false}
           ],
-          "rationale": "Abbreviations should be alphabetized as if spelled out or cross-referenced to the full form.",
+          "rationale": "'See' references direct from non-preferred terms to preferred terms.",
           "ref": "§9.05"
         }
       ]
     },
     "electronic-sources": {
       "id": "electronic-sources-quiz",
-      "title": "Electronic Sources and Digital Citation",
+      "title": "Electronic and Digital Sources",
       "questions": [
         {
-          "id": "es-01",
+          "id": "elec-01",
           "type": "mcq",
-          "stem": "Why are access dates important for electronic sources?",
+          "stem": "What essential element should be included for all online sources?",
           "options": [
-            {"label": "They show when the document was created", "correct": false},
-            {"label": "Electronic sources can change or disappear without notice", "correct": true},
-            {"label": "They are required by copyright law", "correct": false},
-            {"label": "They help with alphabetical sorting", "correct": false}
+            {"label": "The web browser used", "correct": false},
+            {"label": "The complete URL", "correct": true},
+            {"label": "The computer's IP address", "correct": false},
+            {"label": "The internet service provider", "correct": false}
           ],
-          "rationale": "Access dates are crucial because electronic sources can be updated, moved, or removed without notice.",
+          "rationale": "Complete URLs are essential for readers to locate online sources.",
           "ref": "§9.06"
         },
         {
-          "id": "es-02",
+          "id": "elec-02",
           "type": "fill-blank",
-          "stem": "Complete this electronic source citation: Health Canada. \"Vaccine Safety.\" Canada.ca. Last modified March 5, 2024. __________ March 10, 2024. __________.",
-          "blanks": [
-            {"id": "blank1", "answer": ["Accessed"], "position": 1},
-            {"id": "blank2", "answer": ["https://www.canada.ca/en/health-canada/services/vaccine-safety.html", "URL"], "position": 2}
-          ],
-          "rationale": "Electronic citations need access dates and complete URLs for verification.",
+          "stem": "For online sources that may change, include the ________ date when you accessed the information.",
+          "answer": "access",
+          "alternatives": ["retrieval", "viewed"],
+          "rationale": "Access or retrieval dates help verify the version of online content used.",
           "ref": "§9.06"
         },
         {
-          "id": "es-03",
-          "type": "matching",
-          "stem": "Match the electronic source type with citation considerations:",
-          "pairs": [
-            {"left": "Government website", "right": "May change during website updates"},
-            {"left": "PDF document", "right": "Note file format and version"},
-            {"left": "Social media", "right": "Include timestamp and platform"},
-            {"left": "Database source", "right": "Include database name and access method"}
-          ],
-          "rationale": "Different electronic sources have specific citation requirements and challenges.",
-          "ref": "§9.06"
-        },
-        {
-          "id": "es-04",
+          "id": "elec-03",
           "type": "error-spot",
-          "stem": "Click on the incomplete element in this electronic citation:",
-          "text": "Statistics Canada. \"Labour Force Survey, February 2024.\" The Daily. March 8, 2024. https://www150.statcan.gc.ca/n1/daily-quotidien/240308/dq240308a-eng.htm.",
+          "stem": "Find the missing element in this electronic source citation:",
+          "text": "Johnson, Mary. \"New Economic Policies Announced.\" CBC News. https://www.cbc.ca/news/politics/economic-policies.",
           "errors": [
-            {"text": "https://www150.statcan.gc.ca/n1/daily-quotidien/240308/dq240308a-eng.htm.", "position": 11, "correction": "Accessed [date]. https://www150.statcan.gc.ca/n1/daily-quotidien/240308/dq240308a-eng.htm", "reason": "Missing access date before URL"}
+            {"text": "https://www.cbc.ca/news/politics/economic-policies.", "position": 5, "correction": "June 10, 2023. https://www.cbc.ca/news/politics/economic-policies.", "reason": "Missing publication date"}
           ],
-          "rationale": "Electronic source citations must include the date when the source was accessed.",
+          "rationale": "Electronic sources need publication dates when available.",
           "ref": "§9.06"
         },
         {
-          "id": "es-05",
+          "id": "elec-04",
           "type": "mcq",
-          "stem": "What is the best practice for ensuring long-term access to electronic sources?",
+          "stem": "What is a DOI in academic citations?",
           "options": [
-            {"label": "Only cite printed versions", "correct": false},
-            {"label": "Use permalink URLs and consider web archiving", "correct": true},
-            {"label": "Avoid citing electronic sources", "correct": false},
-            {"label": "Only cite government sources", "correct": false}
+            {"label": "Date of Issue", "correct": false},
+            {"label": "Digital Object Identifier", "correct": true},
+            {"label": "Department of Information", "correct": false},
+            {"label": "Document Organization Index", "correct": false}
           ],
-          "rationale": "Permanent URLs and web archives help ensure long-term access to electronic sources.",
+          "rationale": "DOI (Digital Object Identifier) provides a permanent link to academic sources.",
+          "ref": "§9.06"
+        },
+        {
+          "id": "elec-05",
+          "type": "mcq",
+          "stem": "How should PDF documents be identified in citations?",
+          "options": [
+            {"label": "No special notation needed", "correct": false},
+            {"label": "Add 'PDF file' after the title", "correct": true},
+            {"label": "Include file size information", "correct": false},
+            {"label": "Mention the PDF reader used", "correct": false}
+          ],
+          "rationale": "PDF documents should be identified as 'PDF file' to clarify the format.",
           "ref": "§9.06"
         }
       ]
+    },
+    "legal-references": {
+      "id": "legal-references-quiz",
+      "title": "Legal Reference Formatting",
+      "questions": [
+        {
+          "id": "legal-01",
+          "type": "mcq",
+          "stem": "How should federal statutes be cited?",
+          "options": [
+            {"label": "Title, year, chapter number", "correct": true},
+            {"label": "Only the title and year", "correct": false},
+            {"label": "Author, title, publisher", "correct": false},
+            {"label": "Title, court, year", "correct": false}
+          ],
+          "rationale": "Federal statutes require title, year, and chapter number for proper identification.",
+          "ref": "§9.07"
+        },
+        {
+          "id": "legal-02",
+          "type": "fill-blank",
+          "stem": "Court cases should include the case name, ________, court, and year.",
+          "answer": "citation",
+          "alternatives": ["cite", "reference"],
+          "rationale": "Legal citations must include the official citation to locate the case in law reports.",
+          "ref": "§9.07"
+        },
+        {
+          "id": "legal-03",
+          "type": "error-spot",
+          "stem": "Find the error in this legal citation:",
+          "text": "R. v. Oakes, 1986 1 S.C.R. 103.",
+          "errors": [
+            {"text": "1986 1 S.C.R. 103", "position": 3, "correction": "[1986] 1 S.C.R. 103", "reason": "Year should be in square brackets for court citation format"}
+          ],
+          "rationale": "Supreme Court citations use square brackets around the year.",
+          "ref": "§9.07"
+        },
+        {
+          "id": "legal-04",
+          "type": "mcq",
+          "stem": "What information is essential for citing regulations?",
+          "options": [
+            {"label": "Title and regulation number", "correct": true},
+            {"label": "Only the title", "correct": false},
+            {"label": "Author and title", "correct": false},
+            {"label": "Title and page numbers", "correct": false}
+          ],
+          "rationale": "Regulations require both title and regulation number for proper citation.",
+          "ref": "§9.07"
+        },
+        {
+          "id": "legal-05",
+          "type": "mcq",
+          "stem": "Why is it important to verify the current status of cited laws?",
+          "options": [
+            {"label": "Laws never change", "correct": false},
+            {"label": "To ensure they haven't been repealed or amended", "correct": true},
+            {"label": "For copyright purposes", "correct": false},
+            {"label": "To find the original author", "correct": false}
+          ],
+          "rationale": "Laws can be repealed, amended, or struck down, so current status must be verified.",
+          "ref": "§9.07"
+        }
+      ]
+    },
+    "advanced-indexing": {
+      "id": "advanced-indexing-quiz",
+      "title": "Advanced Indexing Techniques",
+      "questions": [
+        {
+          "id": "adv-01",
+          "type": "mcq",
+          "stem": "How many levels of entries should an index typically have?",
+          "options": [
+            {"label": "Only main entries", "correct": false},
+            {"label": "Two levels maximum", "correct": false},
+            {"label": "Three levels maximum for most indexes", "correct": true},
+            {"label": "Unlimited levels", "correct": false}
+          ],
+          "rationale": "Most indexes work best with main entries, subentries, and occasional sub-subentries (3 levels).",
+          "ref": "§9.08"
+        },
+        {
+          "id": "adv-02",
+          "type": "fill-blank",
+          "stem": "Use '________ also' references to guide readers to related topics.",
+          "answer": "See",
+          "alternatives": ["see"],
+          "rationale": "'See also' references connect related topics and improve index navigation.",
+          "ref": "§9.08"
+        },
+        {
+          "id": "adv-03",
+          "type": "mcq",
+          "stem": "How should significant discussions be marked in an index?",
+          "options": [
+            {"label": "With asterisks", "correct": false},
+            {"label": "With bold page numbers", "correct": true},
+            {"label": "With capital letters", "correct": false},
+            {"label": "With underlining", "correct": false}
+          ],
+          "rationale": "Bold page numbers indicate where topics receive significant discussion.",
+          "ref": "§9.08"
+        },
+        {
+          "id": "adv-04",
+          "type": "error-spot",
+          "stem": "Find the cross-reference error:",
+          "text": "Budget. See also Fiscal policy; Government spending\nFiscal policy, 23, 45-47\nGovernment spending, 89-91",
+          "errors": [
+            {"text": "Government spending, 89-91", "position": 3, "correction": "Government spending. See Budget", "reason": "Should cross-reference to Budget since it's mentioned in Budget's 'See also'"}
+          ],
+          "rationale": "Cross-references should be reciprocal when appropriate.",
+          "ref": "§9.08"
+        },
+        {
+          "id": "adv-05",
+          "type": "mcq",
+          "stem": "What should be checked during index quality control?",
+          "options": [
+            {"label": "Alphabetical order only", "correct": false},
+            {"label": "Page numbers only", "correct": false},
+            {"label": "Order, page numbers, and cross-references", "correct": true},
+            {"label": "Only the main entries", "correct": false}
+          ],
+          "rationale": "Quality control must verify alphabetical order, page number accuracy, and cross-reference validity.",
+          "ref": "§9.08"
+        }
+      ]
     }
-  },
-  "metadata": {
-    "totalQuestions": 25,
-    "questionTypes": ["mcq", "fill-blank", "matching", "error-spot"],
-    "difficulty": "intermediate",
-    "timeEstimate": "35-45 minutes",
-    "passingScore": 80
   }
 }
