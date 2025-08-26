@@ -4,138 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appendix A: French Words in English Text - The Canadian Style</title>
-    <link rel="stylesheet" href="../shared/css/styles.css">
-    <style>
-        .french-word-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .french-word {
-            font-style: italic;
-            font-weight: bold;
-            color: #0066cc;
-            font-size: 1.1rem;
-        }
-        .pronunciation {
-            color: #666;
-            font-family: 'Courier New', monospace;
-            margin: 0.5rem 0;
-        }
-        .word-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .category-section {
-            background: #f8f9fa;
-            border-left: 4px solid #0066cc;
-            padding: 2rem;
-            margin: 2rem 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .category-section h3 {
-            color: #0066cc;
-            margin: 0 0 1.5rem 0;
-        }
-        .accent-guide {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .accent-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        .accent-example {
-            background: white;
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .accent-mark {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #856404;
-        }
-        .bilingual-examples {
-            background: #e3f2fd;
-            border: 1px solid #90caf9;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .usage-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            background: white;
-        }
-        .usage-table th,
-        .usage-table td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .usage-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        .usage-table .french {
-            font-style: italic;
-            color: #0066cc;
-        }
-        .plural-forms {
-            background: #f0f8ff;
-            border: 1px solid #b3d9ff;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-home">
-                <span class="nav-icon">📚</span>
-                The Canadian Style
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
+            </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Appendix A
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">A</div>
+                <div class="chapter-info">
+                    <h1>French Words in English Text</h1>
+                    <p>Guidelines for incorporating French words, phrases, and expressions in Canadian English documents</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link active" data-section="introduction">A.01 Introduction</a>
+                <a href="#general-principles" class="tab-link" data-section="general-principles">A.02 General Principles</a>
+                <a href="#italicization" class="tab-link" data-section="italicization">A.03 Italicization</a>
+                <a href="#accent-marks" class="tab-link" data-section="accent-marks">A.04 Accent Marks</a>
+                <a href="#plural-forms" class="tab-link" data-section="plural-forms">A.05 Plural Forms</a>
+                <a href="#capitalization" class="tab-link" data-section="capitalization">A.06 Capitalization</a>
+                <a href="#common-examples" class="tab-link" data-section="common-examples">A.07 Common Examples</a>
+                <a href="#decision-guide" class="tab-link" data-section="decision-guide">A.08 Decision Guide</a>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
+    <main class="chapter-content">
         <div class="container">
-            <div class="chapter-header">
-                <div class="chapter-meta">
-                    <span class="chapter-number">Appendix A</span>
-                    <span class="chapter-category">Reference</span>
-                </div>
-                <h1>French Words in English Text</h1>
-                <p class="chapter-description">Guidelines for incorporating French words, phrases, and expressions in Canadian English documents.</p>
-            </div>
-
-            <div class="content-section">
+            <!-- Section A.01: Introduction -->
+            <section class="content-section active" id="introduction">
                 <div class="section-header">
-                    <h2>Introduction</h2>
+                    <h2>A.01 Introduction</h2>
                 </div>
                 
                 <div class="lesson-content">
                     <p>As Canada's official languages are English and French, Canadian English frequently incorporates French words and phrases. This appendix provides guidance on proper usage, spelling, and presentation of French expressions in English documents.</p>
                     
-                    <div class="key-principles">
-                        <h3>General Principles</h3>
+                    <div class="rule-box">
+                        <h3>Key Principles</h3>
                         <ul>
                             <li><strong>Italics:</strong> Use italics for French words not fully adopted into English</li>
                             <li><strong>Accents:</strong> Retain French accent marks when they appear in the source language</li>
@@ -144,255 +74,192 @@
                             <li><strong>Consistency:</strong> Apply formatting rules consistently throughout documents</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <div class="section-header">
-                    <h2>Accent Marks and Special Characters</h2>
+                    
+                    <div class="examples-box">
+                        <h4>Canadian Bilingual Context</h4>
+                        <div class="example-item good">
+                            <p>Canadian government documents frequently use French terms like <em>vis-à-vis</em>, <em>raison d'être</em>, and place names like Québec, Montréal.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="accent-guide">
-                    <h3>🔤 French Accent Marks</h3>
-                    <p>Retain accent marks when they appear in French words. Here are the common accent marks and their usage:</p>
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('introduction')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section A.02: General Principles -->
+            <section class="content-section" id="general-principles">
+                <div class="section-header">
+                    <h2>A.02 General Principles</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>The integration of French words into English text follows specific principles that balance accuracy with readability.</p>
                     
-                    <div class="accent-examples">
-                        <div class="accent-example">
-                            <div class="accent-mark">é</div>
-                            <p><strong>Acute accent</strong><br>(accent aigu)</p>
-                            <p>café, communiqué, résumé</p>
+                    <div class="rule-box">
+                        <h3>Integration Guidelines</h3>
+                        <ul>
+                            <li><strong>Dictionary check:</strong> Consult English dictionaries for adoption status</li>
+                            <li><strong>Audience consideration:</strong> Consider readers' familiarity with French</li>
+                            <li><strong>Consistency:</strong> Use same treatment throughout document</li>
+                            <li><strong>Explanation:</strong> Define unfamiliar terms on first use</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Levels of Integration</h4>
+                        <div class="example-item good">
+                            <p><strong>Fully adopted:</strong> café, garage, boutique (no italics needed)</p>
                         </div>
-                        <div class="accent-example">
-                            <div class="accent-mark">è</div>
-                            <p><strong>Grave accent</strong><br>(accent grave)</p>
-                            <p>après, première, derrière</p>
+                        <div class="example-item good">
+                            <p><strong>Partially adopted:</strong> <em>avant-garde</em>, <em>liaison</em> (italics recommended)</p>
                         </div>
-                        <div class="accent-example">
-                            <div class="accent-mark">ê</div>
-                            <p><strong>Circumflex</strong><br>(accent circonflexe)</p>
-                            <p>tête-à-tête, raison d'être</p>
+                        <div class="example-item good">
+                            <p><strong>Not adopted:</strong> <em>raison d'être</em>, <em>savoir-vivre</em> (italics required)</p>
                         </div>
-                        <div class="accent-example">
-                            <div class="accent-mark">ç</div>
-                            <p><strong>Cedilla</strong><br>(cédille)</p>
-                            <p>français, façade, soupçon</p>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-general-principles"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('general-principles')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section A.03: Italicization -->
+            <section class="content-section" id="italicization">
+                <div class="section-header">
+                    <h2>A.03 Italicization Rules</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Italicization helps readers identify French words and understand their special status in English text.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Always Italicize</h3>
+                        <ul>
+                            <li><strong>Unfamiliar phrases:</strong> <em>raison d'être</em>, <em>coup de grâce</em></li>
+                            <li><strong>Technical terms:</strong> <em>mise en scène</em>, <em>tête-à-tête</em></li>
+                            <li><strong>Complete sentences:</strong> Direct quotations in French</li>
+                            <li><strong>First occurrence:</strong> When introducing French terms</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Don't Italicize</h3>
+                        <ul>
+                            <li><strong>Common borrowed words:</strong> café, depot, elite</li>
+                            <li><strong>Place names:</strong> Montreal, Quebec, Vancouver</li>
+                            <li><strong>Proper nouns:</strong> Names of people, organizations</li>
+                            <li><strong>Well-established terms:</strong> à la carte, rendez-vous</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Italicization Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct:</strong> The exhibition featured <em>avant-garde</em> Canadian artists.</p>
                         </div>
-                        <div class="accent-example">
-                            <div class="accent-mark">ü</div>
-                            <p><strong>Diaeresis</strong><br>(tréma)</p>
-                            <p>naïve, coïncidence</p>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct:</strong> We met at the local café for lunch.</p>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>✗ Incorrect:</strong> We met at the local <em>café</em> for lunch.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-italicization"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('italicization')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section A.04: Accent Marks -->
+            <section class="content-section" id="accent-marks">
+                <div class="section-header">
+                    <h2>A.04 Accent Marks</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>French accent marks should be retained in English text to maintain accuracy and respect for the source language.</p>
+                    
+                    <div class="rule-box">
+                        <h3>French Accent Marks</h3>
+                        <ul>
+                            <li><strong>Acute accent (é):</strong> café, résumé, cliché</li>
+                            <li><strong>Grave accent (è, à, ù):</strong> très, à la carte, où</li>
+                            <li><strong>Circumflex (ê, î, ô, û, â):</strong> crêpe, maître d'hôtel</li>
+                            <li><strong>Diaeresis (ë, ï):</strong> naïve, Noël</li>
+                            <li><strong>Cedilla (ç):</strong> français, façade</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Accent Usage Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>✓ Retain accents:</strong> The <em>résumé</em> was très impressive.</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>✓ Place names:</strong> The conference was held in Québec.</p>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>✗ Don't drop accents:</strong> The resume was tres impressive.</p>
                         </div>
                     </div>
                     
-                    <div class="tip-box">
-                        <h4>💡 Technical Note</h4>
-                        <p>When typing French accents:</p>
+                    <div class="rule-box">
+                        <h3>Technical Considerations</h3>
                         <ul>
-                            <li><strong>Windows:</strong> Use Alt codes or Character Map</li>
-                            <li><strong>Mac:</strong> Use Option key combinations</li>
-                            <li><strong>Web/HTML:</strong> Use HTML entities (&eacute;, &egrave;, etc.)</li>
-                            <li><strong>Microsoft Word:</strong> Insert > Symbol or use keyboard shortcuts</li>
+                            <li><strong>Word processing:</strong> Use proper Unicode characters</li>
+                            <li><strong>Web content:</strong> Ensure proper character encoding</li>
+                            <li><strong>Email:</strong> Test accent display in different systems</li>
+                            <li><strong>Print:</strong> Verify accent marks appear correctly</li>
                         </ul>
                     </div>
                 </div>
-            </div>
+                
+                <div class="quiz-panel" id="quiz-accent-marks"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('accent-marks')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-            <div class="content-section">
+            <!-- Section A.05: Plural Forms -->
+            <section class="content-section" id="plural-forms">
                 <div class="section-header">
-                    <h2>Common French Expressions</h2>
+                    <h2>A.05 Plural Forms</h2>
                 </div>
                 
-                <div class="category-section">
-                    <h3>🏛️ Government and Legal Terms</h3>
-                    <div class="word-grid">
-                        <div class="french-word-card">
-                            <div class="french-word">communiqué</div>
-                            <div class="pronunciation">[kə-ˌmyün-ə-ˈkā]</div>
-                            <p><strong>Meaning:</strong> Official communication or press release</p>
-                            <p><strong>Usage:</strong> The ministry issued a <em>communiqué</em> regarding the new policy.</p>
-                            <p><strong>Plural:</strong> communiqués</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">détente</div>
-                            <div class="pronunciation">[dā-ˈtänt]</div>
-                            <p><strong>Meaning:</strong> Relaxation of tensions between countries</p>
-                            <p><strong>Usage:</strong> The <em>détente</em> between the two nations improved trade relations.</p>
-                            <p><strong>Note:</strong> Often used without italics in political contexts</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">laissez-faire</div>
-                            <div class="pronunciation">[ˌles-ā-ˈfer]</div>
-                            <p><strong>Meaning:</strong> Policy of non-interference, especially in economic affairs</p>
-                            <p><strong>Usage:</strong> The government adopted a <em>laissez-faire</em> approach to the market.</p>
-                            <p><strong>Note:</strong> Hyphenated, often not italicized in economic texts</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">raison d'être</div>
-                            <div class="pronunciation">[ˌrā-ˌzōⁿ-ˈde-trə]</div>
-                            <p><strong>Meaning:</strong> Reason for existence; fundamental purpose</p>
-                            <p><strong>Usage:</strong> Public service is the <em>raison d'être</em> of government agencies.</p>
-                            <p><strong>Note:</strong> Always italicized, apostrophe retained</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="category-section">
-                    <h3>🎨 Arts and Culture</h3>
-                    <div class="word-grid">
-                        <div class="french-word-card">
-                            <div class="french-word">avant-garde</div>
-                            <div class="pronunciation">[ˌä-vəⁿ-ˈgärd]</div>
-                            <p><strong>Meaning:</strong> Innovative, experimental, ahead of its time</p>
-                            <p><strong>Usage:</strong> The museum featured <em>avant-garde</em> Canadian artists.</p>
-                            <p><strong>Note:</strong> Hyphenated, sometimes not italicized when well-established</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">connoisseur</div>
-                            <div class="pronunciation">[ˌkä-nə-ˈsər]</div>
-                            <p><strong>Meaning:</strong> Expert judge in matters of taste</p>
-                            <p><strong>Usage:</strong> She is a <em>connoisseur</em> of Canadian wine.</p>
-                            <p><strong>Plural:</strong> connoisseurs</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">genre</div>
-                            <div class="pronunciation">[ˈzhäⁿ-rə]</div>
-                            <p><strong>Meaning:</strong> Category of artistic work</p>
-                            <p><strong>Usage:</strong> The festival showcases every <em>genre</em> of music.</p>
-                            <p><strong>Note:</strong> Fully adopted into English, rarely italicized</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">repertoire</div>
-                            <div class="pronunciation">[ˈre-pər-ˌtwär]</div>
-                            <p><strong>Meaning:</strong> Stock of skills, techniques, or works</p>
-                            <p><strong>Usage:</strong> The company's <em>repertoire</em> includes classical and contemporary works.</p>
-                            <p><strong>Note:</strong> Usually not italicized, well-established in English</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="category-section">
-                    <h3>🍽️ Cuisine and Hospitality</h3>
-                    <div class="word-grid">
-                        <div class="french-word-card">
-                            <div class="french-word">hors d'oeuvres</div>
-                            <div class="pronunciation">[ȯr-ˈdərv]</div>
-                            <p><strong>Meaning:</strong> Appetizers served before a meal</p>
-                            <p><strong>Usage:</strong> The reception featured Canadian <em>hors d'oeuvres</em>.</p>
-                            <p><strong>Note:</strong> Apostrophe retained, always plural</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">entrée</div>
-                            <div class="pronunciation">[ˈän-ˌtrā]</div>
-                            <p><strong>Meaning:</strong> Main course (North American usage)</p>
-                            <p><strong>Usage:</strong> The <em>entrée</em> featured local Canadian beef.</p>
-                            <p><strong>Note:</strong> Accent retained, meaning differs from French usage</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">café</div>
-                            <div class="pronunciation">[ka-ˈfā]</div>
-                            <p><strong>Meaning:</strong> Coffee house or small restaurant</p>
-                            <p><strong>Usage:</strong> The government <em>café</em> serves local products.</p>
-                            <p><strong>Note:</strong> Accent usually retained, rarely italicized</p>
-                        </div>
-                        
-                        <div class="french-word-card">
-                            <div class="french-word">sommelier</div>
-                            <div class="pronunciation">[ˌsäm-əl-ˈyā]</div>
-                            <p><strong>Meaning:</strong> Wine steward or expert</p>
-                            <p><strong>Usage:</strong> The hotel's <em>sommelier</em> specializes in Canadian wines.</p>
-                            <p><strong>Plural:</strong> sommeliers</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <div class="section-header">
-                    <h2>Usage Guidelines</h2>
-                </div>
-                
-                <div class="bilingual-examples">
-                    <h3>🍁 Canadian Context Guidelines</h3>
-                    <p>In Canadian government documents, consider these special cases:</p>
+                <div class="lesson-content">
+                    <p>French words in English text may follow either French or English pluralization rules, depending on their level of integration.</p>
                     
-                    <table class="usage-table">
-                        <thead>
-                            <tr>
-                                <th>French Term</th>
-                                <th>English Context</th>
-                                <th>Usage Notes</th>
-                                <th>Example</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="french">vis-à-vis</td>
-                                <td>In relation to, regarding</td>
-                                <td>Common in policy documents</td>
-                                <td>The department's position <em>vis-à-vis</em> the new regulations</td>
-                            </tr>
-                            <tr>
-                                <td class="french">fait accompli</td>
-                                <td>Accomplished fact</td>
-                                <td>Italicized in formal writing</td>
-                                <td>The decision was presented as a <em>fait accompli</em></td>
-                            </tr>
-                            <tr>
-                                <td class="french">coup de grâce</td>
-                                <td>Final blow, finishing stroke</td>
-                                <td>Retain all accents</td>
-                                <td>The budget cuts were the <em>coup de grâce</em> for the program</td>
-                            </tr>
-                            <tr>
-                                <td class="french">tour de force</td>
-                                <td>Masterful achievement</td>
-                                <td>Usually italicized</td>
-                                <td>The report was a <em>tour de force</em> of policy analysis</td>
-                            </tr>
-                            <tr>
-                                <td class="french">sine qua non</td>
-                                <td>Essential condition</td>
-                                <td>Latin, but follows similar rules</td>
-                                <td>Public consultation is the <em>sine qua non</em> of good governance</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                
-                <div class="plural-forms">
-                    <h3>📝 Plural Formation Rules</h3>
-                    
-                    <div class="rule-section">
-                        <h4>French Words Maintaining French Plurals</h4>
+                    <div class="rule-box">
+                        <h3>French Plurals</h3>
+                        <p>Use French plural forms for words not fully adopted into English:</p>
                         <ul>
-                            <li><strong>Words ending in -eau:</strong> Add -x (tableau → tableaux)</li>
-                            <li><strong>Words ending in -eu:</strong> Add -x (milieu → milieux)</li>
-                            <li><strong>Some words ending in -s:</strong> No change (corps → corps)</li>
+                            <li><strong>-eau → -eaux:</strong> bureau → <em>bureaux</em></li>
+                            <li><strong>-eu → -eux:</strong> adieu → <em>adieux</em></li>
+                            <li><strong>-al → -aux:</strong> journal → <em>journaux</em></li>
+                            <li><strong>Silent -s:</strong> corps → <em>corps</em> (same form)</li>
                         </ul>
-                        
-                        <div class="examples-box">
-                            <div class="example-item good">
-                                <p><strong>Examples:</strong></p>
-                                <ul>
-                                    <li>One <em>bureau</em>, two <em>bureaux</em></li>
-                                    <li>One <em>chateau</em>, several <em>chateaux</em></li>
-                                    <li>One <em>adieu</em>, many <em>adieux</em></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                     
-                    <div class="rule-section">
-                        <h4>French Words Using English Plurals</h4>
-                        <p>Words fully adopted into English typically use English plural forms:</p>
+                    <div class="rule-box">
+                        <h3>English Plurals</h3>
+                        <p>Use English plural forms for adopted words:</p>
                         <ul>
                             <li>restaurant → restaurants</li>
                             <li>garage → garages</li>
@@ -400,99 +267,150 @@
                             <li>technique → techniques</li>
                         </ul>
                     </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <div class="section-header">
-                    <h2>Style and Formatting Guidelines</h2>
+                    
+                    <div class="examples-box">
+                        <h4>Plural Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>French plural:</strong> Several <em>bureaux</em> were involved in the decision.</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>English plural:</strong> The restaurants in Ottawa offer diverse cuisine.</p>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="formatting-rules">
-                    <h3>🎯 When to Use Italics</h3>
+                <div class="quiz-panel" id="quiz-plural-forms"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('plural-forms')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section A.06: Capitalization -->
+            <section class="content-section" id="capitalization">
+                <div class="section-header">
+                    <h2>A.06 Capitalization</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>French capitalization rules differ from English and should be maintained when using French text within English documents.</p>
                     
                     <div class="rule-box">
-                        <h4>Always Italicize:</h4>
+                        <h3>French Title Capitalization</h3>
                         <ul>
-                            <li>French phrases not fully adopted into English</li>
-                            <li>Complete French sentences or quotations</li>
-                            <li>Technical terms from French that remain foreign</li>
-                            <li>Phrases with French syntax (raison d'être, coup de grâce)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h4>Usually Don't Italicize:</h4>
-                        <ul>
-                            <li>Words fully adopted into English (cafe, depot, elite)</li>
-                            <li>French words appearing in major English dictionaries</li>
-                            <li>Common culinary terms (menu, restaurant, cuisine)</li>
-                            <li>Business or academic terms in common use</li>
+                            <li><strong>Only first word:</strong> Capitalize only the first word and proper nouns</li>
+                            <li><strong>Proper nouns:</strong> Names of people, places, organizations</li>
+                            <li><strong>After colon:</strong> Capitalize word after colon if it starts new sentence</li>
+                            <li><strong>Articles:</strong> Don't capitalize articles, prepositions (except when first word)</li>
                         </ul>
                     </div>
                     
                     <div class="examples-box">
-                        <h4>Comparison Examples</h4>
+                        <h4>Capitalization Examples</h4>
                         <div class="example-item good">
-                            <p><strong>Italicized:</strong> The policy represents a significant <em>volte-face</em> from the previous approach.</p>
+                            <p><strong>French title:</strong> <em>Le guide du rédacteur</em></p>
                         </div>
                         <div class="example-item good">
-                            <p><strong>Not italicized:</strong> The restaurant features authentic French cuisine.</p>
+                            <p><strong>English equivalent:</strong> <em>The Writer's Guide</em></p>
                         </div>
                         <div class="example-item good">
-                            <p><strong>Italicized:</strong> The minister's response was a diplomatic <em>fin de non-recevoir</em>.</p>
+                            <p><strong>Place names:</strong> Rivière-du-Loup, Sault Ste. Marie</p>
                         </div>
-                        <div class="example-item good">
-                            <p><strong>Not italicized:</strong> The elite group of advisors met weekly.</p>
-                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Direction Words</h3>
+                        <p>Capitalize French direction words when part of proper names:</p>
+                        <ul>
+                            <li><strong>Capitalized:</strong> Amérique du Nord, Caroline du Sud</li>
+                            <li><strong>Lowercase:</strong> 30 kilomètres à l'est de Gatineau</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="punctuation-with-french">
-                    <h3>🔤 Punctuation with French Words</h3>
-                    
-                    <div class="punctuation-rules">
-                        <h4>Capitalization</h4>
-                        <ul>
-                            <li>Capitalize French words according to English rules when used in English sentences</li>
-                            <li>Retain French capitalization in direct quotations</li>
-                            <li>Capitalize only the first word of French phrases, unless proper nouns are involved</li>
-                        </ul>
-                        
-                        <div class="examples-box">
-                            <div class="example-item good">
-                                <p><strong>✓ Correct:</strong> The <em>Assemblée nationale</em> voted on the motion.</p>
-                                <p><strong>✓ Correct:</strong> He quoted Voltaire: "<em>J'écrirai votre nom sur le sable</em>."</p>
-                            </div>
-                        </div>
-                        
-                        <h4>Punctuation Marks</h4>
-                        <ul>
-                            <li>Follow English punctuation rules when French words are integrated into English sentences</li>
-                            <li>Retain French punctuation (including spacing) in direct quotations</li>
-                            <li>Place English punctuation outside italics when possible</li>
-                        </ul>
-                        
-                        <div class="examples-box">
-                            <div class="example-item good">
-                                <p><strong>✓ Correct:</strong> The report was a <em>tour de force</em>.</p>
-                                <p><strong>✓ Correct:</strong> What is the <em>raison d'être</em> for this policy?</p>
-                                <p><strong>✓ Correct:</strong> The minister said, "<em>C'est un grand honneur</em>."</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="quiz-panel" id="quiz-capitalization"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('capitalization')">
+                        Mark Complete & Continue
+                    </button>
                 </div>
-            </div>
+            </section>
 
-            <div class="content-section">
+            <!-- Section A.07: Common Examples -->
+            <section class="content-section" id="common-examples">
                 <div class="section-header">
-                    <h2>Quick Reference Guide</h2>
+                    <h2>A.07 Common Examples</h2>
                 </div>
                 
-                <div class="quick-reference">
-                    <h3>📋 Decision Tree for French Words</h3>
+                <div class="lesson-content">
+                    <p>Here are frequently used French words and phrases in Canadian government writing with proper formatting.</p>
                     
-                    <div class="decision-tree" style="background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+                    <div class="examples-box">
+                        <h4>Government and Politics</h4>
+                        <div class="example-item good">
+                            <p><strong><em>vis-à-vis</em>:</strong> The department's position <em>vis-à-vis</em> the new regulations</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong><em>raison d'être</em>:</strong> Public service is the <em>raison d'être</em> of government agencies</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong><em>fait accompli</em>:</strong> The merger was presented as a <em>fait accompli</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Business and Culture</h4>
+                        <div class="example-item good">
+                            <p><strong>entrepreneur:</strong> The program supports young entrepreneurs</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong><em>avant-garde</em>:</strong> The museum featured <em>avant-garde</em> Canadian artists</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong><em>connoisseur</em>:</strong> She is a <em>connoisseur</em> of Canadian wine</p>
+                        </div>
+                    </div>
+                    
+                    <div class="examples-box">
+                        <h4>Common Errors to Avoid</h4>
+                        <div class="example-item bad">
+                            <p><strong>✗ Missing accents:</strong> The cafe serves excellent coffee</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct:</strong> The café serves excellent coffee</p>
+                        </div>
+                        <div class="example-item bad">
+                            <p><strong>✗ Wrong plural:</strong> Several bureaus were involved</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>✓ Correct:</strong> Several <em>bureaux</em> were involved</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-common-examples"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('common-examples')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
+
+            <!-- Section A.08: Decision Guide -->
+            <section class="content-section" id="decision-guide">
+                <div class="section-header">
+                    <h2>A.08 Decision Guide</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Use this step-by-step guide to determine how to format French words in your English documents.</p>
+                    
+                    <div class="rule-box">
+                        <h3>📋 Decision Tree for French Words</h3>
                         <ol>
                             <li><strong>Is the word in a standard English dictionary?</strong>
                                 <ul>
@@ -521,43 +439,36 @@
                         </ol>
                     </div>
                     
-                    <div class="common-errors">
-                        <h3>⚠️ Common Errors to Avoid</h3>
-                        <div class="error-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-                            <div class="error-example">
-                                <h4>❌ Dropping Accents</h4>
-                                <p><strong>Wrong:</strong> The cafe serves excellent coffee.</p>
-                                <p><strong>Right:</strong> The café serves excellent coffee.</p>
-                            </div>
-                            <div class="error-example">
-                                <h4>❌ Inconsistent Italics</h4>
-                                <p><strong>Wrong:</strong> The <em>raison d'être</em> and raison d'être of the policy...</p>
-                                <p><strong>Right:</strong> The <em>raison d'être</em> of the policy...</p>
-                            </div>
-                            <div class="error-example">
-                                <h4>❌ Wrong Plurals</h4>
-                                <p><strong>Wrong:</strong> Several bureaus were involved.</p>
-                                <p><strong>Right:</strong> Several <em>bureaux</em> were involved.</p>
-                            </div>
-                            <div class="error-example">
-                                <h4>❌ Over-italicizing</h4>
-                                <p><strong>Wrong:</strong> The <em>restaurant</em> has an excellent <em>menu</em>.</p>
-                                <p><strong>Right:</strong> The restaurant has an excellent menu.</p>
-                            </div>
+                    <div class="examples-box">
+                        <h4>Quick Reference Examples</h4>
+                        <div class="example-item good">
+                            <p><strong>Dictionary word:</strong> café, garage, boutique</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Proper noun:</strong> Québec, Jean-Baptiste, Université Laval</p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Complete phrase:</strong> <em>raison d'être</em>, <em>coup de grâce</em></p>
+                        </div>
+                        <div class="example-item good">
+                            <p><strong>Field-specific:</strong> <em>mise en scène</em> (theatre), <em>terroir</em> (wine)</p>
                         </div>
                     </div>
+                    
+                    <div class="success-box">
+                        <h4>🎉 French Words Mastery</h4>
+                        <p>You now have the tools to properly integrate French words and phrases into Canadian English documents. Remember: when in doubt, consult current dictionaries and maintain consistency throughout your document.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Navigation Controls -->
-            <div class="chapter-navigation">
-                <a href="../chapters/ch16.html" class="btn btn-outline nav-prev">
-                    ← Back to Chapter 16
-                </a>
-                <a href="../index.html" class="btn btn-outline nav-next">
-                    Back to Home →
-                </a>
-            </div>
+                
+                <div class="quiz-panel" id="quiz-decision-guide"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('decision-guide')">
+                        Complete Appendix A!
+                    </button>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -569,22 +480,24 @@
 
     <!-- JavaScript -->
     <script src="../shared/js/router.js"></script>
+    <script src="../shared/js/quiz.js"></script>
     <script src="../shared/js/progress.js"></script>
     
     <script>
-        // Simple page initialization for appendix
+        // Initialize appendix
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('French Words Appendix loaded');
+            const sections = [
+                { id: 'introduction', title: 'A.01 Introduction' },
+                { id: 'general-principles', title: 'A.02 General Principles' },
+                { id: 'italicization', title: 'A.03 Italicization' },
+                { id: 'accent-marks', title: 'A.04 Accent Marks' },
+                { id: 'plural-forms', title: 'A.05 Plural Forms' },
+                { id: 'capitalization', title: 'A.06 Capitalization' },
+                { id: 'common-examples', title: 'A.07 Common Examples' },
+                { id: 'decision-guide', title: 'A.08 Decision Guide' }
+            ];
             
-            // Add some interactive elements
-            const frenchWords = document.querySelectorAll('.french-word');
-            frenchWords.forEach(word => {
-                word.addEventListener('click', function() {
-                    const card = this.closest('.french-word-card');
-                    card.style.transform = card.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
-                    card.style.transition = 'transform 0.2s ease';
-                });
-            });
+            initializeChapter('appendix-a', sections);
         });
     </script>
 </body>
