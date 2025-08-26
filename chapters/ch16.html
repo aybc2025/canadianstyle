@@ -6,644 +6,436 @@
     <title>Chapter 16: Revision & Proofreading - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
     <link rel="stylesheet" href="../shared/css/quiz-styles.css">
-    <style>
-        .revision-level {
-            background: #f8f9fa;
-            border-left: 4px solid #0066cc;
-            padding: 1.5rem;
-            margin: 1rem 0;
-        }
-        .checklist-container {
-            background: #fff;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        .checklist-progress {
-            background: #e9ecef;
-            border-radius: 4px;
-            height: 8px;
-            margin: 1rem 0;
-            overflow: hidden;
-        }
-        .checklist-progress-bar {
-            background: #28a745;
-            height: 100%;
-            transition: width 0.3s ease;
-            width: 0%;
-        }
-        .checklist-section {
-            margin: 2rem 0;
-        }
-        .checklist-item {
-            display: flex;
-            align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f1f3f4;
-        }
-        .checklist-item:last-child {
-            border-bottom: none;
-        }
-        .checklist-item input[type="checkbox"] {
-            margin-right: 1rem;
-            transform: scale(1.2);
-        }
-        .checklist-item label {
-            cursor: pointer;
-            user-select: none;
-        }
-        .strategy-card {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-        .technique-item h5 {
-            color: #856404;
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
-        .appendix-reference {
-            background: #e8f4fd;
-            border: 1px solid #b3d9ff;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-        .gallicisms-section {
-            background: #fff8dc;
-            border-left: 4px solid #ff6b35;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-    </style>
 </head>
 <body>
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-home">
-                <span class="nav-icon">📚</span>
-                The Canadian Style
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
+            </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 16
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">16</div>
+                <div class="chapter-info">
+                    <h1>Revision & Proofreading</h1>
+                    <p>Perfect your editing and proofreading skills with comprehensive checklists and systematic approaches</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link active" data-section="introduction">16.01 Introduction</a>
+                <a href="#editing-levels" class="tab-link" data-section="editing-levels">16.02 Editing Levels</a>
+                <a href="#revision-strategies" class="tab-link" data-section="revision-strategies">16.03 Revision Strategies</a>
+                <a href="#proofreading-techniques" class="tab-link" data-section="proofreading-techniques">16.04 Proofreading Techniques</a>
+                <a href="#common-errors" class="tab-link" data-section="common-errors">16.05 Common Errors</a>
+                <a href="#technical-accuracy" class="tab-link" data-section="technical-accuracy">16.06 Technical Accuracy</a>
+                <a href="#master-checklist" class="tab-link" data-section="master-checklist">16.07 Master Checklist</a>
+                <a href="#final-review" class="tab-link" data-section="final-review">16.08 Final Review</a>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
+    <main class="chapter-content">
         <div class="container">
-            <div class="chapter-header">
-                <div class="chapter-meta">
-                    <span class="chapter-number">Chapter 16</span>
-                    <span class="chapter-category">Style & Usage</span>
+            <!-- Section 16.01: Introduction -->
+            <section class="content-section active" id="introduction">
+                <div class="section-header">
+                    <h2>16.01 Introduction</h2>
                 </div>
-                <h1>Revision & Proofreading</h1>
-                <p class="chapter-description">Perfect your editing and proofreading skills with comprehensive checklists and systematic approaches.</p>
-                <div class="chapter-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="chapterProgress"></div>
+                
+                <div class="lesson-content">
+                    <p>Effective revision and proofreading are essential for producing high-quality government documents. This systematic approach ensures accuracy, clarity, and professionalism in all written communications.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Revision Levels</h3>
+                        <ul>
+                            <li><strong>Structural Revision:</strong> Organization, flow, content completeness</li>
+                            <li><strong>Line Editing:</strong> Sentence structure, word choice, tone</li>
+                            <li><strong>Copy Editing:</strong> Grammar, punctuation, spelling, style</li>
+                            <li><strong>Proofreading:</strong> Final error detection, format verification</li>
+                        </ul>
                     </div>
-                    <span class="progress-text" id="progressText">0% Complete</span>
+                    
+                    <div class="rule-box">
+                        <h3>Key Principles</h3>
+                        <ul>
+                            <li><strong>Multiple passes:</strong> Review documents several times, focusing on different aspects each time</li>
+                            <li><strong>Time gap:</strong> Allow time between writing and revising for objectivity</li>
+                            <li><strong>Systematic approach:</strong> Use checklists to ensure comprehensive review</li>
+                            <li><strong>Purpose focus:</strong> Always consider the document's intended purpose and audience</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Navigation Tabs -->
-            <nav class="section-nav" id="sectionNav">
-                <div class="tabs-list" role="tablist">
-                    <button class="tab-link active" data-section="introduction" role="tab">16.01 Introduction</button>
-                    <button class="tab-link" data-section="editing-levels" role="tab">16.02 Editing Levels</button>
-                    <button class="tab-link" data-section="revision-strategies" role="tab">16.03 Revision Strategies</button>
-                    <button class="tab-link" data-section="proofreading-techniques" role="tab">16.04 Proofreading Techniques</button>
-                    <button class="tab-link" data-section="common-errors" role="tab">16.05 Common Errors</button>
-                    <button class="tab-link" data-section="technical-accuracy" role="tab">16.06 Technical Accuracy</button>
-                    <button class="tab-link" data-section="master-checklist" role="tab">16.07 Master Checklist</button>
-                    <button class="tab-link" data-section="final-review" role="tab">16.08 Final Review</button>
+                
+                <div class="quiz-panel" id="quiz-introduction"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('introduction')">
+                        Mark Complete & Continue
+                    </button>
                 </div>
-            </nav>
+            </section>
 
-            <div class="chapter-content">
-                <!-- Section 16.01: Introduction -->
-                <section class="content-section active" id="introduction">
-                    <div class="section-header">
-                        <h2>16.01 Introduction</h2>
+            <!-- Section 16.02: Editing Levels -->
+            <section class="content-section" id="editing-levels">
+                <div class="section-header">
+                    <h2>16.02 Levels of Editing</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Different editing levels address specific aspects of document quality. Understanding these levels helps you focus your efforts and ensure comprehensive review.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Structural Editing</h3>
+                        <p>Focus on overall organization, logic, and completeness.</p>
+                        <ul>
+                            <li>Assess document organization and flow</li>
+                            <li>Verify completeness of content</li>
+                            <li>Check logical progression of arguments</li>
+                            <li>Ensure consistency with document purpose</li>
+                            <li>Review headings and subheadings for hierarchy</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Effective revision and proofreading are essential for producing high-quality government documents. This systematic approach ensures accuracy, clarity, and professionalism in all written communications.</p>
-                        
-                        <div class="revision-levels">
-                            <div class="revision-level">
-                                <h4>🏗️ Structural Revision</h4>
-                                <ul>
-                                    <li>Organization & flow</li>
-                                    <li>Content completeness</li>
-                                    <li>Argument coherence</li>
-                                    <li>Purpose alignment</li>
-                                </ul>
-                            </div>
-                            <div class="revision-level">
-                                <h4>✏️ Line Editing</h4>
-                                <ul>
-                                    <li>Sentence structure</li>
-                                    <li>Word choice</li>
-                                    <li>Tone consistency</li>
-                                    <li>Clarity improvement</li>
-                                </ul>
-                            </div>
-                            <div class="revision-level">
-                                <h4>🔍 Copy Editing</h4>
-                                <ul>
-                                    <li>Grammar & syntax</li>
-                                    <li>Punctuation</li>
-                                    <li>Spelling</li>
-                                    <li>Style consistency</li>
-                                </ul>
-                            </div>
-                            <div class="revision-level">
-                                <h4>🎯 Proofreading</h4>
-                                <ul>
-                                    <li>Final error detection</li>
-                                    <li>Format verification</li>
-                                    <li>Layout check</li>
-                                    <li>Print quality</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="key-principles">
-                            <h3>Revision Principles</h3>
-                            <ul>
-                                <li><strong>Multiple passes:</strong> Review documents several times, focusing on different aspects each time</li>
-                                <li><strong>Time gap:</strong> Allow time between writing and revising for objectivity</li>
-                                <li><strong>Systematic approach:</strong> Use checklists to ensure comprehensive review</li>
-                                <li><strong>Purpose focus:</strong> Always consider the document's intended purpose and audience</li>
-                            </ul>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Copy Editing</h3>
+                        <p>Address grammar, punctuation, style, and language usage.</p>
+                        <ul>
+                            <li>Correct grammar and syntax errors</li>
+                            <li>Fix punctuation and capitalization</li>
+                            <li>Correct spelling and typographical errors</li>
+                            <li>Ensure consistent application of style guidelines</li>
+                            <li>Verify proper citation and reference formatting</li>
+                        </ul>
                     </div>
                     
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('introduction')">
-                            Mark Complete & Continue
-                        </button>
+                    <div class="rule-box">
+                        <h3>Proofreading</h3>
+                        <p>Final review for surface errors and formatting consistency.</p>
+                        <ul>
+                            <li>Catch remaining spelling and typographical errors</li>
+                            <li>Verify page numbers and cross-references</li>
+                            <li>Check formatting consistency (fonts, spacing, alignment)</li>
+                            <li>Review final layout and print quality</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-editing-levels"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('editing-levels')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.02: Editing Levels -->
-                <section class="content-section" id="editing-levels">
-                    <div class="section-header">
-                        <h2>16.02 Levels of Editing</h2>
+            <!-- Section 16.03: Revision Strategies -->
+            <section class="content-section" id="revision-strategies">
+                <div class="section-header">
+                    <h2>16.03 Revision Strategies</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Effective revision requires systematic approaches and proven techniques. These strategies help ensure thorough, efficient review processes.</p>
+                    
+                    <div class="rule-box">
+                        <h3>The Multi-Pass Approach</h3>
+                        <ul>
+                            <li><strong>Pass 1 - Content and Structure:</strong> Review overall organization, completeness, and logical flow</li>
+                            <li><strong>Pass 2 - Style and Clarity:</strong> Focus on sentence structure, word choice, and clarity</li>
+                            <li><strong>Pass 3 - Grammar and Mechanics:</strong> Address grammar, punctuation, spelling, and formatting</li>
+                            <li><strong>Pass 4 - Final Polish:</strong> Catch remaining errors and ensure consistency</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Different editing levels address specific aspects of document quality. Understanding these levels helps you focus your efforts and ensure comprehensive review.</p>
-                        
-                        <div class="editing-levels-detail">
-                            <div class="level-detail">
-                                <h3>📝 Structural Editing</h3>
-                                <p>Focus on overall organization, logic, and completeness.</p>
-                                
-                                <div class="level-checklist">
-                                    <h4>Structural Editing Tasks:</h4>
-                                    <ul>
-                                        <li>Assess document organization and flow</li>
-                                        <li>Verify completeness of content</li>
-                                        <li>Check logical progression of arguments</li>
-                                        <li>Ensure consistency with document purpose</li>
-                                        <li>Review headings and subheadings for hierarchy</li>
-                                        <li>Assess paragraph and section transitions</li>
-                                        <li>Verify that conclusions follow from evidence presented</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="level-detail">
-                                <h3>✍️ Copy Editing</h3>
-                                <p>Address grammar, punctuation, style, and language usage.</p>
-                                
-                                <div class="level-checklist">
-                                    <h4>Copy Editing Tasks:</h4>
-                                    <ul>
-                                        <li>Correct grammar and syntax errors</li>
-                                        <li>Fix punctuation and capitalization</li>
-                                        <li>Correct spelling and typographical errors</li>
-                                        <li>Ensure consistent application of style guidelines</li>
-                                        <li>Verify proper citation and reference formatting</li>
-                                        <li>Check number and date formatting consistency</li>
-                                        <li>Ensure appropriate use of abbreviations and acronyms</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="level-detail">
-                                <h3>🔍 Proofreading</h3>
-                                <p>Final review for surface errors and formatting consistency.</p>
-                                
-                                <div class="level-checklist">
-                                    <h4>Proofreading Tasks:</h4>
-                                    <ul>
-                                        <li>Catch remaining spelling and typographical errors</li>
-                                        <li>Verify page numbers and cross-references</li>
-                                        <li>Check formatting consistency (fonts, spacing, alignment)</li>
-                                        <li>Ensure proper placement of headers, footers, and page elements</li>
-                                        <li>Verify accuracy of table of contents and indexes</li>
-                                        <li>Check image placement and captions</li>
-                                        <li>Review final layout and print quality</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Time Management Strategies</h3>
+                        <ul>
+                            <li><strong>Plan revision time:</strong> Allow adequate time for thorough review</li>
+                            <li><strong>Take breaks:</strong> Fresh eyes catch more errors</li>
+                            <li><strong>Set priorities:</strong> Focus on most critical issues first</li>
+                            <li><strong>Use deadlines:</strong> Work backwards from submission dates</li>
+                        </ul>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-editing-levels"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('editing-levels')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-revision-strategies"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('revision-strategies')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.03: Revision Strategies -->
-                <section class="content-section" id="revision-strategies">
-                    <div class="section-header">
-                        <h2>16.03 Revision Strategies</h2>
+            <!-- Section 16.04: Proofreading Techniques -->
+            <section class="content-section" id="proofreading-techniques">
+                <div class="section-header">
+                    <h2>16.04 Proofreading Techniques</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Proofreading requires specific techniques to catch errors that previous editing passes may have missed.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Reading Techniques</h3>
+                        <ul>
+                            <li><strong>Read aloud:</strong> Hear errors you might miss visually</li>
+                            <li><strong>Read backwards:</strong> Start from the end to focus on spelling</li>
+                            <li><strong>Use a ruler:</strong> Cover text below the line you're reading</li>
+                            <li><strong>Change format:</strong> Print or use different screen view</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Effective revision requires systematic approaches and proven techniques. These strategies help ensure thorough, efficient review processes.</p>
-                        
-                        <div class="strategy-card">
-                            <h3>🎯 The Multi-Pass Approach</h3>
-                            <div class="technique-item">
-                                <h5>Pass 1: Content and Structure</h5>
-                                <p>Review overall organization, completeness, and logical flow. Don't get distracted by surface errors.</p>
-                            </div>
-                            <div class="technique-item">
-                                <h5>Pass 2: Style and Clarity</h5>
-                                <p>Focus on sentence structure, word choice, and clarity. Improve readability and tone.</p>
-                            </div>
-                            <div class="technique-item">
-                                <h5>Pass 3: Grammar and Mechanics</h5>
-                                <p>Address grammar, punctuation, spelling, and formatting issues.</p>
-                            </div>
-                            <div class="technique-item">
-                                <h5>Pass 4: Final Polish</h5>
-                                <p>Catch remaining errors and ensure consistency throughout.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="strategy-card">
-                            <h3>⏱️ Time Management Strategies</h3>
-                            <ul>
-                                <li><strong>Plan revision time:</strong> Allow adequate time for thorough review</li>
-                                <li><strong>Take breaks:</strong> Fresh eyes catch more errors</li>
-                                <li><strong>Set priorities:</strong> Focus on most critical issues first</li>
-                                <li><strong>Use deadlines:</strong> Work backwards from submission dates</li>
-                            </ul>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Focus Areas</h3>
+                        <ul>
+                            <li><strong>Commonly confused words:</strong> their/there/they're, its/it's</li>
+                            <li><strong>Number formatting:</strong> Consistency in dates, amounts</li>
+                            <li><strong>Proper names:</strong> Spellings of people and places</li>
+                            <li><strong>Technical terms:</strong> Industry-specific vocabulary</li>
+                        </ul>
                     </div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('revision-strategies')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-proofreading-techniques"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('proofreading-techniques')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.04: Proofreading Techniques -->
-                <section class="content-section" id="proofreading-techniques">
-                    <div class="section-header">
-                        <h2>16.04 Proofreading Techniques</h2>
+            <!-- Section 16.05: Common Errors -->
+            <section class="content-section" id="common-errors">
+                <div class="section-header">
+                    <h2>16.05 Common Errors</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Recognizing common error patterns helps focus your revision efforts on areas most likely to contain mistakes.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Language and Usage Errors</h3>
+                        <ul>
+                            <li><strong>Subject-verb agreement:</strong> Singular/plural mismatches</li>
+                            <li><strong>Pronoun reference:</strong> Unclear or incorrect pronouns</li>
+                            <li><strong>Sentence fragments:</strong> Incomplete thoughts</li>
+                            <li><strong>Run-on sentences:</strong> Multiple ideas improperly joined</li>
+                            <li><strong>Modifier placement:</strong> Dangling or misplaced modifiers</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Proofreading requires specific techniques to catch errors that previous editing passes may have missed.</p>
+                    <!-- CRITICAL: Gallicisms Section with Appendix Link -->
+                    <div class="rule-box">
+                        <h3>Usage and Gallicisms</h3>
+                        <p>Canadian English documents often contain French influences that require attention during revision:</p>
+                        <ul>
+                            <li><strong>French word placement:</strong> Incorrect positioning of French terms</li>
+                            <li><strong>False friends:</strong> French words with different English meanings</li>
+                            <li><strong>Gallicisms:</strong> French sentence structures in English</li>
+                            <li><strong>Mixed language usage:</strong> Inconsistent treatment of bilingual content</li>
+                            <li><strong>Accent marks:</strong> Missing or incorrect French accents</li>
+                            <li><strong>Italicization:</strong> Improper formatting of French words</li>
+                        </ul>
                         
-                        <div class="technique-grid">
-                            <div class="technique-card">
-                                <h4>🔍 Reading Techniques</h4>
-                                <ul>
-                                    <li><strong>Read aloud:</strong> Hear errors you might miss visually</li>
-                                    <li><strong>Read backwards:</strong> Start from the end to focus on spelling</li>
-                                    <li><strong>Use a ruler:</strong> Cover text below the line you're reading</li>
-                                    <li><strong>Change format:</strong> Print or use different screen view</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="technique-card">
-                                <h4>🎯 Focus Areas</h4>
-                                <ul>
-                                    <li><strong>Commonly confused words:</strong> their/there/they're</li>
-                                    <li><strong>Number formatting:</strong> Consistency in dates, amounts</li>
-                                    <li><strong>Proper names:</strong> Spellings of people and places</li>
-                                    <li><strong>Technical terms:</strong> Industry-specific vocabulary</li>
-                                </ul>
-                            </div>
+                        <div class="info-box">
+                            <p><strong>Specialized Resource:</strong> For comprehensive guidance on identifying and correcting French-English usage issues, see <a href="french-words-appendix.html">Appendix A: French Words in English Text</a>.</p>
                         </div>
                     </div>
                     
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('proofreading-techniques')">
-                            Mark Complete & Continue
-                        </button>
+                    <div class="rule-box">
+                        <h3>Mechanical Errors</h3>
+                        <ul>
+                            <li><strong>Spelling:</strong> Especially Canadian vs. American spellings</li>
+                            <li><strong>Punctuation:</strong> Comma splices, apostrophe misuse</li>
+                            <li><strong>Capitalization:</strong> Inconsistent application of rules</li>
+                            <li><strong>Number style:</strong> Mixed formats for dates, amounts</li>
+                        </ul>
                     </div>
-                </section>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-common-errors"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('common-errors')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.05: Common Errors -->
-                <section class="content-section" id="common-errors">
-                    <div class="section-header">
-                        <h2>16.05 Common Errors</h2>
-                    </div>
+            <!-- Section 16.06: Technical Accuracy -->
+            <section class="content-section" id="technical-accuracy">
+                <div class="section-header">
+                    <h2>16.06 Technical Accuracy</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Technical accuracy goes beyond language mechanics to ensure factual correctness and proper formatting of specialized content.</p>
                     
-                    <div class="lesson-content">
-                        <p>Recognizing common error patterns helps focus your revision efforts on areas most likely to contain mistakes.</p>
-                        
-                        <div class="error-categories">
-                            <div class="error-category">
-                                <h3>📝 Language and Usage Errors</h3>
-                                <ul>
-                                    <li><strong>Subject-verb agreement:</strong> Singular/plural mismatches</li>
-                                    <li><strong>Pronoun reference:</strong> Unclear or incorrect pronouns</li>
-                                    <li><strong>Sentence fragments:</strong> Incomplete thoughts</li>
-                                    <li><strong>Run-on sentences:</strong> Multiple ideas improperly joined</li>
-                                    <li><strong>Modifier placement:</strong> Dangling or misplaced modifiers</li>
-                                </ul>
-                            </div>
-                            
-                            <!-- CRITICAL ADDITION: Gallicisms Section -->
-                            <div class="gallicisms-section">
-                                <h3>🇫🇷 Usage and Gallicisms</h3>
-                                <p>Canadian English documents often contain French influences that require attention during revision:</p>
-                                <ul>
-                                    <li><strong>French word placement:</strong> Incorrect positioning of French terms</li>
-                                    <li><strong>False friends:</strong> French words with different English meanings</li>
-                                    <li><strong>Gallicisms:</strong> French sentence structures in English</li>
-                                    <li><strong>Mixed language usage:</strong> Inconsistent treatment of bilingual content</li>
-                                    <li><strong>Accent marks:</strong> Missing or incorrect French accents</li>
-                                    <li><strong>Italicization:</strong> Improper formatting of French words</li>
-                                </ul>
-                                
-                                <div class="appendix-reference">
-                                    <h4>🔍 Specialized Resource</h4>
-                                    <p>For comprehensive guidance on identifying and correcting French-English usage issues:</p>
-                                    <div class="appendix-link">
-                                        <a href="french-words-appendix.html" class="btn btn-primary">
-                                            📖 Appendix A: French Words in English Text
-                                        </a>
-                                    </div>
-                                    <p class="reference-note">
-                                        <em>Appendix A provides detailed rules for proper integration of French words, identification of common Gallicisms, and guidelines for bilingual editing tasks.</em>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="error-category">
-                                <h3>🔤 Mechanical Errors</h3>
-                                <ul>
-                                    <li><strong>Spelling:</strong> Especially Canadian vs. American spellings</li>
-                                    <li><strong>Punctuation:</strong> Comma splices, apostrophe misuse</li>
-                                    <li><strong>Capitalization:</strong> Inconsistent application of rules</li>
-                                    <li><strong>Number style:</strong> Mixed formats for dates, amounts</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Technical Verification Points</h3>
+                        <ul>
+                            <li><strong>Factual accuracy:</strong> Verify statistics, dates, and claims</li>
+                            <li><strong>Citations:</strong> Check completeness and formatting</li>
+                            <li><strong>Cross-references:</strong> Ensure internal links are accurate</li>
+                            <li><strong>Technical terminology:</strong> Verify specialized vocabulary</li>
+                            <li><strong>Units and measurements:</strong> Check for consistency</li>
+                            <li><strong>URLs and contact information:</strong> Test all links and verify details</li>
+                        </ul>
                     </div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('common-errors')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-technical-accuracy"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('technical-accuracy')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.06: Technical Accuracy -->
-                <section class="content-section" id="technical-accuracy">
-                    <div class="section-header">
-                        <h2>16.06 Technical Accuracy</h2>
+            <!-- Section 16.07: Master Checklist -->
+            <section class="content-section" id="master-checklist">
+                <div class="section-header">
+                    <h2>16.07 Master Revision Checklist</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>Use this comprehensive checklist to ensure thorough revision of your documents.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Content and Structure</h3>
+                        <ul>
+                            <li>All required content included</li>
+                            <li>Logical flow and organization</li>
+                            <li>Document purpose clearly communicated</li>
+                            <li>Content appropriate for target audience</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Technical accuracy goes beyond language mechanics to ensure factual correctness and proper formatting of specialized content.</p>
-                        
-                        <div class="accuracy-checklist">
-                            <h3>Technical Verification Points</h3>
-                            <ul>
-                                <li><strong>Factual accuracy:</strong> Verify statistics, dates, and claims</li>
-                                <li><strong>Citations:</strong> Check completeness and formatting</li>
-                                <li><strong>Cross-references:</strong> Ensure internal links are accurate</li>
-                                <li><strong>Technical terminology:</strong> Verify specialized vocabulary</li>
-                                <li><strong>Units and measurements:</strong> Check for consistency</li>
-                                <li><strong>URLs and contact information:</strong> Test all links and verify details</li>
-                            </ul>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Language and Style</h3>
+                        <ul>
+                            <li>Plain language principles followed</li>
+                            <li>Uniform vocabulary throughout</li>
+                            <li>Bias-free and inclusive language</li>
+                            <li>French-English usage issues addressed (see <a href="french-words-appendix.html">Appendix A</a>)</li>
+                            <li>Tone consistent and appropriate</li>
+                        </ul>
                     </div>
                     
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('technical-accuracy')">
-                            Mark Complete & Continue
-                        </button>
+                    <div class="rule-box">
+                        <h3>Grammar and Mechanics</h3>
+                        <ul>
+                            <li>Grammar and syntax correct</li>
+                            <li>Spelling verified (Canadian spellings)</li>
+                            <li>Punctuation accurate and consistent</li>
+                            <li>Capitalization consistent</li>
+                            <li>French words properly formatted (italics, accents)</li>
+                        </ul>
                     </div>
-                </section>
+                    
+                    <div class="rule-box">
+                        <h3>Technical Elements</h3>
+                        <ul>
+                            <li>Number formatting consistent</li>
+                            <li>Dates accurate and properly formatted</li>
+                            <li>Citations complete and properly formatted</li>
+                            <li>Cross-references and page numbers accurate</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Format and Layout</h3>
+                        <ul>
+                            <li>Heading styles consistent</li>
+                            <li>Font usage consistent</li>
+                            <li>Spacing and alignment consistent</li>
+                            <li>Headers, footers, and page numbers correct</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-master-checklist"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('master-checklist')">
+                        Mark Complete & Continue
+                    </button>
+                </div>
+            </section>
 
-                <!-- Section 16.07: Master Checklist -->
-                <section class="content-section" id="master-checklist">
-                    <div class="section-header">
-                        <h2>16.07 Master Revision Checklist</h2>
+            <!-- Section 16.08: Final Review -->
+            <section class="content-section" id="final-review">
+                <div class="section-header">
+                    <h2>16.08 Final Review</h2>
+                </div>
+                
+                <div class="lesson-content">
+                    <p>The final review ensures your document meets all quality standards before publication or submission.</p>
+                    
+                    <div class="rule-box">
+                        <h3>Complete Document Review</h3>
+                        <p>Read the entire document once more, focusing on overall flow and reader experience.</p>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>Use this comprehensive checklist to ensure thorough revision of your documents. Track your progress as you work through each category.</p>
-                        
-                        <div class="checklist-container">
-                            <div class="checklist-header">
-                                <h3>Interactive Revision Checklist</h3>
-                                <div class="checklist-progress">
-                                    <div class="checklist-progress-bar" id="checklist-progress-bar"></div>
-                                </div>
-                                <p class="checklist-status">
-                                    <span id="checklist-completed">0</span> of <span id="checklist-total">--</span> items completed
-                                </p>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>📋 Content and Structure</h4>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="content-complete">
-                                    <label for="content-complete">All required content included</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="logical-flow">
-                                    <label for="logical-flow">Logical flow and organization</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="clear-purpose">
-                                    <label for="clear-purpose">Document purpose clearly communicated</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="audience-appropriate">
-                                    <label for="audience-appropriate">Content appropriate for target audience</label>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>✍️ Language and Style</h4>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="plain-language">
-                                    <label for="plain-language">Plain language principles followed</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="uniform-vocabulary">
-                                    <label for="uniform-vocabulary">Uniform vocabulary throughout</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="bias-free">
-                                    <label for="bias-free">Bias-free and inclusive language</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="gallicisms-usage">
-                                    <label for="gallicisms-usage">French-English usage issues addressed (see <a href="french-words-appendix.html">Appendix A</a>)</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="tone-consistent">
-                                    <label for="tone-consistent">Tone consistent and appropriate</label>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>🔤 Grammar and Mechanics</h4>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="grammar-correct">
-                                    <label for="grammar-correct">Grammar and syntax correct</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="spelling-correct">
-                                    <label for="spelling-correct">Spelling verified (Canadian spellings)</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="punctuation-correct">
-                                    <label for="punctuation-correct">Punctuation accurate and consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="capitalization-consistent">
-                                    <label for="capitalization-consistent">Capitalization consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="french-formatting">
-                                    <label for="french-formatting">French words properly formatted (italics, accents)</label>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>📊 Technical Elements</h4>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="numbers-consistent">
-                                    <label for="numbers-consistent">Number formatting consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="dates-correct">
-                                    <label for="dates-correct">Dates accurate and properly formatted</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="citations-complete">
-                                    <label for="citations-complete">Citations complete and properly formatted</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="cross-references">
-                                    <label for="cross-references">Cross-references and page numbers accurate</label>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>🎨 Format and Layout</h4>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="headings-consistent">
-                                    <label for="headings-consistent">Heading styles consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="fonts-consistent">
-                                    <label for="fonts-consistent">Font usage consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="spacing-consistent">
-                                    <label for="spacing-consistent">Spacing and alignment consistent</label>
-                                </div>
-                                <div class="checklist-item">
-                                    <input type="checkbox" id="page-elements">
-                                    <label for="page-elements">Headers, footers, and page numbers correct</label>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Spot Check Critical Elements</h3>
+                        <ul>
+                            <li>Title page accuracy</li>
+                            <li>Table of contents alignment</li>
+                            <li>Executive summary consistency</li>
+                            <li>Key statistics and data</li>
+                            <li>Contact information</li>
+                        </ul>
                     </div>
                     
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('master-checklist')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
-
-                <!-- Section 16.08: Final Review -->
-                <section class="content-section" id="final-review">
-                    <div class="section-header">
-                        <h2>16.08 Final Review</h2>
+                    <div class="rule-box">
+                        <h3>Final Quality Assurance</h3>
+                        <ul>
+                            <li>Document serves its intended purpose</li>
+                            <li>All stakeholder requirements met</li>
+                            <li>Accessibility standards followed</li>
+                            <li>Legal and policy compliance</li>
+                            <li>Ready for distribution</li>
+                        </ul>
                     </div>
                     
-                    <div class="lesson-content">
-                        <p>The final review ensures your document meets all quality standards before publication or submission.</p>
-                        
-                        <div class="final-review-steps">
-                            <div class="review-step">
-                                <h4>📖 Complete Document Review</h4>
-                                <p>Read the entire document once more, focusing on overall flow and reader experience.</p>
-                            </div>
-                            
-                            <div class="review-step">
-                                <h4>🔍 Spot Check Critical Elements</h4>
-                                <ul>
-                                    <li>Title page accuracy</li>
-                                    <li>Table of contents alignment</li>
-                                    <li>Executive summary consistency</li>
-                                    <li>Key statistics and data</li>
-                                    <li>Contact information</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="review-step">
-                                <h4>✅ Final Quality Assurance</h4>
-                                <ul>
-                                    <li>Document serves its intended purpose</li>
-                                    <li>All stakeholder requirements met</li>
-                                    <li>Accessibility standards followed</li>
-                                    <li>Legal and policy compliance</li>
-                                    <li>Ready for distribution</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="success-box">
-                            <h4>🎉 Revision Mastery Achieved!</h4>
-                            <p>You now possess the skills and systematic approaches needed for professional-level editing and proofreading. Your documents will be accurate, clear, and impactful.</p>
-                        </div>
+                    <div class="success-box">
+                        <h4>🎉 Revision Mastery Achieved!</h4>
+                        <p>You now possess the skills and systematic approaches needed for professional-level editing and proofreading. Your documents will be accurate, clear, and impactful.</p>
                     </div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('final-review')">
-                            Complete Chapter 16!
-                        </button>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Navigation Controls -->
-            <div class="chapter-navigation">
-                <a href="../chapters/ch15.html" class="btn btn-outline nav-prev">
-                    ← Previous: Chapter 15
-                </a>
-                <a href="../chapters/french-words-appendix.html" class="btn btn-outline nav-next">
-                    Next: Appendix A →
-                </a>
-            </div>
+                </div>
+                
+                <div class="quiz-panel" id="quiz-final-review"></div>
+                
+                <div class="section-footer">
+                    <button class="btn btn-primary" onclick="completeSection('final-review')">
+                        Complete Chapter 16!
+                    </button>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -673,36 +465,7 @@
             ];
             
             initializeChapter('ch16', sections);
-            
-            // Initialize interactive checklist
-            initializeInteractiveChecklist();
         });
-        
-        // Interactive checklist functionality
-        function initializeInteractiveChecklist() {
-            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
-            const totalItems = checkboxes.length;
-            const progressBar = document.getElementById('checklist-progress-bar');
-            const completedSpan = document.getElementById('checklist-completed');
-            const totalSpan = document.getElementById('checklist-total');
-            
-            if (totalSpan) totalSpan.textContent = totalItems;
-            
-            function updateProgress() {
-                const completedItems = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
-                const percentage = totalItems > 0 ? (completedItems / totalItems) * 100 : 0;
-                
-                if (progressBar) progressBar.style.width = percentage + '%';
-                if (completedSpan) completedSpan.textContent = completedItems;
-            }
-            
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', updateProgress);
-            });
-            
-            // Initialize progress
-            updateProgress();
-        }
     </script>
 </body>
 </html>
