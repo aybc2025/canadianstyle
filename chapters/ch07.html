@@ -5,930 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 7: Punctuation - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
-    <style>
-        .punctuation-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .punctuation-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .punctuation-card h4 {
-            color: #2c3e50;
-            margin: 0 0 1rem 0;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .dash-comparison {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .dash-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .dash-type {
-            background: white;
-            border-left: 4px solid #007bff;
-            padding: 1rem;
-            border-radius: 4px;
-        }
-        .dash-type h5 {
-            margin: 0 0 0.5rem 0;
-            color: #007bff;
-        }
-        .dash-visual {
-            font-family: 'Courier New', monospace;
-            font-size: 1.2rem;
-            background: #f8f9fa;
-            padding: 0.5rem;
-            border-radius: 4px;
-            text-align: center;
-            margin: 0.5rem 0;
-        }
-        .bracket-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .bracket-card {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 1.5rem;
-        }
-        .bracket-card h5 {
-            color: #856404;
-            margin: 0 0 1rem 0;
-        }
-        .list-punctuation {
-            background: #e3f2fd;
-            border: 1px solid #90caf9;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 2rem 0;
-        }
-        .list-example {
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            padding: 1rem;
-            margin: 1rem 0;
-            font-family: 'Times New Roman', serif;
-        }
-        .vertical-list-demo {
-            background: #f8f9fa;
-            border-left: 4px solid #28a745;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .advanced-techniques {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-        .advanced-techniques h3 {
-            color: white;
-            margin: 0 0 1.5rem 0;
-        }
-        .technique-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        .technique-item {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-        }
-        .technique-item h4 {
-            color: white;
-            margin: 0 0 1rem 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-home">
-                <span class="nav-icon">📚</span>
-                The Canadian Style
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
+            </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 7
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">7</div>
+                <div class="chapter-info">
+                    <h1>Punctuation</h1>
+                    <p>Master comprehensive punctuation rules including advanced dash usage, brackets, and complex formatting</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link active" data-section="introduction">7.01 Introduction</a>
+                <a href="#periods" class="tab-link" data-section="periods">7.02 Periods</a>
+                <a href="#commas" class="tab-link" data-section="commas">7.03 Commas</a>
+                <a href="#semicolons" class="tab-link" data-section="semicolons">7.04 Semicolons</a>
+                <a href="#colons" class="tab-link" data-section="colons">7.05 Colons</a>
+                <a href="#dashes" class="tab-link" data-section="dashes">7.06 Dashes</a>
+                <a href="#parentheses" class="tab-link" data-section="parentheses">7.07 Parentheses</a>
+                <a href="#brackets" class="tab-link" data-section="brackets">7.08 Brackets</a>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
+    <div class="chapter-content">
         <div class="container">
-            <div class="chapter-header">
-                <div class="chapter-meta">
-                    <span class="chapter-number">Chapter 7</span>
-                    <span class="chapter-category">Typography & Format</span>
+            <!-- Section: Introduction -->
+            <section id="introduction" class="content-section active">
+                <div class="section-header">
+                    <h2>7.01 Introduction</h2>
+                    <p>Understanding punctuation as the foundation of clear, professional communication</p>
                 </div>
-                <h1>Advanced Punctuation</h1>
-                <p class="chapter-description">Master comprehensive punctuation rules including advanced dash usage, bracket types, and complex list formatting.</p>
-                <div class="chapter-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="chapterProgress"></div>
+
+                <div class="lesson-content">
+                    <div class="key-principle">
+                        <h3>The Role of Punctuation</h3>
+                        <p>Punctuation serves as the traffic signals of language, guiding readers through your ideas and ensuring clarity in government communications.</p>
                     </div>
-                    <span class="progress-text" id="progressText">0% Complete</span>
+
+                    <div class="rule-box">
+                        <h4>Punctuation Principles</h4>
+                        <ul>
+                            <li><strong>Clarity:</strong> Punctuation should always serve to clarify meaning</li>
+                            <li><strong>Consistency:</strong> Use punctuation consistently throughout your document</li>
+                            <li><strong>Standard usage:</strong> Follow established Canadian conventions</li>
+                            <li><strong>Reader-focused:</strong> Consider how punctuation affects reader comprehension</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Impact of Punctuation on Meaning</h4>
+                        <div class="example-item good">
+                            <strong>Clear:</strong> The minister said the report was accurate.
+                        </div>
+                        <div class="example-item good">
+                            <strong>Different meaning:</strong> "The minister," said the report, "was accurate."
+                        </div>
+                        <div class="example-item bad">
+                            <strong>Ambiguous:</strong> The minister said the report was accurate according to officials.
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Professional Tip</h4>
+                        <p>When in doubt about punctuation, read your sentence aloud. Natural pauses often indicate where punctuation is needed.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Navigation Tabs -->
-            <nav class="section-nav" id="sectionNav">
-                <div class="tabs-list" role="tablist">
-                    <button class="tab-link active" data-section="introduction" role="tab">7.01 Introduction</button>
-                    <button class="tab-link" data-section="periods" role="tab">7.02 Periods</button>
-                    <button class="tab-link" data-section="commas" role="tab">7.03 Commas</button>
-                    <button class="tab-link" data-section="semicolons" role="tab">7.04 Semicolons</button>
-                    <button class="tab-link" data-section="colons" role="tab">7.05 Colons</button>
-                    <button class="tab-link" data-section="question-marks" role="tab">7.06 Question Marks</button>
-                    <button class="tab-link" data-section="exclamation-marks" role="tab">7.07 Exclamation Marks</button>
-                    <button class="tab-link" data-section="apostrophes" role="tab">7.08 Apostrophes</button>
-                    <button class="tab-link" data-section="parentheses-brackets" role="tab">7.09 Parentheses & Brackets</button>
-                    <button class="tab-link" data-section="ellipsis" role="tab">7.10 Ellipsis</button>
-                    <button class="tab-link" data-section="quotation-marks" role="tab">7.11 Quotation Marks</button>
-                    <button class="tab-link" data-section="dashes" role="tab">7.12 Dashes</button>
-                    <button class="tab-link" data-section="advanced-lists" role="tab">7.13 Advanced List Punctuation</button>
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="introduction"></div>
+                    </div>
+                    <button onclick="completeSection('introduction')" class="btn btn-primary">Mark as Complete</button>
                 </div>
-            </nav>
+            </section>
 
-            <div class="chapter-content">
-                <!-- Section 7.01: Introduction -->
-                <section class="content-section active" id="introduction">
-                    <div class="section-header">
-                        <h2>7.01 Introduction</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Punctuation provides the framework for clear, professional communication. This chapter covers comprehensive punctuation rules, including advanced techniques for complex documents and specialized formatting.</p>
-                        
-                        <div class="punctuation-showcase">
-                            <div class="punctuation-card">
-                                <h4>📝 Basic Punctuation</h4>
-                                <ul>
-                                    <li>Periods, commas, semicolons</li>
-                                    <li>Question and exclamation marks</li>
-                                    <li>Apostrophes for possession and contractions</li>
-                                </ul>
-                            </div>
-                            <div class="punctuation-card">
-                                <h4>📋 Advanced Marks</h4>
-                                <ul>
-                                    <li>Em dashes, en dashes, hyphens</li>
-                                    <li>Square brackets, angle brackets</li>
-                                    <li>Ellipsis for omissions and pauses</li>
-                                </ul>
-                            </div>
-                            <div class="punctuation-card">
-                                <h4>🎯 Specialized Uses</h4>
-                                <ul>
-                                    <li>Complex list punctuation</li>
-                                    <li>Technical document formatting</li>
-                                    <li>Legal and academic citations</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="key-principles">
-                            <h3>Fundamental Principles</h3>
-                            <ul>
-                                <li><strong>Consistency:</strong> Apply punctuation rules uniformly throughout documents</li>
-                                <li><strong>Clarity:</strong> Use punctuation to enhance readability and meaning</li>
-                                <li><strong>Purpose:</strong> Each mark should serve a specific grammatical or stylistic function</li>
-                                <li><strong>Context:</strong> Consider audience and document type when applying advanced rules</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('introduction')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+            <!-- Section: Periods -->
+            <section id="periods" class="content-section">
+                <div class="section-header">
+                    <h2>7.02 Periods</h2>
+                    <p>Proper usage of periods in various contexts</p>
+                </div>
 
-                <!-- Existing sections 7.02-7.11 would go here, keeping current content -->
-                <!-- Skipping to the enhanced sections for brevity -->
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Period Usage Rules</h4>
+                        <ul>
+                            <li>End declarative sentences</li>
+                            <li>Follow most abbreviations</li>
+                            <li>In numbered lists (when items are complete sentences)</li>
+                            <li>After indirect questions</li>
+                        </ul>
+                    </div>
 
-                <!-- Section 7.12: Dashes (Enhanced) -->
-                <section class="content-section" id="dashes">
-                    <div class="section-header">
-                        <h2>7.12 Dashes: Advanced Usage</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Dashes are powerful punctuation marks that serve different purposes. Understanding the distinction between hyphens, en dashes, and em dashes is crucial for professional documents.</p>
-                        
-                        <div class="dash-comparison">
-                            <h3>🔍 Dash Types Comparison</h3>
-                            
-                            <div class="dash-examples">
-                                <div class="dash-type">
-                                    <h5>Hyphen (-)</h5>
-                                    <div class="dash-visual">-</div>
-                                    <p><strong>Uses:</strong></p>
-                                    <ul>
-                                        <li>Compound words: mother-in-law</li>
-                                        <li>Word division at line breaks</li>
-                                        <li>Prefixes: re-examine, co-operate</li>
-                                        <li>Numbers: twenty-five, page 15-18</li>
-                                    </ul>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Examples:</strong></p>
-                                            <p>• The well-known policy<br>
-                                            • A five-year plan<br>
-                                            • Re-enter the data</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="dash-type">
-                                    <h5>En Dash (–)</h5>
-                                    <div class="dash-visual">–</div>
-                                    <p><strong>Uses:</strong></p>
-                                    <ul>
-                                        <li>Number ranges: pages 15–30</li>
-                                        <li>Date ranges: 2020–2024</li>
-                                        <li>Time spans: 9:00 a.m.–5:00 p.m.</li>
-                                        <li>Score ranges: won 3–1</li>
-                                        <li>Route connections: Toronto–Montreal flight</li>
-                                    </ul>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Examples:</strong></p>
-                                            <p>• The meeting runs 2:00–4:00 p.m.<br>
-                                            • See pages 45–67 for details<br>
-                                            • The Ottawa–Quebec corridor</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="dash-type">
-                                    <h5>Em Dash (—)</h5>
-                                    <div class="dash-visual">—</div>
-                                    <p><strong>Uses:</strong></p>
-                                    <ul>
-                                        <li>Parenthetical statements—like this one—for emphasis</li>
-                                        <li>Sudden breaks or changes in thought</li>
-                                        <li>Setting off appositives</li>
-                                        <li>Indicating missing text or interruption</li>
-                                        <li>Before summarizing clauses</li>
-                                    </ul>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Examples:</strong></p>
-                                            <p>• The new policy—if implemented correctly—will improve efficiency.<br>
-                                            • Three factors influence success—preparation, timing, and execution.<br>
-                                            • The minister said, "We must consider—"</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="examples-box">
+                        <h4>Examples</h4>
+                        <div class="example-item good">
+                            <strong>✓ Correct:</strong> The meeting will be held on Jan. 15.
                         </div>
-                        
-                        <div class="advanced-dash-usage">
-                            <h3>🎯 Advanced Dash Applications</h3>
-                            
-                            <div class="usage-scenarios">
-                                <div class="scenario-section">
-                                    <h4>Em Dash for Attribution</h4>
-                                    <p>Use em dashes to attribute quotations, especially in formal documents:</p>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p>"The budget deficit must be addressed through strategic spending cuts."<br>
-                                            —Minister of Finance, Budget Speech 2024</p>
-                                        </div>
-                                        <div class="example-item good">
-                                            <p>"Innovation drives economic growth in the 21st century."<br>
-                                            —Economic Development Strategy, p. 23</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="scenario-section">
-                                    <h4>En Dash for Compound Modifiers</h4>
-                                    <p>Use en dashes when one element of a compound modifier is an open compound or proper noun:</p>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p>• New York–based company<br>
-                                            • post–World War II era<br>
-                                            • pre–Industrial Revolution society<br>
-                                            • non–English-speaking population</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="scenario-section">
-                                    <h4>Em Dash vs. Parentheses</h4>
-                                    <p>Choose based on emphasis level:</p>
-                                    <div class="comparison-table">
-                                        <table style="width: 100%; border-collapse: collapse;">
-                                            <thead>
-                                                <tr style="background: #f8f9fa;">
-                                                    <th style="padding: 0.75rem; text-align: left;">Em Dashes (—)</th>
-                                                    <th style="padding: 0.75rem; text-align: left;">Parentheses ( )</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">
-                                                        For emphasis and integration<br>
-                                                        <em>The new policy—which took years to develop—addresses key concerns.</em>
-                                                    </td>
-                                                    <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">
-                                                        For supplementary information<br>
-                                                        <em>The new policy (Policy 2024-15) addresses key concerns.</em>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="padding: 0.75rem;">
-                                                        Creates dramatic pause<br>
-                                                        <em>Three priorities matter most—security, efficiency, and transparency.</em>
-                                                    </td>
-                                                    <td style="padding: 0.75rem;">
-                                                        Provides additional detail<br>
-                                                        <em>Three priorities (listed in order of importance) matter most.</em>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="example-item good">
+                            <strong>✓ Correct:</strong> She asked when the report would be ready.
                         </div>
-                        
-                        <div class="technical-formatting">
-                            <h3>⌨️ Technical Formatting</h3>
-                            
-                            <div class="formatting-guide">
-                                <h4>Creating Dashes</h4>
-                                <div class="formatting-table">
-                                    <table style="width: 100%; border-collapse: collapse;">
-                                        <thead>
-                                            <tr style="background: #e3f2fd;">
-                                                <th style="padding: 0.75rem;">Dash Type</th>
-                                                <th style="padding: 0.75rem;">Windows</th>
-                                                <th style="padding: 0.75rem;">Mac</th>
-                                                <th style="padding: 0.75rem;">HTML</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;"><strong>Hyphen</strong></td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">- (hyphen key)</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">- (hyphen key)</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">-</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;"><strong>En Dash</strong></td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Ctrl + minus (numeric keypad)</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Option + hyphen</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">&amp;ndash;</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem;"><strong>Em Dash</strong></td>
-                                                <td style="padding: 0.75rem;">Ctrl + Alt + minus (numeric keypad)</td>
-                                                <td style="padding: 0.75rem;">Shift + Option + hyphen</td>
-                                                <td style="padding: 0.75rem;">&amp;mdash;</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                
-                                <div class="spacing-rules">
-                                    <h4>Spacing Rules</h4>
-                                    <ul>
-                                        <li><strong>Hyphens:</strong> No spaces around hyphens in compound words</li>
-                                        <li><strong>En dashes:</strong> No spaces in ranges (2020–2024), spaces optional in other uses</li>
-                                        <li><strong>Em dashes:</strong> No spaces in most uses, spaces optional for readability in complex documents</li>
-                                    </ul>
-                                </div>
-                            </div>
+                        <div class="example-item bad">
+                            <strong>✗ Incorrect:</strong> The meeting will be held on Jan 15
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-dashes"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('dashes')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                </div>
 
-                <!-- Section 7.09: Parentheses & Brackets (Enhanced) -->
-                <section class="content-section" id="parentheses-brackets">
-                    <div class="section-header">
-                        <h2>7.09 Parentheses & Brackets: Advanced Usage</h2>
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="periods"></div>
                     </div>
-                    
-                    <div class="lesson-content">
-                        <p>Parentheses and various bracket types serve specific purposes in professional documents. Understanding when and how to use each type ensures clear, accurate communication.</p>
-                        
-                        <div class="bracket-types">
-                            <div class="bracket-card">
-                                <h5>( ) Parentheses</h5>
-                                <p><strong>Primary Uses:</strong></p>
-                                <ul>
-                                    <li>Supplementary information</li>
-                                    <li>Abbreviations and acronyms</li>
-                                    <li>Cross-references</li>
-                                    <li>Clarifying information</li>
-                                    <li>Mathematical expressions</li>
-                                </ul>
-                                <div class="examples-box">
-                                    <div class="example-item good">
-                                        <p><strong>Examples:</strong></p>
-                                        <p>• The Canada Revenue Agency (CRA) announced new guidelines.<br>
-                                        • See the appendix (pages 45-67) for detailed statistics.<br>
-                                        • The policy applies to all employees (both full-time and part-time).</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="bracket-card">
-                                <h5>[ ] Square Brackets</h5>
-                                <p><strong>Specialized Uses:</strong></p>
-                                <ul>
-                                    <li>Editorial insertions in quotations</li>
-                                    <li>Clarifications within quoted material</li>
-                                    <li>Indicating omissions with [...]</li>
-                                    <li>Phonetic transcriptions</li>
-                                    <li>Mathematical notation</li>
-                                </ul>
-                                <div class="examples-box">
-                                    <div class="example-item good">
-                                        <p><strong>Examples:</strong></p>
-                                        <p>• "The Minister [of Finance] announced the new budget."<br>
-                                        • "This policy [Policy 2024-12] will take effect immediately."<br>
-                                        • According to the report, "The findings [...] support the new approach."</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="bracket-card">
-                                <h5>{ } Braces</h5>
-                                <p><strong>Technical Uses:</strong></p>
-                                <ul>
-                                    <li>Mathematical sets and functions</li>
-                                    <li>Programming and code documentation</li>
-                                    <li>Complex nested groupings</li>
-                                    <li>Template variables</li>
-                                    <li>Specialized formatting</li>
-                                </ul>
-                                <div class="examples-box">
-                                    <div class="example-item good">
-                                        <p><strong>Examples:</strong></p>
-                                        <p>• Set notation: A = {1, 2, 3, 4}<br>
-                                        • Template: Dear {FirstName} {LastName}<br>
-                                        • Complex grouping: [{(economic factors)}]</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="bracket-card">
-                                <h5>⟨ ⟩ Angle Brackets</h5>
-                                <p><strong>Specialized Applications:</strong></p>
-                                <ul>
-                                    <li>Linguistic notation</li>
-                                    <li>Website URLs in print</li>
-                                    <li>Email addresses in print</li>
-                                    <li>Technical specifications</li>
-                                    <li>Template placeholders</li>
-                                </ul>
-                                <div class="examples-box">
-                                    <div class="example-item good">
-                                        <p><strong>Examples:</strong></p>
-                                        <p>• Visit our website at ⟨www.canada.ca⟩<br>
-                                        • Contact us at ⟨info@government.ca⟩<br>
-                                        • Pronunciation: ⟨pronunciation guide⟩</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="advanced-bracket-usage">
-                            <h3>🎯 Advanced Bracket Applications</h3>
-                            
-                            <div class="editorial-insertions">
-                                <h4>Editorial Insertions with Square Brackets</h4>
-                                <p>Square brackets are essential for maintaining accuracy when modifying quoted material:</p>
-                                
-                                <div class="insertion-types">
-                                    <div class="insertion-example">
-                                        <h5>1. Clarifying Pronouns</h5>
-                                        <div class="examples-box">
-                                            <div class="example-item good">
-                                                <p><strong>Original:</strong> "He announced the new policy yesterday."</p>
-                                                <p><strong>With clarification:</strong> "He [the Minister of Health] announced the new policy yesterday."</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="insertion-example">
-                                        <h5>2. Correcting Errors</h5>
-                                        <div class="examples-box">
-                                            <div class="example-item good">
-                                                <p><strong>Original (with error):</strong> "The meeting is on March 32nd."</p>
-                                                <p><strong>With correction:</strong> "The meeting is on March [3]2nd." or "The meeting is on March [2]nd [sic]."</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="insertion-example">
-                                        <h5>3. Adding Context</h5>
-                                        <div class="examples-box">
-                                            <div class="example-item good">
-                                                <p><strong>Original:</strong> "This policy will benefit everyone."</p>
-                                                <p><strong>With context:</strong> "This policy [the new healthcare initiative] will benefit everyone."</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="insertion-example">
-                                        <h5>4. Indicating Omissions</h5>
-                                        <div class="examples-box">
-                                            <div class="example-item good">
-                                                <p><strong>Original:</strong> "The budget includes increases for healthcare, education, and infrastructure spending."</p>
-                                                <p><strong>With omission:</strong> "The budget includes increases for healthcare [...] and infrastructure spending."</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="nested-brackets">
-                                <h4>Nested and Complex Bracket Usage</h4>
-                                <p>When using multiple levels of brackets, follow this hierarchy:</p>
-                                
-                                <div class="hierarchy-example">
-                                    <ol>
-                                        <li><strong>First level:</strong> Parentheses ( )</li>
-                                        <li><strong>Second level:</strong> Square brackets [ ]</li>
-                                        <li><strong>Third level:</strong> Braces { }</li>
-                                        <li><strong>Fourth level:</strong> Repeat with different formatting</li>
-                                    </ol>
-                                    
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>Complex nesting example:</strong></p>
-                                            <p>The analysis includes three main factors (economic indicators [GDP, employment rates], social measures [healthcare access {both urban and rural}, education metrics], and environmental data).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="punctuation-with-brackets">
-                            <h3>📝 Punctuation with Brackets</h3>
-                            
-                            <div class="punctuation-rules">
-                                <div class="rule-section">
-                                    <h4>Periods and Brackets</h4>
-                                    <ul>
-                                        <li><strong>Complete sentences in parentheses:</strong> Period goes inside if the parenthetical is a complete sentence standing alone</li>
-                                        <li><strong>Partial sentences:</strong> Period goes outside if the parenthetical is part of a larger sentence</li>
-                                    </ul>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Correct:</strong></p>
-                                            <p>The meeting was postponed. (The Minister had a scheduling conflict.)<br>
-                                            The meeting was postponed (due to a scheduling conflict).</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="rule-section">
-                                    <h4>Commas and Brackets</h4>
-                                    <ul>
-                                        <li>Place commas outside closing brackets when they're part of the larger sentence structure</li>
-                                        <li>Don't use commas directly before opening brackets</li>
-                                    </ul>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Correct:</strong></p>
-                                            <p>The three departments (Finance, Health, and Education), all reported increases.<br>
-                                            After reviewing the data (see Appendix A), we recommend approval.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-parentheses-brackets"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('parentheses-brackets')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                    <button onclick="completeSection('periods')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
 
-                <!-- Section 7.13: Advanced List Punctuation (New) -->
-                <section class="content-section" id="advanced-lists">
-                    <div class="section-header">
-                        <h2>7.13 Advanced List Punctuation</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Complex lists require careful punctuation to maintain clarity and consistency. This section covers advanced techniques for vertical lists, nested structures, and specialized formatting.</p>
-                        
-                        <div class="list-punctuation">
-                            <h3>📋 Vertical List Punctuation Systems</h3>
-                            
-                            <div class="list-systems">
-                                <div class="system-example">
-                                    <h4>System 1: Simple Items (No Internal Punctuation)</h4>
-                                    <p>Use this format for brief, simple list items:</p>
-                                    <div class="list-example">
-                                        <p>The committee will address three key areas:</p>
-                                        <ul>
-                                            <li>budget planning</li>
-                                            <li>staff allocation</li>
-                                            <li>resource management</li>
-                                        </ul>
-                                        <p><strong>Rules:</strong> No initial capitals, no end punctuation, no "and" before last item.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="system-example">
-                                    <h4>System 2: Complex Items with Internal Punctuation</h4>
-                                    <p>Use semicolons when list items contain internal punctuation:</p>
-                                    <div class="list-example">
-                                        <p>The review will examine several factors:</p>
-                                        <ul>
-                                            <li>Budget allocation, including both operational and capital expenditures;</li>
-                                            <li>Staff performance metrics, particularly in customer service areas;</li>
-                                            <li>Resource utilization, focusing on technology and equipment; and</li>
-                                            <li>Long-term sustainability measures.</li>
-                                        </ul>
-                                        <p><strong>Rules:</strong> Semicolons after each item except the last, which ends with a period. Optional "and" before the last item.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="system-example">
-                                    <h4>System 3: Complete Sentences</h4>
-                                    <p>Use full sentence punctuation for complete statements:</p>
-                                    <div class="list-example">
-                                        <p>The implementation plan includes these phases:</p>
-                                        <ul>
-                                            <li>Phase 1 will focus on system setup and initial configuration. This includes hardware installation and software deployment.</li>
-                                            <li>Phase 2 involves comprehensive staff training. All departments will participate in workshops and hands-on sessions.</li>
-                                            <li>Phase 3 includes full system rollout and monitoring. Performance metrics will be tracked for six months.</li>
-                                        </ul>
-                                        <p><strong>Rules:</strong> Each item is a complete sentence with proper capitalization and period.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="nested-lists">
-                            <h3>🔗 Nested and Multi-level Lists</h3>
-                            
-                            <div class="vertical-list-demo">
-                                <h4>Complex Hierarchical Structure</h4>
-                                <p>The departmental reorganization involves:</p>
-                                
-                                <ol>
-                                    <li><strong>Administrative Division</strong>
-                                        <ol type="a">
-                                            <li>Human Resources Department
-                                                <ul>
-                                                    <li>recruitment and hiring;</li>
-                                                    <li>benefits administration;</li>
-                                                    <li>performance management; and</li>
-                                                    <li>employee relations.</li>
-                                                </ul>
-                                            </li>
-                                            <li>Financial Services Department
-                                                <ul>
-                                                    <li>budget planning and monitoring;</li>
-                                                    <li>accounts payable and receivable;</li>
-                                                    <li>financial reporting; and</li>
-                                                    <li>audit coordination.</li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                    <li><strong>Operations Division</strong>
-                                        <ol type="a">
-                                            <li>Program Delivery Department
-                                                <ul>
-                                                    <li>service delivery coordination;</li>
-                                                    <li>client relations management;</li>
-                                                    <li>quality assurance; and</li>
-                                                    <li>performance monitoring.</li>
-                                                </ul>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                </ol>
-                            </div>
-                            
-                            <div class="numbering-systems">
-                                <h4>Standard Numbering Hierarchy</h4>
-                                <div class="hierarchy-table">
-                                    <table style="width: 100%; border-collapse: collapse;">
-                                        <thead>
-                                            <tr style="background: #f8f9fa;">
-                                                <th style="padding: 0.75rem;">Level</th>
-                                                <th style="padding: 0.75rem;">Format</th>
-                                                <th style="padding: 0.75rem;">Example</th>
-                                                <th style="padding: 0.75rem;">Use</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">First</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Arabic numerals</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">1, 2, 3</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Main categories</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Second</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Lowercase letters</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">a, b, c</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Subcategories</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Third</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Roman numerals (lowercase)</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">i, ii, iii</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Sub-subcategories</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Fourth</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Uppercase letters</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">A, B, C</td>
-                                                <td style="padding: 0.75rem; border-bottom: 1px solid #ddd;">Further subdivisions</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="padding: 0.75rem;">Fifth</td>
-                                                <td style="padding: 0.75rem;">Arabic numerals (parentheses)</td>
-                                                <td style="padding: 0.75rem;">(1), (2), (3)</td>
-                                                <td style="padding: 0.75rem;">Final level</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="advanced-techniques">
-                            <h3>🎯 Professional List Formatting Techniques</h3>
-                            
-                            <div class="technique-grid">
-                                <div class="technique-item">
-                                    <h4>Parallel Structure</h4>
-                                    <p>Maintain consistent grammatical structure across all list items:</p>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Parallel:</strong></p>
-                                            <ul>
-                                                <li>analyzing data</li>
-                                                <li>preparing reports</li>
-                                                <li>presenting findings</li>
-                                            </ul>
-                                        </div>
-                                        <div class="example-item bad">
-                                            <p><strong>✗ Not parallel:</strong></p>
-                                            <ul>
-                                                <li>analyzing data</li>
-                                                <li>report preparation</li>
-                                                <li>to present findings</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="technique-item">
-                                    <h4>Consistent Capitalization</h4>
-                                    <p>Apply capitalization rules consistently throughout the list:</p>
-                                    <ul>
-                                        <li><strong>Sentence fragments:</strong> No initial capitals unless proper nouns</li>
-                                        <li><strong>Complete sentences:</strong> Initial capitals and end punctuation</li>
-                                        <li><strong>Mixed content:</strong> Follow the pattern of the majority</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="technique-item">
-                                    <h4>Logical Ordering</h4>
-                                    <p>Arrange list items in a logical sequence:</p>
-                                    <ul>
-                                        <li><strong>Chronological:</strong> Time-based sequences</li>
-                                        <li><strong>Priority:</strong> Most to least important</li>
-                                        <li><strong>Categorical:</strong> Grouped by type or function</li>
-                                        <li><strong>Alphabetical:</strong> When no other logic applies</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="technique-item">
-                                    <h4>Introductory Integration</h4>
-                                    <p>Ensure smooth flow between introduction and list:</p>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Good integration:</strong></p>
-                                            <p>The policy addresses three areas:</p>
-                                            <ul>
-                                                <li>environmental protection</li>
-                                                <li>economic development</li>
-                                                <li>social welfare</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="special-list-cases">
-                            <h3>🔍 Special Cases and Exceptions</h3>
-                            
-                            <div class="special-cases">
-                                <div class="case-example">
-                                    <h4>Lists with Questions</h4>
-                                    <p>When list items are questions, maintain question punctuation:</p>
-                                    <div class="list-example">
-                                        <p>The evaluation will address several key questions:</p>
-                                        <ul>
-                                            <li>Is the program meeting its stated objectives?</li>
-                                            <li>Are resources being used efficiently?</li>
-                                            <li>What improvements could be implemented?</li>
-                                            <li>How do outcomes compare to similar programs?</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="case-example">
-                                    <h4>Lists with Quotations</h4>
-                                    <p>Handle quotations in lists according to standard quotation rules:</p>
-                                    <div class="list-example">
-                                        <p>Committee members made several key observations:</p>
-                                        <ul>
-                                            <li>"The current system is working effectively."</li>
-                                            <li>"Additional resources would improve outcomes."</li>
-                                            <li>"Training programs need enhancement."</li>
-                                            <li>"Stakeholder engagement should be expanded."</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="case-example">
-                                    <h4>Run-in Lists</h4>
-                                    <p>For short lists integrated into sentences:</p>
-                                    <div class="list-example">
-                                        <p>The three main priorities are (1) budget control, (2) staff development, and (3) service improvement.</p>
-                                        <p><strong>Alternative format:</strong> The three main priorities are (a) budget control, (b) staff development, and (c) service improvement.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-advanced-lists"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('advanced-lists')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
-            </div>
+            <!-- Section: Commas -->
+            <section id="commas" class="content-section">
+                <div class="section-header">
+                    <h2>7.03 Commas</h2>
+                    <p>Master the complex rules governing comma usage</p>
+                </div>
 
-            <!-- Navigation Controls -->
-            <div class="chapter-navigation">
-                <a href="../chapters/ch06.html" class="btn btn-outline nav-prev">
-                    ← Previous: Chapter 6
-                </a>
-                <a href="../chapters/ch08.html" class="btn btn-outline nav-next">
-                    Next: Chapter 8 →
-                </a>
-            </div>
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Essential Comma Rules</h4>
+                        <ul>
+                            <li><strong>Series:</strong> Separate items in a series (Oxford comma recommended)</li>
+                            <li><strong>Independent clauses:</strong> Before coordinating conjunctions</li>
+                            <li><strong>Non-essential elements:</strong> Set off parenthetical information</li>
+                            <li><strong>Introductory elements:</strong> After introductory phrases</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Examples</h4>
+                        <div class="example-item good">
+                            <strong>✓ Oxford comma:</strong> The policy covers health, safety, and environmental concerns.
+                        </div>
+                        <div class="example-item good">
+                            <strong>✓ Non-essential:</strong> The minister, who was late, apologized to the committee.
+                        </div>
+                        <div class="example-item good">
+                            <strong>✓ Introductory:</strong> After careful consideration, we approved the proposal.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="commas"></div>
+                    </div>
+                    <button onclick="completeSection('commas')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
+
+            <!-- Section: Dashes -->
+            <section id="dashes" class="content-section">
+                <div class="section-header">
+                    <h2>7.06 Dashes</h2>
+                    <p>Em dashes, en dashes, and their proper applications</p>
+                </div>
+
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Types of Dashes</h4>
+                        <ul>
+                            <li><strong>Em dash (—):</strong> Parenthetical elements, abrupt changes, emphasis</li>
+                            <li><strong>En dash (–):</strong> Ranges, connections, compound adjectives</li>
+                            <li><strong>Hyphen (-):</strong> Compound words, word division</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Examples</h4>
+                        <div class="example-item good">
+                            <strong>✓ Em dash:</strong> The budget—which was finalized last week—includes new provisions.
+                        </div>
+                        <div class="example-item good">
+                            <strong>✓ En dash:</strong> The 2020–2025 strategic plan outlines our objectives.
+                        </div>
+                        <div class="example-item good">
+                            <strong>✓ Hyphen:</strong> The thirty-five participants completed the survey.
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Technical Tip</h4>
+                        <p>In most word processors: Em dash = Alt + 0151 or Ctrl + Alt + minus; En dash = Alt + 0150 or Ctrl + minus.</p>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="dashes"></div>
+                    </div>
+                    <button onclick="completeSection('dashes')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
+
+            <!-- Additional sections can be added following the same pattern -->
         </div>
-    </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
@@ -937,11 +244,13 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
@@ -950,18 +259,18 @@
                 { id: 'commas', title: '7.03 Commas' },
                 { id: 'semicolons', title: '7.04 Semicolons' },
                 { id: 'colons', title: '7.05 Colons' },
-                { id: 'question-marks', title: '7.06 Question Marks' },
-                { id: 'exclamation-marks', title: '7.07 Exclamation Marks' },
-                { id: 'apostrophes', title: '7.08 Apostrophes' },
-                { id: 'parentheses-brackets', title: '7.09 Parentheses & Brackets' },
-                { id: 'ellipsis', title: '7.10 Ellipsis' },
-                { id: 'quotation-marks', title: '7.11 Quotation Marks' },
-                { id: 'dashes', title: '7.12 Dashes' },
-                { id: 'advanced-lists', title: '7.13 Advanced List Punctuation' }
+                { id: 'dashes', title: '7.06 Dashes' },
+                { id: 'parentheses', title: '7.07 Parentheses' },
+                { id: 'brackets', title: '7.08 Brackets' }
             ];
             
             initializeChapter('ch07', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
