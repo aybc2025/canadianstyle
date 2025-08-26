@@ -5,443 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Canadian Style - Interactive Learning Guide</title>
     <link rel="stylesheet" href="shared/css/main.css">
-    <style>
-        .dashboard-hero {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .hero-content h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        .hero-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-        }
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fbbf24;
-        }
-        .stat-label {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            opacity: 0.8;
-        }
-        .chapters-section {
-            padding: 4rem 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1f2937;
-        }
-        .section-description {
-            font-size: 1.125rem;
-            color: #6b7280;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .filter-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .filter-tab {
-            background: #f3f4f6;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        .filter-tab.active, .filter-tab:hover {
-            background: #3b82f6;
-            color: white;
-        }
-        .chapters-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .chapter-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid #e5e7eb;
-        }
-        .chapter-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-        }
-        .chapter-number {
-            background: #3b82f6;
-            color: white;
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-        .chapter-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.75rem;
-        }
-        .chapter-description {
-            color: #6b7280;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-        .chapter-progress {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-        .progress-bar {
-            flex: 1;
-            background: #e5e7eb;
-            height: 6px;
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        .progress-fill {
-            background: #10b981;
-            height: 100%;
-            transition: width 0.3s ease;
-        }
-        .progress-text {
-            font-size: 0.875rem;
-            color: #6b7280;
-            font-weight: 500;
-        }
-        .chapter-link {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.75rem 1.5rem;
-            background: #f8fafc;
-            color: #3b82f6;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        .chapter-link:hover {
-            background: #3b82f6;
-            color: white;
-        }
-        .chapter-category {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            background: #dbeafe;
-            color: #1d4ed8;
-            border-radius: 1rem;
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 1rem;
-        }
-        .appendix-section {
-            background: #f8fafc;
-            padding: 4rem 0;
-            margin: 2rem 0;
-        }
-        .appendix-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            border-left: 4px solid #3b82f6;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .appendix-number {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .appendix-title {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin-bottom: 1rem;
-        }
-        .appendix-subtitle {
-            color: #6b7280;
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        .appendix-description {
-            color: #4b5563;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-        .appendix-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem;
-            background: #f1f5f9;
-            border-radius: 6px;
-        }
-        .feature-icon {
-            font-size: 1.2rem;
-        }
-        .feature-text {
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: #475569;
-        }
-        .appendix-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-        .appendix-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-        }
-        .quick-links {
-            background: #1f2937;
-            color: white;
-            padding: 3rem 0;
-        }
-        .quick-links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        .quick-link-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-        }
-        .quick-link-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .quick-link-title {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .quick-link-desc {
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
-        }
-        .quick-link-btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: #3b82f6;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 500;
-            transition: background 0.3s ease;
-        }
-        .quick-link-btn:hover {
-            background: #2563eb;
-        }
-    </style>
 </head>
 <body>
-    <header class="dashboard-hero">
+    <header class="site-header">
         <div class="container">
-            <div class="hero-content">
+            <div class="logo-wrapper">
+                <img src="shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
                 <h1>The Canadian Style</h1>
-                <p class="hero-subtitle">Master Canadian English writing conventions through interactive learning</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number" id="totalProgress">0%</div>
-                        <div class="stat-label">Overall Progress</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="chaptersCompleted">0</div>
-                        <div class="stat-label">Chapters Completed</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="sectionsCompleted">0</div>
-                        <div class="stat-label">Sections Completed</div>
-                    </div>
-                </div>
+                <p class="tagline">Interactive Canadian English Style Guide</p>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Chapters Section -->
-        <section class="chapters-section">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Interactive Chapters</h2>
-                    <p class="section-description">
-                        Learn Canadian writing conventions through structured lessons, interactive exercises, and practical examples.
-                    </p>
-                </div>
-
-                <div class="filter-tabs">
-                    <button class="filter-tab active" data-filter="all">All Chapters</button>
-                    <button class="filter-tab" data-filter="basics">Basics</button>
-                    <button class="filter-tab" data-filter="typography">Typography</button>
-                    <button class="filter-tab" data-filter="style">Style</button>
-                </div>
-
-                <div class="chapters-grid" id="chaptersGrid">
-                    <!-- Chapters will be dynamically generated -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Appendices Section -->
-        <section class="appendix-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Reference Materials</h2>
-                    <p class="section-description">
-                        Essential appendices and reference guides for specialized writing situations.
-                    </p>
-                </div>
-
-                <div class="appendix-card">
-                    <div class="appendix-number">A</div>
-                    <h3 class="appendix-title">French Words in English Text</h3>
-                    <p class="appendix-subtitle">Essential guide for bilingual Canadian writing</p>
-                    
-                    <p class="appendix-description">
-                        As Canada's official languages are English and French, Canadian English frequently incorporates French words and phrases. This comprehensive appendix provides detailed guidance on proper usage, spelling, and presentation of French expressions in English documents.
-                    </p>
-                    
-                    <div class="appendix-features">
-                        <div class="feature-item">
-                            <span class="feature-icon">🎨</span>
-                            <span class="feature-text">Italicization Rules</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">✏️</span>
-                            <span class="feature-text">Accent Mark Guidelines</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📝</span>
-                            <span class="feature-text">Plural Formation</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">🔤</span>
-                            <span class="feature-text">Capitalization Rules</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">📊</span>
-                            <span class="feature-text">Decision Trees</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-icon">💡</span>
-                            <span class="feature-text">Common Examples</span>
+                <div class="welcome-content">
+                    <div class="welcome-text">
+                        <h2>Master Canadian Writing Standards</h2>
+                        <p>Learn proper Canadian English conventions through interactive lessons, practical exercises, and comprehensive style guidelines. Based on the official government publication.</p>
+                        
+                        <div class="stats-overview">
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalProgress">0%</span>
+                                <span class="stat-label">Overall Progress</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="chaptersCompleted">0</span>
+                                <span class="stat-label">Chapters Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="sectionsCompleted">0</span>
+                                <span class="stat-label">Sections Completed</span>
+                            </div>
                         </div>
                     </div>
                     
-                    <div style="text-align: center;">
-                        <a href="chapters/french-words-appendix.html" class="appendix-link">
-                            📖 Access Appendix A
+                    <div class="quick-actions">
+                        <a href="chapters/ch01.html" class="btn btn-primary btn-large">
+                            🚀 Start Learning
+                        </a>
+                        <a href="chapters/french-words-appendix.html" class="btn btn-outline btn-large">
+                            🇫🇷 French Words Guide
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Quick Links Section -->
-        <section class="quick-links">
+        <!-- Chapter Categories -->
+        <section class="categories-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title" style="color: white;">Quick Access</h2>
-                </div>
+                <h2 class="section-title">Learning Modules</h2>
                 
-                <div class="quick-links-grid">
-                    <div class="quick-link-card">
-                        <div class="quick-link-icon">🚀</div>
-                        <h3 class="quick-link-title">Start Learning</h3>
-                        <p class="quick-link-desc">Begin with Chapter 1 and build your foundation</p>
-                        <a href="chapters/ch01.html" class="quick-link-btn">Chapter 1: Abbreviations</a>
-                    </div>
-                    
-                    <div class="quick-link-card">
-                        <div class="quick-link-icon">🇫🇷</div>
-                        <h3 class="quick-link-title">Bilingual Writing</h3>
-                        <p class="quick-link-desc">Master French-English integration</p>
-                        <a href="chapters/french-words-appendix.html" class="quick-link-btn">Appendix A</a>
-                    </div>
-                    
-                    <div class="quick-link-card">
-                        <div class="quick-link-icon">📋</div>
-                        <h3 class="quick-link-title">Revision Checklist</h3>
-                        <p class="quick-link-desc">Perfect your editing skills</p>
-                        <a href="chapters/ch16.html" class="quick-link-btn">Chapter 16</a>
-                    </div>
-                    
-                    <div class="quick-link-card">
-                        <div class="quick-link-icon">🎯</div>
-                        <h3 class="quick-link-title">Style Guide</h3>
-                        <p class="quick-link-desc">Essential capitalization rules</p>
-                        <a href="chapters/ch04.html" class="quick-link-btn">Chapter 4</a>
+                <!-- Filter Tabs -->
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Chapters</button>
+                    <button class="filter-btn" data-filter="basics">Fundamentals</button>
+                    <button class="filter-btn" data-filter="typography">Typography</button>
+                    <button class="filter-btn" data-filter="style">Style & Usage</button>
+                </div>
+
+                <!-- Chapters Grid -->
+                <div class="chapters-grid" id="chaptersGrid">
+                    <!-- Chapters will be dynamically generated here -->
+                </div>
+
+                <!-- MINIMAL ADDITION: Reference Materials Section -->
+                <div class="reference-section">
+                    <h3 class="reference-title">📚 Reference Materials</h3>
+                    <div class="appendix-card">
+                        <div class="appendix-info">
+                            <h4>Appendix A: French Words in English Text</h4>
+                            <p>Essential guide for handling French words, phrases, and expressions in Canadian English documents.</p>
+                            <ul class="appendix-features">
+                                <li>Italicization and formatting rules</li>
+                                <li>Accent mark guidelines</li>
+                                <li>Decision trees for usage</li>
+                                <li>Common examples and patterns</li>
+                            </ul>
+                        </div>
+                        <div class="appendix-action">
+                            <a href="chapters/french-words-appendix.html" class="btn btn-primary">
+                                Access Appendix A
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -450,12 +99,28 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>The Canadian Style</h3>
+                    <p>Based on the official Government of Canada publication, this interactive guide helps you master Canadian English writing conventions.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Access</h4>
+                    <ul>
+                        <li><a href="chapters/ch04.html">Capitalization</a></li>
+                        <li><a href="chapters/ch16.html">Revision Checklist</a></li>
+                        <li><a href="chapters/french-words-appendix.html">French Words Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Government of Canada. Based on <em>The Canadian Style</em> (1997 revised edition)</p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Chapter configuration
+        // Chapter configuration - UNCHANGED
         const CHAPTERS_CONFIG = {
             ch01: { number: "1", title: "Abbreviations", description: "Learn proper abbreviation usage and formatting.", category: "basics" },
             ch02: { number: "2", title: "Hyphenation", description: "Master compound words and word division.", category: "basics" },
@@ -477,39 +142,34 @@
 
         let currentFilter = 'all';
 
-        // Initialize dashboard
+        // Initialize dashboard - UNCHANGED FUNCTIONALITY
         function initializeDashboard() {
             updateWelcomeStats();
             generateChapterCards();
             setupEventListeners();
         }
 
-        // ✅ תיקון: Update welcome statistics
         function updateWelcomeStats() {
             try {
                 const overallStats = getOverallProgress();
                 
-                // ✅ תיקון עיקרי: שינוי מ-percentage ל-overallPercentage
                 if (overallStats) {
                     document.getElementById('totalProgress').textContent = `${overallStats.overallPercentage || 0}%`;
                     document.getElementById('chaptersCompleted').textContent = overallStats.completedChapters || 0;
                     document.getElementById('sectionsCompleted').textContent = overallStats.completedSections || 0;
                 } else {
-                    // ✅ fallback במקרה שהפונקציה מחזירה null
                     document.getElementById('totalProgress').textContent = '0%';
                     document.getElementById('chaptersCompleted').textContent = '0';
                     document.getElementById('sectionsCompleted').textContent = '0';
                 }
             } catch (error) {
                 console.error('Error updating welcome stats:', error);
-                // ✅ הוספת fallback במקרה של שגיאה
                 document.getElementById('totalProgress').textContent = '0%';
                 document.getElementById('chaptersCompleted').textContent = '0';
                 document.getElementById('sectionsCompleted').textContent = '0';
             }
         }
 
-        // Generate chapter cards
         function generateChapterCards() {
             const grid = document.getElementById('chaptersGrid');
             if (!grid) return;
@@ -522,19 +182,25 @@
                     
                     return `
                         <div class="chapter-card" data-category="${config.category}">
-                            <div class="chapter-category">${config.category}</div>
-                            <div class="chapter-number">${config.number}</div>
-                            <h3 class="chapter-title">${config.title}</h3>
-                            <p class="chapter-description">${config.description}</p>
-                            <div class="chapter-progress">
-                                <div class="progress-bar">
-                                    <div class="progress-fill" style="width: ${percentage}%"></div>
-                                </div>
-                                <span class="progress-text">${percentage}%</span>
+                            <div class="chapter-header">
+                                <span class="chapter-number">${config.number}</span>
+                                <span class="chapter-category">${config.category}</span>
                             </div>
-                            <a href="chapters/${id}.html" class="chapter-link">
-                                Start Chapter →
-                            </a>
+                            <div class="chapter-content">
+                                <h3 class="chapter-title">${config.title}</h3>
+                                <p class="chapter-description">${config.description}</p>
+                                <div class="chapter-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: ${percentage}%"></div>
+                                    </div>
+                                    <span class="progress-text">${percentage}% Complete</span>
+                                </div>
+                            </div>
+                            <div class="chapter-actions">
+                                <a href="chapters/${id}.html" class="btn btn-primary btn-small">
+                                    Start Chapter
+                                </a>
+                            </div>
                         </div>
                     `;
                 }).join('');
@@ -546,10 +212,8 @@
             }
         }
 
-        // Setup event listeners
         function setupEventListeners() {
-            // Filter tabs
-            const filterTabs = document.querySelectorAll('.filter-tab');
+            const filterTabs = document.querySelectorAll('.filter-btn');
             filterTabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     const filter = tab.dataset.filter;
@@ -559,16 +223,14 @@
             });
         }
 
-        // Set active filter tab
         function setActiveFilter(filter) {
-            const tabs = document.querySelectorAll('.filter-tab');
+            const tabs = document.querySelectorAll('.filter-btn');
             tabs.forEach(tab => {
                 tab.classList.toggle('active', tab.dataset.filter === filter);
             });
             currentFilter = filter;
         }
 
-        // Filter chapters by category
         function filterChapters(filter) {
             const cards = document.querySelectorAll('.chapter-card');
             cards.forEach(card => {
@@ -578,7 +240,7 @@
             });
         }
 
-        // Progress tracking functions (simplified versions)
+        // Progress tracking functions - UNCHANGED
         function getOverallProgress() {
             try {
                 let totalSections = 0;
@@ -613,8 +275,6 @@
         function getDetailedChapterProgress(chapterId) {
             try {
                 const progress = JSON.parse(localStorage.getItem(`progress_${chapterId}`) || '{}');
-                
-                // Estimate sections per chapter (this would normally come from chapter data)
                 const estimatedSections = 8;
                 const completedSections = Object.values(progress).filter(Boolean).length;
                 
@@ -630,8 +290,6 @@
 
         // Initialize dashboard when page loads
         document.addEventListener('DOMContentLoaded', initializeDashboard);
-
-        // Refresh stats periodically
         setInterval(updateWelcomeStats, 5000);
     </script>
 </body>
