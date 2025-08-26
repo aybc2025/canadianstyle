@@ -3,105 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Canadian Style - Interactive Learning Platform</title>
+    <title>The Canadian Style - Interactive Learning Guide</title>
     <link rel="stylesheet" href="shared/css/main.css">
-    <link rel="stylesheet" href="shared/css/quiz-styles.css">
+    <style>
+        .dashboard-hero {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fbbf24;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+        }
+        .chapters-section {
+            padding: 4rem 0;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        .section-description {
+            font-size: 1.125rem;
+            color: #6b7280;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .filter-tab {
+            background: #f3f4f6;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        .filter-tab.active, .filter-tab:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .chapter-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .chapter-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        .chapter-number {
+            background: #3b82f6;
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .chapter-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.75rem;
+        }
+        .chapter-description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        .chapter-progress {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .progress-bar {
+            flex: 1;
+            background: #e5e7eb;
+            height: 6px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: #10b981;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        .progress-text {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 500;
+        }
+        .chapter-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background: #f8fafc;
+            color: #3b82f6;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .chapter-link:hover {
+            background: #3b82f6;
+            color: white;
+        }
+        .chapter-category {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #dbeafe;
+            color: #1d4ed8;
+            border-radius: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .appendix-section {
+            background: #f8fafc;
+            padding: 4rem 0;
+            margin: 2rem 0;
+        }
+        .appendix-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #3b82f6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .appendix-number {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .appendix-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+        .appendix-subtitle {
+            color: #6b7280;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        .appendix-description {
+            color: #4b5563;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+        .appendix-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            background: #f1f5f9;
+            border-radius: 6px;
+        }
+        .feature-icon {
+            font-size: 1.2rem;
+        }
+        .feature-text {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #475569;
+        }
+        .appendix-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        .appendix-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+        .quick-links {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0;
+        }
+        .quick-links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .quick-link-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .quick-link-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .quick-link-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        .quick-link-desc {
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        .quick-link-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .quick-link-btn:hover {
+            background: #2563eb;
+        }
+    </style>
 </head>
 <body>
-    <header class="site-header">
+    <header class="dashboard-hero">
         <div class="container">
-            <div class="logo-wrapper">
-                <img src="shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+            <div class="hero-content">
                 <h1>The Canadian Style</h1>
+                <p class="hero-subtitle">Master Canadian English writing conventions through interactive learning</p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalProgress">0%</div>
+                        <div class="stat-label">Overall Progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="chaptersCompleted">0</div>
+                        <div class="stat-label">Chapters Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="sectionsCompleted">0</div>
+                        <div class="stat-label">Sections Completed</div>
+                    </div>
+                </div>
             </div>
-            <nav class="chapter-nav">
-                <button class="btn btn-outline" onclick="showProgressStats()">📊 My Progress</button>
-                <button class="btn btn-outline" onclick="exportProgressData()">💾 Export Progress</button>
-                <button class="btn btn-outline" onclick="showAbout()">ℹ️ About</button>
-            </nav>
         </div>
     </header>
 
-    <section class="welcome-section">
-        <div class="container">
-            <h2>Master Canadian Government Writing Style</h2>
-            <p>Learn the official style guide for Government of Canada communications through interactive lessons, quizzes, and practical examples.</p>
-            <div class="welcome-stats" id="welcomeStats">
-                <div class="stat-item">
-                    <span class="stat-number" id="totalProgress">0%</span>
-                    <span class="stat-label">Complete</span>
+    <main>
+        <!-- Chapters Section -->
+        <section class="chapters-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Interactive Chapters</h2>
+                    <p class="section-description">
+                        Learn Canadian writing conventions through structured lessons, interactive exercises, and practical examples.
+                    </p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="chaptersCompleted">0</span>
-                    <span class="stat-label">Chapters Done</span>
+
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All Chapters</button>
+                    <button class="filter-tab" data-filter="basics">Basics</button>
+                    <button class="filter-tab" data-filter="typography">Typography</button>
+                    <button class="filter-tab" data-filter="style">Style</button>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number" id="sectionsCompleted">0</span>
-                    <span class="stat-label">Sections Done</span>
+
+                <div class="chapters-grid" id="chaptersGrid">
+                    <!-- Chapters will be dynamically generated -->
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="filter-section">
-        <div class="container">
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    📚 All Chapters (16)
-                </button>
-                <button class="filter-btn" data-filter="typography">
-                    🔤 Typography & Format (11)
-                </button>
-                <button class="filter-btn" data-filter="style">
-                    ✍️ Style & Usage (5)
-                </button>
-            </div>
+        <!-- Appendices Section -->
+        <section class="appendix-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Reference Materials</h2>
+                    <p class="section-description">
+                        Essential appendices and reference guides for specialized writing situations.
+                    </p>
+                </div>
 
-            <div class="chapters-grid" id="chaptersGrid">
-                <!-- Chapter cards will be generated here -->
+                <div class="appendix-card">
+                    <div class="appendix-number">A</div>
+                    <h3 class="appendix-title">French Words in English Text</h3>
+                    <p class="appendix-subtitle">Essential guide for bilingual Canadian writing</p>
+                    
+                    <p class="appendix-description">
+                        As Canada's official languages are English and French, Canadian English frequently incorporates French words and phrases. This comprehensive appendix provides detailed guidance on proper usage, spelling, and presentation of French expressions in English documents.
+                    </p>
+                    
+                    <div class="appendix-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎨</span>
+                            <span class="feature-text">Italicization Rules</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">✏️</span>
+                            <span class="feature-text">Accent Mark Guidelines</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📝</span>
+                            <span class="feature-text">Plural Formation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔤</span>
+                            <span class="feature-text">Capitalization Rules</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📊</span>
+                            <span class="feature-text">Decision Trees</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">💡</span>
+                            <span class="feature-text">Common Examples</span>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <a href="chapters/french-words-appendix.html" class="appendix-link">
+                            📖 Access Appendix A
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Modals -->
-    <div id="progressModal" class="completion-modal" style="display: none;">
-        <div class="modal-content">
-            <h3>📊 Your Learning Progress</h3>
-            <div id="progressDetails">
-                <!-- Progress details will be inserted here -->
-            </div>
-            <div class="modal-actions">
-                <button class="btn btn-outline" onclick="closeModal('progressModal')">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="aboutModal" class="completion-modal" style="display: none;">
-        <div class="modal-content">
-            <h3>ℹ️ About The Canadian Style</h3>
-            <div class="about-content">
-                <p>This interactive learning platform is based on <em>The Canadian Style: A Guide to Writing and Editing</em> (1997 revised edition) by the Government of Canada.</p>
+        <!-- Quick Links Section -->
+        <section class="quick-links">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" style="color: white;">Quick Access</h2>
+                </div>
                 
-                <h4>Features:</h4>
-                <ul>
-                    <li>📖 16 comprehensive chapters covering all aspects of Canadian government writing</li>
-                    <li>🎯 Interactive quizzes with immediate feedback</li>
-                    <li>📊 Progress tracking and completion certificates</li>
-                    <li>💾 Offline capability - no internet required after loading</li>
-                    <li>📱 Responsive design for desktop and mobile</li>
-                </ul>
-
-                <h4>Chapter Categories:</h4>
-                <p><strong>Typography & Format (Chapters 1-11):</strong> Technical aspects of writing including abbreviations, punctuation, capitalization, and document formatting.</p>
-                <p><strong>Style & Usage (Chapters 12-16):</strong> Writing style, plain language principles, inclusive language, and editing practices.</p>
-                
-                <p class="text-sm text-gray-600 mt-4">© 2024 Government of Canada. Original content subject to Crown Copyright.</p>
+                <div class="quick-links-grid">
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">🚀</div>
+                        <h3 class="quick-link-title">Start Learning</h3>
+                        <p class="quick-link-desc">Begin with Chapter 1 and build your foundation</p>
+                        <a href="chapters/ch01.html" class="quick-link-btn">Chapter 1: Abbreviations</a>
+                    </div>
+                    
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">🇫🇷</div>
+                        <h3 class="quick-link-title">Bilingual Writing</h3>
+                        <p class="quick-link-desc">Master French-English integration</p>
+                        <a href="chapters/french-words-appendix.html" class="quick-link-btn">Appendix A</a>
+                    </div>
+                    
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">📋</div>
+                        <h3 class="quick-link-title">Revision Checklist</h3>
+                        <p class="quick-link-desc">Perfect your editing skills</p>
+                        <a href="chapters/ch16.html" class="quick-link-btn">Chapter 16</a>
+                    </div>
+                    
+                    <div class="quick-link-card">
+                        <div class="quick-link-icon">🎯</div>
+                        <h3 class="quick-link-title">Style Guide</h3>
+                        <p class="quick-link-desc">Essential capitalization rules</p>
+                        <a href="chapters/ch04.html" class="quick-link-btn">Chapter 4</a>
+                    </div>
+                </div>
             </div>
-            <div class="modal-actions">
-                <button class="btn btn-primary" onclick="closeModal('aboutModal')">Got it!</button>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
@@ -109,27 +454,21 @@
         </div>
     </footer>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="shared/js/progress.js"></script>
-    <script type="module" src="shared/js/components.js"></script>
-
-    <script type="module">
-        import { getOverallProgress, getDetailedChapterProgress, resetAllProgress as resetProgress, exportProgress, importProgress } from './shared/js/progress.js';
-
-        // Chapter configuration - matches chapters.json
+    <script>
+        // Chapter configuration
         const CHAPTERS_CONFIG = {
-            ch01: { number: "01", title: "Abbreviations", description: "Learn the proper use of abbreviations in Canadian government writing.", category: "typography" },
-            ch02: { number: "02", title: "Hyphenation", description: "Master hyphenation, compounding, and word division.", category: "typography" },
-            ch03: { number: "03", title: "Spelling", description: "Use correct Canadian spelling conventions.", category: "typography" },
-            ch04: { number: "04", title: "Capitalization", description: "Apply proper capitalization rules for Canadian government documents.", category: "typography" },
-            ch05: { number: "05", title: "Numerical Expressions", description: "Handle numbers, percentages, and measurements correctly.", category: "typography" },
-            ch06: { number: "06", title: "Italics", description: "Use italics appropriately in government writing.", category: "typography" },
-            ch07: { number: "07", title: "Punctuation", description: "Master comma, semicolon, and other punctuation marks.", category: "typography" },
-            ch08: { number: "08", title: "Quotation Marks", description: "Handle quotations and dialogue properly.", category: "typography" },
-            ch09: { number: "09", title: "Reference Matter", description: "Create proper footnotes, citations, and bibliographies.", category: "typography" },
-            ch10: { number: "10", title: "Letters & Memos", description: "Format professional correspondence correctly.", category: "typography" },
-            ch11: { number: "11", title: "Reports & Minutes", description: "Structure formal documents and meeting records.", category: "typography" },
-            ch12: { number: "12", title: "Usages", description: "Choose the right words and expressions for professional writing.", category: "style" },
+            ch01: { number: "1", title: "Abbreviations", description: "Learn proper abbreviation usage and formatting.", category: "basics" },
+            ch02: { number: "2", title: "Hyphenation", description: "Master compound words and word division.", category: "basics" },
+            ch03: { number: "3", title: "Spelling", description: "Canadian spelling conventions and common errors.", category: "basics" },
+            ch04: { number: "4", title: "Capitalization", description: "Rules for proper capitalization in Canadian English.", category: "basics" },
+            ch05: { number: "5", title: "Numerical Expressions", description: "Format numbers, dates, and measurements correctly.", category: "basics" },
+            ch06: { number: "6", title: "Italics", description: "When and how to use italics effectively.", category: "typography" },
+            ch07: { number: "7", title: "Punctuation", description: "Master punctuation marks and their proper usage.", category: "typography" },
+            ch08: { number: "8", title: "Quotations", description: "Handle direct and indirect quotations properly.", category: "typography" },
+            ch09: { number: "9", title: "Reference Matter", description: "Format footnotes, citations, and bibliographies.", category: "typography" },
+            ch10: { number: "10", title: "Letters & Memos", description: "Professional correspondence formats.", category: "typography" },
+            ch11: { number: "11", title: "Reports & Minutes", description: "Structure formal documents effectively.", category: "typography" },
+            ch12: { number: "12", title: "Usage", description: "Common word usage problems and solutions.", category: "style" },
             ch13: { number: "13", title: "Plain Language", description: "Write clearly and accessibly for all readers.", category: "style" },
             ch14: { number: "14", title: "Bias-Free Language", description: "Use inclusive and respectful language.", category: "style" },
             ch15: { number: "15", title: "Geographical Names", description: "Handle place names and geographical references.", category: "style" },
@@ -178,35 +517,24 @@
             try {
                 const cards = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
                     const progress = getDetailedChapterProgress(id);
-                    const percentage = progress && progress.totalSections > 0 ?
+                    const percentage = progress && progress.totalSections > 0 ? 
                         Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
                     
                     return `
-                        <div class="chapter-card" data-category="${config.category}" data-chapter="${id}">
-                            <div class="card-header">
-                                <div class="chapter-number">${config.number}</div>
-                                <div class="card-title">
-                                    <h3>${config.title}</h3>
-                                    <span class="category-label">${config.category}</span>
+                        <div class="chapter-card" data-category="${config.category}">
+                            <div class="chapter-category">${config.category}</div>
+                            <div class="chapter-number">${config.number}</div>
+                            <h3 class="chapter-title">${config.title}</h3>
+                            <p class="chapter-description">${config.description}</p>
+                            <div class="chapter-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${percentage}%"></div>
                                 </div>
+                                <span class="progress-text">${percentage}%</span>
                             </div>
-                            <div class="card-description">
-                                <p>${config.description}</p>
-                            </div>
-                            <div class="card-footer">
-                                <div class="progress-container">
-                                    <svg class="progress-ring" width="60" height="60">
-                                        <circle class="progress-circle" cx="30" cy="30" r="26" style="stroke-dasharray: ${163.3 * percentage / 100} 163.3;"></circle>
-                                        <circle class="progress-circle progress" cx="30" cy="30" r="26"></circle>
-                                    </svg>
-                                    <span class="progress-text">${percentage}% done</span>
-                                </div>
-                                <div class="card-actions">
-                                    <a href="chapters/${id}.html" class="btn btn-primary">
-                                        ${percentage > 0 ? 'Continue' : 'Start Chapter'}
-                                    </a>
-                                </div>
-                            </div>
+                            <a href="chapters/${id}.html" class="chapter-link">
+                                Start Chapter →
+                            </a>
                         </div>
                     `;
                 }).join('');
@@ -214,443 +542,97 @@
                 grid.innerHTML = cards;
             } catch (error) {
                 console.error('Error generating chapter cards:', error);
+                grid.innerHTML = '<p>Error loading chapters. Please refresh the page.</p>';
             }
-        }
-
-        // Apply filter
-        function applyFilter(filter) {
-            currentFilter = filter;
-            
-            // Update active button
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.filter === filter);
-            });
-            
-            // Show/hide cards
-            document.querySelectorAll('.chapter-card').forEach(card => {
-                const category = card.dataset.category;
-                card.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
-            });
-
-            // Update filter button text with counts
-            updateFilterCounts();
-        }
-
-        // Update filter button counts
-        function updateFilterCounts() {
-            const allCount = Object.keys(CHAPTERS_CONFIG).length;
-            const typographyCount = Object.values(CHAPTERS_CONFIG).filter(c => c.category === 'typography').length;
-            const styleCount = Object.values(CHAPTERS_CONFIG).filter(c => c.category === 'style').length;
-
-            document.querySelector('[data-filter="all"]').innerHTML = `📚 All Chapters (${allCount})`;
-            document.querySelector('[data-filter="typography"]').innerHTML = `🔤 Typography & Format (${typographyCount})`;
-            document.querySelector('[data-filter="style"]').innerHTML = `✍️ Style & Usage (${styleCount})`;
         }
 
         // Setup event listeners
         function setupEventListeners() {
-            // Filter buttons
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    applyFilter(btn.dataset.filter);
+            // Filter tabs
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const filter = tab.dataset.filter;
+                    setActiveFilter(filter);
+                    filterChapters(filter);
                 });
-            });
-
-            // Listen for progress changes
-            window.addEventListener('progress-changed', () => {
-                updateWelcomeStats();
-                generateChapterCards();
-                applyFilter(currentFilter);
-            });
-
-            // Keyboard shortcuts
-            document.addEventListener('keydown', (event) => {
-                if (event.ctrlKey || event.metaKey) {
-                    switch (event.key) {
-                        case '1':
-                            event.preventDefault();
-                            document.querySelector('[data-filter="all"]').click();
-                            break;
-                        case '2':
-                            event.preventDefault();
-                            document.querySelector('[data-filter="typography"]').click();
-                            break;
-                        case '3':
-                            event.preventDefault();
-                            document.querySelector('[data-filter="style"]').click();
-                            break;
-                    }
-                }
             });
         }
 
-        // Global functions for modal interactions
-        window.showProgressStats = function() {
-            const modal = document.getElementById('progressModal');
-            const details = document.getElementById('progressDetails');
-            
+        // Set active filter tab
+        function setActiveFilter(filter) {
+            const tabs = document.querySelectorAll('.filter-tab');
+            tabs.forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.filter === filter);
+            });
+            currentFilter = filter;
+        }
+
+        // Filter chapters by category
+        function filterChapters(filter) {
+            const cards = document.querySelectorAll('.chapter-card');
+            cards.forEach(card => {
+                const category = card.dataset.category;
+                const shouldShow = filter === 'all' || category === filter;
+                card.style.display = shouldShow ? 'block' : 'none';
+            });
+        }
+
+        // Progress tracking functions (simplified versions)
+        function getOverallProgress() {
             try {
-                const overallStats = getOverallProgress();
-                const chapterStats = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
-                    const progress = getDetailedChapterProgress(id);
-                    return {
-                        id,
-                        config,
-                        progress: progress || { completedSections: 0, totalSections: 0 }
-                    };
-                });
+                let totalSections = 0;
+                let completedSections = 0;
+                let completedChapters = 0;
 
-                details.innerHTML = `
-                    <div class="progress-summary">
-                        <h4>Overall Progress</h4>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats?.overallPercentage || 0}%</div>
-                                <div class="stat-label">Total Complete</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats?.completedSections || 0}</div>
-                                <div class="stat-label">Sections Done</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-value">${overallStats?.completedChapters || 0}</div>
-                                <div class="stat-label">Chapters Done</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="chapter-progress-list">
-                        <h4>Chapter Breakdown</h4>
-                        ${chapterStats.map(({ id, config, progress }) => {
-                            const percentage = progress.totalSections > 0 ?
-                                Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
-                            return `
-                                <div class="progress-item">
-                                    <div class="progress-info">
-                                        <span class="chapter-name">Chapter ${config.number}: ${config.title}</span>
-                                        <span class="progress-fraction">${progress.completedSections}/${progress.totalSections} sections</span>
-                                    </div>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: ${percentage}%"></div>
-                                    </div>
-                                    <span class="progress-percent">${percentage}%</span>
-                                </div>
-                            `;
-                        }).join('')}
-                    </div>
-                    
-                    <!-- כפתורי Import/Export -->
-                    <div class="progress-actions">
-                        <h4>📁 Backup & Restore</h4>
-                        <div class="action-buttons">
-                            <button class="btn btn-primary" onclick="exportProgressData()" title="Download your progress as a JSON file">
-                                📤 Export Progress
-                            </button>
-                            <button class="btn btn-secondary" onclick="importProgressData()" title="Upload a JSON file with progress data">
-                                📥 Import Progress
-                            </button>
-                            <button class="btn btn-danger" onclick="resetAllProgress()" title="Reset all progress">
-                                🗑️ Reset All
-                            </button>
-                        </div>
-                        <p class="backup-note">
-                            <small>💡 Tip: Backup your progress regularly to avoid losing your learning data</small>
-                        </p>
-                    </div>
-                `;
-                
-                modal.style.display = 'flex';
-            } catch (error) {
-                console.error('Error showing progress stats:', error);
-                alert('Error loading progress statistics. Please try again.');
-            }
-        };
-
-        // ✅ תיקון פונקציית exportProgressData
-        window.exportProgressData = function() {
-            try {
-                const progressData = exportProgress();
-                if (progressData) {
-                    const jsonString = JSON.stringify(progressData, null, 2);
-                    const blob = new Blob([jsonString], { type: 'application/json' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `canadian-style-progress-${new Date().toISOString().split('T')[0]}.json`;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(url);
-                    
-                    alert('Progress data exported successfully!');
-                } else {
-                    alert('Error exporting progress data.');
-                }
-            } catch (error) {
-                console.error('Error exporting progress:', error);
-                alert('Error exporting progress data. Please try again.');
-            }
-        };
-
-        // 📥 פונקציה לייבוא קובץ JSON
-        window.importProgressData = function() {
-            const fileInput = document.createElement('input');
-            fileInput.type = 'file';
-            fileInput.accept = '.json';
-            fileInput.style.display = 'none';
-            
-            fileInput.addEventListener('change', function(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-                
-                if (!file.name.toLowerCase().endsWith('.json')) {
-                    alert('Please select a valid JSON file.');
-                    return;
-                }
-                
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const jsonData = JSON.parse(e.target.result);
-                        
-                        if (confirm('Are you sure you want to import new progress data? This will replace your current progress.')) {
-                            const success = importProgress(jsonData);
-                            
-                            if (success) {
-                                alert('Progress data imported successfully!');
-                                // עדכון התצוגה
-                                updateWelcomeStats();
-                                generateChapterCards();
-                                applyFilter(currentFilter);
-                                closeModal('progressModal');
-                            } else {
-                                alert('Error importing progress data. Please check that the file is valid.');
-                            }
+                Object.keys(CHAPTERS_CONFIG).forEach(chapterId => {
+                    const progress = getDetailedChapterProgress(chapterId);
+                    if (progress) {
+                        totalSections += progress.totalSections;
+                        completedSections += progress.completedSections;
+                        if (progress.completedSections === progress.totalSections && progress.totalSections > 0) {
+                            completedChapters++;
                         }
-                    } catch (error) {
-                        console.error('Error importing progress:', error);
-                        alert('Error reading the file. Please check that the file is valid and try again.');
                     }
+                });
+
+                const overallPercentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
+
+                return {
+                    overallPercentage,
+                    completedChapters,
+                    completedSections,
+                    totalSections
                 };
-                
-                reader.onerror = function() {
-                    alert('Error reading the file. Please try again.');
-                };
-                
-                reader.readAsText(file);
-            });
-            
-            document.body.appendChild(fileInput);
-            fileInput.click();
-            document.body.removeChild(fileInput);
-        };
-
-        window.resetAllProgress = function() {
-            if (confirm('Are you sure you want to reset ALL progress? This cannot be undone.')) {
-                try {
-                    resetProgress();
-                    updateWelcomeStats();
-                    generateChapterCards();
-                    applyFilter(currentFilter);
-                    closeModal('progressModal');
-                    alert('All progress has been reset.');
-                } catch (error) {
-                    console.error('Error resetting progress:', error);
-                    alert('Error resetting progress. Please try again.');
-                }
+            } catch (error) {
+                console.error('Error calculating overall progress:', error);
+                return { overallPercentage: 0, completedChapters: 0, completedSections: 0, totalSections: 0 };
             }
-        };
-
-        window.showAbout = function() {
-            document.getElementById('aboutModal').style.display = 'flex';
-        };
-
-        window.closeModal = function(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-        };
-
-        // Close modals when clicking outside
-        document.addEventListener('click', (event) => {
-            if (event.target.classList.contains('completion-modal')) {
-                event.target.style.display = 'none';
-            }
-        });
-
-        // Initialize when DOM is loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeDashboard);
-        } else {
-            initializeDashboard();
         }
+
+        function getDetailedChapterProgress(chapterId) {
+            try {
+                const progress = JSON.parse(localStorage.getItem(`progress_${chapterId}`) || '{}');
+                
+                // Estimate sections per chapter (this would normally come from chapter data)
+                const estimatedSections = 8;
+                const completedSections = Object.values(progress).filter(Boolean).length;
+                
+                return {
+                    totalSections: estimatedSections,
+                    completedSections: Math.min(completedSections, estimatedSections)
+                };
+            } catch (error) {
+                console.error(`Error getting progress for ${chapterId}:`, error);
+                return { totalSections: 8, completedSections: 0 };
+            }
+        }
+
+        // Initialize dashboard when page loads
+        document.addEventListener('DOMContentLoaded', initializeDashboard);
+
+        // Refresh stats periodically
+        setInterval(updateWelcomeStats, 5000);
     </script>
-
-    <style>
-        /* Additional dashboard-specific styles */
-        .welcome-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: var(--cs-space-l);
-            margin-top: var(--cs-space-xl);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .stat-item {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: var(--cs-space-m);
-            border-radius: var(--cs-border-radius-lg);
-        }
-        
-        .stat-number {
-            display: block;
-            font-size: var(--cs-font-size-3xl);
-            font-weight: var(--cs-font-weight-bold);
-            margin-bottom: var(--cs-space-xs);
-        }
-        
-        .stat-label {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: var(--cs-font-size-sm);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .progress-item {
-            display: grid;
-            grid-template-columns: 2fr 1fr auto;
-            align-items: center;
-            gap: var(--cs-space-m);
-            padding: var(--cs-space-m);
-            border-bottom: 1px solid var(--cs-grey-200);
-        }
-        
-        .progress-item:last-child {
-            border-bottom: none;
-        }
-        
-        .progress-info {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .chapter-name {
-            font-weight: var(--cs-font-weight-medium);
-            margin-bottom: var(--cs-space-xs);
-        }
-        
-        .progress-fraction {
-            font-size: var(--cs-font-size-sm);
-            color: var(--cs-grey-600);
-        }
-        
-        .progress-percent {
-            font-weight: var(--cs-font-weight-bold);
-            color: var(--cs-red);
-            text-align: right;
-        }
-        
-        .about-content {
-            text-align: left;
-            max-height: 400px;
-            overflow-y: auto;
-        }
-        
-        .about-content h4 {
-            color: var(--cs-red);
-            margin-top: var(--cs-space-l);
-        }
-        
-        .about-content ul {
-            margin: var(--cs-space-m) 0;
-        }
-        
-        .progress-summary {
-            margin-bottom: var(--cs-space-xl);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: var(--cs-space-l);
-            margin-top: var(--cs-space-l);
-        }
-        
-        .stat-card {
-            text-align: center;
-            padding: var(--cs-space-l);
-            background: var(--cs-grey-50);
-            border-radius: var(--cs-border-radius-lg);
-            border: 1px solid var(--cs-grey-200);
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: var(--cs-font-size-2xl);
-            font-weight: var(--cs-font-weight-bold);
-            color: var(--cs-red);
-            margin-bottom: var(--cs-space-xs);
-        }
-        
-        .chapter-progress-list {
-            margin-top: var(--cs-space-xl);
-        }
-        
-        .progress-actions {
-            margin-top: var(--cs-space-xl);
-            padding-top: var(--cs-space-l);
-            border-top: 1px solid var(--cs-grey-200);
-        }
-        
-        .action-buttons {
-            display: flex;
-            gap: var(--cs-space-m);
-            margin-bottom: var(--cs-space-m);
-            flex-wrap: wrap;
-        }
-        
-        .backup-note {
-            margin: 0;
-            text-align: center;
-            color: var(--cs-grey-600);
-        }
-        
-        .btn-danger {
-            background-color: #dc3545;
-            border-color: #dc3545;
-            color: white;
-        }
-        
-        .btn-danger:hover {
-            background-color: #c82333;
-            border-color: #bd2130;
-        }
-        
-        @media (max-width: 768px) {
-            .welcome-stats {
-                grid-template-columns: repeat(3, 1fr);
-                gap: var(--cs-space-m);
-            }
-            
-            .stat-number {
-                font-size: var(--cs-font-size-2xl);
-            }
-            
-            .progress-item {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: var(--cs-space-s);
-            }
-            
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-            }
-        }
-    </style>
 </body>
 </html>
