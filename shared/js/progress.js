@@ -492,7 +492,7 @@ export function importProgress(importData) {
  * Reset all progress data
  * @returns {boolean} Success status
  */
-export function resetProgress() {
+export function resetAllProgress() {
     try {
         const confirmed = confirm('Are you sure you want to reset all progress? This action cannot be undone.');
         if (!confirmed) return false;
@@ -554,7 +554,7 @@ if (typeof window !== 'undefined') {
         getCurrentProgress,
         exportProgress,
         importProgress,
-        resetProgress,
+        resetAllProgress,
         getOverallProgress,
         getDetailedChapterProgress
     };
