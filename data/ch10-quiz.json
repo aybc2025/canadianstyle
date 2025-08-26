@@ -1,265 +1,466 @@
 {
-  "id": "ch10",
-  "title": "Letters and Memorandums",
-  "description": "Master professional correspondence formatting and style",
+  "chapter": "ch10",
+  "title": "Letters & Memorandums",
+  "description": "Test your knowledge of professional correspondence, formatting standards, and communication best practices.",
   "sections": {
-    "letter-format": {
-      "id": "letter-format",
-      "title": "Letter Format and Structure Quiz",
+    "business-letters": {
+      "id": "business-letters-quiz",
+      "title": "Business Letters",
       "questions": [
         {
-          "id": "format-q1",
-          "type": "drag-drop",
-          "stem": "Arrange the parts of a business letter in correct order:",
-          "instructions": "Order from top to bottom of the letter:",
-          "items": [
-            {"text": "Letterhead/Return Address", "order": 1},
-            {"text": "Date", "order": 2},
-            {"text": "Inside Address", "order": 3},
-            {"text": "Salutation", "order": 4},
-            {"text": "Body", "order": 5},
-            {"text": "Complimentary Close", "order": 6},
-            {"text": "Signature Block", "order": 7}
+          "id": "bl-01",
+          "type": "mcq",
+          "stem": "What are the essential components of a professional business letter?",
+          "options": [
+            {"label": "Letterhead, date, address, body, signature", "correct": false},
+            {"label": "Letterhead, date, inside address, salutation, body, closing, signature block", "correct": true},
+            {"label": "Date, address, greeting, message, name", "correct": false},
+            {"label": "Header, content, footer", "correct": false}
           ],
-          "rationale": "This is the standard order for Canadian business letter format.",
+          "rationale": "Complete business letters include letterhead, date, inside address, salutation, body, complimentary close, and signature block with reference information.",
           "ref": "§10.02"
         },
         {
-          "id": "format-q2",
+          "id": "bl-02",
+          "type": "fill-blank",
+          "stem": "Business letter paragraphs should be kept focused and under ________ lines for optimal readability.",
+          "answer": "6",
+          "alternatives": ["six"],
+          "rationale": "Paragraphs should be kept under 6 lines to maintain readability and professional appearance.",
+          "ref": "§10.02"
+        },
+        {
+          "id": "bl-03",
           "type": "mcq",
-          "stem": "What spacing should be used between paragraphs in a business letter?",
+          "stem": "Which principle is most important for effective business correspondence?",
           "options": [
-            {"label": "Single spacing throughout", "correct": false},
-            {"label": "Double spacing throughout", "correct": false},
-            {"label": "Single space within paragraphs, double space between paragraphs", "correct": true},
-            {"label": "No specific spacing requirement", "correct": false}
+            {"label": "Using impressive vocabulary", "correct": false},
+            {"label": "Writing lengthy detailed explanations", "correct": false},
+            {"label": "Stating your purpose clearly and concisely", "correct": true},
+            {"label": "Including many examples", "correct": false}
           ],
-          "rationale": "Canadian business letters use single spacing within paragraphs and double spacing between elements.",
+          "rationale": "Clarity is the most important principle - stating your purpose clearly and concisely ensures effective communication.",
+          "ref": "§10.02"
+        },
+        {
+          "id": "bl-04",
+          "type": "error-spot",
+          "stem": "Find the formatting error in this letter opening:",
+          "text": "December 3rd, 2024\n\nDear Mr. Smith,\n\nI hope this letter finds you well.",
+          "errors": [
+            {"text": "Dear Mr. Smith,", "position": 3, "correction": "Dear Mr. Smith:", "reason": "Formal business letters use colons after salutations, not commas"}
+          ],
+          "rationale": "Professional business letters use colons (:) after formal salutations, while commas are reserved for informal communications.",
+          "ref": "§10.02"
+        },
+        {
+          "id": "bl-05",
+          "type": "mcq",
+          "stem": "What information should be included in a complete signature block?",
+          "options": [
+            {"label": "Just name and title", "correct": false},
+            {"label": "Name, title, organization, and contact information", "correct": true},
+            {"label": "Name and phone number only", "correct": false},
+            {"label": "Handwritten signature only", "correct": false}
+          ],
+          "rationale": "Complete signature blocks include name, title, organization, and contact information for easy follow-up.",
+          "ref": "§10.02"
+        }
+      ]
+    },
+    "letter-templates": {
+      "id": "letter-templates-quiz",
+      "title": "Letter Templates and Types",
+      "questions": [
+        {
+          "id": "lt-01",
+          "type": "mcq",
+          "stem": "What should an information request letter specifically include?",
+          "options": [
+            {"label": "General request for help", "correct": false},
+            {"label": "Detailed list of specific information needed, purpose, and data sharing terms", "correct": true},
+            {"label": "Only contact information", "correct": false},
+            {"label": "Timeline without specifics", "correct": false}
+          ],
+          "rationale": "Information request letters should specify exactly what information is needed, explain the purpose, and clarify data sharing arrangements.",
+          "ref": "§10.03"
+        },
+        {
+          "id": "lt-02",
+          "type": "fill-blank",
+          "stem": "Policy announcement letters should include a clear ________ line to identify the topic immediately.",
+          "answer": "subject",
+          "alternatives": ["Subject"],
+          "rationale": "Policy announcement letters should include a clear subject line to help recipients immediately identify the policy being announced.",
+          "ref": "§10.03"
+        },
+        {
+          "id": "lt-03",
+          "type": "mcq",
+          "stem": "What is the primary purpose of a follow-up letter?",
+          "options": [
+            {"label": "To introduce a new topic", "correct": false},
+            {"label": "To address previous communication and specify required actions", "correct": true},
+            {"label": "To apologize for mistakes", "correct": false},
+            {"label": "To request a meeting", "correct": false}
+          ],
+          "rationale": "Follow-up letters address previous communications and clearly specify what actions are required by when.",
+          "ref": "§10.03"
+        },
+        {
+          "id": "lt-04",
+          "type": "matching",
+          "stem": "Match each letter type with its primary characteristic:",
+          "pairs": [
+            {"left": "Information Request", "right": "Specific data needs with clear purpose"},
+            {"left": "Policy Announcement", "right": "Key changes with implementation timeline"},
+            {"left": "Follow-up Letter", "right": "Previous communication reference with required actions"},
+            {"left": "Transmittal Letter", "right": "Document accompaniment with context"}
+          ],
+          "rationale": "Each letter type has specific characteristics that serve different communication purposes.",
+          "ref": "§10.03"
+        },
+        {
+          "id": "lt-05",
+          "type": "mcq",
+          "stem": "When writing policy announcement letters, what format works best for presenting changes?",
+          "options": [
+            {"label": "Continuous paragraph format", "correct": false},
+            {"label": "Bullet points or numbered lists for key changes", "correct": true},
+            {"label": "Footnotes for all details", "correct": false},
+            {"label": "Appendix references only", "correct": false}
+          ],
+          "rationale": "Bullet points or numbered lists make key policy changes more scannable and easier to understand.",
+          "ref": "§10.03"
+        }
+      ]
+    },
+    "memos": {
+      "id": "memos-quiz",
+      "title": "Memorandums",
+      "questions": [
+        {
+          "id": "memo-01",
+          "type": "mcq",
+          "stem": "What is the correct order for memo header elements?",
+          "options": [
+            {"label": "TO, FROM, SUBJECT, DATE", "correct": false},
+            {"label": "TO, FROM, DATE, SUBJECT", "correct": true},
+            {"label": "FROM, TO, DATE, SUBJECT", "correct": false},
+            {"label": "DATE, TO, FROM, SUBJECT", "correct": false}
+          ],
+          "rationale": "Standard memo format uses: TO, FROM, DATE, SUBJECT as the header sequence.",
+          "ref": "§10.04"
+        },
+        {
+          "id": "memo-02",
+          "type": "fill-blank",
+          "stem": "Memorandums are primarily used for ________ communications within organizations.",
+          "answer": "internal",
+          "alternatives": ["Internal"],
+          "rationale": "Memorandums are internal communications used for information sharing and decision documentation within organizations.",
+          "ref": "§10.04"
+        },
+        {
+          "id": "memo-03",
+          "type": "mcq",
+          "stem": "What type of memo would be used to request action by a specific deadline?",
+          "options": [
+            {"label": "Information memo", "correct": false},
+            {"label": "Action memo", "correct": true},
+            {"label": "Decision memo", "correct": false},
+            {"label": "Status memo", "correct": false}
+          ],
+          "rationale": "Action memos are used for requests that require specific action, including deadline notifications and task assignments.",
+          "ref": "§10.04"
+        },
+        {
+          "id": "memo-04",
+          "type": "error-spot",
+          "stem": "Find the error in this memo header:",
+          "text": "MEMORANDUM\n\nTO: All Staff\nFROM: Manager, John Smith\nSUBJECT: New Policy\nDATE: March 15, 2024",
+          "errors": [
+            {"text": "FROM: Manager, John Smith\nSUBJECT: New Policy\nDATE: March 15, 2024", "position": 4, "correction": "FROM: John Smith, Manager\nDATE: March 15, 2024\nSUBJECT: New Policy", "reason": "DATE should come before SUBJECT, and title follows name"}
+          ],
+          "rationale": "Proper memo format is TO, FROM (name, title), DATE, SUBJECT.",
+          "ref": "§10.04"
+        },
+        {
+          "id": "memo-05",
+          "type": "mcq",
+          "stem": "Which memo structure element helps readers quickly understand the main message?",
+          "options": [
+            {"label": "Long introduction paragraph", "correct": false},
+            {"label": "Clear subject line and purpose statement", "correct": true},
+            {"label": "Detailed background section", "correct": false},
+            {"label": "Multiple attachments", "correct": false}
+          ],
+          "rationale": "Clear subject lines and purpose statements help readers immediately understand the memo's main message and importance.",
+          "ref": "§10.04"
+        }
+      ]
+    },
+    "formatting": {
+      "id": "formatting-quiz",
+      "title": "Formatting Standards",
+      "questions": [
+        {
+          "id": "format-01",
+          "type": "mcq",
+          "stem": "What are the standard margins for business correspondence?",
+          "options": [
+            {"label": "0.5 inches (13 mm) all sides", "correct": false},
+            {"label": "1 inch (25 mm) all sides", "correct": true},
+            {"label": "1.5 inches (38 mm) all sides", "correct": false},
+            {"label": "Different margins for each side", "correct": false}
+          ],
+          "rationale": "Standard business correspondence uses 1 inch (25 mm) margins on all sides for professional appearance.",
           "ref": "§10.05"
         },
         {
-          "id": "format-q3",
+          "id": "format-02",
+          "type": "mcq",
+          "stem": "Which fonts are preferred for formal business letters?",
+          "options": [
+            {"label": "Comic Sans or decorative fonts", "correct": false},
+            {"label": "Times New Roman 12pt or Arial 11pt", "correct": true},
+            {"label": "Any font under 10pt", "correct": false},
+            {"label": "Multiple fonts for variety", "correct": false}
+          ],
+          "rationale": "Times New Roman 12pt and Arial 11pt are preferred for their professional appearance and readability.",
+          "ref": "§10.05"
+        },
+        {
+          "id": "format-03",
           "type": "fill-blank",
-          "stem": "Complete the proper date format for a Canadian business letter:",
-          "text": "_______ __, 2024",
-          "answers": ["March", "15"],
-          "hint": "Use the full month name and day without ordinal endings.",
-          "rationale": "Canadian business letters use the format: Month Day, Year (e.g., March 15, 2024).",
+          "stem": "The salutation should appear ________ lines below the inside address.",
+          "answer": "2",
+          "alternatives": ["two"],
+          "rationale": "Professional formatting requires 2 lines of space between the inside address and salutation.",
+          "ref": "§10.05"
+        },
+        {
+          "id": "format-04",
+          "type": "mcq",
+          "stem": "How should continuation pages be formatted?",
+          "options": [
+            {"label": "Use letterhead on all pages", "correct": false},
+            {"label": "Use plain paper with recipient name, page number, and date at top", "correct": true},
+            {"label": "No header information needed", "correct": false},
+            {"label": "Only page numbers required", "correct": false}
+          ],
+          "rationale": "Continuation pages use plain paper with recipient name, page number, and date at the top for identification.",
+          "ref": "§10.05"
+        },
+        {
+          "id": "format-05",
+          "type": "mcq",
+          "stem": "What spacing should be used within paragraphs and between paragraphs?",
+          "options": [
+            {"label": "Double space within and between paragraphs", "correct": false},
+            {"label": "Single space within paragraphs, one blank line between paragraphs", "correct": true},
+            {"label": "1.5 spacing throughout", "correct": false},
+            {"label": "No spacing rules needed", "correct": false}
+          ],
+          "rationale": "Professional correspondence uses single spacing within paragraphs and one blank line between paragraphs.",
+          "ref": "§10.05"
+        }
+      ]
+    },
+    "addresses-titles": {
+      "id": "addresses-titles-quiz",
+      "title": "Addresses and Titles",
+      "questions": [
+        {
+          "id": "addr-01",
+          "type": "mcq",
+          "stem": "What is the correct format for Canadian postal codes in addresses?",
+          "options": [
+            {"label": "K1A-0A6", "correct": false},
+            {"label": "K1A 0A6", "correct": true},
+            {"label": "K1A0A6", "correct": false},
+            {"label": "k1a 0a6", "correct": false}
+          ],
+          "rationale": "Canadian postal codes use the format: letter-number-letter space number-letter-number (K1A 0A6).",
+          "ref": "§10.06"
+        },
+        {
+          "id": "addr-02",
+          "type": "fill-blank",
+          "stem": "In Canadian addresses, there should be ________ spaces between the province abbreviation and postal code.",
+          "answer": "two",
+          "alternatives": ["2"],
+          "rationale": "Canadian addressing standards require two spaces between province abbreviation and postal code.",
+          "ref": "§10.06"
+        },
+        {
+          "id": "addr-03",
+          "type": "mcq",
+          "stem": "How should a Cabinet Minister be addressed?",
+          "options": [
+            {"label": "Mr./Ms. [Name]", "correct": false},
+            {"label": "The Honourable [Name]", "correct": true},
+            {"label": "Minister [Name]", "correct": false},
+            {"label": "The Right Honourable [Name]", "correct": false}
+          ],
+          "rationale": "Cabinet Ministers are addressed as 'The Honourable [Full Name]' in formal correspondence.",
+          "ref": "§10.06"
+        },
+        {
+          "id": "addr-04",
+          "type": "matching",
+          "stem": "Match the addressee with the correct salutation:",
+          "pairs": [
+            {"left": "Known individual", "right": "Dear Ms. Smith:"},
+            {"left": "Government Minister", "right": "Dear Minister:"},
+            {"left": "Unknown individual", "right": "Dear Sir or Madam:"},
+            {"left": "Close business contact", "right": "Dear John,"}
+          ],
+          "rationale": "Different relationships and contexts require different salutation formats for appropriate professional communication.",
+          "ref": "§10.06"
+        },
+        {
+          "id": "addr-05",
+          "type": "error-spot",
+          "stem": "Find the error in this address format:",
+          "text": "Dr. Susan Chen, PhD\nProfessor of Medicine\nUniversity of Toronto\n123 College Street\nToronto, ON K1A0A6",
+          "errors": [
+            {"text": "Toronto, ON K1A0A6", "position": 5, "correction": "Toronto, ON  K1A 0A6", "reason": "Need two spaces before postal code and space within postal code"}
+          ],
+          "rationale": "Canadian addresses require two spaces between province and postal code, and a space within the postal code format.",
           "ref": "§10.06"
         }
       ]
     },
-    "salutations-closings": {
-      "id": "salutations-closings",
-      "title": "Salutations and Closings Quiz",
+    "transmittal-letters": {
+      "id": "transmittal-letters-quiz",
+      "title": "Transmittal Letters",
       "questions": [
         {
-          "id": "sal-q1",
-          "type": "matching",
-          "stem": "Match each salutation with its appropriate use:",
-          "pairs": [
-            {"left": "Dear Mr. Smith:", "right": "Known male recipient"},
-            {"left": "Dear Ms. Johnson:", "right": "Known female recipient"},
-            {"left": "Dear Sir or Madam:", "right": "Unknown recipient"},
-            {"left": "To Whom It May Concern:", "right": "General inquiry"}
-          ],
-          "rationale": "Different salutations serve different purposes based on your knowledge of the recipient.",
-          "ref": "§10.17"
-        },
-        {
-          "id": "sal-q2",
+          "id": "trans-01",
           "type": "mcq",
-          "stem": "Which complimentary closing is most appropriate for a formal business letter?",
+          "stem": "What is the primary purpose of a transmittal letter?",
           "options": [
-            {"label": "Sincerely yours,", "correct": true},
-            {"label": "Best regards,", "correct": false},
-            {"label": "Yours truly,", "correct": false},
-            {"label": "Respectfully,", "correct": false}
+            {"label": "To replace the accompanying document", "correct": false},
+            {"label": "To provide context and highlight key points of accompanying documents", "correct": true},
+            {"label": "To apologize for document length", "correct": false},
+            {"label": "To request a meeting", "correct": false}
           ],
-          "rationale": "'Sincerely yours' is the most formal and widely accepted closing for Canadian business correspondence.",
-          "ref": "§10.20"
+          "rationale": "Transmittal letters provide context, explain why documents were prepared, and highlight key findings or recommendations.",
+          "ref": "§10.07"
         },
         {
-          "id": "sal-q3",
+          "id": "trans-02",
+          "type": "fill-blank",
+          "stem": "Transmittal letters should be kept to ________ pages maximum to maintain focus.",
+          "answer": "1-2",
+          "alternatives": ["1 to 2", "one to two"],
+          "rationale": "Transmittal letters should be concise, typically 1-2 pages maximum, focusing on what's most important to the reader.",
+          "ref": "§10.07"
+        },
+        {
+          "id": "trans-03",
+          "type": "mcq",
+          "stem": "What should be included when transmitting a research report?",
+          "options": [
+            {"label": "Only the report title", "correct": false},
+            {"label": "Research objectives, methodology summary, key conclusions, and implications", "correct": true},
+            {"label": "Complete reproduction of findings", "correct": false},
+            {"label": "Just the researcher's contact information", "correct": false}
+          ],
+          "rationale": "Research report transmittals should describe objectives, summarize methodology, present key conclusions, and discuss implications.",
+          "ref": "§10.07"
+        },
+        {
+          "id": "trans-04",
+          "type": "mcq",
+          "stem": "How should transmittal letters handle the relationship to the accompanying document?",
+          "options": [
+            {"label": "Repeat all information from the document", "correct": false},
+            {"label": "Focus on what's most important to the reader without repeating document content", "correct": true},
+            {"label": "Provide only administrative details", "correct": false},
+            {"label": "Include only the table of contents", "correct": false}
+          ],
+          "rationale": "Effective transmittal letters focus on what's most important to readers without repeating information from the accompanying document.",
+          "ref": "§10.07"
+        },
+        {
+          "id": "trans-05",
           "type": "error-spot",
-          "stem": "Find the punctuation error in this salutation:",
-          "text": "Dear Dr. Brown;",
-          "errorWord": ";",
-          "rationale": "Salutations should end with a colon (:) in business letters, not a semicolon.",
-          "ref": "§10.17"
-        }
-      ]
-    },
-    "addressing": {
-      "id": "addressing",
-      "title": "Addressing and Titles Quiz",
-      "questions": [
-        {
-          "id": "addr-q1",
-          "type": "mcq",
-          "stem": "How should titles be handled in the inside address?",
-          "options": [
-            {"label": "Always use full titles", "correct": true},
-            {"label": "Abbreviate all titles", "correct": false},
-            {"label": "Omit titles entirely", "correct": false},
-            {"label": "Use titles only for doctors", "correct": false}
+          "stem": "Find what's missing from this transmittal letter ending:",
+          "text": "I hope this report will be useful for your decision-making process.\n\nYours sincerely,\n\nJohn Smith\nSenior Analyst",
+          "errors": [
+            {"text": "I hope this report will be useful for your decision-making process.", "position": 1, "correction": "I am available to discuss the findings and answer any questions you may have.", "reason": "Should include clear availability for follow-up and specific action items"}
           ],
-          "rationale": "Use complete, properly spelled titles in the inside address for formality and accuracy.",
-          "ref": "§10.13"
-        },
-        {
-          "id": "addr-q2",
-          "type": "fill-blank",
-          "stem": "Complete the proper address format:",
-          "text": "Ms. Sarah ______\n______ Manager\nABC Corporation\n123 Main Street\n______, ON M5V 3A8",
-          "answers": ["Johnson", "Marketing", "Toronto"],
-          "hint": "Consider standard Canadian address formatting.",
-          "rationale": "Canadian addresses follow: Name, Title, Organization, Street, City, Province, Postal Code.",
-          "ref": "§10.13"
-        },
-        {
-          "id": "addr-q3",
-          "type": "error-spot",
-          "stem": "Find the error in this address:",
-          "text": "Mr. john smith\nSenior Analyst\n456 oak street\nVancouver, bc V6B 2M9",
-          "errorWord": "john",
-          "rationale": "Names should be properly capitalized: Mr. John Smith.",
-          "ref": "§10.13"
-        }
-      ]
-    },
-    "memorandums": {
-      "id": "memorandums",
-      "title": "Memorandums Quiz",
-      "questions": [
-        {
-          "id": "memo-q1",
-          "type": "mcq",
-          "stem": "What are the standard header elements of a memorandum?",
-          "options": [
-            {"label": "TO, FROM, DATE, SUBJECT", "correct": true},
-            {"label": "TO, FROM, RE, DATE", "correct": false},
-            {"label": "MEMO TO, FROM, REGARDING", "correct": false},
-            {"label": "ADDRESSEE, SENDER, DATE, TOPIC", "correct": false}
-          ],
-          "rationale": "Standard memo headers include TO, FROM, DATE, and SUBJECT in that order.",
-          "ref": "§10.27"
-        },
-        {
-          "id": "memo-q2",
-          "type": "fill-blank",
-          "stem": "Complete the memo header format:",
-          "text": "MEMORANDUM\n\n__: All Staff\n__: John Manager\n__: March 15, 2024\n__: New Office Policies",
-          "answers": ["TO", "FROM", "DATE", "SUBJECT"],
-          "rationale": "These are the four standard elements of a memo header.",
-          "ref": "§10.27"
-        },
-        {
-          "id": "memo-q3",
-          "type": "drag-drop",
-          "stem": "Arrange these memo characteristics from most to least formal:",
-          "instructions": "Most formal to least formal:",
-          "items": [
-            {"text": "Official company memo", "order": 1},
-            {"text": "Departmental memo", "order": 2},
-            {"text": "Team memo", "order": 3},
-            {"text": "Informal note", "order": 4}
-          ],
-          "rationale": "Formality decreases as the audience becomes smaller and more familiar.",
-          "ref": "§10.27"
-        }
-      ]
-    },
-    "special-elements": {
-      "id": "special-elements",
-      "title": "Special Elements Quiz",
-      "questions": [
-        {
-          "id": "spec-q1",
-          "type": "mcq",
-          "stem": "Where should the attention line be placed?",
-          "options": [
-            {"label": "Before the inside address", "correct": false},
-            {"label": "Between the inside address and salutation", "correct": true},
-            {"label": "After the salutation", "correct": false},
-            {"label": "At the end of the letter", "correct": false}
-          ],
-          "rationale": "The attention line goes between the inside address and the salutation when needed.",
-          "ref": "§10.16"
-        },
-        {
-          "id": "spec-q2",
-          "type": "fill-blank",
-          "stem": "Format the subject line correctly:",
-          "text": "____: Annual Budget Review",
-          "answer": "SUBJECT",
-          "hint": "Consider standard subject line formatting.",
-          "rationale": "Subject lines typically begin with 'SUBJECT:' or 'RE:' in capital letters.",
-          "ref": "§10.18"
-        },
-        {
-          "id": "spec-q3",
-          "type": "matching",
-          "stem": "Match each special notation with its placement:",
-          "pairs": [
-            {"left": "c: (copy notation)", "right": "After signature block"},
-            {"left": "CONFIDENTIAL", "right": "Top of letter"},
-            {"left": "Enclosure:", "right": "After signature block"},
-            {"left": "P.S.", "right": "After all other elements"}
-          ],
-          "rationale": "Different notations have specific placement requirements for clarity and convention.",
-          "ref": "§10.24-10.25"
+          "rationale": "Good transmittal letters include clear availability for follow-up and specify next steps or action items.",
+          "ref": "§10.07"
         }
       ]
     },
     "electronic-correspondence": {
-      "id": "electronic-correspondence",
-      "title": "Electronic Correspondence Quiz",
+      "id": "electronic-correspondence-quiz",
+      "title": "Electronic Correspondence",
       "questions": [
         {
-          "id": "email-q1",
+          "id": "email-01",
           "type": "mcq",
-          "stem": "How does email formatting differ from traditional letters?",
+          "stem": "What makes an effective email subject line?",
           "options": [
-            {"label": "No differences - use identical formatting", "correct": false},
-            {"label": "Less formal but maintain professional structure", "correct": true},
-            {"label": "Completely informal approach", "correct": false},
-            {"label": "Use only abbreviations and short forms", "correct": false}
+            {"label": "\"FYI\" or \"Important\"", "correct": false},
+            {"label": "Clear, specific, and informative with keywords", "correct": true},
+            {"label": "Very long detailed descriptions", "correct": false},
+            {"label": "No subject line needed", "correct": false}
           ],
-          "rationale": "Email can be less formal but should maintain professional standards and clear structure.",
-          "ref": "§10.07"
+          "rationale": "Effective subject lines are clear, specific, informative, and include keywords that help recipients understand the content and priority.",
+          "ref": "§10.08"
         },
         {
-          "id": "email-q2",
+          "id": "email-02",
+          "type": "fill-blank",
+          "stem": "Standard business emails should be responded to within ________ hours during business days.",
+          "answer": "24",
+          "alternatives": ["twenty-four"],
+          "rationale": "Professional email etiquette requires responding to standard business emails within 24 hours during business days.",
+          "ref": "§10.08"
+        },
+        {
+          "id": "email-03",
+          "type": "mcq",
+          "stem": "When should you use \"Reply All\" in email responses?",
+          "options": [
+            {"label": "Always to keep everyone informed", "correct": false},
+            {"label": "Only when all recipients need the information in your response", "correct": true},
+            {"label": "Never use Reply All", "correct": false},
+            {"label": "Only for urgent messages", "correct": false}
+          ],
+          "rationale": "Use 'Reply All' only when all recipients genuinely need the information in your response to avoid unnecessary email volume.",
+          "ref": "§10.08"
+        },
+        {
+          "id": "email-04",
+          "type": "mcq",
+          "stem": "What should be included in a professional email signature block?",
+          "options": [
+            {"label": "Just name and email", "correct": false},
+            {"label": "Name, title, organization, phone, email, and address", "correct": true},
+            {"label": "Only name and phone number", "correct": false},
+            {"label": "Personal quotes and images", "correct": false}
+          ],
+          "rationale": "Complete professional signatures include name, title, organization, phone, email, and mailing address for easy contact.",
+          "ref": "§10.08"
+        },
+        {
+          "id": "email-05",
           "type": "error-spot",
-          "stem": "Find the error in this email greeting:",
-          "text": "hello john,\n\ni hope this email finds you well.",
-          "errorWord": "hello",
-          "rationale": "Email greetings should be properly capitalized: Hello John, or Dear John,",
-          "ref": "§10.07"
-        },
-        {
-          "id": "email-q3",
-          "type": "drag-drop",
-          "stem": "Rank these email elements by importance:",
-          "instructions": "Most important to least important for professional email:",
-          "items": [
-            {"text": "Clear subject line", "order": 1},
-            {"text": "Professional greeting", "order": 2},
-            {"text": "Concise body", "order": 3},
-            {"text": "Appropriate signature", "order": 4}
+          "stem": "Find the security issue in this email practice:",
+          "text": "I'm forwarding this confidential salary information to the entire management team for their review without any security markings or encryption.",
+          "errors": [
+            {"text": "forwarding this confidential salary information to the entire management team without any security markings", "position": 2, "correction": "sending this confidential information only to authorized recipients with proper 'CONFIDENTIAL' marking", "reason": "Confidential information should be marked as such and sent only to authorized recipients"}
           ],
-          "rationale": "Subject line is crucial for email management, followed by professional greeting, clear content, and proper signature.",
-          "ref": "§10.07"
+          "rationale": "Sensitive information should be marked 'CONFIDENTIAL', sent only to authorized recipients, and use encryption when required.",
+          "ref": "§10.08"
         }
       ]
     }
-  },
-  "metadata": {
-    "totalQuestions": 21,
-    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
-    "difficulty": "intermediate",
-    "timeEstimate": "30-35 minutes",
-    "passingScore": 80
   }
 }
