@@ -121,15 +121,15 @@
             ch01: { number: "01", title: "Abbreviations", description: "Learn the proper use of abbreviations in Canadian government writing.", category: "typography" },
             ch02: { number: "02", title: "Hyphenation", description: "Master hyphenation, compounding, and word division.", category: "typography" },
             ch03: { number: "03", title: "Spelling", description: "Use correct Canadian spelling conventions.", category: "typography" },
-            ch04: { number: "04", title: "Capitalization", description: "Apply proper capitalization rules for Canadian writing.", category: "typography" },
-            ch05: { number: "05", title: "Numerical Expressions", description: "Express numbers correctly in government documents.", category: "typography" },
-            ch06: { number: "06", title: "Italics", description: "Use italics effectively for emphasis and titles.", category: "typography" },
-            ch07: { number: "07", title: "Punctuation", description: "Master comprehensive punctuation rules.", category: "typography" },
-            ch08: { number: "08", title: "Quotations", description: "Handle quotations and quotation marks properly.", category: "typography" },
-            ch09: { number: "09", title: "Reference Matter", description: "Format footnotes, citations, and bibliographies.", category: "typography" },
-            ch10: { number: "10", title: "Letters and Memorandums", description: "Write professional correspondence.", category: "typography" },
-            ch11: { number: "11", title: "Reports and Minutes", description: "Structure formal reports and meeting minutes.", category: "typography" },
-            ch12: { number: "12", title: "Usages", description: "Navigate common usage questions and word choice.", category: "style" },
+            ch04: { number: "04", title: "Capitalization", description: "Apply proper capitalization rules for Canadian government documents.", category: "typography" },
+            ch05: { number: "05", title: "Numerical Expressions", description: "Handle numbers, percentages, and measurements correctly.", category: "typography" },
+            ch06: { number: "06", title: "Italics", description: "Use italics appropriately in government writing.", category: "typography" },
+            ch07: { number: "07", title: "Punctuation", description: "Master comma, semicolon, and other punctuation marks.", category: "typography" },
+            ch08: { number: "08", title: "Quotation Marks", description: "Handle quotations and dialogue properly.", category: "typography" },
+            ch09: { number: "09", title: "Reference Matter", description: "Create proper footnotes, citations, and bibliographies.", category: "typography" },
+            ch10: { number: "10", title: "Letters & Memos", description: "Format professional correspondence correctly.", category: "typography" },
+            ch11: { number: "11", title: "Reports & Minutes", description: "Structure formal documents and meeting records.", category: "typography" },
+            ch12: { number: "12", title: "Usages", description: "Choose the right words and expressions for professional writing.", category: "style" },
             ch13: { number: "13", title: "Plain Language", description: "Write clearly and accessibly for all readers.", category: "style" },
             ch14: { number: "14", title: "Bias-Free Language", description: "Use inclusive and respectful language.", category: "style" },
             ch15: { number: "15", title: "Geographical Names", description: "Handle place names and geographical references.", category: "style" },
@@ -145,16 +145,28 @@
             setupEventListeners();
         }
 
-        // Update welcome statistics
+        // ✅ תיקון: Update welcome statistics
         function updateWelcomeStats() {
             try {
                 const overallStats = getOverallProgress();
                 
-                document.getElementById('totalProgress').textContent = `${overallStats.percentage}%`;
-                document.getElementById('chaptersCompleted').textContent = overallStats.chaptersCompleted || 0;
-                document.getElementById('sectionsCompleted').textContent = overallStats.completedSections || 0;
+                // ✅ תיקון עיקרי: שינוי מ-percentage ל-overallPercentage
+                if (overallStats) {
+                    document.getElementById('totalProgress').textContent = `${overallStats.overallPercentage || 0}%`;
+                    document.getElementById('chaptersCompleted').textContent = overallStats.completedChapters || 0;
+                    document.getElementById('sectionsCompleted').textContent = overallStats.completedSections || 0;
+                } else {
+                    // ✅ fallback במקרה שהפונקציה מחזירה null
+                    document.getElementById('totalProgress').textContent = '0%';
+                    document.getElementById('chaptersCompleted').textContent = '0';
+                    document.getElementById('sectionsCompleted').textContent = '0';
+                }
             } catch (error) {
                 console.error('Error updating welcome stats:', error);
+                // ✅ הוספת fallback במקרה של שגיאה
+                document.getElementById('totalProgress').textContent = '0%';
+                document.getElementById('chaptersCompleted').textContent = '0';
+                document.getElementById('sectionsCompleted').textContent = '0';
             }
         }
 
@@ -166,7 +178,7 @@
             try {
                 const cards = Object.entries(CHAPTERS_CONFIG).map(([id, config]) => {
                     const progress = getDetailedChapterProgress(id);
-                    const percentage = progress && progress.totalSections > 0 ? 
+                    const percentage = progress && progress.totalSections > 0 ?
                         Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
                     
                     return `
@@ -293,15 +305,15 @@
                         <h4>Overall Progress</h4>
                         <div class="stats-grid">
                             <div class="stat-card">
-                                <div class="stat-value">${overallStats.percentage}%</div>
+                                <div class="stat-value">${overallStats?.overallPercentage || 0}%</div>
                                 <div class="stat-label">Total Complete</div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-value">${overallStats.completedSections}</div>
+                                <div class="stat-value">${overallStats?.completedSections || 0}</div>
                                 <div class="stat-label">Sections Done</div>
                             </div>
                             <div class="stat-card">
-                                <div class="stat-value">${overallStats.chaptersCompleted}</div>
+                                <div class="stat-value">${overallStats?.completedChapters || 0}</div>
                                 <div class="stat-label">Chapters Done</div>
                             </div>
                         </div>
@@ -310,7 +322,7 @@
                     <div class="chapter-progress-list">
                         <h4>Chapter Breakdown</h4>
                         ${chapterStats.map(({ id, config, progress }) => {
-                            const percentage = progress.totalSections > 0 ? 
+                            const percentage = progress.totalSections > 0 ?
                                 Math.round((progress.completedSections / progress.totalSections) * 100) : 0;
                             return `
                                 <div class="progress-item">
@@ -354,11 +366,13 @@
             }
         };
 
+        // ✅ תיקון פונקציית exportProgressData
         window.exportProgressData = function() {
             try {
                 const progressData = exportProgress();
                 if (progressData) {
-                    const blob = new Blob([progressData], { type: 'application/json' });
+                    const jsonString = JSON.stringify(progressData, null, 2);
+                    const blob = new Blob([jsonString], { type: 'application/json' });
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
@@ -397,10 +411,10 @@
                 const reader = new FileReader();
                 reader.onload = function(e) {
                     try {
-                        const jsonString = e.target.result;
+                        const jsonData = JSON.parse(e.target.result);
                         
                         if (confirm('Are you sure you want to import new progress data? This will replace your current progress.')) {
-                            const success = importProgress(jsonString);
+                            const success = importProgress(jsonData);
                             
                             if (success) {
                                 alert('Progress data imported successfully!');
@@ -552,6 +566,67 @@
             margin: var(--cs-space-m) 0;
         }
         
+        .progress-summary {
+            margin-bottom: var(--cs-space-xl);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: var(--cs-space-l);
+            margin-top: var(--cs-space-l);
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: var(--cs-space-l);
+            background: var(--cs-grey-50);
+            border-radius: var(--cs-border-radius-lg);
+            border: 1px solid var(--cs-grey-200);
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: var(--cs-font-size-2xl);
+            font-weight: var(--cs-font-weight-bold);
+            color: var(--cs-red);
+            margin-bottom: var(--cs-space-xs);
+        }
+        
+        .chapter-progress-list {
+            margin-top: var(--cs-space-xl);
+        }
+        
+        .progress-actions {
+            margin-top: var(--cs-space-xl);
+            padding-top: var(--cs-space-l);
+            border-top: 1px solid var(--cs-grey-200);
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: var(--cs-space-m);
+            margin-bottom: var(--cs-space-m);
+            flex-wrap: wrap;
+        }
+        
+        .backup-note {
+            margin: 0;
+            text-align: center;
+            color: var(--cs-grey-600);
+        }
+        
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        
         @media (max-width: 768px) {
             .welcome-stats {
                 grid-template-columns: repeat(3, 1fr);
@@ -570,6 +645,10 @@
             
             .stats-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
             }
         }
     </style>
