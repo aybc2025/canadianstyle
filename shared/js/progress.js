@@ -346,6 +346,46 @@ export function markSectionComplete(chapterId, sectionId, completed = true) {
 }
 
 /**
+ * Get basic chapter progress (sectionsCompleted object) - for backward compatibility
+ * @param {string} chapterId - Chapter identifier
+ * @returns {Object} Object with section completion status
+ */
+export function getChapterProgress(chapterId) {
+    try {
+        const progress = getCurrentProgress();
+        
+        if (!progress.chapters[chapterId]) {
+            ProgressLogger.warn(`Chapter ${chapterId} not found, returning empty progress`);
+            // Return empty progress object for this chapter
+            const emptyProgress = {};
+            if (CHAPTER_SECTIONS[chapterId]) {
+                CHAPTER_SECTIONS[chapterId].forEach(sectionId => {
+                    emptyProgress[sectionId] = false;
+                });
+            }
+            return emptyProgress;
+        }
+        
+        return progress.chapters[chapterId].sectionsCompleted || {};
+        
+    } catch (error) {
+        ProgressLogger.error(`Error getting chapter progress: ${chapterId}`, error);
+        return {};
+    }
+}
+
+/**
+ * Set progress for a specific section - for backward compatibility
+ * @param {string} chapterId - Chapter identifier
+ * @param {string} sectionId - Section identifier  
+ * @param {boolean} completed - Completion status
+ * @returns {boolean} Success status
+ */
+export function setProgress(chapterId, sectionId, completed = true) {
+    return markSectionComplete(chapterId, sectionId, completed);
+}
+
+/**
  * Get detailed progress for a specific chapter
  * @param {string} chapterId - Chapter identifier
  * @returns {Object|null} Chapter progress details
