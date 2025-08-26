@@ -1,405 +1,402 @@
 {
-  "chapterId": "ch07",
-  "chapterTitle": "Punctuation",
+  "chapter": "ch07",
+  "title": "Advanced Punctuation",
+  "description": "Test your knowledge of comprehensive punctuation rules including advanced dash usage, bracket types, and complex list formatting.",
   "sections": {
-    "periods": {
-      "title": "Periods",
+    "dashes": {
+      "id": "dashes-quiz",
+      "title": "Dashes: Advanced Usage",
       "questions": [
         {
-          "id": "per-001",
+          "id": "dash-01",
           "type": "mcq",
-          "stem": "When should you use a period after an abbreviation at the end of a sentence?",
+          "stem": "Which dash should be used for number ranges like page references?",
           "options": [
-            {"label": "Always use two periods (one for abbreviation, one for sentence)", "correct": false},
-            {"label": "Use only one period (it serves both purposes)", "correct": true},
-            {"label": "Never use periods with abbreviations", "correct": false},
-            {"label": "It depends on the type of abbreviation", "correct": false}
+            {"label": "Hyphen (-)", "correct": false},
+            {"label": "En dash (–)", "correct": true},
+            {"label": "Em dash (—)", "correct": false},
+            {"label": "Any dash works", "correct": false}
           ],
-          "rationale": "Use only one period at the end of a sentence, even after abbreviations. The single period serves both purposes.",
-          "ref": "§7.02"
+          "rationale": "En dashes are specifically used for ranges: pages 15–30, dates 2020–2024, times 9:00 a.m.–5:00 p.m.",
+          "ref": "§7.12"
         },
         {
-          "id": "per-002",
+          "id": "dash-02",
           "type": "error-spot",
-          "stem": "Click on the error in this sentence:",
-          "text": "The meeting starts at 2 p.m..",
-          "errorPosition": "..",
-          "correction": ".",
-          "rationale": "Only one period is needed at the end of a sentence, even after an abbreviation like 'p.m.'",
-          "ref": "§7.02"
-        },
-        {
-          "id": "per-003",
-          "type": "mcq",
-          "stem": "Which sentence correctly uses periods?",
-          "options": [
-            {"label": "Dr Smith will attend the meeting.", "correct": false},
-            {"label": "Dr. Smith will attend the meeting.", "correct": true},
-            {"label": "Dr Smith will attend the meeting", "correct": false},
-            {"label": "Dr. Smith will attend the meeting", "correct": false}
+          "stem": "Find the dash error in this sentence:",
+          "text": "The meeting runs from 2:00-4:00 p.m. and covers three topics - budget, staffing, and planning.",
+          "errors": [
+            {"text": "2:00-4:00", "position": 5, "correction": "2:00–4:00", "reason": "Use en dash for time ranges"},
+            {"text": "topics - budget", "position": 10, "correction": "topics—budget", "reason": "Use em dash for setting off lists or explanations"}
           ],
-          "rationale": "Use periods with courtesy titles like 'Dr.' and end declarative sentences with periods.",
-          "ref": "§7.02"
+          "rationale": "En dashes for ranges (time, pages, dates), em dashes for parenthetical statements and setting off information.",
+          "ref": "§7.12"
         },
         {
-          "id": "per-004",
+          "id": "dash-03",
           "type": "fill-blank",
-          "stem": "Please submit your report by Friday____",
-          "answer": ".",
-          "rationale": "Imperative sentences (commands or requests) end with periods.",
-          "ref": "§7.02"
+          "stem": "Use ________ dashes to set off parenthetical statements that require emphasis.",
+          "answer": "em",
+          "alternatives": ["Em"],
+          "rationale": "Em dashes create emphasis and dramatic pauses for parenthetical statements: The policy—if implemented correctly—will succeed.",
+          "ref": "§7.12"
         },
         {
-          "id": "per-005",
+          "id": "dash-04",
           "type": "mcq",
-          "stem": "Should headings and titles end with periods?",
+          "stem": "How should you create an em dash in Microsoft Word?",
           "options": [
-            {"label": "Yes, always", "correct": false},
-            {"label": "No, never", "correct": true},
-            {"label": "Only if they are complete sentences", "correct": false},
-            {"label": "Only in formal documents", "correct": false}
+            {"label": "Two hyphens (--)", "correct": false},
+            {"label": "Ctrl + Alt + minus (numeric keypad)", "correct": true},
+            {"label": "Alt + 0151", "correct": false},
+            {"label": "Both B and C are correct", "correct": false}
           ],
-          "rationale": "Headings and titles do not end with periods, regardless of their length or format.",
-          "ref": "§7.02"
+          "rationale": "The standard method is Ctrl + Alt + minus on the numeric keypad. Word also auto-converts two hyphens, but the keyboard shortcut is more reliable.",
+          "ref": "§7.12"
+        },
+        {
+          "id": "dash-05",
+          "type": "mcq",
+          "stem": "When should you choose em dashes over parentheses?",
+          "options": [
+            {"label": "Never, they're interchangeable", "correct": false},
+            {"label": "For emphasis and integration with the main sentence", "correct": true},
+            {"label": "Only in informal writing", "correct": false},
+            {"label": "When the text is too long", "correct": false}
+          ],
+          "rationale": "Em dashes provide emphasis and integrate information with the main sentence, while parentheses provide supplementary information with less emphasis.",
+          "ref": "§7.12"
+        }
+      ]
+    },
+    "parentheses-brackets": {
+      "id": "parentheses-brackets-quiz", 
+      "title": "Parentheses and Brackets",
+      "questions": [
+        {
+          "id": "brackets-01",
+          "type": "mcq",
+          "stem": "When should square brackets be used?",
+          "options": [
+            {"label": "For all supplementary information", "correct": false},
+            {"label": "For editorial insertions and clarifications in quotations", "correct": true},
+            {"label": "Instead of parentheses in formal writing", "correct": false},
+            {"label": "Only in mathematical expressions", "correct": false}
+          ],
+          "rationale": "Square brackets are used for editorial insertions, clarifications within quoted material, and indicating omissions in quotes.",
+          "ref": "§7.09"
+        },
+        {
+          "id": "brackets-02",
+          "type": "error-spot",
+          "stem": "Find the bracket usage error:",
+          "text": "The Minister said, \"He (the Deputy Minister) will oversee the new policy implementation.\"",
+          "errors": [
+            {"text": "(the Deputy Minister)", "position": 4, "correction": "[the Deputy Minister]", "reason": "Use square brackets for editorial clarifications within quotations"}
+          ],
+          "rationale": "Square brackets, not parentheses, are used for editorial clarifications within direct quotations.",
+          "ref": "§7.09"
+        },
+        {
+          "id": "brackets-03",
+          "type": "fill-blank",
+          "stem": "Use ________ brackets to indicate omissions in quotations with the ellipsis format [...].",
+          "answer": "square",
+          "alternatives": ["Square"],
+          "rationale": "Square brackets with ellipsis [...] indicate omitted text in quotations while maintaining editorial clarity.",
+          "ref": "§7.09"
+        },
+        {
+          "id": "brackets-04",
+          "type": "mcq",
+          "stem": "How should punctuation be handled with parentheses?",
+          "options": [
+            {"label": "Always put periods inside parentheses", "correct": false},
+            {"label": "Period inside if complete sentence, outside if partial", "correct": true},
+            {"label": "Always put periods outside parentheses", "correct": false},
+            {"label": "No periods needed with parentheses", "correct": false}
+          ],
+          "rationale": "Periods go inside parentheses for complete sentences standing alone, outside for partial sentences within larger sentences.",
+          "ref": "§7.09"
+        },
+        {
+          "id": "brackets-05",
+          "type": "matching",
+          "stem": "Match each bracket type with its primary use:",
+          "pairs": [
+            {"left": "Parentheses ( )", "right": "Supplementary information and abbreviations"},
+            {"left": "Square brackets [ ]", "right": "Editorial insertions in quotations"},
+            {"left": "Braces { }", "right": "Mathematical sets and programming"},
+            {"left": "Angle brackets ⟨ ⟩", "right": "URLs and email addresses in print"}
+          ],
+          "rationale": "Each bracket type has specific conventional uses in professional and technical writing.",
+          "ref": "§7.09"
+        }
+      ]
+    },
+    "advanced-lists": {
+      "id": "advanced-lists-quiz",
+      "title": "Advanced List Punctuation",
+      "questions": [
+        {
+          "id": "lists-01",
+          "type": "mcq",
+          "stem": "When should semicolons be used in vertical lists?",
+          "options": [
+            {"label": "Always in formal lists", "correct": false},
+            {"label": "When list items contain internal punctuation", "correct": true},
+            {"label": "Never in vertical lists", "correct": false},
+            {"label": "Only in numbered lists", "correct": false}
+          ],
+          "rationale": "Semicolons are used in vertical lists when items contain internal punctuation like commas or other marks.",
+          "ref": "§7.13"
+        },
+        {
+          "id": "lists-02",
+          "type": "error-spot",
+          "stem": "Find the punctuation error in this list:",
+          "text": "The review examines:\n• Budget allocation, including capital expenditures,\n• Staff performance in customer service areas,\n• Resource utilization and equipment usage.",
+          "errors": [
+            {"text": "capital expenditures,", "position": 3, "correction": "capital expenditures;", "reason": "Items with internal punctuation should use semicolons"},
+            {"text": "service areas,", "position": 5, "correction": "service areas; and", "reason": "Penultimate item needs semicolon and optional 'and'"},
+            {"text": "equipment usage.", "position": 7, "correction": "equipment usage.", "reason": "Final item correctly ends with period"}
+          ],
+          "rationale": "Lists with internal punctuation use semicolons between items, with optional 'and' before the final item.",
+          "ref": "§7.13"
+        },
+        {
+          "id": "lists-03",
+          "type": "fill-blank",
+          "stem": "Simple list items without internal punctuation should have no ________ capitals and no end punctuation.",
+          "answer": "initial",
+          "alternatives": ["Initial"],
+          "rationale": "Simple list items use lowercase initial letters (except proper nouns) and no end punctuation for consistency.",
+          "ref": "§7.13"
+        },
+        {
+          "id": "lists-04",
+          "type": "mcq",
+          "stem": "What is the standard hierarchy for multi-level list numbering?",
+          "options": [
+            {"label": "1, A, i, a, (1)", "correct": false},
+            {"label": "1, a, i, A, (1)", "correct": true},
+            {"label": "A, 1, a, i, (A)", "correct": false},
+            {"label": "I, A, 1, a, (i)", "correct": false}
+          ],
+          "rationale": "Standard hierarchy is: 1 (arabic), a (lowercase), i (roman lowercase), A (uppercase), (1) (parentheses).",
+          "ref": "§7.13"
+        },
+        {
+          "id": "lists-05",
+          "type": "mcq",
+          "stem": "How should parallel structure be maintained in lists?",
+          "options": [
+            {"label": "Use different grammatical forms for variety", "correct": false},
+            {"label": "Keep consistent grammatical structure across all items", "correct": true},
+            {"label": "Only worry about parallel structure in formal lists", "correct": false},
+            {"label": "Parallel structure is not important in lists", "correct": false}
+          ],
+          "rationale": "All list items should follow the same grammatical pattern (all -ing verbs, all noun phrases, etc.) for clarity and professionalism.",
+          "ref": "§7.13"
         }
       ]
     },
     "commas": {
-      "title": "Commas",
+      "id": "commas-quiz",
+      "title": "Comma Usage",
       "questions": [
         {
-          "id": "com-001",
+          "id": "comma-01",
           "type": "mcq",
-          "stem": "Which sentence correctly uses the Oxford comma?",
+          "stem": "When should you use the Oxford comma (serial comma)?",
           "options": [
-            {"label": "We need pens, paper and ink.", "correct": false},
-            {"label": "We need pens, paper, and ink.", "correct": true},
-            {"label": "We need pens paper and ink.", "correct": false},
-            {"label": "We need pens; paper; and ink.", "correct": false}
+            {"label": "Never in Canadian writing", "correct": false},
+            {"label": "Always in all lists", "correct": false},
+            {"label": "When needed for clarity to avoid ambiguity", "correct": true},
+            {"label": "Only in academic writing", "correct": false}
           ],
-          "rationale": "Canadian style uses the Oxford comma (serial comma) before 'and' in a series: pens, paper, and ink.",
+          "rationale": "The Oxford comma should be used when necessary for clarity, especially when list items contain 'and' or when ambiguity might result.",
           "ref": "§7.03"
         },
         {
-          "id": "com-002",
-          "type": "mcq",
-          "stem": "When do you use a comma before a coordinating conjunction?",
-          "options": [
-            {"label": "Never", "correct": false},
-            {"label": "Always", "correct": false},
-            {"label": "When connecting two independent clauses", "correct": true},
-            {"label": "Only with 'but' and 'or'", "correct": false}
-          ],
-          "rationale": "Use a comma before coordinating conjunctions (and, but, or, nor, for, so, yet) when they connect two independent clauses.",
-          "ref": "§7.03"
-        },
-        {
-          "id": "com-003",
+          "id": "comma-02",
           "type": "error-spot",
-          "stem": "Click on the missing comma in this sentence:",
-          "text": "After the meeting we will discuss the results.",
-          "errorPosition": "meeting",
-          "correction": "meeting,",
-          "rationale": "Use a comma after introductory elements: 'After the meeting, we will discuss the results.'",
+          "stem": "Find the comma error:",
+          "text": "The committee which meets monthly reviewed the budget, staffing levels and resource allocation.",
+          "errors": [
+            {"text": "committee which meets monthly reviewed", "position": 2, "correction": "committee, which meets monthly, reviewed", "reason": "Non-restrictive clauses need commas on both sides"},
+            {"text": "budget, staffing levels and resource", "position": 6, "correction": "budget, staffing levels, and resource", "reason": "Serial comma needed for clarity in this context"}
+          ],
+          "rationale": "Non-restrictive clauses need commas, and serial commas should be used when they improve clarity.",
           "ref": "§7.03"
         },
         {
-          "id": "com-004",
-          "type": "mcq",
-          "stem": "Which sentence correctly punctuates the non-restrictive clause?",
-          "options": [
-            {"label": "My brother who lives in Toronto is visiting.", "correct": false},
-            {"label": "My brother, who lives in Toronto, is visiting.", "correct": true},
-            {"label": "My brother who lives in Toronto; is visiting.", "correct": false},
-            {"label": "My brother: who lives in Toronto is visiting.", "correct": false}
-          ],
-          "rationale": "Non-restrictive clauses (additional information) are set off with commas. If you have only one brother, the clause is non-restrictive.",
+          "id": "comma-03",
+          "type": "fill-blank",
+          "stem": "Use commas to separate ________ adjectives that equally modify a noun.",
+          "answer": "coordinate",
+          "alternatives": ["equal", "equivalent"],
+          "rationale": "Coordinate adjectives that equally modify a noun should be separated by commas: 'a clear, concise report.'",
           "ref": "§7.03"
         },
         {
-          "id": "com-005",
+          "id": "comma-04",
           "type": "mcq",
-          "stem": "What is a comma splice?",
+          "stem": "How should commas be used with introductory elements?",
           "options": [
-            {"label": "Using too many commas in one sentence", "correct": false},
-            {"label": "Joining two independent clauses with only a comma", "correct": true},
-            {"label": "Forgetting to use commas in a series", "correct": false},
-            {"label": "Using commas instead of periods", "correct": false}
+            {"label": "Never use commas after introductory elements", "correct": false},
+            {"label": "Always use commas after any introductory word", "correct": false},
+            {"label": "Use commas after substantial introductory elements", "correct": true},
+            {"label": "Only use commas with introductory phrases over 10 words", "correct": false}
           ],
-          "rationale": "A comma splice incorrectly joins two independent clauses with only a comma. Use a semicolon, period, or add a coordinating conjunction.",
+          "rationale": "Use commas after substantial introductory elements (phrases, clauses, or words) to separate them from the main clause.",
+          "ref": "§7.03"
+        },
+        {
+          "id": "comma-05",
+          "type": "mcq",
+          "stem": "When should commas NOT be used?",
+          "options": [
+            {"label": "Between subject and verb", "correct": true},
+            {"label": "Before coordinating conjunctions in compound sentences", "correct": false},
+            {"label": "After introductory phrases", "correct": false},
+            {"label": "Around non-restrictive clauses", "correct": false}
+          ],
+          "rationale": "Never place commas between subject and verb unless there's an intervening element that requires commas.",
           "ref": "§7.03"
         }
       ]
     },
     "semicolons": {
-      "title": "Semicolons",
+      "id": "semicolons-quiz",
+      "title": "Semicolon Applications",
       "questions": [
         {
-          "id": "semi-001",
+          "id": "semi-01",
           "type": "mcq",
-          "stem": "When should you use a semicolon?",
+          "stem": "What is the primary function of semicolons?",
           "options": [
-            {"label": "To separate items in any list", "correct": false},
-            {"label": "Between closely related independent clauses", "correct": true},
-            {"label": "Before all coordinating conjunctions", "correct": false},
-            {"label": "After introductory phrases", "correct": false}
+            {"label": "To replace periods in all cases", "correct": false},
+            {"label": "To connect closely related independent clauses", "correct": true},
+            {"label": "To introduce lists", "correct": false},
+            {"label": "To separate adjectives", "correct": false}
           ],
-          "rationale": "Semicolons connect closely related independent clauses that could stand alone as sentences.",
+          "rationale": "Semicolons primarily connect closely related independent clauses that could stand alone as sentences.",
           "ref": "§7.04"
         },
         {
-          "id": "semi-002",
-          "type": "mcq",
-          "stem": "Which sentence correctly uses a semicolon?",
-          "options": [
-            {"label": "The project is due tomorrow; I'll work late tonight.", "correct": true},
-            {"label": "Although it was raining; we went for a walk.", "correct": false},
-            {"label": "We need; pens, paper, and ink.", "correct": false},
-            {"label": "The meeting starts at; 2:00 p.m.", "correct": false}
+          "id": "semi-02",
+          "type": "error-spot",
+          "stem": "Find the semicolon error:",
+          "text": "The report was comprehensive; however, it lacked specific recommendations; the committee requested revisions.",
+          "errors": [
+            {"text": "however, it lacked", "position": 4, "correction": "however, it lacked", "reason": "This usage is actually correct - semicolon before transitional adverb"},
+            {"text": "recommendations; the committee", "position": 7, "correction": "recommendations, and the committee", "reason": "Could use comma + coordinating conjunction instead"}
           ],
-          "rationale": "The first option correctly connects two independent clauses. The others incorrectly use semicolons with dependent clauses or in lists.",
+          "rationale": "While this example is actually correct, alternative punctuation like 'recommendations, and the committee' could work.",
           "ref": "§7.04"
         },
         {
-          "id": "semi-003",
+          "id": "semi-03",
           "type": "fill-blank",
-          "stem": "The weather was terrible______ however, we still went hiking.",
-          "answer": ";",
-          "rationale": "Use a semicolon before transitional expressions like 'however' when they connect independent clauses.",
+          "stem": "Use semicolons in complex lists when items contain ________ punctuation.",
+          "answer": "internal",
+          "alternatives": ["inner", "embedded"],
+          "rationale": "Semicolons separate complex list items that contain internal commas or other punctuation marks.",
           "ref": "§7.04"
         },
         {
-          "id": "semi-004",
+          "id": "semi-04",
           "type": "mcq",
-          "stem": "When should you use semicolons in lists?",
+          "stem": "How should semicolons be used with conjunctive adverbs?",
           "options": [
-            {"label": "In all lists with more than two items", "correct": false},
-            {"label": "When list items contain commas", "correct": true},
-            {"label": "Only in numbered lists", "correct": false},
-            {"label": "Never in lists", "correct": false}
+            {"label": "Semicolon before, comma after", "correct": true},
+            {"label": "Comma before, semicolon after", "correct": false},
+            {"label": "Semicolons on both sides", "correct": false},
+            {"label": "No semicolons with conjunctive adverbs", "correct": false}
           ],
-          "rationale": "Use semicolons to separate items in lists when the items themselves contain commas, for clarity.",
+          "rationale": "Use semicolon before conjunctive adverbs (however, therefore, moreover), comma after: 'The plan was good; however, it needed revision.'",
           "ref": "§7.04"
         },
         {
-          "id": "semi-005",
+          "id": "semi-05",
           "type": "mcq",
-          "stem": "What's the semicolon test?",
+          "stem": "When should you avoid using semicolons?",
           "options": [
-            {"label": "If you can replace it with a comma, it's correct", "correct": false},
-            {"label": "If you can replace it with a period and make two complete sentences, it's correct", "correct": true},
-            {"label": "If it comes before 'and', it's correct", "correct": false},
-            {"label": "If it's in the middle of a sentence, it's correct", "correct": false}
+            {"label": "Before dependent clauses", "correct": true},
+            {"label": "In complex lists", "correct": false},
+            {"label": "Between independent clauses", "correct": false},
+            {"label": "With conjunctive adverbs", "correct": false}
           ],
-          "rationale": "The semicolon test: if you can replace the semicolon with a period and create two grammatically complete sentences, you're using it correctly.",
+          "rationale": "Don't use semicolons before dependent clauses - use commas instead. Semicolons connect independent clauses.",
           "ref": "§7.04"
         }
       ]
     },
     "colons": {
-      "title": "Colons",
+      "id": "colons-quiz",
+      "title": "Colon Usage and Applications",
       "questions": [
         {
-          "id": "col-001",
+          "id": "colon-01",
           "type": "mcq",
-          "stem": "What must come before a colon?",
+          "stem": "What should come before a colon?",
           "options": [
-            {"label": "Any noun", "correct": false},
-            {"label": "A complete thought or independent clause", "correct": true},
-            {"label": "A list of items", "correct": false},
-            {"label": "A question", "correct": false}
+            {"label": "Any word or phrase", "correct": false},
+            {"label": "A complete independent clause", "correct": true},
+            {"label": "Only single words", "correct": false},
+            {"label": "Dependent clauses only", "correct": false}
           ],
-          "rationale": "A colon must be preceded by a complete thought or independent clause. Don't use colons after incomplete thoughts.",
+          "rationale": "Colons should be preceded by complete independent clauses that can stand alone as sentences.",
           "ref": "§7.05"
         },
         {
-          "id": "col-002",
-          "type": "mcq",
-          "stem": "Which sentence correctly uses a colon?",
-          "options": [
-            {"label": "The team includes: John, Mary, and Bob.", "correct": false},
-            {"label": "The team includes the following members: John, Mary, and Bob.", "correct": true},
-            {"label": "The team: includes John, Mary, and Bob.", "correct": false},
-            {"label": "The team includes John: Mary: and Bob.", "correct": false}
-          ],
-          "rationale": "The colon must follow a complete thought. 'The team includes' is incomplete, but 'The team includes the following members' is complete.",
-          "ref": "§7.05"
-        },
-        {
-          "id": "col-003",
-          "type": "mcq",
-          "stem": "When do you capitalize after a colon?",
-          "options": [
-            {"label": "Always", "correct": false},
-            {"label": "Never", "correct": false},
-            {"label": "When introducing a complete sentence or formal quotation", "correct": true},
-            {"label": "Only in titles", "correct": false}
-          ],
-          "rationale": "Capitalize after a colon when introducing a complete sentence or formal quotation. Use lowercase for lists or phrases.",
-          "ref": "§7.05"
-        },
-        {
-          "id": "col-004",
-          "type": "fill-blank",
-          "stem": "The deadline was missed for one reason______ poor planning.",
-          "answer": ":",
-          "rationale": "Use a colon to introduce an explanation or elaboration on the preceding complete thought.",
-          "ref": "§7.05"
-        },
-        {
-          "id": "col-005",
-          "type": "mcq",
-          "stem": "In which context do you NOT typically use colons?",
-          "options": [
-            {"label": "Time expressions (2:30 p.m.)", "correct": false},
-            {"label": "Introducing quotations", "correct": false},
-            {"label": "Between adjectives and nouns", "correct": true},
-            {"label": "Formal letter salutations", "correct": false}
-          ],
-          "rationale": "Colons are not used between adjectives and nouns. They're used in time, ratios, quotations, lists, and formal salutations.",
-          "ref": "§7.05"
-        }
-      ]
-    },
-    "apostrophes": {
-      "title": "Apostrophes",
-      "questions": [
-        {
-          "id": "apo-001",
-          "type": "mcq",
-          "stem": "How do you form the possessive of a singular noun ending in 's'?",
-          "options": [
-            {"label": "Add only an apostrophe (James')", "correct": false},
-            {"label": "Add 's (James's)", "correct": true},
-            {"label": "Add es (Jameses)", "correct": false},
-            {"label": "Don't change it", "correct": false}
-          ],
-          "rationale": "For singular nouns ending in 's', add 's to form the possessive: James's book, the boss's office.",
-          "ref": "§7.08"
-        },
-        {
-          "id": "apo-002",
-          "type": "mcq",
-          "stem": "Which is correct?",
-          "options": [
-            {"label": "Its a beautiful day", "correct": false},
-            {"label": "It's a beautiful day", "correct": true},
-            {"label": "Its' a beautiful day", "correct": false},
-            {"label": "It's' a beautiful day", "correct": false}
-          ],
-          "rationale": "'It's' is a contraction meaning 'it is.' 'Its' (no apostrophe) is the possessive pronoun.",
-          "ref": "§7.08"
-        },
-        {
-          "id": "apo-003",
-          "type": "mcq",
-          "stem": "How do you show possession for a plural noun ending in 's'?",
-          "options": [
-            {"label": "Add 's (workers's)", "correct": false},
-            {"label": "Add only an apostrophe (workers')", "correct": true},
-            {"label": "Don't add anything (workers)", "correct": false},
-            {"label": "Add es (workeres)", "correct": false}
-          ],
-          "rationale": "For plural nouns ending in 's', add only an apostrophe: the workers' union, the cats' toys.",
-          "ref": "§7.08"
-        },
-        {
-          "id": "apo-004",
+          "id": "colon-02",
           "type": "error-spot",
-          "stem": "Click on the incorrect apostrophe in this sentence:",
-          "text": "The decision is your's to make.",
-          "errorPosition": "your's",
-          "correction": "yours",
-          "rationale": "Possessive pronouns (yours, hers, ours, theirs) never take apostrophes.",
-          "ref": "§7.08"
+          "stem": "Find the colon error:",
+          "text": "The meeting will cover: budget planning, staff allocation, and resource management.",
+          "errors": [
+            {"text": "will cover:", "position": 4, "correction": "will cover these topics:", "reason": "Need complete clause before colon, not just verb phrase"}
+          ],
+          "rationale": "The text before a colon must be a complete independent clause: 'The meeting will cover these topics:' or rewrite without colon.",
+          "ref": "§7.05"
         },
         {
-          "id": "apo-005",
-          "type": "mcq",
-          "stem": "Which sentence correctly uses apostrophes?",
-          "options": [
-            {"label": "The 1990's were a great decade", "correct": false},
-            {"label": "The 1990s were a great decade", "correct": true},
-            {"label": "The 1990s' were a great decade", "correct": false},
-            {"label": "The 1990''s were a great decade", "correct": false}
-          ],
-          "rationale": "Don't use apostrophes for simple plurals. '1990s' is just a plural, not possessive.",
-          "ref": "§7.08"
-        }
-      ]
-    },
-    "dashes": {
-      "title": "Dashes",
-      "questions": [
-        {
-          "id": "dash-001",
-          "type": "mcq",
-          "stem": "What is the difference between em dashes and en dashes?",
-          "options": [
-            {"label": "Em dashes are longer and used for emphasis; en dashes are shorter and used for ranges", "correct": true},
-            {"label": "Em dashes are shorter and used for ranges; en dashes are longer and used for emphasis", "correct": false},
-            {"label": "They are the same thing with different names", "correct": false},
-            {"label": "Em dashes are for formal writing; en dashes are for informal writing", "correct": false}
-          ],
-          "rationale": "Em dashes (—) are longer and used for emphasis or breaks in thought. En dashes (–) are shorter and used for ranges or connections.",
-          "ref": "§7.12"
-        },
-        {
-          "id": "dash-002",
-          "type": "mcq",
-          "stem": "Which sentence correctly uses an em dash?",
-          "options": [
-            {"label": "The solution is simple — work harder.", "correct": true},
-            {"label": "The pages 15 — 30 contain the information.", "correct": false},
-            {"label": "The meeting is at 9:00 a.m. — 5:00 p.m.", "correct": false},
-            {"label": "This is a cost — benefit analysis.", "correct": false}
-          ],
-          "rationale": "Em dashes are used for emphasis or to set off explanatory information. En dashes are used for ranges and connections.",
-          "ref": "§7.12"
-        },
-        {
-          "id": "dash-003",
-          "type": "mcq",
-          "stem": "Which uses an en dash correctly?",
-          "options": [
-            {"label": "The team—our best performers—will handle this.", "correct": false},
-            {"label": "The Toronto–Montreal flight is delayed.", "correct": true},
-            {"label": "I think we should—wait, never mind.", "correct": false},
-            {"label": "The answer—as you know—is obvious.", "correct": false}
-          ],
-          "rationale": "En dashes connect equal elements like city pairs, while em dashes are used for emphasis or interruptions.",
-          "ref": "§7.12"
-        },
-        {
-          "id": "dash-004",
+          "id": "colon-03",
           "type": "fill-blank",
-          "stem": "The office hours are 9:00 a.m.____5:00 p.m.",
-          "answer": "–",
-          "acceptableAnswers": ["–", "-"],
-          "rationale": "Use an en dash (or hyphen if en dash unavailable) for time ranges.",
-          "ref": "§7.12"
+          "stem": "After a colon, ________ the first word only if it begins a complete sentence.",
+          "answer": "capitalize",
+          "alternatives": ["Capitalize"],
+          "rationale": "Capitalize the first word after a colon only if it begins a complete sentence, not for lists or fragments.",
+          "ref": "§7.05"
         },
         {
-          "id": "dash-005",
+          "id": "colon-04",
           "type": "mcq",
-          "stem": "How should you use em dashes in Canadian style?",
+          "stem": "When should colons be used in business correspondence?",
           "options": [
-            {"label": "With spaces around them — like this", "correct": false},
-            {"label": "Without spaces around them—like this", "correct": true},
-            {"label": "Only at the end of sentences—", "correct": false},
-            {"label": "Only in pairs — never alone", "correct": false}
+            {"label": "After informal greetings", "correct": false},
+            {"label": "After formal salutations", "correct": true},
+            {"label": "Before signatures", "correct": false},
+            {"label": "In place of commas", "correct": false}
           ],
-          "rationale": "In Canadian style, em dashes have no spaces around them—they connect directly to the surrounding text.",
-          "ref": "§7.12"
+          "rationale": "Use colons after formal salutations (Dear Mr. Smith:) in business letters, commas for informal greetings.",
+          "ref": "§7.05"
+        },
+        {
+          "id": "colon-05",
+          "type": "mcq",
+          "stem": "How should time be expressed using colons?",
+          "options": [
+            {"label": "12;30 p.m.", "correct": false},
+            {"label": "12:30 p.m.", "correct": true},
+            {"label": "12.30 p.m.", "correct": false},
+            {"label": "12-30 p.m.", "correct": false}
+          ],
+          "rationale": "Use colons to separate hours and minutes in time expressions: 12:30 p.m., 9:15 a.m.",
+          "ref": "§7.05"
         }
       ]
     }
-  },
-  "metadata": {
-    "totalQuestions": 30,
-    "questionTypes": ["mcq", "fill-blank", "error-spot"],
-    "difficulty": "intermediate",
-    "timeEstimate": "40-50 minutes",
-    "passingScore": 80
   }
 }
