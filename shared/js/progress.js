@@ -1,33 +1,41 @@
 /**
  * Progress Tracking System for The Canadian Style Learning Platform
  * Manages user progress using localStorage with comprehensive validation and fallback handling
- * COMPLETELY FIXED VERSION - supports both old and new API calls with full compatibility
+ * UPDATED VERSION - includes enhanced chapters with additional sections
  */
 
 // Storage configuration
 const STORAGE_KEY = 'csProgress';
-const STORAGE_VERSION = '2.0';
+const STORAGE_VERSION = '2.1';
 const BACKUP_KEY = 'csProgressBackup';
 
-// Chapter sections mapping - UPDATED FOR FIXED CHAPTERS
+// Chapter sections mapping - UPDATED WITH ALL ENHANCEMENTS
 const CHAPTER_SECTIONS = {
     ch01: ['introduction', 'general-principles', 'sentence-capitals', 'proper-nouns', 'government-bodies', 'titles-positions', 'geographic-names', 'brand-names', 'academic-degrees'],
     ch02: ['introduction', 'compound-words', 'prefixes-suffixes', 'word-division', 'special-cases', 'technical-terms'],
     ch03: ['introduction', 'canadian-spelling', 'variants', 'word-endings', 'troublesome-words'],
     ch04: ['introduction', 'general-principles', 'proper-nouns', 'titles-positions', 'organizations', 'academic-subjects', 'special-cases'],
-    ch05: ['basic-rules', 'sentence-beginning', 'money-measurements', 'dates-time', 'percentages-statistics', 'special-applications'],
+    // UPDATED: Chapter 5 with comprehensive SI/metric content
+    ch05: ['basic-rules', 'sentence-beginning', 'money-measurements', 'dates-time', 'percentages-statistics', 'si-metric-system', 'conversion-tables', 'special-applications'],
     ch06: ['basic-principles', 'emphasis', 'foreign-words', 'titles-publications', 'technical-terms', 'legal-references', 'special-uses'],
-    ch07: ['introduction', 'periods', 'commas', 'semicolons', 'colons', 'question-marks', 'exclamation-marks', 'apostrophes', 'parentheses-brackets', 'ellipsis', 'quotation-marks', 'dashes'],
+    // UPDATED: Chapter 7 with advanced punctuation content
+    ch07: ['introduction', 'periods', 'commas', 'semicolons', 'colons', 'question-marks', 'exclamation-marks', 'apostrophes', 'parentheses-brackets', 'ellipsis', 'quotation-marks', 'dashes', 'advanced-lists'],
     ch08: ['basic-rules', 'punctuation-with-quotes', 'block-quotations', 'nested-quotations', 'titles-special-uses', 'indirect-quotations'],
-    ch09: ['introduction', 'footnotes', 'bibliography', 'citations', 'indexes', 'electronic-sources'],
-    ch10: ['introduction', 'letters', 'memorandums', 'email', 'forms', 'templates'],
-    ch11: ['introduction', 'report-structure', 'formatting', 'headings', 'tables-figures', 'minutes', 'appendices'],
+    // UPDATED: Chapter 9 with comprehensive reference and indexing content  
+    ch09: ['introduction', 'footnotes', 'bibliography', 'citations', 'indexes', 'electronic-sources', 'legal-references', 'advanced-indexing'],
+    // UPDATED: Chapter 10 with comprehensive letter templates and electronic correspondence
+    ch10: ['introduction', 'business-letters', 'letter-templates', 'memos', 'formatting', 'addresses-titles', 'transmittal-letters', 'electronic-correspondence'],
+    ch11: ['introduction', 'report-structure', 'headings', 'front-matter', 'appendices', 'tables-charts', 'minutes', 'formatting'],
     ch12: ['introduction', 'prepositions', 'affect-effect', 'compose-comprise', 'less-fewer', 'that-which', 'common-errors', 'idioms'],
-    ch13: ['introduction', 'clarity', 'conciseness', 'organization', 'tone', 'accessibility'], 
+    ch13: ['introduction', 'reader-focus', 'organization', 'vocabulary', 'sentences', 'layout', 'testing'], 
     ch14: ['introduction', 'gender-inclusive', 'racial-cultural', 'disabilities', 'age-related', 'general-principles'],
     ch15: ['introduction', 'canadian-places', 'foreign-places', 'provinces-territories', 'indigenous-names', 'abbreviations'],
-    ch16: ['introduction', 'editing-levels', 'revision-strategies', 'proofreading-techniques', 'common-errors', 'final-checklist']
+    // UPDATED: Chapter 16 with comprehensive revision and proofreading content
+    ch16: ['introduction', 'editing-levels', 'revision-strategies', 'proofreading-techniques', 'common-errors', 'technical-accuracy', 'master-checklist', 'final-review']
 };
+
+// Calculate total sections dynamically
+const TOTAL_SECTIONS = Object.values(CHAPTER_SECTIONS).reduce((total, sections) => total + sections.length, 0);
 
 // Default progress structure
 const DEFAULT_PROGRESS = {
@@ -39,657 +47,793 @@ const DEFAULT_PROGRESS = {
         totalSectionsCompleted: 0,
         totalQuizzesPassed: 0,
         totalTimeSpent: 0,
-        lastActivity: null,
-        streakDays: 0,
-        achievements: []
+        averageQuizScore: 0,
+        lastStudyDate: null,
+        studyStreak: 0
     },
-    settings: {
-        showHints: true,
-        autoSave: true,
-        soundEnabled: false
+    preferences: {
+        theme: 'light',
+        language: 'en',
+        quizDifficulty: 'normal',
+        showExplanations: true,
+        autoSave: true
+    },
+    achievements: []
+};
+
+// Enhanced error handling and logging
+const ProgressLogger = {
+    log: (message, data = null) => {
+        if (typeof console !== 'undefined' && console.log) {
+            console.log(`[Progress] ${message}`, data || '');
+        }
+    },
+    warn: (message, data = null) => {
+        if (typeof console !== 'undefined' && console.warn) {
+            console.warn(`[Progress] ${message}`, data || '');
+        }
+    },
+    error: (message, error = null) => {
+        if (typeof console !== 'undefined' && console.error) {
+            console.error(`[Progress] ${message}`, error || '');
+        }
     }
 };
 
 /**
- * Validate chapter ID format and existence
- * @param {string} chapterId - Chapter identifier to validate
- * @returns {boolean} - Whether the chapter ID is valid
+ * Get current progress from localStorage with comprehensive validation
+ * @returns {Object} Current progress object
  */
-function isValidChapterId(chapterId) {
-    if (!chapterId || typeof chapterId !== 'string') {
-        console.warn('Invalid chapter ID provided:', chapterId);
-        return false;
-    }
-    
-    if (!CHAPTER_SECTIONS.hasOwnProperty(chapterId)) {
-        console.warn('Unknown chapter ID:', chapterId);
-        return false;
-    }
-    
-    return true;
-}
-
-/**
- * Validate section ID for a given chapter
- * @param {string} chapterId - Chapter identifier
- * @param {string} sectionId - Section identifier to validate
- * @returns {boolean} - Whether the section ID is valid for this chapter
- */
-function isValidSectionId(chapterId, sectionId) {
-    if (!isValidChapterId(chapterId)) {
-        return false;
-    }
-    
-    if (!sectionId || typeof sectionId !== 'string') {
-        console.warn('Invalid section ID provided:', sectionId);
-        return false;
-    }
-    
-    const validSections = CHAPTER_SECTIONS[chapterId];
-    if (!validSections.includes(sectionId)) {
-        console.warn(`Invalid section "${sectionId}" for chapter "${chapterId}". Valid sections:`, validSections);
-        return false;
-    }
-    
-    return true;
-}
-
-/**
- * Get current progress data from storage with validation and migration
- * @returns {Object} - Current progress data
- */
-function getProgressData() {
+function getCurrentProgress() {
     try {
         const stored = localStorage.getItem(STORAGE_KEY);
         if (!stored) {
-            console.log('No existing progress found, creating new progress data');
-            return createNewProgressData();
+            ProgressLogger.log('No stored progress found, creating new progress');
+            return createDefaultProgress();
         }
-        
-        const data = JSON.parse(stored);
+
+        const progress = JSON.parse(stored);
         
         // Validate and migrate if necessary
-        if (!data.version || data.version !== STORAGE_VERSION) {
-            console.log('Migrating progress data to new version');
-            return migrateProgressData(data);
-        }
-        
-        // Ensure all required properties exist
-        return validateAndRepairProgressData(data);
+        const validatedProgress = validateAndMigrateProgress(progress);
+        return validatedProgress;
         
     } catch (error) {
-        console.error('Error reading progress data:', error);
-        console.log('Creating new progress data due to error');
-        return createNewProgressData();
+        ProgressLogger.error('Error loading progress, creating new', error);
+        return createDefaultProgress();
     }
 }
 
 /**
- * Create new progress data structure
- * @returns {Object} - New progress data
+ * Create default progress structure
+ * @returns {Object} Default progress object
  */
-function createNewProgressData() {
-    const newData = JSON.parse(JSON.stringify(DEFAULT_PROGRESS));
+function createDefaultProgress() {
+    const progress = JSON.parse(JSON.stringify(DEFAULT_PROGRESS));
     
     // Initialize chapter progress
     Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
-        newData.chapters[chapterId] = {
-            sections: {},
-            quizzes: {},
-            completedAt: null,
-            totalSections: CHAPTER_SECTIONS[chapterId].length,
-            completedSections: 0,
-            lastVisited: null,
-            timeSpent: 0
+        progress.chapters[chapterId] = {
+            completed: false,
+            sectionsCompleted: {},
+            quizResults: {},
+            timeSpent: 0,
+            lastAccessed: null,
+            completionDate: null
         };
         
-        // Initialize section progress
+        // Initialize sections
         CHAPTER_SECTIONS[chapterId].forEach(sectionId => {
-            newData.chapters[chapterId].sections[sectionId] = {
-                completed: false,
-                visitedAt: null,
-                timeSpent: 0
-            };
+            progress.chapters[chapterId].sectionsCompleted[sectionId] = false;
         });
     });
     
-    saveProgressData(newData);
-    return newData;
+    saveProgress(progress);
+    return progress;
 }
 
 /**
- * Migrate old progress data to new structure
- * @param {Object} oldData - Old progress data
- * @returns {Object} - Migrated progress data
+ * Validate and migrate progress data to current version
+ * @param {Object} progress - Progress object to validate
+ * @returns {Object} Validated and migrated progress
  */
-function migrateProgressData(oldData) {
-    console.log('Migrating progress data from version', oldData.version || 'unknown', 'to', STORAGE_VERSION);
+function validateAndMigrateProgress(progress) {
+    let needsSave = false;
     
-    const newData = createNewProgressData();
-    
-    // Preserve old chapter progress if it exists
-    if (oldData.chapters || oldData) {
-        const oldChapters = oldData.chapters || oldData;
-        
-        Object.keys(oldChapters).forEach(chapterId => {
-            if (isValidChapterId(chapterId) && newData.chapters[chapterId]) {
-                const oldChapter = oldChapters[chapterId];
-                
-                // Handle different old data formats
-                if (typeof oldChapter === 'object' && oldChapter.sections) {
-                    // New-ish format
-                    Object.keys(oldChapter.sections).forEach(sectionId => {
-                        if (isValidSectionId(chapterId, sectionId)) {
-                            newData.chapters[chapterId].sections[sectionId].completed = 
-                                Boolean(oldChapter.sections[sectionId] || oldChapter.sections[sectionId]?.completed);
-                        }
-                    });
-                } else if (typeof oldChapter === 'object') {
-                    // Very old format - sections directly on chapter
-                    Object.keys(oldChapter).forEach(sectionId => {
-                        if (isValidSectionId(chapterId, sectionId)) {
-                            newData.chapters[chapterId].sections[sectionId].completed = Boolean(oldChapter[sectionId]);
-                        }
-                    });
-                }
-                
-                // Update completion count
-                updateChapterCompletionCount(newData, chapterId);
-            }
-        });
+    // Check version and migrate if necessary
+    if (!progress.version || progress.version !== STORAGE_VERSION) {
+        ProgressLogger.log(`Migrating progress from version ${progress.version || 'unknown'} to ${STORAGE_VERSION}`);
+        progress = migrateProgress(progress);
+        needsSave = true;
     }
     
-    // Preserve statistics if they exist
-    if (oldData.statistics) {
-        newData.statistics = { ...newData.statistics, ...oldData.statistics };
+    // Ensure all required properties exist
+    if (!progress.chapters) {
+        progress.chapters = {};
+        needsSave = true;
     }
     
-    saveProgressData(newData);
-    return newData;
-}
-
-/**
- * Validate and repair progress data structure
- * @param {Object} data - Progress data to validate
- * @returns {Object} - Validated and repaired data
- */
-function validateAndRepairProgressData(data) {
-    const repaired = { ...DEFAULT_PROGRESS, ...data };
+    if (!progress.statistics) {
+        progress.statistics = JSON.parse(JSON.stringify(DEFAULT_PROGRESS.statistics));
+        needsSave = true;
+    }
     
-    // Ensure all chapters exist
+    if (!progress.preferences) {
+        progress.preferences = JSON.parse(JSON.stringify(DEFAULT_PROGRESS.preferences));
+        needsSave = true;
+    }
+    
+    if (!progress.achievements) {
+        progress.achievements = [];
+        needsSave = true;
+    }
+    
+    // Ensure all chapters and sections exist
     Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
-        if (!repaired.chapters[chapterId]) {
-            repaired.chapters[chapterId] = {
-                sections: {},
-                quizzes: {},
-                completedAt: null,
-                totalSections: CHAPTER_SECTIONS[chapterId].length,
-                completedSections: 0,
-                lastVisited: null,
-                timeSpent: 0
+        if (!progress.chapters[chapterId]) {
+            progress.chapters[chapterId] = {
+                completed: false,
+                sectionsCompleted: {},
+                quizResults: {},
+                timeSpent: 0,
+                lastAccessed: null,
+                completionDate: null
             };
+            needsSave = true;
         }
         
-        // Ensure all sections exist
+        // Ensure all sections exist for this chapter
         CHAPTER_SECTIONS[chapterId].forEach(sectionId => {
-            if (!repaired.chapters[chapterId].sections[sectionId]) {
-                repaired.chapters[chapterId].sections[sectionId] = {
-                    completed: false,
-                    visitedAt: null,
-                    timeSpent: 0
-                };
+            if (progress.chapters[chapterId].sectionsCompleted[sectionId] === undefined) {
+                progress.chapters[chapterId].sectionsCompleted[sectionId] = false;
+                needsSave = true;
             }
         });
         
-        // Update completion count
-        updateChapterCompletionCount(repaired, chapterId);
+        // Remove sections that no longer exist
+        Object.keys(progress.chapters[chapterId].sectionsCompleted).forEach(sectionId => {
+            if (!CHAPTER_SECTIONS[chapterId].includes(sectionId)) {
+                delete progress.chapters[chapterId].sectionsCompleted[sectionId];
+                needsSave = true;
+                ProgressLogger.log(`Removed obsolete section: ${chapterId}.${sectionId}`);
+            }
+        });
     });
     
-    return repaired;
-}
-
-/**
- * Update chapter completion count
- * @param {Object} data - Progress data
- * @param {string} chapterId - Chapter to update
- */
-function updateChapterCompletionCount(data, chapterId) {
-    if (!data.chapters[chapterId]) return;
+    // Remove chapters that no longer exist
+    Object.keys(progress.chapters).forEach(chapterId => {
+        if (!CHAPTER_SECTIONS[chapterId]) {
+            delete progress.chapters[chapterId];
+            needsSave = true;
+            ProgressLogger.log(`Removed obsolete chapter: ${chapterId}`);
+        }
+    });
     
-    const completedSections = Object.values(data.chapters[chapterId].sections)
-        .filter(section => section.completed).length;
+    // Update timestamp
+    progress.updatedAt = new Date().toISOString();
     
-    data.chapters[chapterId].completedSections = completedSections;
-    
-    // Mark chapter as completed if all sections are done
-    if (completedSections === data.chapters[chapterId].totalSections && !data.chapters[chapterId].completedAt) {
-        data.chapters[chapterId].completedAt = new Date().toISOString();
+    if (needsSave) {
+        saveProgress(progress);
+        ProgressLogger.log('Progress updated and saved during validation');
     }
+    
+    return progress;
 }
 
 /**
- * Save progress data to localStorage with backup
- * @param {Object} data - Progress data to save
- * @returns {boolean} - Whether save was successful
+ * Migrate progress data from older versions
+ * @param {Object} oldProgress - Progress object to migrate
+ * @returns {Object} Migrated progress object
  */
-function saveProgressData(data) {
+function migrateProgress(oldProgress) {
+    const migratedProgress = JSON.parse(JSON.stringify(DEFAULT_PROGRESS));
+    
+    // Preserve existing chapter progress where possible
+    if (oldProgress.chapters) {
+        Object.keys(oldProgress.chapters).forEach(chapterId => {
+            if (CHAPTER_SECTIONS[chapterId]) {
+                migratedProgress.chapters[chapterId] = {
+                    completed: oldProgress.chapters[chapterId].completed || false,
+                    sectionsCompleted: {},
+                    quizResults: oldProgress.chapters[chapterId].quizResults || {},
+                    timeSpent: oldProgress.chapters[chapterId].timeSpent || 0,
+                    lastAccessed: oldProgress.chapters[chapterId].lastAccessed || null,
+                    completionDate: oldProgress.chapters[chapterId].completionDate || null
+                };
+                
+                // Migrate section completion data
+                CHAPTER_SECTIONS[chapterId].forEach(sectionId => {
+                    migratedProgress.chapters[chapterId].sectionsCompleted[sectionId] = 
+                        (oldProgress.chapters[chapterId].sectionsCompleted && 
+                         oldProgress.chapters[chapterId].sectionsCompleted[sectionId]) || false;
+                });
+            }
+        });
+    }
+    
+    // Preserve statistics where possible
+    if (oldProgress.statistics) {
+        migratedProgress.statistics = {
+            ...migratedProgress.statistics,
+            ...oldProgress.statistics
+        };
+    }
+    
+    // Preserve preferences where possible
+    if (oldProgress.preferences) {
+        migratedProgress.preferences = {
+            ...migratedProgress.preferences,
+            ...oldProgress.preferences
+        };
+    }
+    
+    // Preserve achievements
+    if (oldProgress.achievements) {
+        migratedProgress.achievements = oldProgress.achievements;
+    }
+    
+    // Update version and timestamp
+    migratedProgress.version = STORAGE_VERSION;
+    migratedProgress.updatedAt = new Date().toISOString();
+    
+    return migratedProgress;
+}
+
+/**
+ * Save progress to localStorage with error handling and backup
+ * @param {Object} progress - Progress object to save
+ * @returns {boolean} Success status
+ */
+function saveProgress(progress) {
     try {
-        // Create backup of current data
-        const currentData = localStorage.getItem(STORAGE_KEY);
-        if (currentData) {
-            localStorage.setItem(BACKUP_KEY, currentData);
+        // Create backup before saving
+        const existing = localStorage.getItem(STORAGE_KEY);
+        if (existing) {
+            localStorage.setItem(BACKUP_KEY, existing);
         }
         
         // Update timestamp
-        data.updatedAt = new Date().toISOString();
+        progress.updatedAt = new Date().toISOString();
         
-        // Save new data
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        // Save new progress
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+        ProgressLogger.log('Progress saved successfully');
         
-        // Emit progress changed event
-        window.dispatchEvent(new CustomEvent('progress-changed', {
-            detail: { data: data }
-        }));
+        // Emit update event for UI components
+        if (typeof window !== 'undefined' && window.dispatchEvent) {
+            window.dispatchEvent(new CustomEvent('progressUpdated', { detail: progress }));
+        }
         
         return true;
+        
     } catch (error) {
-        console.error('Error saving progress data:', error);
+        ProgressLogger.error('Failed to save progress', error);
+        
+        // If quota exceeded, try to clean up old data
+        if (error.name === 'QuotaExceededError') {
+            ProgressLogger.log('Storage quota exceeded, attempting cleanup');
+            try {
+                localStorage.removeItem(BACKUP_KEY);
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+                ProgressLogger.log('Progress saved after cleanup');
+                return true;
+            } catch (cleanupError) {
+                ProgressLogger.error('Failed to save even after cleanup', cleanupError);
+            }
+        }
+        
         return false;
     }
 }
 
 /**
- * Get progress for a specific chapter
- * @param {string} chapterId - Chapter identifier
- * @returns {Object} - Chapter progress object
- */
-export function getChapterProgress(chapterId) {
-    if (!isValidChapterId(chapterId)) {
-        return {};
-    }
-    
-    try {
-        const data = getProgressData();
-        const chapterData = data.chapters[chapterId];
-        
-        if (!chapterData) {
-            console.warn(`No progress data found for chapter ${chapterId}`);
-            return {};
-        }
-        
-        // Convert to simple boolean object for backward compatibility
-        const progress = {};
-        Object.keys(chapterData.sections).forEach(sectionId => {
-            progress[sectionId] = chapterData.sections[sectionId].completed;
-        });
-        
-        return progress;
-    } catch (error) {
-        console.error('Error getting chapter progress:', error);
-        return {};
-    }
-}
-
-/**
- * Get detailed chapter progress with metadata
- * @param {string} chapterId - Chapter identifier
- * @returns {Object} - Detailed chapter progress
- */
-export function getDetailedChapterProgress(chapterId) {
-    if (!isValidChapterId(chapterId)) {
-        return null;
-    }
-    
-    try {
-        const data = getProgressData();
-        return data.chapters[chapterId] || null;
-    } catch (error) {
-        console.error('Error getting detailed chapter progress:', error);
-        return null;
-    }
-}
-
-/**
- * Set progress for a specific section
+ * Mark a section as completed
  * @param {string} chapterId - Chapter identifier
  * @param {string} sectionId - Section identifier
- * @param {boolean} completed - Whether section is completed
- * @param {Object} metadata - Additional metadata (timeSpent, score, etc.)
- * @returns {boolean} - Whether update was successful
+ * @returns {boolean} Success status
  */
-export function setProgress(chapterId, sectionId, completed = true, metadata = {}) {
-    if (!isValidChapterId(chapterId)) {
-        console.error('Invalid chapter ID:', chapterId);
-        return false;
-    }
-    
-    if (!isValidSectionId(chapterId, sectionId)) {
-        console.error('Invalid section ID:', sectionId, 'for chapter:', chapterId);
-        return false;
-    }
-    
+function markSectionComplete(chapterId, sectionId) {
     try {
-        const data = getProgressData();
-        const now = new Date().toISOString();
+        const progress = getCurrentProgress();
         
-        // Update section progress
-        data.chapters[chapterId].sections[sectionId] = {
-            ...data.chapters[chapterId].sections[sectionId],
-            completed: Boolean(completed),
-            visitedAt: now,
-            ...metadata
-        };
+        if (!progress.chapters[chapterId]) {
+            ProgressLogger.warn(`Chapter ${chapterId} not found`);
+            return false;
+        }
         
-        // Update chapter metadata
-        data.chapters[chapterId].lastVisited = sectionId;
+        if (!CHAPTER_SECTIONS[chapterId].includes(sectionId)) {
+            ProgressLogger.warn(`Section ${sectionId} not found in chapter ${chapterId}`);
+            return false;
+        }
         
-        // Update completion counts
-        updateChapterCompletionCount(data, chapterId);
+        // Mark section complete
+        progress.chapters[chapterId].sectionsCompleted[sectionId] = true;
+        progress.chapters[chapterId].lastAccessed = new Date().toISOString();
         
-        // Update global statistics
-        updateGlobalStatistics(data);
+        // Update statistics
+        progress.statistics.totalSectionsCompleted = getTotalSectionsCompleted(progress);
+        progress.statistics.lastStudyDate = new Date().toISOString();
         
-        return saveProgressData(data);
+        // Check if chapter is now complete
+        const chapterComplete = CHAPTER_SECTIONS[chapterId].every(section => 
+            progress.chapters[chapterId].sectionsCompleted[section]
+        );
+        
+        if (chapterComplete && !progress.chapters[chapterId].completed) {
+            progress.chapters[chapterId].completed = true;
+            progress.chapters[chapterId].completionDate = new Date().toISOString();
+            ProgressLogger.log(`Chapter ${chapterId} completed!`);
+            
+            // Check for achievements
+            checkAchievements(progress, chapterId);
+        }
+        
+        const saved = saveProgress(progress);
+        if (saved) {
+            ProgressLogger.log(`Section ${chapterId}.${sectionId} marked as complete`);
+        }
+        
+        return saved;
+        
     } catch (error) {
-        console.error('Error setting progress:', error);
+        ProgressLogger.error(`Error marking section complete: ${chapterId}.${sectionId}`, error);
         return false;
     }
 }
 
 /**
- * Update global statistics
- * @param {Object} data - Progress data
+ * Record quiz result
+ * @param {string} chapterId - Chapter identifier  
+ * @param {string} sectionId - Section identifier
+ * @param {Object} quizResult - Quiz result object
+ * @returns {boolean} Success status
  */
-function updateGlobalStatistics(data) {
-    let totalCompleted = 0;
-    let totalQuizzes = 0;
-    
-    Object.values(data.chapters).forEach(chapter => {
-        totalCompleted += chapter.completedSections;
-        if (chapter.quizzes) {
-            totalQuizzes += Object.values(chapter.quizzes).filter(quiz => quiz.passed).length;
+function recordQuizResult(chapterId, sectionId, quizResult) {
+    try {
+        const progress = getCurrentProgress();
+        
+        if (!progress.chapters[chapterId]) {
+            ProgressLogger.warn(`Chapter ${chapterId} not found`);
+            return false;
         }
-    });
-    
-    data.statistics.totalSectionsCompleted = totalCompleted;
-    data.statistics.totalQuizzesPassed = totalQuizzes;
-    data.statistics.lastActivity = new Date().toISOString();
+        
+        // Initialize quiz results if needed
+        if (!progress.chapters[chapterId].quizResults[sectionId]) {
+            progress.chapters[chapterId].quizResults[sectionId] = [];
+        }
+        
+        // Add timestamp to result
+        const timestampedResult = {
+            ...quizResult,
+            timestamp: new Date().toISOString()
+        };
+        
+        // Store result
+        progress.chapters[chapterId].quizResults[sectionId].push(timestampedResult);
+        
+        // Update statistics
+        if (quizResult.passed) {
+            progress.statistics.totalQuizzesPassed++;
+        }
+        
+        progress.statistics.averageQuizScore = calculateAverageQuizScore(progress);
+        progress.statistics.lastStudyDate = new Date().toISOString();
+        
+        const saved = saveProgress(progress);
+        if (saved) {
+            ProgressLogger.log(`Quiz result recorded for ${chapterId}.${sectionId}: ${quizResult.score}%`);
+        }
+        
+        return saved;
+        
+    } catch (error) {
+        ProgressLogger.error(`Error recording quiz result: ${chapterId}.${sectionId}`, error);
+        return false;
+    }
+}
+
+/**
+ * Get detailed progress for a specific chapter
+ * @param {string} chapterId - Chapter identifier
+ * @returns {Object|null} Chapter progress details
+ */
+function getDetailedChapterProgress(chapterId) {
+    try {
+        const progress = getCurrentProgress();
+        
+        if (!progress.chapters[chapterId] || !CHAPTER_SECTIONS[chapterId]) {
+            return null;
+        }
+        
+        const chapterData = progress.chapters[chapterId];
+        const sections = CHAPTER_SECTIONS[chapterId];
+        
+        const completedSections = sections.filter(sectionId => 
+            chapterData.sectionsCompleted[sectionId]
+        ).length;
+        
+        const totalSections = sections.length;
+        const percentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
+        
+        // Get quiz statistics
+        const quizResults = Object.values(chapterData.quizResults).flat();
+        const passedQuizzes = quizResults.filter(result => result.passed).length;
+        const averageScore = quizResults.length > 0 
+            ? Math.round(quizResults.reduce((sum, result) => sum + result.score, 0) / quizResults.length)
+            : 0;
+        
+        return {
+            chapterId,
+            completed: chapterData.completed,
+            completedSections,
+            totalSections,
+            percentage,
+            sectionsCompleted: chapterData.sectionsCompleted,
+            quizResults: chapterData.quizResults,
+            passedQuizzes,
+            totalQuizzes: quizResults.length,
+            averageScore,
+            timeSpent: chapterData.timeSpent || 0,
+            lastAccessed: chapterData.lastAccessed,
+            completionDate: chapterData.completionDate
+        };
+        
+    } catch (error) {
+        ProgressLogger.error(`Error getting chapter progress: ${chapterId}`, error);
+        return null;
+    }
 }
 
 /**
  * Get overall progress statistics
- * @returns {Object} - Progress statistics
+ * @returns {Object} Overall progress summary
  */
-export function getOverallProgress() {
+function getOverallProgress() {
     try {
-        const data = getProgressData();
-        const totalSections = Object.values(CHAPTER_SECTIONS).reduce((sum, sections) => sum + sections.length, 0);
-        const completedSections = data.statistics.totalSectionsCompleted;
+        const progress = getCurrentProgress();
+        
+        const totalSections = TOTAL_SECTIONS;
+        const completedSections = getTotalSectionsCompleted(progress);
+        const percentage = totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0;
+        
+        const completedChapters = Object.keys(progress.chapters).filter(chapterId => 
+            progress.chapters[chapterId].completed
+        ).length;
+        
+        const totalChapters = Object.keys(CHAPTER_SECTIONS).length;
         
         return {
             totalSections,
             completedSections,
-            percentage: totalSections > 0 ? Math.round((completedSections / totalSections) * 100) : 0,
-            chaptersCompleted: Object.values(data.chapters).filter(ch => ch.completedAt).length,
-            totalChapters: Object.keys(CHAPTER_SECTIONS).length,
-            lastActivity: data.statistics.lastActivity,
-            streakDays: data.statistics.streakDays
+            percentage,
+            totalChapters,
+            completedChapters,
+            chaptersPercentage: totalChapters > 0 ? Math.round((completedChapters / totalChapters) * 100) : 0,
+            statistics: progress.statistics,
+            lastUpdated: progress.updatedAt
         };
+        
     } catch (error) {
-        console.error('Error getting overall progress:', error);
+        ProgressLogger.error('Error getting overall progress', error);
         return {
-            totalSections: 0,
+            totalSections: TOTAL_SECTIONS,
             completedSections: 0,
             percentage: 0,
-            chaptersCompleted: 0,
-            totalChapters: 16,
-            lastActivity: null,
-            streakDays: 0
+            totalChapters: Object.keys(CHAPTER_SECTIONS).length,
+            completedChapters: 0,
+            chaptersPercentage: 0,
+            statistics: DEFAULT_PROGRESS.statistics,
+            lastUpdated: new Date().toISOString()
         };
     }
 }
 
 /**
- * Mark quiz as completed with score
- * @param {string} chapterId - Chapter identifier
- * @param {string} sectionId - Section identifier
- * @param {number} score - Quiz score (0-100)
- * @param {Object} quizData - Additional quiz data
- * @returns {boolean} - Whether update was successful
+ * Calculate total completed sections across all chapters
+ * @param {Object} progress - Progress object
+ * @returns {number} Total completed sections
  */
-export function setQuizProgress(chapterId, sectionId, score, quizData = {}) {
-    if (!isValidChapterId(chapterId) || !isValidSectionId(chapterId, sectionId)) {
-        return false;
-    }
+function getTotalSectionsCompleted(progress) {
+    let total = 0;
     
-    try {
-        const data = getProgressData();
-        const passed = score >= 80;
-        
-        if (!data.chapters[chapterId].quizzes) {
-            data.chapters[chapterId].quizzes = {};
+    Object.keys(CHAPTER_SECTIONS).forEach(chapterId => {
+        if (progress.chapters[chapterId]) {
+            const completedInChapter = CHAPTER_SECTIONS[chapterId].filter(sectionId =>
+                progress.chapters[chapterId].sectionsCompleted[sectionId]
+            ).length;
+            total += completedInChapter;
         }
-        
-        // Store quiz progress
-        data.chapters[chapterId].quizzes[sectionId] = {
-            score: score,
-            passed: passed,
-            completedAt: new Date().toISOString(),
-            attempts: (data.chapters[chapterId].quizzes[sectionId]?.attempts || 0) + 1,
-            ...quizData
-        };
-        
-        // If quiz passed, mark section as completed
-        if (passed) {
-            setProgress(chapterId, sectionId, true, { quizPassed: true, quizScore: score });
-        }
-        
-        return saveProgressData(data);
-    } catch (error) {
-        console.error('Error setting quiz progress:', error);
-        return false;
-    }
+    });
+    
+    return total;
 }
 
 /**
- * Get quiz progress for a section
- * @param {string} chapterId - Chapter identifier  
- * @param {string} sectionId - Section identifier
- * @returns {Object|null} - Quiz progress data
+ * Calculate average quiz score across all quizzes
+ * @param {Object} progress - Progress object
+ * @returns {number} Average quiz score
  */
-export function getQuizProgress(chapterId, sectionId) {
-    if (!isValidChapterId(chapterId) || !isValidSectionId(chapterId, sectionId)) {
-        return null;
-    }
+function calculateAverageQuizScore(progress) {
+    let totalScore = 0;
+    let totalQuizzes = 0;
     
-    try {
-        const data = getProgressData();
-        return data.chapters[chapterId].quizzes?.[sectionId] || null;
-    } catch (error) {
-        console.error('Error getting quiz progress:', error);
-        return null;
-    }
-}
-
-/**
- * Reset progress for a specific chapter
- * @param {string} chapterId - Chapter identifier
- * @returns {boolean} - Whether reset was successful
- */
-export function resetChapterProgress(chapterId) {
-    if (!isValidChapterId(chapterId)) {
-        return false;
-    }
-    
-    try {
-        const data = getProgressData();
-        
-        // Reset all sections
-        CHAPTER_SECTIONS[chapterId].forEach(sectionId => {
-            data.chapters[chapterId].sections[sectionId] = {
-                completed: false,
-                visitedAt: null,
-                timeSpent: 0
-            };
+    Object.values(progress.chapters).forEach(chapterData => {
+        Object.values(chapterData.quizResults).forEach(sectionResults => {
+            if (Array.isArray(sectionResults)) {
+                sectionResults.forEach(result => {
+                    totalScore += result.score || 0;
+                    totalQuizzes++;
+                });
+            }
         });
-        
-        // Reset chapter metadata
-        data.chapters[chapterId].quizzes = {};
-        data.chapters[chapterId].completedAt = null;
-        data.chapters[chapterId].completedSections = 0;
-        data.chapters[chapterId].lastVisited = null;
-        data.chapters[chapterId].timeSpent = 0;
-        
-        // Update global statistics
-        updateGlobalStatistics(data);
-        
-        return saveProgressData(data);
-    } catch (error) {
-        console.error('Error resetting chapter progress:', error);
-        return false;
+    });
+    
+    return totalQuizzes > 0 ? Math.round(totalScore / totalQuizzes) : 0;
+}
+
+/**
+ * Check and award achievements
+ * @param {Object} progress - Progress object
+ * @param {string} triggeredBy - What triggered the check
+ */
+function checkAchievements(progress, triggeredBy = '') {
+    const achievements = [];
+    
+    // First chapter completed
+    const completedChapters = Object.keys(progress.chapters).filter(chapterId => 
+        progress.chapters[chapterId].completed
+    ).length;
+    
+    if (completedChapters === 1 && !hasAchievement(progress, 'first-chapter')) {
+        achievements.push({
+            id: 'first-chapter',
+            title: 'Getting Started',
+            description: 'Completed your first chapter',
+            icon: '🎯',
+            earnedDate: new Date().toISOString()
+        });
     }
+    
+    // Half chapters completed
+    const totalChapters = Object.keys(CHAPTER_SECTIONS).length;
+    if (completedChapters >= Math.floor(totalChapters / 2) && !hasAchievement(progress, 'halfway-there')) {
+        achievements.push({
+            id: 'halfway-there',
+            title: 'Halfway There',
+            description: 'Completed half of all chapters',
+            icon: '⚡',
+            earnedDate: new Date().toISOString()
+        });
+    }
+    
+    // All chapters completed
+    if (completedChapters === totalChapters && !hasAchievement(progress, 'completionist')) {
+        achievements.push({
+            id: 'completionist',
+            title: 'Completionist',
+            description: 'Completed all chapters in The Canadian Style',
+            icon: '🏆',
+            earnedDate: new Date().toISOString()
+        });
+    }
+    
+    // Quiz achievements
+    const averageScore = progress.statistics.averageQuizScore;
+    if (averageScore >= 90 && progress.statistics.totalQuizzesPassed >= 10 && !hasAchievement(progress, 'quiz-master')) {
+        achievements.push({
+            id: 'quiz-master',
+            title: 'Quiz Master',
+            description: 'Maintained 90%+ average on 10+ quizzes',
+            icon: '🧠',
+            earnedDate: new Date().toISOString()
+        });
+    }
+    
+    // Add new achievements to progress
+    if (achievements.length > 0) {
+        progress.achievements = progress.achievements || [];
+        progress.achievements.push(...achievements);
+        ProgressLogger.log(`Earned ${achievements.length} new achievement(s)`, achievements);
+    }
+}
+
+/**
+ * Check if user has a specific achievement
+ * @param {Object} progress - Progress object
+ * @param {string} achievementId - Achievement identifier
+ * @returns {boolean} Whether user has the achievement
+ */
+function hasAchievement(progress, achievementId) {
+    return progress.achievements && progress.achievements.some(achievement => achievement.id === achievementId);
 }
 
 /**
  * Reset all progress data
- * @returns {boolean} - Whether reset was successful
+ * @returns {boolean} Success status
  */
-export function resetAllProgress() {
+function resetAllProgress() {
     try {
-        const newData = createNewProgressData();
-        console.log('All progress data has been reset');
+        const confirmed = confirm('Are you sure you want to reset all progress? This action cannot be undone.');
+        
+        if (!confirmed) {
+            return false;
+        }
+        
+        // Create backup before reset
+        const current = localStorage.getItem(STORAGE_KEY);
+        if (current) {
+            localStorage.setItem(`${BACKUP_KEY}-${Date.now()}`, current);
+        }
+        
+        // Remove current progress
+        localStorage.removeItem(STORAGE_KEY);
+        localStorage.removeItem(BACKUP_KEY);
+        
+        ProgressLogger.log('All progress reset successfully');
+        
+        // Emit reset event
+        if (typeof window !== 'undefined' && window.dispatchEvent) {
+            window.dispatchEvent(new CustomEvent('progressReset'));
+        }
+        
         return true;
+        
     } catch (error) {
-        console.error('Error resetting all progress:', error);
+        ProgressLogger.error('Error resetting progress', error);
         return false;
     }
 }
 
 /**
  * Export progress data for backup
- * @returns {string|null} - JSON string of progress data or null if error
+ * @returns {string|null} JSON string of progress data
  */
-export function exportProgress() {
+function exportProgress() {
     try {
-        const data = getProgressData();
-        return JSON.stringify(data, null, 2);
+        const progress = getCurrentProgress();
+        const exportData = {
+            ...progress,
+            exportDate: new Date().toISOString(),
+            exportVersion: STORAGE_VERSION
+        };
+        
+        return JSON.stringify(exportData, null, 2);
+        
     } catch (error) {
-        console.error('Error exporting progress:', error);
+        ProgressLogger.error('Error exporting progress', error);
         return null;
     }
 }
 
 /**
  * Import progress data from backup
- * @param {string} jsonString - JSON string of progress data
- * @returns {boolean} - Whether import was successful
+ * @param {string} progressData - JSON string of progress data
+ * @returns {boolean} Success status
  */
-export function importProgress(jsonString) {
+function importProgress(progressData) {
     try {
-        if (!jsonString || typeof jsonString !== 'string') {
-            console.error('Invalid JSON string provided for import');
-            return false;
+        const imported = JSON.parse(progressData);
+        
+        // Validate imported data
+        if (!imported.version) {
+            throw new Error('Invalid progress data: missing version');
         }
         
-        const data = JSON.parse(jsonString);
-        
-        // Validate data structure
-        if (!data || typeof data !== 'object') {
-            console.error('Invalid progress data structure');
-            return false;
+        // Create current backup before import
+        const current = localStorage.getItem(STORAGE_KEY);
+        if (current) {
+            localStorage.setItem(`${BACKUP_KEY}-import-${Date.now()}`, current);
         }
         
-        // Migrate and repair the imported data
-        const repairedData = validateAndRepairProgressData(data);
+        // Validate and migrate imported data
+        const validatedProgress = validateAndMigrateProgress(imported);
         
-        return saveProgressData(repairedData);
+        // Save imported progress
+        const saved = saveProgress(validatedProgress);
+        
+        if (saved) {
+            ProgressLogger.log('Progress imported successfully');
+            
+            // Emit import event
+            if (typeof window !== 'undefined' && window.dispatchEvent) {
+                window.dispatchEvent(new CustomEvent('progressImported', { detail: validatedProgress }));
+            }
+        }
+        
+        return saved;
+        
     } catch (error) {
-        console.error('Error importing progress:', error);
+        ProgressLogger.error('Error importing progress', error);
         return false;
     }
 }
 
 /**
- * Get learning streak information
- * @returns {Object} - Streak data
+ * Get storage usage statistics
+ * @returns {Object} Storage usage information
  */
-export function getStreakData() {
+function getStorageInfo() {
     try {
-        const data = getProgressData();
-        // Simple streak calculation - could be enhanced with daily tracking
+        const progress = localStorage.getItem(STORAGE_KEY);
+        const backup = localStorage.getItem(BACKUP_KEY);
+        
+        const progressSize = progress ? new Blob([progress]).size : 0;
+        const backupSize = backup ? new Blob([backup]).size : 0;
+        const totalSize = progressSize + backupSize;
+        
         return {
-            currentStreak: data.statistics.streakDays || 0,
-            longestStreak: data.statistics.longestStreak || 0,
-            lastActivity: data.statistics.lastActivity
+            progressSize,
+            backupSize,
+            totalSize,
+            formattedSize: formatBytes(totalSize),
+            lastUpdated: getCurrentProgress().updatedAt
         };
+        
     } catch (error) {
-        console.error('Error getting streak data:', error);
-        return { currentStreak: 0, longestStreak: 0, lastActivity: null };
+        ProgressLogger.error('Error getting storage info', error);
+        return {
+            progressSize: 0,
+            backupSize: 0,
+            totalSize: 0,
+            formattedSize: '0 B',
+            lastUpdated: null
+        };
     }
 }
 
 /**
- * Setup progress event listeners and automatic saves
+ * Format bytes to human readable string
+ * @param {number} bytes - Number of bytes
+ * @returns {string} Formatted string
  */
-function setupProgressListeners() {
-    try {
-        if (typeof window === 'undefined') {
-            return;
-        }
-        
-        // Listen for quiz completions
-        window.addEventListener('quiz-completed', (event) => {
-            try {
-                const { chapterId, sectionId, score, passed } = event.detail || {};
-                
-                if (chapterId && sectionId && typeof score === 'number') {
-                    setQuizProgress(chapterId, sectionId, score, { passed });
-                }
-            } catch (error) {
-                console.error('Error handling quiz completion event:', error);
-            }
-        });
-        
-        // Listen for section completions
-        window.addEventListener('section-completed', (event) => {
-            try {
-                const { chapterId, sectionId, metadata } = event.detail || {};
-                
-                if (chapterId && sectionId) {
-                    setProgress(chapterId, sectionId, true, metadata);
-                }
-            } catch (error) {
-                console.error('Error handling section completion event:', error);
-            }
-        });
-        
-        // Auto-save on page unload
-        window.addEventListener('beforeunload', () => {
-            try {
-                const data = getProgressData();
-                if (data) {
-                    saveProgressData(data);
-                }
-            } catch (error) {
-                console.warn('Error auto-saving progress on unload:', error);
-            }
-        });
-        
-    } catch (error) {
-        console.error('Error setting up progress listeners:', error);
-    }
+function formatBytes(bytes) {
+    if (bytes === 0) return '0 B';
+    
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-// Initialize progress system when module loads
-setupProgressListeners();
-
-// Backward compatibility - legacy function names
-export const getProgress = getChapterProgress;
-export const updateProgress = setProgress;
-
-// Export utility functions
-export {
-    isValidChapterId,
-    isValidSectionId,
-    CHAPTER_SECTIONS
-};
+// Export functions for use by other modules
+if (typeof module !== 'undefined' && module.exports) {
+    // Node.js environment
+    module.exports = {
+        getCurrentProgress,
+        markSectionComplete,
+        recordQuizResult,
+        getDetailedChapterProgress,
+        getOverallProgress,
+        resetAllProgress,
+        exportProgress,
+        importProgress,
+        getStorageInfo,
+        CHAPTER_SECTIONS,
+        TOTAL_SECTIONS
+    };
+} else {
+    // Browser environment - attach to window
+    if (typeof window !== 'undefined') {
+        window.ProgressTracker = {
+            getCurrentProgress,
+            markSectionComplete,
+            recordQuizResult,
+            getDetailedChapterProgress,
+            getOverallProgress,
+            resetAllProgress,
+            exportProgress,
+            importProgress,
+            getStorageInfo,
+            CHAPTER_SECTIONS,
+            TOTAL_SECTIONS
+        };
+        
+        // Initialize progress tracking
+        ProgressLogger.log('Progress tracking system initialized');
+        ProgressLogger.log(`Tracking ${TOTAL_SECTIONS} sections across ${Object.keys(CHAPTER_SECTIONS).length} chapters`);
+        
+        // Perform initial progress load to trigger any necessary migrations
+        getCurrentProgress();
+    }
+}
