@@ -2,7 +2,7 @@
   "chapters": [
     {
       "id": "ch01",
-      "number": "01",
+      "number": "1",
       "title": "Abbreviations",
       "description": "Learn the proper use of abbreviations in Canadian government writing.",
       "category": "typography",
@@ -57,7 +57,7 @@
     },
     {
       "id": "ch02",
-      "number": "02",
+      "number": "2",
       "title": "Hyphenation",
       "description": "Master hyphenation, compounding, and word division.",
       "category": "typography",
@@ -97,7 +97,7 @@
     },
     {
       "id": "ch03",
-      "number": "03",
+      "number": "3",
       "title": "Spelling",
       "description": "Use correct Canadian spelling conventions.",
       "category": "typography",
@@ -114,7 +114,7 @@
         },
         {
           "id": "variants",
-          "title": "3.03 Spelling Variants",
+          "title": "3.03 Variants",
           "hasQuiz": true
         },
         {
@@ -132,9 +132,9 @@
     },
     {
       "id": "ch04",
-      "number": "04",
+      "number": "4",
       "title": "Capitalization",
-      "description": "Apply proper capitalization rules.",
+      "description": "Apply proper capitalization rules for Canadian writing.",
       "category": "typography",
       "sections": [
         {
@@ -177,104 +177,104 @@
     },
     {
       "id": "ch05",
-      "number": "05",
+      "number": "5",
       "title": "Numerical Expressions",
-      "description": "Format numbers, dates, and quantities correctly.",
+      "description": "Express numbers correctly in government documents including SI/metric units and conversions.",
       "category": "typography",
       "sections": [
         {
-          "id": "introduction",
-          "title": "5.01 Introduction",
+          "id": "basic-rules",
+          "title": "5.01 Basic Rules",
           "hasQuiz": false
         },
         {
-          "id": "basic-rules",
-          "title": "5.02 Basic Rules",
-          "hasQuiz": true
-        },
-        {
           "id": "sentence-beginning",
-          "title": "5.03 Sentence Beginning",
+          "title": "5.02 Sentence Beginning",
           "hasQuiz": true
         },
         {
           "id": "money-measurements",
-          "title": "5.04 Money & Measurements",
+          "title": "5.03 Money & Measurements",
           "hasQuiz": true
         },
         {
           "id": "dates-time",
-          "title": "5.05 Dates & Time",
+          "title": "5.04 Dates & Time",
           "hasQuiz": true
         },
         {
           "id": "percentages-statistics",
-          "title": "5.06 Percentages & Statistics",
+          "title": "5.05 Percentages & Statistics",
+          "hasQuiz": true
+        },
+        {
+          "id": "si-metric-system",
+          "title": "5.06 SI/Metric System",
+          "hasQuiz": true
+        },
+        {
+          "id": "conversion-tables",
+          "title": "5.07 Conversion Tables",
           "hasQuiz": true
         },
         {
           "id": "special-applications",
-          "title": "5.07 Special Applications",
-          "hasQuiz": true
-        }
-      ],
-      "totalSections": 7
-    },
-    {
-      "id": "ch06",
-      "number": "06",
-      "title": "Italics",
-      "description": "Use italics appropriately for emphasis and titles.",
-      "category": "typography",
-      "sections": [
-        {
-          "id": "introduction",
-          "title": "6.01 Introduction",
-          "hasQuiz": false
-        },
-        {
-          "id": "basic-principles",
-          "title": "6.02 Basic Principles",
-          "hasQuiz": true
-        },
-        {
-          "id": "emphasis",
-          "title": "6.03 Emphasis",
-          "hasQuiz": true
-        },
-        {
-          "id": "foreign-words",
-          "title": "6.04 Foreign Words & Phrases",
-          "hasQuiz": true
-        },
-        {
-          "id": "titles-publications",
-          "title": "6.05 Titles & Publications",
-          "hasQuiz": true
-        },
-        {
-          "id": "technical-terms",
-          "title": "6.06 Technical & Scientific Terms",
-          "hasQuiz": true
-        },
-        {
-          "id": "legal-references",
-          "title": "6.07 Legal References",
-          "hasQuiz": true
-        },
-        {
-          "id": "special-uses",
-          "title": "6.08 Special Uses",
+          "title": "5.08 Special Applications",
           "hasQuiz": true
         }
       ],
       "totalSections": 8
     },
     {
+      "id": "ch06",
+      "number": "6",
+      "title": "Italics",
+      "description": "Use italics effectively for emphasis and titles.",
+      "category": "typography",
+      "sections": [
+        {
+          "id": "basic-principles",
+          "title": "6.01 Basic Principles",
+          "hasQuiz": false
+        },
+        {
+          "id": "emphasis",
+          "title": "6.02 Emphasis",
+          "hasQuiz": true
+        },
+        {
+          "id": "foreign-words",
+          "title": "6.03 Foreign Words",
+          "hasQuiz": true
+        },
+        {
+          "id": "titles-publications",
+          "title": "6.04 Titles & Publications",
+          "hasQuiz": true
+        },
+        {
+          "id": "technical-terms",
+          "title": "6.05 Technical Terms",
+          "hasQuiz": true
+        },
+        {
+          "id": "legal-references",
+          "title": "6.06 Legal References",
+          "hasQuiz": true
+        },
+        {
+          "id": "special-uses",
+          "title": "6.07 Special Uses",
+          "hasQuiz": true
+        }
+      ],
+      "totalSections": 7
+    },
+    {
       "id": "ch07",
-      "number": "07",
+      "number": "7",
       "title": "Punctuation",
-      "description": "Master all forms of punctuation.",
+      "description": "Master comprehensive punctuation rules including advanced dash usage, bracket types, and complex list formatting.",
       "category": "typography",
       "sections": [
         {
@@ -336,60 +336,60 @@
           "id": "dashes",
           "title": "7.12 Dashes",
           "hasQuiz": true
+        },
+        {
+          "id": "advanced-lists",
+          "title": "7.13 Advanced List Punctuation",
+          "hasQuiz": true
         }
       ],
-      "totalSections": 12
+      "totalSections": 13
     },
     {
       "id": "ch08",
-      "number": "08",
+      "number": "8",
       "title": "Quotations",
-      "description": "Handle quotations and quotation marks correctly.",
+      "description": "Handle quotations and quotation marks properly.",
       "category": "typography",
       "sections": [
         {
-          "id": "introduction",
-          "title": "8.01 Introduction",
+          "id": "basic-rules",
+          "title": "8.01 Basic Rules",
           "hasQuiz": false
         },
         {
-          "id": "basic-rules",
-          "title": "8.02 Basic Rules",
-          "hasQuiz": true
-        },
-        {
           "id": "punctuation-with-quotes",
-          "title": "8.03 Punctuation with Quotes",
+          "title": "8.02 Punctuation with Quotes",
           "hasQuiz": true
         },
         {
           "id": "block-quotations",
-          "title": "8.04 Block Quotations",
+          "title": "8.03 Block Quotations",
           "hasQuiz": true
         },
         {
           "id": "nested-quotations",
-          "title": "8.05 Nested Quotations",
+          "title": "8.04 Nested Quotations",
           "hasQuiz": true
         },
         {
           "id": "titles-special-uses",
-          "title": "8.06 Titles & Special Uses",
+          "title": "8.05 Titles & Special Uses",
           "hasQuiz": true
         },
         {
           "id": "indirect-quotations",
-          "title": "8.07 Indirect Quotations",
+          "title": "8.06 Indirect Quotations",
           "hasQuiz": true
         }
       ],
-      "totalSections": 7
+      "totalSections": 6
     },
     {
       "id": "ch09",
-      "number": "09",
+      "number": "9",
       "title": "Reference Matter",
-      "description": "Format bibliographies, footnotes, and citations.",
+      "description": "Format footnotes, citations, bibliographies, and comprehensive indexes.",
       "category": "typography",
       "sections": [
         {
@@ -421,15 +421,25 @@
           "id": "electronic-sources",
           "title": "9.06 Electronic Sources",
           "hasQuiz": true
+        },
+        {
+          "id": "legal-references",
+          "title": "9.07 Legal References",
+          "hasQuiz": true
+        },
+        {
+          "id": "advanced-indexing",
+          "title": "9.08 Advanced Indexing",
+          "hasQuiz": true
         }
       ],
-      "totalSections": 6
+      "totalSections": 8
     },
     {
       "id": "ch10",
       "number": "10",
       "title": "Letters & Memorandums",
-      "description": "Write effective business correspondence.",
+      "description": "Write effective business correspondence with comprehensive templates and formatting examples.",
       "category": "typography",
       "sections": [
         {
@@ -443,27 +453,37 @@
           "hasQuiz": true
         },
         {
+          "id": "letter-templates",
+          "title": "10.03 Letter Templates",
+          "hasQuiz": true
+        },
+        {
           "id": "memos",
-          "title": "10.03 Memorandums",
+          "title": "10.04 Memorandums",
           "hasQuiz": true
         },
         {
           "id": "formatting",
-          "title": "10.04 Formatting",
+          "title": "10.05 Formatting Standards",
           "hasQuiz": true
         },
         {
-          "id": "addresses",
-          "title": "10.05 Addresses & Titles",
+          "id": "addresses-titles",
+          "title": "10.06 Addresses & Titles",
+          "hasQuiz": true
+        },
+        {
+          "id": "transmittal-letters",
+          "title": "10.07 Transmittal Letters",
           "hasQuiz": true
         },
         {
           "id": "electronic-correspondence",
-          "title": "10.06 Electronic Correspondence",
+          "title": "10.08 Electronic Correspondence",
           "hasQuiz": true
         }
       ],
-      "totalSections": 6
+      "totalSections": 8
     },
     {
       "id": "ch11",
@@ -694,7 +714,7 @@
       "id": "ch16",
       "number": "16",
       "title": "Revision & Proofreading",
-      "description": "Polish your writing through systematic revision.",
+      "description": "Perfect your editing and proofreading skills with comprehensive checklists and systematic approaches.",
       "category": "style",
       "sections": [
         {
@@ -723,20 +743,30 @@
           "hasQuiz": true
         },
         {
-          "id": "final-checklist",
-          "title": "16.06 Final Checklist",
+          "id": "technical-accuracy",
+          "title": "16.06 Technical Accuracy",
+          "hasQuiz": true
+        },
+        {
+          "id": "master-checklist",
+          "title": "16.07 Master Checklist",
+          "hasQuiz": true
+        },
+        {
+          "id": "final-review",
+          "title": "16.08 Final Review",
           "hasQuiz": true
         }
       ],
-      "totalSections": 6
+      "totalSections": 8
     }
   ],
   "metadata": {
-    "version": "2.0",
+    "version": "2.1",
     "created": "2024-01-01",
-    "updated": "2024-08-24",
+    "updated": "2024-08-25",
     "totalChapters": 16,
-    "totalSections": 119,
+    "totalSections": 130,
     "categories": {
       "typography": {
         "name": "Typography & Format",
@@ -755,6 +785,29 @@
       "timeLimit": 300,
       "allowRetakes": true,
       "showExplanations": true
+    },
+    "completionCriteria": {
+      "sectionCompletion": "View content and complete quiz (if available)",
+      "chapterCompletion": "Complete all sections within chapter",
+      "overallCompletion": "Complete all 16 chapters",
+      "certificateEligible": "Achieve 80% average across all quizzes"
+    },
+    "features": {
+      "enhanced": [
+        "Comprehensive SI/metric conversion tables (Chapter 5)",
+        "Advanced indexing techniques and examples (Chapter 9)",
+        "Complete technical accuracy verification process (Chapter 16)",
+        "Interactive master revision checklist (Chapter 16)",
+        "Legal reference formatting guidelines (Chapter 9)",
+        "Professional proofreading methodology (Chapter 16)"
+      ],
+      "interactive": [
+        "Progress tracking with local storage",
+        "Interactive quizzes with immediate feedback",
+        "Comprehensive checklists with progress tracking",
+        "Error pattern recognition exercises",
+        "Real-world application examples"
+      ]
     }
   }
 }
