@@ -1,262 +1,474 @@
 {
-  "id": "ch16",
-  "title": "Revision and Proofreading",
-  "description": "Master the techniques for effective revision and proofreading",
+  "chapter": "ch16",
+  "title": "Revision & Proofreading",
+  "description": "Test your knowledge of editing levels, revision strategies, and quality assurance processes.",
   "sections": {
-    "revision-principles": {
-      "id": "revision-principles",
-      "title": "Revision Principles Quiz",
+    "editing-levels": {
+      "id": "editing-levels-quiz",
+      "title": "Levels of Editing",
       "questions": [
         {
-          "id": "rev-q1",
+          "id": "levels-01",
           "type": "mcq",
-          "stem": "What is the primary difference between revision and proofreading?",
+          "stem": "Which editing level focuses on overall document organization and content completeness?",
           "options": [
-            {"label": "There is no difference - they are the same process", "correct": false},
-            {"label": "Revision focuses on content and structure; proofreading focuses on mechanical errors", "correct": true},
-            {"label": "Revision is done by the author; proofreading is done by others", "correct": false},
-            {"label": "Revision is for major documents; proofreading is for short texts", "correct": false}
+            {"label": "Copy editing", "correct": false},
+            {"label": "Structural editing", "correct": true},
+            {"label": "Line editing", "correct": false},
+            {"label": "Proofreading", "correct": false}
           ],
-          "rationale": "Revision involves substantial changes to content, organization, and clarity, while proofreading catches surface errors.",
-          "ref": "§16.01"
+          "rationale": "Structural editing (substantive editing) addresses organization, logic, and content completeness.",
+          "ref": "§16.02"
         },
         {
-          "id": "rev-q2",
-          "type": "drag-drop",
-          "stem": "Arrange these editing stages in the correct order:",
-          "instructions": "Order from first to last in the editing process:",
-          "items": [
-            {"text": "Content revision", "order": 1},
-            {"text": "Structural editing", "order": 2},
-            {"text": "Copy editing", "order": 3},
-            {"text": "Proofreading", "order": 4}
+          "id": "levels-02",
+          "type": "matching",
+          "stem": "Match each editing level with its primary focus:",
+          "pairs": [
+            {"left": "Structural Editing", "right": "Organization and content completeness"},
+            {"left": "Line Editing", "right": "Sentence structure and clarity"},
+            {"left": "Copy Editing", "right": "Grammar and style consistency"},
+            {"left": "Proofreading", "right": "Final error detection and formatting"}
           ],
-          "rationale": "Start with big-picture content issues, then structure, then line-by-line editing, finally surface corrections.",
-          "ref": "§16.01"
+          "rationale": "Each editing level addresses specific aspects of document quality in a systematic approach.",
+          "ref": "§16.02"
         },
         {
-          "id": "rev-q3",
+          "id": "levels-03",
+          "type": "mcq",
+          "stem": "What is the main purpose of line editing?",
+          "options": [
+            {"label": "Correcting spelling errors", "correct": false},
+            {"label": "Improving sentence structure and readability", "correct": true},
+            {"label": "Checking document organization", "correct": false},
+            {"label": "Verifying factual accuracy", "correct": false}
+          ],
+          "rationale": "Line editing focuses on improving clarity, tone, and readability at the sentence and paragraph level.",
+          "ref": "§16.02"
+        },
+        {
+          "id": "levels-04",
           "type": "fill-blank",
-          "stem": "Allow ______ time between writing and revising to gain ______.",
-          "answers": ["adequate", "perspective"],
-          "hint": "Consider what helps you see your own writing more objectively.",
-          "rationale": "Taking time away from your writing helps you approach it with fresh eyes and better objectivity.",
+          "stem": "________ is the final editing level that focuses on catching surface errors and formatting issues.",
+          "answer": "Proofreading",
+          "alternatives": ["proofreading"],
+          "rationale": "Proofreading is the final review for surface errors, formatting, and layout consistency.",
+          "ref": "§16.02"
+        },
+        {
+          "id": "levels-05",
+          "type": "mcq",
+          "stem": "Which editing tasks belong to copy editing?",
+          "options": [
+            {"label": "Improving document organization", "correct": false},
+            {"label": "Correcting grammar, punctuation, and ensuring style consistency", "correct": true},
+            {"label": "Rewriting unclear sentences", "correct": false},
+            {"label": "Checking page layout", "correct": false}
+          ],
+          "rationale": "Copy editing addresses grammar, punctuation, spelling, and style consistency.",
           "ref": "§16.02"
         }
       ]
     },
-    "content-revision": {
-      "id": "content-revision",
-      "title": "Content Revision Quiz",
+    "revision-strategies": {
+      "id": "revision-strategies-quiz",
+      "title": "Revision Strategies and Techniques",
       "questions": [
         {
-          "id": "cont-q1",
+          "id": "strategies-01",
           "type": "mcq",
-          "stem": "Which question should you ask first when revising content?",
+          "stem": "What is the benefit of the 'multiple pass' revision strategy?",
           "options": [
-            {"label": "Are there any spelling errors?", "correct": false},
-            {"label": "Does this achieve its intended purpose?", "correct": true},
-            {"label": "Is the formatting consistent?", "correct": false},
-            {"label": "Are the sentences grammatically correct?", "correct": false}
+            {"label": "It saves time by combining all editing levels", "correct": false},
+            {"label": "It allows focused attention on different aspects each time", "correct": true},
+            {"label": "It eliminates the need for checklists", "correct": false},
+            {"label": "It can be done immediately after writing", "correct": false}
           ],
-          "rationale": "Content revision starts with the big picture: purpose, audience, and overall effectiveness.",
+          "rationale": "Multiple pass strategy allows focused attention on different aspects (content, style, grammar, format) in separate reviews.",
           "ref": "§16.03"
         },
         {
-          "id": "cont-q2",
-          "type": "matching",
-          "stem": "Match each revision concern with its appropriate stage:",
-          "pairs": [
-            {"left": "Is the argument logical?", "right": "Content revision"},
-            {"left": "Are paragraphs well-organized?", "right": "Structural editing"},
-            {"left": "Is word choice precise?", "right": "Copy editing"},
-            {"left": "Are there typos?", "right": "Proofreading"}
-          ],
-          "rationale": "Different types of issues are addressed at different stages of the revision process.",
+          "id": "strategies-02",
+          "type": "fill-blank",
+          "stem": "The '________ eyes' technique involves taking breaks between writing and revising for better objectivity.",
+          "answer": "fresh",
+          "alternatives": ["Fresh"],
+          "rationale": "Fresh eyes technique uses time gaps and different perspectives to improve objectivity in revision.",
           "ref": "§16.03"
         },
         {
-          "id": "cont-q3",
+          "id": "strategies-03",
+          "type": "mcq",
+          "stem": "Why is reverse reading (reading from end to beginning) useful for proofreading?",
+          "options": [
+            {"label": "It helps identify content gaps", "correct": false},
+            {"label": "It helps catch spelling errors and formatting issues", "correct": true},
+            {"label": "It improves document organization", "correct": false},
+            {"label": "It verifies logical flow", "correct": false}
+          ],
+          "rationale": "Reverse reading disrupts normal reading patterns, making spelling errors and formatting inconsistencies more visible.",
+          "ref": "§16.03"
+        },
+        {
+          "id": "strategies-04",
+          "type": "mcq",
+          "stem": "What should specialized checklists be developed for?",
+          "options": [
+            {"label": "Only technical documents", "correct": false},
+            {"label": "Different document types (reports, letters, policies)", "correct": true},
+            {"label": "Only legal documents", "correct": false},
+            {"label": "Documents over 10 pages only", "correct": false}
+          ],
+          "rationale": "Specialized checklists should be developed for different document types to address their specific requirements.",
+          "ref": "§16.03"
+        },
+        {
+          "id": "strategies-05",
           "type": "error-spot",
-          "stem": "Which revision priority is out of order in this list: 1) Fix typos, 2) Clarify main argument, 3) Improve paragraph flow?",
-          "errorWord": "Fix",
-          "rationale": "Typos should be fixed last, after content and structural issues are resolved.",
+          "stem": "Identify what's wrong with this revision approach:",
+          "text": "I always revise my documents immediately after writing while the content is fresh in my mind, checking for all types of errors at once.",
+          "errors": [
+            {"text": "immediately after writing", "position": 6, "correction": "after taking a break", "reason": "Need time gap for objectivity"},
+            {"text": "all types of errors at once", "position": 15, "correction": "different types of errors in separate passes", "reason": "Should focus on one type of error per pass"}
+          ],
+          "rationale": "Effective revision requires time gaps for objectivity and focused passes for different types of errors.",
           "ref": "§16.03"
         }
       ]
     },
     "proofreading-techniques": {
-      "id": "proofreading-techniques",
-      "title": "Proofreading Techniques Quiz",
+      "id": "proofreading-techniques-quiz",
+      "title": "Advanced Proofreading Techniques",
       "questions": [
         {
-          "id": "proof-q1",
+          "id": "proof-01",
           "type": "mcq",
-          "stem": "What is the most effective way to proofread your own writing?",
+          "stem": "What is the primary advantage of audio proofreading (text-to-speech)?",
           "options": [
-            {"label": "Read quickly to get an overall impression", "correct": false},
-            {"label": "Read slowly, focusing on one type of error at a time", "correct": true},
-            {"label": "Read only the first and last sentences of each paragraph", "correct": false},
-            {"label": "Have a computer program check everything", "correct": false}
+            {"label": "It's faster than visual reading", "correct": false},
+            {"label": "It helps identify awkward phrasing and missing words", "correct": true},
+            {"label": "It corrects grammar automatically", "correct": false},
+            {"label": "It replaces the need for human review", "correct": false}
           ],
-          "rationale": "Multiple focused passes (one for spelling, one for punctuation, etc.) are more effective than trying to catch everything at once.",
-          "ref": "§16.05"
+          "rationale": "Audio proofreading helps identify issues that might be missed visually, like awkward phrasing and missing words.",
+          "ref": "§16.04"
         },
         {
-          "id": "proof-q2",
-          "type": "drag-drop",
-          "stem": "Arrange these proofreading techniques by effectiveness:",
-          "instructions": "Most effective to least effective:",
-          "items": [
-            {"text": "Reading backwards sentence by sentence", "order": 1},
-            {"text": "Reading aloud slowly", "order": 2},
-            {"text": "Reading silently but carefully", "order": 3},
-            {"text": "Skimming quickly", "order": 4}
+          "id": "proof-02",
+          "type": "mcq",
+          "stem": "When verifying numerical data during proofreading, what should you do?",
+          "options": [
+            {"label": "Trust the spell-checker to catch errors", "correct": false},
+            {"label": "Cross-reference with source materials and verify calculations", "correct": true},
+            {"label": "Only check numbers that look suspicious", "correct": false},
+            {"label": "Focus only on currency amounts", "correct": false}
           ],
-          "rationale": "Reading backwards forces attention to individual words; reading aloud catches rhythm and flow issues.",
-          "ref": "§16.05"
+          "rationale": "All numerical data should be verified against sources and calculations should be checked independently.",
+          "ref": "§16.04"
         },
         {
-          "id": "proof-q3",
+          "id": "proof-03",
           "type": "fill-blank",
-          "stem": "When proofreading, focus on ______ type of error at a time for maximum ______.",
-          "answers": ["one", "effectiveness"],
-          "hint": "Consider the strategy for thorough error detection.",
-          "rationale": "Focusing on one type of error at a time (spelling, then punctuation, then formatting) is more thorough.",
-          "ref": "§16.05"
+          "stem": "Character-level review focuses on finding ________ errors that automated tools might miss.",
+          "answer": "typography",
+          "alternatives": ["typographical", "typing"],
+          "rationale": "Character-level review catches typography errors like transposed letters, wrong quotation marks, and spacing issues.",
+          "ref": "§16.04"
+        },
+        {
+          "id": "proof-04",
+          "type": "mcq",
+          "stem": "What should be included in reference validation during proofreading?",
+          "options": [
+            {"label": "Only checking citation format", "correct": false},
+            {"label": "Citations, web links, page numbers, and cross-references", "correct": true},
+            {"label": "Only verifying web links work", "correct": false},
+            {"label": "Just checking the bibliography", "correct": false}
+          ],
+          "rationale": "Reference validation includes checking all citations, web links, page numbers, and cross-references for accuracy.",
+          "ref": "§16.04"
+        },
+        {
+          "id": "proof-05",
+          "type": "mcq",
+          "stem": "What is a limitation of automated proofreading tools?",
+          "options": [
+            {"label": "They check grammar too thoroughly", "correct": false},
+            {"label": "They may miss context-dependent errors and specialized terminology", "correct": true},
+            {"label": "They work too slowly", "correct": false},
+            {"label": "They only work with short documents", "correct": false}
+          ],
+          "rationale": "Automated tools have limitations with context-dependent errors, specialized terminology, and organizational style preferences.",
+          "ref": "§16.04"
         }
       ]
     },
     "common-errors": {
-      "id": "common-errors",
-      "title": "Common Errors Quiz",
+      "id": "common-errors-quiz",
+      "title": "Common Error Recognition",
       "questions": [
         {
-          "id": "err-q1",
-          "type": "error-spot",
-          "stem": "Find the common error in this sentence:",
-          "text": "The report shows that both departments, who were understaffed, exceeded there targets.",
-          "errorWord": "there",
-          "rationale": "Should be 'their' (possessive) not 'there' (location). This is a common homophone error.",
-          "ref": "§16.05"
-        },
-        {
-          "id": "err-q2",
-          "type": "matching",
-          "stem": "Match each common error type with its example:",
-          "pairs": [
-            {"left": "Homophone confusion", "right": "your/you're, its/it's"},
-            {"left": "Subject-verb disagreement", "right": "The group of students are"},
-            {"left": "Missing apostrophe", "right": "the companys policy"},
-            {"left": "Comma splice", "right": "It's cold, I need a coat"}
-          ],
-          "rationale": "Recognizing error patterns helps you focus your proofreading efforts.",
-          "ref": "§16.05"
-        },
-        {
-          "id": "err-q3",
+          "id": "errors-01",
           "type": "mcq",
-          "stem": "Which sentence contains a subject-verb agreement error?",
+          "stem": "Which of these is a frequent spelling error in government documents?",
           "options": [
-            {"label": "The team of experts is reviewing the proposal.", "correct": false},
-            {"label": "Neither the manager nor the staff members was available.", "correct": true},
-            {"label": "Everyone in the office has received the memo.", "correct": false},
-            {"label": "The data shows a clear trend.", "correct": false}
+            {"label": "accommodate → accomodate", "correct": true},
+            {"label": "policy → polisy", "correct": false},
+            {"label": "report → reprot", "correct": false},
+            {"label": "meeting → meting", "correct": false}
           ],
-          "rationale": "With 'neither...nor', the verb agrees with the closer subject ('staff members' requires 'were').",
+          "rationale": "'Accommodate' is frequently misspelled as 'accomodate' - remember it has two c's and two m's.",
+          "ref": "§16.05"
+        },
+        {
+          "id": "errors-02",
+          "type": "error-spot",
+          "stem": "Find the grammar error:",
+          "text": "The committee have reviewed all applications and is making their final decisions.",
+          "errors": [
+            {"text": "have reviewed", "position": 3, "correction": "has reviewed", "reason": "'Committee' is singular, requires singular verb"},
+            {"text": "is making their", "position": 7, "correction": "are making their", "reason": "Inconsistent - if using 'their' (plural), verb should be 'are'"}
+          ],
+          "rationale": "Maintain consistent subject-verb agreement - 'committee' can be singular or plural but must be consistent throughout.",
+          "ref": "§16.05"
+        },
+        {
+          "id": "errors-03",
+          "type": "mcq",
+          "stem": "What type of error is this: 'The policy effects all employees'?",
+          "options": [
+            {"label": "Spelling error", "correct": false},
+            {"label": "Word choice error (affects vs effects)", "correct": true},
+            {"label": "Punctuation error", "correct": false},
+            {"label": "Capitalization error", "correct": false}
+          ],
+          "rationale": "Should be 'affects' (verb) not 'effects' (noun) - 'The policy affects all employees.'",
+          "ref": "§16.05"
+        },
+        {
+          "id": "errors-04",
+          "type": "mcq",
+          "stem": "Which represents a Canadian-specific formatting issue to check?",
+          "options": [
+            {"label": "Using periods in abbreviations", "correct": false},
+            {"label": "Currency symbol placement and metric unit spacing", "correct": true},
+            {"label": "Capitalizing all nouns", "correct": false},
+            {"label": "Using only commas for lists", "correct": false}
+          ],
+          "rationale": "Canadian documents require attention to currency format ($25 not 25$) and proper metric spacing (25 kg not 25kg).",
+          "ref": "§16.05"
+        },
+        {
+          "id": "errors-05",
+          "type": "fill-blank",
+          "stem": "A ________ error log helps editors track their common mistakes and develop personalized prevention strategies.",
+          "answer": "personal",
+          "alternatives": ["individual"],
+          "rationale": "Personal error logs help identify patterns in individual mistakes for targeted improvement.",
           "ref": "§16.05"
         }
       ]
     },
-    "formatting-consistency": {
-      "id": "formatting-consistency",
-      "title": "Formatting and Consistency Quiz",
+    "technical-accuracy": {
+      "id": "technical-accuracy-quiz", 
+      "title": "Technical Accuracy Verification",
       "questions": [
         {
-          "id": "format-q1",
+          "id": "tech-01",
           "type": "mcq",
-          "stem": "What should be checked for consistency during proofreading?",
+          "stem": "What should be done with all statistical data during technical verification?",
           "options": [
-            {"label": "Only spelling and grammar", "correct": false},
-            {"label": "Only content and structure", "correct": false},
-            {"label": "Headings, spacing, fonts, and number formats", "correct": true},
-            {"label": "Only punctuation marks", "correct": false}
+            {"label": "Check only the main percentages", "correct": false},
+            {"label": "Cross-reference with sources and verify calculations independently", "correct": true},
+            {"label": "Trust the original source", "correct": false},
+            {"label": "Only check data that seems unusual", "correct": false}
           ],
-          "rationale": "Formatting consistency includes visual elements like headings, spacing, fonts, and how numbers/dates are presented.",
-          "ref": "§16.05"
-        },
-        {
-          "id": "format-q2",
-          "type": "error-spot",
-          "stem": "Find the formatting inconsistency:",
-          "text": "Meeting attendees included Dr. Smith, Ms. Johnson, and Mr Jones from the accounting department.",
-          "errorWord": "Mr",
-          "rationale": "Should be 'Mr.' with a period to match the other abbreviated titles (Dr., Ms.).",
-          "ref": "§16.05"
-        },
-        {
-          "id": "format-q3",
-          "type": "drag-drop",
-          "stem": "Prioritize these formatting checks during final proofreading:",
-          "instructions": "Most important to least important:",
-          "items": [
-            {"text": "Consistent heading styles", "order": 1},
-            {"text": "Uniform spacing", "order": 2},
-            {"text": "Consistent date formats", "order": 3},
-            {"text": "Font consistency", "order": 4}
-          ],
-          "rationale": "Headings are most visible to readers, followed by spacing, then specific format elements.",
-          "ref": "§16.05"
-        }
-      ]
-    },
-    "final-checks": {
-      "id": "final-checks",
-      "title": "Final Checks Quiz",
-      "questions": [
-        {
-          "id": "final-q1",
-          "type": "mcq",
-          "stem": "What should be the very last step in proofreading?",
-          "options": [
-            {"label": "Check spelling and grammar", "correct": false},
-            {"label": "Verify all names, dates, and numbers", "correct": true},
-            {"label": "Review the introduction", "correct": false},
-            {"label": "Check paragraph length", "correct": false}
-          ],
-          "rationale": "Factual accuracy of names, dates, and numbers should be verified last to ensure no errors were introduced during editing.",
+          "rationale": "All statistical data must be cross-referenced with original sources and calculations verified independently.",
           "ref": "§16.06"
         },
         {
-          "id": "final-q2",
+          "id": "tech-02",
+          "type": "mcq",
+          "stem": "Why is legal and regulatory accuracy particularly important?",
+          "options": [
+            {"label": "It's required by law", "correct": false},
+            {"label": "Inaccurate legal information can mislead citizens and create liability", "correct": true},
+            {"label": "It's more complex than other content", "correct": false},
+            {"label": "It requires special formatting", "correct": false}
+          ],
+          "rationale": "Inaccurate legal information can mislead citizens, cause compliance failures, and create legal liability.",
+          "ref": "§16.06"
+        },
+        {
+          "id": "tech-03",
           "type": "fill-blank",
-          "stem": "Create a ______ of common errors you make to focus your proofreading efforts.",
-          "answer": "checklist",
-          "hint": "Think about personalizing your proofreading approach.",
-          "rationale": "A personal checklist based on your own error patterns makes proofreading more efficient and effective.",
+          "stem": "Technical terminology should be verified against ________ sources and industry-specific dictionaries.",
+          "answer": "authoritative",
+          "alternatives": ["official", "reliable"],
+          "rationale": "Technical terms must be verified against authoritative sources to ensure accuracy and proper usage.",
+          "ref": "§16.06"
+        },
+        {
+          "id": "tech-04",
+          "type": "mcq",
+          "stem": "What should be included in web content verification?",
+          "options": [
+            {"label": "Only checking if links work", "correct": false},
+            {"label": "Testing links, verifying external site reliability, and confirming contact information", "correct": true},
+            {"label": "Just updating broken links", "correct": false},
+            {"label": "Only internal links need checking", "correct": false}
+          ],
+          "rationale": "Web content verification includes testing functionality, verifying reliability, and confirming all digital contact information.",
+          "ref": "§16.06"
+        },
+        {
+          "id": "tech-05",
+          "type": "sequencing",
+          "stem": "Put the technical accuracy workflow steps in order:",
+          "items": [
+            "Initial review - identify technical content",
+            "Source verification - check against original sources", 
+            "Expert review - have specialists verify accuracy",
+            "Final verification - double-check all corrections"
+          ],
+          "rationale": "Technical accuracy follows a systematic workflow from identification through expert validation to final confirmation.",
+          "ref": "§16.06"
+        }
+      ]
+    },
+    "master-checklist": {
+      "id": "master-checklist-quiz",
+      "title": "Master Checklist Application",
+      "questions": [
+        {
+          "id": "checklist-01",
+          "type": "mcq",
+          "stem": "What is the primary benefit of using comprehensive checklists during revision?",
+          "options": [
+            {"label": "They speed up the process", "correct": false},
+            {"label": "They ensure systematic, thorough review", "correct": true},
+            {"label": "They replace the need for expertise", "correct": false},
+            {"label": "They eliminate all errors", "correct": false}
+          ],
+          "rationale": "Comprehensive checklists ensure systematic coverage of all important review aspects, preventing oversight.",
           "ref": "§16.07"
         },
         {
-          "id": "final-q3",
-          "type": "matching",
-          "stem": "Match each final check with its importance:",
-          "pairs": [
-            {"left": "Names and titles", "right": "Critical - affects credibility"},
-            {"left": "Phone numbers and emails", "right": "Essential - affects communication"},
-            {"left": "Statistical data", "right": "Vital - affects accuracy"},
-            {"left": "Consistent formatting", "right": "Important - affects professionalism"}
+          "id": "checklist-02",
+          "type": "mcq",
+          "stem": "Which category should be checked first when using the master checklist?",
+          "options": [
+            {"label": "Spelling and punctuation", "correct": false},
+            {"label": "Content and structure", "correct": true},
+            {"label": "Formatting and layout", "correct": false},
+            {"label": "References and citations", "correct": false}
           ],
-          "rationale": "Different elements have different levels of importance, but all contribute to document quality.",
-          "ref": "§16.06"
+          "rationale": "Content and structure should be reviewed first, as major structural changes can affect other elements.",
+          "ref": "§16.07"
+        },
+        {
+          "id": "checklist-03",
+          "type": "fill-blank",
+          "stem": "The master checklist should be used ________ to track progress and ensure nothing is missed.",
+          "answer": "systematically",
+          "alternatives": ["methodically", "consistently"],
+          "rationale": "Systematic use of checklists ensures consistent, thorough coverage of all review elements.",
+          "ref": "§16.07"
+        },
+        {
+          "id": "checklist-04",
+          "type": "mcq",
+          "stem": "What should you verify about graphics and tables?",
+          "options": [
+            {"label": "Only that they're clearly visible", "correct": false},
+            {"label": "They support text, have captions, and are properly referenced", "correct": true},
+            {"label": "Just their placement on pages", "correct": false},
+            {"label": "Only their technical accuracy", "correct": false}
+          ],
+          "rationale": "Graphics must support the text, have appropriate captions, be referenced in text, and be accessible.",
+          "ref": "§16.07"
+        },
+        {
+          "id": "checklist-05",
+          "type": "mcq",
+          "stem": "Why should checklist progress be tracked?",
+          "options": [
+            {"label": "To meet deadlines", "correct": false},
+            {"label": "To ensure complete coverage and identify areas needing attention", "correct": true},
+            {"label": "To impress supervisors", "correct": false},
+            {"label": "To reduce workload", "correct": false}
+          ],
+          "rationale": "Progress tracking ensures complete coverage of all checklist items and helps identify areas needing more attention.",
+          "ref": "§16.07"
+        }
+      ]
+    },
+    "final-review": {
+      "id": "final-review-quiz",
+      "title": "Final Review and Quality Assurance",
+      "questions": [
+        {
+          "id": "final-01",
+          "type": "mcq",
+          "stem": "What is the first step in the pre-publication review sequence?",
+          "options": [
+            {"label": "Format and layout check", "correct": false},
+            {"label": "Final content review", "correct": true},
+            {"label": "Technical verification", "correct": false},
+            {"label": "Distribution preparation", "correct": false}
+          ],
+          "rationale": "Final content review comes first to ensure the document reads coherently and meets its purpose.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "final-02",
+          "type": "mcq",
+          "stem": "What should be tested during the format and layout check?",
+          "options": [
+            {"label": "Only print layout", "correct": false},
+            {"label": "Print layout, accessibility features, and brand compliance", "correct": true},
+            {"label": "Just page breaks", "correct": false},
+            {"label": "Only formatting consistency", "correct": false}
+          ],
+          "rationale": "Format and layout check includes print layout, accessibility features, and compliance with brand/style guidelines.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "final-03",
+          "type": "fill-blank",
+          "stem": "The ________ standard ensures all factual information is verified and calculations confirmed.",
+          "answer": "accuracy",
+          "alternatives": ["Accuracy"],
+          "rationale": "The accuracy standard focuses on verifying factual information, calculations, and technical content.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "final-04",
+          "type": "mcq",
+          "stem": "What should be documented as part of the review process?",
+          "options": [
+            {"label": "Only the final approval", "correct": false},
+            {"label": "Checklist completion, reviewers, changes made, and approvals", "correct": true},
+            {"label": "Just the list of changes", "correct": false},
+            {"label": "Only version control information", "correct": false}
+          ],
+          "rationale": "Complete review documentation includes checklists, reviewers, changes made, approvals, and version control.",
+          "ref": "§16.08"
+        },
+        {
+          "id": "final-05",
+          "type": "mcq",
+          "stem": "What indicates a document is ready for professional distribution?",
+          "options": [
+            {"label": "It has been spell-checked", "correct": false},
+            {"label": "All quality standards are met and approvals obtained", "correct": true},
+            {"label": "The deadline has arrived", "correct": false},
+            {"label": "It looks professionally formatted", "correct": false}
+          ],
+          "rationale": "Distribution readiness requires meeting all quality standards (completeness, accuracy, presentation, communication) and obtaining proper approvals.",
+          "ref": "§16.08"
         }
       ]
     }
-  },
-  "metadata": {
-    "totalQuestions": 18,
-    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
-    "difficulty": "intermediate",
-    "timeEstimate": "25-30 minutes",
-    "passingScore": 80
   }
 }
