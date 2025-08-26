@@ -3,1288 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapter 10: Letters & Memorandums - The Canadian Style</title>
+    <title>Chapter 10: Letters & Memos - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
-    <style>
-        .letter-template {
-            background: #f8f9fa;
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            font-family: 'Times New Roman', serif;
-            line-height: 1.6;
-            max-width: 600px;
-        }
-        .letter-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            border-bottom: 2px solid #0066cc;
-            padding-bottom: 1rem;
-        }
-        .letterhead {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #0066cc;
-        }
-        .letter-date {
-            margin: 1rem 0;
-            text-align: right;
-        }
-        .letter-address {
-            margin: 1.5rem 0;
-        }
-        .letter-body {
-            margin: 1.5rem 0;
-        }
-        .letter-closing {
-            margin-top: 2rem;
-        }
-        .signature-block {
-            margin-top: 3rem;
-        }
-        .format-examples {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .memo-template {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            font-family: Arial, sans-serif;
-        }
-        .memo-header {
-            border-bottom: 2px solid #856404;
-            padding-bottom: 1rem;
-            margin-bottom: 1rem;
-        }
-        .memo-field {
-            display: flex;
-            margin: 0.5rem 0;
-        }
-        .memo-label {
-            font-weight: bold;
-            width: 100px;
-            color: #856404;
-        }
-        .address-formats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .address-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .address-card h5 {
-            color: #2c3e50;
-            margin: 0 0 1rem 0;
-            font-size: 1.1rem;
-        }
-        .salutation-guide {
-            background: #e3f2fd;
-            border: 1px solid #90caf9;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .email-template {
-            background: #f0f8ff;
-            border: 1px solid #b3d9ff;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            font-family: Arial, sans-serif;
-        }
-        .email-header {
-            background: #e6f3ff;
-            padding: 1rem;
-            border-radius: 4px;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-        .email-field {
-            margin: 0.3rem 0;
-        }
-        .email-field strong {
-            color: #0066cc;
-            width: 80px;
-            display: inline-block;
-        }
-    </style>
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
-    <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <a href="../index.html" class="nav-home">
-                <span class="nav-icon">📚</span>
-                The Canadian Style
-            </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
+                <h1>The Canadian Style</h1>
+            </div>
+            <nav class="chapter-nav">
+                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="chapter-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Home</a> / Chapter 10
+            </nav>
+            <div class="chapter-meta">
+                <div class="chapter-icon">10</div>
+                <div class="chapter-info">
+                    <h1>Letters & Memos</h1>
+                    <p>Master professional correspondence formats and conventions for government communication</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-tabs" id="sectionNav">
+        <div class="container">
+            <div class="tabs-list">
+                <a href="#introduction" class="tab-link active" data-section="introduction">10.01 Introduction</a>
+                <a href="#business-letters" class="tab-link" data-section="business-letters">10.02 Business Letters</a>
+                <a href="#letter-templates" class="tab-link" data-section="letter-templates">10.03 Letter Templates</a>
+                <a href="#memos" class="tab-link" data-section="memos">10.04 Memorandums</a>
+                <a href="#formatting" class="tab-link" data-section="formatting">10.05 Formatting Standards</a>
+                <a href="#addresses-titles" class="tab-link" data-section="addresses-titles">10.06 Addresses & Titles</a>
+                <a href="#transmittal-letters" class="tab-link" data-section="transmittal-letters">10.07 Transmittal Letters</a>
+                <a href="#electronic-correspondence" class="tab-link" data-section="electronic-correspondence">10.08 Electronic Correspondence</a>
+            </div>
         </div>
     </nav>
 
-    <main class="main-content">
+    <div class="chapter-content">
         <div class="container">
-            <div class="chapter-header">
-                <div class="chapter-meta">
-                    <span class="chapter-number">Chapter 10</span>
-                    <span class="chapter-category">Typography & Format</span>
+            <!-- Section: Introduction -->
+            <section id="introduction" class="content-section active">
+                <div class="section-header">
+                    <h2>10.01 Introduction</h2>
+                    <p>Professional standards for government correspondence and communications</p>
                 </div>
-                <h1>Letters & Memorandums</h1>
-                <p class="chapter-description">Write effective business correspondence with comprehensive templates and formatting examples.</p>
-                <div class="chapter-progress">
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="chapterProgress"></div>
+
+                <div class="lesson-content">
+                    <div class="key-principle">
+                        <h3>Government Correspondence Standards</h3>
+                        <p>All government correspondence must reflect professionalism, clarity, and adherence to Federal Identity Program guidelines.</p>
                     </div>
-                    <span class="progress-text" id="progressText">0% Complete</span>
+
+                    <div class="rule-box">
+                        <h4>Core Principles</h4>
+                        <ul>
+                            <li><strong>Clarity:</strong> Use clear, concise language that serves the public</li>
+                            <li><strong>Consistency:</strong> Follow established templates and formats</li>
+                            <li><strong>Accessibility:</strong> Ensure communications are accessible to all Canadians</li>
+                            <li><strong>Bilingual requirements:</strong> Consider official language obligations</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Types of Government Correspondence</h4>
+                        <div class="example-item good">
+                            <strong>Formal letters:</strong> Official communications to external parties
+                        </div>
+                        <div class="example-item good">
+                            <strong>Memorandums:</strong> Internal communications within government
+                        </div>
+                        <div class="example-item good">
+                            <strong>Electronic correspondence:</strong> Email and digital communications
+                        </div>
+                        <div class="example-item good">
+                            <strong>Transmittal letters:</strong> Documents accompanying reports or materials
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Professional Tip</h4>
+                        <p>Always consider your audience and purpose before choosing the appropriate format and tone for your correspondence.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Navigation Tabs -->
-            <nav class="section-nav" id="sectionNav">
-                <div class="tabs-list" role="tablist">
-                    <button class="tab-link active" data-section="introduction" role="tab">10.01 Introduction</button>
-                    <button class="tab-link" data-section="business-letters" role="tab">10.02 Business Letters</button>
-                    <button class="tab-link" data-section="letter-templates" role="tab">10.03 Letter Templates</button>
-                    <button class="tab-link" data-section="memos" role="tab">10.04 Memorandums</button>
-                    <button class="tab-link" data-section="formatting" role="tab">10.05 Formatting Standards</button>
-                    <button class="tab-link" data-section="addresses-titles" role="tab">10.06 Addresses & Titles</button>
-                    <button class="tab-link" data-section="transmittal-letters" role="tab">10.07 Transmittal Letters</button>
-                    <button class="tab-link" data-section="electronic-correspondence" role="tab">10.08 Electronic Correspondence</button>
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="introduction"></div>
+                    </div>
+                    <button onclick="completeSection('introduction')" class="btn btn-primary">Mark as Complete</button>
                 </div>
-            </nav>
+            </section>
 
-            <div class="chapter-content">
-                <!-- Section 10.01: Introduction -->
-                <section class="content-section active" id="introduction">
-                    <div class="section-header">
-                        <h2>10.01 Introduction</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Effective business correspondence reflects professionalism and clarity. This chapter provides comprehensive guidance for writing letters, memorandums, and electronic communications in the Canadian government context.</p>
-                        
-                        <div class="key-concepts">
-                            <h3>Types of Business Correspondence</h3>
-                            <div class="concept-grid">
-                                <div class="concept-item">
-                                    <h4>📄 Formal Letters</h4>
-                                    <p>External communications requiring official letterhead and signatures</p>
-                                </div>
-                                <div class="concept-item">
-                                    <h4>📋 Memorandums</h4>
-                                    <p>Internal communications for information sharing and decision-making</p>
-                                </div>
-                                <div class="concept-item">
-                                    <h4>📧 Email Communication</h4>
-                                    <p>Electronic correspondence for routine business matters</p>
-                                </div>
-                                <div class="concept-item">
-                                    <h4>📨 Transmittal Letters</h4>
-                                    <p>Cover letters accompanying reports, documents, or materials</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="rule-box">
-                            <h3>Universal Principles</h3>
-                            <ul>
-                                <li><strong>Clarity:</strong> State your purpose clearly and concisely</li>
-                                <li><strong>Courtesy:</strong> Maintain professional and respectful tone</li>
-                                <li><strong>Completeness:</strong> Include all necessary information</li>
-                                <li><strong>Correctness:</strong> Ensure accuracy in facts, spelling, and grammar</li>
-                                <li><strong>Consistency:</strong> Follow established formatting standards</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('introduction')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+            <!-- Section: Business Letters -->
+            <section id="business-letters" class="content-section">
+                <div class="section-header">
+                    <h2>10.02 Business Letters</h2>
+                    <p>Format and structure for formal business correspondence</p>
+                </div>
 
-                <!-- Section 10.02: Business Letters -->
-                <section class="content-section" id="business-letters">
-                    <div class="section-header">
-                        <h2>10.02 Business Letters</h2>
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Business Letter Components</h4>
+                        <ol>
+                            <li><strong>Letterhead:</strong> Official government letterhead</li>
+                            <li><strong>Date:</strong> Full date written out</li>
+                            <li><strong>Inside address:</strong> Recipient's complete address</li>
+                            <li><strong>Salutation:</strong> Appropriate greeting</li>
+                            <li><strong>Body:</strong> Clear, organized content</li>
+                            <li><strong>Complimentary close:</strong> Professional closing</li>
+                            <li><strong>Signature:</strong> Handwritten signature and typed name</li>
+                            <li><strong>Reference information:</strong> File numbers, etc.</li>
+                        </ol>
                     </div>
-                    
-                    <div class="lesson-content">
-                        <p>Business letters follow established conventions for structure, tone, and formatting. They represent your organization and must maintain professional standards.</p>
-                        
-                        <div class="rule-box">
-                            <h3>Standard Letter Components</h3>
-                            <ol>
-                                <li><strong>Letterhead:</strong> Organization name, logo, and contact information</li>
-                                <li><strong>Date:</strong> Full date in Canadian format</li>
-                                <li><strong>Inside Address:</strong> Recipient's name, title, and address</li>
-                                <li><strong>Salutation:</strong> Appropriate greeting</li>
-                                <li><strong>Body:</strong> Main message in logical paragraphs</li>
-                                <li><strong>Complimentary Close:</strong> Professional closing phrase</li>
-                                <li><strong>Signature Block:</strong> Name, title, and contact information</li>
-                                <li><strong>Reference Information:</strong> Initials, enclosures, copies</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="letter-template">
-                            <div class="letter-header">
-                                <div class="letterhead">GOVERNMENT OF CANADA<br>
-                                DEPARTMENT OF EXAMPLE</div>
-                                <div style="font-size: 0.9rem; color: #666;">
-                                    123 Rideau Street, Ottawa, ON K1A 0A1<br>
-                                    Tel: (613) 555-0123 | Fax: (613) 555-0124<br>
-                                    www.canada.ca/example
-                                </div>
-                            </div>
-                            
-                            <div class="letter-date">March 15, 2024</div>
-                            
-                            <div class="letter-address">
-                                Ms. Sarah Wilson<br>
-                                Director of Operations<br>
-                                ABC Corporation<br>
-                                456 Business Avenue<br>
-                                Toronto, ON M5H 2Y4
-                            </div>
-                            
-                            <div style="margin: 1rem 0;">
-                                Dear Ms. Wilson:
-                            </div>
-                            
-                            <div class="letter-body">
-                                <p>I am writing to follow up on our recent discussion regarding the implementation of new environmental regulations affecting your industry.</p>
-                                
-                                <p>As discussed, the regulations will come into effect on January 1, 2025. To ensure compliance, I recommend that your organization begin preparation immediately. Enclosed you will find a comprehensive guide outlining the key requirements and suggested timelines.</p>
-                                
-                                <p>Our department is committed to supporting businesses through this transition. We will be hosting information sessions throughout the fall, and I encourage you to attend. Details are available on our website or by contacting our office directly.</p>
-                                
-                                <p>Please do not hesitate to contact me if you have any questions or require additional information.</p>
-                            </div>
-                            
-                            <div class="letter-closing">
-                                Yours truly,<br><br><br>
-                                
-                                <div class="signature-block">
-                                    <strong>John Smith</strong><br>
-                                    Senior Policy Advisor<br>
-                                    Environmental Compliance Division<br>
-                                    john.smith@canada.ca<br>
-                                    (613) 555-0125
-                                </div>
-                            </div>
-                            
-                            <div style="margin-top: 2rem; font-size: 0.9rem;">
-                                JS/mh<br>
-                                Enclosure: Environmental Regulations Guide<br>
-                                c.c. Director, Environmental Affairs
-                            </div>
-                        </div>
-                        
-                        <div class="tip-box">
-                            <h4>💡 Professional Letter Tips</h4>
-                            <ul>
-                                <li>Use official letterhead for all external correspondence</li>
-                                <li>Keep paragraphs focused and under 6 lines</li>
-                                <li>Use active voice and positive language when possible</li>
-                                <li>Proofread carefully - errors reflect on your organization</li>
-                                <li>Include contact information for easy follow-up</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-business-letters"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('business-letters')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
 
-                <!-- Section 10.03: Letter Templates -->
-                <section class="content-section" id="letter-templates">
-                    <div class="section-header">
-                        <h2>10.03 Comprehensive Letter Templates</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Different types of letters require specific approaches and formatting. Use these templates as guides for common business correspondence situations.</p>
-                        
-                        <div class="template-showcase">
-                            <h3>📋 Information Request Letter</h3>
-                            <div class="letter-template">
-                                <div class="letter-header">
-                                    <div class="letterhead">GOVERNMENT OF CANADA<br>
-                                    STATISTICS CANADA</div>
-                                </div>
-                                
-                                <div class="letter-date">February 10, 2024</div>
-                                
-                                <div class="letter-address">
-                                    Dr. Maria Rodriguez<br>
-                                    Research Director<br>
-                                    Economic Research Institute<br>
-                                    789 University Drive<br>
-                                    Montreal, QC H3A 0G4
-                                </div>
-                                
-                                <div style="margin: 1rem 0;">
-                                    Dear Dr. Rodriguez:
-                                </div>
-                                
-                                <div class="letter-body">
-                                    <p>We are conducting a comprehensive study on economic indicators and would appreciate access to your recent research data on regional employment trends.</p>
-                                    
-                                    <p>Specifically, we are seeking:</p>
-                                    <ul style="margin: 1rem 0;">
-                                        <li>Quarterly employment data for 2022-2023</li>
-                                        <li>Sector-specific analysis for manufacturing and services</li>
-                                        <li>Regional comparisons between Quebec and Ontario</li>
-                                    </ul>
-                                    
-                                    <p>This information will contribute to our national economic outlook report. All data will be used in aggregate form only, and appropriate attribution will be provided.</p>
-                                    
-                                    <p>We would be pleased to share our findings with your institute once the study is complete. Please let us know your preferred format for data sharing and any specific requirements.</p>
-                                </div>
-                                
-                                <div class="letter-closing">
-                                    Sincerely,<br><br><br>
-                                    
-                                    <div class="signature-block">
-                                        <strong>Dr. Robert Chen</strong><br>
-                                        Senior Economist<br>
-                                        Labour Statistics Division<br>
-                                        robert.chen@statcan.gc.ca
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h3>🎯 Policy Announcement Letter</h3>
-                            <div class="letter-template">
-                                <div class="letter-header">
-                                    <div class="letterhead">GOVERNMENT OF CANADA<br>
-                                    HEALTH CANADA</div>
-                                </div>
-                                
-                                <div class="letter-date">April 5, 2024</div>
-                                
-                                <div class="letter-address">
-                                    All Licensed Healthcare Providers<br>
-                                    Province of Ontario
-                                </div>
-                                
-                                <div style="margin: 1rem 0;">
-                                    Dear Healthcare Professionals:
-                                </div>
-                                
-                                <div class="letter-body">
-                                    <p><strong>Subject: New Guidelines for Prescription Drug Monitoring</strong></p>
-                                    
-                                    <p>Health Canada is implementing enhanced prescription drug monitoring guidelines effective June 1, 2024. These measures are designed to improve patient safety while maintaining access to necessary medications.</p>
-                                    
-                                    <p><strong>Key Changes Include:</strong></p>
-                                    <ul style="margin: 1rem 0;">
-                                        <li>Mandatory electronic reporting for Schedule II medications</li>
-                                        <li>Enhanced patient identification verification procedures</li>
-                                        <li>Quarterly reporting requirements for controlled substances</li>
-                                        <li>Updated training requirements for pharmacy staff</li>
-                                    </ul>
-                                    
-                                    <p>Implementation support is available through our regional offices. Training webinars will be conducted throughout May, and detailed implementation guides are available on our website.</p>
-                                    
-                                    <p>Your cooperation in implementing these guidelines is essential for maintaining the integrity of Canada's healthcare system while ensuring patient safety.</p>
-                                </div>
-                                
-                                <div class="letter-closing">
-                                    Yours truly,<br><br><br>
-                                    
-                                    <div class="signature-block">
-                                        <strong>Dr. Linda Thompson</strong><br>
-                                        Director General<br>
-                                        Pharmaceutical Regulation Branch<br>
-                                        linda.thompson@hc-sc.gc.ca
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <h3>📄 Follow-up Letter</h3>
-                            <div class="letter-template">
-                                <div class="letter-header">
-                                    <div class="letterhead">GOVERNMENT OF CANADA<br>
-                                    TRANSPORT CANADA</div>
-                                </div>
-                                
-                                <div class="letter-date">June 18, 2024</div>
-                                
-                                <div class="letter-address">
-                                    Mr. David Kim<br>
-                                    Operations Manager<br>
-                                    Northern Aviation Services<br>
-                                    250 Airport Road<br>
-                                    Yellowknife, NT X1A 3T4
-                                </div>
-                                
-                                <div style="margin: 1rem 0;">
-                                    Dear Mr. Kim:
-                                </div>
-                                
-                                <div class="letter-body">
-                                    <p><strong>Re: Aviation Safety Inspection - Follow-up Required</strong></p>
-                                    
-                                    <p>This letter follows up on our aviation safety inspection conducted at your facility on May 15, 2024. While we were pleased with many aspects of your operation, several items require attention.</p>
-                                    
-                                    <p>As per our discussion, the following corrective actions must be completed by July 15, 2024:</p>
-                                    <ol style="margin: 1rem 0;">
-                                        <li>Update maintenance log procedures (Item 3.2 of inspection report)</li>
-                                        <li>Provide additional training for ground crew (Item 5.1)</li>
-                                        <li>Install updated communication equipment (Item 7.3)</li>
-                                    </ol>
-                                    
-                                    <p>Please submit written confirmation of completed actions by the deadline. Our inspector will conduct a follow-up visit in early August to verify compliance.</p>
-                                    
-                                    <p>If you require assistance or have questions about any requirements, please contact our regional office immediately.</p>
-                                </div>
-                                
-                                <div class="letter-closing">
-                                    Sincerely,<br><br><br>
-                                    
-                                    <div class="signature-block">
-                                        <strong>Captain Susan Wright</strong><br>
-                                        Regional Aviation Inspector<br>
-                                        Prairie and Northern Region<br>
-                                        susan.wright@tc.gc.ca<br>
-                                        (867) 555-0187
-                                    </div>
-                                </div>
-                                
-                                <div style="margin-top: 2rem; font-size: 0.9rem;">
-                                    SW/jl<br>
-                                    Enclosure: Detailed Inspection Report<br>
-                                    c.c. Regional Director, Aviation Safety
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-letter-templates"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('letter-templates')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+                    <div class="examples-box">
+                        <h4>Sample Business Letter Format</h4>
+                        <div style="background: #f8f9fa; padding: 1rem; border: 1px solid #dee2e6; font-family: monospace; white-space: pre-line;">
+[Government of Canada Letterhead]
 
-                <!-- Section 10.04: Memorandums -->
-                <section class="content-section" id="memos">
-                    <div class="section-header">
-                        <h2>10.04 Memorandums</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Memorandums (memos) are internal communications used for information sharing, policy announcements, and decision documentation within organizations.</p>
-                        
-                        <div class="rule-box">
-                            <h3>Memo Structure</h3>
-                            <ul>
-                                <li><strong>Header:</strong> MEMORANDUM or organization name</li>
-                                <li><strong>TO:</strong> Recipient(s) - name and title</li>
-                                <li><strong>FROM:</strong> Sender - name and title</li>
-                                <li><strong>DATE:</strong> Full date</li>
-                                <li><strong>SUBJECT:</strong> Clear, descriptive subject line</li>
-                                <li><strong>Body:</strong> Purpose, background, discussion, action required</li>
-                                <li><strong>Attachments:</strong> Supporting documents (if any)</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="memo-template">
-                            <div class="memo-header">
-                                <h3 style="text-align: center; margin: 0; color: #856404;">MEMORANDUM</h3>
-                            </div>
-                            
-                            <div class="memo-field">
-                                <div class="memo-label">TO:</div>
-                                <div>All Department Managers</div>
-                            </div>
-                            <div class="memo-field">
-                                <div class="memo-label">FROM:</div>
-                                <div>Patricia Johnson, Deputy Minister</div>
-                            </div>
-                            <div class="memo-field">
-                                <div class="memo-label">DATE:</div>
-                                <div>September 12, 2024</div>
-                            </div>
-                            <div class="memo-field">
-                                <div class="memo-label">SUBJECT:</div>
-                                <div>Implementation of New Performance Management System</div>
-                            </div>
-                            
-                            <div style="margin-top: 1.5rem; line-height: 1.6;">
-                                <p><strong>Purpose:</strong> To inform all managers of the new performance management system launching January 1, 2025.</p>
-                                
-                                <p><strong>Background:</strong> Following extensive consultation with employees and union representatives, we have developed a modernized performance management approach that emphasizes continuous feedback and professional development.</p>
-                                
-                                <p><strong>Key Features:</strong></p>
-                                <ul>
-                                    <li>Quarterly check-ins replace annual reviews</li>
-                                    <li>Goal-setting aligned with departmental objectives</li>
-                                    <li>Enhanced career development planning</li>
-                                    <li>360-degree feedback mechanisms</li>
-                                </ul>
-                                
-                                <p><strong>Implementation Timeline:</strong></p>
-                                <ul>
-                                    <li>October 2024: Manager training sessions</li>
-                                    <li>November 2024: Employee information sessions</li>
-                                    <li>December 2024: System testing and pilot programs</li>
-                                    <li>January 2025: Full implementation</li>
-                                </ul>
-                                
-                                <p><strong>Action Required:</strong> Please ensure all managers in your division attend the mandatory training sessions scheduled for October 15-30. Registration details will be sent separately.</p>
-                                
-                                <p>Questions about the new system should be directed to Human Resources at ext. 4567.</p>
-                            </div>
-                            
-                            <div style="margin-top: 2rem; font-size: 0.9rem;">
-                                PJ/mk<br>
-                                Attachment: Performance Management Guide
-                            </div>
-                        </div>
-                        
-                        <div class="memo-variations">
-                            <h3>Memo Types and Purposes</h3>
-                            <div class="memo-types-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="memo-type">
-                                    <h4>📢 Information Memo</h4>
-                                    <ul>
-                                        <li>Policy updates</li>
-                                        <li>Procedural changes</li>
-                                        <li>General announcements</li>
-                                        <li>Status reports</li>
-                                    </ul>
-                                </div>
-                                <div class="memo-type">
-                                    <h4>📋 Action Memo</h4>
-                                    <ul>
-                                        <li>Request for action</li>
-                                        <li>Deadline notifications</li>
-                                        <li>Task assignments</li>
-                                        <li>Meeting requests</li>
-                                    </ul>
-                                </div>
-                                <div class="memo-type">
-                                    <h4>🎯 Decision Memo</h4>
-                                    <ul>
-                                        <li>Recommendation requests</li>
-                                        <li>Approval seeking</li>
-                                        <li>Problem analysis</li>
-                                        <li>Solution proposals</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-memos"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('memos')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+March 15, 2024
 
-                <!-- Section 10.05: Formatting Standards -->
-                <section class="content-section" id="formatting">
-                    <div class="section-header">
-                        <h2>10.05 Formatting Standards</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Consistent formatting ensures professional appearance and improves readability. Follow these standards for all business correspondence.</p>
-                        
-                        <div class="formatting-standards">
-                            <h3>📏 Layout Standards</h3>
-                            
-                            <div class="standards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="standard-card">
-                                    <h4>Page Setup</h4>
-                                    <ul>
-                                        <li><strong>Paper:</strong> 8.5" × 11" (216 mm × 279 mm)</li>
-                                        <li><strong>Margins:</strong> 1 inch (25 mm) all sides</li>
-                                        <li><strong>Font:</strong> Times New Roman 12pt or Arial 11pt</li>
-                                        <li><strong>Line spacing:</strong> Single space within paragraphs</li>
-                                        <li><strong>Paragraph spacing:</strong> One blank line between paragraphs</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="standard-card">
-                                    <h4>Letter Spacing</h4>
-                                    <ul>
-                                        <li><strong>Date:</strong> 3-4 lines below letterhead</li>
-                                        <li><strong>Inside address:</strong> 3-4 lines below date</li>
-                                        <li><strong>Salutation:</strong> 2 lines below address</li>
-                                        <li><strong>Body:</strong> 2 lines below salutation</li>
-                                        <li><strong>Closing:</strong> 2 lines below body</li>
-                                        <li><strong>Signature:</strong> 4 lines space for handwritten signature</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="standard-card">
-                                    <h4>Alignment & Style</h4>
-                                    <ul>
-                                        <li><strong>Alignment:</strong> Left-aligned (standard business style)</li>
-                                        <li><strong>Paragraphs:</strong> No indentation, block format</li>
-                                        <li><strong>Page numbers:</strong> Bottom center or top right</li>
-                                        <li><strong>Continuation pages:</strong> Include name and page number</li>
-                                        <li><strong>Letterhead:</strong> Only on first page</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <h3>🎨 Visual Elements</h3>
-                            
-                            <div class="visual-standards">
-                                <div class="standard-section">
-                                    <h4>Typography Guidelines</h4>
-                                    <div class="examples-box">
-                                        <div class="example-item good">
-                                            <p><strong>✓ Preferred fonts:</strong></p>
-                                            <ul>
-                                                <li>Times New Roman 12pt (formal letters)</li>
-                                                <li>Arial 11pt (memos and informal correspondence)</li>
-                                                <li>Calibri 11pt (electronic documents)</li>
-                                            </ul>
-                                        </div>
-                                        <div class="example-item bad">
-                                            <p><strong>✗ Avoid:</strong></p>
-                                            <ul>
-                                                <li>Decorative fonts (Script, Comic Sans)</li>
-                                                <li>Very small fonts (under 10pt)</li>
-                                                <li>All capitals for body text</li>
-                                                <li>Multiple fonts in one document</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="standard-section">
-                                    <h4>Professional Presentation</h4>
-                                    <ul>
-                                        <li><strong>White paper:</strong> Use high-quality white paper for printed correspondence</li>
-                                        <li><strong>Clean printing:</strong> Ensure clear, dark text with no smudges</li>
-                                        <li><strong>Proper folding:</strong> Fold letters in thirds for standard envelopes</li>
-                                        <li><strong>Envelope addressing:</strong> Match letterhead style and include return address</li>
-                                        <li><strong>Electronic formatting:</strong> Ensure compatibility across different systems</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <h3>📝 Multi-page Documents</h3>
-                            
-                            <div class="multipage-guide">
-                                <div class="rule-box">
-                                    <h4>Continuation Pages</h4>
-                                    <ul>
-                                        <li>Use plain paper (no letterhead) for second and subsequent pages</li>
-                                        <li>Include recipient name, page number, and date at top</li>
-                                        <li>Leave at least two lines of a paragraph on continuation page</li>
-                                        <li>Never start a continuation page with signature block alone</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="continuation-example">
-                                    <h5>Continuation Page Header Format:</h5>
-                                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 4px; margin: 1rem 0; font-family: monospace;">
-                                        Ms. Sarah Wilson<br>
-                                        Page 2<br>
-                                        March 15, 2024<br><br>
-                                        
-                                        [Continue body text here...]
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-formatting"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('formatting')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+Ms. Sarah Johnson
+Director, Policy Development
+Canadian Association of Municipalities
+24 Clarence Street
+Ottawa, ON  K1N 5P3
 
-                <!-- Section 10.06: Addresses & Titles -->
-                <section class="content-section" id="addresses-titles">
-                    <div class="section-header">
-                        <h2>10.06 Addresses & Titles</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Proper addressing and use of titles demonstrates respect and professionalism. Canadian conventions may differ from other countries.</p>
-                        
-                        <div class="address-formats">
-                            <div class="address-card">
-                                <h5>🍁 Canadian Address Format</h5>
-                                <div style="font-family: monospace; background: #f8f9fa; padding: 1rem; border-radius: 4px;">
-                                    Ms. Jennifer Thompson<br>
-                                    Director of Policy<br>
-                                    Ministry of Health<br>
-                                    5th Floor, Hepburn Block<br>
-                                    80 Grosvenor Street<br>
-                                    Toronto, ON  M7A 1E9
-                                </div>
-                                <div class="format-notes" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
-                                    • Two spaces between province and postal code<br>
-                                    • No punctuation in postal code<br>
-                                    • Suite/floor before street address
-                                </div>
-                            </div>
-                            
-                            <div class="address-card">
-                                <h5>🌍 International Address Format</h5>
-                                <div style="font-family: monospace; background: #f8f9fa; padding: 1rem; border-radius: 4px;">
-                                    Mr. James Richardson<br>
-                                    Senior Analyst<br>
-                                    Department of Trade<br>
-                                    25 Embassy Row<br>
-                                    Washington, DC  20008<br>
-                                    UNITED STATES
-                                </div>
-                                <div class="format-notes" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
-                                    • Country name in capitals<br>
-                                    • Follow destination country's format<br>
-                                    • Include international postal codes
-                                </div>
-                            </div>
-                            
-                            <div class="address-card">
-                                <h5>🏢 Government Official</h5>
-                                <div style="font-family: monospace; background: #f8f9fa; padding: 1rem; border-radius: 4px;">
-                                    The Honourable Marie Dubois<br>
-                                    Minister of Environment<br>
-                                    House of Commons<br>
-                                    Ottawa, ON  K1A 0A6
-                                </div>
-                                <div class="format-notes" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
-                                    • "The Honourable" for Cabinet Ministers<br>
-                                    • "Senator" for Senate members<br>
-                                    • "MP" after name for Members of Parliament
-                                </div>
-                            </div>
-                            
-                            <div class="address-card">
-                                <h5>🎓 Academic/Professional</h5>
-                                <div style="font-family: monospace; background: #f8f9fa; padding: 1rem; border-radius: 4px;">
-                                    Dr. Robert Kim, PhD<br>
-                                    Professor of Economics<br>
-                                    University of British Columbia<br>
-                                    2329 West Mall<br>
-                                    Vancouver, BC  V6T 1Z4
-                                </div>
-                                <div class="format-notes" style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
-                                    • "Dr." for medical doctors or PhD holders<br>
-                                    • Professional designations after name<br>
-                                    • Academic titles on second line
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="salutation-guide">
-                            <h3>🤝 Salutation Guidelines</h3>
-                            
-                            <div class="salutation-table">
-                                <table style="width: 100%; border-collapse: collapse;">
-                                    <thead>
-                                        <tr style="background: #2c3e50; color: white;">
-                                            <th style="padding: 0.75rem; text-align: left;">Addressee</th>
-                                            <th style="padding: 0.75rem; text-align: left;">Salutation</th>
-                                            <th style="padding: 0.75rem; text-align: left;">Closing</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr style="border-bottom: 1px solid #ddd;">
-                                            <td style="padding: 0.75rem;">Known individual</td>
-                                            <td style="padding: 0.75rem;">Dear Ms. Smith:</td>
-                                            <td style="padding: 0.75rem;">Yours truly,</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid #ddd;">
-                                            <td style="padding: 0.75rem;">Unknown individual</td>
-                                            <td style="padding: 0.75rem;">Dear Sir or Madam:</td>
-                                            <td style="padding: 0.75rem;">Yours truly,</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid #ddd;">
-                                            <td style="padding: 0.75rem;">Government Minister</td>
-                                            <td style="padding: 0.75rem;">Dear Minister:</td>
-                                            <td style="padding: 0.75rem;">Yours sincerely,</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid #ddd;">
-                                            <td style="padding: 0.75rem;">Judge</td>
-                                            <td style="padding: 0.75rem;">Dear Justice Smith:</td>
-                                            <td style="padding: 0.75rem;">Yours respectfully,</td>
-                                        </tr>
-                                        <tr style="border-bottom: 1px solid #ddd;">
-                                            <td style="padding: 0.75rem;">Group/Organization</td>
-                                            <td style="padding: 0.75rem;">Dear Colleagues:</td>
-                                            <td style="padding: 0.75rem;">Sincerely,</td>
-                                        </tr>
-                                        <tr>
-                                            <td style="padding: 0.75rem;">Close business contact</td>
-                                            <td style="padding: 0.75rem;">Dear John,</td>
-                                            <td style="padding: 0.75rem;">Best regards,</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            
-                            <div class="salutation-notes" style="margin-top: 1rem;">
-                                <h4>Important Notes:</h4>
-                                <ul>
-                                    <li>Always use a colon (:) after formal salutations</li>
-                                    <li>Use a comma (,) only for informal salutations</li>
-                                    <li>Match the formality of salutation and closing</li>
-                                    <li>When in doubt, err on the side of formality</li>
-                                    <li>Research proper titles for government officials</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <div class="title-reference">
-                            <h3>📋 Common Canadian Titles</h3>
-                            
-                            <div class="titles-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="title-category">
-                                    <h4>Government Officials</h4>
-                                    <ul>
-                                        <li>The Right Honourable (Prime Minister, Chief Justice)</li>
-                                        <li>The Honourable (Cabinet Ministers, Senators)</li>
-                                        <li>His/Her Worship (Mayors)</li>
-                                        <li>Councillor (Municipal council members)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="title-category">
-                                    <h4>Professional Titles</h4>
-                                    <ul>
-                                        <li>Dr. (Medical doctors, PhD holders)</li>
-                                        <li>Professor (University faculty)</li>
-                                        <li>Justice (Judges)</li>
-                                        <li>Reverend (Clergy)</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="title-category">
-                                    <h4>Military Ranks</h4>
-                                    <ul>
-                                        <li>General, Colonel, Major (Army)</li>
-                                        <li>Admiral, Captain, Commander (Navy)</li>
-                                        <li>Air Marshal, Group Captain (Air Force)</li>
-                                        <li>Use rank + surname in address</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-addresses-titles"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('addresses-titles')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+Dear Ms. Johnson:
 
-                <!-- Section 10.07: Transmittal Letters -->
-                <section class="content-section" id="transmittal-letters">
-                    <div class="section-header">
-                        <h2>10.07 Transmittal Letters</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Transmittal letters accompany reports, proposals, or other documents, providing context and highlighting key points for the recipient.</p>
-                        
-                        <div class="rule-box">
-                            <h3>Transmittal Letter Purpose</h3>
-                            <ul>
-                                <li><strong>Introduction:</strong> Present the accompanying document</li>
-                                <li><strong>Context:</strong> Explain why the document was prepared</li>
-                                <li><strong>Highlights:</strong> Draw attention to key findings or recommendations</li>
-                                <li><strong>Action:</strong> Specify what the recipient should do</li>
-                                <li><strong>Authorization:</strong> Provide official approval or endorsement</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="transmittal-template">
-                            <h3>📋 Standard Transmittal Letter</h3>
-                            <div class="letter-template">
-                                <div class="letter-header">
-                                    <div class="letterhead">GOVERNMENT OF CANADA<br>
-                                    DEPARTMENT OF FINANCE</div>
-                                </div>
-                                
-                                <div class="letter-date">October 22, 2024</div>
-                                
-                                <div class="letter-address">
-                                    The Honourable Christine Sinclair<br>
-                                    Minister of Economic Development<br>
-                                    House of Commons<br>
-                                    Ottawa, ON K1A 0A6
-                                </div>
-                                
-                                <div style="margin: 1rem 0;">
-                                    Dear Minister Sinclair:
-                                </div>
-                                
-                                <div class="letter-body">
-                                    <p><strong>Subject: Economic Impact Assessment - Regional Development Initiative</strong></p>
-                                    
-                                    <p>I am pleased to forward the economic impact assessment for the proposed Regional Development Initiative, as requested in your letter of September 15, 2024.</p>
-                                    
-                                    <p>This comprehensive analysis examines the potential economic effects of the $2.4 billion infrastructure investment across five provinces. The assessment was conducted by our Economic Analysis Division in consultation with Statistics Canada and provincial economic development agencies.</p>
-                                    
-                                    <p><strong>Key Findings:</strong></p>
-                                    <ul>
-                                        <li>Projected GDP increase of 0.3% over five years</li>
-                                        <li>Creation of approximately 15,000 direct and indirect jobs</li>
-                                        <li>Positive impact on rural and remote communities</li>
-                                        <li>Enhanced infrastructure supporting long-term economic growth</li>
-                                    </ul>
-                                    
-                                    <p><strong>Recommendations:</strong> The report recommends proceeding with the initiative, subject to the implementation of the monitoring framework outlined in Section 6. This will ensure accountability and enable course corrections if needed.</p>
-                                    
-                                    <p>The Cabinet Committee on Economic Development will review this assessment at its November 8 meeting. I am available to discuss the findings and answer any questions you may have.</p>
-                                </div>
-                                
-                                <div class="letter-closing">
-                                    Yours sincerely,<br><br><br>
-                                    
-                                    <div class="signature-block">
-                                        <strong>Michael Thompson</strong><br>
-                                        Deputy Minister<br>
-                                        Department of Finance<br>
-                                        michael.thompson@fin.gc.ca
-                                    </div>
-                                </div>
-                                
-                                <div style="margin-top: 2rem; font-size: 0.9rem;">
-                                    MT/sr<br>
-                                    Enclosure: Economic Impact Assessment Report (127 pages)<br>
-                                    c.c. Deputy Minister, Economic Development<br>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chief Economist, Statistics Canada
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="transmittal-types">
-                            <h3>Types of Transmittal Letters</h3>
-                            
-                            <div class="transmittal-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="transmittal-type">
-                                    <h4>📊 Report Transmittal</h4>
-                                    <ul>
-                                        <li>Summarize key findings</li>
-                                        <li>Highlight recommendations</li>
-                                        <li>Explain methodology</li>
-                                        <li>Note any limitations</li>
-                                        <li>Suggest next steps</li>
-                                    </ul>
-                                    <div class="example-snippet" style="background: #f8f9fa; padding: 1rem; margin-top: 1rem; border-radius: 4px; font-style: italic;">
-                                        "The attached annual performance report demonstrates significant progress toward our strategic objectives, with 87% of targets met or exceeded..."
-                                    </div>
-                                </div>
-                                
-                                <div class="transmittal-type">
-                                    <h4>📋 Policy Document</h4>
-                                    <ul>
-                                        <li>Explain policy context</li>
-                                        <li>Outline consultation process</li>
-                                        <li>Identify implementation requirements</li>
-                                        <li>Note stakeholder feedback</li>
-                                        <li>Request approval or review</li>
-                                    </ul>
-                                    <div class="example-snippet" style="background: #f8f9fa; padding: 1rem; margin-top: 1rem; border-radius: 4px; font-style: italic;">
-                                        "The enclosed policy framework reflects extensive consultation with industry stakeholders and incorporates feedback from the public comment period..."
-                                    </div>
-                                </div>
-                                
-                                <div class="transmittal-type">
-                                    <h4>🔬 Research Study</h4>
-                                    <ul>
-                                        <li>Describe research objectives</li>
-                                        <li>Summarize methodology</li>
-                                        <li>Present key conclusions</li>
-                                        <li>Discuss implications</li>
-                                        <li>Suggest further research</li>
-                                    </ul>
-                                    <div class="example-snippet" style="background: #f8f9fa; padding: 1rem; margin-top: 1rem; border-radius: 4px; font-style: italic;">
-                                        "This longitudinal study provides compelling evidence for the effectiveness of early intervention programs, with implications for future policy development..."
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="transmittal-tips">
-                            <h3>💡 Transmittal Letter Best Practices</h3>
-                            <div class="tips-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="tip-category">
-                                    <h4>Content Guidelines</h4>
-                                    <ul>
-                                        <li>Keep the letter concise (1-2 pages maximum)</li>
-                                        <li>Focus on what's most important to the reader</li>
-                                        <li>Use specific details and quantifiable results</li>
-                                        <li>Avoid repeating information from the document</li>
-                                        <li>Include clear action items or next steps</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="tip-category">
-                                    <h4>Professional Presentation</h4>
-                                    <ul>
-                                        <li>Use official letterhead and formal format</li>
-                                        <li>Include complete enclosure descriptions</li>
-                                        <li>Copy relevant stakeholders appropriately</li>
-                                        <li>Provide contact information for follow-up</li>
-                                        <li>Ensure consistent tone with document content</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-transmittal-letters"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('transmittal-letters')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
+Subject: Municipal Infrastructure Funding Guidelines
 
-                <!-- Section 10.08: Electronic Correspondence -->
-                <section class="content-section" id="electronic-correspondence">
-                    <div class="section-header">
-                        <h2>10.08 Electronic Correspondence</h2>
-                    </div>
-                    
-                    <div class="lesson-content">
-                        <p>Email has become the primary means of business communication. Apply professional standards to ensure clarity and maintain your organization's reputation.</p>
-                        
-                        <div class="rule-box">
-                            <h3>Email Best Practices</h3>
-                            <ul>
-                                <li><strong>Subject Line:</strong> Clear, specific, and informative</li>
-                                <li><strong>Professional Tone:</strong> Formal language for external communications</li>
-                                <li><strong>Concise Content:</strong> Get to the point quickly and clearly</li>
-                                <li><strong>Proper Formatting:</strong> Use paragraphs and white space effectively</li>
-                                <li><strong>Signature Block:</strong> Include complete contact information</li>
-                                <li><strong>Security:</strong> Protect sensitive information appropriately</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="email-templates">
-                            <h3>📧 Professional Email Examples</h3>
-                            
-                            <div class="email-template">
-                                <div class="email-header">
-                                    <div class="email-field"><strong>From:</strong> sarah.johnson@canada.ca</div>
-                                    <div class="email-field"><strong>To:</strong> provincial.ministers@gov.bc.ca</div>
-                                    <div class="email-field"><strong>Cc:</strong> deputy.minister@hc-sc.gc.ca</div>
-                                    <div class="email-field"><strong>Date:</strong> November 15, 2024, 10:30 AM</div>
-                                    <div class="email-field"><strong>Subject:</strong> Updated Health Transfer Guidelines - Action Required by Dec 1</div>
-                                </div>
-                                
-                                <div style="padding: 1rem; background: white;">
-                                    <p>Dear Provincial Health Ministers,</p>
-                                    
-                                    <p>I am writing to inform you of important updates to the Canada Health Transfer guidelines, effective January 1, 2025. These changes affect reporting requirements and funding calculations for all provinces.</p>
-                                    
-                                    <p><strong>Key Changes:</strong></p>
-                                    <ul>
-                                        <li>Quarterly reporting now required (previously annual)</li>
-                                        <li>Enhanced data collection for mental health services</li>
-                                        <li>New performance indicators for wait time reduction</li>
-                                    </ul>
-                                    
-                                    <p><strong>Action Required:</strong> Please confirm your province's readiness to implement these guidelines by December 1, 2024. Implementation support is available through our regional coordinators.</p>
-                                    
-                                    <p>Detailed guidelines are attached. A videoconference briefing is scheduled for November 28 at 2:00 PM EST - calendar invitation to follow.</p>
-                                    
-                                    <p>Please contact me directly if you have questions or concerns.</p>
-                                    
-                                    <p>Best regards,</p>
-                                    
-                                    <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; font-size: 0.9rem;">
-                                        <strong>Sarah Johnson</strong><br>
-                                        Director, Intergovernmental Affairs<br>
-                                        Health Canada | Santé Canada<br>
-                                        Tel: (613) 555-0198 | Cell: (613) 555-0199<br>
-                                        Email: sarah.johnson@hc-sc.gc.ca<br>
-                                        Address: 200 Eglantine Driveway, Ottawa, ON K1A 0K9<br><br>
-                                        
-                                        <em>Government of Canada | Gouvernement du Canada</em>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="email-template">
-                                <div class="email-header">
-                                    <div class="email-field"><strong>From:</strong> m.rodriguez@tc.gc.ca</div>
-                                    <div class="email-field"><strong>To:</strong> industry.stakeholders@aviation.org</div>
-                                    <div class="email-field"><strong>Date:</strong> December 3, 2024, 3:15 PM</div>
-                                    <div class="email-field"><strong>Subject:</strong> Aviation Safety Regulations Consultation - Extension Granted</div>
-                                </div>
-                                
-                                <div style="padding: 1rem; background: white;">
-                                    <p>Dear Industry Stakeholders,</p>
-                                    
-                                    <p>Thank you for your participation in the aviation safety regulations consultation process. Based on your feedback requesting additional time for comprehensive review, we are extending the consultation period.</p>
-                                    
-                                    <p><strong>Revised Timeline:</strong></p>
-                                    <ul>
-                                        <li>Consultation closes: January 15, 2025 (extended from December 20, 2024)</li>
-                                        <li>Final regulations published: March 2025</li>
-                                        <li>Implementation date: July 1, 2025</li>
-                                    </ul>
-                                    
-                                    <p>This extension provides additional opportunities for:</p>
-                                    <ul>
-                                        <li>Technical review by your engineering teams</li>
-                                        <li>Cost-benefit analysis for implementation</li>
-                                        <li>Regional industry association input</li>
-                                    </ul>
-                                    
-                                    <p>Submissions should be sent to: <strong>aviation.regulations@tc.gc.ca</strong></p>
-                                    
-                                    <p>We appreciate your continued engagement in this important safety initiative.</p>
-                                    
-                                    <p>Regards,</p>
-                                    
-                                    <div style="margin-top: 2rem; border-top: 1px solid #ddd; padding-top: 1rem; font-size: 0.9rem;">
-                                        <strong>Maria Rodriguez</strong><br>
-                                        Manager, Regulatory Development<br>
-                                        Transport Canada | Transports Canada<br>
-                                        Tel: (613) 555-0145<br>
-                                        m.rodriguez@tc.gc.ca
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="email-guidelines">
-                            <h3>Email Communication Guidelines</h3>
-                            
-                            <div class="guidelines-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
-                                <div class="guideline-section">
-                                    <h4>✅ Professional Standards</h4>
-                                    <ul>
-                                        <li>Use descriptive subject lines with keywords</li>
-                                        <li>Start with appropriate greeting</li>
-                                        <li>Keep paragraphs short (3-4 lines)</li>
-                                        <li>Use bullet points for multiple items</li>
-                                        <li>Include clear action items with deadlines</li>
-                                        <li>End with professional closing</li>
-                                        <li>Use complete signature block</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="guideline-section">
-                                    <h4>❌ Common Email Mistakes</h4>
-                                    <ul>
-                                        <li>Vague subject lines ("FYI," "Important")</li>
-                                        <li>No greeting or too casual greeting</li>
-                                        <li>Wall of text without breaks</li>
-                                        <li>Unclear action items or deadlines</li>
-                                        <li>Reply-all when not necessary</li>
-                                        <li>Forwarding without context</li>
-                                        <li>Missing or incomplete signatures</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="guideline-section">
-                                    <h4>🔒 Security Considerations</h4>
-                                    <ul>
-                                        <li>Mark sensitive emails "CONFIDENTIAL"</li>
-                                        <li>Use encryption for classified information</li>
-                                        <li>Verify recipient addresses before sending</li>
-                                        <li>Be cautious with "Reply All" function</li>
-                                        <li>Don't send personal information via email</li>
-                                        <li>Use secure file sharing for large attachments</li>
-                                        <li>Follow organizational IT policies</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="response-etiquette">
-                            <h3>📬 Email Response Etiquette</h3>
-                            
-                            <div class="etiquette-rules">
-                                <div class="rule-section">
-                                    <h4>Response Timing</h4>
-                                    <ul>
-                                        <li><strong>Urgent requests:</strong> Within 4 hours during business hours</li>
-                                        <li><strong>Standard business emails:</strong> Within 24 hours</li>
-                                        <li><strong>Complex requests:</strong> Acknowledge receipt within 24 hours, provide full response timeline</li>
-                                        <li><strong>Auto-replies:</strong> Use when away for more than one business day</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="rule-section">
-                                    <h4>Thread Management</h4>
-                                    <ul>
-                                        <li>Keep related emails in the same thread</li>
-                                        <li>Update subject line if topic changes significantly</li>
-                                        <li>Quote relevant portions when responding</li>
-                                        <li>Start new threads for new topics</li>
-                                        <li>Remove unnecessary recipients as threads evolve</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-electronic-correspondence"></div>
-                    
-                    <div class="section-footer">
-                        <button class="btn btn-primary" onclick="completeSection('electronic-correspondence')">
-                            Mark Complete & Continue
-                        </button>
-                    </div>
-                </section>
-            </div>
+Thank you for your letter of March 1, 2024, regarding the new municipal infrastructure funding guidelines.
 
-            <!-- Navigation Controls -->
-            <div class="chapter-navigation">
-                <a href="../chapters/ch09.html" class="btn btn-outline nav-prev">
-                    ← Previous: Chapter 9
-                </a>
-                <a href="../chapters/ch11.html" class="btn btn-outline nav-next">
-                    Next: Chapter 11 →
-                </a>
-            </div>
+[Body paragraphs...]
+
+I trust this information addresses your concerns. Please contact me if you require further clarification.
+
+Yours sincerely,
+
+[Signature]
+
+Michael Thompson
+Director, Infrastructure Policy
+Infrastructure Canada
+
+MT/sb
+File: 12345-67890
+                        </div>
+                    </div>
+
+                    <div class="tip-box">
+                        <h4>💡 Formatting Tip</h4>
+                        <p>Use single spacing within paragraphs and double spacing between paragraphs for government letters.</p>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="business-letters"></div>
+                    </div>
+                    <button onclick="completeSection('business-letters')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
+
+            <!-- Section: Memorandums -->
+            <section id="memos" class="content-section">
+                <div class="section-header">
+                    <h2>10.04 Memorandums</h2>
+                    <p>Internal government communication format and conventions</p>
+                </div>
+
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Memorandum Format</h4>
+                        <ul>
+                            <li><strong>Header:</strong> "MEMORANDUM" or department letterhead</li>
+                            <li><strong>To:</strong> Recipient's name and title</li>
+                            <li><strong>From:</strong> Sender's name and title</li>
+                            <li><strong>Date:</strong> Full date</li>
+                            <li><strong>Subject:</strong> Clear, descriptive subject line</li>
+                            <li><strong>Body:</strong> Direct, organized content</li>
+                            <li><strong>Attachments:</strong> List if applicable</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Sample Memorandum</h4>
+                        <div style="background: #f8f9fa; padding: 1rem; border: 1px solid #dee2e6; font-family: monospace; white-space: pre-line;">
+MEMORANDUM
+
+To:     Regional Directors
+From:   Jane Smith, Assistant Deputy Minister
+Date:   March 20, 2024
+Subject: New Travel Policy Implementation
+
+This memorandum outlines the implementation of the revised travel policy effective April 1, 2024.
+
+Key Changes:
+• Pre-approval required for all travel over $500
+• Updated meal allowances in Appendix A
+• Electronic submission of expense reports
+
+Please ensure all staff in your region are informed of these changes by March 30, 2024.
+
+Attachment: Travel Policy Guide (Version 3.2)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="memos"></div>
+                    </div>
+                    <button onclick="completeSection('memos')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
+
+            <!-- Section: Electronic Correspondence -->
+            <section id="electronic-correspondence" class="content-section">
+                <div class="section-header">
+                    <h2>10.08 Electronic Correspondence</h2>
+                    <p>Email and digital communication standards</p>
+                </div>
+
+                <div class="lesson-content">
+                    <div class="rule-box">
+                        <h4>Email Best Practices</h4>
+                        <ul>
+                            <li><strong>Subject line:</strong> Clear, specific, and informative</li>
+                            <li><strong>Greeting:</strong> Professional salutation</li>
+                            <li><strong>Body:</strong> Concise, organized content</li>
+                            <li><strong>Closing:</strong> Professional sign-off with contact information</li>
+                            <li><strong>Attachments:</strong> Referenced in body, properly named</li>
+                        </ul>
+                    </div>
+
+                    <div class="examples-box">
+                        <h4>Professional Email Example</h4>
+                        <div style="background: #f8f9fa; padding: 1rem; border: 1px solid #dee2e6; font-family: monospace; white-space: pre-line;">
+Subject: Action Required: Budget Submission Due March 30
+
+Good morning,
+
+This email serves as a reminder that departmental budget submissions for fiscal year 2024-25 are due by 5:00 PM on March 30, 2024.
+
+Required documents:
+• Budget template (attached)
+• Justification narrative
+• Supporting documentation
+
+Please contact me if you have questions or require assistance.
+
+Best regards,
+
+Sarah Chen
+Financial Planning Officer
+Department of Finance
+sarah.chen@canada.ca
+Phone: (613) 555-0123
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ Security Reminder</h4>
+                        <p>Always verify recipient addresses and consider information sensitivity before sending government emails.</p>
+                    </div>
+                </div>
+
+                <div class="section-footer">
+                    <div class="quiz-panel">
+                        <h4>Test Your Knowledge</h4>
+                        <div class="quiz-engine-container" data-quiz-section="electronic-correspondence"></div>
+                    </div>
+                    <button onclick="completeSection('electronic-correspondence')" class="btn btn-primary">Mark as Complete</button>
+                </div>
+            </section>
         </div>
-    </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
@@ -1293,11 +305,13 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
@@ -1313,6 +327,11 @@
             
             initializeChapter('ch10', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
