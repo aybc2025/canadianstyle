@@ -1,235 +1,467 @@
 {
-  "id": "ch05",
+  "chapter": "ch05",
   "title": "Numerical Expressions",
-  "description": "Master the rules for writing numbers in Canadian style",
+  "description": "Test your knowledge of number formatting, SI/metric units, and conversion calculations.",
   "sections": {
-    "basic-rules": {
-      "id": "basic-rules",
-      "title": "Basic Number Rules Quiz",
-      "questions": [
-        {
-          "id": "num-q1",
-          "type": "mcq",
-          "stem": "Which sentence correctly follows the basic number rule?",
-          "options": [
-            {"label": "We ordered 9 computers and twelve desks.", "correct": false},
-            {"label": "We ordered nine computers and 12 desks.", "correct": false},
-            {"label": "We ordered nine computers and twelve desks.", "correct": true},
-            {"label": "We ordered 9 computers and 12 desks.", "correct": false}
-          ],
-          "rationale": "Numbers one through nine are typically spelled out, while 10 and above use numerals. However, be consistent within a sentence.",
-          "ref": "§5.01"
-        },
-        {
-          "id": "num-q2",
-          "type": "fill-blank",
-          "stem": "Complete using the correct number format:",
-          "text": "The meeting lasted ____ hours and included ____ participants.",
-          "answers": ["three", "25"],
-          "hint": "Consider the basic rule for numbers one through nine versus 10 and above.",
-          "rationale": "Numbers one through nine are spelled out, numbers 10 and above use numerals.",
-          "ref": "§5.01"
-        },
-        {
-          "id": "num-q3",
-          "type": "error-spot",
-          "stem": "Find the number format error:",
-          "text": "The report shows that 5 departments spent more than twelve thousand dollars.",
-          "errorWord": "5",
-          "rationale": "Numbers one through nine should be spelled out in regular text.",
-          "ref": "§5.01"
-        }
-      ]
-    },
     "sentence-beginning": {
-      "id": "sentence-beginning",
-      "title": "Numbers at Sentence Beginning Quiz",
+      "id": "sentence-beginning-quiz",
+      "title": "Numbers at Sentence Beginning",
       "questions": [
         {
-          "id": "sent-q1",
+          "id": "sb-01",
           "type": "mcq",
-          "stem": "Which sentence correctly handles a number at the beginning?",
+          "stem": "How should numbers at the beginning of sentences be written?",
           "options": [
-            {"label": "25 people attended the meeting.", "correct": false},
-            {"label": "Twenty-five people attended the meeting.", "correct": true},
-            {"label": "A total of 25 people attended the meeting.", "correct": true},
-            {"label": "Both B and C are correct", "correct": true}
+            {"label": "Always as numerals", "correct": false},
+            {"label": "Always spelled out", "correct": true},
+            {"label": "As numerals if less than 10", "correct": false},
+            {"label": "Either way is acceptable", "correct": false}
           ],
-          "rationale": "Numbers beginning a sentence should be spelled out, or the sentence should be rewritten to avoid starting with a number.",
+          "rationale": "Numbers beginning sentences must always be spelled out, regardless of size.",
           "ref": "§5.02"
         },
         {
-          "id": "sent-q2",
-          "type": "drag-drop",
-          "stem": "Arrange these sentence openings from most to least preferred:",
-          "instructions": "Order by preference in Canadian style:",
-          "items": [
-            {"text": "Fifteen participants joined", "order": 1},
-            {"text": "A total of 15 participants joined", "order": 2},
-            {"text": "15 participants joined", "order": 3}
+          "id": "sb-02",
+          "type": "error-spot",
+          "stem": "Find the error in this sentence:",
+          "text": "25 participants attended the training session on budget planning.",
+          "errors": [
+            {"text": "25", "position": 1, "correction": "Twenty-five", "reason": "Numbers at sentence beginning must be spelled out"}
           ],
-          "rationale": "Spelled-out numbers are most preferred, followed by rewording to avoid starting with numerals.",
+          "rationale": "Numbers beginning sentences must be spelled out: 'Twenty-five participants...'",
+          "ref": "§5.02"
+        },
+        {
+          "id": "sb-03",
+          "type": "mcq",
+          "stem": "What should you do with very large numbers at sentence beginning?",
+          "options": [
+            {"label": "Spell them out completely", "correct": false},
+            {"label": "Use numerals anyway", "correct": false},
+            {"label": "Rewrite the sentence", "correct": true},
+            {"label": "Use scientific notation", "correct": false}
+          ],
+          "rationale": "Very large numbers create awkward spelling, so rewrite sentences to avoid them at the beginning.",
+          "ref": "§5.02"
+        },
+        {
+          "id": "sb-04",
+          "type": "fill-blank",
+          "stem": "Complete this sentence correctly: ________ thousand applications were received this year.",
+          "answer": "Three",
+          "alternatives": ["3000", "3,000"],
+          "rationale": "Numbers at sentence beginning must be spelled out: 'Three thousand applications...'",
+          "ref": "§5.02"
+        },
+        {
+          "id": "sb-05",
+          "type": "mcq",
+          "stem": "Which sentence is better?",
+          "options": [
+            {"label": "Two thousand four hundred fifty-seven people applied.", "correct": false},
+            {"label": "The program received 2,457 applications.", "correct": true},
+            {"label": "2,457 people applied for the program.", "correct": false},
+            {"label": "There were two thousand four hundred fifty-seven applicants.", "correct": false}
+          ],
+          "rationale": "Rewriting avoids awkward spelled-out large numbers while maintaining clarity.",
           "ref": "§5.02"
         }
       ]
     },
     "money-measurements": {
-      "id": "money-measurements",
-      "title": "Money and Measurements Quiz",
+      "id": "money-measurements-quiz",
+      "title": "Money and Measurement Formatting",
       "questions": [
         {
-          "id": "money-q1",
-          "type": "fill-blank",
-          "stem": "Write the monetary amount correctly:",
-          "text": "The budget allocation was $____ for equipment and $____ for training.",
-          "answers": ["50,000", "5,500"],
-          "hint": "Use numerals for all monetary amounts regardless of the basic rule.",
-          "rationale": "Monetary amounts always use numerals, with commas for thousands.",
-          "ref": "§5.16"
-        },
-        {
-          "id": "money-q2",
+          "id": "mm-01",
           "type": "mcq",
-          "stem": "Which measurement format is correct?",
+          "stem": "How should even dollar amounts be written in text?",
           "options": [
-            {"label": "The room measures 5 metres by 3 metres.", "correct": true},
-            {"label": "The room measures five metres by three metres.", "correct": false},
-            {"label": "The room measures 5 m by 3 m.", "correct": true},
-            {"label": "Both A and C are correct", "correct": true}
+            {"label": "$5.00", "correct": false},
+            {"label": "$5", "correct": true},
+            {"label": "Five dollars", "correct": false},
+            {"label": "$5.-- ", "correct": false}
           ],
-          "rationale": "Measurements use numerals regardless of the basic number rule. Both full words and abbreviations are acceptable.",
-          "ref": "§5.10"
+          "rationale": "Even dollar amounts don't need decimal places in running text: '$5' not '$5.00'",
+          "ref": "§5.03"
         },
         {
-          "id": "money-q3",
+          "id": "mm-02",
           "type": "error-spot",
-          "stem": "Find the error in this monetary expression:",
-          "text": "The cost increased from $five hundred to $1,200 last year.",
-          "errorWord": "five",
-          "rationale": "All monetary amounts should use numerals: $500.",
-          "ref": "§5.16"
+          "stem": "Find the formatting error:",
+          "text": "The equipment weighs 25kgs and costs $2,500.00.",
+          "errors": [
+            {"text": "25kgs", "position": 3, "correction": "25 kg", "reason": "Need space between number and unit, and units don't take plural 's'"}
+          ],
+          "rationale": "SI units require space between number and unit, and don't use plural forms.",
+          "ref": "§5.03"
+        },
+        {
+          "id": "mm-03",
+          "type": "fill-blank",
+          "stem": "The budget allocates $________ million for the new facility.",
+          "answer": "2.5",
+          "alternatives": ["2.50", "two point five"],
+          "rationale": "Use numerals with currency symbols and express millions clearly: '$2.5 million'",
+          "ref": "§5.03"
+        },
+        {
+          "id": "mm-04",
+          "type": "mcq",
+          "stem": "How should measurements always be written?",
+          "options": [
+            {"label": "With numerals, regardless of the basic number rules", "correct": true},
+            {"label": "Following the one-to-nine spelling rule", "correct": false},
+            {"label": "Spelled out for clarity", "correct": false},
+            {"label": "As decimals only", "correct": false}
+          ],
+          "rationale": "Measurements always use numerals, even for numbers under 10: '5 km' not 'five kilometres'",
+          "ref": "§5.03"
+        },
+        {
+          "id": "mm-05",
+          "type": "mcq",
+          "stem": "Which is the correct format for Canadian government documents?",
+          "options": [
+            {"label": "25 degrees Celsius", "correct": false},
+            {"label": "25°C", "correct": true},
+            {"label": "25° C", "correct": false},
+            {"label": "25 deg C", "correct": false}
+          ],
+          "rationale": "Temperature uses degree symbol directly attached to C: '25°C'",
+          "ref": "§5.03"
         }
       ]
     },
     "dates-time": {
-      "id": "dates-time",
-      "title": "Dates and Time Quiz",
+      "id": "dates-time-quiz",
+      "title": "Date and Time Formatting",
       "questions": [
         {
-          "id": "date-q1",
-          "type": "matching",
-          "stem": "Match each date format with its appropriate context:",
-          "pairs": [
-            {"left": "March 15, 2024", "right": "Formal documents"},
-            {"left": "15 March 2024", "right": "International style"},
-            {"left": "2024-03-15", "right": "Technical/database format"},
-            {"left": "Mar. 15, 2024", "right": "Informal correspondence"}
+          "id": "dt-01",
+          "type": "mcq",
+          "stem": "What is the preferred date format for Canadian government documents?",
+          "options": [
+            {"label": "MM/DD/YYYY", "correct": false},
+            {"label": "DD/MM/YYYY", "correct": false},
+            {"label": "Month Day, Year", "correct": true},
+            {"label": "Day Month Year", "correct": false}
           ],
-          "rationale": "Different date formats serve different purposes and contexts.",
-          "ref": "§5.14"
+          "rationale": "Canadian standard format is 'January 15, 2024' or ISO format 'YYYY-MM-DD'",
+          "ref": "§5.04"
         },
         {
-          "id": "date-q2",
+          "id": "dt-02",
+          "type": "error-spot",
+          "stem": "Find the formatting error:",
+          "text": "The meeting is scheduled for 3/15/24 at 2:30 PM.",
+          "errors": [
+            {"text": "3/15/24", "position": 5, "correction": "March 15, 2024", "reason": "Use full date format, not American MM/DD/YY style"},
+            {"text": "2:30 PM", "position": 7, "correction": "14:30", "reason": "Use 24-hour clock for formal documents"}
+          ],
+          "rationale": "Use full Canadian date format and 24-hour time for government documents.",
+          "ref": "§5.04"
+        },
+        {
+          "id": "dt-03",
           "type": "fill-blank",
-          "stem": "Complete the time expression:",
-          "text": "The meeting starts at ____ and ends at ____.",
-          "answers": ["9:30 a.m.", "4:00 p.m."],
-          "hint": "Use standard time format with periods in a.m./p.m.",
-          "rationale": "Time uses numerals with lowercase a.m./p.m. including periods.",
-          "ref": "§5.13"
+          "stem": "In ISO format, January 15, 2024 would be written as ________.",
+          "answer": "2024-01-15",
+          "alternatives": ["2024/01/15", "01-15-2024"],
+          "rationale": "ISO date format is YYYY-MM-DD: '2024-01-15'",
+          "ref": "§5.04"
+        },
+        {
+          "id": "dt-04",
+          "type": "mcq",
+          "stem": "When should you include time zones in documents?",
+          "options": [
+            {"label": "Never, they're assumed", "correct": false},
+            {"label": "Only for international meetings", "correct": false},
+            {"label": "For meetings or deadlines involving multiple locations", "correct": true},
+            {"label": "Only in electronic communications", "correct": false}
+          ],
+          "rationale": "Always specify time zones when readers might be in different time zones.",
+          "ref": "§5.04"
+        },
+        {
+          "id": "dt-05",
+          "type": "mcq",
+          "stem": "What time format is preferred for formal government documents?",
+          "options": [
+            {"label": "12-hour clock (AM/PM)", "correct": false},
+            {"label": "24-hour clock", "correct": true},
+            {"label": "Either format is acceptable", "correct": false},
+            {"label": "Written out (two thirty)", "correct": false}
+          ],
+          "rationale": "24-hour clock (14:30) is preferred for formal documents to avoid AM/PM confusion.",
+          "ref": "§5.04"
         }
       ]
     },
     "percentages-statistics": {
-      "id": "percentages-statistics",
-      "title": "Percentages and Statistics Quiz",
+      "id": "percentages-statistics-quiz",
+      "title": "Percentages and Statistical Data",
       "questions": [
         {
-          "id": "perc-q1",
+          "id": "ps-01",
           "type": "mcq",
-          "stem": "Which percentage format is correct?",
+          "stem": "How should percentages be written in formal prose?",
           "options": [
-            {"label": "The success rate was 85%.", "correct": true},
-            {"label": "The success rate was eighty-five percent.", "correct": false},
-            {"label": "The success rate was 85 percent.", "correct": true},
-            {"label": "Both A and C are correct", "correct": true}
+            {"label": "15%", "correct": false},
+            {"label": "15 percent", "correct": true},
+            {"label": "fifteen percent", "correct": false},
+            {"label": "15 per cent", "correct": false}
           ],
-          "rationale": "Percentages use numerals and can be written with % symbol or 'percent' spelled out.",
-          "ref": "§5.04"
+          "rationale": "In formal prose, spell out 'percent' and use numerals: '15 percent'",
+          "ref": "§5.05"
         },
         {
-          "id": "perc-q2",
-          "type": "drag-drop",
-          "stem": "Arrange these statistical expressions in order of formality:",
-          "instructions": "Most formal to least formal:",
-          "items": [
-            {"text": "85.7 percent", "order": 1},
-            {"text": "85.7%", "order": 2},
-            {"text": "about 86%", "order": 3},
-            {"text": "roughly nine in ten", "order": 4}
-          ],
-          "rationale": "Spelled-out 'percent' is most formal, followed by % symbol, then approximations.",
-          "ref": "§5.04"
+          "id": "ps-02",
+          "type": "fill-blank",
+          "stem": "The response rate improved by ________ over the previous year.",
+          "answer": "15 percent",
+          "alternatives": ["15%", "fifteen percent"],
+          "rationale": "Use numerals with spelled-out 'percent' in formal writing.",
+          "ref": "§5.05"
         },
         {
-          "id": "perc-q3",
+          "id": "ps-03",
+          "type": "mcq",
+          "stem": "When is the % symbol appropriate?",
+          "options": [
+            {"label": "Never in government documents", "correct": false},
+            {"label": "In tables and technical documents", "correct": true},
+            {"label": "Only in informal writing", "correct": false},
+            {"label": "When space is limited", "correct": false}
+          ],
+          "rationale": "The % symbol is appropriate in tables, charts, and technical documents.",
+          "ref": "§5.05"
+        },
+        {
+          "id": "ps-04",
           "type": "error-spot",
-          "stem": "Find the error in this statistical statement:",
-          "text": "Survey results show that 8% prefer coffee while thirty-two percent prefer tea.",
-          "errorWord": "thirty-two",
-          "rationale": "Be consistent within a document - use either numerals or spelled-out numbers for all percentages.",
-          "ref": "§5.04"
+          "stem": "Find the error in this statistical report:",
+          "text": "Survey results show 78.5% approval (confidence interval: 75.1-81.5%).",
+          "errors": [
+            {"text": "confidence interval: 75.1-81.5%", "position": 5, "correction": "95% CI: 75.1-81.5%", "reason": "Should specify confidence level (usually 95%) and use standard CI abbreviation"}
+          ],
+          "rationale": "Always specify the confidence level and use standard abbreviation 'CI'.",
+          "ref": "§5.05"
+        },
+        {
+          "id": "ps-05",
+          "type": "mcq",
+          "stem": "What should always be reported with statistical findings?",
+          "options": [
+            {"label": "Only the main result", "correct": false},
+            {"label": "Sample size (n) and confidence intervals when relevant", "correct": true},
+            {"label": "The survey method only", "correct": false},
+            {"label": "Just the percentage", "correct": false}
+          ],
+          "rationale": "Statistical reports should include sample size and confidence intervals for transparency.",
+          "ref": "§5.05"
+        }
+      ]
+    },
+    "si-metric-system": {
+      "id": "si-metric-system-quiz",
+      "title": "SI/Metric System Knowledge",
+      "questions": [
+        {
+          "id": "si-01",
+          "type": "mcq",
+          "stem": "Which of these is NOT a base SI unit?",
+          "options": [
+            {"label": "metre (length)", "correct": false},
+            {"label": "kilogram (mass)", "correct": false},
+            {"label": "litre (volume)", "correct": true},
+            {"label": "kelvin (temperature)", "correct": false}
+          ],
+          "rationale": "Litre is a derived unit. The seven base SI units are: metre, kilogram, second, ampere, kelvin, mole, candela.",
+          "ref": "§5.06"
+        },
+        {
+          "id": "si-02",
+          "type": "fill-blank",
+          "stem": "The prefix 'kilo' represents a factor of ________.",
+          "answer": "1000",
+          "alternatives": ["10³", "one thousand"],
+          "rationale": "'Kilo' means 1000 or 10³: 1 km = 1000 m",
+          "ref": "§5.06"
+        },
+        {
+          "id": "si-03",
+          "type": "mcq",
+          "stem": "How should SI unit symbols be written?",
+          "options": [
+            {"label": "With plural 's' when appropriate", "correct": false},
+            {"label": "Always lowercase", "correct": false},
+            {"label": "Never with plurals, lowercase unless derived from proper names", "correct": true},
+            {"label": "Always capitalized", "correct": false}
+          ],
+          "rationale": "SI symbols never take plurals and are lowercase unless derived from proper names (like W for watt from Watt).",
+          "ref": "§5.06"
+        },
+        {
+          "id": "si-04",
+          "type": "matching",
+          "stem": "Match the SI unit with its symbol:",
+          "pairs": [
+            {"left": "pascal (pressure)", "right": "Pa"},
+            {"left": "watt (power)", "right": "W"},
+            {"left": "joule (energy)", "right": "J"},
+            {"left": "newton (force)", "right": "N"}
+          ],
+          "rationale": "Learn the symbols for common derived SI units used in government documents.",
+          "ref": "§5.06"
+        },
+        {
+          "id": "si-05",
+          "type": "error-spot",
+          "stem": "Find the SI formatting error:",
+          "text": "The pressure reading was 145kPa at a temperature of 25° C.",
+          "errors": [
+            {"text": "145kPa", "position": 4, "correction": "145 kPa", "reason": "Need space between number and unit"},
+            {"text": "25° C", "position": 8, "correction": "25°C", "reason": "No space between degree symbol and C"}
+          ],
+          "rationale": "SI units need space between number and unit, but temperature symbols attach directly.",
+          "ref": "§5.06"
+        }
+      ]
+    },
+    "conversion-tables": {
+      "id": "conversion-tables-quiz",
+      "title": "Unit Conversions",
+      "questions": [
+        {
+          "id": "conv-01",
+          "type": "mcq",
+          "stem": "To convert inches to centimetres, multiply by:",
+          "options": [
+            {"label": "2.54", "correct": true},
+            {"label": "0.394", "correct": false},
+            {"label": "25.4", "correct": false},
+            {"label": "0.254", "correct": false}
+          ],
+          "rationale": "1 inch = 2.54 centimetres exactly (defined conversion factor).",
+          "ref": "§5.07"
+        },
+        {
+          "id": "conv-02",
+          "type": "fill-blank",
+          "stem": "60 miles equals approximately ________ kilometres.",
+          "answer": "96.6",
+          "alternatives": ["96.56", "97"],
+          "rationale": "60 miles × 1.609 = 96.54 km (round appropriately for context)",
+          "ref": "§5.07"
+        },
+        {
+          "id": "conv-03",
+          "type": "mcq",
+          "stem": "What is 20°C in Fahrenheit?",
+          "options": [
+            {"label": "52°F", "correct": false},
+            {"label": "68°F", "correct": true},
+            {"label": "72°F", "correct": false},
+            {"label": "36°F", "correct": false}
+          ],
+          "rationale": "°F = (°C × 9/5) + 32, so 20°C = (20 × 9/5) + 32 = 36 + 32 = 68°F",
+          "ref": "§5.07"
+        },
+        {
+          "id": "conv-04",
+          "type": "mcq",
+          "stem": "To convert pounds to kilograms, multiply by:",
+          "options": [
+            {"label": "2.205", "correct": false},
+            {"label": "0.454", "correct": true},
+            {"label": "1.000", "correct": false},
+            {"label": "0.621", "correct": false}
+          ],
+          "rationale": "1 pound = 0.454 kilograms (1 kg = 2.205 pounds is the reverse)",
+          "ref": "§5.07"
+        },
+        {
+          "id": "conv-05",
+          "type": "calculation",
+          "stem": "A room measures 12 feet by 15 feet. What is its area in square metres?",
+          "answer": "16.7",
+          "alternatives": ["16.72", "17", "16.7 m²"],
+          "steps": [
+            "Convert feet to metres: 12 ft × 0.3048 = 3.66 m",
+            "Convert feet to metres: 15 ft × 0.3048 = 4.57 m", 
+            "Calculate area: 3.66 × 4.57 = 16.72 m²",
+            "Round appropriately: 16.7 m²"
+          ],
+          "rationale": "Convert each dimension then multiply, or convert the area directly using 0.093 m²/ft².",
+          "ref": "§5.07"
         }
       ]
     },
     "special-applications": {
-      "id": "special-applications",
-      "title": "Special Applications Quiz",
+      "id": "special-applications-quiz",
+      "title": "Special Numerical Applications",
       "questions": [
         {
-          "id": "spec-q1",
-          "type": "fill-blank",
-          "stem": "Complete the address correctly:",
-          "text": "Please deliver to ____ Main Street, Apartment ____.",
-          "answers": ["123", "4B"],
-          "hint": "Street addresses always use numerals.",
-          "rationale": "Street addresses, apartment numbers, and postal information use numerals.",
-          "ref": "§5.21"
-        },
-        {
-          "id": "spec-q2",
+          "id": "spec-01",
           "type": "mcq",
-          "stem": "Which age expression follows Canadian style?",
+          "stem": "When should scientific notation be used?",
           "options": [
-            {"label": "She is 25 years old.", "correct": true},
-            {"label": "She is twenty-five years old.", "correct": false},
-            {"label": "She is 25-years-old.", "correct": false},
-            {"label": "She is in her twenties.", "correct": true}
+            {"label": "For all numbers in scientific documents", "correct": false},
+            {"label": "For very large or very small numbers", "correct": true},
+            {"label": "Never in government documents", "correct": false},
+            {"label": "Only in mathematical formulas", "correct": false}
           ],
-          "rationale": "Specific ages use numerals, while general age ranges can be spelled out.",
-          "ref": "§5.09"
+          "rationale": "Scientific notation is appropriate for very large (>10,000) or very small (<0.001) numbers.",
+          "ref": "§5.08"
         },
         {
-          "id": "spec-q3",
-          "type": "matching",
-          "stem": "Match each number type with its correct format:",
-          "pairs": [
-            {"left": "Page numbers", "right": "Always numerals"},
-            {"left": "Chapter titles", "right": "Spelled out or Roman numerals"},
-            {"left": "Figure captions", "right": "Always numerals"},
-            {"left": "Ordinal numbers in text", "right": "Follow basic rule"}
+          "id": "spec-02",
+          "type": "fill-blank",
+          "stem": "In legal documents, the fine amount should be written as: The fine shall not exceed ________ thousand dollars ($_______).",
+          "answer": ["five", "5,000"],
+          "rationale": "Legal documents use both written and numerical forms for clarity and legal precision.",
+          "ref": "§5.08"
+        },
+        {
+          "id": "spec-03",
+          "type": "mcq",
+          "stem": "What should statistical reports always include?",
+          "options": [
+            {"label": "Only percentages", "correct": false},
+            {"label": "Sample size, confidence intervals, and significance levels", "correct": true},
+            {"label": "Just the main findings", "correct": false},
+            {"label": "Raw data only", "correct": false}
           ],
-          "rationale": "Different contexts have specific number formatting requirements.",
-          "ref": "§5.22-5.25"
+          "rationale": "Complete statistical reporting includes sample size (n), confidence intervals, and significance testing results.",
+          "ref": "§5.08"
+        },
+        {
+          "id": "spec-04",
+          "type": "error-spot",
+          "stem": "Find the error in this scientific notation:",
+          "text": "The distance to the moon is approximately 384,000 km or 3.84 × 10⁵ m.",
+          "errors": [
+            {"text": "3.84 × 10⁵ m", "position": 9, "correction": "3.84 × 10⁸ m", "reason": "384,000 km = 384,000,000 m = 3.84 × 10⁸ m"}
+          ],
+          "rationale": "Convert units carefully: 384,000 km = 384,000,000 m = 3.84 × 10⁸ m",
+          "ref": "§5.08"
+        },
+        {
+          "id": "spec-05",
+          "type": "mcq",
+          "stem": "How should number ranges be expressed?",
+          "options": [
+            {"label": "Always with 'to': 5 to 10", "correct": false},
+            {"label": "Always with hyphens: 5-10", "correct": false},
+            {"label": "Consistently within document, either 'to' or hyphen", "correct": true},
+            {"label": "With en dashes only: 5–10", "correct": false}
+          ],
+          "rationale": "Choose either 'to' or hyphen/en dash for ranges and use consistently throughout the document.",
+          "ref": "§5.08"
         }
       ]
     }
-  },
-  "metadata": {
-    "totalQuestions": 20,
-    "questionTypes": ["mcq", "fill-blank", "matching", "drag-drop", "error-spot"],
-    "difficulty": "intermediate",
-    "timeEstimate": "30-35 minutes",
-    "passingScore": 80
   }
 }
