@@ -1,797 +1,368 @@
 /**
- * Web Components for The Canadian Style Learning Platform
- * Reusable UI components for consistent experience across chapters
- * FIXED VERSION - includes progress rings, cards, and interactive elements
+ * Canadian Style Components Library
+ * Handles chapter initialization, navigation, and interactive elements
  */
 
-// Progress Ring Component
-class ProgressRing extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
+import { getCurrentProgress, markSectionComplete, getDetailedChapterProgress } from './progress.js';
+import { QuizEngine } from './quiz-engine.js';
 
-    static get observedAttributes() {
-        return ['percentage', 'size', 'stroke-width', 'color'];
-    }
-
-    connectedCallback() {
-        this.render();
-    }
-
-    attributeChangedCallback() {
-        this.render();
-    }
-
-    get percentage() {
-        return parseFloat(this.getAttribute('percentage')) || 0;
-    }
-
-    get size() {
-        return parseFloat(this.getAttribute('size')) || 60;
-    }
-
-    get strokeWidth() {
-        return parseFloat(this.getAttribute('stroke-width')) || 4;
-    }
-
-    get color() {
-        return this.getAttribute('color') || '#d71920';
-    }
-
-    render() {
-        const radius = (this.size - this.strokeWidth) / 2;
-        const circumference = 2 * Math.PI * radius;
-        const strokeDashoffset = circumference - (this.percentage / 100) * circumference;
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: inline-block;
-                }
-                .progress-ring {
-                    transform: rotate(-90deg);
-                }
-                .progress-circle {
-                    fill: none;
-                    stroke: #e5e7eb;
-                    stroke-width: ${this.strokeWidth};
-                }
-                .progress-circle.progress {
-                    stroke: ${this.color};
-                    stroke-linecap: round;
-                    stroke-dasharray: ${circumference};
-                    stroke-dashoffset: ${strokeDashoffset};
-                    transition: stroke-dashoffset 0.5s ease-in-out;
-                }
-                .progress-text {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%) rotate(90deg);
-                    text-align: center;
-                    font-size: ${this.size * 0.2}px;
-                    font-weight: bold;
-                    color: ${this.color};
-                }
-                .progress-container {
-                    position: relative;
-                    display: inline-block;
-                }
-            </style>
-            <div class="progress-container">
-                <svg class="progress-ring" width="${this.size}" height="${this.size}">
-                    <circle class="progress-circle" 
-                            cx="${this.size / 2}" 
-                            cy="${this.size / 2}" 
-                            r="${radius}">
-                    </circle>
-                    <circle class="progress-circle progress" 
-                            cx="${this.size / 2}" 
-                            cy="${this.size / 2}" 
-                            r="${radius}">
-                    </circle>
-                </svg>
-                <div class="progress-text">${Math.round(this.percentage)}%</div>
-            </div>
-        `;
+/**
+ * Initialize a chapter with sections and set up navigation
+ * @param {string} chapterId - The chapter identifier (e.g., 'ch05')
+ * @param {Array} sections - Array of section objects with id and title
+ */
+export function initializeChapter(chapterId, sections) {
+    try {
+        console.log(`[Components] Initializing chapter ${chapterId} with ${sections.length} sections`);
+        
+        // Set up section navigation
+        setupSectionNavigation(chapterId, sections);
+        
+        // Initialize quiz engines for sections with quiz data
+        initializeQuizEngines(chapterId, sections);
+        
+        // Set up progress tracking
+        setupProgressTracking(chapterId, sections);
+        
+        // Set up keyboard navigation
+        setupKeyboardNavigation(sections);
+        
+        // Initialize any interactive elements
+        initializeInteractiveElements();
+        
+        // Show initial section based on URL hash or first section
+        showInitialSection(sections);
+        
+        console.log(`[Components] Chapter ${chapterId} initialized successfully`);
+        
+    } catch (error) {
+        console.error(`[Components] Error initializing chapter ${chapterId}:`, error);
     }
 }
 
-// Chapter Card Component
-class ChapterCard extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+/**
+ * Set up section navigation and tab switching
+ * @param {string} chapterId - Chapter identifier
+ * @param {Array} sections - Section configuration
+ */
+function setupSectionNavigation(chapterId, sections) {
+    const sectionNav = document.getElementById('sectionNav');
+    const tabLinks = document.querySelectorAll('.tab-link');
+    const contentSections = document.querySelectorAll('.content-section');
+    
+    if (!sectionNav) {
+        console.warn('[Components] Section navigation element not found');
+        return;
     }
-
-    static get observedAttributes() {
-        return ['chapter-id', 'title', 'description', 'progress', 'category'];
-    }
-
-    connectedCallback() {
-        this.render();
-        this.setupEventListeners();
-    }
-
-    get chapterId() {
-        return this.getAttribute('chapter-id') || '';
-    }
-
-    get title() {
-        return this.getAttribute('title') || '';
-    }
-
-    get description() {
-        return this.getAttribute('description') || '';
-    }
-
-    get progress() {
-        return parseFloat(this.getAttribute('progress')) || 0;
-    }
-
-    get category() {
-        return this.getAttribute('category') || 'typography';
-    }
-
-    get isCompleted() {
-        return this.progress >= 100;
-    }
-
-    get hasProgress() {
-        return this.progress > 0;
-    }
-
-    render() {
-        const chapterNumber = this.chapterId.replace('ch', '').padStart(2, '0');
-        const categoryLabel = this.category === 'typography' ? 'Typography & Format' : 'Style & Usage';
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                }
-                .chapter-card {
-                    background: white;
-                    border: 1px solid #e5e7eb;
-                    border-radius: 12px;
-                    padding: 24px;
-                    transition: all 0.15s ease-in-out;
-                    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-                    display: flex;
-                    flex-direction: column;
-                    min-height: 320px;
-                    cursor: pointer;
-                }
-                .chapter-card:hover {
-                    transform: translateY(-2px);
-                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-                    border-color: #d71920;
-                }
-                .card-header {
-                    display: flex;
-                    align-items: center;
-                    gap: 16px;
-                    margin-bottom: 16px;
-                }
-                .chapter-number {
-                    width: 60px;
-                    height: 60px;
-                    background: #d71920;
-                    color: white;
-                    border-radius: 8px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 24px;
-                    font-weight: bold;
-                    flex-shrink: 0;
-                }
-                .card-title {
-                    flex: 1;
-                }
-                .card-title h3 {
-                    margin: 0 0 4px 0;
-                    font-size: 18px;
-                    color: #111827;
-                }
-                .chapter-category {
-                    font-size: 12px;
-                    color: #6b7280;
-                    text-transform: uppercase;
-                    letter-spacing: 0.5px;
-                }
-                .card-description {
-                    flex: 1;
-                    margin-bottom: 24px;
-                }
-                .card-description p {
-                    color: #4b5563;
-                    font-size: 14px;
-                    line-height: 1.75;
-                    margin: 0;
-                }
-                .card-footer {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-top: auto;
-                }
-                .progress-container {
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                }
-                .progress-text {
-                    font-size: 14px;
-                    font-weight: 500;
-                    color: #4b5563;
-                }
-                .card-actions {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                }
-                .btn {
-                    padding: 8px 16px;
-                    border-radius: 6px;
-                    text-decoration: none;
-                    font-weight: 500;
-                    font-size: 14px;
-                    text-align: center;
-                    transition: all 0.15s ease-in-out;
-                    border: 2px solid transparent;
-                    min-height: 36px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                .btn-primary {
-                    background: #d71920;
-                    color: white;
-                    border-color: #d71920;
-                }
-                .btn-primary:hover {
-                    background: #b91c1c;
-                    border-color: #b91c1c;
-                }
-                .btn-outline {
-                    background: white;
-                    color: #d71920;
-                    border-color: #d71920;
-                }
-                .btn-outline:hover {
-                    background: #d71920;
-                    color: white;
-                }
-                .btn-sm {
-                    padding: 4px 12px;
-                    font-size: 12px;
-                    min-height: 28px;
-                }
-                .completion-badge {
-                    color: #10b981;
-                    font-weight: 500;
-                    font-size: 14px;
-                }
-            </style>
-            <div class="chapter-card">
-                <div class="card-header">
-                    <div class="chapter-number">${chapterNumber}</div>
-                    <div class="card-title">
-                        <h3>${this.title}</h3>
-                        <span class="chapter-category">${categoryLabel}</span>
-                    </div>
-                </div>
-                
-                <div class="card-description">
-                    <p>${this.description}</p>
-                </div>
-                
-                <div class="card-footer">
-                    <div class="progress-container">
-                        <cs-progress-ring percentage="${this.progress}" size="60"></cs-progress-ring>
-                        <div class="progress-text">
-                            <div>${Math.round(this.progress)}% Complete</div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-actions">
-                        ${this.isCompleted 
-                            ? '<span class="completion-badge">✅ Complete</span>'
-                            : this.hasProgress 
-                                ? `<a href="chapters/${this.chapterId}.html" class="btn btn-primary">Continue</a>`
-                                : `<a href="chapters/${this.chapterId}.html" class="btn btn-outline">Start Learning</a>`
-                        }
-                        ${this.isCompleted ? `<a href="chapters/${this.chapterId}.html" class="btn btn-outline btn-sm">Review</a>` : ''}
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-
-    setupEventListeners() {
-        const card = this.shadowRoot.querySelector('.chapter-card');
-        card.addEventListener('click', (e) => {
-            if (!e.target.closest('a')) {
-                window.location.href = `chapters/${this.chapterId}.html`;
+    
+    // Add click handlers for navigation
+    tabLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const sectionId = link.getAttribute('data-section');
+            if (sectionId) {
+                showSection(sectionId, sections);
+                updateURL(sectionId);
             }
         });
-    }
+    });
+    
+    console.log(`[Components] Set up navigation for ${tabLinks.length} tabs`);
 }
 
-// Quiz Question Component
-class QuizQuestion extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+/**
+ * Show a specific section and update navigation
+ * @param {string} sectionId - Section to show
+ * @param {Array} sections - All available sections
+ */
+function showSection(sectionId, sections) {
+    // Hide all sections
+    const contentSections = document.querySelectorAll('.content-section');
+    contentSections.forEach(section => section.classList.remove('active'));
+    
+    // Show target section
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
     }
-
-    static get observedAttributes() {
-        return ['question-data'];
+    
+    // Update navigation active state
+    const tabLinks = document.querySelectorAll('.tab-link');
+    tabLinks.forEach(link => link.classList.remove('active'));
+    
+    const activeLink = document.querySelector(`[data-section="${sectionId}"]`);
+    if (activeLink) {
+        activeLink.classList.add('active');
     }
+    
+    // Scroll to top of content
+    window.scrollTo(0, 0);
+    
+    console.log(`[Components] Switched to section: ${sectionId}`);
+}
 
-    connectedCallback() {
-        this.render();
-    }
-
-    get questionData() {
+/**
+ * Initialize quiz engines for sections that have quizzes
+ * @param {string} chapterId - Chapter identifier
+ * @param {Array} sections - Section configuration
+ */
+async function initializeQuizEngines(chapterId, sections) {
+    const quizContainers = document.querySelectorAll('.quiz-engine-container');
+    
+    for (const container of quizContainers) {
+        const sectionId = container.getAttribute('data-quiz-section');
+        if (!sectionId) continue;
+        
         try {
-            return JSON.parse(this.getAttribute('question-data'));
-        } catch {
-            return {};
+            const quizEngine = await QuizEngine.createFromSection(chapterId, sectionId);
+            if (quizEngine) {
+                quizEngine.render(container);
+                console.log(`[Components] Initialized quiz for ${chapterId}-${sectionId}`);
+            }
+        } catch (error) {
+            console.warn(`[Components] Could not initialize quiz for ${chapterId}-${sectionId}:`, error);
+            // Show fallback message
+            container.innerHTML = '<p class="text-muted">Quiz content is being prepared.</p>';
         }
     }
+}
 
-    render() {
-        const question = this.questionData;
-        if (!question) return;
-
-        let questionContent = '';
+/**
+ * Set up progress tracking for the chapter
+ * @param {string} chapterId - Chapter identifier
+ * @param {Array} sections - Section configuration
+ */
+function setupProgressTracking(chapterId, sections) {
+    try {
+        updateProgressBar(chapterId, sections);
         
-        switch (question.type) {
-            case 'mcq':
-                questionContent = this.renderMCQ(question);
-                break;
-            case 'fill-blank':
-                questionContent = this.renderFillBlank(question);
-                break;
-            default:
-                questionContent = '<p>Question type not supported</p>';
-        }
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                    margin: 16px 0;
-                }
-                .question-container {
-                    background: white;
-                    border: 1px solid #e5e7eb;
-                    border-radius: 8px;
-                    padding: 20px;
-                }
-                .question-stem {
-                    font-weight: 500;
-                    margin-bottom: 16px;
-                    color: #111827;
-                }
-                .question-number {
-                    background: #d71920;
-                    color: white;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                    font-size: 12px;
-                    font-weight: bold;
-                    margin-right: 8px;
-                }
-                .mcq-options {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 8px;
-                }
-                .option-label {
-                    display: flex;
-                    align-items: flex-start;
-                    gap: 8px;
-                    padding: 8px;
-                    border: 1px solid #e5e7eb;
-                    border-radius: 6px;
-                    cursor: pointer;
-                    transition: all 0.15s ease-in-out;
-                }
-                .option-label:hover {
-                    background: #f9fafb;
-                    border-color: #d71920;
-                }
-                .option-input {
-                    margin: 0;
-                    flex-shrink: 0;
-                }
-                .option-text {
-                    flex: 1;
-                }
-                .fill-blank-input {
-                    width: 100%;
-                    padding: 8px 12px;
-                    border: 2px solid #e5e7eb;
-                    border-radius: 6px;
-                    font-size: 16px;
-                    transition: border-color 0.15s ease-in-out;
-                }
-                .fill-blank-input:focus {
-                    outline: none;
-                    border-color: #d71920;
-                }
-            </style>
-            <div class="question-container">
-                <div class="question-stem">
-                    <span class="question-number">Q${question.id}</span>
-                    ${question.stem}
-                </div>
-                <div class="question-content">
-                    ${questionContent}
-                </div>
-            </div>
-        `;
-    }
-
-    renderMCQ(question) {
-        const isMultiSelect = question.options.filter(opt => opt.correct).length > 1;
-        const inputType = isMultiSelect ? 'checkbox' : 'radio';
-        const inputName = `question-${question.id}`;
+        // Set up completion buttons
+        window.completeSection = function(sectionId) {
+            markSectionComplete(chapterId, sectionId, true);
+            updateProgressBar(chapterId, sections);
+            
+            // Find next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                setTimeout(() => {
+                    showSection(nextSection.id, sections);
+                    updateURL(nextSection.id);
+                }, 1000); // Small delay for user feedback
+            }
+        };
         
-        return `
-            <div class="mcq-options">
-                ${isMultiSelect ? '<p style="font-size: 14px; color: #6b7280; margin: 0 0 8px 0;">Select all that apply:</p>' : ''}
-                ${question.options.map((option, index) => `
-                    <label class="option-label">
-                        <input type="${inputType}" name="${inputName}" value="${index}" class="option-input">
-                        <span class="option-text">${option.label}</span>
-                    </label>
-                `).join('')}
-            </div>
-        `;
-    }
-
-    renderFillBlank(question) {
-        return `
-            <div class="fill-blank-container">
-                <input type="text" class="fill-blank-input" placeholder="Type your answer here..." autocomplete="off">
-                ${question.acceptableAnswers ? 
-                    '<p style="font-size: 14px; color: #6b7280; margin: 8px 0 0 0;">💡 Multiple acceptable answers possible</p>' : ''}
-            </div>
-        `;
+    } catch (error) {
+        console.error('[Components] Error setting up progress tracking:', error);
     }
 }
 
-// Tooltip Component
-class Tooltip extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
-
-    static get observedAttributes() {
-        return ['text', 'position'];
-    }
-
-    connectedCallback() {
-        this.render();
-        this.setupEventListeners();
-    }
-
-    get text() {
-        return this.getAttribute('text') || '';
-    }
-
-    get position() {
-        return this.getAttribute('position') || 'top';
-    }
-
-    render() {
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    position: relative;
-                    display: inline-block;
-                }
-                .tooltip {
-                    position: absolute;
-                    background: #111827;
-                    color: white;
-                    padding: 8px 12px;
-                    border-radius: 6px;
-                    font-size: 14px;
-                    white-space: nowrap;
-                    z-index: 1000;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: opacity 0.15s ease-in-out;
-                }
-                .tooltip.show {
-                    opacity: 1;
-                }
-                .tooltip.top {
-                    bottom: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-bottom: 8px;
-                }
-                .tooltip.bottom {
-                    top: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    margin-top: 8px;
-                }
-                .tooltip.left {
-                    right: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    margin-right: 8px;
-                }
-                .tooltip.right {
-                    left: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    margin-left: 8px;
-                }
-                .tooltip::after {
-                    content: '';
-                    position: absolute;
-                    border: 5px solid transparent;
-                }
-                .tooltip.top::after {
-                    top: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    border-top-color: #111827;
-                }
-                .tooltip.bottom::after {
-                    bottom: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    border-bottom-color: #111827;
-                }
-                .tooltip.left::after {
-                    left: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-left-color: #111827;
-                }
-                .tooltip.right::after {
-                    right: 100%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    border-right-color: #111827;
-                }
-            </style>
-            <slot></slot>
-            <div class="tooltip ${this.position}">${this.text}</div>
-        `;
-    }
-
-    setupEventListeners() {
-        const host = this;
-        const tooltip = this.shadowRoot.querySelector('.tooltip');
-
-        host.addEventListener('mouseenter', () => {
-            tooltip.classList.add('show');
-        });
-
-        host.addEventListener('mouseleave', () => {
-            tooltip.classList.remove('show');
-        });
-    }
-}
-
-// Loading Spinner Component
-class LoadingSpinner extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
-
-    static get observedAttributes() {
-        return ['size', 'color'];
-    }
-
-    connectedCallback() {
-        this.render();
-    }
-
-    get size() {
-        return this.getAttribute('size') || '24';
-    }
-
-    get color() {
-        return this.getAttribute('color') || '#d71920';
-    }
-
-    render() {
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: inline-block;
-                }
-                .spinner {
-                    width: ${this.size}px;
-                    height: ${this.size}px;
-                    border: 2px solid #e5e7eb;
-                    border-radius: 50%;
-                    border-top-color: ${this.color};
-                    animation: spin 1s linear infinite;
-                }
-                @keyframes spin {
-                    to {
-                        transform: rotate(360deg);
-                    }
-                }
-            </style>
-            <div class="spinner"></div>
-        `;
-    }
-}
-
-// Toast Notification Component
-class ToastNotification extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-    }
-
-    static get observedAttributes() {
-        return ['message', 'type', 'duration'];
-    }
-
-    connectedCallback() {
-        this.render();
-        this.show();
-    }
-
-    get message() {
-        return this.getAttribute('message') || '';
-    }
-
-    get type() {
-        return this.getAttribute('type') || 'info';
-    }
-
-    get duration() {
-        return parseInt(this.getAttribute('duration')) || 3000;
-    }
-
-    render() {
-        const icons = {
-            success: '✅',
-            error: '❌',
-            warning: '⚠️',
-            info: 'ℹ️'
-        };
-
-        const colors = {
-            success: '#10b981',
-            error: '#ef4444',
-            warning: '#f59e0b',
-            info: '#3b82f6'
-        };
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    position: fixed;
-                    top: 20px;
-                    right: 20px;
-                    z-index: 1000;
-                }
-                .toast {
-                    background: white;
-                    border: 1px solid #e5e7eb;
-                    border-left: 4px solid ${colors[this.type]};
-                    border-radius: 6px;
-                    padding: 16px;
-                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    min-width: 300px;
-                    transform: translateX(100%);
-                    transition: transform 0.3s ease-in-out;
-                }
-                .toast.show {
-                    transform: translateX(0);
-                }
-                .toast-icon {
-                    font-size: 20px;
-                }
-                .toast-message {
-                    flex: 1;
-                    font-size: 14px;
-                    color: #111827;
-                }
-                .toast-close {
-                    background: none;
-                    border: none;
-                    font-size: 16px;
-                    cursor: pointer;
-                    padding: 0;
-                    color: #6b7280;
-                }
-                .toast-close:hover {
-                    color: #111827;
-                }
-            </style>
-            <div class="toast">
-                <span class="toast-icon">${icons[this.type]}</span>
-                <span class="toast-message">${this.message}</span>
-                <button class="toast-close" onclick="this.closest('cs-toast').remove()">×</button>
-            </div>
-        `;
-    }
-
-    show() {
-        requestAnimationFrame(() => {
-            const toast = this.shadowRoot.querySelector('.toast');
-            toast.classList.add('show');
-        });
-
-        if (this.duration > 0) {
-            setTimeout(() => {
-                this.remove();
-            }, this.duration);
+/**
+ * Update the chapter progress bar
+ * @param {string} chapterId - Chapter identifier
+ * @param {Array} sections - Section configuration
+ */
+function updateProgressBar(chapterId, sections) {
+    try {
+        const chapterProgress = getDetailedChapterProgress(chapterId);
+        if (!chapterProgress) return;
+        
+        const progressBar = document.getElementById('chapterProgress');
+        if (progressBar) {
+            const percentage = chapterProgress.percentage || 0;
+            progressBar.style.width = percentage + '%';
         }
+        
+        const progressText = document.getElementById('progressText');
+        if (progressText) {
+            progressText.textContent = `${chapterProgress.percentage || 0}% Complete`;
+        }
+        
+    } catch (error) {
+        console.error('[Components] Error updating progress bar:', error);
     }
 }
 
-// Register all custom elements
-customElements.define('cs-progress-ring', ProgressRing);
-customElements.define('cs-chapter-card', ChapterCard);
-customElements.define('cs-quiz-question', QuizQuestion);
-customElements.define('cs-tooltip', Tooltip);
-customElements.define('cs-loading-spinner', LoadingSpinner);
-customElements.define('cs-toast', ToastNotification);
-
-// Utility functions for creating components programmatically
-export function createProgressRing(percentage, size = 60) {
-    const ring = document.createElement('cs-progress-ring');
-    ring.setAttribute('percentage', percentage);
-    ring.setAttribute('size', size);
-    return ring;
+/**
+ * Set up keyboard navigation
+ * @param {Array} sections - Section configuration
+ */
+function setupKeyboardNavigation(sections) {
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey || e.metaKey) {
+            const currentActiveTab = document.querySelector('.tab-link.active');
+            if (!currentActiveTab) return;
+            
+            const currentSectionId = currentActiveTab.getAttribute('data-section');
+            const currentIndex = sections.findIndex(s => s.id === currentSectionId);
+            
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                e.preventDefault();
+                const prevSection = sections[currentIndex - 1];
+                showSection(prevSection.id, sections);
+                updateURL(prevSection.id);
+            } else if (e.key === 'ArrowRight' && currentIndex < sections.length - 1) {
+                e.preventDefault();
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id, sections);
+                updateURL(nextSection.id);
+            }
+        }
+    });
 }
 
-export function createChapterCard(chapterId, title, description, progress, category) {
-    const card = document.createElement('cs-chapter-card');
-    card.setAttribute('chapter-id', chapterId);
-    card.setAttribute('title', title);
-    card.setAttribute('description', description);
-    card.setAttribute('progress', progress);
-    card.setAttribute('category', category);
-    return card;
+/**
+ * Initialize interactive elements like collapsible content
+ */
+function initializeInteractiveElements() {
+    // Set up collapsible content
+    const collapsibleTriggers = document.querySelectorAll('[data-toggle="collapse"]');
+    collapsibleTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = trigger.getAttribute('data-target');
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.classList.toggle('show');
+                trigger.classList.toggle('expanded');
+            }
+        });
+    });
+    
+    // Set up tooltips
+    const tooltipElements = document.querySelectorAll('[data-tooltip]');
+    tooltipElements.forEach(element => {
+        element.addEventListener('mouseenter', showTooltip);
+        element.addEventListener('mouseleave', hideTooltip);
+    });
 }
 
-export function showToast(message, type = 'info', duration = 3000) {
-    const toast = document.createElement('cs-toast');
-    toast.setAttribute('message', message);
-    toast.setAttribute('type', type);
-    toast.setAttribute('duration', duration);
-    document.body.appendChild(toast);
-    return toast;
+/**
+ * Show initial section based on URL or default to first
+ * @param {Array} sections - Section configuration
+ */
+function showInitialSection(sections) {
+    const hash = window.location.hash.substring(1);
+    const initialSection = hash && sections.find(s => s.id === hash) 
+        ? hash 
+        : sections[0].id;
+    
+    showSection(initialSection, sections);
 }
 
-export function createLoadingSpinner(size = 24, color = '#d71920') {
-    const spinner = document.createElement('cs-loading-spinner');
-    spinner.setAttribute('size', size);
-    spinner.setAttribute('color', color);
-    return spinner;
+/**
+ * Update URL with current section
+ * @param {string} sectionId - Current section ID
+ */
+function updateURL(sectionId) {
+    history.replaceState(null, null, `#${sectionId}`);
 }
 
-// Global utility functions
-window.CS = {
-    showToast,
-    createProgressRing,
-    createChapterCard,
-    createLoadingSpinner
+/**
+ * Show tooltip
+ * @param {Event} e - Mouse event
+ */
+function showTooltip(e) {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    tooltip.textContent = e.target.getAttribute('data-tooltip');
+    tooltip.style.position = 'absolute';
+    tooltip.style.backgroundColor = 'rgba(0,0,0,0.8)';
+    tooltip.style.color = 'white';
+    tooltip.style.padding = '0.5rem';
+    tooltip.style.borderRadius = '0.25rem';
+    tooltip.style.fontSize = '0.875rem';
+    tooltip.style.zIndex = '1000';
+    tooltip.style.left = e.pageX + 10 + 'px';
+    tooltip.style.top = e.pageY + 10 + 'px';
+    
+    document.body.appendChild(tooltip);
+    e.target.tooltipElement = tooltip;
+}
+
+/**
+ * Hide tooltip
+ * @param {Event} e - Mouse event
+ */
+function hideTooltip(e) {
+    if (e.target.tooltipElement) {
+        e.target.tooltipElement.remove();
+        e.target.tooltipElement = null;
+    }
+}
+
+/**
+ * Smooth scroll to element
+ * @param {string} targetId - ID of target element
+ * @param {number} offset - Offset from top (default: 80)
+ */
+export function smoothScrollTo(targetId, offset = 80) {
+    const target = document.getElementById(targetId);
+    if (target) {
+        const targetPosition = target.offsetTop - offset;
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+/**
+ * Create a notification/alert
+ * @param {string} message - Message to display
+ * @param {string} type - Type of notification (success, warning, error, info)
+ * @param {number} duration - Duration in ms (default: 3000)
+ */
+export function showNotification(message, type = 'info', duration = 3000) {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        background: var(--cs-white);
+        border: 1px solid var(--cs-grey-300);
+        box-shadow: var(--cs-shadow-lg);
+        z-index: 1050;
+        min-width: 250px;
+        font-weight: 500;
+    `;
+    
+    // Set color based on type
+    const colors = {
+        success: { border: '#10b981', background: '#d1fae5', color: '#065f46' },
+        warning: { border: '#f59e0b', background: '#fef3c7', color: '#92400e' },
+        error: { border: '#ef4444', background: '#fee2e2', color: '#991b1b' },
+        info: { border: '#3b82f6', background: '#dbeafe', color: '#1e40af' }
+    };
+    
+    if (colors[type]) {
+        notification.style.borderColor = colors[type].border;
+        notification.style.backgroundColor = colors[type].background;
+        notification.style.color = colors[type].color;
+    }
+    
+    document.body.appendChild(notification);
+    
+    // Remove after duration
+    setTimeout(() => {
+        notification.remove();
+    }, duration);
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('[Components] Canadian Style components library loaded');
+});
+
+// Export for debugging
+window.CanadianStyleComponents = {
+    initializeChapter,
+    showNotification,
+    smoothScrollTo
 };
 
-console.log('Canadian Style components loaded successfully');
+console.log('[Components] Canadian Style components loaded successfully');
