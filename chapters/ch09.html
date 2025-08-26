@@ -4,700 +4,565 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 9: Reference Matter - The Canadian Style</title>
-    <link rel="stylesheet" href="../shared/css/main.css">
-    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
+    <link rel="stylesheet" href="../shared/css/styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
-            </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="chapter-hero">
-        <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 9
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">9</div>
-                <div>
-                    <h1>Reference Matter</h1>
-                    <p>Master footnotes, citations, bibliographies, and reference formatting</p>
-                </div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
-
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
-                <a href="#introduction" class="tab-link" data-section="introduction">9.01 Introduction</a>
-                <a href="#footnotes" class="tab-link" data-section="footnotes">9.02 Footnotes</a>
-                <a href="#bibliography" class="tab-link" data-section="bibliography">9.03 Bibliography</a>
-                <a href="#citations" class="tab-link" data-section="citations">9.04 Citations</a>
-                <a href="#indexes" class="tab-link" data-section="indexes">9.05 Indexes</a>
-                <a href="#electronic-sources" class="tab-link" data-section="electronic-sources">9.06 Electronic Sources</a>
-            </div>
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-home">
+                <span class="nav-icon">📚</span>
+                The Canadian Style
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
         </div>
     </nav>
 
-    <main class="chapter-content">
+    <main class="main-content">
         <div class="container">
-            <!-- Section 9.01: Introduction -->
-            <section class="content-section" id="introduction">
-                <div class="section-header">
-                    <h2>9.01 Introduction</h2>
+            <div class="chapter-header">
+                <div class="chapter-meta">
+                    <span class="chapter-number">Chapter 9</span>
+                    <span class="chapter-category">Typography & Format</span>
                 </div>
-                
-                <div class="lesson-content">
-                    <p>Reference matter helps readers locate sources, verify information, and explore topics further. Proper documentation enhances credibility and allows others to build upon your work.</p>
-                    
-                    <div class="key-principle">
-                        <h3>Key Principle</h3>
-                        <p>All reference matter must be accurate, complete, and consistently formatted. The goal is to enable readers to locate the exact sources you used.</p>
+                <h1>Reference Matter</h1>
+                <p class="chapter-description">Format footnotes, citations, bibliographies, and comprehensive indexes.</p>
+                <div class="chapter-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="chapterProgress"></div>
                     </div>
-                    
-                    <div class="rule-box">
-                        <h4>Types of Reference Matter</h4>
-                        <ul>
-                            <li><strong>Footnotes:</strong> Explanatory notes or source citations at bottom of page</li>
-                            <li><strong>Endnotes:</strong> Notes collected at the end of a chapter or document</li>
-                            <li><strong>Bibliography:</strong> Complete list of sources consulted</li>
-                            <li><strong>References:</strong> List of sources actually cited in the text</li>
-                            <li><strong>Indexes:</strong> Alphabetical guide to topics and names</li>
-                            <li><strong>Appendices:</strong> Supplementary material</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>When to Use Reference Matter</h4>
-                        <div class="example-item good">
-                            <p><strong>Required for:</strong></p>
-                            <ul>
-                                <li>Research reports and policy papers</li>
-                                <li>Academic or scholarly documents</li>
-                                <li>Legal documents requiring precedent</li>
-                                <li>Technical manuals with external standards</li>
-                                <li>Documents making statistical claims</li>
-                            </ul>
-                        </div>
-                        <div class="example-item">
-                            <p><strong>Optional for:</strong></p>
-                            <ul>
-                                <li>Internal memos and routine correspondence</li>
-                                <li>Press releases and public announcements</li>
-                                <li>Procedural instructions</li>
-                                <li>Meeting minutes and agendas</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ Legal and Ethical Requirements</h4>
-                        <p>Proper attribution is not just good practice—it's often legally required. Failure to cite sources can constitute plagiarism or copyright infringement.</p>
-                    </div>
+                    <span class="progress-text" id="progressText">0% Complete</span>
                 </div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('introduction')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
+            </div>
 
-            <!-- Section 9.02: Footnotes -->
-            <section class="content-section" id="footnotes">
-                <div class="section-header">
-                    <h2>9.02 Footnotes</h2>
+            <!-- Navigation Tabs -->
+            <nav class="section-nav" id="sectionNav">
+                <div class="tabs-list" role="tablist">
+                    <button class="tab-link active" data-section="introduction" role="tab">9.01 Introduction</button>
+                    <button class="tab-link" data-section="footnotes" role="tab">9.02 Footnotes</button>
+                    <button class="tab-link" data-section="bibliography" role="tab">9.03 Bibliography</button>
+                    <button class="tab-link" data-section="citations" role="tab">9.04 Citations</button>
+                    <button class="tab-link" data-section="indexes" role="tab">9.05 Indexes</button>
+                    <button class="tab-link" data-section="electronic-sources" role="tab">9.06 Electronic Sources</button>
+                    <button class="tab-link" data-section="legal-references" role="tab">9.07 Legal References</button>
+                    <button class="tab-link" data-section="advanced-indexing" role="tab">9.08 Advanced Indexing</button>
                 </div>
-                
-                <div class="lesson-content">
-                    <p>Footnotes provide citations, explanations, or additional information without disrupting the main text. They appear at the bottom of the page where the reference occurs.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Footnote Numbering</h3>
-                        <ul>
-                            <li><strong>Sequential numbering:</strong> Start with 1 and continue consecutively</li>
-                            <li><strong>Superscript format:</strong> Small raised numbers in text and notes</li>
-                            <li><strong>Placement:</strong> After punctuation marks, not before</li>
-                            <li><strong>Restart options:</strong> Each page, chapter, or continue throughout document</li>
-                        </ul>
+            </nav>
+
+            <div class="chapter-content">
+                <!-- Section 9.01: Introduction -->
+                <section class="content-section active" id="introduction">
+                    <div class="section-header">
+                        <h2>9.01 Introduction</h2>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Footnote Format Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>In text:</strong></p>
-                            <p>The policy was implemented in 2023,¹ resulting in significant changes.² However, some critics argued that the timeline was too ambitious.³</p>
-                            
-                            <p><strong>At bottom of page:</strong></p>
-                            <div class="footnote-example">
-                                <p>¹ Department of Justice Canada, <em>Policy Implementation Guide</em> (Ottawa: Government of Canada, 2023), 15.</p>
-                                <p>² Statistics Canada, "Policy Impact Analysis," accessed March 15, 2024, https://www.statcan.gc.ca/policy-analysis.</p>
-                                <p>³ Sarah Johnson, "Timeline Concerns in Policy Implementation," <em>Canadian Public Administration</em> 45, no. 3 (2023): 234.</p>
+                    <div class="lesson-content">
+                        <p>Reference matter provides readers with the sources, explanations, and additional information they need to understand and verify your work. This chapter covers footnotes, bibliographies, citations, indexes, and specialized reference formats used in government documents.</p>
+                        
+                        <div class="key-concepts">
+                            <h3>Types of Reference Matter</h3>
+                            <div class="concept-grid">
+                                <div class="concept-item">
+                                    <h4>📝 Footnotes & Endnotes</h4>
+                                    <p>Additional information and source citations</p>
+                                </div>
+                                <div class="concept-item">
+                                    <h4>📚 Bibliography</h4>
+                                    <p>Complete list of sources consulted</p>
+                                </div>
+                                <div class="concept-item">
+                                    <h4>🔗 Citations</h4>
+                                    <p>In-text references to sources</p>
+                                </div>
+                                <div class="concept-item">
+                                    <h4>📖 Indexes</h4>
+                                    <p>Alphabetical guide to document content</p>
+                                </div>
                             </div>
                         </div>
+                        
+                        <div class="rule-box">
+                            <h3>General Principles</h3>
+                            <ul>
+                                <li>Be consistent in formatting throughout the document</li>
+                                <li>Provide complete information for all sources</li>
+                                <li>Use standard formatting conventions</li>
+                                <li>Consider your audience's needs</li>
+                                <li>Verify all references before publication</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h3>Types of Footnotes</h3>
-                        <ul>
-                            <li><strong>Source citations:</strong> Identify where information came from</li>
-                            <li><strong>Explanatory notes:</strong> Provide additional context or clarification</li>
-                            <li><strong>Cross-references:</strong> Direct readers to related sections</li>
-                            <li><strong>Translations:</strong> Provide English versions of foreign terms</li>
-                        </ul>
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('introduction')">
+                            Mark Complete & Continue
+                        </button>
                     </div>
-                    
-                    <div class="examples-box">
-                        <h4>Government Document Citations</h4>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Source Type</th>
-                                    <th>Format</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Government Report</td>
-                                    <td>Department, <em>Title</em> (Location: Publisher, Year), page.</td>
-                                </tr>
-                                <tr>
-                                    <td>Legislation</td>
-                                    <td><em>Act Title</em>, S.C. Year, c. Chapter.</td>
-                                </tr>
-                                <tr>
-                                    <td>Regulation</td>
-                                    <td><em>Regulation Title</em>, S.O.R./Year-Number.</td>
-                                </tr>
-                                <tr>
-                                    <td>Parliamentary Debate</td>
-                                    <td>Canada, Parliament, House of Commons, <em>Debates</em>, Date (Speaker).</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Formatting Guidelines</h3>
-                        <ul>
-                            <li><strong>Font size:</strong> Smaller than main text (usually 9-10 point)</li>
-                            <li><strong>Single spacing:</strong> Within footnotes, double space between them</li>
-                            <li><strong>Indentation:</strong> First line indented, subsequent lines flush left</li>
-                            <li><strong>Separator:</strong> Horizontal line between text and footnotes</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Best Practices</h4>
-                        <p>Keep footnotes concise. If a note becomes lengthy, consider moving the information to an appendix or incorporating it into the main text.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-footnotes"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('footnotes')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
+                </section>
 
-            <!-- Section 9.03: Bibliography -->
-            <section class="content-section" id="bibliography">
-                <div class="section-header">
-                    <h2>9.03 Bibliography</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>A bibliography is an alphabetical list of sources consulted during research. It may include sources not directly cited in the text but that informed the author's understanding.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Bibliography vs. References</h3>
-                        <ul>
-                            <li><strong>Bibliography:</strong> All sources consulted, including background reading</li>
-                            <li><strong>References/Works Cited:</strong> Only sources actually cited in the text</li>
-                            <li><strong>Further Reading:</strong> Recommended sources for additional information</li>
-                            <li><strong>Select Bibliography:</strong> Most important or relevant sources only</li>
-                        </ul>
+                <!-- Section 9.02: Footnotes -->
+                <section class="content-section" id="footnotes">
+                    <div class="section-header">
+                        <h2>9.02 Footnotes</h2>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Bibliography Entry Formats</h4>
+                    <div class="lesson-content">
+                        <p>Footnotes provide additional information or cite sources without interrupting the main text. They appear at the bottom of the page where the reference occurs.</p>
                         
-                        <div class="example-item good">
-                            <p><strong>Books:</strong></p>
-                            <p>Author, <em>Title</em>. Place: Publisher, Year.</p>
-                            <p>Example: Smith, John. <em>Canadian Government Policy</em>. Toronto: University of Toronto Press, 2023.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Journal Articles:</strong></p>
-                            <p>Author. "Article Title." <em>Journal Name</em> Volume, no. Issue (Year): pages.</p>
-                            <p>Example: Wilson, Sarah. "Policy Implementation Challenges." <em>Canadian Public Administration</em> 67, no. 2 (2023): 145-162.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Government Documents:</strong></p>
-                            <p>Government Department. <em>Document Title</em>. Place: Publisher, Year.</p>
-                            <p>Example: Statistics Canada. <em>Census Profile, 2021 Census</em>. Ottawa: Statistics Canada, 2022.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Alphabetical Arrangement</h3>
-                        <ul>
-                            <li><strong>By author's last name:</strong> Letter by letter, ignoring spaces</li>
-                            <li><strong>No author:</strong> Alphabetize by title (ignore "A," "An," "The")</li>
-                            <li><strong>Same author:</strong> Arrange chronologically by publication date</li>
-                            <li><strong>Government sources:</strong> Often listed separately or by issuing department</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Special Cases in Government Writing</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Legislation:</strong></p>
-                            <p><em>Charter of Rights and Freedoms</em>. Part I of the Constitution Act, 1982, being Schedule B to the Canada Act 1982 (UK), 1982, c 11.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Court Cases:</strong></p>
-                            <p><em>R. v. Smith</em>, 2023 SCC 15.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Parliamentary Debates:</strong></p>
-                            <p>Canada. Parliament. House of Commons. <em>Debates</em>. 44th Parliament, 1st Session, Vol. 151, No. 45 (March 15, 2023).</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Online Government Sources:</strong></p>
-                            <p>Health Canada. "COVID-19 Guidelines." Last modified March 10, 2024. https://www.canada.ca/en/health-canada/covid-guidelines.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Formatting Conventions</h3>
-                        <ul>
-                            <li><strong>Hanging indent:</strong> First line flush left, subsequent lines indented</li>
-                            <li><strong>Single spacing:</strong> Within entries, double space between entries</li>
-                            <li><strong>Italics:</strong> Book titles, journal names, newspaper names</li>
-                            <li><strong>Quotation marks:</strong> Article titles, chapter titles</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="warning-box">
-                        <h4>⚠️ Currency and Accuracy</h4>
-                        <p>Ensure all bibliographic information is current and accurate. Verify URLs and access dates for online sources. Government websites and documents change frequently.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-bibliography"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('bibliography')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.04: Citations -->
-            <section class="content-section" id="citations">
-                <div class="section-header">
-                    <h2>9.04 Citations</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Citations identify the specific sources of information, quotations, and ideas used in your document. Government writing often requires precise citation to support policy decisions and maintain accountability.</p>
-                    
-                    <div class="rule-box">
-                        <h3>When to Cite</h3>
-                        <ul>
-                            <li><strong>Direct quotations:</strong> Any text copied word-for-word</li>
-                            <li><strong>Paraphrased ideas:</strong> Information restated in your own words</li>
-                            <li><strong>Statistical data:</strong> Numbers, percentages, research findings</li>
-                            <li><strong>Specific facts:</strong> Historical events, dates, technical specifications</li>
-                            <li><strong>Expert opinions:</strong> Professional judgments and recommendations</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>In-Text Citation Methods</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Footnote/Endnote System:</strong></p>
-                            <p>The report concluded that "implementation timelines were unrealistic."¹</p>
-                            <p>Studies show varying success rates² in similar jurisdictions.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Author-Date System (APA):</strong></p>
-                            <p>The report concluded that "implementation timelines were unrealistic" (Johnson, 2023, p. 45).</p>
-                            <p>Studies show varying success rates (Smith & Wilson, 2023) in similar jurisdictions.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Numbered Reference System:</strong></p>
-                            <p>The report concluded that "implementation timelines were unrealistic" [1].</p>
-                            <p>Studies show varying success rates [2,3] in similar jurisdictions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Government Citation Formats</h3>
-                        <ul>
-                            <li><strong>Legal citations:</strong> Follow Canadian Guide to Uniform Legal Citation</li>
-                            <li><strong>Parliamentary materials:</strong> Use official parliamentary citation format</li>
-                            <li><strong>Regulations:</strong> Include specific regulation numbers and dates</li>
-                            <li><strong>Departmental reports:</strong> Include full department name and publication details</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Canadian Government Citation Examples</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Federal Legislation:</strong></p>
-                            <p><em>Privacy Act</em>, R.S.C., 1985, c. P-21.</p>
-                            <p><em>Canadian Human Rights Act</em>, R.S.C., 1985, c. H-6, s. 7.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Regulations:</strong></p>
-                            <p><em>Privacy Regulations</em>, S.O.R./83-508.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Cabinet Documents:</strong></p>
-                            <p>Privy Council Office, Memorandum to Cabinet, "Economic Recovery Plan" (Ottawa: PCO, 2023).</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Parliamentary Committees:</strong></p>
-                            <p>Canada, Parliament, House of Commons, Standing Committee on Finance, <em>Report on Budget Implementation</em> (Ottawa: House of Commons, 2023).</p>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Online Government Sources</h3>
-                        <ul>
-                            <li><strong>Include access date:</strong> Government websites change frequently</li>
-                            <li><strong>Use permanent URLs:</strong> When available (often ending in .gc.ca)</li>
-                            <li><strong>Archive links:</strong> Consider using web archive services for stability</li>
-                            <li><strong>Version control:</strong> Note if document has version numbers or dates</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Digital Source Citations</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Government Website:</strong></p>
-                            <p>Environment and Climate Change Canada, "Climate Action Plan," last modified February 15, 2024, accessed March 10, 2024, https://www.canada.ca/en/environment-climate-change/climate-action.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Statistical Data:</strong></p>
-                            <p>Statistics Canada, "Labour Force Survey, February 2024," The Daily, March 8, 2024, accessed March 10, 2024, https://www150.statcan.gc.ca/n1/daily-quotidien/240308/dq240308a-eng.htm.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>PDF Documents:</strong></p>
-                            <p>Treasury Board of Canada Secretariat, <em>Directive on Automated Decision-Making</em> (Ottawa: TBS, 2023), PDF, accessed March 10, 2024, https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=32592.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Citation Management</h4>
-                        <p>Use citation management software like Zotero or EndNote to track sources and generate consistent citations. Many tools have Canadian government templates.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-citations"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('citations')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.05: Indexes -->
-            <section class="content-section" id="indexes">
-                <div class="section-header">
-                    <h2>9.05 Indexes</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Indexes provide alphabetical access to topics, names, and concepts in a document. They are essential for longer government documents that readers need to search for specific information.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Types of Indexes</h3>
-                        <ul>
-                            <li><strong>Subject index:</strong> Topics, concepts, and themes</li>
-                            <li><strong>Name index:</strong> People, organizations, and places</li>
-                            <li><strong>Combined index:</strong> All entries in one alphabetical list</li>
-                            <li><strong>Specialized indexes:</strong> Legal cases, legislation, tables, figures</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Index Entry Examples</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Simple entries:</strong></p>
+                        <div class="rule-box">
+                            <h3>Footnote Formatting</h3>
                             <ul>
-                                <li>Budget, 15, 23, 67-72</li>
-                                <li>Employment insurance, 45</li>
-                                <li>Privacy protection, 12, 89</li>
+                                <li><strong>Numbering:</strong> Use superscript numbers in consecutive order</li>
+                                <li><strong>Placement:</strong> After punctuation, not before</li>
+                                <li><strong>Spacing:</strong> Single space within footnotes</li>
+                                <li><strong>Separator:</strong> Use a short horizontal line above footnotes</li>
                             </ul>
                         </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Main entries with subentries:</strong></p>
-                            <ul>
-                                <li>Government departments
-                                    <ul>
-                                        <li>Environment and Climate Change Canada, 34</li>
-                                        <li>Health Canada, 56, 78</li>
-                                        <li>Transport Canada, 23, 91</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Cross-references:</strong></p>
-                            <ul>
-                                <li>EI. <em>See</em> Employment insurance</li>
-                                <li>Public servants. <em>See also</em> Civil service</li>
-                                <li>COVID-19. <em>See also</em> Public health; Pandemic response</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Alphabetization Rules</h3>
-                        <ul>
-                            <li><strong>Letter-by-letter:</strong> Ignore spaces and punctuation (New York before Newark)</li>
-                            <li><strong>Word-by-word:</strong> Consider spaces (New York before Newark)</li>
-                            <li><strong>Numbers:</strong> Spell out or place before/after alphabetical entries</li>
-                            <li><strong>Abbreviations:</strong> Alphabetize as if spelled out</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Government-Specific Index Entries</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Legislation and Regulations:</strong></p>
-                            <ul>
-                                <li>Access to Information Act, 23, 45</li>
-                                <li>Charter of Rights and Freedoms, 12, 67, 89</li>
-                                <li>Privacy Act, 34, 56</li>
-                                <li>Regulations (general), 15-18</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Government Officials:</strong></p>
-                            <ul>
-                                <li>Deputy Ministers, 25, 78</li>
-                                <li>Minister of Finance, 34</li>
-                                <li>Prime Minister, 12, 23, 89</li>
-                                <li>Public Service Commission, 45</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Programs and Services:</strong></p>
-                            <ul>
-                                <li>Canada Child Benefit, 56</li>
-                                <li>Employment Insurance, 23, 67</li>
-                                <li>Old Age Security, 45</li>
-                                <li>Universal Child Care, 78</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Page Number Conventions</h3>
-                        <ul>
-                            <li><strong>Individual pages:</strong> 12, 34, 56</li>
-                            <li><strong>Page ranges:</strong> 23-27, 45-49</li>
-                            <li><strong>Scattered references:</strong> 12, 15, 23, 67</li>
-                            <li><strong>Main discussion:</strong> 34-38 (bold or italic)</li>
-                            <li><strong>Illustrations:</strong> 45 (fig.), 67 (table)</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Creating Effective Indexes</h3>
-                        <ul>
-                            <li><strong>Think like a reader:</strong> What terms would they search for?</li>
-                            <li><strong>Use consistent terminology:</strong> Match the language in the text</li>
-                            <li><strong>Provide multiple access points:</strong> Include synonyms and variants</li>
-                            <li><strong>Keep entries concise:</strong> Use the shortest form that's clear</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="tip-box">
-                        <h4>💡 Digital Indexing</h4>
-                        <p>Modern word processors can generate basic indexes automatically, but human review is essential for quality. Consider searchable PDFs as an alternative to traditional indexes for digital documents.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-indexes"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('indexes')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.06: Electronic Sources -->
-            <section class="content-section" id="electronic-sources">
-                <div class="section-header">
-                    <h2>9.06 Electronic Sources</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Electronic sources present unique challenges for citation and reference. Government documents are increasingly digital, requiring special attention to permanence, accessibility, and accurate citation.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Types of Electronic Sources</h3>
-                        <ul>
-                            <li><strong>Government websites:</strong> Departments, agencies, Parliament</li>
-                            <li><strong>Digital databases:</strong> Statistical data, legal databases</li>
-                            <li><strong>Online reports:</strong> PDF documents, HTML pages</li>
-                            <li><strong>Social media:</strong> Official government accounts</li>
-                            <li><strong>Email and digital correspondence:</strong> Official communications</li>
-                            <li><strong>Digital archives:</strong> Historical documents online</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Electronic Citation Elements</h4>
-                        
-                        <div class="example-item good">
-                            <p><strong>Essential elements for all electronic sources:</strong></p>
-                            <ul>
-                                <li>Author or organization name</li>
-                                <li>Title of document or webpage</li>
-                                <li>Publication or last modified date</li>
-                                <li>URL or DOI</li>
-                                <li>Access date</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Additional elements when available:</strong></p>
-                            <ul>
-                                <li>Version number</li>
-                                <li>File format (PDF, HTML)</li>
-                                <li>Database name</li>
-                                <li>Publisher information</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="rule-box">
-                        <h3>Government Website Citation</h3>
-                        <p><strong>Format:</strong> Organization. "Page Title." Website Name. Last modified Date. Accessed Date. URL.</p>
                         
                         <div class="examples-box">
-                            <h4>Examples:</h4>
+                            <h4>Footnote Examples</h4>
                             <div class="example-item good">
-                                <p>Health Canada. "Vaccine Safety." Canada.ca. Last modified March 5, 2024. Accessed March 10, 2024. https://www.canada.ca/en/health-canada/services/vaccine-safety.html.</p>
+                                <p><strong>First Reference:</strong></p>
+                                <p>¹ John Smith, <em>Canadian Policy Analysis</em> (Ottawa: Government Publishing, 2023), 45.</p>
                             </div>
-                            <div class="example-item">
-                                <p>Statistics Canada. "Consumer Price Index, February 2024." The Daily. March 8, 2024. Accessed March 10, 2024. https://www150.statcan.gc.ca/n1/daily-quotidien/240308/dq240308a-eng.htm.</p>
+                            <div class="example-item good">
+                                <p><strong>Subsequent Reference:</strong></p>
+                                <p>² Smith, <em>Canadian Policy Analysis</em>, 67.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Ibid (same source, consecutive notes):</strong></p>
+                                <p>³ Ibid., 72.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <h4>⚠️ Footnote Guidelines</h4>
+                            <p>Avoid "op. cit." in modern usage. Instead, use a shortened version of the title for subsequent references to the same work.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-footnotes"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('footnotes')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Section 9.03: Bibliography -->
+                <section class="content-section" id="bibliography">
+                    <div class="section-header">
+                        <h2>9.03 Bibliography</h2>
+                    </div>
+                    
+                    <div class="lesson-content">
+                        <p>A bibliography lists all sources consulted in preparing a document. Entries are arranged alphabetically by author's last name or by title for works with no author.</p>
+                        
+                        <div class="rule-box">
+                            <h3>Bibliography Format</h3>
+                            <ul>
+                                <li><strong>Books:</strong> Author. <em>Title</em>. Place: Publisher, Year.</li>
+                                <li><strong>Articles:</strong> Author. "Title." <em>Journal</em> Volume, no. Issue (Year): pages.</li>
+                                <li><strong>Government Documents:</strong> Department. <em>Title</em>. Place: Publisher, Year.</li>
+                                <li><strong>Online Sources:</strong> Author. "Title." Website. Date. URL.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="examples-box">
+                            <h4>Bibliography Examples</h4>
+                            <div class="example-item good">
+                                <p><strong>Book:</strong></p>
+                                <p>Wilson, Sarah. <em>Policy Implementation in Canada</em>. Toronto: Academic Press, 2023.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Journal Article:</strong></p>
+                                <p>Brown, Michael. "Fiscal Policy Trends." <em>Canadian Public Administration</em> 67, no. 2 (2023): 145-162.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Government Report:</strong></p>
+                                <p>Statistics Canada. <em>Canadian Economic Indicators</em>. Ottawa: Government Publishing, 2023.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tip-box">
+                            <h4>💡 Bibliography Tips</h4>
+                            <ul>
+                                <li>Alphabetize by first significant word (ignore "A," "An," "The")</li>
+                                <li>Use hanging indent for each entry</li>
+                                <li>Include all sources cited in text</li>
+                                <li>Verify publication details</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-bibliography"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('bibliography')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Section 9.04: Citations -->
+                <section class="content-section" id="citations">
+                    <div class="section-header">
+                        <h2>9.04 Citations</h2>
+                    </div>
+                    
+                    <div class="lesson-content">
+                        <p>In-text citations acknowledge sources within the body of your document. They must correspond to entries in your bibliography or reference list.</p>
+                        
+                        <div class="rule-box">
+                            <h3>When to Cite</h3>
+                            <ul>
+                                <li>Direct quotations of any length</li>
+                                <li>Paraphrased ideas or information</li>
+                                <li>Statistical data or figures</li>
+                                <li>Specific facts not commonly known</li>
+                                <li>Expert opinions or interpretations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="examples-box">
+                            <h4>Citation Styles</h4>
+                            <div class="example-item good">
+                                <p><strong>Author-Date System (APA style):</strong></p>
+                                <p>Recent studies show improved outcomes (Wilson, 2023, p. 45).</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Numbered System:</strong></p>
+                                <p>Economic indicators suggest growth [1].</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Note System:</strong></p>
+                                <p>Policy implementation has improved significantly.¹</p>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <h4>⚠️ Common Citation Errors</h4>
+                            <ul>
+                                <li>Missing page numbers for quotations</li>
+                                <li>Incomplete publication information</li>
+                                <li>Inconsistent formatting style</li>
+                                <li>Citations not matching bibliography</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-citations"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('citations')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Section 9.05: Indexes -->
+                <section class="content-section" id="indexes">
+                    <div class="section-header">
+                        <h2>9.05 Indexes</h2>
+                    </div>
+                    
+                    <div class="lesson-content">
+                        <p>An index is an alphabetical list of names, places, and subjects mentioned in a document, with page numbers where they can be found. A well-constructed index significantly improves a document's usability.</p>
+                        
+                        <div class="rule-box">
+                            <h3>Index Construction Principles</h3>
+                            <ul>
+                                <li><strong>Selectivity:</strong> Include only significant references</li>
+                                <li><strong>Consistency:</strong> Use uniform terminology and formatting</li>
+                                <li><strong>Cross-referencing:</strong> Guide readers to related topics</li>
+                                <li><strong>Hierarchy:</strong> Use main entries and subentries appropriately</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="examples-box">
+                            <h4>Index Entry Types</h4>
+                            <div class="example-item good">
+                                <p><strong>Simple Entry:</strong></p>
+                                <p>Budget planning, 45, 67, 89-91</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Entry with Subentries:</strong></p>
+                                <p>Government departments<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Finance, 23, 45-47<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Health, 67, 89<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Transport, 102-105</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Cross-Reference:</strong></p>
+                                <p>Federal government. <em>See</em> Government, federal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-box">
+                            <h3>Advanced Indexing Techniques</h3>
+                            <div class="technique-grid">
+                                <div class="technique-item">
+                                    <h4>Personal Names</h4>
+                                    <p>List by surname: "Smith, John, 45, 67"</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h4>Compound Terms</h4>
+                                    <p>Choose the most significant word: "Policy, economic" not "Economic policy"</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h4>Acronyms</h4>
+                                    <p>Include both forms: "CBC (Canadian Broadcasting Corporation), 34"</p>
+                                </div>
+                                <div class="technique-item">
+                                    <h4>Multiple References</h4>
+                                    <p>Use commas for individual pages, hyphens for ranges: "23, 45-47, 89"</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h3>Special Considerations for Government Sources</h3>
-                        <ul>
-                            <li><strong>URL stability:</strong> Government URLs may change during website updates</li>
-                            <li><strong>Bilingual content:</strong> Specify language version (English/French)</li>
-                            <li><strong>Version control:</strong> Documents may be updated without notice</li>
-                            <li><strong>Archive policies:</strong> Older content may be moved or removed</li>
-                        </ul>
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-indexes"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('indexes')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Section 9.06: Electronic Sources -->
+                <section class="content-section" id="electronic-sources">
+                    <div class="section-header">
+                        <h2>9.06 Electronic Sources</h2>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Specialized Electronic Sources</h4>
+                    <div class="lesson-content">
+                        <p>Electronic sources require special consideration in citations and bibliographies. Include all information necessary for readers to locate the source.</p>
                         
-                        <div class="example-item good">
-                            <p><strong>Parliamentary Proceedings (online):</strong></p>
-                            <p>Canada. Parliament. House of Commons. <em>Debates</em>. 44th Parliament, 1st Session, No. 45 (March 15, 2024). Accessed March 16, 2024. https://www.ourcommons.ca/DocumentViewer/en/44-1/house/sitting-45/hansard.</p>
+                        <div class="rule-box">
+                            <h3>Electronic Source Elements</h3>
+                            <ul>
+                                <li><strong>Author:</strong> Individual or organization</li>
+                                <li><strong>Title:</strong> Document or page title</li>
+                                <li><strong>Website:</strong> Name of the site</li>
+                                <li><strong>Date:</strong> Publication or update date</li>
+                                <li><strong>URL:</strong> Complete web address</li>
+                                <li><strong>Access Date:</strong> When you viewed the source</li>
+                            </ul>
                         </div>
                         
-                        <div class="example-item">
-                            <p><strong>Legal Database:</strong></p>
-                            <p><em>R. v. Smith</em>, 2024 SCC 8. CanLII. Accessed March 10, 2024. https://canlii.ca/t/k2x34.</p>
+                        <div class="examples-box">
+                            <h4>Electronic Source Citations</h4>
+                            <div class="example-item good">
+                                <p><strong>Government Website:</strong></p>
+                                <p>Statistics Canada. "Population Estimates." <em>Statistics Canada</em>. Last modified March 15, 2023. https://www.statcan.gc.ca/population.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>PDF Document:</strong></p>
+                                <p>Department of Finance. "Budget 2023 Highlights." 2023. PDF file. https://www.fin.gc.ca/budget23/highlights.pdf.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Online News Article:</strong></p>
+                                <p>Johnson, Mary. "New Economic Policies Announced." <em>CBC News</em>. June 10, 2023. https://www.cbc.ca/news/politics/economic-policies.</p>
+                            </div>
                         </div>
                         
-                        <div class="example-item">
-                            <p><strong>Digital Archive:</strong></p>
-                            <p>Library and Archives Canada. "Cabinet Conclusions, 1968." Digital Archives. Accessed March 10, 2024. https://www.bac-lac.gc.ca/eng/discover/politics-government/cabinet-conclusions/Pages/item.aspx?IdNumber=1968.</p>
-                        </div>
-                        
-                        <div class="example-item">
-                            <p><strong>Social Media (Official Account):</strong></p>
-                            <p>Prime Minister's Office (@CanadianPM). "Climate action announcement." Twitter, March 8, 2024, 2:30 PM. https://twitter.com/CanadianPM/status/1766123456789.</p>
+                        <div class="tip-box">
+                            <h4>💡 Electronic Source Best Practices</h4>
+                            <ul>
+                                <li>Use DOI (Digital Object Identifier) when available</li>
+                                <li>Include retrieval date for sources that may change</li>
+                                <li>Verify URLs are complete and functional</li>
+                                <li>Use archived versions for important sources</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <div class="rule-box">
-                        <h3>Ensuring Long-term Access</h3>
-                        <ul>
-                            <li><strong>Permalink preference:</strong> Use permanent URLs when available</li>
-                            <li><strong>Web archiving:</strong> Consider using Wayback Machine links</li>
-                            <li><strong>PDF preservation:</strong> Save important documents locally</li>
-                            <li><strong>Multiple formats:</strong> Note if content exists in different formats</li>
-                        </ul>
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-electronic-sources"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('electronic-sources')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Section 9.07: Legal References -->
+                <section class="content-section" id="legal-references">
+                    <div class="section-header">
+                        <h2>9.07 Legal References</h2>
                     </div>
                     
-                    <div class="warning-box">
-                        <h4>⚠️ Digital Preservation Challenges</h4>
-                        <p>Electronic sources can disappear or change without notice. For critical sources, consider citing archived versions or maintaining local copies with appropriate permissions.</p>
+                    <div class="lesson-content">
+                        <p>Legal documents require specialized citation formats. Follow established legal citation styles consistently throughout your document.</p>
+                        
+                        <div class="rule-box">
+                            <h3>Legal Citation Elements</h3>
+                            <ul>
+                                <li><strong>Statutes:</strong> Title, jurisdiction, year</li>
+                                <li><strong>Cases:</strong> Case name, citation, court, year</li>
+                                <li><strong>Regulations:</strong> Title, regulation number, jurisdiction</li>
+                                <li><strong>Treaties:</strong> Full name, parties, date, source</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="examples-box">
+                            <h4>Legal Citation Examples</h4>
+                            <div class="example-item good">
+                                <p><strong>Federal Statute:</strong></p>
+                                <p><em>Canadian Charter of Rights and Freedoms</em>, Part I of the Constitution Act, 1982, being Schedule B to the Canada Act 1982 (UK), 1982, c 11.</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Supreme Court Case:</strong></p>
+                                <p><em>R. v. Oakes</em>, [1986] 1 S.C.R. 103, 1986 CanLII 46 (SCC).</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Federal Regulation:</strong></p>
+                                <p><em>Immigration and Refugee Protection Regulations</em>, SOR/2002-227.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="warning-box">
+                            <h4>⚠️ Legal Citation Guidelines</h4>
+                            <ul>
+                                <li>Use official case names and citations</li>
+                                <li>Include court level and jurisdiction</li>
+                                <li>Verify current status of cited laws</li>
+                                <li>Follow consistent citation style</li>
+                            </ul>
+                        </div>
                     </div>
                     
-                    <div class="tip-box">
-                        <h4>💡 Best Practices</h4>
-                        <ul>
-                            <li>Check links regularly and update as needed</li>
-                            <li>Include access dates for all online sources</li>
-                            <li>Use shortened URLs cautiously—they may break</li>
-                            <li>Consider including DOIs when available for academic sources</li>
-                        </ul>
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-legal-references"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('legal-references')">
+                            Mark Complete & Continue
+                        </button>
                     </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-electronic-sources"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('electronic-sources')">
-                        Complete Chapter 9!
-                    </button>
-                </div>
-            </section>
+                </section>
+
+                <!-- Section 9.08: Advanced Indexing -->
+                <section class="content-section" id="advanced-indexing">
+                    <div class="section-header">
+                        <h2>9.08 Advanced Indexing</h2>
+                    </div>
+                    
+                    <div class="lesson-content">
+                        <p>Advanced indexing techniques help create comprehensive, user-friendly indexes for complex documents. Master these skills to produce professional reference tools.</p>
+                        
+                        <div class="rule-box">
+                            <h3>Complex Index Structures</h3>
+                            <ul>
+                                <li><strong>Multiple levels:</strong> Main entries, subentries, sub-subentries</li>
+                                <li><strong>Cross-references:</strong> "See" and "See also" references</li>
+                                <li><strong>Continued headings:</strong> For entries spanning multiple columns</li>
+                                <li><strong>Special formatting:</strong> Italics for emphasis, bold for definitions</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="examples-box">
+                            <h4>Advanced Index Examples</h4>
+                            <div class="example-item good">
+                                <p><strong>Multi-level Entry:</strong></p>
+                                <p>Economic policy<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;development, 23-25<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;implementation<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;federal level, 45-47<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;provincial level, 67-69<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;international aspects, 89-91</p>
+                            </div>
+                            <div class="example-item good">
+                                <p><strong>Cross-Reference Network:</strong></p>
+                                <p>Budget. <em>See also</em> Fiscal policy; Government spending<br>
+                                Fiscal policy, 23, 45-47, 89. <em>See also</em> Budget; Economic policy<br>
+                                Government spending. <em>See</em> Budget</p>
+                            </div>
+                        </div>
+                        
+                        <div class="advanced-techniques">
+                            <h3>Professional Indexing Techniques</h3>
+                            <div class="techniques-grid">
+                                <div class="technique-box">
+                                    <h4>🎯 Term Selection</h4>
+                                    <ul>
+                                        <li>Choose words readers will look for</li>
+                                        <li>Include synonyms and variants</li>
+                                        <li>Consider different user perspectives</li>
+                                    </ul>
+                                </div>
+                                <div class="technique-box">
+                                    <h4>📊 Entry Analysis</h4>
+                                    <ul>
+                                        <li>Significant discussion: bold page numbers</li>
+                                        <li>Definitions: italic page numbers</li>
+                                        <li>Brief mentions: regular page numbers</li>
+                                    </ul>
+                                </div>
+                                <div class="technique-box">
+                                    <h4>🔄 Quality Control</h4>
+                                    <ul>
+                                        <li>Check alphabetical order</li>
+                                        <li>Verify page numbers</li>
+                                        <li>Eliminate duplicate entries</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checklist-box">
+                            <h3>✅ Index Quality Checklist</h3>
+                            <div class="checklist-items">
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="index-completeness">
+                                    <label for="index-completeness">All significant topics included</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="index-accuracy">
+                                    <label for="index-accuracy">Page numbers verified</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="index-consistency">
+                                    <label for="index-consistency">Consistent terminology throughout</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="index-cross-refs">
+                                    <label for="index-cross-refs">Appropriate cross-references included</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="index-formatting">
+                                    <label for="index-formatting">Proper formatting and indentation</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quiz Panel -->
+                    <div class="quiz-panel" id="quiz-advanced-indexing"></div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary" onclick="completeSection('advanced-indexing')">
+                            Mark Complete & Continue
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="chapter-navigation">
+                <a href="../chapters/ch08.html" class="btn btn-outline nav-prev">
+                    ← Previous: Chapter 8
+                </a>
+                <a href="../chapters/ch10.html" class="btn btn-outline nav-next">
+                    Next: Chapter 10 →
+                </a>
+            </div>
         </div>
     </main>
 
@@ -707,151 +572,26 @@
         </div>
     </footer>
 
-    <!-- Include JavaScript modules -->
-    <script type="module" src="../shared/js/router.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/components.js"></script>
-
-    <script type="module">
-        import { getChapterProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine } from '../shared/js/quiz-engine.js';
-        
-        const CHAPTER_ID = 'ch09';
-        const sections = [
-            { id: 'introduction', title: '9.01 Introduction' },
-            { id: 'footnotes', title: '9.02 Footnotes' },
-            { id: 'bibliography', title: '9.03 Bibliography' },
-            { id: 'citations', title: '9.04 Citations' },
-            { id: 'indexes', title: '9.05 Indexes' },
-            { id: 'electronic-sources', title: '9.06 Electronic Sources' }
-        ];
-        
-        // Initialize section navigation
-        function initSectionNavigation() {
-            const tabLinks = document.querySelectorAll('.tab-link');
+    <!-- JavaScript -->
+    <script src="../shared/js/router.js"></script>
+    <script src="../shared/js/quiz.js"></script>
+    <script src="../shared/js/progress.js"></script>
+    
+    <script>
+        // Initialize chapter
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = [
+                { id: 'introduction', title: '9.01 Introduction' },
+                { id: 'footnotes', title: '9.02 Footnotes' },
+                { id: 'bibliography', title: '9.03 Bibliography' },
+                { id: 'citations', title: '9.04 Citations' },
+                { id: 'indexes', title: '9.05 Indexes' },
+                { id: 'electronic-sources', title: '9.06 Electronic Sources' },
+                { id: 'legal-references', title: '9.07 Legal References' },
+                { id: 'advanced-indexing', title: '9.08 Advanced Indexing' }
+            ];
             
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(this);
-                });
-            });
-            
-            // Show first section by default
-            showSection('introduction');
-        }
-        
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Show target section
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-            }
-        }
-        
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            activeLink.classList.add('active');
-        }
-        
-        // Update progress bar
-        function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
-            
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
-        }
-        
-        // Mark section as complete
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                showSection(nextSection.id);
-                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 9 Complete!</h3>
-                    <p>Excellent! You've mastered reference matter and citation formats. Your documents will be properly documented and credible.</p>
-                    <div class="modal-actions">
-                        <button class="btn btn-outline" onclick="this.closest('.completion-modal').remove()">
-                            Stay Here
-                        </button>
-                        <a href="../index.html" class="btn btn-primary">
-                            Back to Dashboard
-                        </a>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-        }
-        
-        // Load section quizzes from JSON files
-        async function loadSectionQuizzes() {
-            try {
-                const response = await fetch(`../data/ch09-quiz.json`);
-                if (!response.ok) {
-                    console.warn('Quiz data not available for chapter 9');
-                    return;
-                }
-                
-                const quizData = await response.json();
-                
-                // Initialize quizzes for sections that have them
-                sections.forEach(section => {
-                    const sectionQuizData = quizData.sections?.[section.id];
-                    if (sectionQuizData && sectionQuizData.questions) {
-                        const quizContainer = document.getElementById(`quiz-${section.id}`);
-                        if (quizContainer) {
-                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
-                            quizEngine.render(quizContainer);
-                        }
-                    }
-                });
-            } catch (error) {
-                console.warn('Error loading quiz data:', error);
-            }
-        }
-        
-        // Initialize page
-        initSectionNavigation();
-        updateProgressBar();
-        loadSectionQuizzes();
-        
-        // Handle window beforeunload for quiz warnings
-        window.addEventListener('beforeunload', (event) => {
-            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-            if (activeQuiz) {
-                event.preventDefault();
-                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
-            }
+            initializeChapter('ch09', sections);
         });
     </script>
 </body>
