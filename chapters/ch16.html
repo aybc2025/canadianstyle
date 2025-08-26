@@ -5,104 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 16: Revision & Proofreading - The Canadian Style</title>
     <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
     <style>
-        .checklist-master {
+        .revision-level {
             background: #f8f9fa;
-            border: 2px solid #dee2e6;
-            border-radius: 12px;
+            border-left: 4px solid #0066cc;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        .checklist-container {
+            background: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
             padding: 2rem;
             margin: 2rem 0;
         }
+        .checklist-progress {
+            background: #e9ecef;
+            border-radius: 4px;
+            height: 8px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+        .checklist-progress-bar {
+            background: #28a745;
+            height: 100%;
+            transition: width 0.3s ease;
+            width: 0%;
+        }
         .checklist-section {
-            margin: 1.5rem 0;
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .checklist-section h4 {
-            margin: 0 0 1rem 0;
-            color: #2c3e50;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .checklist-items {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 0.75rem;
+            margin: 2rem 0;
         }
         .checklist-item {
             display: flex;
-            align-items: flex-start;
-            gap: 0.75rem;
-            padding: 0.5rem;
-            border-radius: 6px;
-            transition: background-color 0.2s;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f3f4;
         }
-        .checklist-item:hover {
-            background: #f8f9fa;
+        .checklist-item:last-child {
+            border-bottom: none;
         }
         .checklist-item input[type="checkbox"] {
-            margin-top: 0.25rem;
-            width: 18px;
-            height: 18px;
-            accent-color: #28a745;
+            margin-right: 1rem;
+            transform: scale(1.2);
         }
         .checklist-item label {
             cursor: pointer;
-            font-weight: 500;
-            color: #495057;
-            line-height: 1.4;
+            user-select: none;
         }
-        .error-types-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .error-type-card {
-            background: white;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .error-type-card h4 {
-            color: #dc3545;
-            margin: 0 0 1rem 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .revision-levels {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .revision-level {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-        }
-        .revision-level h4 {
-            margin: 0 0 1rem 0;
-            font-size: 1.3rem;
-        }
-        .revision-level ul {
-            text-align: left;
-            margin: 1rem 0;
-        }
-        .technique-showcase {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .technique-item {
+        .strategy-card {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
             border-radius: 8px;
@@ -112,6 +63,19 @@
             color: #856404;
             margin: 0 0 1rem 0;
             font-size: 1.1rem;
+        }
+        .appendix-reference {
+            background: #e8f4fd;
+            border: 1px solid #b3d9ff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .gallicisms-section {
+            background: #fff8dc;
+            border-left: 4px solid #ff6b35;
+            padding: 1.5rem;
+            margin: 2rem 0;
         }
     </style>
 </head>
@@ -231,48 +195,30 @@
                     </div>
                     
                     <div class="lesson-content">
-                        <p>Different editing levels address specific aspects of document quality. Understanding when and how to apply each level ensures thorough revision.</p>
+                        <p>Different editing levels address specific aspects of document quality. Understanding these levels helps you focus your efforts and ensure comprehensive review.</p>
                         
-                        <div class="editing-levels">
+                        <div class="editing-levels-detail">
                             <div class="level-detail">
-                                <h3>📋 Structural Editing (Substantive Editing)</h3>
-                                <p>Focuses on content organization, logic, and completeness.</p>
+                                <h3>📝 Structural Editing</h3>
+                                <p>Focus on overall organization, logic, and completeness.</p>
                                 
                                 <div class="level-checklist">
                                     <h4>Structural Editing Tasks:</h4>
                                     <ul>
-                                        <li>Evaluate overall document structure and organization</li>
-                                        <li>Ensure logical flow between sections and paragraphs</li>
-                                        <li>Check completeness of content against stated objectives</li>
+                                        <li>Assess document organization and flow</li>
+                                        <li>Verify completeness of content</li>
+                                        <li>Check logical progression of arguments</li>
+                                        <li>Ensure consistency with document purpose</li>
+                                        <li>Review headings and subheadings for hierarchy</li>
+                                        <li>Assess paragraph and section transitions</li>
                                         <li>Verify that conclusions follow from evidence presented</li>
-                                        <li>Assess whether the document meets its intended purpose</li>
-                                        <li>Identify gaps in information or argumentation</li>
-                                        <li>Recommend reorganization or additional content as needed</li>
                                     </ul>
                                 </div>
                             </div>
                             
                             <div class="level-detail">
-                                <h3>✏️ Line Editing (Stylistic Editing)</h3>
-                                <p>Improves clarity, tone, and readability at the sentence and paragraph level.</p>
-                                
-                                <div class="level-checklist">
-                                    <h4>Line Editing Tasks:</h4>
-                                    <ul>
-                                        <li>Improve sentence structure and variety</li>
-                                        <li>Enhance word choice for precision and clarity</li>
-                                        <li>Ensure consistent tone throughout document</li>
-                                        <li>Eliminate wordiness and redundancy</li>
-                                        <li>Strengthen transitions between ideas</li>
-                                        <li>Adjust reading level for target audience</li>
-                                        <li>Improve paragraph unity and coherence</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="level-detail">
-                                <h3>📝 Copy Editing</h3>
-                                <p>Corrects grammar, punctuation, spelling, and ensures style consistency.</p>
+                                <h3>✍️ Copy Editing</h3>
+                                <p>Address grammar, punctuation, style, and language usage.</p>
                                 
                                 <div class="level-checklist">
                                     <h4>Copy Editing Tasks:</h4>
@@ -325,76 +271,38 @@
                     </div>
                     
                     <div class="lesson-content">
-                        <p>Effective revision requires systematic approaches and proven techniques. These strategies help ensure thorough and efficient document review.</p>
+                        <p>Effective revision requires systematic approaches and proven techniques. These strategies help ensure thorough, efficient review processes.</p>
                         
-                        <div class="technique-showcase">
+                        <div class="strategy-card">
+                            <h3>🎯 The Multi-Pass Approach</h3>
                             <div class="technique-item">
-                                <h5>🔄 Multiple Pass Strategy</h5>
-                                <ul>
-                                    <li>First pass: Overall structure and content</li>
-                                    <li>Second pass: Paragraph and sentence level</li>
-                                    <li>Third pass: Grammar and punctuation</li>
-                                    <li>Final pass: Formatting and layout</li>
-                                </ul>
+                                <h5>Pass 1: Content and Structure</h5>
+                                <p>Review overall organization, completeness, and logical flow. Don't get distracted by surface errors.</p>
                             </div>
                             <div class="technique-item">
-                                <h5>👁️ Fresh Eyes Technique</h5>
-                                <ul>
-                                    <li>Take breaks between writing and revising</li>
-                                    <li>Read aloud to catch errors</li>
-                                    <li>Have colleagues review important documents</li>
-                                    <li>Use text-to-speech software</li>
-                                </ul>
+                                <h5>Pass 2: Style and Clarity</h5>
+                                <p>Focus on sentence structure, word choice, and clarity. Improve readability and tone.</p>
                             </div>
                             <div class="technique-item">
-                                <h5>🎯 Focused Reading</h5>
-                                <ul>
-                                    <li>Read for one type of error at a time</li>
-                                    <li>Use ruler or paper to focus on individual lines</li>
-                                    <li>Read backwards for spelling errors</li>
-                                    <li>Check numbers and dates separately</li>
-                                </ul>
+                                <h5>Pass 3: Grammar and Mechanics</h5>
+                                <p>Address grammar, punctuation, spelling, and formatting issues.</p>
                             </div>
                             <div class="technique-item">
-                                <h5>📊 Systematic Approach</h5>
-                                <ul>
-                                    <li>Use comprehensive checklists</li>
-                                    <li>Track common error patterns</li>
-                                    <li>Maintain personal style sheets</li>
-                                    <li>Document revision decisions</li>
-                                </ul>
+                                <h5>Pass 4: Final Polish</h5>
+                                <p>Catch remaining errors and ensure consistency throughout.</p>
                             </div>
                         </div>
                         
-                        <div class="strategy-details">
-                            <h3>Advanced Revision Techniques</h3>
-                            
-                            <div class="rule-box">
-                                <h4>🔍 Reverse Reading Method</h4>
-                                <p>Read the document from end to beginning, sentence by sentence. This technique helps identify:</p>
-                                <ul>
-                                    <li>Spelling errors that spell-check might miss</li>
-                                    <li>Inconsistent formatting</li>
-                                    <li>Repeated words or phrases</li>
-                                    <li>Typography issues</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="rule-box">
-                                <h4>📋 Checklist Integration</h4>
-                                <p>Develop and use specialized checklists for different document types:</p>
-                                <ul>
-                                    <li>Reports: Executive summary accuracy, data verification</li>
-                                    <li>Letters: Proper salutations, consistent tone</li>
-                                    <li>Policies: Clear directive language, implementation steps</li>
-                                    <li>Technical documents: Terminology consistency, procedure accuracy</li>
-                                </ul>
-                            </div>
+                        <div class="strategy-card">
+                            <h3>⏱️ Time Management Strategies</h3>
+                            <ul>
+                                <li><strong>Plan revision time:</strong> Allow adequate time for thorough review</li>
+                                <li><strong>Take breaks:</strong> Fresh eyes catch more errors</li>
+                                <li><strong>Set priorities:</strong> Focus on most critical issues first</li>
+                                <li><strong>Use deadlines:</strong> Work backwards from submission dates</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-revision-strategies"></div>
                     
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('revision-strategies')">
@@ -406,129 +314,34 @@
                 <!-- Section 16.04: Proofreading Techniques -->
                 <section class="content-section" id="proofreading-techniques">
                     <div class="section-header">
-                        <h2>16.04 Advanced Proofreading Techniques</h2>
+                        <h2>16.04 Proofreading Techniques</h2>
                     </div>
                     
                     <div class="lesson-content">
-                        <p>Professional proofreading requires specific techniques to catch errors that other editing levels might miss. These methods ensure the highest level of accuracy.</p>
+                        <p>Proofreading requires specific techniques to catch errors that previous editing passes may have missed.</p>
                         
-                        <div class="techniques-grid">
+                        <div class="technique-grid">
                             <div class="technique-card">
-                                <h4>🔤 Typography Focus</h4>
-                                <h5>Character-Level Review</h5>
+                                <h4>🔍 Reading Techniques</h4>
                                 <ul>
-                                    <li>Check for transposed letters (form/from)</li>
-                                    <li>Verify correct quotation mark types (" vs ")</li>
-                                    <li>Look for missing or extra spaces</li>
-                                    <li>Identify font inconsistencies</li>
-                                    <li>Check special characters and symbols</li>
+                                    <li><strong>Read aloud:</strong> Hear errors you might miss visually</li>
+                                    <li><strong>Read backwards:</strong> Start from the end to focus on spelling</li>
+                                    <li><strong>Use a ruler:</strong> Cover text below the line you're reading</li>
+                                    <li><strong>Change format:</strong> Print or use different screen view</li>
                                 </ul>
-                                
-                                <h5>Common Typography Errors:</h5>
-                                <div class="examples-box">
-                                    <div class="example-item bad">
-                                        <p><strong>✗ Incorrect:</strong> Goverment, recieve, seperate</p>
-                                    </div>
-                                    <div class="example-item good">
-                                        <p><strong>✓ Correct:</strong> Government, receive, separate</p>
-                                    </div>
-                                </div>
                             </div>
                             
                             <div class="technique-card">
-                                <h4>🔢 Number Verification</h4>
-                                <h5>Numerical Accuracy</h5>
+                                <h4>🎯 Focus Areas</h4>
                                 <ul>
-                                    <li>Verify all statistical data</li>
-                                    <li>Check mathematical calculations</li>
-                                    <li>Confirm date accuracy and consistency</li>
-                                    <li>Verify currency amounts</li>
-                                    <li>Check measurement conversions</li>
-                                </ul>
-                                
-                                <h5>Number Verification Process:</h5>
-                                <ol>
-                                    <li>Circle all numbers in the document</li>
-                                    <li>Cross-reference with source materials</li>
-                                    <li>Verify calculations independently</li>
-                                    <li>Check number formatting consistency</li>
-                                    <li>Confirm unit accuracy (metric/imperial)</li>
-                                </ol>
-                            </div>
-                            
-                            <div class="technique-card">
-                                <h4>🔗 Reference Validation</h4>
-                                <h5>Citation and Link Accuracy</h5>
-                                <ul>
-                                    <li>Verify all in-text citations match bibliography</li>
-                                    <li>Check web links functionality</li>
-                                    <li>Confirm page number accuracy</li>
-                                    <li>Validate cross-references within document</li>
-                                    <li>Check footnote numbering sequence</li>
-                                </ul>
-                                
-                                <h5>Reference Checklist:</h5>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-citations">
-                                        <label for="ref-citations">All citations have corresponding bibliography entries</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-links">
-                                        <label for="ref-links">Web links tested and functional</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-pages">
-                                        <label for="ref-pages">Page references accurate</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-format">
-                                        <label for="ref-format">Citation format consistent throughout</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="advanced-techniques">
-                            <h3>Professional Proofreading Methods</h3>
-                            
-                            <div class="method-section">
-                                <h4>🎵 Audio Proofreading</h4>
-                                <p>Use text-to-speech software to hear errors you might miss visually:</p>
-                                <ul>
-                                    <li>Awkward phrasing becomes apparent when heard</li>
-                                    <li>Missing words are more noticeable in audio</li>
-                                    <li>Rhythm and flow issues are highlighted</li>
-                                    <li>Repeated words stand out auditorily</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="method-section">
-                                <h4>🔍 Digital Tools Integration</h4>
-                                <p>Combine technology with manual review:</p>
-                                <ul>
-                                    <li>Grammar checkers for initial screening</li>
-                                    <li>Style guides for consistency checking</li>
-                                    <li>Plagiarism detection for originality</li>
-                                    <li>Accessibility checkers for inclusive design</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="warning-box">
-                                <h4>⚠️ Technology Limitations</h4>
-                                <p>Remember that automated tools have limitations:</p>
-                                <ul>
-                                    <li>Context-dependent errors may be missed</li>
-                                    <li>Technical terminology may not be recognized</li>
-                                    <li>Style preferences vary by organization</li>
-                                    <li>Human judgment is essential for final review</li>
+                                    <li><strong>Commonly confused words:</strong> their/there/they're</li>
+                                    <li><strong>Number formatting:</strong> Consistency in dates, amounts</li>
+                                    <li><strong>Proper names:</strong> Spellings of people and places</li>
+                                    <li><strong>Technical terms:</strong> Industry-specific vocabulary</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-proofreading-techniques"></div>
                     
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('proofreading-techniques')">
@@ -540,182 +353,62 @@
                 <!-- Section 16.05: Common Errors -->
                 <section class="content-section" id="common-errors">
                     <div class="section-header">
-                        <h2>16.05 Common Error Categories</h2>
+                        <h2>16.05 Common Errors</h2>
                     </div>
                     
                     <div class="lesson-content">
-                        <p>Understanding common error patterns helps editors focus their attention and develop systematic approaches to error detection.</p>
+                        <p>Recognizing common error patterns helps focus your revision efforts on areas most likely to contain mistakes.</p>
                         
-                        <div class="error-types-grid">
-                            <div class="error-type-card">
-                                <h4>🔤 Spelling & Typography</h4>
-                                <div class="error-examples">
-                                    <h5>Frequent Spelling Errors:</h5>
-                                    <ul>
-                                        <li>accommodate → accomodate</li>
-                                        <li>separate → seperate</li>
-                                        <li>receive → recieve</li>
-                                        <li>government → goverment</li>
-                                        <li>occurred → occured</li>
-                                    </ul>
-                                    
-                                    <h5>Typography Issues:</h5>
-                                    <ul>
-                                        <li>Smart quotes vs. straight quotes</li>
-                                        <li>Em dashes vs. hyphens</li>
-                                        <li>Inconsistent spacing</li>
-                                        <li>Font mixing within documents</li>
-                                    </ul>
+                        <div class="error-categories">
+                            <div class="error-category">
+                                <h3>📝 Language and Usage Errors</h3>
+                                <ul>
+                                    <li><strong>Subject-verb agreement:</strong> Singular/plural mismatches</li>
+                                    <li><strong>Pronoun reference:</strong> Unclear or incorrect pronouns</li>
+                                    <li><strong>Sentence fragments:</strong> Incomplete thoughts</li>
+                                    <li><strong>Run-on sentences:</strong> Multiple ideas improperly joined</li>
+                                    <li><strong>Modifier placement:</strong> Dangling or misplaced modifiers</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- CRITICAL ADDITION: Gallicisms Section -->
+                            <div class="gallicisms-section">
+                                <h3>🇫🇷 Usage and Gallicisms</h3>
+                                <p>Canadian English documents often contain French influences that require attention during revision:</p>
+                                <ul>
+                                    <li><strong>French word placement:</strong> Incorrect positioning of French terms</li>
+                                    <li><strong>False friends:</strong> French words with different English meanings</li>
+                                    <li><strong>Gallicisms:</strong> French sentence structures in English</li>
+                                    <li><strong>Mixed language usage:</strong> Inconsistent treatment of bilingual content</li>
+                                    <li><strong>Accent marks:</strong> Missing or incorrect French accents</li>
+                                    <li><strong>Italicization:</strong> Improper formatting of French words</li>
+                                </ul>
+                                
+                                <div class="appendix-reference">
+                                    <h4>🔍 Specialized Resource</h4>
+                                    <p>For comprehensive guidance on identifying and correcting French-English usage issues:</p>
+                                    <div class="appendix-link">
+                                        <a href="french-words-appendix.html" class="btn btn-primary">
+                                            📖 Appendix A: French Words in English Text
+                                        </a>
+                                    </div>
+                                    <p class="reference-note">
+                                        <em>Appendix A provides detailed rules for proper integration of French words, identification of common Gallicisms, and guidelines for bilingual editing tasks.</em>
+                                    </p>
                                 </div>
                             </div>
                             
-                            <div class="error-type-card">
-                                <h4>📖 Grammar & Syntax</h4>
-                                <div class="error-examples">
-                                    <h5>Common Grammar Errors:</h5>
-                                    <ul>
-                                        <li>Subject-verb disagreement</li>
-                                        <li>Pronoun-antecedent errors</li>
-                                        <li>Dangling modifiers</li>
-                                        <li>Run-on sentences</li>
-                                        <li>Sentence fragments</li>
-                                    </ul>
-                                    
-                                    <h5>Syntax Problems:</h5>
-                                    <ul>
-                                        <li>Misplaced modifiers</li>
-                                        <li>Parallel structure violations</li>
-                                        <li>Awkward constructions</li>
-                                        <li>Unclear pronoun references</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="error-type-card">
-                                <h4>🔣 Punctuation</h4>
-                                <div class="error-examples">
-                                    <h5>Punctuation Errors:</h5>
-                                    <ul>
-                                        <li>Comma splices</li>
-                                        <li>Apostrophe misuse (its/it's)</li>
-                                        <li>Quotation mark placement</li>
-                                        <li>Semicolon vs. colon confusion</li>
-                                        <li>Missing or extra commas</li>
-                                    </ul>
-                                    
-                                    <h5>Canadian-Specific Issues:</h5>
-                                    <ul>
-                                        <li>British vs. American punctuation</li>
-                                        <li>Currency symbol placement</li>
-                                        <li>Date format consistency</li>
-                                        <li>Metric unit spacing</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="error-type-card">
-                                <h4>🔢 Numbers & Data</h4>
-                                <div class="error-examples">
-                                    <h5>Numerical Errors:</h5>
-                                    <ul>
-                                        <li>Inconsistent number formatting</li>
-                                        <li>Mathematical calculation errors</li>
-                                        <li>Date format inconsistencies</li>
-                                        <li>Percentage vs. decimal confusion</li>
-                                        <li>Unit conversion mistakes</li>
-                                    </ul>
-                                    
-                                    <h5>Data Accuracy:</h5>
-                                    <ul>
-                                        <li>Statistical reporting errors</li>
-                                        <li>Chart/table mismatches</li>
-                                        <li>Source attribution errors</li>
-                                        <li>Outdated information</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="error-type-card">
-                                <h4>🎨 Format & Layout</h4>
-                                <div class="error-examples">
-                                    <h5>Formatting Issues:</h5>
-                                    <ul>
-                                        <li>Inconsistent heading styles</li>
-                                        <li>Uneven spacing</li>
-                                        <li>Misaligned elements</li>
-                                        <li>Font inconsistencies</li>
-                                        <li>Margin variations</li>
-                                    </ul>
-                                    
-                                    <h5>Layout Problems:</h5>
-                                    <ul>
-                                        <li>Widow/orphan lines</li>
-                                        <li>Page break issues</li>
-                                        <li>Image placement errors</li>
-                                        <li>Table formatting inconsistencies</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="error-type-card">
-                                <h4>🔗 References & Citations</h4>
-                                <div class="error-examples">
-                                    <h5>Citation Errors:</h5>
-                                    <ul>
-                                        <li>Missing bibliography entries</li>
-                                        <li>Incorrect citation format</li>
-                                        <li>Broken web links</li>
-                                        <li>Inconsistent citation style</li>
-                                        <li>Missing page numbers</li>
-                                    </ul>
-                                    
-                                    <h5>Reference Issues:</h5>
-                                    <ul>
-                                        <li>Cross-reference inaccuracies</li>
-                                        <li>Table of contents mismatches</li>
-                                        <li>Index entry errors</li>
-                                        <li>Footnote numbering problems</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="error-prevention">
-                            <h3>Error Prevention Strategies</h3>
-                            <div class="prevention-grid">
-                                <div class="prevention-item">
-                                    <h4>📝 Personal Error Log</h4>
-                                    <ul>
-                                        <li>Track your common mistakes</li>
-                                        <li>Create custom spell-check dictionaries</li>
-                                        <li>Develop personalized checklists</li>
-                                        <li>Note style guide preferences</li>
-                                    </ul>
-                                </div>
-                                <div class="prevention-item">
-                                    <h4>🛠️ Tool Configuration</h4>
-                                    <ul>
-                                        <li>Set up autocorrect for common errors</li>
-                                        <li>Configure style checkers</li>
-                                        <li>Use consistent templates</li>
-                                        <li>Maintain style sheets</li>
-                                    </ul>
-                                </div>
-                                <div class="prevention-item">
-                                    <h4>👥 Collaborative Review</h4>
-                                    <ul>
-                                        <li>Implement peer review processes</li>
-                                        <li>Share error patterns with team</li>
-                                        <li>Establish quality standards</li>
-                                        <li>Regular training updates</li>
-                                    </ul>
-                                </div>
+                            <div class="error-category">
+                                <h3>🔤 Mechanical Errors</h3>
+                                <ul>
+                                    <li><strong>Spelling:</strong> Especially Canadian vs. American spellings</li>
+                                    <li><strong>Punctuation:</strong> Comma splices, apostrophe misuse</li>
+                                    <li><strong>Capitalization:</strong> Inconsistent application of rules</li>
+                                    <li><strong>Number style:</strong> Mixed formats for dates, amounts</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-common-errors"></div>
                     
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('common-errors')">
@@ -727,159 +420,24 @@
                 <!-- Section 16.06: Technical Accuracy -->
                 <section class="content-section" id="technical-accuracy">
                     <div class="section-header">
-                        <h2>16.06 Technical Accuracy Verification</h2>
+                        <h2>16.06 Technical Accuracy</h2>
                     </div>
                     
                     <div class="lesson-content">
-                        <p>Technical accuracy verification ensures that specialized content, data, and factual information are correct and appropriately presented.</p>
+                        <p>Technical accuracy goes beyond language mechanics to ensure factual correctness and proper formatting of specialized content.</p>
                         
-                        <div class="technical-areas">
-                            <h3>Key Technical Verification Areas</h3>
-                            
-                            <div class="verification-section">
-                                <h4>📊 Data & Statistics</h4>
-                                <div class="verification-checklist">
-                                    <h5>Verification Process:</h5>
-                                    <ol>
-                                        <li>Cross-reference all statistical data with original sources</li>
-                                        <li>Verify mathematical calculations independently</li>
-                                        <li>Check data visualization accuracy (charts, graphs)</li>
-                                        <li>Confirm sample sizes and methodology descriptions</li>
-                                        <li>Validate confidence intervals and significance levels</li>
-                                        <li>Ensure consistent decimal precision throughout</li>
-                                    </ol>
-                                    
-                                    <div class="examples-box">
-                                        <h5>Common Data Errors:</h5>
-                                        <div class="example-item bad">
-                                            <p><strong>✗ Error:</strong> Chart shows 45% but text says 54%</p>
-                                        </div>
-                                        <div class="example-item bad">
-                                            <p><strong>✗ Error:</strong> Percentages total 103% instead of 100%</p>
-                                        </div>
-                                        <div class="example-item bad">
-                                            <p><strong>✗ Error:</strong> Sample size changes between summary and detailed results</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="verification-section">
-                                <h4>🔬 Technical Terminology</h4>
-                                <div class="verification-checklist">
-                                    <h5>Terminology Verification:</h5>
-                                    <ul>
-                                        <li>Confirm technical terms are used correctly</li>
-                                        <li>Verify acronym definitions and consistency</li>
-                                        <li>Check specialized vocabulary against authoritative sources</li>
-                                        <li>Ensure terms are appropriate for target audience</li>
-                                        <li>Validate scientific unit usage and symbols</li>
-                                        <li>Cross-check legal and regulatory terminology</li>
-                                    </ul>
-                                    
-                                    <div class="tip-box">
-                                        <h5>💡 Terminology Resources</h5>
-                                        <ul>
-                                            <li>Industry-specific dictionaries and glossaries</li>
-                                            <li>Professional association style guides</li>
-                                            <li>Government terminology databases</li>
-                                            <li>Subject matter expert consultation</li>
-                                            <li>Regulatory body publications</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="verification-section">
-                                <h4>⚖️ Legal & Regulatory Accuracy</h4>
-                                <div class="verification-checklist">
-                                    <h5>Legal Verification Process:</h5>
-                                    <ul>
-                                        <li>Verify current legal citations and references</li>
-                                        <li>Check regulatory compliance requirements</li>
-                                        <li>Confirm policy interpretation accuracy</li>
-                                        <li>Validate legal procedure descriptions</li>
-                                        <li>Ensure proper legal disclaimer language</li>
-                                        <li>Check for recent legal changes or updates</li>
-                                    </ul>
-                                    
-                                    <div class="warning-box">
-                                        <h5>⚠️ Legal Accuracy Risks</h5>
-                                        <p>Inaccurate legal information can have serious consequences:</p>
-                                        <ul>
-                                            <li>Misleading guidance to citizens or businesses</li>
-                                            <li>Compliance failures and potential penalties</li>
-                                            <li>Legal liability for incorrect advice</li>
-                                            <li>Damage to government credibility</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="verification-section">
-                                <h4>🌐 Web Content & Links</h4>
-                                <div class="verification-checklist">
-                                    <h5>Digital Content Verification:</h5>
-                                    <ul>
-                                        <li>Test all hyperlinks for functionality</li>
-                                        <li>Verify external website accuracy and reliability</li>
-                                        <li>Check for broken internal references</li>
-                                        <li>Confirm email addresses and contact information</li>
-                                        <li>Validate social media handles and profiles</li>
-                                        <li>Test document downloads and multimedia</li>
-                                    </ul>
-                                    
-                                    <div class="best-practices">
-                                        <h5>🎯 Link Management Best Practices</h5>
-                                        <ul>
-                                            <li>Use link checking tools regularly</li>
-                                            <li>Maintain backup URLs for important resources</li>
-                                            <li>Include access dates for time-sensitive content</li>
-                                            <li>Consider using archived versions of web pages</li>
-                                            <li>Provide alternative contact methods</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="accuracy-workflow">
-                            <h3>Technical Accuracy Workflow</h3>
-                            <div class="workflow-steps">
-                                <div class="workflow-step">
-                                    <div class="step-number">1</div>
-                                    <div class="step-content">
-                                        <h4>Initial Review</h4>
-                                        <p>Identify all technical content requiring verification</p>
-                                    </div>
-                                </div>
-                                <div class="workflow-step">
-                                    <div class="step-number">2</div>
-                                    <div class="step-content">
-                                        <h4>Source Verification</h4>
-                                        <p>Check all data, facts, and claims against original sources</p>
-                                    </div>
-                                </div>
-                                <div class="workflow-step">
-                                    <div class="step-number">3</div>
-                                    <div class="step-content">
-                                        <h4>Expert Review</h4>
-                                        <p>Have subject matter experts review technical accuracy</p>
-                                    </div>
-                                </div>
-                                <div class="workflow-step">
-                                    <div class="step-number">4</div>
-                                    <div class="step-content">
-                                        <h4>Final Verification</h4>
-                                        <p>Double-check corrections and validate all changes</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="accuracy-checklist">
+                            <h3>Technical Verification Points</h3>
+                            <ul>
+                                <li><strong>Factual accuracy:</strong> Verify statistics, dates, and claims</li>
+                                <li><strong>Citations:</strong> Check completeness and formatting</li>
+                                <li><strong>Cross-references:</strong> Ensure internal links are accurate</li>
+                                <li><strong>Technical terminology:</strong> Verify specialized vocabulary</li>
+                                <li><strong>Units and measurements:</strong> Check for consistency</li>
+                                <li><strong>URLs and contact information:</strong> Test all links and verify details</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-technical-accuracy"></div>
                     
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('technical-accuracy')">
@@ -891,315 +449,132 @@
                 <!-- Section 16.07: Master Checklist -->
                 <section class="content-section" id="master-checklist">
                     <div class="section-header">
-                        <h2>16.07 Comprehensive Master Checklist</h2>
+                        <h2>16.07 Master Revision Checklist</h2>
                     </div>
                     
                     <div class="lesson-content">
-                        <p>This comprehensive checklist ensures thorough review of all document aspects. Use systematically for consistent, high-quality results.</p>
+                        <p>Use this comprehensive checklist to ensure thorough revision of your documents. Track your progress as you work through each category.</p>
                         
-                        <div class="checklist-master">
-                            <h3>🎯 Complete Document Review Checklist</h3>
-                            <p class="checklist-intro">Review each section systematically. Check items as completed to track your progress.</p>
+                        <div class="checklist-container">
+                            <div class="checklist-header">
+                                <h3>Interactive Revision Checklist</h3>
+                                <div class="checklist-progress">
+                                    <div class="checklist-progress-bar" id="checklist-progress-bar"></div>
+                                </div>
+                                <p class="checklist-status">
+                                    <span id="checklist-completed">0</span> of <span id="checklist-total">--</span> items completed
+                                </p>
+                            </div>
                             
                             <div class="checklist-section">
-                                <h4>📋 Content & Structure Review</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-purpose">
-                                        <label for="content-purpose">Document clearly serves its intended purpose</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-audience">
-                                        <label for="content-audience">Content appropriate for target audience</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-complete">
-                                        <label for="content-complete">All required information included</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-organized">
-                                        <label for="content-organized">Logical organization and flow</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-intro">
-                                        <label for="content-intro">Clear introduction stating purpose</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-conclusion">
-                                        <label for="content-conclusion">Appropriate conclusion or summary</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-transitions">
-                                        <label for="content-transitions">Smooth transitions between sections</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="content-balance">
-                                        <label for="content-balance">Appropriate balance of topics</label>
-                                    </div>
+                                <h4>📋 Content and Structure</h4>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="content-complete">
+                                    <label for="content-complete">All required content included</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="logical-flow">
+                                    <label for="logical-flow">Logical flow and organization</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="clear-purpose">
+                                    <label for="clear-purpose">Document purpose clearly communicated</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="audience-appropriate">
+                                    <label for="audience-appropriate">Content appropriate for target audience</label>
                                 </div>
                             </div>
                             
                             <div class="checklist-section">
-                                <h4>✏️ Language & Style Review</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-tone">
-                                        <label for="style-tone">Consistent, appropriate tone throughout</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-clarity">
-                                        <label for="style-clarity">Clear, concise sentence structure</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-voice">
-                                        <label for="style-voice">Consistent voice (active/passive)</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-variety">
-                                        <label for="style-variety">Appropriate sentence variety</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-jargon">
-                                        <label for="style-jargon">Jargon explained or eliminated</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-inclusive">
-                                        <label for="style-inclusive">Inclusive, bias-free language</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="style-redundancy">
-                                        <label for="style-redundancy">Redundancy and wordiness eliminated</label>
-                                    </div>
+                                <h4>✍️ Language and Style</h4>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="plain-language">
+                                    <label for="plain-language">Plain language principles followed</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="uniform-vocabulary">
+                                    <label for="uniform-vocabulary">Uniform vocabulary throughout</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="bias-free">
+                                    <label for="bias-free">Bias-free and inclusive language</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="gallicisms-usage">
+                                    <label for="gallicisms-usage">French-English usage issues addressed (see <a href="french-words-appendix.html">Appendix A</a>)</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="tone-consistent">
+                                    <label for="tone-consistent">Tone consistent and appropriate</label>
                                 </div>
                             </div>
                             
                             <div class="checklist-section">
-                                <h4>📝 Grammar & Mechanics</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-agreement">
-                                        <label for="grammar-agreement">Subject-verb agreement correct</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-pronouns">
-                                        <label for="grammar-pronouns">Pronoun-antecedent agreement correct</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-modifiers">
-                                        <label for="grammar-modifiers">No dangling or misplaced modifiers</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-parallel">
-                                        <label for="grammar-parallel">Parallel structure maintained</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-fragments">
-                                        <label for="grammar-fragments">No sentence fragments or run-ons</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="grammar-tense">
-                                        <label for="grammar-tense">Consistent verb tense</label>
-                                    </div>
+                                <h4>🔤 Grammar and Mechanics</h4>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="grammar-correct">
+                                    <label for="grammar-correct">Grammar and syntax correct</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="spelling-correct">
+                                    <label for="spelling-correct">Spelling verified (Canadian spellings)</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="punctuation-correct">
+                                    <label for="punctuation-correct">Punctuation accurate and consistent</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="capitalization-consistent">
+                                    <label for="capitalization-consistent">Capitalization consistent</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="french-formatting">
+                                    <label for="french-formatting">French words properly formatted (italics, accents)</label>
                                 </div>
                             </div>
                             
                             <div class="checklist-section">
-                                <h4>🔤 Spelling & Punctuation</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="spell-check">
-                                        <label for="spell-check">All spelling errors corrected</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="spell-canadian">
-                                        <label for="spell-canadian">Canadian spelling conventions used</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="punct-commas">
-                                        <label for="punct-commas">Comma usage correct</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="punct-apostrophes">
-                                        <label for="punct-apostrophes">Apostrophes used correctly</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="punct-quotes">
-                                        <label for="punct-quotes">Quotation marks properly placed</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="punct-colons">
-                                        <label for="punct-colons">Colons and semicolons correct</label>
-                                    </div>
+                                <h4>📊 Technical Elements</h4>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="numbers-consistent">
+                                    <label for="numbers-consistent">Number formatting consistent</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="dates-correct">
+                                    <label for="dates-correct">Dates accurate and properly formatted</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="citations-complete">
+                                    <label for="citations-complete">Citations complete and properly formatted</label>
+                                </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="cross-references">
+                                    <label for="cross-references">Cross-references and page numbers accurate</label>
                                 </div>
                             </div>
                             
                             <div class="checklist-section">
-                                <h4>🔢 Numbers & Data</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-format">
-                                        <label for="numbers-format">Number formatting consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-accuracy">
-                                        <label for="numbers-accuracy">All calculations verified</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-dates">
-                                        <label for="numbers-dates">Date formatting consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-currency">
-                                        <label for="numbers-currency">Currency amounts formatted correctly</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-units">
-                                        <label for="numbers-units">Measurement units correct and consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="numbers-stats">
-                                        <label for="numbers-stats">Statistical data verified against sources</label>
-                                    </div>
+                                <h4>🎨 Format and Layout</h4>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="headings-consistent">
+                                    <label for="headings-consistent">Heading styles consistent</label>
                                 </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>🎨 Formatting & Layout</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-headings">
-                                        <label for="format-headings">Heading styles consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-fonts">
-                                        <label for="format-fonts">Font usage consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-spacing">
-                                        <label for="format-spacing">Line and paragraph spacing consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-margins">
-                                        <label for="format-margins">Margins and alignment correct</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-pages">
-                                        <label for="format-pages">Page numbers accurate and consistent</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-headers">
-                                        <label for="format-headers">Headers and footers correct</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="format-bullets">
-                                        <label for="format-bullets">Bullet points and numbering consistent</label>
-                                    </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="fonts-consistent">
+                                    <label for="fonts-consistent">Font usage consistent</label>
                                 </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>🔗 References & Citations</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-all-sources">
-                                        <label for="ref-all-sources">All sources properly cited</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-format-consistent">
-                                        <label for="ref-format-consistent">Citation format consistent throughout</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-bibliography">
-                                        <label for="ref-bibliography">Bibliography complete and accurate</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-links-work">
-                                        <label for="ref-links-work">All web links functional</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-cross-refs">
-                                        <label for="ref-cross-refs">Cross-references accurate</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="ref-footnotes">
-                                        <label for="ref-footnotes">Footnotes numbered correctly</label>
-                                    </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="spacing-consistent">
+                                    <label for="spacing-consistent">Spacing and alignment consistent</label>
                                 </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>📊 Tables & Graphics</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-relevant">
-                                        <label for="graphics-relevant">All graphics support the text</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-clear">
-                                        <label for="graphics-clear">Images and charts are clear and readable</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-captions">
-                                        <label for="graphics-captions">All graphics have appropriate captions</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-referenced">
-                                        <label for="graphics-referenced">All graphics referenced in text</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-placement">
-                                        <label for="graphics-placement">Graphics placed appropriately</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="graphics-accessible">
-                                        <label for="graphics-accessible">Graphics accessible (alt text, contrast)</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-section">
-                                <h4>📄 Document Elements</h4>
-                                <div class="checklist-items">
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-title">
-                                        <label for="elements-title">Title page complete and accurate</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-toc">
-                                        <label for="elements-toc">Table of contents matches document structure</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-summary">
-                                        <label for="elements-summary">Executive summary reflects content</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-appendices">
-                                        <label for="elements-appendices">Appendices properly labeled and referenced</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-index">
-                                        <label for="elements-index">Index entries accurate (if applicable)</label>
-                                    </div>
-                                    <div class="checklist-item">
-                                        <input type="checkbox" id="elements-contact">
-                                        <label for="elements-contact">Contact information current and accurate</label>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="checklist-progress">
-                                <div class="progress-summary">
-                                    <p><strong>Checklist Progress:</strong> <span id="checklist-completed">0</span> of <span id="checklist-total">0</span> items completed</p>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" id="checklist-progress-bar"></div>
-                                    </div>
+                                <div class="checklist-item">
+                                    <input type="checkbox" id="page-elements">
+                                    <label for="page-elements">Headers, footers, and page numbers correct</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-master-checklist"></div>
                     
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('master-checklist')">
@@ -1211,188 +586,50 @@
                 <!-- Section 16.08: Final Review -->
                 <section class="content-section" id="final-review">
                     <div class="section-header">
-                        <h2>16.08 Final Review Process</h2>
+                        <h2>16.08 Final Review</h2>
                     </div>
                     
                     <div class="lesson-content">
-                        <p>The final review ensures your document meets all quality standards before distribution. This systematic approach catches any remaining issues and confirms readiness for publication.</p>
+                        <p>The final review ensures your document meets all quality standards before publication or submission.</p>
                         
-                        <div class="final-review-workflow">
-                            <h3>🎯 Pre-Publication Review Sequence</h3>
-                            
-                            <div class="review-phases">
-                                <div class="review-phase">
-                                    <div class="phase-header">
-                                        <span class="phase-number">1</span>
-                                        <h4>Final Content Review</h4>
-                                    </div>
-                                    <div class="phase-content">
-                                        <ul>
-                                            <li>Read document from beginning to end</li>
-                                            <li>Verify all required elements are present</li>
-                                            <li>Check logical flow and coherence</li>
-                                            <li>Confirm accuracy of executive summary</li>
-                                            <li>Validate conclusions match evidence</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="review-phase">
-                                    <div class="phase-header">
-                                        <span class="phase-number">2</span>
-                                        <h4>Technical Verification</h4>
-                                    </div>
-                                    <div class="phase-content">
-                                        <ul>
-                                            <li>Double-check all numerical data</li>
-                                            <li>Verify technical terminology accuracy</li>
-                                            <li>Confirm legal and regulatory compliance</li>
-                                            <li>Test all hyperlinks and digital elements</li>
-                                            <li>Validate citations and references</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="review-phase">
-                                    <div class="phase-header">
-                                        <span class="phase-number">3</span>
-                                        <h4>Format & Layout Check</h4>
-                                    </div>
-                                    <div class="phase-content">
-                                        <ul>
-                                            <li>Review overall document appearance</li>
-                                            <li>Check print layout and page breaks</li>
-                                            <li>Verify consistent formatting throughout</li>
-                                            <li>Test document accessibility features</li>
-                                            <li>Confirm brand/style guide compliance</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                
-                                <div class="review-phase">
-                                    <div class="phase-header">
-                                        <span class="phase-number">4</span>
-                                        <h4>Distribution Readiness</h4>
-                                    </div>
-                                    <div class="phase-content">
-                                        <ul>
-                                            <li>Create final PDF version</li>
-                                            <li>Test document in different formats</li>
-                                            <li>Verify accessibility compliance</li>
-                                            <li>Prepare distribution package</li>
-                                            <li>Document review completion</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="quality-assurance">
-                            <h3>Quality Assurance Standards</h3>
-                            
-                            <div class="qa-standards">
-                                <div class="qa-standard">
-                                    <h4>📋 Completeness Standard</h4>
-                                    <ul>
-                                        <li>All required sections present and complete</li>
-                                        <li>Supporting documentation included</li>
-                                        <li>Contact information current and accessible</li>
-                                        <li>Legal disclaimers and attributions included</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="qa-standard">
-                                    <h4>🎯 Accuracy Standard</h4>
-                                    <ul>
-                                        <li>All factual information verified</li>
-                                        <li>Calculations and data confirmed</li>
-                                        <li>Citations properly attributed</li>
-                                        <li>Technical content expert-reviewed</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="qa-standard">
-                                    <h4>🎨 Presentation Standard</h4>
-                                    <ul>
-                                        <li>Professional appearance maintained</li>
-                                        <li>Consistent formatting throughout</li>
-                                        <li>Clear, readable typography</li>
-                                        <li>Accessible design principles followed</li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="qa-standard">
-                                    <h4>📢 Communication Standard</h4>
-                                    <ul>
-                                        <li>Clear, audience-appropriate language</li>
-                                        <li>Consistent tone and voice</li>
-                                        <li>Logical organization and flow</li>
-                                        <li>Actionable information provided</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="sign-off-process">
-                            <h3>Document Approval & Sign-off</h3>
-                            
-                            <div class="approval-checklist">
-                                <div class="checklist-section">
-                                    <h4>✅ Pre-Approval Verification</h4>
-                                    <div class="checklist-items">
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-complete">
-                                            <label for="approval-complete">Document review fully completed</label>
-                                        </div>
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-corrections">
-                                            <label for="approval-corrections">All identified issues corrected</label>
-                                        </div>
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-standards">
-                                            <label for="approval-standards">Quality standards met</label>
-                                        </div>
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-stakeholders">
-                                            <label for="approval-stakeholders">Stakeholder feedback incorporated</label>
-                                        </div>
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-legal">
-                                            <label for="approval-legal">Legal/regulatory review completed (if required)</label>
-                                        </div>
-                                        <div class="checklist-item">
-                                            <input type="checkbox" id="approval-final">
-                                            <label for="approval-final">Final version prepared for distribution</label>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="final-review-steps">
+                            <div class="review-step">
+                                <h4>📖 Complete Document Review</h4>
+                                <p>Read the entire document once more, focusing on overall flow and reader experience.</p>
                             </div>
                             
-                            <div class="sign-off-documentation">
-                                <h4>📝 Review Documentation</h4>
-                                <p>Maintain records of the review process:</p>
+                            <div class="review-step">
+                                <h4>🔍 Spot Check Critical Elements</h4>
                                 <ul>
-                                    <li>Review checklist completion dates</li>
-                                    <li>List of reviewers and their roles</li>
-                                    <li>Summary of changes made</li>
-                                    <li>Final approval signatures/electronic confirmation</li>
-                                    <li>Version control information</li>
+                                    <li>Title page accuracy</li>
+                                    <li>Table of contents alignment</li>
+                                    <li>Executive summary consistency</li>
+                                    <li>Key statistics and data</li>
+                                    <li>Contact information</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="review-step">
+                                <h4>✅ Final Quality Assurance</h4>
+                                <ul>
+                                    <li>Document serves its intended purpose</li>
+                                    <li>All stakeholder requirements met</li>
+                                    <li>Accessibility standards followed</li>
+                                    <li>Legal and policy compliance</li>
+                                    <li>Ready for distribution</li>
                                 </ul>
                             </div>
                         </div>
                         
                         <div class="success-box">
-                            <h3>🎉 Congratulations!</h3>
-                            <p>You have completed the comprehensive revision and proofreading process. Your document is now ready for professional distribution with confidence in its quality and accuracy.</p>
+                            <h4>🎉 Revision Mastery Achieved!</h4>
+                            <p>You now possess the skills and systematic approaches needed for professional-level editing and proofreading. Your documents will be accurate, clear, and impactful.</p>
                         </div>
                     </div>
                     
-                    <!-- Quiz Panel -->
-                    <div class="quiz-panel" id="quiz-final-review"></div>
-                    
                     <div class="section-footer">
                         <button class="btn btn-primary" onclick="completeSection('final-review')">
-                            Mark Complete & Continue
+                            Complete Chapter 16!
                         </button>
                     </div>
                 </section>
@@ -1403,8 +640,8 @@
                 <a href="../chapters/ch15.html" class="btn btn-outline nav-prev">
                     ← Previous: Chapter 15
                 </a>
-                <a href="../index.html" class="btn btn-outline nav-next">
-                    Back to Home →
+                <a href="../chapters/french-words-appendix.html" class="btn btn-outline nav-next">
+                    Next: Appendix A →
                 </a>
             </div>
         </div>
@@ -1455,34 +692,15 @@
                 const completedItems = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
                 const percentage = totalItems > 0 ? (completedItems / totalItems) * 100 : 0;
                 
-                if (completedSpan) completedSpan.textContent = completedItems;
                 if (progressBar) progressBar.style.width = percentage + '%';
-                
-                // Save progress to localStorage
-                const checklistState = {};
-                checkboxes.forEach(cb => {
-                    checklistState[cb.id] = cb.checked;
-                });
-                localStorage.setItem('ch16-checklist-state', JSON.stringify(checklistState));
+                if (completedSpan) completedSpan.textContent = completedItems;
             }
             
-            // Load saved progress
-            const savedState = localStorage.getItem('ch16-checklist-state');
-            if (savedState) {
-                const checklistState = JSON.parse(savedState);
-                checkboxes.forEach(cb => {
-                    if (checklistState[cb.id]) {
-                        cb.checked = true;
-                    }
-                });
-            }
-            
-            // Add event listeners
-            checkboxes.forEach(cb => {
-                cb.addEventListener('change', updateProgress);
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateProgress);
             });
             
-            // Initial progress update
+            // Initialize progress
             updateProgress();
         }
     </script>
