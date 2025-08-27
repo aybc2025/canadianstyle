@@ -387,11 +387,14 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
@@ -406,6 +409,11 @@
             
             initializeChapter('ch02', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
