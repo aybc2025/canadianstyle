@@ -239,237 +239,115 @@
     </footer>
 
     <!-- Include JavaScript -->
-    <script type="module">
-        import { getProgress, setProgress } from '../shared/js/progress.js';
-        import { QuizEngine } from '../shared/js/quiz-engine.js';
-        import '../shared/js/components.js';
+    <!-- JavaScript Section at end of Chapter 2 HTML -->
+<script type="module">
+    import { getProgress, setProgress } from '../shared/js/progress.js';
+    import { QuizEngine } from '../shared/js/quiz-engine.js';
+    import '../shared/js/components.js';
+    
+    const CHAPTER_ID = 'ch02';
+    const sections = [
+        { id: 'introduction', title: '2.01 Introduction' },
+        { id: 'compound-words', title: '2.02 Compound Words' },
+        { id: 'prefixes-suffixes', title: '2.03 Prefixes & Suffixes' },
+        { id: 'word-division', title: '2.04 Word Division' },
+        { id: 'french-compounds', title: '2.05 French Compounds' },
+        { id: 'special-cases', title: '2.06 Special Cases' },
+        { id: 'technical-terms', title: '2.07 Technical Terms' }
+    ];
+    
+    // ✅ הוספת פונקציית showSection החסרה
+    function showSection(sectionId) {
+        // הסתרת כל החלקים
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.classList.remove('active');
+            section.style.display = 'none';
+        });
         
-        const CHAPTER_ID = 'ch02';
-        const sections = [
-            { id: 'introduction', title: '2.01 Introduction' },
-            { id: 'compound-words', title: '2.02 Compound Words' },
-            { id: 'prefixes-suffixes', title: '2.03 Prefixes & Suffixes' },
-            { id: 'word-division', title: '2.04 Word Division' },
-            { id: 'special-cases', title: '2.05 Special Cases' },
-            { id: 'technical-terms', title: '2.06 Technical Terms' }
-        ];
+        // הצגת החלק הנוכחי
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+            targetSection.style.display = 'block';
+        }
+    }
 
-        // Section mapping for ch02
-        const SECTION_MAPPING = {
-            'compound-words': 'compound-adjectives',
-            'word-division': 'numbers-fractions',
-            'special-cases': 'compound-adjectives'
-        };
+    // ✅ הוספת פונקציית updateActiveTab החסרה
+    function updateActiveTab(activeLink) {
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
+    }
 
-        // ✅ הוספת פונקציית showSection החסרה
-        function showSection(sectionId) {
-            // הסתרת כל החלקים
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.classList.remove('active');
-                section.style.display = 'none';
+    // ✅ הוספת פונקציית initSectionNavigation החסרה
+    function initSectionNavigation() {
+        const tabLinks = document.querySelectorAll('.tab-link');
+        
+        tabLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const sectionId = this.getAttribute('data-section');
+                showSection(sectionId);
+                updateActiveTab(this);
             });
-            
-            // הצגת החלק הנוכחי
-            const targetSection = document.getElementById(sectionId);
-            if (targetSection) {
-                targetSection.classList.add('active');
-                targetSection.style.display = 'block';
-            }
-        }
-
-        // ✅ הוספת פונקציית updateActiveTab החסרה
-        function updateActiveTab(activeLink) {
-            document.querySelectorAll('.tab-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            if (activeLink) {
-                activeLink.classList.add('active');
-            }
-        }
-
-        // ✅ הוספת פונקציית initSectionNavigation החסרה
-        function initSectionNavigation() {
-            const tabLinks = document.querySelectorAll('.tab-link');
-            
-            tabLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    showSection(sectionId);
-                    updateActiveTab(this);
-                });
-            });
-            
-            // הצגת החלק הראשון כברירת מחדל
-            showSection('introduction');
-        }
+        });
         
-        // ✅ הוספת פונקציית updateProgressBar החסרה
-        function updateProgressBar() {
-            const progress = getProgress(CHAPTER_ID);
-            const chapterProgress = progress || {};
-            const completed = Object.values(chapterProgress).filter(Boolean).length;
-            const percentage = Math.round((completed / sections.length) * 100);
-            
-            const progressBar = document.getElementById('chapterProgress');
-            if (progressBar) {
-                progressBar.style.width = percentage + '%';
-            }
+        // הצגת החלק הראשון כברירת מחדל
+        showSection('introduction');
+    }
+    
+    // ✅ הוספת פונקציית updateProgressBar החסרה
+    function updateProgressBar() {
+        const progress = getProgress(CHAPTER_ID);
+        const chapterProgress = progress || {};
+        const completed = Object.values(chapterProgress).filter(Boolean).length;
+        const total = sections.length;
+        const percentage = (completed / total) * 100;
+        
+        const progressBar = document.getElementById('chapterProgress');
+        if (progressBar) {
+            progressBar.style.width = `${percentage}%`;
         }
-        
-        // ✅ תיקון פונקציית completeSection
-        window.completeSection = function(sectionId) {
-            setProgress(CHAPTER_ID, sectionId, true);
-            updateProgressBar();
-            
-            // Navigate to next section
-            const currentIndex = sections.findIndex(s => s.id === sectionId);
-            if (currentIndex !== -1 && currentIndex < sections.length - 1) {
-                const nextSection = sections[currentIndex + 1];
-                showSection(nextSection.id);
-                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
-            } else {
-                // Chapter complete
-                showCompletionModal();
-            }
-        };
-        
-        // ✅ הוספת פונקציית showCompletionModal החסרה
-        function showCompletionModal() {
-            const modal = document.createElement('div');
-            modal.className = 'completion-modal';
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <h3>🎉 Chapter 2 Complete!</h3>
-                    <p>You've mastered hyphenation! Your writing will now be more consistent and clear.</p>
-                    <div class="modal-buttons">
-                        <button onclick="window.location.href='../index.html'" class="btn btn-primary">
-                            Back to Dashboard
-                        </button>
-                        <button onclick="window.location.href='ch03.html'" class="btn btn-secondary">
-                            Next Chapter: Spelling
-                        </button>
-                    </div>
-                </div>
-            `;
-            
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.remove();
+    }
+    
+    // ✅ הוספת פונקציית loadSectionQuizzes החסרה
+    async function loadSectionQuizzes() {
+        try {
+            const quizData = await import(`../shared/js/quiz-data/${CHAPTER_ID}.js`);
+            sections.forEach(section => {
+                const sectionQuizData = quizData.default[section.id];
+                if (sectionQuizData && sectionQuizData.questions) {
+                    const quizContainer = document.getElementById(`quiz-${section.id}`);
+                    if (quizContainer) {
+                        const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
+                        quizEngine.render(quizContainer);
+                    }
                 }
             });
-            
-            document.body.appendChild(modal);
+        } catch (error) {
+            console.error('Error loading quiz data:', error);
         }
-        
-        // Enhanced quiz loading with mapping
-        async function loadSectionQuizzes() {
-            try {
-                console.log(`🔍 Loading quizzes for ${CHAPTER_ID}...`);
-                
-                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
-                if (!response.ok) {
-                    console.warn(`📄 Quiz data not available for ${CHAPTER_ID} (${response.status})`);
-                    return;
-                }
-                
-                const quizData = await response.json();
-                const availableQuizSections = Object.keys(quizData.sections || {});
-                console.log(`📚 Available quiz sections: [${availableQuizSections.join(', ')}]`);
-                
-                let successCount = 0;
-                
-                // Initialize quizzes for sections that have them
-                sections.forEach(section => {
-                    const htmlSectionId = section.id;
-                    
-                    // Try different strategies to find matching quiz
-                    let quizSectionId = null;
-                    let matchType = '';
-                    
-                    // Strategy 1: Direct match
-                    if (quizData.sections?.[htmlSectionId]) {
-                        quizSectionId = htmlSectionId;
-                        matchType = 'direct';
-                    }
-                    // Strategy 2: Use mapping
-                    else if (SECTION_MAPPING[htmlSectionId] && quizData.sections?.[SECTION_MAPPING[htmlSectionId]]) {
-                        quizSectionId = SECTION_MAPPING[htmlSectionId];
-                        matchType = 'mapped';
-                    }
-                    // Strategy 3: Fuzzy match by keywords
-                    else {
-                        const htmlWords = htmlSectionId.split('-');
-                        const fuzzyMatch = availableQuizSections.find(quizId => {
-                            const quizWords = quizId.split('-');
-                            return htmlWords.some(word => 
-                                quizWords.includes(word) || 
-                                quizId.includes(word) ||
-                                (word.length > 3 && quizId.includes(word.substring(0, 4)))
-                            );
-                        });
-                        
-                        if (fuzzyMatch) {
-                            quizSectionId = fuzzyMatch;
-                            matchType = 'fuzzy';
-                        }
-                    }
-                    
-                    // Create quiz if we found a match
-                    if (quizSectionId && quizData.sections[quizSectionId]) {
-                        const sectionQuizData = quizData.sections[quizSectionId];
-                        
-                        if (sectionQuizData.questions && sectionQuizData.questions.length > 0) {
-                            const quizContainer = document.getElementById(`quiz-${htmlSectionId}`);
-                            
-                            if (quizContainer) {
-                                console.log(`✅ Creating quiz for "${htmlSectionId}" using "${quizSectionId}" (${matchType}) - ${sectionQuizData.questions.length} questions`);
-                                
-                                const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, htmlSectionId);
-                                quizEngine.render(quizContainer);
-                                successCount++;
-                            } else {
-                                console.warn(`📦 Quiz container not found: quiz-${htmlSectionId}`);
-                            }
-                        } else {
-                            console.warn(`❓ No questions found in section ${quizSectionId}`);
-                        }
-                    } else {
-                        console.log(`❌ No quiz match found for "${htmlSectionId}"`);
-                        
-                        // Show available options for debugging
-                        if (availableQuizSections.length > 0) {
-                            console.log(`💡 Available: [${availableQuizSections.join(', ')}]`);
-                        }
-                    }
-                });
-                
-                console.log(`🎯 Successfully loaded ${successCount}/${sections.length} quizzes for ${CHAPTER_ID}`);
-                
-            } catch (error) {
-                console.error(`💥 Error loading quiz data for ${CHAPTER_ID}:`, error);
-            }
+    }
+    
+    // ✅ הרצת כל הפונקציות לאחר טעינת הדף
+    document.addEventListener('DOMContentLoaded', function() {
+        initSectionNavigation();
+        updateProgressBar();
+        loadSectionQuizzes();
+    });
+    
+    // Handle window beforeunload for quiz warnings
+    window.addEventListener('beforeunload', (event) => {
+        const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+        if (activeQuiz) {
+            event.preventDefault();
+            event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
+            return event.returnValue;
         }
-        
-        // ✅ הרצת כל הפונקציות לאחר טעינת הדף
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log(`🚀 Initializing ${CHAPTER_ID}...`);
-            
-            initSectionNavigation();
-            updateProgressBar();
-            loadSectionQuizzes();
-            
-            console.log(`✅ ${CHAPTER_ID} initialized successfully`);
-        });
-
-        // Handle window beforeunload for quiz warnings
-        window.addEventListener('beforeunload', (event) => {
-            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-            if (activeQuiz) {
-                event.preventDefault();
-                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
