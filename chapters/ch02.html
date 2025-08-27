@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 2: Hyphenation - The Canadian Style</title>
-    <link rel="stylesheet" href="../shared/css/styles.css">
-    <link rel="stylesheet" href="../shared/css/chapter.css">
+    <link rel="stylesheet" href="../shared/css/main.css">
+    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
 </head>
 <body>
     <header class="site-header">
@@ -241,9 +241,11 @@
     </footer>
 
     <!-- Include JavaScript -->
-    <script src="../shared/js/quiz-engine.js"></script>
-
-    <script>
+    <script type="module">
+        import { getProgress, setProgress } from '../shared/js/progress.js';
+        import { QuizEngine } from '../shared/js/quiz-engine.js';
+        import '../shared/js/components.js';
+        
         const CHAPTER_ID = 'ch02';
         const sections = [
             { id: 'introduction', title: '2.01 Introduction' },
@@ -261,63 +263,53 @@
             'special-cases': 'compound-adjectives'
         };
 
-        // ✅ Progress management functions
-        function getChapterProgress(chapterId) {
-            try {
-                const progress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
-                return progress[chapterId] || {};
-            } catch (error) {
-                console.warn('Error loading progress:', error);
-                return {};
+        // ✅ הוספת פונקציית showSection החסרה
+        function showSection(sectionId) {
+            // הסתרת כל החלקים
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+                section.style.display = 'none';
+            });
+            
+            // הצגת החלק הנוכחי
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                targetSection.style.display = 'block';
             }
         }
 
-        function setProgress(chapterId, sectionId, completed) {
-            try {
-                const progress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
-                if (!progress[chapterId]) {
-                    progress[chapterId] = {};
-                }
-                progress[chapterId][sectionId] = completed;
-                localStorage.setItem('chapterProgress', JSON.stringify(progress));
-                console.log(`✅ Progress saved: ${chapterId}/${sectionId} = ${completed}`);
-            } catch (error) {
-                console.warn('Error saving progress:', error);
+        // ✅ הוספת פונקציית updateActiveTab החסרה
+        function updateActiveTab(activeLink) {
+            document.querySelectorAll('.tab-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            if (activeLink) {
+                activeLink.classList.add('active');
             }
         }
-        
-        // Initialize section navigation
+
+        // ✅ הוספת פונקציית initSectionNavigation החסרה
         function initSectionNavigation() {
             const tabLinks = document.querySelectorAll('.tab-link');
-            const contentSections = document.querySelectorAll('.content-section');
             
             tabLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
-                    // Remove active from all
-                    tabLinks.forEach(l => l.classList.remove('active'));
-                    contentSections.forEach(s => s.classList.remove('active'));
-                    
-                    // Add active to clicked tab
-                    this.classList.add('active');
-                    
-                    // Show corresponding section
                     const sectionId = this.getAttribute('data-section');
-                    const section = document.getElementById(sectionId);
-                    if (section) {
-                        section.classList.add('active');
-                    }
-                    
-                    // Update URL hash
-                    window.location.hash = sectionId;
+                    showSection(sectionId);
+                    updateActiveTab(this);
                 });
             });
+            
+            // הצגת החלק הראשון כברירת מחדל
+            showSection('introduction');
         }
         
-        // Update progress bar
+        // ✅ הוספת פונקציית updateProgressBar החסרה
         function updateProgressBar() {
-            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const progress = getProgress(CHAPTER_ID);
+            const chapterProgress = progress || {};
             const completed = Object.values(chapterProgress).filter(Boolean).length;
             const percentage = Math.round((completed / sections.length) * 100);
             
@@ -327,7 +319,7 @@
             }
         }
         
-        // Complete section function
+        // ✅ תיקון פונקציית completeSection
         window.completeSection = function(sectionId) {
             setProgress(CHAPTER_ID, sectionId, true);
             updateProgressBar();
@@ -344,23 +336,7 @@
             }
         };
         
-        function showSection(sectionId) {
-            const contentSections = document.querySelectorAll('.content-section');
-            contentSections.forEach(s => s.classList.remove('active'));
-            
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.classList.add('active');
-                window.location.hash = sectionId;
-            }
-        }
-        
-        function updateActiveTab(tab) {
-            const tabLinks = document.querySelectorAll('.tab-link');
-            tabLinks.forEach(l => l.classList.remove('active'));
-            if (tab) tab.classList.add('active');
-        }
-        
+        // ✅ הוספת פונקציית showCompletionModal החסרה
         function showCompletionModal() {
             const modal = document.createElement('div');
             modal.className = 'completion-modal';
@@ -477,7 +453,7 @@
             }
         }
         
-        // Initialize page - STANDARDIZED
+        // ✅ הרצת כל הפונקציות לאחר טעינת הדף
         document.addEventListener('DOMContentLoaded', function() {
             console.log(`🚀 Initializing ${CHAPTER_ID}...`);
             
