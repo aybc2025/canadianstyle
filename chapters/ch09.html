@@ -388,26 +388,32 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
                 { id: 'introduction', title: '9.01 Introduction' },
-                { id: 'footnotes', title: '9.02 Footnotes' },
-                { id: 'bibliography', title: '9.03 Bibliography' },
+                { id: 'footnotes-endnotes', title: '9.02 Footnotes & Endnotes' },
+                { id: 'bibliographies', title: '9.03 Bibliographies' },
                 { id: 'citations', title: '9.04 Citations' },
-                { id: 'indexes', title: '9.05 Indexes' },
-                { id: 'electronic-sources', title: '9.06 Electronic Sources' },
-                { id: 'legal-references', title: '9.07 Legal References' },
-                { id: 'advanced-indexing', title: '9.08 Advanced Indexing' }
+                { id: 'legal-references', title: '9.05 Legal References' },
+                { id: 'electronic-sources', title: '9.06 Electronic Sources' }
             ];
             
             initializeChapter('ch09', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
