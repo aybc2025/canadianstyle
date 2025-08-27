@@ -446,26 +446,34 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+   <!-- JavaScript -->
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
                 { id: 'introduction', title: '16.01 Introduction' },
-                { id: 'editing-levels', title: '16.02 Editing Levels' },
-                { id: 'revision-strategies', title: '16.03 Revision Strategies' },
-                { id: 'proofreading-techniques', title: '16.04 Proofreading Techniques' },
-                { id: 'common-errors', title: '16.05 Common Errors' },
-                { id: 'technical-accuracy', title: '16.06 Technical Accuracy' },
-                { id: 'master-checklist', title: '16.07 Master Checklist' },
-                { id: 'final-review', title: '16.08 Final Review' }
+                { id: 'revision-process', title: '16.02 Revision Process' },
+                { id: 'proofreading-techniques', title: '16.03 Proofreading Techniques' },
+                { id: 'common-errors', title: '16.04 Common Errors' },
+                { id: 'checklist', title: '16.05 Revision Checklist' },
+                { id: 'final-review', title: '16.06 Final Review' }
             ];
             
             initializeChapter('ch16', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
+</body>
+</html>
 </body>
 </html>
