@@ -397,25 +397,33 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
                 { id: 'basic-principles', title: '6.01 Basic Principles' },
                 { id: 'emphasis', title: '6.02 Emphasis' },
-                { id: 'foreign-words', title: '6.03 Foreign Words & Phrases' },
-                { id: 'titles-publications', title: '6.04 Titles & Publications' },
-                { id: 'technical-terms', title: '6.05 Technical & Scientific Terms' },
+                { id: 'foreign-words', title: '6.03 Foreign Words' },
+                { id: 'titles-publications', title: '6.04 Titles of Publications' },
+                { id: 'technical-terms', title: '6.05 Technical Terms' },
                 { id: 'legal-references', title: '6.06 Legal References' },
                 { id: 'special-uses', title: '6.07 Special Uses' }
             ];
             
             initializeChapter('ch06', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
