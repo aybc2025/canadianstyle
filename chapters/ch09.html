@@ -4,51 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapter 9: Reference Matter - The Canadian Style</title>
-    <link rel="stylesheet" href="../shared/css/main.css">
-    <link rel="stylesheet" href="../shared/css/quiz-styles.css">
+    <link rel="stylesheet" href="../shared/css/styles.css">
+    <link rel="stylesheet" href="../shared/css/chapter.css">
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <div class="logo-wrapper">
-                <img src="../shared/img/maple-logo.svg" alt="Canadian Style Logo" class="logo">
-                <h1>The Canadian Style</h1>
+            <div class="header-content">
+                <div class="logo">
+                    <h1><a href="../index.html">The Canadian Style</a></h1>
+                </div>
+                <nav class="main-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="../about.html">About</a>
+                </nav>
             </div>
-            <nav class="chapter-nav">
-                <a href="../index.html" class="btn btn-secondary">Back to Dashboard</a>
-            </nav>
         </div>
     </header>
 
-    <div class="chapter-hero">
+    <nav class="chapter-nav">
         <div class="container">
-            <nav class="breadcrumb">
-                <a href="../index.html">Home</a> / Chapter 9
-            </nav>
-            <div class="chapter-meta">
-                <div class="chapter-icon">9</div>
-                <div class="chapter-info">
-                    <h1>Reference Matter</h1>
-                    <p>Format footnotes, citations, bibliographies, and comprehensive indexes</p>
+            <div class="chapter-header">
+                <h2>Chapter 9: Reference Matter</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="chapterProgress"></div>
+                    </div>
+                    <span class="progress-text">Progress</span>
                 </div>
             </div>
-            <div class="progress-bar">
-                <div class="progress-fill" id="chapterProgress" style="width: 0%"></div>
-            </div>
-        </div>
-    </div>
-
-    <nav class="section-tabs" id="sectionNav">
-        <div class="container">
-            <div class="tabs-list">
+            
+            <div class="section-tabs" id="sectionNav">
                 <a href="#introduction" class="tab-link active" data-section="introduction">9.01 Introduction</a>
-                <a href="#footnotes" class="tab-link" data-section="footnotes">9.02 Footnotes</a>
-                <a href="#bibliography" class="tab-link" data-section="bibliography">9.03 Bibliography</a>
+                <a href="#bibliographies" class="tab-link" data-section="bibliographies">9.02 Bibliographies</a>
+                <a href="#footnotes-endnotes" class="tab-link" data-section="footnotes-endnotes">9.03 Reference Notes</a>
                 <a href="#citations" class="tab-link" data-section="citations">9.04 Citations</a>
                 <a href="#indexes" class="tab-link" data-section="indexes">9.05 Indexes</a>
-                <a href="#electronic-sources" class="tab-link" data-section="electronic-sources">9.06 Electronic Sources</a>
-                <a href="#legal-references" class="tab-link" data-section="legal-references">9.07 Legal References</a>
-                <a href="#advanced-indexing" class="tab-link" data-section="advanced-indexing">9.08 Advanced Indexing</a>
             </div>
         </div>
     </nav>
@@ -62,35 +53,10 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Reference matter provides readers with the sources, explanations, and additional information they need to understand and verify your work. They provide detailed information that some readers need while keeping the main text focused.</p>
-                
-                    <div class="rule-box">
-                        <h3>Types of Reference Matter</h3>
-                        <ul>
-                            <li><strong>Footnotes:</strong> Brief explanations at bottom of pages</li>
-                            <li><strong>Endnotes:</strong> Detailed notes at end of sections or document</li>
-                            <li><strong>Bibliography:</strong> Complete list of sources consulted</li>
-                            <li><strong>Index:</strong> Alphabetical guide to document contents</li>
-                            <li><strong>Appendices:</strong> Supporting documents and data</li>
-                        </ul>
-                    </div>
+                    <p>Reference matter includes bibliographies, footnotes, endnotes, and indexes—essential components for documenting sources and helping readers locate information in government publications.</p>
                     
-                    <div class="examples-box">
-                        <h4>Reference Matter Organization</h4>
-                        <div class="example-item good">
-                            <p><strong>Document structure:</strong></p>
-                            <ul>
-                                <li>Main text with footnotes</li>
-                                <li>Appendices (A, B, C, etc.)</li>
-                                <li>Bibliography</li>
-                                <li>Index</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- MINIMAL ADDITION: Simple link to Appendix A -->
-                    <div class="info-box">
-                        <p><strong>Reference example:</strong> This guide includes <a href="french-words-appendix.html">Appendix A: French Words in English Text</a> as an example of specialized reference material for Canadian bilingual documents.</p>
+                    <div class="key-point">
+                        <strong>Key Purpose:</strong> Reference matter allows readers to verify information, follow up on sources, and navigate documents effectively.
                     </div>
                 </div>
                 
@@ -101,77 +67,93 @@
                 </div>
             </section>
 
-            <!-- Section 9.02: Footnotes -->
-            <section class="content-section" id="footnotes">
+            <!-- Section 9.02: Bibliographies -->
+            <section class="content-section" id="bibliographies">
                 <div class="section-header">
-                    <h2>9.02 Footnotes</h2>
+                    <h2>9.02 Bibliographies</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Footnotes provide immediate access to additional information without interrupting the flow of the main text.</p>
+                    <p>Bibliographies list sources consulted or cited in a document, arranged alphabetically by author's surname.</p>
                     
                     <div class="rule-box">
-                        <h3>Footnote Guidelines</h3>
-                        <ul>
-                            <li><strong>Numbering:</strong> Use superscript numbers¹</li>
-                            <li><strong>Placement:</strong> Bottom of the page</li>
-                            <li><strong>Length:</strong> Keep brief - under half a page</li>
-                            <li><strong>Format:</strong> Smaller font, separated by line</li>
-                        </ul>
+                        <h3>Basic Bibliography Format</h3>
+                        <div class="example-text">
+                            <strong>Books:</strong><br>
+                            Smith, John A. <em>Canadian Government Policy</em>. Toronto: University of Toronto Press, 2023.
+                        </div>
+                        <div class="example-text">
+                            <strong>Articles:</strong><br>
+                            Brown, Sarah. "Climate Change Adaptation." <em>Canadian Public Policy</em> 45, no. 2 (2023): 123-145.
+                        </div>
+                        <div class="example-text">
+                            <strong>Government Documents:</strong><br>
+                            Canada. Environment and Climate Change Canada. <em>National Climate Assessment</em>. Ottawa: ECCC, 2023.
+                        </div>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Footnote Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>In text:</strong> The policy was implemented in 2023.¹</p>
-                            <p><strong>At bottom:</strong> ¹ Treasury Board Secretariat, <em>Digital Government Strategy</em> (Ottawa: TBS, 2023), 15.</p>
-                        </div>
+                    <div class="rule-box">
+                        <h3>Organization Principles</h3>
+                        <ul>
+                            <li><strong>Alphabetical order</strong> by author's last name</li>
+                            <li><strong>Hanging indent</strong> for subsequent lines</li>
+                            <li><strong>Consistent formatting</strong> throughout</li>
+                            <li><strong>Government authors</strong> listed by jurisdiction</li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="quiz-panel" id="quiz-footnotes"></div>
+                <div class="quiz-panel" id="quiz-bibliographies"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('footnotes')">
+                    <button class="btn btn-primary" onclick="completeSection('bibliographies')">
                         Mark Complete & Continue
                     </button>
                 </div>
             </section>
 
-            <!-- Section 9.03: Bibliography -->
-            <section class="content-section" id="bibliography">
+            <!-- Section 9.03: Reference Notes -->
+            <section class="content-section" id="footnotes-endnotes">
                 <div class="section-header">
-                    <h2>9.03 Bibliography</h2>
+                    <h2>9.03 Reference Notes</h2>
                 </div>
                 
                 <div class="lesson-content">
-                    <p>A bibliography lists all sources consulted during research, whether cited directly in the text or not.</p>
+                    <p>Reference notes can appear as footnotes (bottom of page) or endnotes (end of chapter/document) to provide source information and additional context.</p>
                     
                     <div class="rule-box">
-                        <h3>Bibliography Organization</h3>
+                        <h3>Footnotes vs. Endnotes</h3>
                         <ul>
-                            <li><strong>Alphabetical order:</strong> By author's surname</li>
-                            <li><strong>Consistent format:</strong> Same style throughout</li>
-                            <li><strong>Complete information:</strong> All publication details</li>
-                            <li><strong>Indentation:</strong> Hanging indent for each entry</li>
+                            <li><strong>Footnotes:</strong> Immediate reference, easier for readers</li>
+                            <li><strong>Endnotes:</strong> Less distracting, better for lengthy notes</li>
+                            <li><strong>Choose one system</strong> and use consistently</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Bibliography Formats</h4>
-                        <div class="example-item good">
-                            <p><strong>Book:</strong> Smith, John. <em>Canadian Government Policy</em>. Ottawa: Government Press, 2023.</p>
+                    <div class="rule-box">
+                        <h3>Numbering System</h3>
+                        <ul>
+                            <li><strong>Sequential numbering</strong> throughout document</li>
+                            <li><strong>Superscript numbers</strong> in text</li>
+                            <li><strong>Corresponding numbers</strong> in notes section</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="example-box">
+                        <h3>Sample Reference Notes</h3>
+                        <div class="example-text">
+                            <sup>1</sup> John A. Smith, <em>Canadian Government Policy</em> (Toronto: University of Toronto Press, 2023), 45.
                         </div>
-                        <div class="example-item good">
-                            <p><strong>Journal Article:</strong> Brown, Sarah. "Policy Implementation Challenges." <em>Canadian Public Administration</em> 45, no. 2 (2023): 123-145.</p>
+                        <div class="example-text">
+                            <sup>2</sup> Canada, Environment and Climate Change Canada, <em>National Climate Assessment</em> (Ottawa: ECCC, 2023), 12-15.
                         </div>
                     </div>
                 </div>
                 
-                <div class="quiz-panel" id="quiz-bibliography"></div>
+                <div class="quiz-panel" id="quiz-footnotes-endnotes"></div>
                 
                 <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('bibliography')">
+                    <button class="btn btn-primary" onclick="completeSection('footnotes-endnotes')">
                         Mark Complete & Continue
                     </button>
                 </div>
@@ -184,25 +166,35 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>Citations acknowledge sources and allow readers to verify information.</p>
+                    <p>In-text citations provide brief source information within the body of the document, with full details in the bibliography.</p>
                     
                     <div class="rule-box">
-                        <h3>Citation Styles</h3>
-                        <ul>
-                            <li><strong>Author-Date:</strong> (Smith, 2023, p. 45)</li>
-                            <li><strong>Numbered:</strong> [1] or ¹</li>
-                            <li><strong>Legal:</strong> Case citations and statutes</li>
-                        </ul>
+                        <h3>Author-Date System</h3>
+                        <div class="example-text">
+                            Climate change poses significant challenges (Smith 2023, 45).
+                        </div>
+                        <div class="example-text">
+                            As Smith (2023) argues, climate adaptation requires immediate action.
+                        </div>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Citation Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>In-text citation:</strong> Recent studies indicate improvement (Johnson, 2023, p. 45).</p>
+                    <div class="rule-box">
+                        <h3>Government Documents</h3>
+                        <div class="example-text">
+                            The report recommends immediate action (Canada 2023, 12).
                         </div>
-                        <div class="example-item good">
-                            <p><strong>Numbered system:</strong> Economic indicators suggest growth [1].</p>
+                        <div class="example-text">
+                            According to Environment and Climate Change Canada (2023), emissions must decrease.
                         </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Multiple Authors</h3>
+                        <ul>
+                            <li><strong>Two authors:</strong> (Smith and Jones 2023)</li>
+                            <li><strong>Three or more:</strong> (Smith et al. 2023)</li>
+                            <li><strong>Multiple sources:</strong> (Smith 2023; Jones 2022)</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -222,29 +214,37 @@
                 </div>
                 
                 <div class="lesson-content">
-                    <p>An index is an alphabetical list of names, places, and subjects mentioned in a document, with page numbers where they can be found.</p>
+                    <p>Indexes provide alphabetical access points to information in a document, helping readers locate specific topics quickly.</p>
                     
                     <div class="rule-box">
-                        <h3>Index Guidelines</h3>
+                        <h3>Index Structure</h3>
                         <ul>
-                            <li><strong>Alphabetical order:</strong> Strict alphabetical sorting</li>
-                            <li><strong>Cross-references:</strong> "See" and "See also" entries</li>
-                            <li><strong>Subentries:</strong> Indented related topics</li>
-                            <li><strong>Page ranges:</strong> Use en dash for ranges (15-18)</li>
+                            <li><strong>Main entries:</strong> Primary topics in alphabetical order</li>
+                            <li><strong>Subentries:</strong> Related subtopics indented under main entries</li>
+                            <li><strong>Cross-references:</strong> "See" and "See also" references</li>
                         </ul>
                     </div>
                     
-                    <div class="examples-box">
-                        <h4>Index Entry Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>Simple entry:</strong> Government policy, 45-48, 67</p>
+                    <div class="example-box">
+                        <h3>Sample Index Entries</h3>
+                        <div class="example-text">
+                            Climate change, 12-15, 34<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;adaptation, 45-48<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;mitigation, 22-25<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;policy responses, 67-72<br>
+                            Government departments. <em>See</em> specific departments<br>
+                            Policy development, 89-92. <em>See also</em> Implementation
                         </div>
-                        <div class="example-item good">
-                            <p><strong>With subentries:</strong><br>
-                            Cabinet, 23-25<br>
-                            &nbsp;&nbsp;decisions, 24<br>
-                            &nbsp;&nbsp;meetings, 23, 25</p>
-                        </div>
+                    </div>
+                    
+                    <div class="rule-box">
+                        <h3>Indexing Guidelines</h3>
+                        <ul>
+                            <li><strong>Use nouns</strong> as main entries when possible</li>
+                            <li><strong>Invert names:</strong> "Smith, John" not "John Smith"</li>
+                            <li><strong>Group related pages:</strong> Use ranges (12-15) for continuous coverage</li>
+                            <li><strong>Avoid single-page entries</strong> unless highly significant</li>
+                        </ul>
                     </div>
                 </div>
                 
@@ -252,129 +252,7 @@
                 
                 <div class="section-footer">
                     <button class="btn btn-primary" onclick="completeSection('indexes')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.06: Electronic Sources -->
-            <section class="content-section" id="electronic-sources">
-                <div class="section-header">
-                    <h2>9.06 Electronic Sources</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Digital sources require special citation formats and considerations.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Electronic Citation Elements</h3>
-                        <ul>
-                            <li><strong>URLs:</strong> Full web addresses when stable</li>
-                            <li><strong>Access dates:</strong> When content may change</li>
-                            <li><strong>DOI numbers:</strong> When available for academic sources</li>
-                            <li><strong>Version information:</strong> For databases and software</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Electronic Source Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>Website:</strong> Statistics Canada. "Population Growth Rate." https://www.statcan.gc.ca/population-growth (accessed March 15, 2024).</p>
-                        </div>
-                        <div class="example-item good">
-                            <p><strong>Online report:</strong> Treasury Board Secretariat. <em>Digital Government Strategy</em>. PDF. Ottawa: TBS, 2023. https://www.tbs-sct.gc.ca/digital-strategy.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-electronic-sources"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('electronic-sources')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.07: Legal References -->
-            <section class="content-section" id="legal-references">
-                <div class="section-header">
-                    <h2>9.07 Legal References</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Legal documents require specialized citation formats.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Legal Citation Types</h3>
-                        <ul>
-                            <li><strong>Statutes:</strong> <em>Criminal Code</em>, R.S.C. 1985, c. C-46</li>
-                            <li><strong>Cases:</strong> <em>R. v. Smith</em>, [2023] SCC 15</li>
-                            <li><strong>Regulations:</strong> SOR/2023-123</li>
-                            <li><strong>Treaties:</strong> International agreements</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Legal Citation Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>Court case:</strong> <em>Reference re Secession of Quebec</em>, [1998] 2 S.C.R. 217.</p>
-                        </div>
-                        <div class="example-item good">
-                            <p><strong>Statute:</strong> <em>Official Languages Act</em>, R.S.C. 1985, c. 31 (4th Supp.).</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-legal-references"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('legal-references')">
-                        Mark Complete & Continue
-                    </button>
-                </div>
-            </section>
-
-            <!-- Section 9.08: Advanced Indexing -->
-            <section class="content-section" id="advanced-indexing">
-                <div class="section-header">
-                    <h2>9.08 Advanced Indexing</h2>
-                </div>
-                
-                <div class="lesson-content">
-                    <p>Advanced indexing techniques help readers navigate complex documents efficiently.</p>
-                    
-                    <div class="rule-box">
-                        <h3>Advanced Techniques</h3>
-                        <ul>
-                            <li><strong>Multiple indexes:</strong> Subject, author, geographical</li>
-                            <li><strong>Cross-referencing:</strong> Connecting related concepts</li>
-                            <li><strong>Hierarchical entries:</strong> Main topics with subtopics</li>
-                            <li><strong>Special symbols:</strong> Indicating types of references</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="examples-box">
-                        <h4>Cross-Reference Examples</h4>
-                        <div class="example-item good">
-                            <p><strong>See reference:</strong> Automobile insurance. <em>See</em> Vehicle insurance</p>
-                        </div>
-                        <div class="example-item good">
-                            <p><strong>See also reference:</strong> Policy implementation, 45-67. <em>See also</em> Government procedures</p>
-                        </div>
-                    </div>
-                    
-                    <div class="success-box">
-                        <h4>🎉 Reference Matter Mastery</h4>
-                        <p>You now understand how to create and format comprehensive reference materials that enhance document usability and credibility.</p>
-                    </div>
-                </div>
-                
-                <div class="quiz-panel" id="quiz-advanced-indexing"></div>
-                
-                <div class="section-footer">
-                    <button class="btn btn-primary" onclick="completeSection('advanced-indexing')">
-                        Complete Chapter 9!
+                        Chapter Complete!
                     </button>
                 </div>
             </section>
@@ -387,33 +265,259 @@
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <!-- JavaScript -->
-    <script type="module" src="../shared/js/components.js"></script>
-    <script type="module" src="../shared/js/progress.js"></script>
-    <script type="module" src="../shared/js/quiz-engine.js"></script>
-    
-    <script type="module">
-        import { initializeChapter } from '../shared/js/components.js';
-        
-        // Initialize chapter
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = [
-                { id: 'introduction', title: '9.01 Introduction' },
-                { id: 'footnotes-endnotes', title: '9.02 Footnotes & Endnotes' },
-                { id: 'bibliographies', title: '9.03 Bibliographies' },
-                { id: 'citations', title: '9.04 Citations' },
-                { id: 'legal-references', title: '9.05 Legal References' },
-                { id: 'electronic-sources', title: '9.06 Electronic Sources' }
-            ];
-            
-            initializeChapter('ch09', sections);
-        });
-        
-        // Section completion handler
-        window.completeSection = function(sectionId) {
-            console.log('Completing section:', sectionId);
+    <!-- Include JavaScript -->
+    <script src="../shared/js/quiz-engine.js"></script>
+
+    <script>
+        const CHAPTER_ID = 'ch09';
+        const sections = [
+            { id: 'introduction', title: '9.01 Introduction' },
+            { id: 'bibliographies', title: '9.02 Bibliographies' },
+            { id: 'footnotes-endnotes', title: '9.03 Reference Notes' },
+            { id: 'citations', title: '9.04 Citations' },
+            { id: 'indexes', title: '9.05 Indexes' }
+        ];
+
+        // Section mapping for ch09
+        const SECTION_MAPPING = {
+            'footnotes-endnotes': 'reference-notes'
         };
+
+        // ✅ Progress management functions
+        function getChapterProgress(chapterId) {
+            try {
+                const progress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
+                return progress[chapterId] || {};
+            } catch (error) {
+                console.warn('Error loading progress:', error);
+                return {};
+            }
+        }
+
+        function setProgress(chapterId, sectionId, completed) {
+            try {
+                const progress = JSON.parse(localStorage.getItem('chapterProgress') || '{}');
+                if (!progress[chapterId]) {
+                    progress[chapterId] = {};
+                }
+                progress[chapterId][sectionId] = completed;
+                localStorage.setItem('chapterProgress', JSON.stringify(progress));
+                console.log(`✅ Progress saved: ${chapterId}/${sectionId} = ${completed}`);
+            } catch (error) {
+                console.warn('Error saving progress:', error);
+            }
+        }
+        
+        // Initialize section navigation
+        function initSectionNavigation() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            
+            tabLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active from all
+                    tabLinks.forEach(l => l.classList.remove('active'));
+                    contentSections.forEach(s => s.classList.remove('active'));
+                    
+                    // Add active to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const sectionId = this.getAttribute('data-section');
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        section.classList.add('active');
+                    }
+                    
+                    // Update URL hash
+                    window.location.hash = sectionId;
+                });
+            });
+        }
+        
+        // Update progress bar
+        function updateProgressBar() {
+            const chapterProgress = getChapterProgress(CHAPTER_ID);
+            const completed = Object.values(chapterProgress).filter(Boolean).length;
+            const percentage = Math.round((completed / sections.length) * 100);
+            
+            const progressBar = document.getElementById('chapterProgress');
+            if (progressBar) {
+                progressBar.style.width = percentage + '%';
+            }
+        }
+        
+        // Complete section function
+        window.completeSection = function(sectionId) {
+            setProgress(CHAPTER_ID, sectionId, true);
+            updateProgressBar();
+            
+            // Navigate to next section
+            const currentIndex = sections.findIndex(s => s.id === sectionId);
+            if (currentIndex !== -1 && currentIndex < sections.length - 1) {
+                const nextSection = sections[currentIndex + 1];
+                showSection(nextSection.id);
+                updateActiveTab(document.querySelector(`[data-section="${nextSection.id}"]`));
+            } else {
+                // Chapter complete
+                showCompletionModal();
+            }
+        };
+        
+        function showSection(sectionId) {
+            const contentSections = document.querySelectorAll('.content-section');
+            contentSections.forEach(s => s.classList.remove('active'));
+            
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+                window.location.hash = sectionId;
+            }
+        }
+        
+        function updateActiveTab(tab) {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            tabLinks.forEach(l => l.classList.remove('active'));
+            if (tab) tab.classList.add('active');
+        }
+        
+        function showCompletionModal() {
+            const modal = document.createElement('div');
+            modal.className = 'completion-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <h3>🎉 Chapter 9 Complete!</h3>
+                    <p>You've mastered reference matter! Your documents will now have proper citations and professional documentation.</p>
+                    <div class="modal-buttons">
+                        <button onclick="window.location.href='../index.html'" class="btn btn-primary">
+                            Back to Dashboard
+                        </button>
+                        <button onclick="window.location.href='ch10.html'" class="btn btn-secondary">
+                            Next Chapter: Correspondence
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+            
+            document.body.appendChild(modal);
+        }
+        
+        // Enhanced quiz loading with mapping
+        async function loadSectionQuizzes() {
+            try {
+                console.log(`🔍 Loading quizzes for ${CHAPTER_ID}...`);
+                
+                const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+                if (!response.ok) {
+                    console.warn(`📄 Quiz data not available for ${CHAPTER_ID} (${response.status})`);
+                    return;
+                }
+                
+                const quizData = await response.json();
+                const availableQuizSections = Object.keys(quizData.sections || {});
+                console.log(`📚 Available quiz sections: [${availableQuizSections.join(', ')}]`);
+                
+                let successCount = 0;
+                
+                // Initialize quizzes for sections that have them
+                sections.forEach(section => {
+                    const htmlSectionId = section.id;
+                    
+                    // Try different strategies to find matching quiz
+                    let quizSectionId = null;
+                    let matchType = '';
+                    
+                    // Strategy 1: Direct match
+                    if (quizData.sections?.[htmlSectionId]) {
+                        quizSectionId = htmlSectionId;
+                        matchType = 'direct';
+                    }
+                    // Strategy 2: Use mapping
+                    else if (SECTION_MAPPING[htmlSectionId] && quizData.sections?.[SECTION_MAPPING[htmlSectionId]]) {
+                        quizSectionId = SECTION_MAPPING[htmlSectionId];
+                        matchType = 'mapped';
+                    }
+                    // Strategy 3: Fuzzy match by keywords
+                    else {
+                        const htmlWords = htmlSectionId.split('-');
+                        const fuzzyMatch = availableQuizSections.find(quizId => {
+                            const quizWords = quizId.split('-');
+                            return htmlWords.some(word => 
+                                quizWords.includes(word) || 
+                                quizId.includes(word) ||
+                                (word.length > 3 && quizId.includes(word.substring(0, 4)))
+                            );
+                        });
+                        
+                        if (fuzzyMatch) {
+                            quizSectionId = fuzzyMatch;
+                            matchType = 'fuzzy';
+                        }
+                    }
+                    
+                    // Create quiz if we found a match
+                    if (quizSectionId && quizData.sections[quizSectionId]) {
+                        const sectionQuizData = quizData.sections[quizSectionId];
+                        
+                        if (sectionQuizData.questions && sectionQuizData.questions.length > 0) {
+                            const quizContainer = document.getElementById(`quiz-${htmlSectionId}`);
+                            
+                            if (quizContainer) {
+                                console.log(`✅ Creating quiz for "${htmlSectionId}" using "${quizSectionId}" (${matchType}) - ${sectionQuizData.questions.length} questions`);
+                                
+                                const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, htmlSectionId);
+                                quizEngine.render(quizContainer);
+                                successCount++;
+                            } else {
+                                console.warn(`📦 Quiz container not found: quiz-${htmlSectionId}`);
+                            }
+                        } else {
+                            console.warn(`❓ No questions found in section ${quizSectionId}`);
+                        }
+                    } else {
+                        console.log(`❌ No quiz match found for "${htmlSectionId}"`);
+                        
+                        // Show available options for debugging
+                        if (availableQuizSections.length > 0) {
+                            console.log(`💡 Available: [${availableQuizSections.join(', ')}]`);
+                        }
+                    }
+                });
+                
+                console.log(`🎯 Successfully loaded ${successCount}/${sections.length} quizzes for ${CHAPTER_ID}`);
+                
+            } catch (error) {
+                console.error(`💥 Error loading quiz data for ${CHAPTER_ID}:`, error);
+            }
+        }
+        
+        // Initialize page - STANDARDIZED
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log(`🚀 Initializing ${CHAPTER_ID}...`);
+            
+            initSectionNavigation();
+            updateProgressBar();
+            loadSectionQuizzes();
+            
+            console.log(`✅ ${CHAPTER_ID} initialized successfully`);
+        });
+
+        // Handle window beforeunload for quiz warnings
+        window.addEventListener('beforeunload', (event) => {
+            const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
+            if (activeQuiz) {
+                event.preventDefault();
+                event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
+            }
+        });
     </script>
 </body>
 </html>
