@@ -385,26 +385,33 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="../shared/js/router.js"></script>
-    <script src="../shared/js/quiz.js"></script>
-    <script src="../shared/js/progress.js"></script>
+    <!-- JavaScript -->
+    <script type="module" src="../shared/js/components.js"></script>
+    <script type="module" src="../shared/js/progress.js"></script>
+    <script type="module" src="../shared/js/quiz-engine.js"></script>
     
-    <script>
+    <script type="module">
+        import { initializeChapter } from '../shared/js/components.js';
+        
         // Initialize chapter
         document.addEventListener('DOMContentLoaded', function() {
             const sections = [
                 { id: 'introduction', title: '4.01 Introduction' },
                 { id: 'general-principles', title: '4.02 General Principles' },
-                { id: 'proper-nouns', title: '4.03 Proper Nouns' },
-                { id: 'titles-positions', title: '4.04 Titles & Positions' },
-                { id: 'organizations', title: '4.05 Organizations' },
-                { id: 'academic-subjects', title: '4.06 Academic Subjects' },
-                { id: 'publications-titles', title: '4.07 Publications & Titles' },
-                { id: 'special-cases', title: '4.08 Special Cases' }
+                { id: 'sentence-capitals', title: '4.03 Sentence Capitals' },
+                { id: 'proper-nouns', title: '4.04 Proper Nouns' },
+                { id: 'government-bodies', title: '4.05 Government Bodies' },
+                { id: 'geographic-names', title: '4.06 Geographic Names' },
+                { id: 'titles-works', title: '4.07 Titles of Works' }
             ];
             
             initializeChapter('ch04', sections);
         });
+        
+        // Section completion handler
+        window.completeSection = function(sectionId) {
+            console.log('Completing section:', sectionId);
+        };
     </script>
 </body>
 </html>
