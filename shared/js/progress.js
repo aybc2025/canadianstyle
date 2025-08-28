@@ -583,6 +583,20 @@ function updateGlobalStatistics(progress) {
     }
 }
 
+/**
+ * Get progress for a specific chapter - alias for backward compatibility
+ * @param {string} chapterId - Chapter identifier
+ * @returns {Object} Chapter progress object with section completion status
+ */
+export function getProgress(chapterId) {
+    try {
+        return getChapterProgress(chapterId);
+    } catch (error) {
+        ProgressLogger.error(`Error getting progress for chapter: ${chapterId}`, error);
+        return {};
+    }
+}
+
 // Initialize when module loads
 document.addEventListener('DOMContentLoaded', () => {
     initializeProgressTracking();
@@ -599,3 +613,4 @@ if (typeof window !== 'undefined') {
         getDetailedChapterProgress
     };
 }
+
