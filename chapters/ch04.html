@@ -304,10 +304,14 @@
     </footer>
 
 <!-- Include JavaScript -->
+<script type="module" src="../shared/js/router.js"></script>
+<script type="module" src="../shared/js/quiz-engine.js"></script>
+<script type="module" src="../shared/js/progress.js"></script>
+<script type="module" src="../shared/js/components.js"></script>
+
 <script type="module">
-    import { getProgress, setProgress } from '../shared/js/progress.js';
+    import { getChapterProgress, setProgress } from '../shared/js/progress.js';
     import { QuizEngine } from '../shared/js/quiz-engine.js';
-    import '../shared/js/components.js';
     
     const CHAPTER_ID = 'ch04';
     const sections = [
@@ -360,114 +364,19 @@
     
     // Update progress bar
     function updateProgressBar() {
-        const chapterProgress = getProgress(CHAPTER_ID);
+        const chapterProgress = getChapterProgress(CHAPTER_ID);
         const completed = Object.values(chapterProgress).filter(Boolean).length;
-        const total = sections.length;
-        const percentage = (completed / total) * 100;
+        const percentage = Math.round((completed / sections.length) * 100);
         
         const progressBar = document.getElementById('chapterProgress');
         if (progressBar) {
-            progressBar.style.width = `${percentage}%`;
+            progressBar.style.width = percentage + '%';
         }
     }
     
-    // Complete section function
-    window.completeSection = function(sectionId) {
-        setProgress(CHAPTER_ID, sectionId, true);
-        updateProgressBar();
-        
-        // Find next section
-        const currentIndex = sections.findIndex(s => s.id === sectionId);
-        if (currentIndex < sections.length - 1) {
-            const nextSection = sections[currentIndex + 1];
-            showSection(nextSection.id);
-            
-            // Update tab
-            const nextTab = document.querySelector(`[data-section="${nextSection.id}"]`);
-            if (nextTab) {
-                updateActiveTab(nextTab);
-            }
-        }
-    };
-    
-    // Load quiz data and create quizzes
-    async function loadSectionQuizzes() {
-        try {
-            console.log(`Loading quizzes for ${CHAPTER_ID}...`);
-            
-            const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
-            if (!response.ok) {
-                console.warn(`Quiz data not available for ${CHAPTER_ID}`);
-                return;
-            }
-            
-            const quizData = await response.json();
-            console.log('Quiz data loaded:', quizData);
-            
-            // Initialize quizzes for sections that have them
-            sections.forEach(section => {
-                const sectionQuizData = quizData.sections?.[section.id];
-                if (sectionQuizData && sectionQuizData.questions && sectionQuizData.questions.length > 0) {
-                    const quizContainer = document.getElementById(`quiz-${section.id}`);
-                    if (quizContainer) {
-                        console.log(`Creating quiz for ${section.id}`);
-                        const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
-                        quizEngine.render(quizContainer);
-                    }
-                }
-            });
-        } catch (error) {
-            console.error('Error loading quiz data:', error);
-        }
-    }
-    
-    // Show completion modal
-    window.showCompletionModal = function() {
-        const modal = document.createElement('div');
-        modal.className = 'completion-modal-overlay';
-        modal.innerHTML = `
-            <div class="completion-modal">
-                <div class="completion-content">
-                    <h2>🎉 Chapter 4 Complete!</h2>
-                    <p>Congratulations! You've mastered Canadian capitalization rules.</p>
-                    <p>Your documents will now have proper capitalization throughout.</p>
-                    <div class="modal-buttons">
-                        <button onclick="window.location.href='../index.html'" class="btn btn-primary">
-                            Back to Dashboard
-                        </button>
-                        <button onclick="window.location.href='ch05.html'" class="btn btn-secondary">
-                            Next Chapter: Numerical Expressions
-                        </button>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.remove();
-            }
-        });
-        
-        document.body.appendChild(modal);
-    }
-    
-    // Initialize everything when DOM is loaded
-    document.addEventListener('DOMContentLoaded', function() {
-        initSectionNavigation();
-        updateProgressBar();
-        loadSectionQuizzes();
-    });
-    
-    // Handle page unload warnings for active quizzes
-    window.addEventListener('beforeunload', (event) => {
-        const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
-        if (activeQuiz) {
-            event.preventDefault();
-            event.returnValue = 'Are you sure you want to leave?';
-            return event.returnValue;
-        }
-    });
+    // Initialize when page loads
+    initSectionNavigation();
+    updateProgressBar();
 </script>
 </body>
 </html>
