@@ -637,30 +637,83 @@
         
         // Load section quizzes from JSON files
         async function loadSectionQuizzes() {
-            try {
-                const response = await fetch(`../data/ch14-quiz.json`);
-                if (!response.ok) {
-                    console.warn('Quiz data not available for chapter 14');
-                    return;
-                }
-                
-                const quizData = await response.json();
-                
-                // Initialize quizzes for sections that have them
-                sections.forEach(section => {
-                    const sectionQuizData = quizData.sections?.[section.id];
-                    if (sectionQuizData && sectionQuizData.questions) {
-                        const quizContainer = document.getElementById(`quiz-${section.id}`);
-                        if (quizContainer) {
-                            const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
-                            quizEngine.render(quizContainer);
-                        }
-                    }
-                });
-            } catch (error) {
-                console.error('Error loading quiz data:', error);
-            }
+    try {
+        console.log(`Loading quiz data for ${CHAPTER_ID}...`);
+        
+        const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+        if (!response.ok) {
+            console.warn(`Quiz file not found: ${CHAPTER_ID}-quiz.json`);
+            return;
         }
+        
+        const quizData = await response.json();
+        
+        if (!quizData.sections) {
+            console.warn(`No sections found in quiz data for ${CHAPTER_ID}`);
+            return;
+        }
+        
+        let successCount = 0;
+        
+        sections.forEach(section => {
+            const htmlSectionId = section.id;
+            const availableQuizSections = Object.keys(quizData.sections);
+            let quizSectionId = null;
+            let matchType = '';
+            
+            // Strategy 1: Direct match
+            if (quizData.sections[htmlSectionId]) {
+                quizSectionId = htmlSectionId;
+                matchType = 'direct';
+            }
+            // Strategy 2: Fuzzy match by keywords
+            else {
+                const htmlWords = htmlSectionId.split('-');
+                const fuzzyMatch = availableQuizSections.find(quizId => {
+                    const quizWords = quizId.split('-');
+                    return htmlWords.some(word => 
+                        quizWords.includes(word) || 
+                        quizId.includes(word) ||
+                        (word.length > 3 && quizId.includes(word.substring(0, 4)))
+                    );
+                });
+                
+                if (fuzzyMatch) {
+                    quizSectionId = fuzzyMatch;
+                    matchType = 'fuzzy';
+                }
+            }
+            
+            // Create quiz if we found a match
+            if (quizSectionId && quizData.sections[quizSectionId]) {
+                const sectionQuizData = quizData.sections[quizSectionId];
+                
+                if (sectionQuizData.questions && sectionQuizData.questions.length > 0) {
+                    const quizContainer = document.getElementById(`quiz-${htmlSectionId}`);
+                    
+                    if (quizContainer) {
+                        console.log(`✅ Creating quiz for "${htmlSectionId}" using "${quizSectionId}" (${matchType}) - ${sectionQuizData.questions.length} questions`);
+                        
+                        const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, htmlSectionId);
+                        quizEngine.render(quizContainer);
+                        successCount++;
+                    } else {
+                        console.warn(`📦 Quiz container not found: quiz-${htmlSectionId}`);
+                    }
+                } else {
+                    console.warn(`❓ No questions found in section ${quizSectionId}`);
+                }
+            } else {
+                console.log(`❌ No quiz match found for "${htmlSectionId}"`);
+            }
+        });
+        
+        console.log(`🎯 Successfully loaded ${successCount}/${sections.length} quizzes for ${CHAPTER_ID}`);
+        
+    } catch (error) {
+        console.error(`💥 Error loading quiz data for ${CHAPTER_ID}:`, error);
+    }
+}
         
         // ✅ הרצת כל הפונקציות לאחר טעינת הדף
         document.addEventListener('DOMContentLoaded', function() {
