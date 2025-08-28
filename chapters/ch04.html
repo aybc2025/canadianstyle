@@ -303,8 +303,7 @@
         </div>
     </footer>
 
-    <!-- Include JavaScript -->
-    <!-- JavaScript Section at end of Chapter 4 HTML -->
+<!-- Include JavaScript -->
 <script type="module">
     import { getProgress, setProgress } from '../shared/js/progress.js';
     import { QuizEngine } from '../shared/js/quiz-engine.js';
@@ -322,33 +321,7 @@
         { id: 'special-cases', title: '4.08 Special Cases' }
     ];
     
-    // ✅ הוספת פונקציית showSection החסרה
-    function showSection(sectionId) {
-        // הסתרת כל החלקים
-        document.querySelectorAll('.content-section').forEach(section => {
-            section.classList.remove('active');
-            section.style.display = 'none';
-        });
-        
-        // הצגת החלק הנוכחי
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.classList.add('active');
-            targetSection.style.display = 'block';
-        }
-    }
-
-    // ✅ הוספת פונקציית updateActiveTab החסרה
-    function updateActiveTab(activeLink) {
-        document.querySelectorAll('.tab-link').forEach(link => {
-            link.classList.remove('active');
-        });
-        if (activeLink) {
-            activeLink.classList.add('active');
-        }
-    }
-
-    // ✅ הוספת פונקציית initSectionNavigation החסרה
+    // Initialize section navigation
     function initSectionNavigation() {
         const tabLinks = document.querySelectorAll('.tab-link');
         
@@ -361,14 +334,33 @@
             });
         });
         
-        // הצגת החלק הראשון כברירת מחדל
+        // Show first section by default
         showSection('introduction');
     }
     
-    // ✅ הוספת פונקציית updateProgressBar החסרה
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Show target section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+        }
+    }
+    
+    function updateActiveTab(activeLink) {
+        document.querySelectorAll('.tab-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        activeLink.classList.add('active');
+    }
+    
+    // Update progress bar
     function updateProgressBar() {
-        const progress = getProgress(CHAPTER_ID);
-        const chapterProgress = progress || {};
+        const chapterProgress = getProgress(CHAPTER_ID);
         const completed = Object.values(chapterProgress).filter(Boolean).length;
         const total = sections.length;
         const percentage = (completed / total) * 100;
@@ -379,15 +371,46 @@
         }
     }
     
-    // ✅ הוספת פונקציית loadSectionQuizzes החסרה
+    // Complete section function
+    window.completeSection = function(sectionId) {
+        setProgress(CHAPTER_ID, sectionId, true);
+        updateProgressBar();
+        
+        // Find next section
+        const currentIndex = sections.findIndex(s => s.id === sectionId);
+        if (currentIndex < sections.length - 1) {
+            const nextSection = sections[currentIndex + 1];
+            showSection(nextSection.id);
+            
+            // Update tab
+            const nextTab = document.querySelector(`[data-section="${nextSection.id}"]`);
+            if (nextTab) {
+                updateActiveTab(nextTab);
+            }
+        }
+    };
+    
+    // Load quiz data and create quizzes
     async function loadSectionQuizzes() {
         try {
-            const quizData = await import(`../shared/js/quiz-data/${CHAPTER_ID}.js`);
+            console.log(`Loading quizzes for ${CHAPTER_ID}...`);
+            
+            const response = await fetch(`../data/${CHAPTER_ID}-quiz.json`);
+            if (!response.ok) {
+                console.warn(`Quiz data not available for ${CHAPTER_ID}`);
+                return;
+            }
+            
+            const quizData = await response.json();
+            console.log('Quiz data loaded:', quizData);
+            
+            // Initialize quizzes for sections that have them
             sections.forEach(section => {
-                const sectionQuizData = quizData.default[section.id];
-                if (sectionQuizData && sectionQuizData.questions) {
+                const sectionQuizData = quizData.sections?.[section.id];
+                if (sectionQuizData && sectionQuizData.questions && sectionQuizData.questions.length > 0) {
                     const quizContainer = document.getElementById(`quiz-${section.id}`);
                     if (quizContainer) {
+                        console.log(`Creating quiz for ${section.id}`);
                         const quizEngine = new QuizEngine(sectionQuizData, CHAPTER_ID, section.id);
                         quizEngine.render(quizContainer);
                     }
@@ -398,19 +421,50 @@
         }
     }
     
-    // ✅ הרצת כל הפונקציות לאחר טעינת הדף
+    // Show completion modal
+    window.showCompletionModal = function() {
+        const modal = document.createElement('div');
+        modal.className = 'completion-modal-overlay';
+        modal.innerHTML = `
+            <div class="completion-modal">
+                <div class="completion-content">
+                    <h2>🎉 Chapter 4 Complete!</h2>
+                    <p>Congratulations! You've mastered Canadian capitalization rules.</p>
+                    <p>Your documents will now have proper capitalization throughout.</p>
+                    <div class="modal-buttons">
+                        <button onclick="window.location.href='../index.html'" class="btn btn-primary">
+                            Back to Dashboard
+                        </button>
+                        <button onclick="window.location.href='ch05.html'" class="btn btn-secondary">
+                            Next Chapter: Numerical Expressions
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.remove();
+            }
+        });
+        
+        document.body.appendChild(modal);
+    }
+    
+    // Initialize everything when DOM is loaded
     document.addEventListener('DOMContentLoaded', function() {
         initSectionNavigation();
         updateProgressBar();
         loadSectionQuizzes();
     });
     
-    // Handle window beforeunload for quiz warnings
+    // Handle page unload warnings for active quizzes
     window.addEventListener('beforeunload', (event) => {
         const activeQuiz = document.querySelector('.quiz-engine-container .quiz-in-progress');
         if (activeQuiz) {
             event.preventDefault();
-            event.returnValue = 'You have a quiz in progress. Are you sure you want to leave?';
+            event.returnValue = 'Are you sure you want to leave?';
             return event.returnValue;
         }
     });
